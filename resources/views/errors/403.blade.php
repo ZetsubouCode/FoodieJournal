@@ -1,0 +1,1 @@
+@include('errors.layout', ['code' => 403, 'heading' => 'Akses tidak diizinkan', 'message' => 'Akun ini tidak memiliki izin untuk tindakan tersebut.', 'recovery' => '/admin/login', 'action' => 'Masuk admin'])

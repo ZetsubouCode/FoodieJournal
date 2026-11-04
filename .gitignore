@@ -29,3 +29,11 @@ Homestead.json
 .env.production
 .phpactor.json
 auth.json
+/.foodie-scaffold/
+/tools/.runtime/
+/storage/app/private/
+/storage/backups/
+/database/*.sqlite*
+/test-results/
+/playwright-report/
+/.env.testing-mysql

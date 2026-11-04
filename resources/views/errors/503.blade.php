@@ -1,0 +1,1 @@
+@include('errors.layout', ['code' => 503, 'heading' => 'Jurnal sedang dirawat', 'message' => 'Kami sedang merawat jurnal. Silakan kembali beberapa saat lagi.', 'recovery' => '/', 'action' => 'Coba kembali'])

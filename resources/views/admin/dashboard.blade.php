@@ -1,0 +1,6 @@
+<x-layout.admin title="Ringkasan jurnal">
+    <div class="split"><div><h1>Ringkasan jurnal</h1><p class="muted">{{ $counts['draft'] ?? 0 }} draft · {{ $counts['private'] ?? 0 }} privat · {{ $counts['published'] ?? 0 }} dipublikasikan</p></div><x-ui.button href="{{ url('admin/visit/create') }}" variant="primary">Tambah Kunjungan</x-ui.button></div>
+    <section class="section"><h2>Draft perlu dilengkapi</h2>@forelse($drafts as $visit)<p><a href="{{ url('admin/visit/'.$visit->id.'/edit') }}">{{ $visit->display_title }}</a> <small>{{ \App\Support\Presentation::localTime($visit->visited_at) }}</small></p>@empty<x-ui.empty-state title="Tidak ada draft tertunda" description="Mulai catatan dari tempat dan waktu. Detail dapat menyusul." />@endforelse</section>
+    @if($failed->isNotEmpty())<section class="section"><h2>Foto perlu diproses ulang</h2>@foreach($failed as $media)<p><a href="{{ url('admin/visit/'.$media->visit_id.'/edit#foto') }}">{{ $media->visit->display_title }}</a> · {{ $media->processing_error }}</p>@endforeach</section>@endif
+    @if($recent->isNotEmpty())<section class="section"><h2>Baru dipublikasikan</h2>@foreach($recent as $visit)<p><a href="{{ url('admin/visit/'.$visit->id.'/edit') }}">{{ $visit->display_title }}</a></p>@endforeach</section>@endif
+</x-layout.admin>

@@ -1,0 +1,1 @@
+@include('errors.layout', ['code' => 500, 'heading' => 'Jurnal sedang mengalami gangguan', 'message' => 'Catatan tidak dapat dimuat saat ini. Coba kembali beberapa saat lagi.', 'recovery' => '/', 'action' => 'Coba beranda'])
