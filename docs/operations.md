@@ -18,17 +18,19 @@ php artisan migrate --seed
 npm run build
 php artisan foodie:doctor
 php artisan foodie:admin
-php artisan serve --host=127.0.0.1 --port=8027
+php artisan serve --host=127.0.0.1 --port=8006
 ```
 
 Do not replace an existing `.env`, rotate an existing APP_KEY, or use destructive refresh commands on an application database. On this workspace installation `.env`, APP_KEY, a NEW local database, and the allergen seed are already configured. Run `php artisan foodie:admin` to choose the first owner's name/email/password securely. The command refuses when an admin already exists. Passwords require 12 characters, upper/lowercase and numbers. No registration, public accounts or default admin credentials exist.
 
-The current local database is on the dedicated loopback MariaDB instance at port **33079**, with an application account restricted to its new database. Credentials are private in `.env`; the test server root secret is private under ignored `tools/.runtime/`. Neither belongs in source control. The existing server/data on port 3306 was never contacted.
+The current Foodie database is on a dedicated loopback MariaDB instance at port **3306**, using `tools/.runtime/mysql-data` and a database-scoped application account. Credentials remain private in `.env`; the instance's root secret remains under ignored `tools/.runtime/`. This data directory is separate from XAMPP's shared `C:\xampp\mysql\data`. The existing owner and visits were retained when the Foodie instance moved from port 33079 to 3306.
 
-To restart this workspace's test/development cluster, if stopped (PowerShell, foreground process):
+On 4 November 2026, an incorrect `.env` value pointed `DB_DATABASE` to MariaDB's reserved `mysql` system schema on XAMPP's shared port 3306. `migrate:fresh` attempted to drop system tables, and that server later failed during a read-only dump. A stopped-state file snapshot of the affected XAMPP data directory is retained at ignored `tools/.runtime/xampp-3306-snapshot-20261104/`; it is not a verified logical backup or a repaired server. The current Foodie instance uses a **different** data directory and is healthy. Do not run `migrate:fresh`, `db:wipe`, or other destructive migration commands on either application data or a system schema. The shared XAMPP databases require separate recovery before that data directory is put back on port 3306.
+
+To restart the current Foodie database on port 3306, if stopped (PowerShell, foreground process), first confirm nothing else is listening on that port:
 
 ```powershell
-& 'C:\xampp\mysql\bin\mysqld.exe' --no-defaults '--basedir=C:\xampp\mysql' '--datadir=D:\Github repo\FoodieJournal\tools\.runtime\mysql-data' --port=33079 --bind-address=127.0.0.1 --console
+& 'C:\xampp\mysql\bin\mysqld.exe' --no-defaults '--basedir=C:\xampp\mysql' '--datadir=D:\Github repo\FoodieJournal\tools\.runtime\mysql-data' --port=3306 --bind-address=127.0.0.1 --console
 ```
 
 On other machines use your installed database service and configure `.env` accordingly. `tools/setup-local.php` is an optional workspace helper for this specific disposable cluster; it refuses existing explicit database configuration and never overwrites data.
@@ -84,7 +86,7 @@ Automated evidence: `BackupTest` restores an actual JPEG source, three variants,
 
 ```powershell
 composer test                    # Isolated SQLite :memory:
-php tools/test-mysql.php          # NEW foodie_test_* DB on dedicated port 33079
+php tools/test-mysql.php          # Requires a separate isolated test server on port 33079; do not start it against the active 3306 data directory
 php vendor/bin/pint --test
 npm run build
 php tools/prepare-browser.php     # Separate tools/.runtime/browser.sqlite + media

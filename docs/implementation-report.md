@@ -1,6 +1,6 @@
 # Foodie v1.1 implementation report
 
-Date: 4 November 2026 (Asia/Jakarta). **P0 implementation complete; available local acceptance gates pass.** The application is running at [Foodie](http://127.0.0.1:8027). Home and `/admin/login` both returned HTTP 200 with the Foodie content. Port 8000 was already in use, so the existing application there was left intact.
+Date: 4 November 2026 (Asia/Jakarta). **Historical P0 implementation record.** At the time of this report, the application ran at loopback port 8027 with the isolated database on 33079, and the recorded acceptance gates passed. The current local runtime has since moved to app port 8006 and an isolated Foodie database on port 3306; see [operations](operations.md) and the [error-page follow-up](error-page-redesign.md) for the later copy and database incident. Port 8000 was already in use, so the existing application there was left intact.
 
 No P0 code item remains deferred. This report does not claim production deployment, universal accessibility certification, physical-device testing or Oracle MySQL 8 verification. Those limitations are distinguished below.
 

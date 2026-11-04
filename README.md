@@ -2,19 +2,19 @@
 
 A visit-first personal culinary journal. Laravel 12, MySQL, Blade, Vite, Indonesian UI, IDR, Asia/Jakarta input/display and UTC storage. Public readers need no account; only the owner can edit.
 
-The five approved v1.1 specifications remain in the repository root. Scope and acceptance gates come from `codex_instruction/001-foodie-mvp-implementation.md`.
+The five approved v1.1 specifications remain in the repository root. Scope and acceptance gates come from `codex_instruction/001-foodie-mvp-implementation.md`. For visual work, read the canonical composition guidance in `design-system-specification.md` §1 and `.ui-craft/brief.md`; the Editorial Bold HTTP error scene is documented there.
 
 ## Run this workspace
 
-A new empty local MySQL-compatible database and the controlled allergen vocabulary are configured privately in `.env`. The local MariaDB server uses loopback port 33079. No default owner/password is created.
+The existing Foodie database and controlled allergen vocabulary are configured privately in `.env`. The isolated local MariaDB data directory now serves Foodie on loopback port 3306; it is separate from XAMPP's shared `C:\xampp\mysql\data`. No default owner/password is created. See [operations](docs/operations.md) before switching database instances or running migrations.
 
 ```powershell
 php artisan foodie:admin
 npm run build
-php artisan serve --host=127.0.0.1 --port=8027
+php artisan serve --host=127.0.0.1 --port=8006
 ```
 
-Open [Foodie](http://127.0.0.1:8027); owner login is `/admin/login`. For Vite development run `npm run dev` separately. Images process synchronously; no queue worker is required.
+Open [Foodie](http://127.0.0.1:8006); owner login is `/admin/login`. For Vite development run `npm run dev` separately. Images process synchronously; no queue worker is required.
 
 ## Preview with demo content
 
@@ -42,5 +42,6 @@ php vendor/bin/pint --test
 - [P0 checklist](docs/implementation-checklist.md): requirement, implementation and evidence.
 - [Decisions](docs/implementation-decisions.md): domain defaults and repository preservation.
 - [Operations](docs/operations.md): installation, first owner, backup and isolated restore drills.
+- [HTTP error redesign](docs/error-page-redesign.md): composition, asset source, behavior, and verification.
 
 All table names are singular, including framework support tables. Raw originals and derivatives are private; media requests check current visit eligibility. Unpublishing denies subsequent requests. Ratings ignore nulls and round only for display; visit totals remain separate from historical item prices. Allergen information is observational and never a safety guarantee.
