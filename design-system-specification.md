@@ -1,0 +1,242 @@
+# FOODIE — Design System Specification
+
+> **Versi:** Draft v1.1 · **Tanggal:** 4 November 2026 · **Status:** Design specification untuk review, belum implementasi  
+> **Acuan:** `product-blueprint.md`, `sitemap.md`, `erd-database-specification.md`, `user-flow-wireframe.md`  
+> **Prinsip:** **Editorial, bukan template AI generik**; visual khas, komponen konsisten, operasional mudah, aksesibel, cepat.
+
+## 1. Design direction
+
+**Karakter**: dark cinematic editorial storytelling × bold experimental discovery. Foto menjadi narasi utama. Background charcoal, typographic contrast warm ivory, aksen amber/copper yang digunakan terukur. Tidak ada *random gradient*, neon, blur atau shadow berlebih demi terlihat “premium”. Komposisi asimetris boleh **hanya** jika tidak memperburuk hierarki baca, navigasi, aksesibilitas, dan mobile.
+
+**Anti-AI-slop acceptance bar:**
+
+- Jangan memisahkan setiap section dengan `border-bottom`/`<hr>`/garis horizontal panjang. Gunakan **white/negative space**, hierarki tipografi, perubahan layout/alignment yang masuk akal, section background jika benar-benar perlu.
+- Hindari copy filler: tidak ada kalimat promosi yang tidak membantu pembaca menemukan makanan, memahami pengalaman, atau menilai konteks data. Label seperti “Crafted with passion…” dilarang tanpa alasan produk.
+- Jangan tampilkan card 100% seragam seperti katalog e-commerce jika editorial narrative bisa lebih baik. Kombinasi satu featured large dan card biasa boleh tetapi punya **aturan responsive**, bukan posisi acak.
+- Jangan mendesain tombol sekelas dengan ukuran berbeda karena panjang caption. **Satu action group** menetapkan tinggi, min-width, padding, dan flex behavior yang sama; perbedaan visual datang dari variant/priority, bukan teks panjangnya.
+- Gradien hanya bila punya fungsi nyata (contoh overlay foto untuk memastikan kontras teks); gunakan linear overlay minimal, tanpa gradasi aksen dekoratif.
+- Tidak ada dekorasi palsu, badge yang tidak bermakna, ikon repetitif, animasi hanya karena halaman tampak kosong, atau CTA ganda menuju tujuan sama.
+
+## 2. Token semantic (usulan awal, wajib uji kontras)
+
+Pisahkan raw palette dari semantic tokens; **nilai ini proposal**, target WCAG tetap divalidasi dengan alat kontras dan UI aktual sebelum dikunci.
+
+```css
+:root {
+  /* Primitive palette, jangan dipakai langsung pada komponen domain */
+  --palette-charcoal-950: #111211;
+  --palette-charcoal-900: #191b19;
+  --palette-charcoal-800: #242724;
+  --palette-ivory-100: #f5f0e7;
+  --palette-ivory-300: #d5cec2;
+  --palette-copper-400: #e2a76b;
+  --palette-copper-500: #c8894e;
+  --palette-red-300: #ff9b92;
+  --palette-green-300: #9fd7aa;
+  --palette-blue-300: #9ec9e3;
+  --palette-yellow-300: #edcb88;
+
+  --surface-page: var(--palette-charcoal-950);
+  --surface-raised: var(--palette-charcoal-900);
+  --surface-hover: var(--palette-charcoal-800);
+  --text-primary: var(--palette-ivory-100);
+  --text-secondary: var(--palette-ivory-300);
+  --text-muted: #b3ada3; /* harus diuji terhadap surface yang dipakai */
+  --border-subtle: #41443f;
+  --action-primary-bg: var(--palette-copper-400);
+  --action-primary-text: var(--palette-charcoal-950);
+  --action-secondary-bg: transparent;
+  --action-secondary-text: var(--palette-ivory-100);
+  --action-destructive-text: var(--palette-red-300);
+  --status-info: var(--palette-blue-300);
+  --status-success: var(--palette-green-300);
+  --status-warning: var(--palette-yellow-300);
+  --status-error: var(--palette-red-300);
+  --focus-ring: #f2c788;
+
+  --space-1: .25rem;
+  --space-2: .5rem;
+  --space-3: .75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --radius-sm: .375rem;
+  --radius-md: .75rem;
+  --radius-lg: 1.25rem;
+  --shadow-popover: 0 12px 36px rgb(0 0 0 / .24);
+  --control-height-sm: 2.25rem;
+  --control-height-md: 2.75rem;
+  --control-height-lg: 3rem;
+  --action-min-inline: 7.5rem;
+  --content-max: 80rem;
+  --motion-fast: 140ms;
+  --motion-standard: 220ms;
+  --z-header: 20;
+  --z-dropdown: 40;
+  --z-modal: 80;
+  --z-toast: 100;
+}
+```
+
+Gunakan CSS custom properties semantik dengan `var(--...)`; classes utilitas boleh untuk layout namun tidak menyebarkan nilai hex. Font display editorial dan font body yang readable harus **gratis/self-host sesuai lisensi**; cek lisensi dan performa sebelum memutuskan keluarga font. Fallback tetap nyaman. Scale type dengan `clamp()` dan batas minimum jelas, jangan hero text memotong di 320 px / zoom 200%.
+
+**Accessibility minimum:** teks normal ≥4.5:1, teks besar dan komponen penting ≥3:1; outline fokus kontras, keyboard only, link discernible; WCAG 2.2 AA target. WCAG 2.2 SC 2.5.8 meminta target **≥24×24 CSS px** atau jarak pengecualian yang valid; standar internal **≥44×44** untuk tombol touch utama guna lebih nyaman (ini rekomendasi desain, **bukan** angka mandatory WCAG AA). Reduced motion dan responsive text reflow wajib.
+
+## 3. Layout, spacing, dan responsive
+
+- **Grid dasar**: 4–6 px base spacing? **Tidak**; gunakan skala token 4 px untuk komponen dan section rhythm 24/32/48/64/96 px sesuai breakpoints. Hindari menaruh divider setiap 24 px; lebih baik kelompok dengan gap.
+- Mobile `320–767px`: satu kolom utama, header ringkas, filter sebagai sheet/dialog, bottom sticky actions hanya bila tidak menutup konten, off-screen photos lazy. Min touch area 44 px.
+- Tablet `768–1023px`: 2 kolom konten bila masih readable, filter bar terlipat / sidebar optional.
+- Desktop `>=1024px`: editorial asymmetry/featured hero pada Home, Explore bisa sidebar filter + results, max-content 1280px dengan gutters responsif.
+- **Breakpoints bukan semata ukuran device**: ubah hanya ketika konten membutuhkan; uji 320, 375, 768, 1024, 1440, 200% zoom dan landscape.
+- Surface layering halus. Hairline divider dipakai **seperlunya** untuk baris tabel, struktur form kompleks atau batas dialog, bukan dekorasi default.
+
+## 4. Komponen dan penggunaan
+
+| Primitive / domain component | API/intensi | Aturan quality |
+|---|---|---|
+| `Button` | variant `primary/secondary/tertiary/destructive`, size `sm/md/lg`, loading, disabled, icon | Semua tombol dalam **satu action group** tinggi/min-width setara, loading tidak mengubah ukuran, teks panjang wrap hanya jika layout memang mendukung; jangan hardcode width per label. |
+| `Input`, `Textarea`, `Checkbox`, `Radio`, `Select` | label, help text, error, required | Label permanen; placeholder bukan label; server errors dekat field; disabled terbaca dan bisa dijelaskan. |
+| `Combobox/Autocomplete` | `single/multi`, filter, clear, create-new optional | Gunakan untuk place, food_type, cuisine, style, ingredient, taxonomy panjang. Keyboard arrow/Enter/Escape/Tab, ARIA WAI APG; loading/no-results, debounce, hasil duplicate warnings. |
+| `Chip/Badge` | selected filter, status, taxonomy | Badge tidak clickable jika bukan action; filter chip memiliki remove affordance + accessible name. |
+| `Tabs`, `SegmentedControl`, `ViewToggle` | Visit/Food/Place, grid/list | Preserve URL, fokus visual; selected state tak hanya melalui warna. |
+| `PriceDisplay`, `RatingDisplay` | label semantik eksplisit | Food unit price != Visit total; null → “Belum dicatat”; rating null → “Belum Dinilai”. |
+| `VisitCard/FoodCard/PlaceCard` | cover, metadata, primary action | Card clickable tanpa CTA redundan; jangan nest anchor di dalam anchor; stable aspect ratio, alt dan fallback. |
+| `PhotoGallery/Viewer` | thumbnails optimized, modal original | Viewer close/escape/keyboard/zoom/touch, loading and failure, original protected route; credits/alt jika ada. |
+| `CustomAlert` | severity, title, description, optional action/dismiss | Inline persisten untuk hal penting, bukan toast-only. |
+| `CustomModal/Dialog` | sizes, named slots, destructive variant | Focus trap/restore, Escape, scroll lock, accessible description, confirmation explicit. |
+| `ToastService` | info/success/warning/error, stack, timeout/pause | Aria live announcement, dismiss, batasi stacking, tidak untuk error yang memerlukan koreksi. |
+| `Skeleton/Empty/Error State` | per domain + state nyata | Skeleton hanya saat loading nyata dan mencegah CLS; empty state menjelaskan konteks dan aksi. |
+| `AdminFieldGroup`, `AdminStep`, `FormActions` | group short input + progress | Auto default, inline create, focus first error, save draft, unsaved-change guard, anti-double-submit. |
+
+**Consistent button action-group example:**
+
+```css
+.action-group { display: flex; gap: var(--space-3); flex-wrap: wrap; }
+.action-group > .btn { min-height: var(--control-height-md); min-inline-size: var(--action-min-inline); }
+.action-group--equal > .btn { flex: 1 1 0; }
+@media (max-width: 420px) { .action-group--equal > .btn { flex-basis: 100%; } }
+```
+
+Bukan semua button di seluruh website wajib selebar sama; **kesetaraan berlaku per kelompok dan level**. Aksi primary tetap paling jelas secara visual, destructive perlu pemisahan/konfirmasi, dan icon-only punya accessible name.
+
+## 5. Konsep filtering Explore yang scalable
+
+**Masalah:** City, category, food type, cuisine, cooking style, price, rating, ingredient, allergen, tag, recommendation membuat UI cepat sesak. **Solusi:** munculkan yang paling sering dipakai; sisanya *progressive disclosure*. Pertahankan 3 tab Visit/Food/Place, tetapi definisi filter dan sort menyesuaikan konteks.
+
+### Progressive disclosure (proposal)
+
+1. **Always visible**: pencarian, tab Visit/Food/Place, sort, grid/list, tombol **Filter** dengan count badge ketika ada filter aktif.
+2. **Quick filter chips (opsional bila ada data)**: Kota, Jenis makanan, Rentang harga yang sesuai tab, Rating; tampil tidak lebih dari 3–4 kelompok awal, tergantung viewport.
+3. **Advanced filter panel**: bagian *Lokasi*, *Makanan*, *Cara memasak* (cuisine + cooking style **dibedakan**), *Anggaran & Rating*, *Preferensi bahan dan informasi alergen*, *Tag & rekomendasi*. Group by mental model pengunjung, bukan nama tabel.
+4. **Applied filters summary**: chip yang bisa dihapus satu per satu, **Hapus semua filter**, jumlah hasil; sticky summary jika berguna tetapi jangan menutupi kartu.
+5. **Mobile**: dialog/sheet full-height/near-full-height, kelompok accordion **bukan semuanya terbuka**, sticky `Tampilkan N hasil` + `Reset` dengan tombol ukuran konsisten; perubahan diterapkan saat Apply (untuk tidak reload tiap tap). Desktop boleh apply-on-change dengan loading ringan dan URL sinkron, tetapi harus punya satu kontrak shared.
+6. **Avoid empty dimensions**: filter hanya tampil bila ada opsi pada data published eligible (taksonomi master yang belum digunakan tidak perlu memenuhi panel).
+
+### Domain filter & semantik
+
+| Tab | Filter harga | Filter rating | Filter taxonomy | Keterangan |
+|---|---|---|---|---|
+| Visit | **Total biaya kunjungan** | Overall visit | cuisine/style/ingredient diturunkan dari `EXISTS` item pada visit | Label jelas: “Kunjungan dengan setidaknya satu hidangan …”. |
+| Food | **Harga per item** | Taste item | Cuisine/style/ingredient langsung dari item | Unit hasil = visit item snapshot. |
+| Place | **Tidak tersedia P0** | Rata-rata visit published | Jika cuisine/style dipakai, berarti punya **minimal satu published item** yang match | Jangan mengklaim cuisine restoran permanen. |
+
+- **Multi-select dalam satu kelompok**: OR (contoh Fried **atau** Grilled); **antar kelompok**: AND (Semarang **dan** Thai). Untuk `avoid_allergen` gunakan exclude, bukan OR matching biasa. Turunan `category` mengikutkan descendants, tetapi jangan termasuk `food_type` yang tidak berelasi.
+- **Perpindahan tab**: preserve q, city, cuisine, style, ingredient, recommendation (jika relevan); reset page; sort tidak valid di-reset. Hapus harga ketika konteks berubah Food ⇄ Visit/Place **disertai UI feedback**, karena metrik berbeda. Fasilitas un/clear state eksplisit.
+- **Draft/private** tidak ikut count opsi, suggestion, aggregation, maupun sample.
+- **Allergen**: panel berjudul “Informasi bahan & alergen” dengan disclaimer terlihat ketika dipakai: `Menghilangkan item yang tercatat mengandung alergen. Item tanpa data mungkin tetap muncul—bukan jaminan aman.` Tidak pernah badge "allergy-safe". Tampilkan status `Tercatat mengandung`, `Berpotensi mengandung`, atau `Belum ada informasi`. Opsi strict confirmed free **tidak tersedia P0**.
+- **Performance**: debounced search, cancel/stale response guard, server whitelist and eager load, URLs shareable, pagination (atau load more dengan URL yang tetap dapat ditelusuri), skeleton hanya saat loading.
+
+### Labels and copy yang disarankan
+
+| Konsep teknis | Label publik |
+|---|---|
+| `cuisine` | Asal/tradisi kuliner |
+| `cooking_style` | Teknik memasak |
+| `food_type` | Jenis hidangan |
+| `ingredient` | Bahan yang diketahui |
+| `avoid_allergen` | Sembunyikan yang tercatat mengandung… |
+| visit total | Total pengeluaran |
+| unit price | Harga saat dipesan |
+| unknown ingredient/allergen | Informasi belum tersedia |
+
+## 6. Admin: effortless data entry, bukan minim validasi
+
+### Form behaviors
+
+- **Quick Entry**: place combobox (recent choices, search, inline "Tambah tempat"), `visited_at` default waktu lokal sekarang, catatan ringkas opsional, status draft; tombol `Simpan draft` jelas. Tidak mewajibkan slug, rating, harga, ingredient, alergen atau foto.
+- **Full Editor**: step/panel **Dasar → Hidangan → Ulasan → Foto → Pratinjau & Publish**. Bisa menambah beberapa item tanpa navigasi ke banyak halaman. Gunakan *repeater* item dengan "Tambah hidangan", collapse item completed dengan ringkasan.
+- **Smart defaults**: slug dari judul/nama; tanggal kunjungan hari ini; status draft; quantity 1; item sort order bertambah. Auto nilai yang bukan fakta saja; **jangan** default rating 5, harga 0, cuisine Italia atau alergen aman.
+- **Slug field**: default generated; tampil sebagai preview URL, `Edit slug` disclosure; manual override tetap tersimpan; perubahan slug published meminta peringatan konsekuensi redirect.
+- **Smart select**: place, food_type, cuisine, cooking style, ingredient, label; dropdown search bila dataset cukup besar, `Create new` hanya untuk entitas yang aman diciptakan admin, dengan duplicate suggestions.
+- **Ingredient/allergen**: input bahan yang diketahui opsional. Berdasarkan bahan, sistem dapat **menawarkan penanda review** untuk alergen, bukan mengklaim sebagai fakta otomatis. Perlu bukti/sumber untuk `contains`/`may_contain`. Field dapat kosong (=unknown), tidak mewajibkan admin menjadi ahli gizi.
+- **Validation**: Draft bisa minim, publish gate memastikan `place`, tanggal/identitas kunjungan, konten layak tampil, dan semua foto visible memiliki derivative atau fallback. Jangan mewajibkan seluruh kriteria review jika tidak relevan. Error summary di atas form + inline messages, focus first invalid field.
+- **Safety UX**: unsaved changes, server anti double submit, retry upload, optimistic UI hanya saat benar-benar terkonfirmasi; delete/revert status perlu modal dengan konsekuensi jelas.
+
+### Admin dashboard
+
+Satu CTA utama `Tambah kunjungan`, daftar `Draft perlu dilengkapi`, `Foto gagal diproses`, `Baru dipublikasikan`, quick links ke Place dan Taxonomy. Tidak memerlukan analytics card kosong demi dekorasi. Gunakan label yang langsung menjelaskan tugas yang dapat dikerjakan.
+
+## 7. Media responsive dan original viewer
+
+**Image contract:** `<picture>`/`<img srcset sizes width height>` untuk variant navigasi; hero LCP diprioritaskan dan tidak lazy; foto item dan cards di bawah fold lazy. Viewer memilih original setelah user click; fallback bila original belum siap/akses dicabut. Aspect ratio dan `object-fit` dipilih per konteks: hero `cover` dengan focal point admin opsional P1, foto makanan dapat `contain` di viewer. Jangan menggandakan file untuk cover.
+
+**Gallery interaction:** viewer sebagai `dialog` satu fondasi; keyboard left/right untuk pindah foto jika fokus pada viewer (tidak mencuri shortcut input), Escape tutup, focus restore ke thumbnail, thumbnail selected state, loading/error original. Support touch swipe hanya bila implementasi tidak merusak scroll.
+
+## 8. Reuse Blade / CSS / JS architecture
+
+`@extends` + `@section/@yield` untuk layout klasik **atau** `<x-layout.public>` / `<x-layout.admin>` + slots untuk Blade components modern. Pilih **satu gaya layout utama** dan konsisten; tetap gunakan `<x-site.header>`, `<x-site.footer>`, `<x-ui.button>`, `<x-ui.modal>`, `<x-ui.alert>`, `<x-ui.toast-container>` dan domain components. `@include` boleh untuk potongan template sederhana; `@push/@stack` hanya untuk page-specific assets yang memang perlu, bukan JS inline yang tersebar.
+
+```text
+resources/
+  views/
+    components/
+      layout/{public,admin}.blade.php
+      site/{header,footer,breadcrumb}.blade.php
+      ui/{button,field,combobox,modal,alert,toast-container,empty-state}.blade.php
+      domain/{visit-card,food-card,place-card,rating,price,photo-viewer,filter-panel}.blade.php
+    public/{home,explore,visit/show,place/show}.blade.php
+    admin/{dashboard,visit/index,visit/editor,place/index,taxonomy/index}.blade.php
+  css/{tokens,base,components,domain,pages}.css
+  js/{core,components,admin,pages}/
+```
+
+Folder di atas usulan konseptual; Vite modules/entrypoints dipusatkan, tidak memuat skrip halaman di semua URL bila tak diperlukan. Hindari global event bus untuk semua kasus, duplicate JS handler, `onclick` inline, CSS selectors yang bergantung pada struktur halaman tak terkait. Jangan membuat `god component`.
+
+## 9. States & accessibility behavior matrix
+
+| Component / flow | Initial | Loading | Empty | Success | Error / recovery | Disabled |
+|---|---|---|---|---|---|---|
+| Explore | newest visits | loading results nyata | no result + reset | count/filter chips | retry / preserved URL | not applicable |
+| Combobox | prompt + recent | loading suggestions | no match + optional create | selected tag | network/retry inline | explain reason |
+| Upload | drop area | per-file progress | no photo yet | optimized ready | retry derivative; original safe | while submitting |
+| Publish | draft + preview | single submit | missing data summary | badge Published | inline Alert + errors | publish gated with reason |
+| Photo viewer | selected thumb | original loading | fallback variant | full-res | error + retry/close | prev/next at bounds |
+| Modal | hidden | optional | optional | close + focus restore | inline alert | no background access |
+| Toast | hidden | n/a | n/a | aria live summary | never sole critical error | n/a |
+
+**Focus mechanics:** skip link → main; headings hierarchical; interactive cards accessible; modal focus trap/restore; no focus lost after dynamic filter; form error summary link target; animation reduced for `prefers-reduced-motion`; original image alt contextual; contrast on all foto overlays (not just design mocks).
+
+## 10. QA visual & UX checklist
+
+- [ ] Tanpa divider/gradient/dekorasi berlebihan; setiap surface/section memiliki fungsi.
+- [ ] 320/375/768/1024/1440 px dan zoom 200%; no horizontal overflow; kebaca.
+- [ ] Tombol satu group setara tinggi/min-width, termasuk loading text berubah; primary jelas.
+- [ ] Filter kompleks bisa ditemukan pemula, mobile panel mudah ditutup/diterapkan/di-reset; URL/Back/Forward benar.
+- [ ] Filter alergen tidak menjanjikan keamanan dan status unknown tidak disamarkan.
+- [ ] Autocomplete keyboard/ARIA, clear, duplicate, zero-result, create new; edit slug manual tidak tertimpa.
+- [ ] Gallery cards memakai derivative; original baru diminta setelah viewer; unpublish menolak akses baru.
+- [ ] All loading/empty/error, focus trap, contrast, reduced motion, aria-live, keyboard tested.
+- [ ] Tidak ada native JS alert/confirm; header/footer/layout tidak diduplikasi di setiap view.
+
+## 11. Referensi standar
+
+- W3C WCAG 2.2 Target Size (Minimum): https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum
+- WAI ARIA Combobox Pattern: https://www.w3.org/WAI/ARIA/apg/patterns/combobox/
+- WAI ARIA Dialog (Modal) Pattern: https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/
+- web.dev Optimize Largest Contentful Paint: https://web.dev/articles/optimize-lcp
+- FDA and European Commission references untuk allergen see `erd-database-specification.md` §8.
+
+**Untuk review:** persetujuan art direction; scope P0/P1 filter ingredient/allergen; apakah mobile Apply-on-commit sementara desktop auto-apply; apakah keluarga font perlu ditentukan setelah prototipe; dan apakah nav publik menggunakan shortcut kota/rekomendasi atau hanya Explore.
