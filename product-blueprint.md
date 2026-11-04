@@ -13,7 +13,7 @@
 
 **Janji produk:** “Temukan tempat dan hidangan melalui cerita kunjungan yang jujur, visual yang kuat, dan rincian pengalaman yang mudah dibandingkan.”
 
-**Karakter visual:** dark cinematic editorial storytelling + bold experimental discovery. Fotografi dominan; tipografi kuat; komposisi eksploratif namun tetap nyaman, cepat, dan aksesibel. Palet charcoal, warm ivory, amber/copper; warna tidak ditetapkan langsung di tiap komponen, tetapi melalui token semantik.
+**Karakter visual:** dark cinematic editorial storytelling + bold experimental discovery. Fotografi dominan; tipografi kuat; komposisi eksploratif namun tetap nyaman, cepat, dan aksesibel. Palet charcoal, warm ivory, amber/copper; warna tidak ditetapkan langsung di tiap komponen, tetapi melalui token semantik. Whitespace dan komponen konsisten mendukung komposisi yang kaya, bukan halaman kosong atau layout kartu seragam. Aturan komposisi dan variasi kepadatan per jenis halaman ada di `design-system-specification.md` §1.
 
 ## 2. Fakta, keputusan kerja, dan usulan
 

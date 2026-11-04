@@ -35,7 +35,7 @@
 ├── /sitemap.xml                   Sitemap mesin pencari [P0]
 └── /robots.txt                    Crawl guidance [P0]
 
-Error views (bukan halaman navigasi biasa): 403 / 404 / 419 / 429 / 500 / 503 [P0]
+Error views (bukan halaman navigasi biasa): 403 / 404 / 419 / 429 / 500 / 503 [P0]. Semuanya memakai komposisi Editorial Bold dan kode status dinamis; rujuk `design-system-specification.md` §1. Tindakan pemulihan harus sesuai konteks, tanpa dua tautan setara.
 ```
 
 **P0 shortcut discovery** tidak membutuhkan halaman P1: tautan “Semarang”, “Mie Ayam”, “Grilled”, atau “Must Try” mengarah ke `/explore` dengan filter yang sesuai sampai landing khusus P1 tersedia.

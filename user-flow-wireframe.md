@@ -7,7 +7,7 @@
 
 **Pembaca kasual:** menemukan pengalaman menarik dengan **sedikit keputusan**. **Pembaca detail:** membandingkan food/visit/place dengan price dan rating semantik benar. **Admin:** membuat draft 30–60 detik sebagai target UX yang **akan diuji, bukan benchmark yang sudah dibuktikan**, lalu melanjutkan full editor tanpa mengulang input. **Semua:** tidak ada misleading allergen-safe claims.
 
-**Prinsip interaksi:** 1 aksi dominan per scene; ajakan navigasi konteks spesifik; jangan menambah CTA yang mengulang seluruh card clickable; situs publik tanpa login/registrasi; admin auth terproteksi.
+**Prinsip interaksi:** 1 aksi dominan per scene; ajakan navigasi konteks spesifik; jangan menambah CTA yang mengulang seluruh card clickable; situs publik tanpa login/registrasi; admin auth terproteksi. Wireframe ASCII hanya mengatur alur, bukan membatasi komposisi high-fidelity; gunakan sistem komposisi di `design-system-specification.md` §1 untuk ritme, fotografi, tipografi, dan halaman utilitas.
 
 ## 2. Journey maps
 
@@ -133,7 +133,7 @@ MEDIA GET (/media/{uuid}/{variant}) — authorized per current visit visibility
 └────────────────────────────────────────────────────────────────────────────┘
 ```
 
-**Konten**: Hanya published. Featured fallback bila kosong, hero photo optimized untuk LCP; card photos lazy bila below fold. **Jangan** memasukkan divider horizontal antar section; gunakan white space besar dan hierarki heading. Jika semua konten published kosong, editorial empty state (bukan section kosong/kartu palsu).
+**Konten**: Hanya published. Featured fallback bila kosong, hero photo optimized untuk LCP; card photos lazy bila below fold. Pakai jarak yang punya tujuan, hierarki heading, dan perubahan komposisi untuk mengatur ritme; rule tipis boleh bila memperjelas struktur. Jika semua konten published kosong, editorial empty state (bukan section kosong/kartu palsu).
 
 ### 4.2 Explore desktop — progressive filters
 

@@ -1,1 +1,1 @@
-@include('errors.layout', ['code' => 404, 'heading' => 'Catatan tidak ditemukan', 'message' => 'Tautan mungkin berubah atau catatan belum tersedia untuk publik.', 'recovery' => '/explore', 'action' => 'Jelajah pengalaman'])
+@include('errors.layout', ['code' => 404])

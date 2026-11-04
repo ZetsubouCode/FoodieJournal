@@ -43,7 +43,7 @@ Status: **P0 implemented; available local acceptance gates PASS**. Production ro
 | Alert, dialog, toast, combobox, empty/loading/error states | resources/js/core/components; UI primitives | Browser axe, keyboard combobox, dialog Tab/Escape/focus restore, unsaved cancellation | PASS |
 | Public privacy on options/counts/cards/detail/SEO/related | publishedVisible scopes; PublicOptions; PublicController | PublicTest negative tests for draft/private and unpublish | PASS |
 | Metadata/canonical/OG, sitemap, robots | shared layout; PublicController; sitemap view | PublicTest; SystemSecurityTest | PASS |
-| Branded 403/404/419/429/500/503 and security headers | errors; SecurityHeaders; bootstrap | SystemSecurityTest; browser rendered 404 | PASS |
+| Branded 403/404/419/429/500/503 and security headers | errors; SecurityHeaders; bootstrap; static CSS/photo | SystemSecurityTest (six HTML/JSON statuses, controlled 500, isolated maintenance); error-pages.spec.js viewport/axe review; [redesign record](error-page-redesign.md) | PASS for error surface |
 | Free DB + media backup/isolated restore, hashes/counts/FKs | JournalBackup; BackupJournal; RestoreJournal; operations | BackupTest on both engines, actual local backup, original + variants + cover/link restore | PASS |
 | No N+1 card growth, native whitelist queries, relevant indexes | ExploreQuery/RatingSql; migrations | 13 queries for one and eighteen cards; real EXPLAIN uses status/date/id index | PASS on measured fixtures |
 | Durable report and reproducible run/continuation instructions | README; docs/operations; report; docs/qa | Evidence files and command results | PASS |

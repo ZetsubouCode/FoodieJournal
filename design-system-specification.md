@@ -1,12 +1,38 @@
 # FOODIE — Design System Specification
 
-> **Versi:** Draft v1.1 · **Tanggal:** 4 November 2026 · **Status:** Design specification untuk review, belum implementasi  
+> **Versi:** v1.1 + komposisi HTTP errors · **Tanggal:** 4 November 2026 · **Status:** Spesifikasi desain terpelihara; scene HTTP errors telah diimplementasikan
 > **Acuan:** `product-blueprint.md`, `sitemap.md`, `erd-database-specification.md`, `user-flow-wireframe.md`  
 > **Prinsip:** **Editorial, bukan template AI generik**; visual khas, komponen konsisten, operasional mudah, aksesibel, cepat.
 
 ## 1. Design direction
 
-**Karakter**: dark cinematic editorial storytelling × bold experimental discovery. Foto menjadi narasi utama. Background charcoal, typographic contrast warm ivory, aksen amber/copper yang digunakan terukur. Tidak ada *random gradient*, neon, blur atau shadow berlebih demi terlihat “premium”. Komposisi asimetris boleh **hanya** jika tidak memperburuk hierarki baca, navigasi, aksesibilitas, dan mobile.
+**Karakter**: dark cinematic editorial storytelling × bold experimental discovery. Foto menjadi narasi utama. Background charcoal, typographic contrast warm ivory, aksen amber/copper yang digunakan terukur. Tidak ada *random gradient*, neon, blur atau shadow berlebih demi terlihat “premium”. Komposisi asimetris didorong pada scene editorial bila hierarki baca, navigasi, aksesibilitas, dan mobile tetap jelas.
+
+### Sistem komposisi visual (acuan kanonis)
+
+**Kekayaan visual yang disengaja, interaksi yang sederhana.** Whitespace memberi ruang baca, penekanan, keseimbangan foto, atau arah pandang; area kosong besar harus punya tujuan komposisi. Padding besar saja bukan pengganti keputusan desain. Sebaliknya, jangan menambah ornamen untuk mengisi setiap celah.
+
+- **Tipografi editorial:** display serif dapat menjadi judul ekspresif, angka status besar, indeks section, atau penanda cerita. Sans-serif mendukung isi dan kontrol; metadata ringkas boleh memakai tracking yang berbeda. Variasikan skala dan susunan judul sesuai konteks, dengan batas reflow dan keterbacaan.
+- **Lapisan terarah:** teks di depan foto, kolom asimetris, offset, stroke, tekstur halus, rule tipis, atau anotasi boleh dipakai bila memperjelas narasi, identitas, atau hierarki. Tidak ada kewajiban memakai semua unsur pada setiap halaman.
+- **Pola komposisi:** split editorial hero, full-bleed photo, image-led story, asymmetric grid, text-led section, layered feature, compact information layout, dan immersive detail adalah pilihan layout. Jadikan CSS primitive bersama hanya setelah dipakai berulang secara nyata; bukan komponen Blade wajib.
+- **Ritme halaman:** selingi bagian padat/lapang, foto/teks, skala judul besar/kecil, dan wilayah lebar/sempit sesuai alur konten. Konsistensi datang dari token, tipografi, jarak, dan perilaku interaksi; variasi tidak boleh acak.
+- **Kekayaan vs noise:** foto yang punya subjek, angka yang bermakna, layering terukur, dan kontras hierarki adalah kekayaan. Badge palsu, kartu repetitif, border/gradien/glow berlebih, copy filler, dan beberapa jangkar visual yang berebut perhatian adalah noise.
+
+**Kepadatan menurut permukaan:** halaman publik mengutamakan foto kuliner, penemuan, dan narasi editorial; admin mengutamakan input cepat dan informasi padat yang terstruktur; halaman utilitas tetap beridentitas Foodie dengan pesan dan pemulihan yang segera jelas. Primitives (button/input/alert/modal/focus) dan domain components (visit/food/place card, gallery, rating) memerlukan konsistensi. Komposisi scene memerlukan fleksibilitas terkontrol; satu bentuk kartu tidak boleh menentukan semua halaman.
+
+**Periksa sebelum ship:** jangan gunakan centered message untuk semua kebutuhan, tiga kolom seragam tanpa alasan konten, hero kosong tanpa tujuan, atau penumpukan rounded card. Centered layout, kartu, grid, dan gradien boleh bila konteks dan fungsi membenarkannya. Bandingkan 320/375/390/768/1366/1920, viewport pendek dan landscape, 200% zoom, keyboard, reduced motion, serta foto dengan fallback.
+
+**HTTP errors — Editorial Bold:** `403/404/419/429/500/503` memakai satu scene: teks di kiri pada desktop, pot dan uap di kanan, angka status HTML serif besar dengan stroke tembaga dekoratif, lalu judul/pesan/tindakan berbeda. Mobile memakai crop foto di atas dan isi pada bidang gelap di bawah. Sumber foto: `docs/references/cinematic-kitchen-source.png`; turunan web: `public/assets/images/error/cinematic-kitchen.webp`. Styling kritis mandiri di `public/assets/css/error.css`, digenerasi dari `resources/css/tokens.css` dan `resources/css/error.css` oleh `npm run build`. Tanpa foto, teks harus tetap terbaca. Jangan masukkan kode/teks ke gambar; jangan tampilkan data exception; retry hanya untuk GET/HEAD. Uji semua status, JSON, mode maintenance Laravel tanpa `--render`, kontras, fokus, reflow, dan crop nyata. Referensi implementasi: `resources/views/errors/layout.blade.php` dan `config/error-pages.php`.
+
+### Brand Voice & Microcopy (acuan kanonis)
+
+Foodie adalah **jurnal kuliner personal milik satu penulis**. Penulis mengunjungi tempat makan dan mencatat pengalaman, hidangan yang dicoba, foto, harga, rating, serta rekomendasi pribadi. Foodie tidak memasak, menyajikan, menjual, atau mengantar makanan; bukan restoran, layanan pemesanan, komunitas ulasan, atau otoritas rating objektif.
+
+- **Nada:** personal, alami, dekat, jelas, dan ringkas. Ekspresi editorial boleh muncul saat membantu cerita pengalaman; pesan utilitas harus mendahulukan kejelasan. Gunakan bahasa Indonesia yang terasa ditulis manusia, tanpa metafora paksa atau copy promosi generik.
+- **Istilah:** gunakan *catatan*, *kunjungan*, *pengalaman*, *hidangan yang dicoba*, *tempat*, *pilihan pribadi*, dan *opini penulis* sesuai konteks. Rating adalah opini satu penulis, bukan penilaian komunitas atau jaminan objektif. Jangan menyebut sajian atau dapur Foodie seolah Foodie mengoperasikan tempat makan.
+- **Flavor text:** pertahankan hanya bila memberi konteks atau karakter yang relevan. Hapus kalimat dekoratif yang menunda informasi atau tidak membantu pembaca. Fotografi pot, uap, dan makanan boleh membangun atmosfer visual; **teks tidak boleh mengubah atmosfer itu menjadi klaim bahwa Foodie memasak atau melayani pelanggan**.
+- **Error:** judul menyatakan keadaan, deskripsi singkat menjelaskan dampak atau langkah berikutnya, dan label tindakan harus sesuai tujuan sebenarnya. Hindari menyalahkan pengguna, membocorkan detail internal, dan mengarang penyebab gangguan. Enam judul/deskripsi HTTP yang disetujui adalah sumber tunggal di `config/error-pages.php`.
+- **Empty state:** nyatakan apa yang belum tersedia dan satu langkah yang masuk akal; jangan membuat cerita, ulasan, atau konten palsu. **Notifikasi:** sebut perubahan yang benar-benar terjadi dan tindakan bila gagal, tanpa perayaan untuk penyimpanan rutin. **Admin feedback:** jelaskan objek dan status simpan/publikasi, pertahankan isian saat gagal, serta beri alasan validasi yang dapat diperbaiki.
 
 **Anti-AI-slop acceptance bar:**
 
@@ -80,7 +106,7 @@ Pisahkan raw palette dari semantic tokens; **nilai ini proposal**, target WCAG t
 }
 ```
 
-Gunakan CSS custom properties semantik dengan `var(--...)`; classes utilitas boleh untuk layout namun tidak menyebarkan nilai hex. Font display editorial dan font body yang readable harus **gratis/self-host sesuai lisensi**; cek lisensi dan performa sebelum memutuskan keluarga font. Fallback tetap nyaman. Scale type dengan `clamp()` dan batas minimum jelas, jangan hero text memotong di 320 px / zoom 200%.
+Gunakan CSS custom properties semantik dengan `var(--...)`; classes utilitas boleh untuk layout namun tidak menyebarkan nilai hex. Font display editorial dan font body yang readable memakai font sistem atau font gratis yang di-host sendiri sesuai lisensi; cek lisensi dan performa sebelum memutuskan keluarga font. Fallback tetap nyaman. Scale type dengan `clamp()` dan batas minimum jelas, jangan hero text memotong di 320 px / zoom 200%.
 
 **Accessibility minimum:** teks normal ≥4.5:1, teks besar dan komponen penting ≥3:1; outline fokus kontras, keyboard only, link discernible; WCAG 2.2 AA target. WCAG 2.2 SC 2.5.8 meminta target **≥24×24 CSS px** atau jarak pengecualian yang valid; standar internal **≥44×44** untuk tombol touch utama guna lebih nyaman (ini rekomendasi desain, **bukan** angka mandatory WCAG AA). Reduced motion dan responsive text reflow wajib.
 

@@ -1,1 +1,1 @@
-@include('errors.layout', ['code' => 419, 'heading' => 'Sesi telah berakhir', 'message' => 'Muat ulang formulir sebelum menyimpan kembali. Isian pada tab sebelumnya dapat disalin lebih dahulu.', 'recovery' => '/admin/login', 'action' => 'Masuk kembali'])
+@include('errors.layout', ['code' => 419])

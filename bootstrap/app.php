@@ -5,6 +5,7 @@ use App\Http\Middleware\SecurityHeaders;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
+use Illuminate\Http\JsonResponse;
 
 return Application::configure(basePath: dirname(__DIR__))
     ->withRouting(
@@ -18,5 +19,11 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->append(SecurityHeaders::class);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
-        $exceptions->respond(fn ($response) => app(SecurityHeaders::class)->apply($response, request()));
+        $exceptions->respond(function ($response) {
+            if ($response instanceof JsonResponse && request()->expectsJson() && $message = config('error-pages.'.$response->getStatusCode().'.heading')) {
+                $response->setData(['message' => $message]);
+            }
+
+            return app(SecurityHeaders::class)->apply($response, request());
+        });
     })->create();
