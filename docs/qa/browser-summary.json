@@ -1,0 +1,42 @@
+{
+  "stats": {
+    "startTime": "2026-11-04T05:35:44.019Z",
+    "duration": 46775.045999999995,
+    "expected": 6,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "tests": [
+    {
+      "title": "public pages reflow at 320, 375, 768, 1024 and 1440 pixels",
+      "status": "passed",
+      "duration_ms": 29134
+    },
+    {
+      "title": "filters stage, count, cancel, apply and restore browser history",
+      "status": "passed",
+      "duration_ms": 2362
+    },
+    {
+      "title": "login, keyboard combobox, inline create, repeatable editor and publish preview",
+      "status": "passed",
+      "duration_ms": 6499
+    },
+    {
+      "title": "gallery loads originals only when opened and dialog restores focus",
+      "status": "passed",
+      "duration_ms": 2211
+    },
+    {
+      "title": "admin mobile, reduced motion, errors and 200 percent text reflow",
+      "status": "passed",
+      "duration_ms": 5061
+    },
+    {
+      "title": "record local paint, layout stability and token contrast measurements",
+      "status": "passed",
+      "duration_ms": 567
+    }
+  ]
+}

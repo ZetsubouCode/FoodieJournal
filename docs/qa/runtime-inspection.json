@@ -1,0 +1,87 @@
+{
+    "environment": "Workspace local application, newly initialized without journal content",
+    "php": "8.2.4",
+    "laravel": "12.71.0",
+    "driver": "mysql",
+    "tables": [
+        "allergen",
+        "cache",
+        "cache_lock",
+        "category",
+        "cooking_style",
+        "cuisine",
+        "failed_job",
+        "food_type",
+        "ingredient",
+        "ingredient_allergen",
+        "job",
+        "job_batch",
+        "media",
+        "media_variant",
+        "migration",
+        "password_reset_token",
+        "place",
+        "recommendation_label",
+        "session",
+        "slug_redirect",
+        "tag",
+        "user",
+        "visit",
+        "visit_item",
+        "visit_item_allergen",
+        "visit_item_cooking_style",
+        "visit_item_cuisine",
+        "visit_item_ingredient",
+        "visit_item_media",
+        "visit_recommendation_label",
+        "visit_tag"
+    ],
+    "counts": {
+        "migrations": 4,
+        "allergens": 17,
+        "admins": 0,
+        "places": 0,
+        "visits": 0,
+        "media": 0
+    },
+    "server": "10.4.28-MariaDB",
+    "explain": [
+        {
+            "id": 1,
+            "select_type": "SIMPLE",
+            "table": "visit",
+            "type": "ref",
+            "possible_keys": "visit_status_visited_at_id_index",
+            "key": "visit_status_visited_at_id_index",
+            "key_len": "1",
+            "ref": "const",
+            "rows": "1",
+            "Extra": "Using where"
+        }
+    ],
+    "qa_sample_media": {
+        "original_bytes": 61313,
+        "width": 1600,
+        "height": 1100
+    },
+    "qa_sample_variants": [
+        {
+            "variant": "thumbnail",
+            "bytes": 2802,
+            "width": 400,
+            "height": 275
+        },
+        {
+            "variant": "card",
+            "bytes": 7156,
+            "width": 900,
+            "height": 619
+        },
+        {
+            "variant": "hero",
+            "bytes": 16810,
+            "width": 1600,
+            "height": 1100
+        }
+    ]
+}
