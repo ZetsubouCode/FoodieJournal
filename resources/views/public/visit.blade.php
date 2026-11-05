@@ -32,5 +32,5 @@
     @if($visit->conclusion)<section class="section reading"><h2>Kesimpulan</h2><p class="prose">{{ $visit->conclusion }}</p></section>@endif
     @if($visit->tags->isNotEmpty())<div class="cluster">@foreach($visit->tags as $term)<a class="chip" href="{{ url('explore').'?'.http_build_query(['tag' => [$term->slug]]) }}">{{ $term->name }}</a>@endforeach</div>@endif
     <div class="action-group section">@unless($preview)<x-ui.button href="{{ url('place/'.$visit->place->slug) }}">Lihat tempat</x-ui.button>@endunless @if($visit->place->maps_url)<x-ui.button href="{{ $visit->place->maps_url }}" rel="noopener noreferrer" target="_blank">Buka Google Maps</x-ui.button>@endif</div>
-    @if($related->isNotEmpty())<section class="section"><h2>Kunjungan lain ke tempat ini</h2><div class="results">@foreach($related as $other)<x-domain.visit-card :visit="$other" />@endforeach</div></section>@endif
+    @if($related->isNotEmpty())<section class="section"><h2>Kunjungan lain ke tempat ini</h2><div class="results results--visit">@foreach($related as $other)<x-domain.visit-card :visit="$other" />@endforeach</div></section>@endif
 </x-layout.public>

@@ -130,6 +130,14 @@ Gunakan CSS custom properties semantik dengan `var(--...)`; classes utilitas bol
 | `Tabs`, `SegmentedControl`, `ViewToggle` | Visit/Food/Place, grid/list | Preserve URL, fokus visual; selected state tak hanya melalui warna. |
 | `PriceDisplay`, `RatingDisplay` | label semantik eksplisit | Food unit price != Visit total; null → “Belum dicatat”; rating null → “Belum Dinilai”. |
 | `VisitCard/FoodCard/PlaceCard` | cover, metadata, primary action | Card clickable tanpa CTA redundan; jangan nest anchor di dalam anchor; stable aspect ratio, alt dan fallback. |
+
+### Visit Card — F Refined / Split Narrative (approved)
+
+Referensi visual: `docs/design/references/visit-card-f-refined.png`. Satu komponen Blade `resources/views/components/domain/visit-card.blade.php` dipakai oleh Home (kunjungan terbaru dan pilihan pribadi), Explore Visit, detail Place, dan kunjungan terkait. Pada kartu lebar, foto memakai 39% area grid (tepi foto yang terlihat sekitar 34–38% setelah sobekan) dan panel charcoal memakai sisanya. Grid Visit paling banyak dua kolom pada layar lebar, satu kolom di bawah 1180px; pada lebar kartu di bawah 700px foto berpindah ke atas panel. Kartu Food/Place mempertahankan grid terpisah. Judul serif, eyebrow generik "Catatan kunjungan", nama tempat, rating, rekomendasi, tanggal/kota, lalu tag mengikuti urutan referensi. Tidak ada tombol panah atau CTA duplikat.
+
+Kontur tepi luar, top/bottom/right, dan highlight tepi adalah `public/assets/visit-card/{outer-mask,outer-edge,mobile-outer-mask,mobile-outer-edge}.svg`. Foto dipotong oleh `photo-mask.svg` atau `mobile-photo-mask.svg`; serat/sliver krem dan bayangan memakai `vertical-tear.svg` atau `horizontal-tear.svg`. `panel-grain.svg` memberi tekstur halus tanpa foto screenshot. Geometri tepi foto dan strip serat dibangun dari titik kontur yang sama oleh `tools/generate-visit-card-edge.py`, yang mencatat koordinat hasil penelusuran referensi 556×360; aset yang dihasilkan bersifat statis, lokal, dan dapat dipakai ulang. SVG memakai `preserveAspectRatio="none"` agar mengikuti tinggi konten dan tidak membuat seam berulang. Token `--visit-card-*` di `resources/css/tokens.css` mengatur warna kertas, bintang, chip, dan fallback foto. Kualitas sumber membatasi presisi serat mikroskopis, sehingga ini rekonstruksi kontur stabil, bukan salinan piksel.
+
+`<article>` berisi satu tautan overlay Visit Detail dengan nama aksesibel dan tautan rekomendasi/tag sebagai saudara terpisah. Panel melewatkan pointer ke overlay, sedangkan kontrol internal berada di atasnya; fokus memakai ring tembaga yang terlihat. Rating memakai perhitungan overall proyek dan menampilkan "Belum Dinilai" saat null; rekomendasi tetap independen dari rating. Tag berasal dari data pada visit published: kategori/jenis hidangan, lalu teknik memasak, lalu tag umum, tanpa nama duplikat. Dua tag awal tampil; sisanya di tombol `+N` yang membuka popover dengan tautan Explore sesuai parameter kategori/food_type/style/tag. Escape mengembalikan fokus, click-away dan keluar fokus menutupnya. Tidak ada baris tag saat kosong. Foto menggunakan variant `card` dengan `srcset`/`sizes`, lazy loading, dan fallback saat variant tidak ada atau gagal dimuat. Zoom foto dan highlight tepi hanya 220ms pada hover/fokus, dan berhenti dengan reduced motion.
 | `PhotoGallery/Viewer` | thumbnails optimized, modal original | Viewer close/escape/keyboard/zoom/touch, loading and failure, original protected route; credits/alt jika ada. |
 | `CustomAlert` | severity, title, description, optional action/dismiss | Inline persisten untuk hal penting, bukan toast-only. |
 | `CustomModal/Dialog` | sizes, named slots, destructive variant | Focus trap/restore, Escape, scroll lock, accessible description, confirmation explicit. |
@@ -258,6 +266,11 @@ Folder di atas usulan konseptual; Vite modules/entrypoints dipusatkan, tidak mem
 - [ ] Tidak ada native JS alert/confirm; header/footer/layout tidak diduplikasi di setiap view.
 
 ## 11. Referensi standar
+
+### Homepage editorial implementation
+
+The owner-approved homepage composition is registered in `docs/design/homepage-design-decisions.md` and implemented by `public/home.blade.php`, `components/home/*`, `resources/css/home.css`, and `resources/js/components/visit-carousel.js`. Header B and Footer C are shared public components. Hero F uses an actual published visit with the place name in copper. Heading A is a reusable component. Recent D and Picks C share one rail/card implementation; the F Refined card remains the domain component with its own torn-paper SVG assets. Discovery C maps Makanan left, Kota upper right, Gaya masak lower right. At widths below 768px the tiles stack in that order, carousel controls retain a 44px target, and card body inset protects text from overlay arrows. The carousel is manually operable with reduced motion and pauses automatically when interacting or off-screen; it does not show decorative pagination.
+
 
 - W3C WCAG 2.2 Target Size (Minimum): https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum
 - WAI ARIA Combobox Pattern: https://www.w3.org/WAI/ARIA/apg/patterns/combobox/

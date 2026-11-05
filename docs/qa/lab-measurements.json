@@ -5,9 +5,9 @@
     "width": 1440,
     "height": 1000
   },
-  "lcp_ms": 408,
+  "lcp_ms": 536,
   "cls": 0,
-  "navigation_ms": 393.30000001192093,
+  "navigation_ms": 947.1999999284744,
   "contrast": [
     {
       "foreground": "--text-primary",

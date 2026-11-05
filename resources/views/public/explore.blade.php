@@ -13,7 +13,7 @@
     @if($state->get('avoid_allergen'))<x-ui.alert severity="warning" title="Hanya menyembunyikan paparan yang tercatat">{{ config('foodie.allergen_disclaimer') }} Hasil kunjungan/tempat berarti setidaknya satu hidangan cocok, bukan seluruh hidangan. Informasi yang belum tersedia tetap dapat muncul.</x-ui.alert>@endif
     <div class="split section"><p class="numeric">{{ $results->total() }} {{ ['visit' => 'kunjungan', 'food' => 'hidangan', 'place' => 'tempat'][$state->get('tab')] }}</p><nav class="tabs" aria-label="Tampilan hasil">@foreach(['grid' => 'Grid', 'list' => 'Daftar'] as $key => $label)<a href="{{ $state->url(['view' => $key]) }}" @if($state->get('view') === $key) aria-current="page" @endif>{{ $label }}</a>@endforeach</nav></div>
     @if($results->isEmpty())<x-ui.empty-state title="Belum ada pengalaman yang cocok" description="Coba kata lain atau hapus sebagian filter. Pilihanmu tetap tersimpan di URL." :href="url('explore').'?tab='.$state->get('tab')" action="Reset filter" />@else
-    <div class="results {{ $state->get('view') === 'list' ? 'results--list' : '' }}">@foreach($results as $result)
+    <div class="results {{ $state->get('tab') === 'visit' ? 'results--visit' : '' }} {{ $state->get('view') === 'list' ? 'results--list' : '' }}">@foreach($results as $result)
         @if($state->get('tab') === 'visit')<x-domain.visit-card :visit="$result" :allergen-warning="(bool)$state->get('avoid_allergen')" />@elseif($state->get('tab') === 'food')<x-domain.food-card :item="$result" :allergen-warning="(bool)$state->get('avoid_allergen')" />@else<x-domain.place-card :place="$result" :allergen-warning="(bool)$state->get('avoid_allergen')" />@endif
     @endforeach</div>@endif
     <x-ui.pagination :paginator="$results" />

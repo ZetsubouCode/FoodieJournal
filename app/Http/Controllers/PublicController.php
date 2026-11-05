@@ -6,6 +6,7 @@ use App\Models\Place;
 use App\Models\SlugRedirect;
 use App\Models\Visit;
 use App\Services\ExploreQuery;
+use App\Services\HomepageDiscovery;
 use App\Support\ExploreState;
 use App\Support\PublicOptions;
 use Illuminate\Http\Request;
@@ -14,10 +15,17 @@ class PublicController extends Controller
 {
     public function home(PublicOptions $options)
     {
-        $visits = Visit::publishedVisible()->withRating()->with(['place', 'coverMedia.variants', 'recommendations'])->orderByDesc('visited_at')->orderByDesc('id')->limit(7)->get();
-        $featured = $visits->first(fn ($v) => $v->coverMedia?->variant('hero')) ?? $visits->first();
+        $visits = Visit::publishedVisible()->withRating()->with($this->cardRelations())
+            ->orderByDesc('visited_at')->orderByDesc('id')->limit(10)->get();
+        $featured = $visits->first(fn ($visit) => $visit->coverMedia?->variant('hero')) ?? $visits->first();
+        $picks = Visit::publishedVisible()->withRating()->whereHas('recommendations')
+            ->with($this->cardRelations())->orderByDesc('visited_at')->orderByDesc('id')->limit(10)->get();
+        $publicOptions = $options->all();
 
-        return view('public.home', ['featured' => $featured, 'visits' => $visits->reject(fn ($v) => $v->id === $featured?->id), 'picks' => Visit::publishedVisible()->withRating()->whereHas('recommendations')->with(['place', 'coverMedia.variants', 'recommendations'])->orderByDesc('visited_at')->limit(3)->get(), 'options' => $options->all()]);
+        return view('public.home', [
+            'featured' => $featured, 'visits' => $visits, 'picks' => $picks,
+            'discovery' => app(HomepageDiscovery::class)->tiles($publicOptions, $featured),
+        ]);
     }
 
     public function explore(Request $request, ExploreQuery $engine, PublicOptions $optionBuilder)
@@ -41,7 +49,7 @@ class PublicController extends Controller
             return $this->redirectSlug('visit', $slug);
         }
 
-        return view('public.visit', ['visit' => $visit, 'preview' => false, 'related' => Visit::publishedVisible()->withRating()->where('place_id', $visit->place_id)->whereKeyNot($visit->id)->with(['place', 'coverMedia.variants', 'recommendations'])->orderByDesc('visited_at')->orderByDesc('id')->limit(3)->get()]);
+        return view('public.visit', ['visit' => $visit, 'preview' => false, 'related' => Visit::publishedVisible()->withRating()->where('place_id', $visit->place_id)->whereKeyNot($visit->id)->with($this->cardRelations())->orderByDesc('visited_at')->orderByDesc('id')->limit(3)->get()]);
     }
 
     public function place(string $slug)
@@ -50,7 +58,7 @@ class PublicController extends Controller
         if (! $place) {
             return $this->redirectSlug('place', $slug);
         }
-        $visits = $place->visits()->publishedVisible()->withRating()->with(['place', 'coverMedia.variants', 'recommendations'])->orderByDesc('visited_at')->orderByDesc('id')->paginate(18);
+        $visits = $place->visits()->publishedVisible()->withRating()->with($this->cardRelations())->orderByDesc('visited_at')->orderByDesc('id')->paginate(18);
 
         return view('public.place', compact('place', 'visits'));
     }
@@ -72,5 +80,10 @@ class PublicController extends Controller
     public function robots()
     {
         return response("User-agent: *\nDisallow: /admin\nDisallow: /media/\nSitemap: ".url('/sitemap.xml')."\n")->header('Content-Type', 'text/plain');
+    }
+
+    private function cardRelations(): array
+    {
+        return ['place', 'coverMedia.variants', 'recommendations', 'tags', 'items.foodType.category', 'items.styles'];
     }
 }

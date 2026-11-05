@@ -91,6 +91,7 @@ Error views (bukan halaman navigasi biasa): 403 / 404 / 419 / 429 / 500 / 503 [P
 
 - Primary CTA: **Jelajahi Pengalaman** (`/explore`).
 - Feature cards langsung ke `visit.show` atau place yang relevan.
+- Visit Card F Refined memakai satu overlay link ke `visit.show`; chip taksonomi dan rekomendasi adalah link Explore terpisah. Home, Explore Visit, riwayat Place, dan kunjungan terkait memakai komponen yang sama. Visit grid dua kolom hanya pada layar lebar (>=1180px), lalu satu kolom; kartu menjadi foto-di-atas di bawah lebar kartu 700px. Food/Place grid tetap mengikuti aturan masing-masing.
 - Jika konten published kosong: empty state editorial ramah, tidak menampilkan “error” dan tidak membocorkan draft.
 - Pilihan featured harus punya fallback otomatis jika belum dikurasi admin; jangan membuat dependensi CMS tambahan tanpa kebutuhan.
 

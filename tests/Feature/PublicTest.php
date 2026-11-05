@@ -8,6 +8,7 @@ use App\Models\CookingStyle;
 use App\Models\Cuisine;
 use App\Models\FoodType;
 use App\Models\Ingredient;
+use App\Models\RecommendationLabel;
 use App\Models\Visit;
 use App\Models\VisitItem;
 use App\Services\ExploreQuery;
@@ -42,6 +43,26 @@ class PublicTest extends TestCase
         $this->get('/')->assertSee('Belum ada kunjungan yang dipublikasikan');
         $this->get('/visit/missing')->assertNotFound();
         $this->get('/place/missing')->assertNotFound();
+    }
+
+    public function test_homepage_recent_order_curated_picks_and_discovery_use_published_data(): void
+    {
+        $older = Visit::factory()->published()->create(['title' => 'Catatan lebih lama', 'visited_at' => '2026-10-01 12:00:00']);
+        $newer = Visit::factory()->published()->create(['title' => 'Catatan lebih baru', 'visited_at' => '2026-11-01 12:00:00', 'service_rating' => 5]);
+        $label = RecommendationLabel::create(['name' => 'Pilihan penulis']);
+        $older->recommendations()->attach($label);
+        $category = Category::create(['name' => 'Makanan pilihan']);
+        $type = FoodType::create(['name' => 'Hidangan pilihan', 'category_id' => $category->id]);
+        $style = CookingStyle::create(['name' => 'Rebus pilihan']);
+        $item = VisitItem::factory()->for($older)->create(['food_type_id' => $type->id]);
+        $item->styles()->attach($style);
+        $response = $this->get('/')->assertOk()->assertSeeInOrder(['Catatan lebih baru', 'Catatan lebih lama']);
+        preg_match('/<section class="home-section" aria-labelledby="picks-title">(.*?)<\/section>/s', $response->getContent(), $picks);
+        $this->assertNotEmpty($picks);
+        $this->assertStringContainsString('Catatan lebih lama', $picks[1]);
+        $this->assertStringNotContainsString('Catatan lebih baru', $picks[1]);
+        $response->assertSee('category%5B0%5D='.$category->slug, false)
+            ->assertSee('style%5B0%5D='.$style->slug, false);
     }
 
     public function test_every_public_entry_point_excludes_private_content(): void

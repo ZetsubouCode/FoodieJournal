@@ -4,5 +4,5 @@
         <p><x-domain.rating :value="$place->rating_score !== null ? (float)$place->rating_score : null" label="Rata-rata kunjungan" /> · {{ $place->rated_visit_count }} kunjungan dinilai</p>
         @if($place->maps_url)<x-ui.button href="{{ $place->maps_url }}" target="_blank" rel="noopener noreferrer">Buka Google Maps</x-ui.button>@endif
     </header>
-    <section class="section"><h2>Riwayat kunjungan</h2><p class="muted">Harga, hidangan, dan opini merupakan catatan pada tanggal masing-masing kunjungan.</p><div class="results results--list">@foreach($visits as $visit)<x-domain.visit-card :visit="$visit" />@endforeach</div><x-ui.pagination :paginator="$visits" /></section>
+    <section class="section"><h2>Riwayat kunjungan</h2><p class="muted">Harga, hidangan, dan opini merupakan catatan pada tanggal masing-masing kunjungan.</p><div class="results results--visit results--list">@foreach($visits as $visit)<x-domain.visit-card :visit="$visit" />@endforeach</div><x-ui.pagination :paginator="$visits" /></section>
 </x-layout.public>

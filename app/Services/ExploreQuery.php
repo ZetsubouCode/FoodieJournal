@@ -44,7 +44,7 @@ class ExploreQuery
             $date = 'latest_visit_at';
             $id = 'place.id';
         } else {
-            $query = Visit::publishedVisible()->withRating()->with(['place', 'coverMedia.variants', 'recommendations']);
+            $query = Visit::publishedVisible()->withRating()->with(['place', 'coverMedia.variants', 'recommendations', 'tags', 'items.foodType.category', 'items.styles']);
             $this->visitFilters($query, $state);
             if ($this->hasItemFilters($state)) {
                 $query->whereHas('items', fn ($i) => $this->itemFilters($i, $state));

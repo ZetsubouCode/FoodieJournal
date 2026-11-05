@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Contracts\Console\Kernel;
+
 require __DIR__.'/browser-environment.php';
 require __DIR__.'/../vendor/autoload.php';
 $app = require __DIR__.'/../bootstrap/app.php';
@@ -15,7 +17,6 @@ use App\Models\RecommendationLabel;
 use App\Models\User;
 use App\Models\Visit;
 use App\Services\MediaProcessor;
-use Illuminate\Contracts\Console\Kernel;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Storage;
@@ -48,7 +49,7 @@ foreach ($headings as $index => $heading) {
     $item->cuisines()->sync([$cuisine->id]);
     $item->styles()->sync([$style->id]);
     $item->ingredients()->sync([$ingredient->id => ['knowledge_source' => 'Fixture QA']]);
-    if ($index === 0) {
+    if ($index < 3) {
         $visit->recommendations()->sync([$recommendation->id]);
     }
     if (! $visit->media()->exists()) {

@@ -111,5 +111,5 @@ test('admin mobile, reduced motion, errors and 200 percent text reflow', async (
     await page.setViewportSize({ width: 375, height: 812 }); await page.screenshot({ path: 'test-results/admin-editor-mobile.png', fullPage: true });
     await noAxeViolations(page); await page.emulateMedia({ reducedMotion: 'reduce' });
     await page.goto('/explore'); await page.evaluate(() => { document.documentElement.style.fontSize = '200%'; }); await noOverflow(page);
-    await page.goto('/does-not-exist'); await expect(page.getByRole('heading', { name: 'Catatan tidak ditemukan' })).toBeVisible(); await noAxeViolations(page);
+    await page.goto('/does-not-exist'); await expect(page.getByRole('heading', { name: 'Halaman yang dicari tidak ditemukan' })).toBeVisible(); await noAxeViolations(page);
 });
