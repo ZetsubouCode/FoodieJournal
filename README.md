@@ -43,5 +43,6 @@ php vendor/bin/pint --test
 - [Decisions](docs/implementation-decisions.md): domain defaults and repository preservation.
 - [Operations](docs/operations.md): installation, first owner, backup and isolated restore drills.
 - [HTTP error redesign](docs/error-page-redesign.md): composition, asset source, behavior, and verification.
+- [Explore Discovery Machine](docs/discovery-machine.md): projector data contract, layered assets, motion, QA, and fidelity limits.
 
 All table names are singular, including framework support tables. Raw originals and derivatives are private; media requests check current visit eligibility. Unpublishing denies subsequent requests. Ratings ignore nulls and round only for display; visit totals remain separate from historical item prices. Allergen information is observational and never a safety guarantee.

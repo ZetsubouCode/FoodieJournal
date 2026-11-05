@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Place;
 use App\Models\SlugRedirect;
 use App\Models\Visit;
+use App\Services\DiscoveryMachine;
 use App\Services\ExploreQuery;
 use App\Services\HomepageDiscovery;
 use App\Support\ExploreState;
@@ -28,13 +29,23 @@ class PublicController extends Controller
         ]);
     }
 
-    public function explore(Request $request, ExploreQuery $engine, PublicOptions $optionBuilder)
+    public function explore(Request $request, ExploreQuery $engine, PublicOptions $optionBuilder, DiscoveryMachine $machine)
     {
         $state = new ExploreState($request->query());
         $options = $optionBuilder->all();
         $results = $engine->build($state)->paginate(18, ['*'], 'page', $state->get('page', 1))->appends(collect($state->values)->except('page')->all());
 
-        return view('public.explore', ['state' => $state, 'results' => $results, 'options' => $options, 'chips' => $state->chips($options)]);
+        $data = [
+            'state' => $state, 'results' => $results, 'options' => $options,
+            'chips' => $state->chips($options), 'wheel' => $machine->wheel($state),
+        ];
+        $data['projection'] = $machine->selection($state, $data['wheel'], $results);
+
+        if ($request->header('X-Explore-Fragment') === '1') {
+            return response()->view('public.explore-fragment', $data)->header('Cache-Control', 'no-store');
+        }
+
+        return view('public.explore', $data);
     }
 
     public function count(Request $request, ExploreQuery $engine)

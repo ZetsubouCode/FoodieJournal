@@ -10,6 +10,7 @@ $browserEnvironment = [
     'FOODIE_MEDIA_ROOT' => $runtime.'/browser-media', 'SESSION_DRIVER' => 'file', 'CACHE_STORE' => 'file',
     'SESSION_COOKIE' => 'foodie_browser_qa', 'FOODIE_SESSION_PATH' => $runtime.'/browser-sessions', 'FOODIE_CACHE_PATH' => $runtime.'/browser-cache',
     'QUEUE_CONNECTION' => 'sync',
+    'FOODIE_BROWSER_QA' => 'true',
 ];
 foreach (['browser-sessions', 'browser-cache'] as $directory) {
     if (! is_dir($runtime.'/'.$directory)) {

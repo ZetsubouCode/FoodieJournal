@@ -16,4 +16,6 @@
   --motion-fast: 140ms; --motion-standard: 220ms; --z-header: 20; --z-dropdown: 40; --z-modal: 80; --z-toast: 100;
   --visit-card-paper: #ebd1a9; --visit-card-star: #f3bb45; --visit-card-chip-border: #a9794c;
   --visit-card-photo-fallback: #342a22;
+  --projector-metal: #5b3824; --projector-brass: #d8a36b; --projector-glow: #f7b351;
+  --projector-film: #211913; --film-grain-opacity: .08;
 }

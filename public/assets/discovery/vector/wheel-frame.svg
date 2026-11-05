@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="900" viewBox="0 0 900 900" role="img" aria-label="Bingkai roda proyektor enam segmen">
+<defs>
+ <linearGradient id="brass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#3f291d"/><stop offset="0.18" stop-color="#cf975e"/><stop offset="0.31" stop-color="#5d3824"/><stop offset="0.51" stop-color="#e5ba7f"/><stop offset="0.72" stop-color="#583821"/><stop offset="1" stop-color="#a56b3a"/></linearGradient>
+ <linearGradient id="spoke" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#291d17"/><stop offset="0.48" stop-color="#9f6b42"/><stop offset="0.8" stop-color="#d5a46b"/><stop offset="1" stop-color="#291d17"/></linearGradient>
+ <radialGradient id="hub"><stop stop-color="#5e3b22"/><stop offset="0.55" stop-color="#37251b"/><stop offset="0.85" stop-color="#ab7545"/><stop offset="1" stop-color="#211814"/></radialGradient>
+ <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="11" flood-color="#000" flood-opacity="0.55"/></filter>
+</defs>
+<g filter="url(#shadow)">
+ <circle cx="450" cy="450" r="414" fill="none" stroke="#1c1715" stroke-width="42"/>
+ <circle cx="450" cy="450" r="407" fill="none" stroke="url(#brass)" stroke-width="29"/>
+ <circle cx="450" cy="450" r="391" fill="none" stroke="#e2b476" stroke-opacity="0.6" stroke-width="3"/>
+ <circle cx="450" cy="450" r="366" fill="none" stroke="#100e0d" stroke-width="27"/>
+ <circle cx="450" cy="450" r="366" fill="none" stroke="#a36d3e" stroke-width="3"/>
+
+<g transform="rotate(-30 450 450)"><path d="M 423 443 L 423 83 Q 450 70 477 83 L 477 443 Z" fill="url(#spoke)" stroke="#211916" stroke-width="5"/><line x1="437" y1="105" x2="437" y2="337" stroke="#f0bf7f" stroke-opacity="0.35" stroke-width="2"/></g>
+<circle cx="840.00" cy="450.00" r="10" fill="#211914" stroke="#e0a66a" stroke-width="2"/><path d="M836.00 450.00L844.00 450.00" stroke="#c59a6c" stroke-width="2"/>
+<g transform="rotate(30 450 450)"><path d="M 423 443 L 423 83 Q 450 70 477 83 L 477 443 Z" fill="url(#spoke)" stroke="#211916" stroke-width="5"/><line x1="437" y1="105" x2="437" y2="337" stroke="#f0bf7f" stroke-opacity="0.35" stroke-width="2"/></g>
+<circle cx="645.00" cy="787.75" r="10" fill="#211914" stroke="#e0a66a" stroke-width="2"/><path d="M641.00 787.75L649.00 787.75" stroke="#c59a6c" stroke-width="2"/>
+<g transform="rotate(90 450 450)"><path d="M 423 443 L 423 83 Q 450 70 477 83 L 477 443 Z" fill="url(#spoke)" stroke="#211916" stroke-width="5"/><line x1="437" y1="105" x2="437" y2="337" stroke="#f0bf7f" stroke-opacity="0.35" stroke-width="2"/></g>
+<circle cx="255.00" cy="787.75" r="10" fill="#211914" stroke="#e0a66a" stroke-width="2"/><path d="M251.00 787.75L259.00 787.75" stroke="#c59a6c" stroke-width="2"/>
+<g transform="rotate(150 450 450)"><path d="M 423 443 L 423 83 Q 450 70 477 83 L 477 443 Z" fill="url(#spoke)" stroke="#211916" stroke-width="5"/><line x1="437" y1="105" x2="437" y2="337" stroke="#f0bf7f" stroke-opacity="0.35" stroke-width="2"/></g>
+<circle cx="60.00" cy="450.00" r="10" fill="#211914" stroke="#e0a66a" stroke-width="2"/><path d="M56.00 450.00L64.00 450.00" stroke="#c59a6c" stroke-width="2"/>
+<g transform="rotate(210 450 450)"><path d="M 423 443 L 423 83 Q 450 70 477 83 L 477 443 Z" fill="url(#spoke)" stroke="#211916" stroke-width="5"/><line x1="437" y1="105" x2="437" y2="337" stroke="#f0bf7f" stroke-opacity="0.35" stroke-width="2"/></g>
+<circle cx="255.00" cy="112.25" r="10" fill="#211914" stroke="#e0a66a" stroke-width="2"/><path d="M251.00 112.25L259.00 112.25" stroke="#c59a6c" stroke-width="2"/>
+<g transform="rotate(270 450 450)"><path d="M 423 443 L 423 83 Q 450 70 477 83 L 477 443 Z" fill="url(#spoke)" stroke="#211916" stroke-width="5"/><line x1="437" y1="105" x2="437" y2="337" stroke="#f0bf7f" stroke-opacity="0.35" stroke-width="2"/></g>
+<circle cx="645.00" cy="112.25" r="10" fill="#211914" stroke="#e0a66a" stroke-width="2"/><path d="M641.00 112.25L649.00 112.25" stroke="#c59a6c" stroke-width="2"/>
+<circle cx="450" cy="450" r="94" fill="#201713" stroke="url(#brass)" stroke-width="29"/>
+<circle cx="450" cy="450" r="71" fill="url(#hub)" stroke="#e0ac6b" stroke-width="4"/>
+<circle cx="450" cy="450" r="52" fill="#15100f" stroke="#8b643f" stroke-width="2"/>
+</g></svg>

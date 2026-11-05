@@ -66,7 +66,7 @@ test('card destinations stay independent and drag advances without opening detai
     const recent = page.locator('[data-visit-carousel]').first();
     await recent.scrollIntoViewIfNeeded();
     const card = recent.locator('[data-carousel-slide]').first();
-    const box = await card.boundingBox();
+    const box = await card.locator('.visit-card__media').boundingBox();
     await page.mouse.move(box.x + box.width / 2, box.y + box.height / 2);
     await page.mouse.down();
     await page.mouse.move(box.x + box.width / 2 - 90, box.y + box.height / 2, { steps: 5 });

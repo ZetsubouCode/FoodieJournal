@@ -158,6 +158,8 @@ Bukan semua button di seluruh website wajib selebar sama; **kesetaraan berlaku p
 
 ## 5. Konsep filtering Explore yang scalable
 
+**Komposisi Explore yang disetujui (Discovery Machine A1):** Hero proyektor sinematik berlapis memakai sasis statis, roda `food_type` yang benar-benar berputar, tombol tengah DOM, berkas cahaya, dan proyeksi data published. Posisi awal **Semua rasa** mempertahankan Visit terbaru tanpa filter. Toolbar pencarian/filter/urut/grid-list berbagi satu baseline. Memory Reel memakai hasil query yang sama dengan proyeksi dan tetap dapat dibaca vertikal. Rincian aset, interaksi, dan keterbatasan visual ada di `docs/discovery-machine.md`.
+
 **Masalah:** City, category, food type, cuisine, cooking style, price, rating, ingredient, allergen, tag, recommendation membuat UI cepat sesak. **Solusi:** munculkan yang paling sering dipakai; sisanya *progressive disclosure*. Pertahankan 3 tab Visit/Food/Place, tetapi definisi filter dan sort menyesuaikan konteks.
 
 ### Progressive disclosure (proposal)
