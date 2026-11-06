@@ -15,6 +15,9 @@ async function noOverflow(page) {
 }
 async function loadNavigationImages(page) {
     for (const image of await page.locator('img[src]').all()) {
+        // Hidden mobile shell and the parked envelope photograph are physical
+        // art layers, not navigation media. Scrolling to them changes the tray.
+        if (!await image.isVisible() || await image.evaluate(node => Boolean(node.closest('[data-memory-insert]')))) continue;
         await image.scrollIntoViewIfNeeded();
         await expect(image).toHaveJSProperty('complete', true);
         await expect(image).not.toHaveJSProperty('naturalWidth', 0);
@@ -22,6 +25,10 @@ async function loadNavigationImages(page) {
     await page.evaluate(() => window.scrollTo(0, 0));
 }
 async function noAxeViolations(page) {
+    // Standalone HTTP errors deliberately have no app JavaScript.
+    if (await page.locator('script[type="module"]').count()) {
+        await expect(page.locator('html')).toHaveAttribute('data-ui-ready', 'true');
+    }
     const result = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa']).analyze();
     expect(result.violations.map(v => ({ id: v.id, impact: v.impact, nodes: v.nodes.map(n => n.target) }))).toEqual([]);
 }
@@ -42,8 +49,8 @@ test('public pages reflow at 320, 375, 768, 1024 and 1440 pixels', async ({ page
 test('filters stage, count, cancel, apply and restore browser history', async ({ page }) => {
     await page.setViewportSize({ width: 375, height: 812 }); await page.goto('/explore');
     const filter = page.getByRole('button', { name: /^Filter/ }); await filter.click();
-    const dialog = page.getByRole('dialog', { name: 'Filter pengalaman' }); await expect(dialog).toBeVisible();
-    await dialog.locator('summary').filter({ hasText: /^Kota$/ }).click();
+    const dialog = page.getByRole('dialog', { name: 'Filter arsip' }); await expect(dialog).toBeVisible();
+    await dialog.locator('[data-filter-group-open=location]').click();
     await dialog.getByLabel('Semarang', { exact: true }).check();
     await expect(page).toHaveURL('/explore');
     await expect(dialog.locator('[data-filter-apply]')).toHaveText(/Tampilkan \d+ hasil/);

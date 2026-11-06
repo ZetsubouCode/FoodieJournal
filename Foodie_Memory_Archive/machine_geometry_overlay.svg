@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1448 1086">
+<style>text{font:16px Arial;fill:#fff;text-shadow:0 0 3px #000}rect{fill:#00ffb410;stroke:#00ffb4;stroke-width:2}</style>
+<rect x="178" y="314" width="170" height="136"/><text x="186" y="336">slot 1</text>
+<rect x="405" y="314" width="152" height="136"/><text x="413" y="336">slot 2</text>
+<rect x="609" y="314" width="151" height="136"/><text x="617" y="336">slot 3</text>
+<rect x="178" y="557" width="170" height="112"/><text x="186" y="579">slot 4</text>
+<rect x="405" y="557" width="152" height="112"/><text x="413" y="579">slot 5</text>
+<rect x="609" y="557" width="151" height="112"/><text x="617" y="579">slot 6</text>
+<rect x="918" y="232" width="400" height="541"/><text x="926" y="254">SCREEN</text>
+<rect x="341" y="793" width="399" height="54"/><text x="349" y="815">PICKUP</text>
+</svg>

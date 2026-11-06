@@ -1,0 +1,25 @@
+
+Running 18 tests using 1 worker
+
+(node:27044) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 tests\Browser\discovery-machine.spec.js:15:1 › homepage selection dispenses a surprise, reveals a real destination and keeps shell mounted (7.0s)
+  ok  2 tests\Browser\discovery-machine.spec.js:37:1 › Explore modes retain the document, query, layout and browser history (4.1s)
+  ok  3 tests\Browser\discovery-machine.spec.js:50:1 › rapid requests discard stale modes; failed requests retain committed data (2.7s)
+  ok  4 tests\Browser\discovery-machine.spec.js:63:1 › curiosity photographs apply actual filtering and restore with Back (2.8s)
+  ok  5 tests\Browser\discovery-machine.spec.js:72:1 › filter drawer stages hierarchy, long searchable multiselect, tags and recommendations; apply and cancel (4.0s)
+  ok  6 tests\Browser\discovery-machine.spec.js:108:1 › mode-specific prices, group reset, search/sort/grid/list/pagination and error retry remain coherent (6.0s)
+  ok  7 tests\Browser\discovery-machine.spec.js:134:1 › archive error retry, failed photographs and empty Explore remain usable (6.4s)
+  ok  8 tests\Browser\discovery-machine.spec.js:151:1 › keyboard, reduced motion and lamp pause keep the reveal deliberate (2.8s)
+  ok  9 tests\Browser\discovery-machine.spec.js:164:1 › LED lenses follow native canvas centers; tray and status remain contained across widths (25.9s)
+  ok 10 tests\Browser\discovery-machine.spec.js:188:1 › axe scans the archive at desktop and mobile, then the Explore filter drawer (16.9s)
+  ok 11 tests\Browser\discovery-machine.spec.js:204:1 › touch collection and knob controls reveal real memories (5.1s)
+  ok 12 tests\Browser\discovery-machine.spec.js:214:1 › lamp flicker recurs with randomized idle intervals and coherent local emission (4.5s)
+  ok 13 tests\Browser\discovery-machine.spec.js:248:1 › calendar and location metadata are shared by Home and all Explore card modes (8.1s)
+  ok 14 tests\Browser\homepage.spec.js:4:1 › homepage editorial collections and shared geometry reflow through desktop, mobile and 200% text (22.0s)
+  ok 15 tests\Browser\homepage.spec.js:24:1 › personal picks link to actual records and keep endorsements distinct from score (3.9s)
+  ok 16 tests\Browser\visit-card.spec.js:8:1 › F Refined visit card reflows and keeps independent destinations (23.9s)
+  ok 17 tests\Browser\visit-card.spec.js:87:1 › failed visit-card media reveals a stable fallback (797ms)
+  ok 18 tests\Browser\visit-card.spec.js:96:1 › touch taps keep card navigation separate from tag disclosure (5.3s)
+
+  18 passed (2.6m)

@@ -156,7 +156,7 @@ Semua usulan di atas **masih untuk review**, termasuk ruang lingkup filter alerg
 
 | ID | Fitur | Prioritas | Keterangan |
 |---|---|---|---|
-| PUB-01 | Home editorial | P0 | Hero, featured, kunjungan terbaru, label rekomendasi, pintu menuju Explore |
+| PUB-01 | Home Memory Archive | P0 | Kabinet memori terkurasi, kunjungan terbaru editorial, rekomendasi pribadi, pintu Explore terfilter |
 | PUB-02 | Explore tab Visit/ Food/ Place | P0 | Default Visit terbaru, keyword, filter dasar, sort per konteks, grid/list, URL persisten |
 | PUB-03 | Visit detail | P0 | Cerita, rating terstruktur, item, harga historis, galeri, kesimpulan, link tempat |
 | PUB-04 | Place detail | P0 | Info lokasi, Maps jika tersedia, seluruh riwayat published, rating agregat dan skor tiap kunjungan |
@@ -188,7 +188,7 @@ MVP selesai bila pemilik dapat membuat tempat → menyimpan kunjungan → mengis
 
 `Home → Explore (default Visit terbaru) → search/filter/tab → Visit Detail → Place Detail → riwayat Visit lain`
 
-Alternatif: `Home → rekomendasi/kota/food → Explore dengan filter aktif → detail`.
+Alternatif: `Home Memory Archive → koleksi terkurasi → amplop/detail atau Explore terfilter`. Explore memuat Curiosity Index untuk kota, kategori, hidangan, teknik dan rekomendasi.
 
 **Desain interaksi:**
 - Header sederhana: logo Home, Jelajah (Explore), dan akses eksplorasi kota/rekomendasi yang bisa masuk sebagai section Explore dahulu.
@@ -219,7 +219,7 @@ Alternatif: `Home → rekomendasi/kota/food → Explore dengan filter aktif → 
 
 ## 9. Arsitektur informasi dan pengalaman publik
 
-- **Home** adalah pintu masuk editorial; kontennya berasal dari published visits.
+- **Home** adalah Memory Archive terkurasi; kontennya berasal dari published visits. **Explore** adalah Curiosity Index dan penelusuran aktif. **Visit Detail** adalah Culinary Dossier dengan cerita, foto, harga historis dan penilaian. Arsitektur visual terkini tercatat di docs/cinematic-redesign.md.
 - **Explore** adalah satu sumber discovery dan canonical pengalaman browsing, dengan tab `Visit`, `Food`, `Place`.
 - **Visit** adalah objek cerita utama dan default hasil Explore.
 - **Place** adalah konteks lokasi serta arsip beberapa pengalaman, bukan satu review statis.

@@ -5,27 +5,32 @@ namespace App\Http\Controllers;
 use App\Models\Place;
 use App\Models\SlugRedirect;
 use App\Models\Visit;
+use App\Services\CuriosityIndex;
 use App\Services\DiscoveryMachine;
 use App\Services\ExploreQuery;
-use App\Services\HomepageDiscovery;
+use App\Services\VendingMachine;
 use App\Support\ExploreState;
 use App\Support\PublicOptions;
 use Illuminate\Http\Request;
 
 class PublicController extends Controller
 {
-    public function home(PublicOptions $options)
+    public function home(Request $request, VendingMachine $vendingMachine)
     {
+        $vending = $vendingMachine->page($request->integer('machine_page', 1));
+        if ($request->header('X-Vending-Fragment') === '1') {
+            return response()->view('public.vending-page', compact('vending'))
+                ->header('Cache-Control', 'no-store')->header('X-Robots-Tag', 'noindex, follow');
+        }
         $visits = Visit::publishedVisible()->withRating()->with($this->cardRelations())
             ->orderByDesc('visited_at')->orderByDesc('id')->limit(10)->get();
         $featured = $visits->first(fn ($visit) => $visit->coverMedia?->variant('hero')) ?? $visits->first();
         $picks = Visit::publishedVisible()->withRating()->whereHas('recommendations')
             ->with($this->cardRelations())->orderByDesc('visited_at')->orderByDesc('id')->limit(10)->get();
-        $publicOptions = $options->all();
 
         return view('public.home', [
             'featured' => $featured, 'visits' => $visits, 'picks' => $picks,
-            'discovery' => app(HomepageDiscovery::class)->tiles($publicOptions, $featured),
+            'vending' => $vending,
         ]);
     }
 
@@ -33,19 +38,41 @@ class PublicController extends Controller
     {
         $state = new ExploreState($request->query());
         $options = $optionBuilder->all();
+        if ($request->header('X-Archive-Fragment') === '1') {
+            return response()->view('public.archive-collection-fragment', $this->archiveData($state, $options, $machine, $engine))->header('Cache-Control', 'no-store');
+        }
         $results = $engine->build($state)->paginate(18, ['*'], 'page', $state->get('page', 1))->appends(collect($state->values)->except('page')->all());
 
         $data = [
             'state' => $state, 'results' => $results, 'options' => $options,
-            'chips' => $state->chips($options), 'wheel' => $machine->wheel($state),
+            'chips' => $state->chips($options),
         ];
-        $data['projection'] = $machine->selection($state, $data['wheel'], $results);
 
         if ($request->header('X-Explore-Fragment') === '1') {
             return response()->view('public.explore-fragment', $data)->header('Cache-Control', 'no-store');
         }
 
-        return view('public.explore', $data);
+        return view('public.explore', [...$data, 'discovery' => app(CuriosityIndex::class)->tiles($options)]);
+    }
+
+    private function archiveData(ExploreState $state, array $options, DiscoveryMachine $machine, ExploreQuery $engine): array
+    {
+        $slots = $machine->slots($state, $options);
+        $results = $engine->build($state)->paginate(18, ['*'], 'page', 1);
+
+        return [
+            'state' => $state, 'slots' => $slots, 'memory' => $machine->selection($state, $slots, $results),
+            'resetUrl' => (new ExploreState($machine->withoutPreset($state, $slots)))->url(),
+        ];
+    }
+
+    public function memory(Request $request, DiscoveryMachine $machine)
+    {
+        $exclude = $request->query('exclude');
+        $exclude = is_scalar($exclude) && ctype_digit((string) $exclude) ? (int) $exclude : null;
+        $memory = $machine->surprise(new ExploreState($request->query()), $exclude);
+
+        return response()->view('public.explore-memory', compact('memory'))->header('Cache-Control', 'no-store')->header('X-Robots-Tag', 'noindex, nofollow');
     }
 
     public function count(Request $request, ExploreQuery $engine)

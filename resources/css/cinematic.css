@@ -1,0 +1,70 @@
+/* One environment, with light/crop variants; no moving full-viewport layers. */
+.public-page {
+    overflow-wrap: anywhere;
+    --ambient-opacity: .45;
+    --ambient-position: center top;
+    background: linear-gradient(rgb(13 12 10 / var(--ambient-opacity)), var(--surface-page) 75rem), url('/assets/explore/archive/atmosphere.webp') var(--ambient-position) / max(100%, 80rem) auto no-repeat, var(--surface-page);
+}
+.public-page--home { --ambient-opacity: .12; }
+.public-page--explore { --ambient-opacity: .7; --ambient-position: right top; }
+.public-page--visit { --ambient-opacity: .8; --ambient-position: left -12rem; }
+.public-page--place { --ambient-opacity: .6; --ambient-position: right -22rem; }
+.public-page h1, .public-page h2 { font-family: var(--font-display); text-wrap: balance; overflow-wrap: anywhere; }
+.public-page .editorial-caption { color: var(--action-primary-bg); margin: 0 0 var(--space-3); font-size: .75rem; letter-spacing: .16em; }
+.editorial-heading { display: flex; justify-content: space-between; align-items: end; gap: var(--space-6); margin-bottom: var(--space-8); }
+.editorial-heading h2 { margin: 0; font: 500 clamp(2rem, 4.2vw, 3.8rem)/1 var(--font-display); }
+.editorial-heading p { color: var(--text-secondary); margin: .75rem 0 0; }
+.editorial-heading > a { display: inline-flex; align-items: center; gap: var(--space-4); min-height: var(--control-height); font-size: .875rem; text-decoration: none; }
+/* Quiet work surface. Mechanical material belongs to the Home cabinet. */
+.public-page #discovery-console { padding: var(--space-6) 0; border: 0; border-radius: 0; background: none; box-shadow: none; }
+.public-page #discovery-console::before, .public-page #discovery-console::after { display: none; }
+.public-page .discovery-console__head h2 { text-transform: none; letter-spacing: 0; font-size: 1rem; color: var(--text-secondary); }
+.public-page .discovery-tabs { border: 0; background: none; border-radius: 0; gap: var(--space-6); margin: var(--space-3) 0 var(--space-6); }
+.public-page .discovery-tabs a { flex: none; padding: .5rem 0; border-radius: 0; font-size: 1rem; color: var(--text-secondary); }
+.public-page .discovery-tabs a[aria-current=page] { background: none; color: var(--action-primary-bg); box-shadow: inset 0 -1px currentColor; }
+.public-page .discovery-toolbar :is(.btn, select, input), .public-page .discovery-view { background: var(--surface-raised); border-color: var(--archive-outline); box-shadow: none; font-size: .875rem; }
+.public-page .discovery-view a[aria-current=page] { background: var(--action-primary-bg); color: var(--action-primary-text); box-shadow: none; }
+.public-page .memory-reel { margin-top: var(--space-8); }
+.public-page .memory-reel__head::after { display: none; }
+.public-page .memory-reel__index { font-size: .75rem; letter-spacing: 0; text-transform: none; color: var(--text-secondary); }
+.curiosity-index { margin: var(--space-8) 0 var(--space-12); }
+.curiosity-index__intro { display: grid; grid-template-columns: 1.5fr 1fr; align-items: end; gap: var(--space-8); margin-bottom: var(--space-8); }
+.curiosity-index h1 { font: 500 clamp(3.4rem, 6.5vw, 6rem)/.92 var(--font-display); margin: 0; letter-spacing: -.035em; }
+.curiosity-index h1 em { color: var(--action-primary-bg); font-weight: 400; }
+.curiosity-index__intro > p { color: var(--text-secondary); max-width: 38ch; margin: 0 0 .4rem; }
+.curiosity-index__photos { display: grid; grid-template-columns: 1.3fr 1fr .85fr; gap: var(--space-4); align-items: end; }
+.curiosity-surface { display: block; position: relative; overflow: hidden; isolation: isolate; text-decoration: none; background: var(--surface-raised); }
+.curiosity-surface--food { aspect-ratio: 1.25; }
+.curiosity-surface--city { aspect-ratio: 1.1; margin-bottom: 2.5rem; }
+.curiosity-surface--style { aspect-ratio: .9; }
+.curiosity-surface > :is(img, .photo-fallback) { width: 100%; height: 100%; border-radius: 0; aspect-ratio: auto; object-fit: cover; transition: transform var(--motion-standard) ease-out; }
+.curiosity-surface::after { content: ''; position: absolute; inset: 0; background: linear-gradient(transparent 20%, rgb(0 0 0 / .88)); pointer-events: none; }
+.curiosity-surface__copy { position: absolute; z-index: 1; inset: auto var(--space-6) var(--space-6); color: var(--text-primary); display: grid; grid-template-columns: 1fr auto; gap: var(--space-2); }
+.curiosity-surface__copy > span:first-child { font-size: .8125rem; grid-column: 1 / -1; }
+.curiosity-surface__copy strong { font: 500 clamp(1.8rem, 3vw, 2.8rem)/1 var(--font-display); overflow-wrap: anywhere; }
+.curiosity-surface__copy > span:last-child { font-size: 1.5rem; align-self: end; }
+.curiosity-surface:is(:hover, :focus-visible) > img { transform: scale(1.035); }
+.curiosity-index__directory { display: flex; flex-wrap: wrap; gap: var(--space-8); padding-top: var(--space-6); }
+.curiosity-index__directory a { display: flex; align-items: center; flex-wrap: wrap; gap: .25rem 1rem; min-height: var(--control-height); text-decoration: none; }
+.curiosity-index__directory a > span:first-child { color: var(--text-muted); font-size: .8125rem; }
+.curiosity-index__directory strong { font-weight: 400; }
+.place-dossier { display: grid; grid-template-columns: 1.2fr 1fr; gap: var(--space-12); align-items: center; margin-block: var(--space-8) var(--space-16); }
+.place-dossier h1 { font: 500 clamp(3rem, 5.8vw, 5.5rem)/.95 var(--font-display); }
+.place-dossier__photo .media-image { aspect-ratio: 1.25; border-radius: 0; }
+@media(max-width: 767px) {
+    .editorial-heading { align-items: start; flex-direction: column; gap: var(--space-3); }
+    .curiosity-index__intro { grid-template-columns: 1fr; gap: var(--space-6); }
+    .curiosity-index__photos { grid-template-columns: 1fr 1fr; gap: var(--space-3); }
+    .curiosity-surface--food { grid-column: 1 / -1; aspect-ratio: 1.6; }
+    .curiosity-surface--city, .curiosity-surface--style { aspect-ratio: .85; margin: 0; }
+    .curiosity-surface__copy { inset: auto var(--space-4) var(--space-4); }
+    .curiosity-surface__copy strong { font-size: 1.6rem; }
+    .curiosity-index__directory { display: grid; gap: var(--space-4); }
+    .place-dossier { grid-template-columns: 1fr; gap: var(--space-6); }
+}
+
+/* Shared card metadata. Inline SVG never replaces the readable value. */
+.record-meta { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem 1rem; color: var(--text-muted); font-size: .8125rem; line-height: 1.5; }
+.record-meta__item { display: inline-flex; align-items: center; gap: .4em; min-width: 0; max-width: 100%; }
+.record-meta__item > span { min-width: 0; overflow-wrap: anywhere; }
+.meta-icon { display: inline-block; width: 1em; height: 1em; flex: 0 0 1em; color: currentColor; vertical-align: -.12em; }

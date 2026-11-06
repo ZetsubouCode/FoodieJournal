@@ -8,10 +8,18 @@ test('record local paint, layout stability and token contrast measurements', asy
         new PerformanceObserver(list => { for (const entry of list.getEntries()) if (!entry.hadRecentInput) window.foodieMeasurements.cls += entry.value; }).observe({ type: 'layout-shift', buffered: true });
     });
     await page.setViewportSize({ width: 1440, height: 1000 }); await page.goto('/');
-    await expect(page.locator('img[fetchpriority=high]')).toHaveJSProperty('complete', true);
+    const heroImage = page.locator('.memory-machine__shell');
+    // The retained QA journal grows during CRUD tests. Its latest ten visits
+    // can legitimately have no cover, which renders the supported text hero.
+    if (await heroImage.count()) {
+        await expect(heroImage).toHaveJSProperty('complete', true);
+        await expect(heroImage).not.toHaveJSProperty('naturalWidth', 0);
+    } else {
+        await expect(page.locator('.home-hero--text h1')).toBeVisible();
+    }
     await expect.poll(() => page.evaluate(() => window.foodieMeasurements.lcp_ms)).toBeGreaterThan(0);
     const measured = await page.evaluate(() => {
-        const style = getComputedStyle(document.documentElement);
+        const style = getComputedStyle(document.body);
         const luminance = value => {
             const rgb = value.trim().replace('#', '').match(/.{2}/g).map(hex => parseInt(hex, 16) / 255).map(v => v <= .04045 ? v / 12.92 : ((v + .055) / 1.055) ** 2.4);
             return rgb[0] * .2126 + rgb[1] * .7152 + rgb[2] * .0722;

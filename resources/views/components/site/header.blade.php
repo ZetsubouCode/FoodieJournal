@@ -11,7 +11,7 @@
     @else
         <nav aria-label="Navigasi utama">
             <a href="{{ route('home') }}" @if(request()->routeIs('home')) aria-current="page" @endif>Beranda</a>
-            <a href="{{ route('explore.index') }}" @if(request()->routeIs('explore.index')) aria-current="page" @endif>Jelajah</a>
+            <a href="{{ route('explore.index') }}" @if(request()->routeIs('explore.index', 'visit.show', 'place.show')) aria-current="page" @endif>Jelajah</a>
         </nav>
     @endif
 </header>

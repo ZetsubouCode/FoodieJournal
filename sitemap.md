@@ -18,7 +18,7 @@
 ## 2. Sitemap publik — struktur yang disarankan
 
 ```text
-/                                 Home — editorial landing [P0]
+/                                 Home — Memory Archive [P0]
 ├── /explore                       Explore [P0]
 │   ├── ?tab=visit                 Kunjungan terbaru (default) [P0]
 │   ├── ?tab=food                  Hidangan lintas kunjungan [P0]
@@ -44,7 +44,7 @@ Error views (bukan halaman navigasi biasa): 403 / 404 / 419 / 429 / 500 / 503 [P
 
 | Path | Nama route usulan | Tujuan / isi utama | Prioritas | Indexability |
 |---|---|---|---|---|
-| `/` | `home` | Hero foto, featured journey, kunjungan terbaru, personal picks, akses Explore | P0 | Index |
+| `/` | `home` | Memory Archive, kunjungan terbaru editorial, personal picks, akses Explore | P0 | Index |
 | `/explore` | `explore.index` | Hasil 3 tab, keyword/filter/sort, grid/list, pagination | P0 | Index **hanya versi canonical** |
 | `/visit/{slug}` | `visit.show` | Tanggal, place, cerita/review, rating, item, biaya, galeri, kesimpulan | P0 | Index bila published |
 | `/place/{slug}` | `place.show` | Identitas tempat, lokasi, link Maps, agregat rating, jumlah rated visit, riwayat visit | P0 | Index bila eligible |
@@ -87,7 +87,7 @@ Error views (bukan halaman navigasi biasa): 403 / 404 / 419 / 429 / 500 / 503 [P
 
 ### 4.1 Home `/`
 
-**Urutan konten yang dianjurkan:** cinematic hero → featured journeys → kunjungan terbaru → personal recommendations → jalur eksplorasi kota/makanan.
+**Urutan konten yang dianjurkan:** Memory Archive → kunjungan terbaru editorial → personal recommendations. Jalur kota/makanan/teknik berpindah ke Curiosity Index di Explore.
 
 - Primary CTA: **Jelajahi Pengalaman** (`/explore`).
 - Feature cards langsung ke `visit.show` atau place yang relevan.

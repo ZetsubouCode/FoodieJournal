@@ -1,0 +1,678 @@
+{
+  "baseURL": "http://127.0.0.1:8000",
+  "note": "Read-only existing published content. Motion review deliberately slowed; static captures and automated tests use production CSS. Frame geometry is sampled before capture.",
+  "frames": [
+    {
+      "name": "01-idle-empty-tray",
+      "phase": "idle",
+      "screen": "collection",
+      "url": "http://127.0.0.1:8000/explore",
+      "envelope": {
+        "x": 378.984375,
+        "y": 639.4109497070312,
+        "width": 287.171875,
+        "height": 46.15625,
+        "top": 639.4109497070312,
+        "right": 666.15625,
+        "bottom": 685.5671997070312,
+        "left": 378.984375
+      },
+      "tray": {
+        "x": 338.5,
+        "y": 699.421875,
+        "width": 368.171875,
+        "height": 64.125,
+        "top": 699.421875,
+        "right": 706.671875,
+        "bottom": 763.546875,
+        "left": 338.5
+      },
+      "status": {
+        "x": 80,
+        "y": 796.21875,
+        "width": 1280,
+        "height": 56,
+        "top": 796.21875,
+        "right": 1360,
+        "bottom": 852.21875,
+        "left": 80
+      }
+    },
+    {
+      "name": "02-focus",
+      "phase": "idle",
+      "screen": "collection",
+      "url": "http://127.0.0.1:8000/explore",
+      "envelope": {
+        "x": 378.984375,
+        "y": 639.4109497070312,
+        "width": 287.171875,
+        "height": 46.15625,
+        "top": 639.4109497070312,
+        "right": 666.15625,
+        "bottom": 685.5671997070312,
+        "left": 378.984375
+      },
+      "tray": {
+        "x": 338.5,
+        "y": 699.421875,
+        "width": 368.171875,
+        "height": 64.125,
+        "top": 699.421875,
+        "right": 706.671875,
+        "bottom": 763.546875,
+        "left": 338.5
+      },
+      "status": {
+        "x": 80,
+        "y": 796.21875,
+        "width": 1280,
+        "height": 56,
+        "top": 796.21875,
+        "right": 1360,
+        "bottom": 852.21875,
+        "left": 80
+      }
+    },
+    {
+      "name": "03-hover",
+      "phase": "idle",
+      "screen": "collection",
+      "url": "http://127.0.0.1:8000/explore",
+      "envelope": {
+        "x": 378.984375,
+        "y": 639.4109497070312,
+        "width": 287.171875,
+        "height": 46.15625,
+        "top": 639.4109497070312,
+        "right": 666.15625,
+        "bottom": 685.5671997070312,
+        "left": 378.984375
+      },
+      "tray": {
+        "x": 338.5,
+        "y": 699.421875,
+        "width": 368.171875,
+        "height": 64.125,
+        "top": 699.421875,
+        "right": 706.671875,
+        "bottom": 763.546875,
+        "left": 338.5
+      },
+      "status": {
+        "x": 80,
+        "y": 796.21875,
+        "width": 1280,
+        "height": 56,
+        "top": 796.21875,
+        "right": 1360,
+        "bottom": 852.21875,
+        "left": 80
+      }
+    },
+    {
+      "name": "04-selection-processing",
+      "phase": "processing",
+      "screen": "collection",
+      "url": "http://127.0.0.1:8000/explore",
+      "envelope": {
+        "x": 378.984375,
+        "y": 639.4109497070312,
+        "width": 287.171875,
+        "height": 46.15625,
+        "top": 639.4109497070312,
+        "right": 666.15625,
+        "bottom": 685.5671997070312,
+        "left": 378.984375
+      },
+      "tray": {
+        "x": 338.5,
+        "y": 699.421875,
+        "width": 368.171875,
+        "height": 64.125,
+        "top": 699.421875,
+        "right": 706.671875,
+        "bottom": 763.546875,
+        "left": 338.5
+      },
+      "status": {
+        "x": 80,
+        "y": 796.21875,
+        "width": 1280,
+        "height": 56,
+        "top": 796.21875,
+        "right": 1360,
+        "bottom": 852.21875,
+        "left": 80
+      }
+    },
+    {
+      "name": "05-partial-dispense",
+      "phase": "dispensing",
+      "screen": "collection",
+      "url": "http://127.0.0.1:8000/explore?tab=visit&view=grid&sort=newest&collection=noodles&food_type%5B0%5D=mi-ramen",
+      "envelope": {
+        "x": 378.984375,
+        "y": 668.084716796875,
+        "width": 287.171875,
+        "height": 46.15625,
+        "top": 668.084716796875,
+        "right": 666.15625,
+        "bottom": 714.240966796875,
+        "left": 378.984375
+      },
+      "tray": {
+        "x": 338.5,
+        "y": 699.421875,
+        "width": 368.171875,
+        "height": 64.125,
+        "top": 699.421875,
+        "right": 706.671875,
+        "bottom": 763.546875,
+        "left": 338.5
+      },
+      "status": {
+        "x": 80,
+        "y": 796.21875,
+        "width": 1280,
+        "height": 56,
+        "top": 796.21875,
+        "right": 1360,
+        "bottom": 852.21875,
+        "left": 80
+      }
+    },
+    {
+      "name": "06-partial-dispense-later",
+      "phase": "dispensing",
+      "screen": "collection",
+      "url": "http://127.0.0.1:8000/explore?tab=visit&view=grid&sort=newest&collection=noodles&food_type%5B0%5D=mi-ramen",
+      "envelope": {
+        "x": 378.984375,
+        "y": 683.5396118164062,
+        "width": 287.171875,
+        "height": 46.15625,
+        "top": 683.5396118164062,
+        "right": 666.15625,
+        "bottom": 729.6958618164062,
+        "left": 378.984375
+      },
+      "tray": {
+        "x": 338.5,
+        "y": 699.421875,
+        "width": 368.171875,
+        "height": 64.125,
+        "top": 699.421875,
+        "right": 706.671875,
+        "bottom": 763.546875,
+        "left": 338.5
+      },
+      "status": {
+        "x": 80,
+        "y": 796.21875,
+        "width": 1280,
+        "height": 56,
+        "top": 796.21875,
+        "right": 1360,
+        "bottom": 852.21875,
+        "left": 80
+      }
+    },
+    {
+      "name": "07-dispensed-collection-overview",
+      "phase": "ready",
+      "screen": "collection",
+      "url": "http://127.0.0.1:8000/explore?tab=visit&view=grid&sort=newest&collection=noodles&food_type%5B0%5D=mi-ramen",
+      "envelope": {
+        "x": 378.984375,
+        "y": 710.953125,
+        "width": 287.171875,
+        "height": 46.15625,
+        "top": 710.953125,
+        "right": 666.15625,
+        "bottom": 757.109375,
+        "left": 378.984375
+      },
+      "tray": {
+        "x": 338.5,
+        "y": 699.421875,
+        "width": 368.171875,
+        "height": 64.125,
+        "top": 699.421875,
+        "right": 706.671875,
+        "bottom": 763.546875,
+        "left": 338.5
+      },
+      "status": {
+        "x": 80,
+        "y": 796.21875,
+        "width": 1280,
+        "height": 56,
+        "top": 796.21875,
+        "right": 1360,
+        "bottom": 852.21875,
+        "left": 80
+      }
+    },
+    {
+      "name": "08-opening",
+      "phase": "revealing",
+      "screen": "collection",
+      "url": "http://127.0.0.1:8000/explore?tab=visit&view=grid&sort=newest&collection=noodles&food_type%5B0%5D=mi-ramen",
+      "envelope": {
+        "x": 378.984375,
+        "y": 710.953125,
+        "width": 287.171875,
+        "height": 46.15625,
+        "top": 710.953125,
+        "right": 666.15625,
+        "bottom": 757.109375,
+        "left": 378.984375
+      },
+      "tray": {
+        "x": 338.5,
+        "y": 699.421875,
+        "width": 368.171875,
+        "height": 64.125,
+        "top": 699.421875,
+        "right": 706.671875,
+        "bottom": 763.546875,
+        "left": 338.5
+      },
+      "status": {
+        "x": 80,
+        "y": 796.21875,
+        "width": 1280,
+        "height": 56,
+        "top": 796.21875,
+        "right": 1360,
+        "bottom": 852.21875,
+        "left": 80
+      }
+    },
+    {
+      "name": "09-photo-emerging",
+      "phase": "extracting",
+      "screen": "collection",
+      "url": "http://127.0.0.1:8000/explore?tab=visit&view=grid&sort=newest&collection=noodles&food_type%5B0%5D=mi-ramen",
+      "envelope": {
+        "x": 378.984375,
+        "y": 710.953125,
+        "width": 287.171875,
+        "height": 46.15625,
+        "top": 710.953125,
+        "right": 666.15625,
+        "bottom": 757.109375,
+        "left": 378.984375
+      },
+      "tray": {
+        "x": 338.5,
+        "y": 699.421875,
+        "width": 368.171875,
+        "height": 64.125,
+        "top": 699.421875,
+        "right": 706.671875,
+        "bottom": 763.546875,
+        "left": 338.5
+      },
+      "status": {
+        "x": 80,
+        "y": 796.21875,
+        "width": 1280,
+        "height": 56,
+        "top": 796.21875,
+        "right": 1360,
+        "bottom": 852.21875,
+        "left": 80
+      }
+    },
+    {
+      "name": "10-revealed-full-screen-link",
+      "phase": "revealed",
+      "screen": "memory",
+      "url": "http://127.0.0.1:8000/explore?tab=visit&view=grid&sort=newest&collection=noodles&food_type%5B0%5D=mi-ramen",
+      "envelope": {
+        "x": 378.984375,
+        "y": 710.953125,
+        "width": 287.171875,
+        "height": 46.15625,
+        "top": 710.953125,
+        "right": 666.15625,
+        "bottom": 757.109375,
+        "left": 378.984375
+      },
+      "tray": {
+        "x": 338.5,
+        "y": 699.421875,
+        "width": 368.171875,
+        "height": 64.125,
+        "top": 699.421875,
+        "right": 706.671875,
+        "bottom": 763.546875,
+        "left": 338.5
+      },
+      "status": {
+        "x": 80,
+        "y": 796.21875,
+        "width": 1280,
+        "height": 56,
+        "top": 796.21875,
+        "right": 1360,
+        "bottom": 852.21875,
+        "left": 80
+      }
+    },
+    {
+      "name": "11-another-memory",
+      "phase": "ready",
+      "screen": "collection",
+      "url": "http://127.0.0.1:8000/explore?tab=visit&view=grid&sort=newest&collection=noodles&food_type%5B0%5D=mi-ramen",
+      "envelope": {
+        "x": 378.984375,
+        "y": 710.953125,
+        "width": 287.171875,
+        "height": 46.15625,
+        "top": 710.953125,
+        "right": 666.15625,
+        "bottom": 757.109375,
+        "left": 378.984375
+      },
+      "tray": {
+        "x": 338.5,
+        "y": 699.421875,
+        "width": 368.171875,
+        "height": 64.125,
+        "top": 699.421875,
+        "right": 706.671875,
+        "bottom": 763.546875,
+        "left": 338.5
+      },
+      "status": {
+        "x": 80,
+        "y": 796.21875,
+        "width": 1280,
+        "height": 56,
+        "top": 796.21875,
+        "right": 1360,
+        "bottom": 852.21875,
+        "left": 80
+      }
+    },
+    {
+      "name": "12-reset-empty-tray",
+      "phase": "idle",
+      "screen": "collection",
+      "url": "http://127.0.0.1:8000/explore?tab=visit&view=grid&sort=newest",
+      "envelope": {
+        "x": 378.984375,
+        "y": 639.4109497070312,
+        "width": 287.171875,
+        "height": 46.15625,
+        "top": 639.4109497070312,
+        "right": 666.15625,
+        "bottom": 685.5671997070312,
+        "left": 378.984375
+      },
+      "tray": {
+        "x": 338.5,
+        "y": 699.421875,
+        "width": 368.171875,
+        "height": 64.125,
+        "top": 699.421875,
+        "right": 706.671875,
+        "bottom": 763.546875,
+        "left": 338.5
+      },
+      "status": {
+        "x": 80,
+        "y": 796.21875,
+        "width": 1280,
+        "height": 56,
+        "top": 796.21875,
+        "right": 1360,
+        "bottom": 852.21875,
+        "left": 80
+      }
+    },
+    {
+      "name": "explore-1440",
+      "phase": "idle",
+      "screen": "collection",
+      "url": "http://127.0.0.1:8000/explore",
+      "envelope": {
+        "x": 378.984375,
+        "y": 639.4109497070312,
+        "width": 287.171875,
+        "height": 46.15625,
+        "top": 639.4109497070312,
+        "right": 666.15625,
+        "bottom": 685.5671997070312,
+        "left": 378.984375
+      },
+      "tray": {
+        "x": 338.5,
+        "y": 699.421875,
+        "width": 368.171875,
+        "height": 64.125,
+        "top": 699.421875,
+        "right": 706.671875,
+        "bottom": 763.546875,
+        "left": 338.5
+      },
+      "status": {
+        "x": 80,
+        "y": 796.21875,
+        "width": 1280,
+        "height": 56,
+        "top": 796.21875,
+        "right": 1360,
+        "bottom": 852.21875,
+        "left": 80
+      }
+    },
+    {
+      "name": "explore-390",
+      "phase": "idle",
+      "screen": "collection",
+      "url": "http://127.0.0.1:8000/explore",
+      "envelope": {
+        "x": 119.734375,
+        "y": 759.80859375,
+        "width": 157.0625,
+        "height": 76.796875,
+        "top": 759.80859375,
+        "right": 276.796875,
+        "bottom": 836.60546875,
+        "left": 119.734375
+      },
+      "tray": {
+        "x": 31.390625,
+        "y": 850.6875,
+        "width": 327.21875,
+        "height": 128,
+        "top": 850.6875,
+        "right": 358.609375,
+        "bottom": 978.6875,
+        "left": 31.390625
+      },
+      "status": {
+        "x": 16,
+        "y": 1511.0625,
+        "width": 358,
+        "height": 96,
+        "top": 1511.0625,
+        "right": 374,
+        "bottom": 1607.0625,
+        "left": 16
+      }
+    },
+    {
+      "name": "full-page-reference",
+      "phase": "revealed",
+      "screen": "memory",
+      "url": "http://127.0.0.1:8000/explore?recommendation=favorit-pribadi",
+      "envelope": {
+        "x": 274.859375,
+        "y": 612.515625,
+        "width": 240.953125,
+        "height": 38.71875,
+        "top": 612.515625,
+        "right": 515.8125,
+        "bottom": 651.234375,
+        "left": 274.859375
+      },
+      "tray": {
+        "x": 240.890625,
+        "y": 602.84375,
+        "width": 308.921875,
+        "height": 53.796875,
+        "top": 602.84375,
+        "right": 549.8125,
+        "bottom": 656.640625,
+        "left": 240.890625
+      },
+      "status": {
+        "x": 24,
+        "y": 684.0625,
+        "width": 1074,
+        "height": 56,
+        "top": 684.0625,
+        "right": 1098,
+        "bottom": 740.0625,
+        "left": 24
+      }
+    },
+    {
+      "name": "empty-state",
+      "phase": "idle",
+      "screen": "collection",
+      "url": "http://127.0.0.1:8000/explore?q=no-memory-matches-this",
+      "envelope": {
+        "x": 119.734375,
+        "y": 759.80859375,
+        "width": 157.0625,
+        "height": 76.796875,
+        "top": 759.80859375,
+        "right": 276.796875,
+        "bottom": 836.60546875,
+        "left": 119.734375
+      },
+      "tray": {
+        "x": 31.390625,
+        "y": 850.6875,
+        "width": 327.21875,
+        "height": 128,
+        "top": 850.6875,
+        "right": 358.609375,
+        "bottom": 978.6875,
+        "left": 31.390625
+      },
+      "status": {
+        "x": 16,
+        "y": 1441.328125,
+        "width": 358,
+        "height": 96,
+        "top": 1441.328125,
+        "right": 374,
+        "bottom": 1537.328125,
+        "left": 16
+      }
+    },
+    {
+      "name": "error-state",
+      "phase": "error",
+      "screen": "collection",
+      "url": "http://127.0.0.1:8000/explore",
+      "envelope": {
+        "x": 119.734375,
+        "y": 168.80859375,
+        "width": 157.0625,
+        "height": 76.796875,
+        "top": 168.80859375,
+        "right": 276.796875,
+        "bottom": 245.60546875,
+        "left": 119.734375
+      },
+      "tray": {
+        "x": 31.390625,
+        "y": 259.6875,
+        "width": 327.21875,
+        "height": 128,
+        "top": 259.6875,
+        "right": 358.609375,
+        "bottom": 387.6875,
+        "left": 31.390625
+      },
+      "status": {
+        "x": 16,
+        "y": 920.0625,
+        "width": 358,
+        "height": 97.90625,
+        "top": 920.0625,
+        "right": 374,
+        "bottom": 1017.96875,
+        "left": 16
+      }
+    }
+  ],
+  "alignment": [
+    {
+      "width": 1440,
+      "home": {
+        "x": 80,
+        "y": 0,
+        "width": 1280,
+        "height": 72
+      },
+      "explore": {
+        "x": 80,
+        "y": 0,
+        "width": 1280,
+        "height": 72
+      },
+      "homeMain": {
+        "x": 80,
+        "y": 72,
+        "width": 1280,
+        "height": 3067.515625
+      },
+      "exploreMain": {
+        "x": 80,
+        "y": 72,
+        "width": 1280,
+        "height": 3345.34375
+      }
+    },
+    {
+      "width": 390,
+      "home": {
+        "x": 16,
+        "y": 0,
+        "width": 358,
+        "height": 72
+      },
+      "explore": {
+        "x": 16,
+        "y": 0,
+        "width": 358,
+        "height": 72
+      },
+      "homeMain": {
+        "x": 16,
+        "y": 72,
+        "width": 358,
+        "height": 3693.84375
+      },
+      "exploreMain": {
+        "x": 16,
+        "y": 72,
+        "width": 358,
+        "height": 11068.59375
+      }
+    }
+  ],
+  "errors": [],
+  "expectedFailures": [
+    "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+  ]
+}

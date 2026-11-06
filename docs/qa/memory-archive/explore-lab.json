@@ -1,0 +1,7 @@
+{
+  "environment": "Local Chromium, isolated QA fixtures, no throttling; one lab sample, not field Core Web Vitals.",
+  "browser": "156.0.8078.4",
+  "lcp_ms": 1676,
+  "cls": 0.0032073031531439887,
+  "inp": "Not measured"
+}

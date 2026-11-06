@@ -1,4 +1,4 @@
-/* Generated from resources/css/tokens.css and resources/css/error.css. */
+/* Generated from shared tokens, public chrome and error scene. */
 :root {
   color-scheme: dark;
   --palette-charcoal-950: #111211; --palette-charcoal-900: #191b19; --palette-charcoal-800: #242724;
@@ -19,11 +19,45 @@
   --visit-card-photo-fallback: #342a22;
 }
 
+/* Shared public chrome, also included in the standalone HTTP error bundle. */
+@font-face { font-family: 'Archive Garamond'; src: url('/assets/fonts/cormorant-garamond-latin.woff2') format('woff2'); font-weight: 300 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Archive Garamond'; src: url('/assets/fonts/cormorant-garamond-latin-italic.woff2') format('woff2'); font-weight: 300 700; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Archive Sans'; src: url('/assets/fonts/dm-sans-latin.woff2') format('woff2'); font-weight: 100 1000; font-style: normal; font-display: swap; }
+.public-page, .error-page { --font-display: 'Archive Garamond', Georgia, serif; --font-body: 'Archive Sans', 'Segoe UI', sans-serif; }
+.public-page .site-header, .error-page .site-header { display: flex; align-items: center; justify-content: space-between; gap: var(--space-4); padding-block: var(--space-3); min-height: 5rem; }
+.public-page .brand, .error-page .brand { font: 600 2.4rem/1 var(--font-display); letter-spacing: -.06em; color: var(--text-primary); text-decoration: none; }
+.brand span { color: var(--action-primary-bg); }
+.site-header nav[aria-label="Navigasi utama"] { display: flex; align-items: center; gap: clamp(1.25rem, 3vw, 2.5rem); }
+.site-header nav[aria-label="Navigasi utama"] a { display: inline-flex; align-items: center; position: relative; min-height: var(--control-height); font: 400 .875rem/1.4 var(--font-body); color: var(--text-secondary); text-decoration: none; }
+.site-header nav[aria-label="Navigasi utama"] a:is(:hover, [aria-current=page]) { color: var(--action-primary-bg); }
+.site-header nav[aria-label="Navigasi utama"] a[aria-current=page]::after { content: ''; position: absolute; height: 1px; background: currentColor; inset: auto 0 .4rem; }
+.public-page .site-footer, .error-page .site-footer { display: block; margin-top: var(--space-24); padding: var(--space-12) 0 var(--space-6); background: color-mix(in srgb, var(--surface-page) 86%, transparent); color: var(--text-secondary); }
+.public-page .site-footer__inner, .error-page .site-footer__inner { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: var(--space-12); }
+.public-page .site-footer__story, .error-page .site-footer__story { display: block; min-width: 0; overflow-wrap: anywhere; }
+.public-page .site-footer__eyebrow, .error-page .site-footer__eyebrow { display: none; }
+.public-page .site-footer__statement, .error-page .site-footer__statement { margin: 0 0 var(--space-4); font: 400 clamp(1.6rem, 2.8vw, 2.7rem)/1.1 var(--font-display); white-space: normal; }
+.site-footer__statement span { font-style: italic; color: var(--action-primary-bg); }
+.public-page .site-footer__statement br, .error-page .site-footer__statement br { display: none; }
+.site-footer__statement span::before { content: ' '; white-space: pre; }
+.public-page .site-footer__description, .error-page .site-footer__description { margin: 0; padding: 0; border: 0; max-width: 48ch; font: 400 .8125rem/1.7 var(--font-body); color: var(--text-muted); }
+.public-page .site-footer__nav, .error-page .site-footer__nav { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; align-content: start; padding: 0; }
+.public-page .site-footer__nav > p, .error-page .site-footer__nav > p { display: none; }
+.public-page .site-footer__nav a, .error-page .site-footer__nav a { display: inline-flex; align-items: center; min-height: var(--control-height); font: 400 .8125rem/1.4 var(--font-body); text-decoration: none; }
+.public-page .site-footer__top, .error-page .site-footer__top { display: inline-flex; gap: .5rem; }
+.public-page .site-footer__copyright, .error-page .site-footer__copyright { margin-top: var(--space-8); margin-bottom: 0; font: 400 .75rem/1.5 var(--font-body); color: var(--text-muted); }
+@media(max-width: 767px) { .public-page .site-footer__inner, .error-page .site-footer__inner { grid-template-columns: minmax(0, 1fr); gap: var(--space-6); } }
+
 /* Standalone error scene. tools/build-error-css.mjs prepends the shared tokens. */
 * { box-sizing: border-box; }
 html { min-width: 320px; background: var(--surface-page); }
 body { margin: 0; }
 .error-page { color: var(--text-primary); background: var(--surface-page); font: var(--text-body)/1.55 var(--font-body); }
+.error-page .container { width: min(calc(100% - 3rem), var(--content-max)); margin-inline: auto; }
+.error-page .error-main { width: min(calc(100% - 3rem), var(--content-max)); margin-inline: auto; padding-inline: 0; }
+.error-page .site-footer { margin-top: auto; background: transparent; padding-block: var(--space-6); }
+.error-page .site-footer__statement { font-size: 1.5rem; }
+.error-page .site-footer__description, .error-page .site-footer__copyright { display: none; }
+.error-page .site-header :focus-visible, .error-page .site-footer :focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 4px; }
 .error-page a { color: inherit; text-decoration: none; }
 .error-page a:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 5px; }
 .error-skip { position: fixed; z-index: 10; inset: .75rem auto auto 1rem; padding: .65rem 1rem; color: var(--action-primary-text) !important; background: var(--action-primary-bg); transform: translateY(-150%); }

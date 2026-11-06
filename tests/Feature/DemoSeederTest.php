@@ -27,6 +27,7 @@ class DemoSeederTest extends TestCase
         $owner = User::factory()->create(['is_admin' => true]);
         $credentials = $owner->only(['name', 'email', 'password']);
         $existing = Visit::factory()->published()->for($owner, 'user')->create(['title' => 'Catatan asli pemilik']);
+        $existing->place->update(['city_name' => 'Kota pemilik']);
 
         $this->seed(DemoJournalSeeder::class);
 

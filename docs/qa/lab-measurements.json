@@ -5,27 +5,27 @@
     "width": 1440,
     "height": 1000
   },
-  "lcp_ms": 536,
-  "cls": 0,
-  "navigation_ms": 947.1999999284744,
+  "lcp_ms": 760,
+  "cls": 0.0031042137466242284,
+  "navigation_ms": 1409.1999999955297,
   "contrast": [
     {
       "foreground": "--text-primary",
       "background": "--surface-page",
       "minimum": 4.5,
-      "ratio": 16.54
+      "ratio": 15.12
     },
     {
       "foreground": "--text-secondary",
       "background": "--surface-raised",
       "minimum": 4.5,
-      "ratio": 11.09
+      "ratio": 9.66
     },
     {
       "foreground": "--text-muted",
       "background": "--surface-hover",
       "minimum": 4.5,
-      "ratio": 6.78
+      "ratio": 6.49
     },
     {
       "foreground": "--action-primary-text",
@@ -37,13 +37,13 @@
       "foreground": "--border-subtle",
       "background": "--surface-hover",
       "minimum": 3,
-      "ratio": 3.35
+      "ratio": 3.23
     },
     {
       "foreground": "--focus-ring",
       "background": "--surface-page",
       "minimum": 3,
-      "ratio": 11.89
+      "ratio": 12.21
     }
   ],
   "inp": "Not measured; no field INP claim."

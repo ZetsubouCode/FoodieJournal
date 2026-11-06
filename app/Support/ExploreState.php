@@ -22,6 +22,9 @@ class ExploreState
         $this->values = ['tab' => $tab, 'view' => in_array($input['view'] ?? null, ['grid', 'list'], true) ? $input['view'] : 'grid'];
         $default = array_key_first(self::SORTS[$tab]);
         $this->values['sort'] = is_string($input['sort'] ?? null) && isset(self::SORTS[$tab][$input['sort']]) ? $input['sort'] : $default;
+        if (is_string($input['collection'] ?? null) && preg_match('/^[a-z0-9][a-z0-9_-]{0,159}$/', $input['collection'])) {
+            $this->values['collection'] = $input['collection'];
+        }
         if (is_string($input['q'] ?? null) && trim($input['q']) !== '') {
             $this->values['q'] = mb_substr(preg_replace('/\s+/u', ' ', trim(mb_convert_encoding($input['q'], 'UTF-8', 'UTF-8'))), 0, 120);
         }
@@ -77,6 +80,9 @@ class ExploreState
 
     public function tabUrl(string $tab): string
     {
+        if ($tab === $this->get('tab')) {
+            return $this->url([], ['page']);
+        }
         $changes = ['tab' => $tab, 'sort' => array_key_first(self::SORTS[$tab])];
         if ($tab !== $this->get('tab') && (isset($this->values['price_min']) || isset($this->values['price_max']))) {
             $changes['price_reset'] = 1;

@@ -1,0 +1,148 @@
+/* Live hardware over the approved 1634×963 cabinet. Source art is immutable. */
+.vending-machine {
+    --vending-snap: 270ms;
+    --vending-boot: 960ms;
+    --vending-off: 240ms;
+    --vending-print: 820ms;
+    --vending-glass: #090c0a;
+    --vending-ink: #332719;
+    --vending-ease: cubic-bezier(.2,.72,.22,1);
+    margin-bottom: 2.5cqi;
+    filter: none;
+}
+.vending-machine .memory-machine__shell { filter: drop-shadow(0 20px 20px var(--archive-shadow)); }
+.vending-rail { position: absolute; z-index: 1; left: 1.1%; top: 10.1%; width: 8.2%; height: 85.5%; pointer-events: none; }
+.vending-hardware { position: absolute; inset: 0; pointer-events: none; z-index: 10; }
+.vending-hardware > :is(button, div) { pointer-events: auto; }
+.vending-socket, .vending-cradle, .vending-lamp, .vending-reset { position: absolute; padding: 0; border: 0; background: transparent; color: var(--text-primary); }
+.vending-hardware img { width: 100%; height: 100%; pointer-events: none; user-select: none; }
+.vending-socket { left: 2.8%; top: 27%; width: 4.25%; height: 28.7%; border-radius: 1.5cqi; }
+.vending-socket__ghost { position: absolute; inset: 13% 24%; border: 1px solid var(--text-secondary); background: linear-gradient(90deg, transparent, rgb(226 213 174 / .12), transparent); opacity: 0; border-radius: .5cqi; transition: opacity 120ms ease; }
+.vending-machine[data-lamp=dragging][data-lamp-origin=cradle] .vending-socket__ghost { opacity: .25; }
+.vending-socket::before { content: ''; position: absolute; inset: 10% -35%; background: radial-gradient(ellipse, rgb(255 165 52 / .28), transparent 70%); opacity: 0; pointer-events: none; transition: opacity var(--vending-off) ease-out; }
+.vending-machine[data-power=on] .vending-socket::before { opacity: 1; }
+.vending-machine[data-power=booting] .vending-socket::before { animation: vending-ignition var(--vending-boot) linear both; }
+.vending-machine[data-drop-target=socket] .vending-socket__ghost, .vending-machine[data-lamp-armed=true] .vending-socket:not(:disabled) .vending-socket__ghost { opacity: .85; }
+.vending-machine[data-drop-target=socket] .vending-socket { outline: 1px solid var(--archive-highlight); outline-offset: 2px; }
+.vending-cradle { left: 1%; top: 94%; width: 17.5%; height: 8.3%; border-radius: .7cqi; filter: drop-shadow(0 4px 4px var(--archive-shadow)); }
+.vending-machine[data-drop-target=cradle] .vending-cradle { outline: 1px solid var(--archive-highlight); outline-offset: 2px; }
+.vending-machine[data-lamp-armed=true] .vending-cradle:not(:disabled) { outline: 1px solid var(--archive-highlight); outline-offset: 2px; }
+.vending-cradle::after { content: ''; position: absolute; left: 17%; top: 30%; width: 14%; height: 2px; background: var(--text-primary); opacity: 0; pointer-events: none; }
+.vending-machine[data-power=off] .vending-cradle::after { animation: vending-glint 1200ms 3s ease-out; }
+@keyframes vending-glint { 0%,100% { opacity: 0; transform: translateX(0); } 35% { opacity: .5; } 70% { opacity: .2; transform: translateX(90%); } }
+.vending-lamp { left: 0; top: 0; width: 2.56cqi; height: 14.5cqi; z-index: 12; transform-origin: center; border-radius: .7cqi; cursor: grab; touch-action: none; user-select: none; -webkit-user-select: none; filter: drop-shadow(3px 5px 3px rgb(0 0 0 / .85)); }
+.vending-lamp::before { content: ''; position: absolute; inset: -5px -10px; }
+.vending-lamp:is(:focus-visible, :hover) { outline: 1px solid var(--archive-highlight); outline-offset: 5px; }
+.vending-machine[data-lamp=dragging] .vending-lamp { cursor: grabbing; will-change: transform; filter: drop-shadow(6px 10px 5px rgb(0 0 0 / .65)); }
+.vending-lamp > img { transition: transform 130ms ease-out; }
+.vending-machine[data-lamp=dragging] .vending-lamp > img { transform: scale(1.025); }
+.vending-machine[data-lamp=animating] .vending-lamp { will-change: transform; }
+.vending-machine[data-lamp-armed=true] .vending-lamp { outline: 2px solid var(--focus-ring); outline-offset: 5px; }
+.vending-lamp__light { position: absolute; left: 38%; right: 38%; top: 13%; bottom: 13%; border-radius: 8px; background: var(--archive-light-core); box-shadow: 0 0 3px 2px var(--archive-highlight), 0 0 12px 6px var(--archive-light-aura), 0 0 28px 10px rgb(255 172 61 / .3); opacity: 0; transition: opacity var(--vending-off) ease-out; pointer-events: none; }
+.vending-machine[data-power=on] .vending-lamp__light { opacity: 1; }
+.vending-machine[data-power=booting] .vending-lamp__light { animation: vending-ignition var(--vending-boot) linear both; }
+@keyframes vending-ignition { 0%, 9%, 24%, 37% { opacity: 0; } 14%, 30% { opacity: .8; } 46% { opacity: .45; } 62%, 100% { opacity: 1; } }
+.vending-rotary-wrap { position: absolute; left: 2.55%; top: 57.3%; width: 4.8cqi; height: 4.8cqi; }
+.vending-machine .vending-rotary { position: relative; inset: 0; translate: none; width: 100%; height: 100%; min-width: 44px; min-height: 44px; border: 0; padding: 0; border-radius: 50%; background: transparent; flex: none; touch-action: none; cursor: ew-resize; opacity: 1; }
+.vending-rotary__rotor { transform-origin: 50% 50%; }
+.vending-rotary__legend { display: block; text-align: center; color: var(--text-muted); font: .7cqi/1 var(--font-body); letter-spacing: .12em; margin-top: .25cqi; }
+.vending-reset { left: 2.55%; top: 71.5%; width: 4.8cqi; height: 4.8cqi; min-width: 44px; min-height: 44px; border-radius: 50%; }
+.vending-reset img { position: absolute; inset: 0; }
+.vending-reset__face { transition: transform 150ms var(--vending-ease); }
+.vending-reset:not(:disabled):active .vending-reset__face { transform: translateY(3px) scale(.95); transition-duration: 85ms; }
+.vending-reset__label { position: absolute; left: -10%; right: -10%; bottom: -1.3cqi; color: var(--text-muted); font: .65cqi/1 var(--font-body); letter-spacing: .05em; }
+.vending-hardware button:disabled { cursor: default; }
+.vending-hardware button:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 4px; }
+.vending-page-actions { position: absolute; display: flex; gap: 2px; left: 1.8%; top: 84%; }
+.vending-page-actions button { width: 24px; height: 28px; min-height: 24px; padding: 0; border: 1px solid var(--archive-outline); border-radius: 3px; background: var(--archive-recess); color: var(--text-secondary); font-size: .75rem; }
+.vending-page-actions button:disabled { color: var(--archive-outline); }
+.vending-hint { position: absolute; margin: 0; left: 19%; top: 96%; max-width: 16rem; font-size: .75rem; line-height: 1.4; color: var(--text-secondary); }
+.vending-machine .memory-machine__display { pointer-events: auto; }
+.vending-machine .memory-machine__step { padding: 0; border: 0; background: transparent; min-height: 44px; color: var(--text-secondary); transform: translateY(-22px); border-radius: 50%; cursor: pointer; }
+.vending-machine .memory-machine__step > span { top: calc(22px + 1.4cqi); pointer-events: none; font-size: max(8px,.65cqi); }
+.vending-machine .memory-machine__step i { top: 22px; transition: transform 100ms ease-out; }
+.vending-machine .memory-machine__step:not(:disabled):active i { transform: translateY(2px) scale(.94); }
+.vending-machine .memory-machine__step:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
+.vending-machine .memory-machine__step:disabled { cursor: default; }
+.vending-machine[data-power=on] .memory-machine__step i { --led-core: var(--archive-light-core); --led-rim: var(--archive-highlight); --led-power: .55; }
+.vending-machine[data-power=on][data-dispenser=printing] .memory-machine__step:nth-child(2) i,
+.vending-machine[data-power=on][data-dispenser=ready] .memory-machine__step:nth-child(2) i { --led-power: 1; }
+.vending-machine[data-power=booting] .memory-machine__step i { animation: vending-led var(--vending-boot) both; }
+.vending-machine[data-power=booting] .memory-machine__step:nth-child(2) i { animation-delay: 100ms; }
+.vending-machine[data-power=booting] .memory-machine__step:nth-child(3) i { animation-delay: 190ms; }
+@keyframes vending-led { 0%, 48% { background: var(--archive-recess); } 58%,100% { background: var(--archive-highlight); } }
+.vending-machine .memory-machine__screen { background: var(--vending-glass); }
+.vending-machine .memory-machine__screen::after { content: ''; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; background: linear-gradient(117deg, rgb(241 220 182 / .045), transparent 23%, rgb(241 220 182 / .025) 23.5%, transparent 24%, transparent 70%, rgb(241 220 182 / .02)); box-shadow: inset 0 0 20px 8px rgb(0 0 0 / .35); }
+.vending-machine[data-enhanced] .memory-slots, .vending-machine[data-enhanced] .memory-showcase { transition: opacity var(--vending-off) ease-out; }
+.vending-machine[data-enhanced]:is([data-power=off],[data-power=shutting_down]) :is(.memory-slots,.memory-showcase),
+html[data-vending-session=off] .vending-machine:not([data-enhanced]) :is(.memory-slots,.memory-showcase) { opacity: 0; pointer-events: none; }
+.vending-machine[data-power=booting] .memory-slots { animation: vending-screen var(--vending-boot) both; }
+.vending-machine[data-power=booting] .memory-showcase { animation: vending-screen var(--vending-boot) 100ms both; }
+@keyframes vending-screen { 0%, 62% { opacity: 0; } 78% { opacity: .5; } 100% { opacity: 1; } }
+.vending-machine[data-page-busy=true] .memory-slots { opacity: .55; }
+.vending-machine .memory-slot { transition: box-shadow 140ms ease-out; }
+.vending-machine[data-power=on] .memory-slot:active .memory-slot__glass { transform: translateY(1px); }
+.vending-machine .memory-slot__name { font-size: clamp(11px,1.4cqi,20px); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; display: block; align-content: center; }
+.vending-machine .memory-showcase__collection { font-size: 2.4cqi; }
+.vending-tray { overflow: visible; }
+.vending-machine .memory-tray__lip { z-index: 2; }
+.vending-paper-path { position: absolute; z-index: 1; inset: 0; overflow: visible; clip-path: inset(0 -15% -100% -15%); border-radius: 1cqi; }
+.vending-print { position: absolute; width: 66%; height: 155%; left: 17%; top: -45%; display: flex; flex-direction: column; padding: 2.5% 2.5% 3%; background: var(--text-primary); color: var(--vending-ink); box-shadow: 1px 4px 7px var(--archive-shadow); text-decoration: none; transform-origin: center top; transform: translateY(-112%) rotate(-2deg); transition: filter 120ms ease-out; }
+.vending-print__photo { display: block; flex: 1; min-height: 0; background: var(--archive-metal); overflow: hidden; }
+.vending-print__photo img { width: 100%; height: 100%; object-fit: cover; }
+.vending-print__photo > span { display: grid; place-content: center; height: 100%; color: var(--text-primary); font-size: .8cqi; }
+.vending-print__caption { display: block; font: 600 1.05cqi/1.1 var(--font-display); padding-top: 2%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.vending-print__caption small { display: block; padding-top: 2%; color: var(--vending-ink); font: max(9px,.65cqi) var(--font-body); }
+.vending-print:focus-visible { outline: 3px solid var(--focus-ring); outline-offset: -3px; }
+.vending-print:hover { filter: brightness(1.06); }
+.vending-roller { position: absolute; z-index: 5; left: 2%; right: 2%; top: -4%; height: 14%; border-radius: 5px; background: linear-gradient(#17130e,#533d28 28%,#15120d 67%,#080806); box-shadow: 0 3px 4px var(--archive-shadow); pointer-events: none; }
+.vending-machine[data-dispenser=printing] .vending-print { will-change: transform; }
+.vending-machine[data-dispenser=ready] .vending-print { transform: translateY(30%) rotate(-2deg); }
+.vending-machine[data-dispenser=printing] .memory-machine__step:nth-child(2) i::after { animation: vending-process 700ms ease-in-out infinite alternate; }
+@keyframes vending-process { from { opacity: .3; } to { opacity: 1; } }
+/* Restored sessions paint lit panels immediately, before the module arrives. */
+html[data-vending-session=on] .vending-machine:not([data-enhanced]) .memory-machine__step i { --led-core: var(--archive-light-core); --led-rim: var(--archive-highlight); --led-power: .55; }
+@media(min-width: 960px) {
+    .vending-machine:not([data-enhanced]) .vending-lamp { left: calc(9.75% - 1.28cqi); top: calc(98.15% - 7.25cqi); transform: rotate(-96deg); }
+    html[data-vending-session=on] .vending-machine:not([data-enhanced]) .vending-lamp { left: calc(4.925% - 1.28cqi); top: calc(41.35% - 7.25cqi); transform: rotate(0deg); }
+    html[data-vending-session=on] .vending-machine:not([data-enhanced]) .vending-lamp__light { opacity: 1; }
+}
+@media(max-width: 959px) {
+    .vending-machine { margin-bottom: 1rem; }
+    .vending-rail { display: none; }
+    .vending-hardware { position: relative; inset: auto; height: 225px; order: 0; margin: 0 0 1rem; flex: none; background: linear-gradient(105deg, rgb(0 0 0 / .55), transparent), var(--archive-texture); border: 1px solid var(--archive-outline); border-radius: .75rem; }
+    .vending-socket { left: 4%; top: 12px; width: 48px; height: 170px; border-radius: 15px; }
+    .vending-cradle { left: 3%; top: 167px; width: 174px; height: 54px; }
+    .vending-lamp { width: 27px; height: 145px; max-height: none; border-radius: 8px; }
+    .vending-rotary-wrap { left: auto; right: 13%; top: 20px; width: 60px; height: 60px; }
+    .vending-rotary__legend { font-size: .75rem; margin-top: 2px; }
+    .vending-reset { left: auto; right: 13%; top: 108px; width: 60px; height: 60px; }
+    .vending-reset__label { bottom: -10px; font-size: .65rem; }
+    .vending-page-actions { left: auto; right: 4%; top: 184px; gap: 6px; }
+    .vending-page-actions button { width: 44px; height: 32px; }
+    .vending-hint { left: 4%; top: auto; bottom: -25px; font-size: .65rem; }
+    .vending-machine .memory-machine__display { gap: .25rem; padding: .8rem 0; flex-wrap: nowrap; }
+    .vending-machine .memory-machine__step { width: auto; flex: 1; min-height: 44px; transform: none; display: flex; flex-direction: column; gap: 7px; justify-content: center; border-radius: 5px; }
+    .vending-machine .memory-machine__step i { top: auto; width: 9px; height: 9px; }
+    .vending-machine .memory-machine__step > span { position: static; font-size: .6rem; }
+    .vending-machine .memory-slot__name { font-size: 1.05rem; }
+    .vending-machine .memory-machine__screen { min-height: 28rem; }
+    .vending-machine .memory-showcase__collection { font-size: 1.8rem; }
+    .vending-machine .memory-showcase { min-height: 28rem; }
+    .vending-print { width: 54%; left: 23%; top: -40%; height: 146%; }
+    .vending-print__caption { font-size: 1rem; }
+    .vending-print__caption small { font-size: .55rem; }
+    .vending-print__photo > span { font-size: .65rem; }
+    .vending-roller { top: 12%; left: 18%; right: 18%; height: 8%; }
+    .vending-paper-path { inset: 17% 15% 12%; }
+    .vending-tray { margin-bottom: 3rem; }
+    .vending-tray::after { z-index: 0; }
+    .vending-machine:not([data-enhanced]) .vending-lamp { display: block; left: calc(3% + 73.5px); top: 121.5px; transform: rotate(-96deg); }
+    html[data-vending-session=on] .vending-machine:not([data-enhanced]) .vending-lamp { left: calc(4% + 10.5px); top: 24.5px; transform: rotate(0deg); }
+    html[data-vending-session=on] .vending-machine:not([data-enhanced]) .vending-lamp__light { opacity: 1; }
+}
+@media(prefers-reduced-motion: reduce) {
+    .vending-machine *, .vending-machine *::after { animation: none !important; transition: none !important; }
+    .vending-machine[data-power=booting] .vending-lamp__light { opacity: 1; }
+    .vending-hint { display: none; }
+}

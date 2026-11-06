@@ -1,3 +1,4 @@
+<!-- Current public compositions: docs/cinematic-redesign.md (6 November 2026). Legacy ASCII blocks below describe domain content and journeys, not the current page geometry. -->
 # FOODIE — User Flow & Low-Fidelity Wireframe
 
 > **Versi:** Draft v1.1 · **Tanggal:** 4 November 2026 · **Status:** Wireframe tekstual untuk review (bukan high-fidelity visual, bukan Blade/UI yang sudah dikerjakan)  
@@ -15,7 +16,7 @@
 
 ```mermaid
 flowchart TD
-    A[Home editorial] --> B[Explore default Visit terbaru]
+    A[Home Memory Archive] --> B[Explore default Visit terbaru]
     B --> C{Tab?}
     C --> D[Visit cards]
     C --> E[Food cards]
@@ -79,7 +80,7 @@ Jangan ada state `safe for allergies` tanpa program verifikasi yang sangat berbe
 
 ```text
 PUBLIC
-  Home (/)                                  [Home hero + story]
+  Home (/)                                  [Memory Archive + recent + picks]
     Explore (/explore)                      [Visit / Food / Place]
       Visit Detail (/visit/{slug})          [Experience + item + gallery]
         Place Detail (/place/{slug})        [Identity + timeline visits]

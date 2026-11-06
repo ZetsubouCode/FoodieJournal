@@ -1,0 +1,556 @@
+{
+  "baseURL": "http://127.0.0.1:8000",
+  "note": "Frame inspection uses slowed transitions; viewport captures use production CSS. Browser tests check ordinary timing. Existing demo content remains explicitly demo in the database.",
+  "frames": [
+    {
+      "name": "01-idle",
+      "phase": "idle",
+      "url": "http://127.0.0.1:8000/explore",
+      "transform": "matrix(1, 0, 0, 1, 0, -108.839)",
+      "envelope": {
+        "x": 437.34375,
+        "y": 549.0046997070312,
+        "width": 273.421875,
+        "height": 70.21875,
+        "top": 549.0046997070312,
+        "right": 710.765625,
+        "bottom": 619.2234497070312,
+        "left": 437.34375
+      },
+      "tray": {
+        "x": 398.796875,
+        "y": 624.9375,
+        "width": 350.546875,
+        "height": 109.71875,
+        "top": 624.9375,
+        "right": 749.34375,
+        "bottom": 734.65625,
+        "left": 398.796875
+      }
+    },
+    {
+      "name": "02-focus",
+      "phase": "idle",
+      "url": "http://127.0.0.1:8000/explore",
+      "transform": "matrix(1, 0, 0, 1, 0, -108.839)",
+      "envelope": {
+        "x": 437.34375,
+        "y": 549.0046997070312,
+        "width": 273.421875,
+        "height": 70.21875,
+        "top": 549.0046997070312,
+        "right": 710.765625,
+        "bottom": 619.2234497070312,
+        "left": 437.34375
+      },
+      "tray": {
+        "x": 398.796875,
+        "y": 624.9375,
+        "width": 350.546875,
+        "height": 109.71875,
+        "top": 624.9375,
+        "right": 749.34375,
+        "bottom": 734.65625,
+        "left": 398.796875
+      }
+    },
+    {
+      "name": "03-hover",
+      "phase": "idle",
+      "url": "http://127.0.0.1:8000/explore",
+      "transform": "matrix(1, 0, 0, 1, 0, -108.839)",
+      "envelope": {
+        "x": 437.34375,
+        "y": 549.0046997070312,
+        "width": 273.421875,
+        "height": 70.21875,
+        "top": 549.0046997070312,
+        "right": 710.765625,
+        "bottom": 619.2234497070312,
+        "left": 437.34375
+      },
+      "tray": {
+        "x": 398.796875,
+        "y": 624.9375,
+        "width": 350.546875,
+        "height": 109.71875,
+        "top": 624.9375,
+        "right": 749.34375,
+        "bottom": 734.65625,
+        "left": 398.796875
+      }
+    },
+    {
+      "name": "04-selection-processing",
+      "phase": "processing",
+      "url": "http://127.0.0.1:8000/explore",
+      "transform": "matrix(1, 0, 0, 1, 0, -108.839)",
+      "envelope": {
+        "x": 437.34375,
+        "y": 549.0046997070312,
+        "width": 273.421875,
+        "height": 70.21875,
+        "top": 549.0046997070312,
+        "right": 710.765625,
+        "bottom": 619.2234497070312,
+        "left": 437.34375
+      },
+      "tray": {
+        "x": 398.796875,
+        "y": 624.9375,
+        "width": 350.546875,
+        "height": 109.71875,
+        "top": 624.9375,
+        "right": 749.34375,
+        "bottom": 734.65625,
+        "left": 398.796875
+      }
+    },
+    {
+      "name": "05-partially-dispensed",
+      "phase": "dispensing",
+      "url": "http://127.0.0.1:8000/explore?tab=visit&view=grid&sort=newest&recommendation%5B0%5D=favorit-pribadi",
+      "transform": "matrix(1, 0, 0, 1, 0, -108.839)",
+      "envelope": {
+        "x": 437.34375,
+        "y": 549.0046997070312,
+        "width": 273.421875,
+        "height": 70.21875,
+        "top": 549.0046997070312,
+        "right": 710.765625,
+        "bottom": 619.2234497070312,
+        "left": 437.34375
+      },
+      "tray": {
+        "x": 398.796875,
+        "y": 624.9375,
+        "width": 350.546875,
+        "height": 109.71875,
+        "top": 624.9375,
+        "right": 749.34375,
+        "bottom": 734.65625,
+        "left": 398.796875
+      }
+    },
+    {
+      "name": "06-half-dispensed",
+      "phase": "dispensing",
+      "url": "http://127.0.0.1:8000/explore?tab=visit&view=grid&sort=newest&recommendation%5B0%5D=favorit-pribadi",
+      "transform": "matrix(1, 0, 0, 1, 0, -1.73966)",
+      "envelope": {
+        "x": 437.34375,
+        "y": 656.1040649414062,
+        "width": 273.421875,
+        "height": 70.21875,
+        "top": 656.1040649414062,
+        "right": 710.765625,
+        "bottom": 726.3228149414062,
+        "left": 437.34375
+      },
+      "tray": {
+        "x": 398.796875,
+        "y": 624.9375,
+        "width": 350.546875,
+        "height": 109.71875,
+        "top": 624.9375,
+        "right": 749.34375,
+        "bottom": 734.65625,
+        "left": 398.796875
+      }
+    },
+    {
+      "name": "07-fully-dispensed-results-updated",
+      "phase": "ready",
+      "url": "http://127.0.0.1:8000/explore?tab=visit&view=grid&sort=newest&recommendation%5B0%5D=favorit-pribadi",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "envelope": {
+        "x": 437.34375,
+        "y": 657.84375,
+        "width": 273.421875,
+        "height": 70.21875,
+        "top": 657.84375,
+        "right": 710.765625,
+        "bottom": 728.0625,
+        "left": 437.34375
+      },
+      "tray": {
+        "x": 398.796875,
+        "y": 624.9375,
+        "width": 350.546875,
+        "height": 109.71875,
+        "top": 624.9375,
+        "right": 749.34375,
+        "bottom": 734.65625,
+        "left": 398.796875
+      }
+    },
+    {
+      "name": "08-opening",
+      "phase": "revealing",
+      "url": "http://127.0.0.1:8000/explore?tab=visit&view=grid&sort=newest&recommendation%5B0%5D=favorit-pribadi",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "envelope": {
+        "x": 437.34375,
+        "y": 657.84375,
+        "width": 273.421875,
+        "height": 70.21875,
+        "top": 657.84375,
+        "right": 710.765625,
+        "bottom": 728.0625,
+        "left": 437.34375
+      },
+      "tray": {
+        "x": 398.796875,
+        "y": 624.9375,
+        "width": 350.546875,
+        "height": 109.71875,
+        "top": 624.9375,
+        "right": 749.34375,
+        "bottom": 734.65625,
+        "left": 398.796875
+      }
+    },
+    {
+      "name": "09-photo-emerging",
+      "phase": "extracting",
+      "url": "http://127.0.0.1:8000/explore?tab=visit&view=grid&sort=newest&recommendation%5B0%5D=favorit-pribadi",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "envelope": {
+        "x": 437.34375,
+        "y": 657.84375,
+        "width": 273.421875,
+        "height": 70.21875,
+        "top": 657.84375,
+        "right": 710.765625,
+        "bottom": 728.0625,
+        "left": 437.34375
+      },
+      "tray": {
+        "x": 398.796875,
+        "y": 624.9375,
+        "width": 350.546875,
+        "height": 109.71875,
+        "top": 624.9375,
+        "right": 749.34375,
+        "bottom": 734.65625,
+        "left": 398.796875
+      }
+    },
+    {
+      "name": "10-revealed",
+      "phase": "revealed",
+      "url": "http://127.0.0.1:8000/explore?tab=visit&view=grid&sort=newest&recommendation%5B0%5D=favorit-pribadi",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "envelope": {
+        "x": 437.34375,
+        "y": 657.84375,
+        "width": 273.421875,
+        "height": 70.21875,
+        "top": 657.84375,
+        "right": 710.765625,
+        "bottom": 728.0625,
+        "left": 437.34375
+      },
+      "tray": {
+        "x": 398.796875,
+        "y": 624.9375,
+        "width": 350.546875,
+        "height": 109.71875,
+        "top": 624.9375,
+        "right": 749.34375,
+        "bottom": 734.65625,
+        "left": 398.796875
+      }
+    },
+    {
+      "name": "11-repeated",
+      "phase": "ready",
+      "url": "http://127.0.0.1:8000/explore?tab=visit&view=grid&sort=newest&food_type%5B0%5D=kopi",
+      "transform": "matrix(1, 0, 0, 1, 0, -0.00145853)",
+      "envelope": {
+        "x": 437.34375,
+        "y": 657.84228515625,
+        "width": 273.421875,
+        "height": 70.21875,
+        "top": 657.84228515625,
+        "right": 710.765625,
+        "bottom": 728.06103515625,
+        "left": 437.34375
+      },
+      "tray": {
+        "x": 398.796875,
+        "y": 624.9375,
+        "width": 350.546875,
+        "height": 109.71875,
+        "top": 624.9375,
+        "right": 749.34375,
+        "bottom": 734.65625,
+        "left": 398.796875
+      }
+    },
+    {
+      "name": "viewport-1920",
+      "phase": "idle",
+      "url": "http://127.0.0.1:8000/explore",
+      "transform": "matrix(1, 0, 0, 1, 0, -108.839)",
+      "envelope": {
+        "x": 677.34375,
+        "y": 549.9109497070312,
+        "width": 273.421875,
+        "height": 70.21875,
+        "top": 549.9109497070312,
+        "right": 950.765625,
+        "bottom": 620.1296997070312,
+        "left": 677.34375
+      },
+      "tray": {
+        "x": 638.796875,
+        "y": 625.84375,
+        "width": 350.546875,
+        "height": 109.71875,
+        "top": 625.84375,
+        "right": 989.34375,
+        "bottom": 735.5625,
+        "left": 638.796875
+      }
+    },
+    {
+      "name": "viewport-1440",
+      "phase": "idle",
+      "url": "http://127.0.0.1:8000/explore",
+      "transform": "matrix(1, 0, 0, 1, 0, -108.839)",
+      "envelope": {
+        "x": 437.34375,
+        "y": 549.0046997070312,
+        "width": 273.421875,
+        "height": 70.21875,
+        "top": 549.0046997070312,
+        "right": 710.765625,
+        "bottom": 619.2234497070312,
+        "left": 437.34375
+      },
+      "tray": {
+        "x": 398.796875,
+        "y": 624.9375,
+        "width": 350.546875,
+        "height": 109.71875,
+        "top": 624.9375,
+        "right": 749.34375,
+        "bottom": 734.65625,
+        "left": 398.796875
+      }
+    },
+    {
+      "name": "viewport-1280",
+      "phase": "idle",
+      "url": "http://127.0.0.1:8000/explore",
+      "transform": "matrix(1, 0, 0, 1, 0, -98.8125)",
+      "envelope": {
+        "x": 383.328125,
+        "y": 505.90625,
+        "width": 248.28125,
+        "height": 63.75,
+        "top": 505.90625,
+        "right": 631.609375,
+        "bottom": 569.65625,
+        "left": 383.328125
+      },
+      "tray": {
+        "x": 348.3125,
+        "y": 574.84375,
+        "width": 318.328125,
+        "height": 99.625,
+        "top": 574.84375,
+        "right": 666.640625,
+        "bottom": 674.46875,
+        "left": 348.3125
+      }
+    },
+    {
+      "name": "viewport-1024",
+      "phase": "idle",
+      "url": "http://127.0.0.1:8000/explore",
+      "transform": "matrix(1, 0, 0, 1, 0, -79.05)",
+      "envelope": {
+        "x": 306.65625,
+        "y": 427.80938720703125,
+        "width": 198.640625,
+        "height": 51,
+        "top": 427.80938720703125,
+        "right": 505.296875,
+        "bottom": 478.80938720703125,
+        "left": 306.65625
+      },
+      "tray": {
+        "x": 278.65625,
+        "y": 482.953125,
+        "width": 254.671875,
+        "height": 79.703125,
+        "top": 482.953125,
+        "right": 533.328125,
+        "bottom": 562.65625,
+        "left": 278.65625
+      }
+    },
+    {
+      "name": "viewport-768",
+      "phase": "idle",
+      "url": "http://127.0.0.1:8000/explore",
+      "transform": "matrix(1, 0, 0, 1, 0, -119.035)",
+      "envelope": {
+        "x": 307.34375,
+        "y": 749.24609375,
+        "width": 358.140625,
+        "height": 76.796875,
+        "top": 749.24609375,
+        "right": 665.484375,
+        "bottom": 826.04296875,
+        "left": 307.34375
+      },
+      "tray": {
+        "x": 256.84375,
+        "y": 832.28125,
+        "width": 459.15625,
+        "height": 120,
+        "top": 832.28125,
+        "right": 716,
+        "bottom": 952.28125,
+        "left": 256.84375
+      }
+    },
+    {
+      "name": "viewport-390",
+      "phase": "idle",
+      "url": "http://127.0.0.1:8000/explore",
+      "transform": "matrix(1, 0, 0, 1, 0, -119.035)",
+      "envelope": {
+        "x": 159.34375,
+        "y": 711.65234375,
+        "width": 166.484375,
+        "height": 76.796875,
+        "top": 711.65234375,
+        "right": 325.828125,
+        "bottom": 788.44921875,
+        "left": 159.34375
+      },
+      "tray": {
+        "x": 135.875,
+        "y": 794.6875,
+        "width": 213.453125,
+        "height": 120,
+        "top": 794.6875,
+        "right": 349.328125,
+        "bottom": 914.6875,
+        "left": 135.875
+      }
+    },
+    {
+      "name": "viewport-320",
+      "phase": "idle",
+      "url": "http://127.0.0.1:8000/explore",
+      "transform": "matrix(1, 0, 0, 1, 0, -119.035)",
+      "envelope": {
+        "x": 131.953125,
+        "y": 755.57421875,
+        "width": 131,
+        "height": 76.796875,
+        "top": 755.57421875,
+        "right": 262.953125,
+        "bottom": 832.37109375,
+        "left": 131.953125
+      },
+      "tray": {
+        "x": 113.484375,
+        "y": 838.609375,
+        "width": 167.953125,
+        "height": 120,
+        "top": 838.609375,
+        "right": 281.4375,
+        "bottom": 958.609375,
+        "left": 113.484375
+      }
+    },
+    {
+      "name": "reference-comparison",
+      "phase": "revealed",
+      "url": "http://127.0.0.1:8000/explore?tab=visit&view=grid&sort=newest&recommendation%5B0%5D=favorit-pribadi",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "envelope": {
+        "x": 336,
+        "y": 542.28125,
+        "width": 217.640625,
+        "height": 55.875,
+        "top": 542.28125,
+        "right": 553.640625,
+        "bottom": 598.15625,
+        "left": 336
+      },
+      "tray": {
+        "x": 305.3125,
+        "y": 516.09375,
+        "width": 279.03125,
+        "height": 87.328125,
+        "top": 516.09375,
+        "right": 584.34375,
+        "bottom": 603.421875,
+        "left": 305.3125
+      }
+    },
+    {
+      "name": "empty",
+      "phase": "idle",
+      "url": "http://127.0.0.1:8000/explore?q=archive-no-matching-memory",
+      "transform": "matrix(1, 0, 0, 1, 0, -119.035)",
+      "envelope": {
+        "x": 159.34375,
+        "y": 762.65234375,
+        "width": 166.484375,
+        "height": 76.796875,
+        "top": 762.65234375,
+        "right": 325.828125,
+        "bottom": 839.44921875,
+        "left": 159.34375
+      },
+      "tray": {
+        "x": 135.875,
+        "y": 845.6875,
+        "width": 213.453125,
+        "height": 120,
+        "top": 845.6875,
+        "right": 349.328125,
+        "bottom": 965.6875,
+        "left": 135.875
+      }
+    },
+    {
+      "name": "error",
+      "phase": "error",
+      "url": "http://127.0.0.1:8000/explore?q=archive-no-matching-memory",
+      "transform": "matrix(1, 0, 0, 1, 0, -119.035)",
+      "envelope": {
+        "x": 159.34375,
+        "y": 762.65234375,
+        "width": 166.484375,
+        "height": 76.796875,
+        "top": 762.65234375,
+        "right": 325.828125,
+        "bottom": 839.44921875,
+        "left": 159.34375
+      },
+      "tray": {
+        "x": 135.875,
+        "y": 845.6875,
+        "width": 213.453125,
+        "height": 120,
+        "top": 845.6875,
+        "right": 349.328125,
+        "bottom": 965.6875,
+        "left": 135.875
+      }
+    }
+  ],
+  "errors": [],
+  "expectedFailures": [
+    "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+  ]
+}

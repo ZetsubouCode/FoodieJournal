@@ -1,0 +1,65 @@
+{
+  "version": "0.13.0",
+  "findings": [
+    {
+      "severity": "warn",
+      "rule": "unit-mixing",
+      "file": "<inline>",
+      "line": 45,
+      "message": "mixed length units in same block"
+    },
+    {
+      "severity": "warn",
+      "rule": "unit-mixing",
+      "file": "<inline>",
+      "line": 50,
+      "message": "mixed length units in same block"
+    },
+    {
+      "severity": "warn",
+      "rule": "unit-mixing",
+      "file": "<inline>",
+      "line": 56,
+      "message": "mixed length units in same block"
+    },
+    {
+      "severity": "warn",
+      "rule": "unit-mixing",
+      "file": "<inline>",
+      "line": 74,
+      "message": "mixed length units in same block"
+    },
+    {
+      "severity": "warn",
+      "rule": "unit-mixing",
+      "file": "<inline>",
+      "line": 90,
+      "message": "mixed length units in same block"
+    }
+  ],
+  "summary": {
+    "total": 5,
+    "errors": 0,
+    "warnings": 0,
+    "files_scanned": 1,
+    "files_omitted": 0
+  },
+  "coverage": {
+    "complete": true,
+    "files_discovered": 1,
+    "files_scanned": 1,
+    "files_omitted": 0,
+    "bytes_scanned": 44760,
+    "limits": {
+      "maxDepth": 20,
+      "maxFiles": 2000,
+      "maxFileBytes": 2097152,
+      "maxTotalBytes": 20971520
+    }
+  },
+  "scan_errors": [],
+  "scan_policy": {
+    "mode": "fail-closed",
+    "clean_requires_complete_coverage": true
+  }
+}

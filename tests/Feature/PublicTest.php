@@ -61,7 +61,8 @@ class PublicTest extends TestCase
         $this->assertNotEmpty($picks);
         $this->assertStringContainsString('Catatan lebih lama', $picks[1]);
         $this->assertStringNotContainsString('Catatan lebih baru', $picks[1]);
-        $response->assertSee('category%5B0%5D='.$category->slug, false)
+        // Taxonomy discovery lives on Explore; the homepage cabinet browses visits.
+        $this->get('/explore')->assertSee('category%5B0%5D='.$category->slug, false)
             ->assertSee('style%5B0%5D='.$style->slug, false);
     }
 

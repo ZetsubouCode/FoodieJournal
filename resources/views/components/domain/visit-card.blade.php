@@ -1,5 +1,6 @@
-@props(['visit', 'allergenWarning' => false])
+@props(['visit', 'allergenWarning' => false, 'photo' => null])
 @php
+    $cardMedia = $photo ?? $visit->coverMedia;
     $cardTags = \App\Support\VisitCardTags::for($visit);
     $visibleTags = array_slice($cardTags, 0, 2);
     $hiddenTags = array_slice($cardTags, 2);
@@ -7,8 +8,8 @@
 @endphp
 <article class="visit-card" aria-labelledby="{{ $cardId }}-title" data-visit-card>
     <div class="visit-card__media">
-        <x-domain.image :media="$visit->coverMedia" sizes="(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw" data-visit-card-image />
-        @if($visit->coverMedia?->variant('card'))<div class="photo-fallback" hidden data-visit-card-image-fallback>Foto belum tersedia</div>@endif
+        <x-domain.image :media="$cardMedia" sizes="(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw" data-visit-card-image />
+        @if($cardMedia?->variant('card'))<div class="photo-fallback" hidden data-visit-card-image-fallback>Foto belum tersedia</div>@endif
     </div>
     <a class="visit-card__link" href="{{ route('visit.show', $visit->slug) }}" aria-label="Baca kunjungan: {{ $visit->display_title }} di {{ $visit->place->name }}"></a>
     <div class="visit-card__body">
@@ -24,10 +25,7 @@
                 <a class="visit-card__recommendation" href="{{ url('explore').'?'.http_build_query(['recommendation' => [$recommendation->slug]], '', '&', PHP_QUERY_RFC3986) }}" aria-label="Jelajahi rekomendasi {{ $recommendation->name }}">{{ $recommendation->name }}</a>
             @endforeach
         </div>
-        <div class="visit-card__meta">
-            @if($visit->visited_at)<time datetime="{{ $visit->visited_at->setTimezone(config('foodie.timezone'))->format('Y-m-d') }}">{{ \App\Support\Presentation::localTime($visit->visited_at, 'd M Y') }}</time>@endif
-            @if($visit->place->city_name)<span>{{ $visit->place->city_name }}</span>@endif
-        </div>
+        <x-domain.card-meta class="visit-card__meta" :date="$visit->visited_at" :location="$visit->place->city_name" />
         @if($allergenWarning)<p class="visit-card__warning">Informasi belum tersedia untuk alergen yang dipilih pada setidaknya satu hidangan.</p>@endif
         @if($cardTags)
             <div class="visit-card__tags" aria-label="Tag kunjungan">

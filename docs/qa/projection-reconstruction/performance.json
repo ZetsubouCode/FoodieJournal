@@ -1,0 +1,11 @@
+{
+  "environment": "Local Chromium, isolated QA fixtures, no network throttling; single sample, not field Core Web Vitals.",
+  "browser": "156.0.8078.4",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "lcp_ms": 2156,
+  "cls": 0,
+  "inp": "Not measured"
+}

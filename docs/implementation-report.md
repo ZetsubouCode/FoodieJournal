@@ -1,10 +1,53 @@
-# Foodie v1.1 implementation report
+# Foodie implementation report
+
+
+## Homepage refinement — 6 November 2026
+
+Applied the owner's follow-up: removed hero instruction/author blurbs, routine visible status, overview slogan and the “Jeda cahaya” / duplicate “Jelajahi koleksi” controls below the cabinet. The collection screen remains the real filtered navigation surface. Live announcements stay off-screen and meaningful error/empty states remain available.
+
+LEDs now use warm luminous cores and local halos, with a softer completed state. Lamp modulation now recurs with fresh random idle intervals (6–22s), duration (1.1–1.6s) and depth. The physical lamp itself provides keyboard-accessible pause/resume; reduced motion, hidden tabs and compact layouts suspend the recurring scheduler. Selection changes do not restart it.
+
+Shared card-meta / meta-icon Blade components add calendar and location-pin icons beside readable metadata in Home editorial entries and Visit/Food/Place cards across public pages. Icons inherit text size/color and remain decorative to assistive technology. No database, schema or owner-content changes.
+
+Current verification: relevant PHP regression **26 passed / 310 assertions**; build, Pint, Blade cache and diff checks passed. Browser regression **18 passed** (2.6m), including live repeated flicker scheduling, keyboard/reduced motion, all card metadata modes, axe and responsive/200% text checks. Idle waits were accelerated in the recurrence unit of the browser test; the visual capture also waits for a real production-timing recurring burst. Visual capture: **29 screenshots / 30 viewport checks, zero page errors, overflow findings or broken images**. [Evidence](qa/hero-refinement/evidence.json), [updated hero](qa/hero-refinement/home-hero.png), [card metadata](qa/hero-refinement/home-recent.png), [recurring lamp dim](qa/hero-refinement/lamp-occasional-dim.png). See [current architecture](cinematic-redesign.md#hero-refinement--6-november-2026).
+
+## Global cinematic redesign — 6 November 2026
+
+Current architecture: [cinematic-redesign.md](cinematic-redesign.md). This section supersedes earlier public-page composition descriptions below. Existing uncommitted archive/filter work was preserved and refactored in place. The five root specifications, current brief, canonical composition/voice guidance, controllers, scopes, layouts, artwork, motion, media pipeline and tests were audited before editing. No schema or owner data was changed.
+
+Implemented: shared public chrome/fonts/container/background variants; native-proportion Homepage Memory Archive; caption-free accessible envelope; aligned LEDs and restrained pausable lamp; editorial recent entries and explicit recommendation gallery; photographic Curiosity Index with matching-item image provenance; separate asynchronous browsing; immersive Visit Dossier; related Place Detail and shared chrome on approved HTTP error scenes.
+
+Validation and final evidence are listed below. The original P0 report follows as historical context.
+
+| Current command / check | Exact result |
+| --- | --- |
+| `php artisan test --compact` | **63 passed, 1,046 assertions**, 33.96s; isolated SQLite. Includes new chrome/location, dossier snapshot/null criteria and matching-item photographic provenance coverage. |
+| `npx playwright test --output tools/.runtime/cinematic-full-browser --reporter=list` | **23 passed**, 2.8m. Public responsive journeys, cabinet/keyboard/touch/reduced motion, drawer/history/error recovery, gallery original access, admin regression and axe scans. |
+| Final targeted browser run after source/photo and mobile refinements | **4 passed**, 53.9s: real Curiosity filter navigation, native LED center/ratio checks, archive/drawer axe scans, shared geometry and 200% text. |
+| `npx playwright test tests/Browser/performance.spec.js` | **1 passed**, 3.4s after measuring the actual public body tokens. |
+| `npm run build` | **PASS**, Vite 7.3.7, 315ms final build. Existing absolute public-asset references remain runtime URLs; actual screenshot/image checks found no failures. |
+| `php vendor/bin/pint --test` | **PASS** after formatting the changed PHP files. |
+| `php artisan view:cache` | **PASS**, Blade templates cached successfully. |
+| `git diff --check` | **PASS**, exit 0. |
+| Route / migration inspection | Three existing Explore routes retained; all four existing migrations reported **Ran**. No migration/schema changes. |
+| `node tools/capture-cinematic.mjs` | **29 actual screenshots, 30 viewport checks; zero page errors, overflow checks or broken-image findings.** |
+
+Screenshots and machine/lamp intermediate states: [evidence index](qa/cinematic/evidence.json), [Home hero](qa/cinematic/home-hero.png), [recent visits](qa/cinematic/home-recent.png), [personal picks](qa/cinematic/home-picks.png), [Curiosity Index](qa/cinematic/explore-hero.png), [dossier hero](qa/cinematic/visit-hero.png), [tasting notes](qa/cinematic/visit-food.png), [ratings](qa/cinematic/visit-ratings.png), [gallery](qa/cinematic/visit-gallery.png), [mobile Home](qa/cinematic/home-375.png), [mobile dossier](qa/cinematic/visit-375.png). Lamp phase captures additionally wait for navigation photography to decode while holding the actual animation phase.
+
+Validation uses the retained functional fixture on port 8011 and a new, dedicated photographic demo database/media target on port 8012. No owner data, credentials or uploads were seeded, refreshed or rewritten. The earlier database backup/restore implementation was preserved; this visual change did not require another owner backup or restore operation.
+
+The final local Chromium sample recorded **LCP 1,024ms, CLS 0.000832**, unthrottled functional fixtures at 1440×1000. These are one lab sample, not performance-improvement or field Core Web Vitals claims; INP was not measured. See [measurements](qa/lab-measurements.json).
+
+All six requested redesign phases are implemented. No requested code phase remains deferred. Physical-device Safari, assistive-technology reading checks and production field performance remain unverified deployment checks. No new dependencies, paid services, font files, raster artwork, migrations or admin features were introduced. The existing asset/font licenses and protected media pipeline remain authoritative.
+
+Reproduce the photographic preview with `php tools/prepare-cinematic-qa.php`, then `php tools/cinematic-server.php`; open `http://127.0.0.1:8012`. Its content is explicitly labeled demo. Full functional regression setup remains documented in [operations](operations.md). The currently running application on port 8006 uses the same updated build; its data was preserved.
+
 
 Date: 4 November 2026 (Asia/Jakarta). **Historical P0 implementation record.** At the time of this report, the application ran at loopback port 8027 with the isolated database on 33079, and the recorded acceptance gates passed. The current local runtime has since moved to app port 8006 and an isolated Foodie database on port 3306; see [operations](operations.md) and the [error-page follow-up](error-page-redesign.md) for the later copy and database incident. Port 8000 was already in use, so the existing application there was left intact.
 
 No P0 code item remains deferred. This report does not claim production deployment, universal accessibility certification, physical-device testing or Oracle MySQL 8 verification. Those limitations are distinguished below.
 
-## Baseline and preservation
+## Historical v1.1 baseline and preservation
 
 Initial HEAD `092758e`; repository contained LICENSE/.gitignore and the five user-supplied root specifications plus the execution instruction, with no application, database, environment, dependency manifests, routes or tests. All five specifications and the full implementation instruction were inspected. There was no runnable pre-change test/build baseline; it was unavailable, not a pre-existing failure.
 
@@ -132,3 +175,12 @@ php artisan serve --host=127.0.0.1 --port=8027
 ```
 
 For browser regression: `php tools/prepare-browser.php`, run `php tools/browser-server.php` in a separate terminal, then `npx playwright test` and `node tools/collect-qa.mjs`. For MySQL-compatible regression use `php tools/test-mysql.php` on the isolated cluster, never an existing application database. No repeated migration, reset or data cleanup is needed to continue feature work.
+
+
+## Playable vending machine completion · 6 November 2026
+
+Implemented the supplied interactive vending package in the existing homepage cabinet. The front-left tube/cradle/socket, release-only reversible power, angular bidirectional pagination, independent physical reset, published-visit preview and photograph printing/retrieval are complete. Native cabinet geometry, public chrome, existing journal pages, filters and privacy rules remain. No dependencies, migrations or owner data writes were introduced.
+
+Verification: **66 PHP tests / 1,126 assertions**, **10 pure JavaScript tests**, **34 browser scenarios**, and **two final keyboard/compiled-duration rechecks** passed. Targeted Pint and the production build passed. Browser checks include touch drag/tap, keyboard, reduced motion, blocked storage, interrupted gestures, first-paint persistence, stale fragments, true empty states, media failures, print identity, actual navigation and accessibility scans. The minified CSS seconds conversion and a release/scroll race were corrected during QA.
+
+[Full evidence and commands](qa/vending-machine/verification.md), [state diagrams, asset provenance, control mapping and file inventory](vending-machine-interactive.md). Evidence includes before/after desktop/compact screenshots, real boot/print stages, short video and local frame/paint measurements. Physical-device/Safari/screen-reader and field performance validation remain unverified. The earlier continuation checkpoint is historical; use docs/operations.md for the current port-3306 Foodie instance and separate XAMPP recovery context.

@@ -2,6 +2,27 @@
 
 Status: **P0 implemented; available local acceptance gates PASS**. Production rollout and external-device limitations are explicit in the report. Evidence is actual execution, not a claim of universal browser/production certification.
 
+## Homepage refinement — 6 November 2026
+
+- PASS: removed unnecessary hero/overview blurbs and duplicate controls below the cabinet; retained accessible announcements.
+- PASS: warm active/completed LED illumination with original centered circular geometry.
+- PASS: recurring lamp bursts at randomized intervals/depth/duration; lamp itself provides pause/resume, with reduced-motion/visibility handling.
+- PASS: shared calendar/location metadata icons in Home and Visit/Food/Place cards.
+- PASS: 26 relevant PHP tests / 310 assertions, 18 browser tests, build, Pint, Blade compilation and diff checks. [29 screenshots / 30 clean viewport checks](qa/hero-refinement/evidence.json).
+
+## Global cinematic redesign — 6 November 2026
+
+| Requested phase | Result | Current evidence |
+| --- | --- | --- |
+| Shared foundation | PASS | One header/footer implementation, common container, self-hosted public typography, atmospheric page variants; CinematicPublicTest and responsive browser geometry checks. |
+| Homepage Memory Archive | PASS | Existing cabinet relocated; native aspect ratio; three centered circular lenses; pausable/reduced-motion lamp; accessible caption-free envelope; real reveal and filtered Explore destination. |
+| Latest visits and Personal Picks | PASS | Chronological lead/supporting entries and explicit recommendation gallery; no automatic rails/counters or duplicate Curiosity section. PublicTest and homepage browser tests. |
+| Explore Curiosity Index | PASS | Matching-item/city photographic surfaces, real filters, complete Visit/Food/Place browsing, asynchronous URL/history/search/sort/grid/list/drawer and Memory Reel. Provenance feature test and browser regression. |
+| Visit Dossier / related public pages | PASS | Actual cover, narrative, tasting notes, historical prices, nullable criteria, gallery/viewer, conclusion, published related visits; related Place and approved error scenes share chrome. |
+| Validation and documentation | PASS | 63 PHP tests / 1,046 assertions; 23 full browser tests plus 4 final targeted checks; build/Pint/Blade/diff checks; 29 screenshots and 30 viewport checks. [Current report](implementation-report.md). |
+
+Owner data and the active MariaDB schema were preserved. Safari/physical devices, assistive-technology reading and field INP/Core Web Vitals remain deployment verification items; they are not claimed as passed.
+
 ## Phase gates
 
 | Phase | Result | Evidence |
@@ -49,3 +70,17 @@ Status: **P0 implemented; available local acceptance gates PASS**. Production ro
 | Durable report and reproducible run/continuation instructions | README; docs/operations; report; docs/qa | Evidence files and command results | PASS |
 
 No P0 implementation item is deferred. Physical-device/Safari/screen-reader QA, real owner photographs, Oracle MySQL 8 specifically and production field INP/Core Web Vitals remain **UNVERIFIED environment/deployment checks**; see the report. P1/P2 remain deliberately excluded.
+
+
+## Playable vending revision · 6 November 2026
+
+| Requirement | Implementation / evidence | Result |
+| --- | --- | --- |
+| Independent production hardware; front-left cradle; dark off state | Seven local SVG layers, preserved native cabinet, screenshot comparison | PASS |
+| Forgiving release-only installation and removal | 1.8× magnetic geometry, pointer capture, explicit reducer, interruption and real touch tests | PASS |
+| Angular two-way pagination / physical reset | 32° continuous detents, wrap, real pages of six visits, native keyboard and depressed face | PASS |
+| Concrete published preview and dispensable photo | Same visit ID/photo/route, masked feed, one sheet, actual retrieval navigation and empty/media fallback | PASS |
+| Session, responsive, accessibility and lifecycle | Pre-paint persistence, defensive storage, compact hardware, reduced motion, focus restoration, axe and cancellation checks | PASS for automated Chromium coverage |
+| Actual timing, performance and regression checks | Vite ms/s normalization, compiled 270/960/820ms test, static-shell filter, 66 PHP / 10 helper / 34 browser tests + final keyboard recheck | PASS |
+
+See [verification](qa/vending-machine/verification.md) for exact commands, screenshots, measurements, discoveries and remaining device/assistive checks. Earlier envelope/lamp-pause descriptions are historical and superseded by this implementation.

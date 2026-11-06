@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "vite build && node tools/build-error-css.mjs",
+    "build": "php tools/build-archive-geometry.php && vite build && node tools/build-error-css.mjs",
     "dev": "vite"
   },
   "devDependencies": {

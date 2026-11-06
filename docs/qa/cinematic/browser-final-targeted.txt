@@ -1,0 +1,11 @@
+
+Running 4 tests using 1 worker
+
+(node:12392) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 tests\Browser\discovery-machine.spec.js:63:1 › curiosity photographs apply actual filtering and restore with Back (3.2s)
+  ok 2 tests\Browser\discovery-machine.spec.js:164:1 › LED lenses follow native canvas centers; tray and status remain contained across widths (23.8s)
+  ok 3 tests\Browser\discovery-machine.spec.js:188:1 › axe scans the archive at desktop and mobile, then the Explore filter drawer (14.0s)
+  ok 4 tests\Browser\homepage.spec.js:4:1 › homepage editorial collections and shared geometry reflow through desktop, mobile and 200% text (12.0s)
+
+  4 passed (53.9s)

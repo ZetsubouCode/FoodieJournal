@@ -27,7 +27,7 @@ test('editorial 404 scene reflows, loads its photograph and remains keyboard acc
     await page.keyboard.press('Tab');
     await expect(page.getByRole('link', { name: 'Lewati ke isi' })).toBeFocused();
     await page.keyboard.press('Tab');
-    await expect(page.getByRole('link', { name: 'Foodie — beranda' })).toBeFocused();
+    await expect(page.getByRole('link', { name: 'Foodie, beranda' })).toBeFocused();
     const accessibility = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa']).analyze();
     expect(accessibility.violations.map(v => v.id)).toEqual([]);
 

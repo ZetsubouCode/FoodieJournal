@@ -43,6 +43,10 @@ php vendor/bin/pint --test
 - [Decisions](docs/implementation-decisions.md): domain defaults and repository preservation.
 - [Operations](docs/operations.md): installation, first owner, backup and isolated restore drills.
 - [HTTP error redesign](docs/error-page-redesign.md): composition, asset source, behavior, and verification.
-- [Explore Discovery Machine](docs/discovery-machine.md): projector data contract, layered assets, motion, QA, and fidelity limits.
+- [Playable vending machine](docs/vending-machine-interactive.md): removable lamp, power state, rotary pages, reset and real-visit photo printing, asset provenance and executed QA.
+- [Homepage Memory Archive](docs/discovery-machine.md): cabinet ownership and compatibility with existing discovery endpoints.
+- [Historical Memory Archive V2 report](docs/memory-archive-v2-completion.md): earlier envelope/knob behavior and its QA evidence; the playable vending document supersedes those interactions.
 
 All table names are singular, including framework support tables. Raw originals and derivatives are private; media requests check current visit eligibility. Unpublishing denies subsequent requests. Ratings ignore nulls and round only for display; visit totals remain separate from historical item prices. Allergen information is observational and never a safety guarantee.
+
+- [Global cinematic redesign](docs/cinematic-redesign.md): current Home / Curiosity Index / Culinary Dossier architecture and QA evidence. Earlier archive reports describe historical Explore versions.

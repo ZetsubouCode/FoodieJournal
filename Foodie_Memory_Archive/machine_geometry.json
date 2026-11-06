@@ -1,0 +1,269 @@
+{
+  "asset_size": {
+    "width": 1448,
+    "height": 1086
+  },
+  "slots": [
+    {
+      "id": "A1",
+      "bounds_px": [
+        181,
+        317,
+        352,
+        465
+      ],
+      "bounds_percent": [
+        12.5,
+        29.19,
+        11.809,
+        13.628
+      ],
+      "cropped_bounds_px": [
+        149,
+        179,
+        320,
+        327
+      ]
+    },
+    {
+      "id": "A2",
+      "bounds_px": [
+        405,
+        317,
+        560,
+        465
+      ],
+      "bounds_percent": [
+        27.97,
+        29.19,
+        10.704,
+        13.628
+      ],
+      "cropped_bounds_px": [
+        373,
+        179,
+        528,
+        327
+      ]
+    },
+    {
+      "id": "A3",
+      "bounds_px": [
+        610,
+        317,
+        779,
+        465
+      ],
+      "bounds_percent": [
+        42.127,
+        29.19,
+        11.671,
+        13.628
+      ],
+      "cropped_bounds_px": [
+        578,
+        179,
+        747,
+        327
+      ]
+    },
+    {
+      "id": "B1",
+      "bounds_px": [
+        181,
+        560,
+        353,
+        686
+      ],
+      "bounds_percent": [
+        12.5,
+        51.565,
+        11.878,
+        11.602
+      ],
+      "cropped_bounds_px": [
+        149,
+        422,
+        321,
+        548
+      ]
+    },
+    {
+      "id": "B2",
+      "bounds_px": [
+        406,
+        560,
+        564,
+        686
+      ],
+      "bounds_percent": [
+        28.039,
+        51.565,
+        10.912,
+        11.602
+      ],
+      "cropped_bounds_px": [
+        374,
+        422,
+        532,
+        548
+      ]
+    },
+    {
+      "id": "B3",
+      "bounds_px": [
+        610,
+        560,
+        781,
+        686
+      ],
+      "bounds_percent": [
+        42.127,
+        51.565,
+        11.809,
+        11.602
+      ],
+      "cropped_bounds_px": [
+        578,
+        422,
+        749,
+        548
+      ]
+    }
+  ],
+  "screen": {
+    "bounds_px": [
+      930,
+      242,
+      1314,
+      758
+    ],
+    "cropped_bounds_px": [
+      898,
+      104,
+      1282,
+      620
+    ]
+  },
+  "envelope_path": {
+    "start_in_dispenser_px": [
+      553,
+      830
+    ],
+    "rest_px": [
+      553,
+      868
+    ]
+  },
+  "dispenser_opening": {
+    "bounds_px": [
+      347,
+      796,
+      734,
+      857
+    ]
+  },
+  "notes": "Coordinates are initial bounds measured against generated cabinet image; refine visually, do not treat as permanent pixel-perfect geometry. Dynamic content should be HTML/SVG overlays; keep texts out of raster.",
+  "slot_content_bounds_px": [
+    [
+      178,
+      313,
+      353,
+      470
+    ],
+    [
+      405,
+      314,
+      567,
+      471
+    ],
+    [
+      610,
+      314,
+      780,
+      470
+    ],
+    [
+      178,
+      556,
+      354,
+      695
+    ],
+    [
+      405,
+      556,
+      568,
+      695
+    ],
+    [
+      610,
+      556,
+      779,
+      695
+    ]
+  ],
+  "important": "The machine base has NO baked food, dynamic title, or selected category; all content should overlay the empty panels. Bezel image is transparent through open windows and screen to enable layers underneath.",
+  "cropped": {
+    "file": "memory_machine_empty_cropped.png",
+    "width": 1351,
+    "height": 796,
+    "crop_origin_original_px": [
+      32,
+      138
+    ],
+    "recommendation": "Use cropped empty + cropped front bezel with the SAME content coordinate system."
+  },
+  "actual_overlay_cutouts_px": {
+    "slots": [
+      [
+        178,
+        314,
+        348,
+        450
+      ],
+      [
+        405,
+        314,
+        557,
+        450
+      ],
+      [
+        609,
+        314,
+        760,
+        450
+      ],
+      [
+        178,
+        557,
+        348,
+        669
+      ],
+      [
+        405,
+        557,
+        557,
+        669
+      ],
+      [
+        609,
+        557,
+        760,
+        669
+      ]
+    ],
+    "screen": [
+      918,
+      232,
+      1318,
+      773
+    ],
+    "pickup": [
+      341,
+      793,
+      740,
+      847
+    ]
+  },
+  "geometry_note": "Coordinates approximate visual cutouts on a 1448x1086 illustrative base; align overlay pixel-identically and use relative positioning from the same aspect-ratio scene. Do not expose these raw coordinates in CSS all over the app."
+}

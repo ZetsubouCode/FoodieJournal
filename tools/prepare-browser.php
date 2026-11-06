@@ -78,3 +78,4 @@ $credentials['visitId'] = Visit::where('slug', 'qa-kunjungan-1')->value('id');
 file_put_contents($runtime.'/browser-credentials.json', json_encode($credentials));
 @chmod($runtime.'/browser-credentials.json', 0600);
 echo "Isolated browser fixture ready. Credentials stored privately in tools/.runtime/browser-credentials.json.\n";
+require __DIR__.'/prepare-archive-v2-qa.php';

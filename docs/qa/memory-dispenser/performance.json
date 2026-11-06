@@ -1,0 +1,7 @@
+{
+  "environment": "Local Chromium, isolated QA fixtures, no throttling; one lab sample, not field Core Web Vitals. Retained from the final full browser run before the targeted rerun cleared test-results.",
+  "browser": "156.0.8078.4",
+  "lcp_ms": 440,
+  "cls": 0,
+  "inp": "Not measured"
+}

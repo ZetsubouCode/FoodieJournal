@@ -13,9 +13,10 @@
     <meta property="og:type" content="website"><meta property="og:url" content="{{ $canonical ?? url()->current() }}">
     @if($image && !$noindex)<meta property="og:image" content="{{ $image }}">@endif
     <link rel="icon" href="{{ asset('favicon.svg') }}" type="image/svg+xml">
+    @if(request()->routeIs('home'))<script src="{{ asset('assets/vending/session.js') }}"></script>@endif
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body>
+<body class="archive-page public-page {{ request()->routeIs('home') ? 'public-page--home' : (request()->routeIs('visit.show') ? 'public-page--visit' : (request()->routeIs('place.show') ? 'public-page--place' : 'public-page--explore')) }}">
     <a class="skip-link" href="#main">Lewati ke isi</a>
     <x-site.header :admin="$admin" />
     <main id="main" class="container" tabindex="-1">

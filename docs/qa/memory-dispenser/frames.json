@@ -1,0 +1,119 @@
+{
+  "note": "Intermediate frames and video use deliberately slowed CSS transitions for geometry inspection; normal timing is tested separately.",
+  "events": [
+    {
+      "name": "01-idle",
+      "phase": "idle",
+      "label": "Catatan terbaru",
+      "url": "http://127.0.0.1:8011/explore"
+    },
+    {
+      "name": "02-hover",
+      "phase": "idle",
+      "label": "Catatan terbaru",
+      "url": "http://127.0.0.1:8011/explore"
+    },
+    {
+      "name": "03-processing",
+      "phase": "processing",
+      "label": "Catatan terbaru",
+      "url": "http://127.0.0.1:8011/explore"
+    },
+    {
+      "name": "04-tray-opening",
+      "phase": "dispensing",
+      "label": "Mie ayam QA",
+      "url": "http://127.0.0.1:8011/explore?tab=visit&view=grid&sort=newest&food_type%5B0%5D=qa-mie-ayam"
+    },
+    {
+      "name": "05-envelope-partial",
+      "phase": "dispensing",
+      "label": "Mie ayam QA",
+      "url": "http://127.0.0.1:8011/explore?tab=visit&view=grid&sort=newest&food_type%5B0%5D=qa-mie-ayam"
+    },
+    {
+      "name": "06-envelope-emerging",
+      "phase": "dispensing",
+      "label": "Mie ayam QA",
+      "url": "http://127.0.0.1:8011/explore?tab=visit&view=grid&sort=newest&food_type%5B0%5D=qa-mie-ayam"
+    },
+    {
+      "name": "07-envelope-ready",
+      "phase": "ready",
+      "label": "Mie ayam QA",
+      "url": "http://127.0.0.1:8011/explore?tab=visit&view=grid&sort=newest&food_type%5B0%5D=qa-mie-ayam"
+    },
+    {
+      "name": "08-flap-opening",
+      "phase": "revealing",
+      "label": "Mie ayam QA",
+      "url": "http://127.0.0.1:8011/explore?tab=visit&view=grid&sort=newest&food_type%5B0%5D=qa-mie-ayam"
+    },
+    {
+      "name": "09-photo-emerging",
+      "phase": "extracting",
+      "label": "Mie ayam QA",
+      "url": "http://127.0.0.1:8011/explore?tab=visit&view=grid&sort=newest&food_type%5B0%5D=qa-mie-ayam"
+    },
+    {
+      "name": "10-showcase-revealed",
+      "phase": "revealed",
+      "label": "Mie ayam QA",
+      "url": "http://127.0.0.1:8011/explore?tab=visit&view=grid&sort=newest&food_type%5B0%5D=qa-mie-ayam"
+    },
+    {
+      "name": "11-repeated",
+      "phase": "ready",
+      "label": "Catatan terbaru",
+      "url": "http://127.0.0.1:8011/explore?tab=visit&view=grid&sort=newest"
+    },
+    {
+      "name": "static-1920",
+      "phase": "idle",
+      "label": "Catatan terbaru",
+      "url": "http://127.0.0.1:8011/explore"
+    },
+    {
+      "name": "static-1280",
+      "phase": "idle",
+      "label": "Catatan terbaru",
+      "url": "http://127.0.0.1:8011/explore"
+    },
+    {
+      "name": "static-1024",
+      "phase": "idle",
+      "label": "Catatan terbaru",
+      "url": "http://127.0.0.1:8011/explore"
+    },
+    {
+      "name": "static-768",
+      "phase": "idle",
+      "label": "Catatan terbaru",
+      "url": "http://127.0.0.1:8011/explore"
+    },
+    {
+      "name": "static-390",
+      "phase": "idle",
+      "label": "Catatan terbaru",
+      "url": "http://127.0.0.1:8011/explore"
+    },
+    {
+      "name": "static-375",
+      "phase": "idle",
+      "label": "Catatan terbaru",
+      "url": "http://127.0.0.1:8011/explore"
+    },
+    {
+      "name": "static-320",
+      "phase": "idle",
+      "label": "Catatan terbaru",
+      "url": "http://127.0.0.1:8011/explore"
+    },
+    {
+      "name": "reduced-320",
+      "phase": "revealed",
+      "label": "Mie ayam QA",
+      "url": "http://127.0.0.1:8011/explore?tab=visit&view=grid&sort=newest&food_type%5B0%5D=qa-mie-ayam"
+    }
+  ]
+}

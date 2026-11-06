@@ -1,0 +1,62 @@
+[
+  {
+    "name": "01-idle",
+    "time": 2509,
+    "phase": "idle",
+    "selection": "Semua rasa",
+    "image": "http://127.0.0.1:8012/media/189d4a24-06f7-48c1-ab1a-88addc75d32c/hero"
+  },
+  {
+    "name": "02-pressed",
+    "time": 2987.100000023842,
+    "phase": "shutting_down",
+    "selection": "Semua rasa",
+    "image": "http://127.0.0.1:8012/media/189d4a24-06f7-48c1-ab1a-88addc75d32c/hero"
+  },
+  {
+    "name": "03-acceleration",
+    "time": 3301.2000000476837,
+    "phase": "changing",
+    "selection": "Semua rasa",
+    "image": "http://127.0.0.1:8012/media/189d4a24-06f7-48c1-ab1a-88addc75d32c/hero",
+    "wheelTime": 83.31800001830602
+  },
+  {
+    "name": "04-rotation",
+    "time": 3678.2999999523163,
+    "phase": "changing",
+    "selection": "Semua rasa",
+    "image": "http://127.0.0.1:8012/media/189d4a24-06f7-48c1-ab1a-88addc75d32c/hero",
+    "wheelTime": 449.98600001830624
+  },
+  {
+    "name": "05-alignment",
+    "time": 4066.600000023842,
+    "phase": "changing",
+    "selection": "Semua rasa",
+    "image": "http://127.0.0.1:8012/media/189d4a24-06f7-48c1-ab1a-88addc75d32c/hero",
+    "wheelTime": 620
+  },
+  {
+    "name": "06-selected",
+    "time": 6435.299999952316,
+    "phase": "idle",
+    "selection": "Teh",
+    "image": "http://127.0.0.1:8012/media/05787849-e535-41ba-840a-0295040d36d1/hero"
+  },
+  {
+    "name": "07-rapid-presses",
+    "time": 7054.299999952316,
+    "phase": "changing",
+    "selection": "Teh",
+    "image": "http://127.0.0.1:8012/media/05787849-e535-41ba-840a-0295040d36d1/hero",
+    "wheelTime": 0
+  },
+  {
+    "name": "08-next-selected",
+    "time": 8213.600000023842,
+    "phase": "idle",
+    "selection": "Salad",
+    "image": "http://127.0.0.1:8012/media/8c16e6b8-cb26-4dbb-8a41-ca8081ba7b80/hero"
+  }
+]

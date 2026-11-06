@@ -31,6 +31,13 @@ class Place extends Model
         return $this->hasMany(Visit::class);
     }
 
+    public function archivePhotoVisits()
+    {
+        return $this->hasMany(Visit::class)->publishedVisible()
+            ->whereHas('media.variants', fn ($photo) => $photo->where('variant', 'card')->where('status', 'ready'))
+            ->orderByDesc('visited_at')->orderByDesc('id')->limit(1);
+    }
+
     public function scopePublishedVisible(Builder $query): Builder
     {
         return $query->whereHas('visits', fn ($q) => $q->publishedVisible());

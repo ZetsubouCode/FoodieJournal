@@ -3,6 +3,12 @@
 html { min-width: 320px; background: var(--surface-page); }
 body { margin: 0; }
 .error-page { color: var(--text-primary); background: var(--surface-page); font: var(--text-body)/1.55 var(--font-body); }
+.error-page .container { width: min(calc(100% - 3rem), var(--content-max)); margin-inline: auto; }
+.error-page .error-main { width: min(calc(100% - 3rem), var(--content-max)); margin-inline: auto; padding-inline: 0; }
+.error-page .site-footer { margin-top: auto; background: transparent; padding-block: var(--space-6); }
+.error-page .site-footer__statement { font-size: 1.5rem; }
+.error-page .site-footer__description, .error-page .site-footer__copyright { display: none; }
+.error-page .site-header :focus-visible, .error-page .site-footer :focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 4px; }
 .error-page a { color: inherit; text-decoration: none; }
 .error-page a:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 5px; }
 .error-skip { position: fixed; z-index: 10; inset: .75rem auto auto 1rem; padding: .65rem 1rem; color: var(--action-primary-text) !important; background: var(--action-primary-bg); transform: translateY(-150%); }

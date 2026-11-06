@@ -12,6 +12,15 @@ use App\Support\RatingSql;
 
 class ExploreQuery
 {
+    public function previewItems(ExploreState $state)
+    {
+        $query = VisitItem::publishedVisible()->with(['media.variants', 'visit.place']);
+        $this->itemFilters($query, $state);
+        $query->whereHas('visit', fn ($visit) => $this->visitFilters($visit, $state));
+
+        return $query;
+    }
+
     public function build(ExploreState $state)
     {
         $tab = $state->get('tab');
@@ -28,7 +37,7 @@ class ExploreQuery
             $date = 'visit_date';
             $id = 'visit_item.id';
         } elseif ($tab === 'place') {
-            $query = Place::publishedVisible()->withRating()->with(['visits' => fn ($q) => $q->publishedVisible()->with(['coverMedia.variants'])->orderByDesc('visited_at')->orderByDesc('id')->limit(1)]);
+            $query = Place::publishedVisible()->withRating()->with(['archivePhotoVisits.coverMedia.variants', 'archivePhotoVisits.media.variants', 'visits' => fn ($q) => $q->publishedVisible()->with(['coverMedia.variants'])->orderByDesc('visited_at')->orderByDesc('id')->limit(1)]);
             $query->whereHas('visits', function ($q) use ($state) {
                 $q->publishedVisible();
                 $this->visitFilters($q, $state);
@@ -44,7 +53,7 @@ class ExploreQuery
             $date = 'latest_visit_at';
             $id = 'place.id';
         } else {
-            $query = Visit::publishedVisible()->withRating()->with(['place', 'coverMedia.variants', 'recommendations', 'tags', 'items.foodType.category', 'items.styles']);
+            $query = Visit::publishedVisible()->withRating()->with(['place', 'coverMedia.variants', 'media.variants', 'recommendations', 'tags', 'items.foodType.category', 'items.styles']);
             $this->visitFilters($query, $state);
             if ($this->hasItemFilters($state)) {
                 $query->whereHas('items', fn ($i) => $this->itemFilters($i, $state));
@@ -66,7 +75,9 @@ class ExploreQuery
             }
         }
         if ($state->get('rating_min') !== null) {
-            $query->whereRaw("{$rating} >= ?", [$state->get('rating_min')]);
+            // PDO binds fractional thresholds as strings. Arithmetic coercion
+            // keeps computed ratings numeric on SQLite as well as MySQL.
+            $query->whereRaw("{$rating} >= (? + 0.0)", [$state->get('rating_min')]);
         }
         $sort = $state->get('sort');
         if (str_starts_with($sort, 'rating_')) {

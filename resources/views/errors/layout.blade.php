@@ -22,10 +22,7 @@
 <body class="error-page">
     <a class="error-skip" href="#error-main">Lewati ke isi</a>
     <div class="error-scene">
-        <header class="error-header">
-            <a class="error-brand" href="{{ url('/') }}" aria-label="Foodie — beranda">Foodie<span class="error-brand-dot" aria-hidden="true">.</span></a>
-            <span class="error-header-label">Jurnal kuliner</span>
-        </header>
+        <x-site.header />
         <main id="error-main" class="error-main">
             <div class="error-copy">
                 <p class="error-eyebrow"><span class="error-eyebrow-line" aria-hidden="true"></span>{{ $page['eyebrow'] }}</p>
@@ -38,7 +35,7 @@
                 </nav>
             </div>
         </main>
-        <footer class="error-footer"><span>Foodie / Catatan perjalanan rasa</span><span class="error-footer-code" aria-hidden="true">{{ $code }} — {{ $page['footer'] }}</span></footer>
+        <x-site.footer />
     </div>
 </body>
 </html>

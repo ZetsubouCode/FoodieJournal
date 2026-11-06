@@ -28,7 +28,7 @@ class PublicOptions
             $options[$key] = $terms->sortBy($key === 'avoid_allergen' ? 'label_id' : 'name')->map(fn ($t) => ['value' => $key === 'avoid_allergen' ? $t->code : $t->slug, 'label' => $key === 'avoid_allergen' ? $t->label_id : $t->name])->values()->all();
         }
         $categories = Category::whereHas('foodTypes.items', fn ($q) => $q->publishedVisible())->get();
-        $options['category'] = $this->ancestors(Category::class, $categories)->sortBy('name')->map(fn ($t) => ['value' => $t->slug, 'label' => $t->name])->values()->all();
+        $options['category'] = $this->hierarchy($this->ancestors(Category::class, $categories));
         foreach (['tag' => Tag::class, 'recommendation' => RecommendationLabel::class] as $key => $class) {
             $options[$key] = $class::whereHas('visits', fn ($q) => $q->publishedVisible())->orderBy('name')->get()->map(fn ($t) => ['value' => $t->slug, 'label' => $t->name])->all();
         }
@@ -49,5 +49,22 @@ class PublicOptions
         }
 
         return $terms;
+    }
+
+    private function hierarchy($terms): array
+    {
+        $result = [];
+        $walk = function ($parent, $depth) use (&$walk, &$result, $terms) {
+            if ($depth > 10) {
+                return;
+            }
+            foreach ($terms->where('parent_id', $parent)->sortBy('name') as $term) {
+                $result[] = ['value' => $term->slug, 'label' => $term->name, 'depth' => $depth];
+                $walk($term->id, $depth + 1);
+            }
+        };
+        $walk(null, 0);
+
+        return $result;
     }
 }

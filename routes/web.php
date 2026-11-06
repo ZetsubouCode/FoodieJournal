@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [PublicController::class, 'home'])->name('home');
 Route::get('/explore', [PublicController::class, 'explore'])->name('explore.index');
 Route::get('/explore/count', [PublicController::class, 'count'])->middleware('throttle:90,1,explore-count:');
+Route::get('/explore/memory', [PublicController::class, 'memory'])->middleware('throttle:90,1,explore-memory:');
 Route::get('/visit/{slug}', [PublicController::class, 'visit'])->name('visit.show');
 Route::get('/place/{slug}', [PublicController::class, 'place'])->name('place.show');
 Route::get('/sitemap.xml', [PublicController::class, 'sitemap']);

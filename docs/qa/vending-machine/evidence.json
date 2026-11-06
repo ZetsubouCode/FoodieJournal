@@ -1,0 +1,243 @@
+{
+  "fixture": "Dedicated cinematic.sqlite/media. Labeled fictional demo visits and illustrative bundled photography; no owner data.",
+  "browser": "156.0.8078.4",
+  "screenshots": [
+    "after-off-desktop",
+    "magnetic-preview-held",
+    "post-ignition",
+    "displays-awake",
+    "after-on-desktop",
+    "print-feed-early",
+    "print-feed-late",
+    "after-print-desktop",
+    "reset-pressed",
+    "page-two",
+    "after-on-1920",
+    "after-print-1920",
+    "after-on-1440",
+    "after-print-1440",
+    "after-on-1024",
+    "after-print-1024",
+    "after-on-768",
+    "after-print-768",
+    "after-on-375",
+    "after-print-375",
+    "after-on-320",
+    "after-print-320"
+  ],
+  "frames": [
+    {
+      "name": "after-off-desktop",
+      "power": "off",
+      "dispenser": "idle",
+      "screenOpacity": "0"
+    },
+    {
+      "name": "magnetic-preview-held",
+      "power": "off",
+      "dispenser": "idle",
+      "screenOpacity": "0"
+    },
+    {
+      "name": "post-ignition",
+      "power": "booting",
+      "dispenser": "idle",
+      "screenOpacity": "0"
+    },
+    {
+      "name": "displays-awake",
+      "power": "booting",
+      "dispenser": "idle",
+      "screenOpacity": "0.69599"
+    },
+    {
+      "name": "after-on-desktop",
+      "power": "on",
+      "dispenser": "idle",
+      "screenOpacity": "1"
+    },
+    {
+      "name": "print-feed-early",
+      "power": "on",
+      "dispenser": "printing",
+      "screenOpacity": "1"
+    },
+    {
+      "name": "print-feed-late",
+      "power": "on",
+      "dispenser": "printing",
+      "screenOpacity": "1"
+    },
+    {
+      "name": "after-print-desktop",
+      "power": "on",
+      "dispenser": "ready",
+      "screenOpacity": "1"
+    },
+    {
+      "name": "reset-pressed",
+      "power": "on",
+      "dispenser": "ready",
+      "screenOpacity": "1"
+    },
+    {
+      "name": "page-two",
+      "power": "on",
+      "dispenser": "idle",
+      "screenOpacity": "1"
+    },
+    {
+      "name": "after-on-1920",
+      "power": "on",
+      "dispenser": "idle",
+      "screenOpacity": "1"
+    },
+    {
+      "name": "after-print-1920",
+      "power": "on",
+      "dispenser": "ready",
+      "screenOpacity": "1"
+    },
+    {
+      "name": "after-on-1440",
+      "power": "on",
+      "dispenser": "idle",
+      "screenOpacity": "1"
+    },
+    {
+      "name": "after-print-1440",
+      "power": "on",
+      "dispenser": "ready",
+      "screenOpacity": "1"
+    },
+    {
+      "name": "after-on-1024",
+      "power": "on",
+      "dispenser": "idle",
+      "screenOpacity": "1"
+    },
+    {
+      "name": "after-print-1024",
+      "power": "on",
+      "dispenser": "ready",
+      "screenOpacity": "1"
+    },
+    {
+      "name": "after-on-768",
+      "power": "on",
+      "dispenser": "idle",
+      "screenOpacity": "1"
+    },
+    {
+      "name": "after-print-768",
+      "power": "on",
+      "dispenser": "ready",
+      "screenOpacity": "1"
+    },
+    {
+      "name": "after-on-375",
+      "power": "on",
+      "dispenser": "idle",
+      "screenOpacity": "1"
+    },
+    {
+      "name": "after-print-375",
+      "power": "on",
+      "dispenser": "ready",
+      "screenOpacity": "1"
+    },
+    {
+      "name": "after-on-320",
+      "power": "on",
+      "dispenser": "idle",
+      "screenOpacity": "1"
+    },
+    {
+      "name": "after-print-320",
+      "power": "on",
+      "dispenser": "ready",
+      "screenOpacity": "1"
+    }
+  ],
+  "errors": [],
+  "checks": [
+    {
+      "width": 1920,
+      "state": "on",
+      "overflow": false,
+      "lampAlignment": {
+        "dx": 0.1171875,
+        "dy": 0.203125
+      }
+    },
+    {
+      "width": 1440,
+      "state": "on",
+      "overflow": false,
+      "lampAlignment": {
+        "dx": 0.1171875,
+        "dy": 0.203125
+      }
+    },
+    {
+      "width": 1024,
+      "state": "on",
+      "overflow": false,
+      "lampAlignment": {
+        "dx": 0.0078125,
+        "dy": 0.2421875
+      }
+    },
+    {
+      "width": 768,
+      "state": "on",
+      "overflow": false,
+      "lampAlignment": {
+        "dx": 0,
+        "dy": 0
+      }
+    },
+    {
+      "width": 375,
+      "state": "on",
+      "overflow": false,
+      "lampAlignment": {
+        "dx": 0,
+        "dy": 0
+      }
+    },
+    {
+      "width": 320,
+      "state": "on",
+      "overflow": false,
+      "lampAlignment": {
+        "dx": 0,
+        "dy": 0
+      }
+    }
+  ],
+  "assetBytes": 28374,
+  "bundleNote": "No added npm/composer dependencies. 2D SVG hardware and existing cabinet raster.",
+  "videoPowerTimeline": [
+    {
+      "power": "off",
+      "ms": 3915.2000000029802
+    },
+    {
+      "power": "booting",
+      "ms": 5604.80000000447
+    },
+    {
+      "power": "on",
+      "ms": 6687.60000000149
+    },
+    {
+      "power": "shutting_down",
+      "ms": 9798
+    },
+    {
+      "power": "off",
+      "ms": 10123
+    }
+  ]
+}

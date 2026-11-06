@@ -1,0 +1,30 @@
+
+Running 23 tests using 1 worker
+
+(node:23644) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 tests\Browser\discovery-machine.spec.js:15:1 › homepage selection dispenses a surprise, reveals a real destination and keeps shell mounted (6.3s)
+  ok  2 tests\Browser\discovery-machine.spec.js:37:1 › Explore modes retain the document, query, layout and browser history (2.2s)
+  ok  3 tests\Browser\discovery-machine.spec.js:50:1 › rapid requests discard stale modes; failed requests retain committed data (1.7s)
+  ok  4 tests\Browser\discovery-machine.spec.js:63:1 › curiosity photographs apply actual filtering and restore with Back (2.4s)
+  ok  5 tests\Browser\discovery-machine.spec.js:72:1 › filter drawer stages hierarchy, long searchable multiselect, tags and recommendations; apply and cancel (3.2s)
+  ok  6 tests\Browser\discovery-machine.spec.js:108:1 › mode-specific prices, group reset, search/sort/grid/list/pagination and error retry remain coherent (5.5s)
+  ok  7 tests\Browser\discovery-machine.spec.js:134:1 › archive error retry, failed photographs and empty Explore remain usable (6.2s)
+  ok  8 tests\Browser\discovery-machine.spec.js:151:1 › keyboard, reduced motion and lamp pause keep the reveal deliberate (2.6s)
+  ok  9 tests\Browser\discovery-machine.spec.js:164:1 › LED lenses follow native canvas centers; tray and status remain contained across widths (21.7s)
+  ok 10 tests\Browser\discovery-machine.spec.js:188:1 › axe scans the archive at desktop and mobile, then the Explore filter drawer (12.8s)
+  ok 11 tests\Browser\discovery-machine.spec.js:204:1 › touch collection and knob controls reveal real memories (4.0s)
+  ok 12 tests\Browser\error-pages.spec.js:9:1 › editorial 404 scene reflows, loads its photograph and remains keyboard accessible (4.1s)
+  ok 13 tests\Browser\homepage.spec.js:4:1 › homepage editorial collections and shared geometry reflow through desktop, mobile and 200% text (10.3s)
+  ok 14 tests\Browser\homepage.spec.js:24:1 › personal picks link to actual records and keep endorsements distinct from score (1.9s)
+  ok 15 tests\Browser\journal.spec.js:36:1 › public pages reflow at 320, 375, 768, 1024 and 1440 pixels (36.4s)
+  ok 16 tests\Browser\journal.spec.js:49:1 › filters stage, count, cancel, apply and restore browser history (2.9s)
+  ok 17 tests\Browser\journal.spec.js:68:1 › login, keyboard combobox, inline create, repeatable editor and publish preview (7.7s)
+  ok 18 tests\Browser\journal.spec.js:101:1 › gallery loads originals only when opened and dialog restores focus (2.4s)
+  ok 19 tests\Browser\journal.spec.js:113:1 › admin mobile, reduced motion, errors and 200 percent text reflow (6.2s)
+  ok 20 tests\Browser\performance.spec.js:4:1 › record local paint, layout stability and token contrast measurements (2.2s)
+  ok 21 tests\Browser\visit-card.spec.js:8:1 › F Refined visit card reflows and keeps independent destinations (21.7s)
+  ok 22 tests\Browser\visit-card.spec.js:87:1 › failed visit-card media reveals a stable fallback (784ms)
+  ok 23 tests\Browser\visit-card.spec.js:96:1 › touch taps keep card navigation separate from tag disclosure (4.4s)
+
+  23 passed (2.8m)
