@@ -129,7 +129,7 @@ test('reset and a new selection retract the ready card; push-button face depress
     await ready(page); await on(page);
     await page.locator('[data-vending-print]').click(); await expect(page.locator(machine)).toHaveAttribute('data-dispenser','ready');
     await page.locator('[data-memory-slot]').nth(1).click(); await expect(page.locator('[data-paper-path] a')).toHaveCount(0);
-    const button=page.locator('[data-memory-reset]'); const c=await center(button);
+    const button=page.locator('[data-memory-reset]'); await button.scrollIntoViewIfNeeded(); const c=await center(button);
     await page.mouse.move(c.x,c.y); await page.mouse.down(); await page.waitForTimeout(100);
     const transform=await button.locator('.vending-reset__face').evaluate(n=>getComputedStyle(n).transform);
     expect(transform).not.toBe('none'); expect(transform).toMatch(/matrix\([^,]+, 0, 0,/);
@@ -237,23 +237,17 @@ test('resize, a second pointer, scroll and visibility interruptions preserve a v
     await expect(page.locator(machine)).toHaveAttribute('data-power','on');
 });
 
-test('the one-time contextual hint disappears after discovery across session reloads', async ({ page }) => {
-    await page.addInitScript(()=>{
-        const original=window.setTimeout.bind(window);
-        window.setTimeout=(fn,delay,...args)=>original(fn,delay===7200?80:delay,...args);
-    });
-    await ready(page); await expect(page.locator('[data-vending-hint]')).toBeVisible();
-    await on(page); await expect(page.locator('[data-vending-hint]')).toBeHidden();
-    await page.locator('[data-vending-lamp]').click(); await page.locator('[data-lamp-cradle]').click();
-    await expect(page.locator(machine)).toHaveAttribute('data-power','off');
-    await ready(page); await page.waitForTimeout(150); await expect(page.locator('[data-vending-hint]')).toBeHidden();
+test('lamp communicates pickup without visible tutorial copy',async({page})=>{
+ await ready(page);await expect(page.locator('[data-vending-hint]')).toHaveCount(0);
+ await expect(page.locator(machine)).toHaveAttribute('data-pickup-cue','true');
+ await on(page);await expect(page.locator(machine)).toHaveAttribute('data-pickup-cue','false');
 });
 
 test('a now-empty server page clears the old preview and disables printing', async ({ page }) => {
     await ready(page); await on(page);
     if(await page.locator('[data-vending-knob]').isDisabled()) return;
     await page.route('**/*machine_page=*',route=>route.fulfill({status:200,contentType:'text/html',body:'<div data-vending-page data-page="1" data-pages="1" data-total="0"><nav data-memory-slots></nav><template data-vending-empty><article class="memory-showcase"><h2>Arsip masih kosong.</h2></article></template></div>'}));
-    await page.locator('[data-vending-next]').click(); await expect(page.locator(machine)).toHaveAttribute('data-page-busy','false');
+    await page.locator('[data-vending-knob]').focus(); await page.keyboard.press('ArrowRight'); await expect(page.locator(machine)).toHaveAttribute('data-page-busy','false');
     await expect(page.locator('[data-vending-screen]')).toContainText('Arsip masih kosong.');
     await expect(page.locator('[data-vending-screen] a')).toHaveCount(0);
     await expect(page.locator('[data-vending-print]')).toBeDisabled(); await expect(page.locator('[data-vending-knob]')).toBeDisabled();
@@ -272,4 +266,41 @@ test('compiled CSS durations drive real snap, ignition and paper-feed timings', 
     expect(timings.find(t=>t.name==='vending-lamp').duration).toBe(270);
     expect(timings.find(t=>t.name.includes('vending-machine')).duration).toBe(960);
     expect(timings.find(t=>t.name==='vending-print').duration).toBe(820);
+});
+
+test('refined hardware has no pagination widgets; dial resists partial travel and settles at an index', async ({page})=>{
+    await ready(page); await on(page); await page.locator(machine).scrollIntoViewIfNeeded();
+    await expect(page.locator('.vending-page-actions,[data-vending-next],[data-vending-previous]')).toHaveCount(0);
+    const knob=page.locator('[data-vending-knob]');if(await knob.isDisabled())return;
+    const c=await center(knob),r=22,at=async d=>page.mouse.move(c.x+Math.cos(d*Math.PI/180)*r,c.y+Math.sin(d*Math.PI/180)*r);
+    await at(-90);await page.mouse.down();await at(-72);await page.mouse.up();
+    await expect(page.locator(machine)).toHaveAttribute('data-page','1');await expect(knob).toHaveAttribute('data-angle','0');
+    await at(-90);await page.mouse.down();for(const d of [-80,-69,-58,-50])await at(d);await page.mouse.up();
+    await expect(page.locator(machine)).toHaveAttribute('data-page','2');await expect(knob).toHaveAttribute('data-angle','32');
+    await knob.focus();await page.keyboard.press('ArrowLeft');await expect(page.locator(machine)).toHaveAttribute('data-page','1');
+    await page.keyboard.press('ArrowLeft');await expect(page.locator(machine)).toHaveAttribute('data-page-direction','backward');
+    const pages=await page.locator(machine).getAttribute('data-pages');await expect(page.locator(machine)).toHaveAttribute('data-page',pages);
+    await page.keyboard.press('ArrowRight');await expect(page.locator(machine)).toHaveAttribute('data-page','1');await expect(page.locator(machine)).toHaveAttribute('data-page-direction','forward');
+});
+
+test('resting tube hangs outside the left side and the compact tray is dark when off',async({page})=>{
+    for(const width of [1440,375,320]){
+        await page.setViewportSize({width,height:1000});await ready(page);
+        const geometry=await page.locator(machine).evaluate(n=>{const a=n.querySelector('[data-vending-lamp]').getBoundingClientRect(), b=n.getBoundingClientRect(),dock=n.querySelector('[data-lamp-cradle]').getBoundingClientRect();return {inside:a.right<b.left&&a.left>=0&&a.top>=b.top&&a.bottom<=b.bottom,offset:Math.hypot(a.x+a.width/2-dock.x-dock.width/2,a.y+a.height/2-dock.y-dock.height/2),resetDy:Math.abs(a.y+a.height/2-(n.querySelector('[data-memory-reset]').getBoundingClientRect().y+n.querySelector('[data-memory-reset]').getBoundingClientRect().height/2)),socketDy:Math.abs(a.y+a.height/2-(n.querySelector('[data-lamp-socket]').getBoundingClientRect().y+n.querySelector('[data-lamp-socket]').getBoundingClientRect().height/2)),dark:getComputedStyle(n.querySelector('.vending-tray'),'::before').opacity}});
+        expect(geometry.inside).toBe(true);expect(geometry.offset).toBeLessThan(1);expect(geometry.resetDy).toBeLessThan(2);if(width>=960)expect(geometry.socketDy).toBeGreaterThan(100);await expect.poll(()=>page.locator('.vending-tray').evaluate(n=>getComputedStyle(n,'::before').opacity)).toBe('1');
+    }
+});
+
+
+test('off-state pickup cue is visible even in a discovered session, finite and non-electrical',async({page})=>{
+ await page.addInitScript(()=>{sessionStorage.setItem('foodie.vending.power','off');sessionStorage.setItem('foodie.vending.discovered','true')});
+ await ready(page);await expect(page.locator(machine)).toHaveAttribute('data-pickup-cue','true');
+ const cue=page.locator('.vending-lamp__pickup');
+ expect(await cue.evaluate(n=>n.getAnimations().map(a=>a.effect.getTiming().iterations))).toEqual([3]);
+ expect(await page.locator('.vending-lamp__light').evaluate(n=>getComputedStyle(n).opacity)).toBe('0');
+ await page.emulateMedia({reducedMotion:'reduce'});
+ expect(await cue.evaluate(n=>n.getAnimations().length)).toBe(0);
+ expect(Number(await cue.evaluate(n=>getComputedStyle(n).opacity))).toBeGreaterThan(.4);
+ await page.locator('[data-vending-lamp]').focus();await page.keyboard.press('Enter');
+ await expect(page.locator(machine)).toHaveAttribute('data-pickup-cue','false');
 });

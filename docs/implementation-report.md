@@ -184,3 +184,20 @@ Implemented the supplied interactive vending package in the existing homepage ca
 Verification: **66 PHP tests / 1,126 assertions**, **10 pure JavaScript tests**, **34 browser scenarios**, and **two final keyboard/compiled-duration rechecks** passed. Targeted Pint and the production build passed. Browser checks include touch drag/tap, keyboard, reduced motion, blocked storage, interrupted gestures, first-paint persistence, stale fragments, true empty states, media failures, print identity, actual navigation and accessibility scans. The minified CSS seconds conversion and a release/scroll race were corrected during QA.
 
 [Full evidence and commands](qa/vending-machine/verification.md), [state diagrams, asset provenance, control mapping and file inventory](vending-machine-interactive.md). Evidence includes before/after desktop/compact screenshots, real boot/print stages, short video and local frame/paint measurements. Physical-device/Safari/screen-reader and field performance validation remain unverified. The earlier continuation checkpoint is historical; use docs/operations.md for the current port-3306 Foodie instance and separate XAMPP recovery context.
+
+
+## Indexed vending refinement · 7 November 2026
+
+Removed visible page arrows; implemented resistant 32° indexed selector motion with settled release positions and coherent wrap-direction cassette changes. Moved the tube to an integrated vertical dock; redrew dock and square reset assets. Refined dark tray power states, finite pickup cues, selected slots, LED button affordances, engraved plaques and preview spacing. Compact off-state retains structural frames rather than a blank grid.
+
+Validation: 18 machine browser tests, 3 final visual/accessibility rechecks, 10 JavaScript helper tests and 27 PHP feature tests (355 assertions) passed. Production build and whitespace checks passed. [Current evidence](qa/vending-refinement/verification.md), [implementation notes](vending-machine-refinement.md). No data rules, dependencies, migrations or owner data changed; physical-device/assistive/manual browser checks remain outstanding.
+
+
+## User-corrected side-hung lamp · 7 November 2026
+
+Restored the original socket position and moved the upright resting tube onto an external LEFT-side mounting arm, separated from the socket. Reserved desktop/compact gutters prevent clipping/overflow. Added an immediate finite pickup-outline/reflection cue on the tube, including previously discovered off sessions; meaningful interaction dismisses it, and reduced motion retains a static affordance. Corrected runtime reduced-motion handling found by the new cue test. Build, whitespace check and four final browser checks passed; [evidence](qa/hanging-lamp/verification.md). This explicitly supersedes the previous inside-panel dock decision.
+
+
+## Resting lamp beside reset · 7 November 2026
+
+Moved the outside-left resting lamp down to RESET height while keeping the original socket unchanged. Replaced the pipe with an illustrated two-point gusset mount and bolted plate. Removed every visible pickup label and its timer; hints are now cap-edge reflection, glass sweep and hover/focus response only. Production build, 19 machine browser tests, two final visual/accessibility checks and whitespace checks passed. [Evidence](qa/reset-side-lamp/verification.md). No data/dependency changes.

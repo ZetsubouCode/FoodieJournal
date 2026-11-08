@@ -53,10 +53,7 @@
 .vending-reset__label { position: absolute; left: -10%; right: -10%; bottom: -1.3cqi; color: var(--text-muted); font: .65cqi/1 var(--font-body); letter-spacing: .05em; }
 .vending-hardware button:disabled { cursor: default; }
 .vending-hardware button:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 4px; }
-.vending-page-actions { position: absolute; display: flex; gap: 2px; left: 1.8%; top: 84%; }
-.vending-page-actions button { width: 24px; height: 28px; min-height: 24px; padding: 0; border: 1px solid var(--archive-outline); border-radius: 3px; background: var(--archive-recess); color: var(--text-secondary); font-size: .75rem; }
-.vending-page-actions button:disabled { color: var(--archive-outline); }
-.vending-hint { position: absolute; margin: 0; left: 19%; top: 96%; max-width: 16rem; font-size: .75rem; line-height: 1.4; color: var(--text-secondary); }
+
 .vending-machine .memory-machine__display { pointer-events: auto; }
 .vending-machine .memory-machine__step { padding: 0; border: 0; background: transparent; min-height: 44px; color: var(--text-secondary); transform: translateY(-22px); border-radius: 50%; cursor: pointer; }
 .vending-machine .memory-machine__step > span { top: calc(22px + 1.4cqi); pointer-events: none; font-size: max(8px,.65cqi); }
@@ -118,9 +115,7 @@ html[data-vending-session=on] .vending-machine:not([data-enhanced]) .memory-mach
     .vending-rotary__legend { font-size: .75rem; margin-top: 2px; }
     .vending-reset { left: auto; right: 13%; top: 108px; width: 60px; height: 60px; }
     .vending-reset__label { bottom: -10px; font-size: .65rem; }
-    .vending-page-actions { left: auto; right: 4%; top: 184px; gap: 6px; }
-    .vending-page-actions button { width: 44px; height: 32px; }
-    .vending-hint { left: 4%; top: auto; bottom: -25px; font-size: .65rem; }
+
     .vending-machine .memory-machine__display { gap: .25rem; padding: .8rem 0; flex-wrap: nowrap; }
     .vending-machine .memory-machine__step { width: auto; flex: 1; min-height: 44px; transform: none; display: flex; flex-direction: column; gap: 7px; justify-content: center; border-radius: 5px; }
     .vending-machine .memory-machine__step i { top: auto; width: 9px; height: 9px; }
@@ -144,5 +139,122 @@ html[data-vending-session=on] .vending-machine:not([data-enhanced]) .memory-mach
 @media(prefers-reduced-motion: reduce) {
     .vending-machine *, .vending-machine *::after { animation: none !important; transition: none !important; }
     .vending-machine[data-power=booting] .vending-lamp__light { opacity: 1; }
-    .vending-hint { display: none; }
+
 }
+/* 7 November refinement: integrated dock, indexed selector and engraved hardware. */
+.vending-socket { left: 5.7%; width: 3.3%; }
+.vending-cradle { left: 1.3%; top: 27%; width: 3.1%; height: 28.7%; border-radius: 1cqi; }
+.vending-tray-shade { position:absolute; z-index:2; left:19.4%; top:82.8%; width:29.4%; height:12%; border-radius:1.2cqi; background:linear-gradient(#090a09ee,#10100ee8); opacity:0; pointer-events:none; transition:opacity 240ms ease-out; }
+.vending-machine:is([data-power=off],[data-power=shutting_down]) .vending-tray-shade,
+html[data-vending-session=off] .vending-machine:not([data-enhanced]) .vending-tray-shade { opacity:1; }
+.vending-machine[data-power=booting] .vending-tray-shade { animation:vending-tray-warm 960ms both; }
+@keyframes vending-tray-warm { 0%,45%{opacity:1} 100%{opacity:0} }
+.vending-machine:is([data-power=off],[data-power=shutting_down]) .vending-roller { opacity:.3; }
+.vending-machine .memory-machine__marquee { color:#bda17c; text-shadow:0 1px 0 #e7c89940,0 -1px 1px #080604; }
+.vending-machine .memory-machine__marquee small { color:#ad9475; text-shadow:0 1px 0 #e7c89933,0 -1px 1px #080604; }
+.vending-rotary__legend,.vending-reset__label,.vending-machine .memory-slot__name { text-shadow:0 -1px 1px #100b06,0 1px 0 #eed2a044; }
+.vending-machine[data-power=on] .memory-slot[aria-current=true] { box-shadow:inset 0 0 0 1.5px var(--archive-highlight),0 0 8px #e7a45a30; }
+.vending-machine[data-power=on] .memory-slot[aria-current=true] .memory-slot__glass img { filter:brightness(1.08) saturate(1); }
+.vending-machine[data-power=on] .memory-slot[aria-current=true] .memory-slot__code { background:#ffe0a5; box-shadow:0 1px 4px #000a; }
+.vending-machine .memory-machine__step { border-radius:7px; transition:background-color 120ms ease-out; }
+.vending-machine .memory-machine__step > span { color:var(--text-primary); font-size:max(10px,.76cqi); text-shadow:0 1px 2px #000; }
+.vending-machine .memory-machine__step:not(:disabled):is(:hover,:focus-visible) { background:#e8bd7f18; }
+.vending-machine .memory-machine__step:not(:disabled):is(:hover,:focus-visible) i { transform:scale(1.16); --led-power:1; }
+.vending-machine .memory-machine__step:not(:disabled):active { background:#0008; }
+.vending-machine .memory-machine__step:not(:disabled):active i { transform:translateY(2px) scale(.92); }
+.vending-machine .memory-machine__step:disabled > span { color:var(--text-muted); }
+.vending-reset { width:4.8cqi; height:4.2cqi; border-radius:8px; }
+.vending-reset__face { transform-origin:center; }
+
+.vending-machine[data-discovery-cue=true] .vending-cradle::after { inset:12% 22%; width:auto; height:auto; border:1px solid #eed0a0; border-radius:8px; background:transparent; animation:vending-pickup-cue 1800ms ease-in-out 3; }
+.vending-machine:not([data-discovery-cue=true]) .vending-cradle::after { animation:none; }
+@keyframes vending-pickup-cue {0%,100%{opacity:0}50%{opacity:.45}}
+.vending-machine .memory-showcase__body h3 { margin-bottom:1cqi; font-size:2.15cqi; line-height:1.04; }
+.vending-machine .memory-showcase__place { margin-bottom:.85cqi; }
+.vending-machine .memory-showcase__excerpt { -webkit-line-clamp:2; }
+.vending-machine .memory-showcase__hint { padding-top:1.2cqi; }
+@media(min-width:960px){
+ .vending-machine:not([data-enhanced]) .vending-lamp {left:calc(2.85% - 1.28cqi);top:calc(41.35% - 7.25cqi);transform:rotate(0deg)}
+ html[data-vending-session=on] .vending-machine:not([data-enhanced]) .vending-lamp {left:calc(7.35% - 1.28cqi)}
+}
+@media(max-width:959px){
+ .vending-socket {left:7%;width:48px}
+ .vending-cradle {left:34%;top:12px;width:48px;height:170px}
+ .vending-rotary-wrap,.vending-reset {right:7%}
+ .vending-reset {height:52px;width:60px}
+
+ .vending-tray-shade {position:relative;order:3;height:0;inset:auto;width:100%}
+ .vending-tray-shade::after {content:'';position:absolute;z-index:1;top:0;left:0;right:0;height:8rem;background:linear-gradient(#090a09e8,#10100edd);border-radius:.7rem}
+ .vending-machine .memory-showcase__body h3 {font-size:1.7rem;margin-bottom:.85rem}
+ .vending-machine .memory-showcase__place {margin-bottom:.8rem}
+ .vending-machine .memory-showcase__hint {padding-top:1rem}
+ .vending-machine .memory-machine__step > span {font-size:.65rem}
+ .vending-machine:not([data-enhanced]) .vending-lamp {left:calc(34% + 10.5px);top:24.5px;transform:rotate(0deg)}
+ html[data-vending-session=on] .vending-machine:not([data-enhanced]) .vending-lamp {left:calc(7% + 10.5px)}
+}
+@media(prefers-reduced-motion:reduce){.vending-machine[data-discovery-cue=true] .vending-cradle::after{animation:none;opacity:.35}}
+.vending-tray::before {content:'';position:absolute;inset:0;z-index:0;border-radius:inherit;background:linear-gradient(#080a09ee,#0f100de8);opacity:0;pointer-events:none;transition:opacity 240ms ease-out}
+.vending-machine:is([data-power=off],[data-power=shutting_down]) .vending-tray::before {opacity:1}
+.vending-machine[data-power=booting] .vending-tray::before {animation:vending-tray-warm 960ms both}
+@media(max-width:959px){.vending-tray-shade{display:none}}
+@media(min-width:960px){.vending-rotary-wrap{top:62%}.vending-reset{top:78%}}@media(max-width:959px){
+ .vending-machine[data-enhanced]:is([data-power=off],[data-power=shutting_down]) .memory-slots,
+ html[data-vending-session=off] .vending-machine:not([data-enhanced]) .memory-slots {opacity:1;pointer-events:none}
+ .vending-machine:is([data-power=off],[data-power=shutting_down]) .memory-slot__glass > *,
+ html[data-vending-session=off] .vending-machine:not([data-enhanced]) .memory-slot__glass > * {opacity:0}
+ .vending-machine:is([data-power=off],[data-power=shutting_down]) .memory-slot__name {opacity:.35}
+ .vending-tray::before {background:linear-gradient(#090a09c9,#10100ebd)}
+ .vending-machine:is([data-power=off],[data-power=shutting_down]) .vending-tray::after {opacity:.2}
+}
+@media(max-width:959px){
+ .vending-machine[data-power=booting] .memory-slots {animation:none;opacity:1}
+ .vending-machine[data-power=booting] .memory-slot__glass > * {animation:vending-screen var(--vending-boot) both}
+}
+html[data-vending-session=off] .vending-machine:not([data-enhanced]) .vending-tray::before {opacity:1}
+/* Side-hung tube: original socket restored; outer bracket has its own gutter. */
+.dispenser-scene__machine { padding-left:clamp(48px,6vw,80px); }
+.vending-socket {left:2.8%;top:27%;width:4.25%;height:28.7%}
+.vending-cradle {left:-5.4%;top:27%;width:3.8%;height:28.7%;overflow:visible}
+.vending-cradle::before {content:'';position:absolute;left:63%;top:6%;width:92%;height:8%;border-radius:3px;background:linear-gradient(#ac8050,#302318 45%,#14120e);border:1px solid #705335;box-shadow:0 3px 4px #0009;pointer-events:none}
+
+.vending-lamp__pickup {position:absolute;inset:-6px -9px;border:1px solid #e9c899;border-radius:9px;opacity:0;pointer-events:none}
+.vending-lamp__pickup::after {content:'';position:absolute;inset:15% 20%;background:linear-gradient(120deg,transparent 25%,#ffedcd88 49%,transparent 68%);opacity:0;transform:translateY(-30%)}
+.vending-machine[data-pickup-cue=true] .vending-lamp__pickup {animation:lamp-pickup-outline 2s ease-in-out .6s 3}
+.vending-machine[data-pickup-cue=true] .vending-lamp__pickup::after {animation:lamp-pickup-reflection 2s ease-in-out .6s 3}
+.vending-machine[data-power=off] .vending-lamp:is(:hover,:focus-visible) .vending-lamp__pickup {opacity:.8;animation:none}
+.vending-machine[data-power=off] .vending-lamp:is(:hover,:focus-visible) > img {transform:translateY(-2px)}
+@keyframes lamp-pickup-outline {0%,100%{opacity:.12}45%{opacity:.7}}
+@keyframes lamp-pickup-reflection {0%,15%{opacity:0;transform:translateY(-30%)}45%{opacity:.65}80%,100%{opacity:0;transform:translateY(30%)}}
+@media(min-width:960px){
+ .vending-machine:not([data-enhanced]) .vending-lamp {left:calc(-3.5% - 1.28cqi);top:calc(41.35% - 7.25cqi)}
+ html[data-vending-session=on] .vending-machine:not([data-enhanced]) .vending-lamp {left:calc(4.925% - 1.28cqi)}
+}
+@media(max-width:959px){
+ .dispenser-scene__machine {padding-left:48px}
+ .vending-socket {left:4%;top:12px;width:48px;height:170px}
+ .vending-cradle {left:-62px;top:12px;width:36px;height:170px}
+ .vending-cradle::before {width:96%;left:70%}
+
+ .vending-machine:not([data-enhanced]) .vending-lamp {left:-57.5px;top:24.5px}
+ html[data-vending-session=on] .vending-machine:not([data-enhanced]) .vending-lamp {left:calc(4% + 10.5px)}
+}
+@media(prefers-reduced-motion:reduce){
+ .vending-machine[data-pickup-cue=true] .vending-lamp__pickup {animation:none;opacity:.55}
+ .vending-machine[data-pickup-cue=true] .vending-lamp__pickup::after {animation:none;opacity:0}
+}
+/* Resting tube belongs beside RESET; the live socket remains at its original height. */
+.vending-cradle {top:67.2%}
+.vending-cradle::before {display:none}
+.vending-hardware .vending-cradle__mount {position:absolute;left:60%;top:0;width:100%;height:100%;z-index:0;filter:drop-shadow(1px 3px 2px #0008)}
+.vending-hardware .vending-cradle__bed {position:relative;z-index:1}
+@media(min-width:960px){
+ .vending-machine:not([data-enhanced]) .vending-lamp {top:calc(81.55% - 7.25cqi)}
+ html[data-vending-session=on] .vending-machine:not([data-enhanced]) .vending-lamp {top:calc(41.35% - 7.25cqi)}
+}
+@media(max-width:959px){
+ .vending-cradle {top:49px}
+ .vending-machine:not([data-enhanced]) .vending-lamp {top:61.5px}
+ html[data-vending-session=on] .vending-machine:not([data-enhanced]) .vending-lamp {top:24.5px}
+}
+/* Discovery follows the cap edges and glass, rather than drawing a UI box. */
+.vending-lamp__pickup {inset:0;border:0;border-radius:0;background-image:linear-gradient(90deg,transparent,#ffe2b2,transparent),linear-gradient(90deg,transparent,#ffe2b2,transparent);background-repeat:no-repeat;background-size:86% 1px;background-position:center 9%,center 91%}

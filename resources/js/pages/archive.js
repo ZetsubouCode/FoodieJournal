@@ -11,7 +11,6 @@ export function initializeArchive() {
     const cradle = root.querySelector('[data-lamp-cradle]');
     const screen = root.querySelector('[data-vending-screen]');
     const paper = root.querySelector('[data-paper-path]');
-    const hint = root.querySelector('[data-vending-hint]');
     const errorPanel = root.querySelector('[data-discovery-error]');
     const reduced = matchMedia('(prefers-reduced-motion: reduce)');
     const lifecycle = new AbortController(), { signal } = lifecycle;
@@ -19,8 +18,9 @@ export function initializeArchive() {
     const settings = getComputedStyle(machine);
     const timing = name => durationMilliseconds(settings.getPropertyValue('--vending-' + name));
     let state = initialState(document.documentElement.dataset.vendingSession === 'on', Number(machine.dataset.page) - 1, root.querySelector('[data-memory-slot]')?.dataset.memorySlot ?? null);
+    let pickupHintDismissed = false;
     let pose, drag = null, anchors, frame = 0, tapArmed = false, suppressClick = false;
-    let request = null, sequence = 0, hintTimer, retryPage = null;
+    let request = null, sequence = 0, retryPage = null;
     const slots = () => [...root.querySelectorAll('[data-memory-slot]')];
     const selected = () => slots().find(slot => slot.dataset.memorySlot === state.selectedVisitId);
     const announce = text => { root.querySelector('[data-machine-status]').textContent = text; };
@@ -34,6 +34,7 @@ export function initializeArchive() {
     };
     function render() {
         machine.dataset.power = state.power;
+        machine.dataset.pickupCue = String(!pickupHintDismissed && state.power === 'off' && state.lampLocation === 'cradle');
         machine.dataset.lamp = state.lampLocation;
         machine.dataset.lampOrigin = state.lampOrigin ?? '';
         machine.dataset.dispenser = state.dispenser;
@@ -50,7 +51,7 @@ export function initializeArchive() {
             root.querySelector(selector).disabled = !available || state.pageBusy || state.selectedVisitId === null || (selector === '[data-vending-print]' && state.dispenser !== 'idle');
         }
         root.querySelector('[data-memory-reset]').disabled = !available;
-        for (const selector of ['[data-vending-knob]', '[data-vending-previous]', '[data-vending-next]']) {
+        for (const selector of ['[data-vending-knob]']) {
             root.querySelector(selector).disabled = !available || Number(machine.dataset.pages) < 2;
         }
         lamp.disabled = !lampAvailable(state) || state.lampLocation === 'animating';
@@ -77,11 +78,11 @@ export function initializeArchive() {
             signal.addEventListener('abort', cleanup, { once: true });
         });
     }
-    function dismissHint() { clearTimeout(hintTimer); hint.hidden = true; }
+    function dismissHint() { pickupHintDismissed = true; machine.dataset.pickupCue = 'false';  }
     function measure() {
         const parent = lamp.offsetParent, base = parent.getBoundingClientRect();
         const target = node => { const r = node.getBoundingClientRect(); return { x: r.x + r.width / 2 - base.x - parent.clientLeft, y: r.y + r.height / 2 - base.y - parent.clientTop, width: r.width, height: r.height }; };
-        anchors = { socket: { ...target(socket), angle: 0 }, cradle: { ...target(cradle), angle: -96 } };
+        anchors = { socket: { ...target(socket), angle: 0 }, cradle: { ...target(cradle), angle: 0 } };
     }
     // Cache dimensions for pointer frames: no layout reads during follow-pointer.
     let lampSize;
@@ -189,7 +190,7 @@ export function initializeArchive() {
     cradle.addEventListener('click', () => { if (tapArmed && state.lampOrigin === 'socket') settle('cradle'); }, { signal });
     document.addEventListener('keydown', e => { if (e.key === 'Escape') { cancelDrag(); cancelKnob(); } }, { signal });
 
-    async function loadPage(index) {
+    async function loadPage(index, direction = 1) {
         if (!dispatch({ type: 'PAGE_REQUEST', page: index })) return;
         clearPrint(); request?.abort(); request = new AbortController();
         const current = request, token = ++sequence;
@@ -202,9 +203,12 @@ export function initializeArchive() {
             const next = new DOMParser().parseFromString(await response.text(), 'text/html').querySelector('[data-vending-page]');
             if (!next) throw new Error('Invalid cabinet page');
             if (signal.aborted || current.signal.aborted || sequence !== token) return;
-            const direction = index >= state.pageIndex ? 1 : -1;
+
             const nav = root.querySelector('[data-memory-slots]');
             const focusWasSlot = nav.contains(document.activeElement);
+            machine.dataset.pageDirection = direction > 0 ? 'forward' : 'backward';
+            await motion(nav, [{ transform: 'perspective(900px) rotateY(0deg)', opacity: 1 }, { transform: `perspective(900px) translateX(${-direction * 12}px) rotateY(${-direction * 5}deg) scaleX(.97)`, opacity: .25 }], 110);
+            if (signal.aborted || current.signal.aborted || sequence !== token) return;
             nav.replaceChildren(...document.importNode(next.querySelector('[data-memory-slots]'), true).childNodes);
             machine.dataset.pages = next.dataset.pages; machine.dataset.total = next.dataset.total;
             dispatch({ type: 'PAGE_COMMIT', page: Number(next.dataset.page) - 1, id: slots()[0]?.dataset.memorySlot ?? null });
@@ -212,7 +216,7 @@ export function initializeArchive() {
             else screen.replaceChildren(next.querySelector('[data-vending-empty]').content.cloneNode(true));
             media();
             if (focusWasSlot) selected()?.focus({ preventScroll: true });
-            for (const [i, slot] of slots().entries()) motion(slot, [{ opacity: .5, transform: `translateX(${direction * 9}px)` }, { opacity: 1, transform: 'translateX(0)' }], 175 + i * 12);
+            for (const [i, slot] of slots().entries()) motion(slot, [{ opacity: .3, transform: `perspective(600px) translateX(${direction * 16}px) rotateY(${direction * 7}deg) scaleX(.96)` }, { opacity: 1, transform: 'perspective(600px) translateX(0) rotateY(0deg) scaleX(1)' }], 190 + (i % 3) * 22);
             announce(`Halaman ${state.pageIndex + 1} dari ${machine.dataset.pages}. ${slots().length} kunjungan tersedia.`);
         } catch {
             if (sequence !== token || signal.aborted) return;
@@ -222,11 +226,9 @@ export function initializeArchive() {
     }
     function step(direction) {
         if (!controlsAvailable(state) || Number(machine.dataset.pages) < 2) return;
-        loadPage(wrapIndex(state.requestedPage + direction, Number(machine.dataset.pages)));
+        loadPage(wrapIndex(state.requestedPage + direction, Number(machine.dataset.pages)), direction);
     }
     const cancelKnob = bindRotary(root.querySelector('[data-vending-knob]'), { step, enabled: () => controlsAvailable(state) && Number(machine.dataset.pages) > 1, reduced, signal });
-    root.querySelector('[data-vending-previous]').addEventListener('click', () => step(-1), { signal });
-    root.querySelector('[data-vending-next]').addEventListener('click', () => step(1), { signal });
     root.querySelector('[data-memory-reset]').addEventListener('click', async () => {
         if (!dispatch({ type: 'RESET' })) return;
         clearPrint(); errorPanel.hidden = true;
@@ -272,7 +274,7 @@ export function initializeArchive() {
     };
     window.addEventListener('resize', relayout, { signal });
     window.addEventListener('scroll', () => { if (drag) cancelDrag(); cancelKnob(); }, { passive: true, signal });
-    reduced.addEventListener('change', () => { if (reduced.matches) { dismissHint(); interrupt(); } }, { signal });
+    reduced.addEventListener('change', () => { if (reduced.matches) { interrupt(); } }, { signal });
     root.vendingCleanup = () => {
         sequence++; request?.abort(); dismissHint(); releaseCapture();
         if (frame) cancelAnimationFrame(frame);
@@ -285,5 +287,4 @@ export function initializeArchive() {
     [lamp, socket, cradle].forEach(node => { node.hidden = false; });
     machine.dataset.enhanced = 'true'; clearPrint(); refreshPose(); render(); media();
     if (state.power === 'on') announce(state.selectedVisitId ? 'Mesin siap. Pilih kunjungan atau cetak foto kenangan.' : 'Mesin menyala. Belum ada kunjungan yang dipublikasikan.');
-    if (state.power === 'off' && !reduced.matches && document.documentElement.dataset.vendingDiscovered !== 'true') hintTimer = setTimeout(() => { if (state.power === 'off' && state.lampLocation === 'cradle') hint.hidden = false; }, 7200);
 }

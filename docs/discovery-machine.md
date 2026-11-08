@@ -1,3 +1,5 @@
+> Current art direction and interaction revision: [7 November refinement](vending-machine-refinement.md). It supersedes the older outboard dock and pagination-button descriptions below.
+
 # Homepage Memory Archive
 
 The playable cabinet lives on Home only. Its current implementation is documented in [Vending machine interactions](vending-machine-interactive.md). The approved native 1634×963 shell and shared public chrome remain; the lamp, socket, cradle, rotary dial, reset face, LEDs and printed photo are independent layers.

@@ -1,5 +1,7 @@
 # Foodie tokens
 
+7 November selector refinement: 32° per commitment; resistant residual travel capped below 9°; 160ms indexed settling. Page movement: 110ms exit, 190/212/234ms column entrance with shallow perspective compression; explicit knob direction remains coherent at wrap. Off-state cue is visual only: three finite cap-edge/reflection sweeps; no visible micro-label. Reduced motion uses a static cue. Dock angle is 0°, hanging outside the left side beside RESET in a reserved gutter; socket restored to its original rail position. Pickup outline/reflection: 2s × 3 cycles after a 600ms delay, dismissed on interaction, static in reduced motion. Reset uses a rectangular bezel/face, retaining its 85/150ms press/return. No visible pagination buttons.
+
 Source: `resources/css/tokens.css`, from approved design-system-specification.md.
 
 Primitive charcoal 950/900/800, ivory 100/300, copper 400, functional red/green/blue/yellow. Semantic page/raised/hover, primary/secondary/muted text, action/focus/status/border. Components consume semantic tokens only.

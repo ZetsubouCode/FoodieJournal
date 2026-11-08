@@ -50,3 +50,5 @@ php vendor/bin/pint --test
 All table names are singular, including framework support tables. Raw originals and derivatives are private; media requests check current visit eligibility. Unpublishing denies subsequent requests. Ratings ignore nulls and round only for display; visit totals remain separate from historical item prices. Allergen information is observational and never a safety guarantee.
 
 - [Global cinematic redesign](docs/cinematic-redesign.md): current Home / Curiosity Index / Culinary Dossier architecture and QA evidence. Earlier archive reports describe historical Explore versions.
+
+- [7 November vending refinement](docs/vending-machine-refinement.md): integrated vertical dock, indexed selector, engraved hardware and stronger state/affordance treatments.

@@ -1,3 +1,7 @@
+> Latest lamp correction: [side-hung lamp and pickup cues](hanging-lamp-correction.md). The former inside-panel dock described below is superseded.
+
+> Current art direction and interaction revision: [7 November refinement](vending-machine-refinement.md). It supersedes the older outboard dock and pagination-button descriptions below.
+
 # Playable Memory Archive · 6 November 2026
 
 Implementation of the supplied [instructions](../codex_instruction/vending-machine/CODEX-INSTRUCTIONS-vending-machine-interactive.md), compared with the [original visual reference](../codex_instruction/vending-machine/reference/vending-machine-original-reference.png). The approved cinematic cabinet, photography, public navigation and editorial homepage sections are retained. No dependencies, migrations, owner data writes or new public routes are required.
@@ -35,8 +39,8 @@ Hovering/holding within the magnetic zone only previews alignment. Power changes
 
 | Physical part | Action and fallback |
 | --- | --- |
-| Glass tube | Drag from the front-left cradle into the vertical socket; reverse the operation to power down. Or tap/click the tube, then its target. Keyboard Enter/Space picks up and focuses the target; Enter confirms; Escape cancels. |
-| Upper knurled dial | Angular dragging, continuous delta normalization across ±180°, 32° detents and a real rotating marker. Both directions wrap over actual pages. Left/right click halves, arrow keys and explicit arrow buttons provide alternatives. Wheel is consumed only when the enabled dial has focus; normal page scrolling is unaffected. |
+| Glass tube | Drag from the integrated left-panel dock into the vertical socket; reverse the operation to power down. Or tap/click the tube, then its target. Keyboard Enter/Space picks up and focuses the target; Enter confirms; Escape cancels. |
+| Upper knurled dial | Angular dragging, continuous delta normalization across ±180°, 32° detents and a real rotating marker. Both directions wrap over actual pages. Left/right click halves and keyboard arrows provide alternatives; no visible pagination buttons. Wheel is consumed only when the enabled dial has focus; normal page scrolling is unaffected. |
 | Lower reset push-button | Depresses 3px and scales slightly on press, then returns; never rotates. Restores the first page/default selection and clears ready paper, preserving power. Native Enter/Space work. |
 | Six windows | Select a concrete visit and update the matching preview. With JS disabled these remain ordinary visit-detail links. Modified clicks retain native navigation. |
 | Pilih koleksi | Cycles the concrete selection within the current page; the accessible name explicitly says “kunjungan berikutnya”. |
@@ -71,7 +75,7 @@ The supplied screenshot is a proportion/material reference, never a page-sized i
 | Rail | 140×840, aligned to the old left instrument strip; no motion |
 | Socket | 66×280; centre of its live button is the vertical tube anchor |
 | Tube | 42×238, independent caps/glass/internal wire/reflection; transform origin 50% 50%; live emission is a separate opacity layer |
-| Cradle | 260×80, two brass retainers over a recessed padded bed; centre is the resting anchor, tube rotation −96° (slight diagonal) |
+| Cradle | 66×280, two brass retainers over a recessed padded bed; centre is the resting anchor, tube rotation 0° (vertical) |
 | Rotary | 100×100, 60 knurled segments, ivory marker; transform origin 50% 50% |
 | Reset | Separate 100×100 casing and face; only face translates/scales on press |
 | Photo / roller | Semantic HTML paper frame containing actual local/private media derivative; origin centre top, clipped feed and independent foreground roller |

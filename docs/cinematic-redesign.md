@@ -1,3 +1,5 @@
+> Current art direction and interaction revision: [7 November refinement](vending-machine-refinement.md). It supersedes the older outboard dock and pagination-button descriptions below.
+
 # Global cinematic public redesign
 
 Current architecture, 6 November 2026. This supersedes the machine-on-Explore descriptions in earlier archive reports.

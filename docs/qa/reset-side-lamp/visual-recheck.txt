@@ -1,0 +1,9 @@
+
+Running 2 tests using 1 worker
+
+(node:16904) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 tests\Browser\vending-machine.spec.js:173:1 › responsive geometry, LED alignment, missing images and WCAG scans in off/on/printed states (20.9s)
+  ok 2 tests\Browser\vending-machine.spec.js:295:1 › off-state pickup cue is visible even in a discovered session, finite and non-electrical (2.0s)
+
+  2 passed (23.7s)

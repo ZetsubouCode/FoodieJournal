@@ -1,0 +1,11 @@
+
+Running 4 tests using 1 worker
+
+(node:15280) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 tests\Browser\vending-machine.spec.js:140:1 › touch uses lamp then target; reduced-motion runtime changes keep power and print usable (4.1s)
+  ok 2 tests\Browser\vending-machine.spec.js:173:1 › responsive geometry, LED alignment, missing images and WCAG scans in off/on/printed states (19.9s)
+  ok 3 tests\Browser\vending-machine.spec.js:292:1 › resting tube hangs outside the left side and the compact tray is dark when off (5.8s)
+  ok 4 tests\Browser\vending-machine.spec.js:301:1 › off-state pickup cue is visible even in a discovered session, finite and non-electrical (1.8s)
+
+  4 passed (32.5s)

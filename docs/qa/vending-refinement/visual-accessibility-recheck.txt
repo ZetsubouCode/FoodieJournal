@@ -1,0 +1,10 @@
+
+Running 3 tests using 1 worker
+
+(node:24056) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 tests\Browser\vending-machine.spec.js:173:1 › responsive geometry, LED alignment, missing images and WCAG scans in off/on/printed states (21.5s)
+  ok 2 tests\Browser\vending-machine.spec.js:277:1 › refined hardware has no pagination widgets; dial resists partial travel and settles at an index (7.2s)
+  ok 3 tests\Browser\vending-machine.spec.js:292:1 › resting tube is contained by the panel and the compact tray is dark when off (6.0s)
+
+  3 passed (35.6s)

@@ -1,0 +1,13 @@
+> Latest correction: align the resting lamp with RESET (desktop centre 81.55% cabinet height; compact centre 134px), not the socket. Two gusset arms and a bolted sidewall plate replace the pipe. All visible pickup wording and its timer are removed; use cap-edge/glass highlights only. See docs/qa/reset-side-lamp/verification.md for this pass.
+
+# Side-hung lamp correction · 7 November 2026
+
+The user explicitly corrected the previous inside-panel dock decision. The socket is restored to its original left rail coordinates: left 2.8%, top 27%, width 4.25%, height 28.7%; upright tube centre 4.925% / 41.35%. The resting tube now hangs vertically on a separate bracket outside the LEFT side, not beside the socket inside the instrument panel. A horizontal upper arm visibly connects the holder to the cabinet edge. The existing vertical SVG retainers hold the tube; a reserved 48–80px responsive gutter prevents page overflow. Compact layout keeps the same outside-left relationship and readable hardware; at the smallest width the slot grid can use one column.
+
+Pickup affordance is now on the tube itself, rather than only a delayed, easily missed cradle outline. Every fresh off-state page has three finite 2-second outline/reflection cycles after a 600ms delay, including sessions whose discovery flag was previously stored. The glass gets a moving external specular reflection and a grip outline; the internal electrical emission remains zero. Hover/focus strengthens the grip outline and lifts the tube image 2px. First meaningful pickup dismisses the effect for that mounted page. Previously undiscovered users also retain the short delayed “Ambil lampu” label. Reduced motion shows a static outline, including when the preference changes at runtime; it does not extinguish the discoverability cue.
+
+Only lamp geometry, its bracket/pickup presentation, related lifecycle handling and the old containment assertion changed. Release-only magnetic snap, reverse removal, indexed selector, printing and published-content logic remain intact. Updated design memory makes this user correction authoritative over the earlier inside-panel guidance.
+
+Source: `resources/css/vending-machine.css`, `resources/js/pages/archive.js`, and the independent `.vending-lamp__pickup` span in `components/discovery/dispenser.blade.php`. No raster artwork, packages or database data changed.
+
+Evidence: [off desktop](qa/hanging-lamp/off-1440.png), [off compact](qa/hanging-lamp/off-375.png), [320px](qa/hanging-lamp/off-320.png), [powered desktop](qa/hanging-lamp/on-desktop.png), [pickup cue recording](qa/hanging-lamp/pickup-cue.webm). Validation and remaining limitations are in [QA](qa/hanging-lamp/verification.md).
