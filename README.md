@@ -2,7 +2,11 @@
 
 A visit-first personal culinary journal. Laravel 12, MySQL, Blade, Vite, Indonesian UI, IDR, Asia/Jakarta input/display and UTC storage. Public readers need no account; only the owner can edit.
 
-The five approved v1.1 specifications remain in the repository root. Scope and acceptance gates come from `codex_instruction/001-foodie-mvp-implementation.md`. For visual work, read the canonical composition guidance in `design-system-specification.md` §1 and `.ui-craft/brief.md`; the Editorial Bold HTTP error scene is documented there.
+Foodie is not a restaurant, food-sales site, recipe service, community-review platform or objective ranking authority. Home has one playable vintage **Memory Archive** cabinet; Explore combines a photographic discovery board with complete Visit/Food/Place browsing; Visit and Place are related cinematic archival stories. The owner admin remains a practical data-entry surface. Ordinary navigation works without playing.
+
+Read [AGENTS](AGENTS.md) and [product vision / document precedence](docs/product-vision.md). The five root specifications retain authority for unchanged domain rules. `design-system-specification.md` §1 owns visual composition and Indonesian voice; `config/error-pages.php` owns approved HTTP copy. Current experience contracts are linked below. Dated design/QA reports are historical evidence, not competing current instructions.
+
+**Current status (8 November 2026):** application baseline `b56db2c`; [frontend audit](docs/implementation-status.md) records working functionality, confirmed hover-underline regression and pending width/identity/state improvements. [Roadmap](docs/roadmap/frontend-experience.md) is planned work, not an implemented redesign. This documentation pass changes no application behavior.
 
 ## Run this workspace
 
@@ -16,19 +20,22 @@ php artisan serve --host=127.0.0.1 --port=8006
 
 Open [Foodie](http://127.0.0.1:8006); owner login is `/admin/login`. For Vite development run `npm run dev` separately. Images process synchronously; no queue worker is required.
 
-## Preview with demo content
+## Preview with isolated demo content
 
-After creating the owner, populate the local site with sample content:
+Use the existing isolated photographic QA environment, never owner data:
 
 ```powershell
-php artisan db:seed --class=DemoJournalSeeder
+php tools/prepare-cinematic-qa.php   # dedicated cinematic.sqlite + cinematic-media
+php tools/cinematic-server.php      # loopback http://127.0.0.1:8012
 ```
 
-This adds 12 fictional places in six cities, 20 published visits, one draft, one private visit, 66 dishes, and 42 photos with their processed variants. Categories, cuisines, ingredients, tags, recommendations, and allergen examples populate the Explore filters. Repeat visits show place history; an entry without photos or a recorded total exercises the missing-data presentation. Every story identifies itself as demo content; stock photos are illustrative.
+The local demo has 12 fictional places, 20 published visits, one draft/private example each, dishes and bundled illustrative photos. It is labeled demo content, not real owner memories. Preparation verifies its SQLite target and uses a separate media root; it does not create content in the active Foodie database. Existing fixtures can be served without preparing again.
 
-The seeder works offline using bundled photos and requires `APP_ENV=local` or `testing`. It uses the existing owner, preserves their credentials, and adds no accounts. It can be rerun without duplicating content or overwriting edits, renamed visits, visibility changes, or soft-deleted entries. Normal `php artisan db:seed` continues to seed only the allergen vocabulary. No database refresh is needed.
+Functional Playwright tests use a different fixture: `php tools/prepare-browser.php`, then `php tools/browser-server.php` on 8011. Tests expecting labels such as “Ingin kembali QA” require 8011; photographic captures use 8012. Do not infer a product regression from mixing these datasets. See [test safety and environment](docs/operations.md#test-and-browser-environments).
 
-For a fresh machine, database/server restart, secure deployment, media limits, backup/restore and test setup, follow [operations](docs/operations.md). Do not replace an existing `.env` or refresh an application database.
+`DemoJournalSeeder` remains available for explicitly chosen disposable local/testing installations; running it through ordinary Artisan against the owner-configured app inserts public demo records there. It is not a required owner setup or audit step. It uses the existing owner and is designed not to overwrite their credentials/edits. Normal `db:seed` seeds allergen vocabulary only. Do not refresh an owner database.
+
+For first installation, database/server restart, secure deployment, media limits, backup/restore and test setup, follow [operations](docs/operations.md). Preserve existing `.env`, APP_KEY and application data.
 
 ## Verification and implementation records
 
@@ -38,17 +45,18 @@ npm run build
 php vendor/bin/pint --test
 ```
 
-- [Implementation report](docs/implementation-report.md): actual commands/results, QA evidence and limitations.
-- [P0 checklist](docs/implementation-checklist.md): requirement, implementation and evidence.
-- [Decisions](docs/implementation-decisions.md): domain defaults and repository preservation.
-- [Operations](docs/operations.md): installation, first owner, backup and isolated restore drills.
-- [HTTP error redesign](docs/error-page-redesign.md): composition, asset source, behavior, and verification.
-- [Playable vending machine](docs/vending-machine-interactive.md): removable lamp, power state, rotary pages, reset and real-visit photo printing, asset provenance and executed QA.
-- [Homepage Memory Archive](docs/discovery-machine.md): cabinet ownership and compatibility with existing discovery endpoints.
-- [Historical Memory Archive V2 report](docs/memory-archive-v2-completion.md): earlier envelope/knob behavior and its QA evidence; the playable vending document supersedes those interactions.
+Maintained documentation:
+
+- [Product vision and authority](docs/product-vision.md): identity, audience, IA, domain integrity and read order.
+- [Art direction](docs/art-direction.md): historical references, warm archival materials, wide responsive shell, shared atmosphere/nav/footer.
+- [Motion and interaction](docs/motion-interaction.md): Home 5/Explore 3/Detail 3, current mechanics, hover-progress and interruption/reduced-motion behavior.
+- [Page experience and states](docs/page-experience.md), [UX principles](docs/ux-principles.md): page responsibilities, empty/loading/skeleton/error behavior and concrete rationale.
+- [Implementation status / gap matrix](docs/implementation-status.md): evidence-backed current-versus-target findings.
+- [Frontend roadmap](docs/roadmap/frontend-experience.md): scoped priorities, file scope, risks, tests and acceptance gates.
+- [ADRs and historical document index](docs/adr/README.md): approved decisions, reversals and document classification.
+- [8 November audit evidence](docs/qa/frontend-experience/verification.md): fresh commands/results, screenshots, limitations and reproduction.
+- [Operations](docs/operations.md): installation, owner bootstrap, data protection, media, backup and isolated testing.
+
+Historical records (dated claims, not current all-green certification): [implementation report](docs/implementation-report.md), [P0 checklist](docs/implementation-checklist.md), [domain decisions](docs/implementation-decisions.md), [cinematic migration](docs/cinematic-redesign.md), [vending implementation](docs/vending-machine-interactive.md), [refinement](docs/vending-machine-refinement.md), [lamp correction](docs/hanging-lamp-correction.md), [HTTP error work](docs/error-page-redesign.md), and retained `docs/qa/` captures. These preserve provenance; current contracts supersede conflicting mechanics/layouts.
 
 All table names are singular, including framework support tables. Raw originals and derivatives are private; media requests check current visit eligibility. Unpublishing denies subsequent requests. Ratings ignore nulls and round only for display; visit totals remain separate from historical item prices. Allergen information is observational and never a safety guarantee.
-
-- [Global cinematic redesign](docs/cinematic-redesign.md): current Home / Curiosity Index / Culinary Dossier architecture and QA evidence. Earlier archive reports describe historical Explore versions.
-
-- [7 November vending refinement](docs/vending-machine-refinement.md): integrated vertical dock, indexed selector, engraved hardware and stronger state/affordance treatments.

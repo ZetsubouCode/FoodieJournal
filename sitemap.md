@@ -1,3 +1,5 @@
+> **Maintained context · 8 November 2026:** Unchanged product/domain rules in this root specification remain authoritative. Original draft proposals, review questions, wireframes and checkboxes are not current implementation claims or new approval blockers. Current experience: [product vision / precedence](docs/product-vision.md), [page contracts](docs/page-experience.md), [art direction](docs/art-direction.md), [motion](docs/motion-interaction.md). Actual status: [baseline audit](docs/implementation-status.md). Historical U1–U10/D1–D7 resolutions: [implementation decisions](docs/implementation-decisions.md#approved-defaults).
+
 # FOODIE — Sitemap & Information Architecture
 
 > **Versi:** Draft v1.1  
@@ -89,9 +91,9 @@ Error views (bukan halaman navigasi biasa): 403 / 404 / 419 / 429 / 500 / 503 [P
 
 **Urutan konten yang dianjurkan:** Memory Archive → kunjungan terbaru editorial → personal recommendations. Jalur kota/makanan/teknik berpindah ke Curiosity Index di Explore.
 
-- Primary CTA: **Jelajahi Pengalaman** (`/explore`).
+- Akses Jelajah (`/explore`) tetap di header/footer; tidak ada CTA duplikat di bawah mesin. Pilihan/preview/foto cetak membuka kunjungan yang sama.
 - Feature cards langsung ke `visit.show` atau place yang relevan.
-- Visit Card F Refined memakai satu overlay link ke `visit.show`; chip taksonomi dan rekomendasi adalah link Explore terpisah. Home, Explore Visit, riwayat Place, dan kunjungan terkait memakai komponen yang sama. Visit grid dua kolom hanya pada layar lebar (>=1180px), lalu satu kolom; kartu menjadi foto-di-atas di bawah lebar kartu 700px. Food/Place grid tetap mengikuti aturan masing-masing.
+- Visit Card F Refined memakai satu overlay link ke `visit.show`; chip taksonomi dan rekomendasi adalah link Explore terpisah. Explore Visit, riwayat Place, dan kunjungan terkait memakai komponen yang sama; Home recent/picks memakai editorial-entry sesuai kontrak halaman. Visit grid dua kolom hanya pada layar lebar (>=1180px), lalu satu kolom; kartu menjadi foto-di-atas di bawah lebar kartu 700px. Food/Place grid tetap mengikuti aturan masing-masing.
 - Jika konten published kosong: empty state editorial ramah, tidak menampilkan “error” dan tidak membocorkan draft.
 - Pilihan featured harus punya fallback otomatis jika belum dikurasi admin; jangan membuat dependensi CMS tambahan tanpa kebutuhan.
 
@@ -234,7 +236,7 @@ Action POST/PATCH/DELETE diproses pada resource handler berizin, bukan halaman n
 
 ```text
 Home
-  ↓ CTA "Jelajahi Pengalaman"
+  ↓ navigasi Jelajah (atau foto/preview langsung ke Visit)
 Explore (Visit terbaru)
   ├── Ganti tab Food → Food Card → Visit Detail → Place Detail
   ├── Filter kota/style → Visit Card → Visit Detail

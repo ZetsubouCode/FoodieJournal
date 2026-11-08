@@ -1,4 +1,4 @@
-> Latest correction: align the resting lamp with RESET (desktop centre 81.55% cabinet height; compact centre 134px), not the socket. Two gusset arms and a bolted sidewall plate replace the pipe. All visible pickup wording and its timer are removed; use cap-edge/glass highlights only. See docs/qa/reset-side-lamp/verification.md for this pass.
+> **Historical record — original dated content below.** Not a current implementation contract or fresh PASS claim. See [authority/classification](adr/README.md), [latest decisions](adr/001-experience-authority.md), [motion contract](motion-interaction.md) and [current baseline](implementation-status.md). Superseded docks, visible pickup labels, pagination arrows, envelopes, lamp-pause/recurrence and carousel descriptions must not be reinstated. Domain rationale and dated QA remain evidence for their original scope.
 
 # Side-hung lamp correction · 7 November 2026
 

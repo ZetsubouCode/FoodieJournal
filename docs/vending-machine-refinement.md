@@ -1,4 +1,4 @@
-> Latest lamp correction: [side-hung lamp and pickup cues](hanging-lamp-correction.md). The former inside-panel dock described below is superseded.
+> **Historical record — original dated content below.** Not a current implementation contract or fresh PASS claim. See [authority/classification](adr/README.md), [latest decisions](adr/001-experience-authority.md), [motion contract](motion-interaction.md) and [current baseline](implementation-status.md). Superseded docks, visible pickup labels, pagination arrows, envelopes, lamp-pause/recurrence and carousel descriptions must not be reinstated. Domain rationale and dated QA remain evidence for their original scope.
 
 # Vending machine refinement · 7 November 2026
 

@@ -1,4 +1,5 @@
-<!-- Current public compositions: docs/cinematic-redesign.md (6 November 2026). Legacy ASCII blocks below describe domain content and journeys, not the current page geometry. -->
+> **Maintained context · 8 November 2026:** Unchanged product/domain rules in this root specification remain authoritative. Original draft proposals, review questions, wireframes and checkboxes are not current implementation claims or new approval blockers. Current experience: [product vision / precedence](docs/product-vision.md), [page contracts](docs/page-experience.md), [art direction](docs/art-direction.md), [motion](docs/motion-interaction.md). Actual status: [baseline audit](docs/implementation-status.md). Historical U1–U10/D1–D7 resolutions: [implementation decisions](docs/implementation-decisions.md#approved-defaults).
+
 # FOODIE — User Flow & Low-Fidelity Wireframe
 
 > **Versi:** Draft v1.1 · **Tanggal:** 4 November 2026 · **Status:** Wireframe tekstual untuk review (bukan high-fidelity visual, bukan Blade/UI yang sudah dikerjakan)  

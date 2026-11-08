@@ -1,4 +1,4 @@
-> Historical implementation record. The machine now lives on Homepage; Explore uses the Curiosity Index. Current architecture: [cinematic redesign](../../docs/cinematic-redesign.md).
+> **Historical Explore V2 surface record.** Cabinet/envelope interactions here are superseded. Current [page experience](../../docs/page-experience.md) and [motion](../../docs/motion-interaction.md) govern; Explore has no second machine.
 
 # Explore V2 — approved refinement, 6 November 2026
 

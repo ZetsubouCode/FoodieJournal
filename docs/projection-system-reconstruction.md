@@ -1,6 +1,4 @@
-> Historical implementation record. The machine now lives on Homepage; Explore uses the Curiosity Index. Current architecture: [cinematic redesign](cinematic-redesign.md).
-
-> Historical record — superseded on 5 November 2026 by the Memory Archive in [docs/discovery-machine.md](discovery-machine.md). Referenced production assets and capture scripts have been removed; this is not current implementation guidance.
+> **Historical record — original dated content below.** Not a current implementation contract or fresh PASS claim. See [authority/classification](adr/README.md), [latest decisions](adr/001-experience-authority.md), [motion contract](motion-interaction.md) and [current baseline](implementation-status.md). Superseded docks, visible pickup labels, pagination arrows, envelopes, lamp-pause/recurrence and carousel descriptions must not be reinstated. Domain rationale and dated QA remain evidence for their original scope.
 
 # Cinematic projection reconstruction — 5 November 2026
 

@@ -1,3 +1,5 @@
+> **Historical input package.** Preserve provenance; later owner corrections supersede conflicting placement, hint, control and page-composition rules. Consult [ADR 001](../docs/adr/001-experience-authority.md) before reusing this package.
+
 # CODEX — FOODIE EXPLORE: MEMORY ARCHIVE (ART-DIRECTION LOCK)
 
 > **Tujuan:** Implementasikan ulang page Explore Laravel Foodie sedekat mungkin dengan `reference_full_page.png`: dark cinematic culinary archive dengan mesin vending realistis, slot kategori berupa mini-still-life yang realistis, display kenangan menyatu, laci filter, Memory Reel fotografis, dan lighting copper/amber. **Bangun interaksi sungguhan**, bukan menempelkan satu screenshot sebagai seluruh UI. Paket aset lokal berisi fondasi mesin tanpa konten, overlay metal, background, tekstur, dan referensi.

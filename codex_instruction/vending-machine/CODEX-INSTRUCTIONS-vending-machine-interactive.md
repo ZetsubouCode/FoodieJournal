@@ -1,3 +1,5 @@
+> **Historical input package.** Preserve provenance; later owner corrections supersede conflicting placement, hint, control and page-composition rules. Consult [ADR 001](../../docs/adr/001-experience-authority.md) before reusing this package.
+
 # CODEX IMPLEMENTATION INSTRUCTIONS — FOODIE PLAYABLE VENDING MACHINE
 
 ## ROLE, OBJECTIVE, AND DEFINITION OF DONE

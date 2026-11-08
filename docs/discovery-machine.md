@@ -1,4 +1,4 @@
-> Current art direction and interaction revision: [7 November refinement](vending-machine-refinement.md). It supersedes the older outboard dock and pagination-button descriptions below.
+> **Historical record — original dated content below.** Not a current implementation contract or fresh PASS claim. See [authority/classification](adr/README.md), [latest decisions](adr/001-experience-authority.md), [motion contract](motion-interaction.md) and [current baseline](implementation-status.md). Superseded docks, visible pickup labels, pagination arrows, envelopes, lamp-pause/recurrence and carousel descriptions must not be reinstated. Domain rationale and dated QA remain evidence for their original scope.
 
 # Homepage Memory Archive
 

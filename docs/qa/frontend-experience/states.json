@@ -1,0 +1,128 @@
+{
+  "fixture": "Existing isolated cinematic.sqlite and cinematic-media; fictional labeled demo content. No seed or owner DB access.",
+  "text200": [
+    {
+      "name": "home",
+      "width": 375,
+      "scrollWidth": 375
+    },
+    {
+      "name": "explore",
+      "width": 375,
+      "scrollWidth": 375
+    },
+    {
+      "name": "visit",
+      "width": 375,
+      "scrollWidth": 375
+    },
+    {
+      "name": "place",
+      "width": 375,
+      "scrollWidth": 375
+    },
+    {
+      "name": "error",
+      "width": 375,
+      "scrollWidth": 375
+    },
+    {
+      "name": "home",
+      "width": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "name": "explore",
+      "width": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "name": "visit",
+      "width": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "name": "place",
+      "width": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "name": "error",
+      "width": 1440,
+      "scrollWidth": 1440
+    }
+  ],
+  "reduced": [
+    {
+      "name": "home",
+      "width": 375,
+      "overflow": false
+    },
+    {
+      "name": "explore",
+      "width": 375,
+      "overflow": false
+    },
+    {
+      "name": "visit",
+      "width": 375,
+      "overflow": false
+    },
+    {
+      "name": "place",
+      "width": 375,
+      "overflow": false
+    },
+    {
+      "name": "error",
+      "width": 375,
+      "overflow": false
+    },
+    {
+      "name": "home",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "name": "explore",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "name": "visit",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "name": "place",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "name": "error",
+      "width": 1440,
+      "overflow": false
+    }
+  ],
+  "axe": [
+    {
+      "name": "explore",
+      "violations": []
+    },
+    {
+      "name": "visit",
+      "violations": []
+    },
+    {
+      "name": "place",
+      "violations": []
+    }
+  ],
+  "missingPhotoVisit": "/visit/demo-teh-tanpa-kamera",
+  "missingPhoto": {
+    "title": "Sore tanpa kamera, hanya teh dan cerita",
+    "gallery": 0,
+    "rating": "Tempat\nRumah Teh Teduh\nTotal pengeluaran kunjungan\nHarga belum dicatat\nPenilaian keseluruhan\n4,1 / 5"
+  },
+  "missingPhotoPlace": "/place/demo-rumah-teh"
+}

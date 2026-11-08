@@ -1,3 +1,5 @@
+> **Historical approval register (5 November).** Hero/carousels/Home discovery placement and footer geometry were subsequently superseded. Header B hover intent and F Refined identity survive; follow [ADR 001](../adr/001-experience-authority.md) and the [current contracts](../product-vision.md), not this board as a complete present-day layout.
+
 # Foodie — Approved Homepage Design Decisions
 
 **Status:** APPROVED by owner, 5 November 2026 (Asia/Jakarta)  

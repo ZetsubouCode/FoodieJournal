@@ -1,3 +1,5 @@
+> **Maintained context · 8 November 2026:** Unchanged product/domain rules in this root specification remain authoritative. Original draft proposals, review questions, wireframes and checkboxes are not current implementation claims or new approval blockers. Current experience: [product vision / precedence](docs/product-vision.md), [page contracts](docs/page-experience.md), [art direction](docs/art-direction.md), [motion](docs/motion-interaction.md). Actual status: [baseline audit](docs/implementation-status.md). Historical U1–U10/D1–D7 resolutions: [implementation decisions](docs/implementation-decisions.md#approved-defaults).
+
 # FOODIE — Product Blueprint
 
 > **Versi:** Draft v1.1  
@@ -188,7 +190,7 @@ MVP selesai bila pemilik dapat membuat tempat → menyimpan kunjungan → mengis
 
 `Home → Explore (default Visit terbaru) → search/filter/tab → Visit Detail → Place Detail → riwayat Visit lain`
 
-Alternatif: `Home Memory Archive → koleksi terkurasi → amplop/detail atau Explore terfilter`. Explore memuat Curiosity Index untuk kota, kategori, hidangan, teknik dan rekomendasi.
+Alternatif: `Home Memory Archive → pilih kunjungan published → cetak/ambil foto → Visit Detail`; navigasi Jelajah tetap tersedia tanpa bermain. Explore memuat Curiosity Index untuk kota, kategori, hidangan, teknik dan rekomendasi.
 
 **Desain interaksi:**
 - Header sederhana: logo Home, Jelajah (Explore), dan akses eksplorasi kota/rekomendasi yang bisa masuk sebagai section Explore dahulu.
@@ -219,7 +221,7 @@ Alternatif: `Home Memory Archive → koleksi terkurasi → amplop/detail atau Ex
 
 ## 9. Arsitektur informasi dan pengalaman publik
 
-- **Home** adalah Memory Archive terkurasi; kontennya berasal dari published visits. **Explore** adalah Curiosity Index dan penelusuran aktif. **Visit Detail** adalah Culinary Dossier dengan cerita, foto, harga historis dan penilaian. Arsitektur visual terkini tercatat di docs/cinematic-redesign.md.
+- **Home** adalah Memory Archive terkurasi; kontennya berasal dari published visits. **Explore** adalah Curiosity Index dan penelusuran aktif. **Visit Detail** adalah Culinary Dossier dengan cerita, foto, harga historis dan penilaian. Kontrak visual terkini tercatat di [page experience](docs/page-experience.md); docs/cinematic-redesign.md adalah laporan historis.
 - **Explore** adalah satu sumber discovery dan canonical pengalaman browsing, dengan tab `Visit`, `Food`, `Place`.
 - **Visit** adalah objek cerita utama dan default hasil Explore.
 - **Place** adalah konteks lokasi serta arsip beberapa pengalaman, bukan satu review statis.
