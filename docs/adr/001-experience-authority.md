@@ -1,6 +1,6 @@
 # ADR 001 — One maintained experience contract
 
-Status: accepted for documentation on 8 November 2026, grounded in owner instructions `004-docs hardening.md` and the latest recorded 7 November corrections. Application implementation remains at `b56db2c`. This ADR consolidates approvals; it does not invent approval for unfinished roadmap work.
+Status: accepted for documentation on 8 November 2026, grounded in owner instructions `004-docs hardening.md` and the latest recorded 7 November corrections. The original audit application baseline was `b56db2c`; P0-1/P0-2 follow-ups are recorded below. This ADR consolidates approvals; it does not invent approval for unfinished roadmap work.
 
 ## Decisions and reversals
 
@@ -13,9 +13,9 @@ Status: accepted for documentation on 8 November 2026, grounded in owner instruc
 | Page controls | Visible next/previous buttons near dial | No visible pagination replacements; 32° indexed selector with resistant travel, keyboard, focused wheel, click-half and pointer/touch alternatives. `vending-input.js` and tests |
 | Public motion | Blanket interface “motion 2”, perceived ban on 3D from old implementation limitations | Home 5/5, Explore/Detail 3/5 qualitative ambition; physicality → choreography → feedback; meaningful 3D allowed with measured cost and fallbacks. 004 §§3–4 |
 | Home collections | Automatic infinite Recent/Picks carousels, discovery tiles on Home | Editorial recent entries and explicit picks; discovery board belongs Explore. Current Home and 004 identity; old option board is historical |
-| Shared navigation | Static active underline after cinematic rewrite | Restore warm left-to-right hover progress with defined leave/re-entry/focus/reduced behavior. Historical `4f6365b:home.css`, approved Header B record, 004 explicit correction; **not implemented in this phase** |
-| Shell width | Old 80rem design cap treated as timeless approval | Fluid/wide nav/main/footer with full-width scene and separate reading measure. Target numbers in art-direction; **not implemented in this phase** |
-| Footer / environment | Copy exact old markup or accept current flattening as approved forever | Preserve archival warmth and cohesive editorial ending across pages; rebalance in a scoped P0 implementation with screenshots. Current single chrome architecture remains |
+| Shared navigation | Static active underline after cinematic rewrite | Restore warm left-to-right hover progress with defined leave/re-entry/focus/reduced behavior. Historical `4f6365b:home.css`, approved Header B record, 004 explicit correction; not implemented in the original audit phase, subsequently **implemented 9 November as P0-1** ([verification](../qa/navigation-hover-progress/verification.md)) |
+| Shell width | Old 80rem design cap treated as timeless approval | Fluid/wide nav/main/footer with full-width scene and separate reading measure. Target numbers in art-direction; not implemented in the original audit phase, subsequently **implemented 9 November as P0-2**, with an isolated public shell and unchanged admin width ([verification](../qa/wide-shell/verification.md)) |
+| Footer / environment | Copy exact old markup or accept current flattening as approved forever | Preserve archival warmth and cohesive editorial ending across pages; rebalanced in P0-2 on 9 November with shared warm variants and two-line editorial close ([verification](../qa/wide-shell/verification.md)). Current single chrome architecture remains |
 
 ## Consequences
 

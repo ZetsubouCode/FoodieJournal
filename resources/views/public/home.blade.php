@@ -17,7 +17,7 @@
             @if($picks->isNotEmpty())
                 <div class="personal-gallery">@foreach($picks->take(4) as $visit)<x-home.editorial-entry :visit="$visit" :lead="$loop->first" :recommendation="true" />@endforeach</div>
             @else
-                <p class="home-empty">Belum ada kunjungan dengan rekomendasi pribadi.</p>
+                <p class="home-empty">Belum ada rekomendasi pribadi yang dipublikasikan. Pilihan penulis akan tampil di sini setelah ditandai sebagai rekomendasi.</p>
             @endif
         </section>
     </div>

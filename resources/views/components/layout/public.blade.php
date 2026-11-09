@@ -16,7 +16,7 @@
     @if(request()->routeIs('home'))<script src="{{ asset('assets/vending/session.js') }}"></script>@endif
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="archive-page public-page {{ request()->routeIs('home') ? 'public-page--home' : (request()->routeIs('visit.show') ? 'public-page--visit' : (request()->routeIs('place.show') ? 'public-page--place' : 'public-page--explore')) }}">
+<body class="archive-page public-page {{ $admin ? 'public-page--admin' : '' }} {{ request()->routeIs('home') ? 'public-page--home' : (request()->routeIs('visit.show') ? 'public-page--visit' : (request()->routeIs('place.show') ? 'public-page--place' : 'public-page--explore')) }}">
     <a class="skip-link" href="#main">Lewati ke isi</a>
     <x-site.header :admin="$admin" />
     <main id="main" class="container" tabindex="-1">

@@ -1,6 +1,6 @@
 # Foodie design brief
 
-Maintained 8 November 2026. [Authority](../docs/product-vision.md#authority-and-read-order), [decision register](../docs/adr/001-experience-authority.md), [actual baseline](../docs/implementation-status.md). Intent below is not a claim that all targets are implemented.
+Maintained 9 November 2026. [Authority](../docs/product-vision.md#authority-and-read-order), [decision register](../docs/adr/001-experience-authority.md), [actual baseline](../docs/implementation-status.md). Intent below is not a claim that all targets are implemented.
 
 ## Identity and composition
 
@@ -26,8 +26,12 @@ Preview and print share exact selected visit ID/photo/link. One sheet, competing
 
 ## Targets and quality bar
 
-[Art direction](../docs/art-direction.md) defines pending wide-shell/gutter rules and shared footer/nav continuity; current code still caps `.container` at 80rem. Keep 60–75ch reading measure. Restore copper left-to-right nav HOVER fill with focus/active/re-entry/reduced-motion states; current active-only line is a confirmed regression.
+[Art direction](../docs/art-direction.md) defines the P0-2 public shell implemented 9 November: up to 112rem, 16px mobile / 24px tablet / fluid 32–64px desktop gutters, warm page variants and an editorial two-line footer. Keep 60–75ch reading measure. Admin uses the existing 80rem shell via the explicit public-page--admin marker; the cabinet caps at native 1634px without losing its outboard gutter. [Evidence](../docs/qa/wide-shell/verification.md). Copper left-to-right nav HOVER fill is restored (P0-1, 9 November): 220ms enter / 140ms leave, smooth re-entry, persistent active, immediate keyboard/reduced-motion states. Public and standalone errors share the rule; [verification](../docs/qa/navigation-hover-progress/verification.md).
 
 Home 5/5, Explore 3/5, Detail 3/5 interaction ambition; physicality → choreography → state feedback. Admin stays restrained. Meaningful CSS perspective/2.5D/3D is allowed with accessible/mobile/no-JS fallback and measured cost. No gratuitous library, fake wait or moving full-viewport filter. Variance 7 public / 3 admin, craft 7, density 4 public / 5 admin remain composition guidance.
 
 320px+, comfortably readable type, coherent button padding and ≥44px primary touch goal, visible focus, WCAG 2.2 AA target, real empty/loading/skeleton/error/recovery, keyboard/touch and reduced motion at load/runtime. [Page states](../docs/page-experience.md) and [roadmap](../docs/roadmap/frontend-experience.md) define pending work. Never promote historic QA results to current verification.
+
+P0-3 (9 November) implements honest unpublished/filtered/page-empty/no-food states, explicit absent recommendations and separate missing/failed photo copy. Body excerpts are 1rem, essential metadata normally .875rem, shared buttons and card/filter actions have measured 44px targets. Explore headings and captions reflow at 200% root text without clipping; tile captions must stay in flow. Preserve P0-1 chrome and P0-2 shell/cabinet anchors. [Evidence](../docs/qa/readability-states/verification.md). P2 wait skeletons and P3 photo-free Place composition remain pending.
+
+P0-4 (9 November) adds the reviewed Windows Chromium visual gate: 40 PNGs / 23 cases, fixed-date isolated fixtures, no automatic snapshot updates, demonstrated 8px shift rejection and clean reversion, plus separate normal-time video. [Manifest and review](../docs/qa/visual-baselines/verification.md). Geometry/state/privacy/network tests remain mandatory beside pixels; this changes no UI or design intent.

@@ -1,0 +1,18 @@
+
+Running 4 tests using 1 worker
+
+(node:20952) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\visit-390-hero.png, writing actual.
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\visit-390-footer.png, writing actual.
+  ok 1 tests\Browser\public-visual.spec.js:43:9 › Visit at 390: hero and footer (3.8s)
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\visit-1440-hero.png, writing actual.
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\visit-1440-footer.png, writing actual.
+  ok 2 tests\Browser\public-visual.spec.js:43:9 › Visit at 1440: hero and footer (5.0s)
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\visit-1920-hero.png, writing actual.
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\visit-1920-footer.png, writing actual.
+  ok 3 tests\Browser\public-visual.spec.js:43:9 › Visit at 1920: hero and footer (5.0s)
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\viewer-original-390.png, writing actual.
+  ok 4 tests\Browser\public-visual.spec.js:140:1 › viewer original loads on demand and focus returns (3.9s)
+
+  4 passed (18.9s)

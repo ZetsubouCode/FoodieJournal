@@ -1,0 +1,14 @@
+{
+  "browser": "156.0.8078.4",
+  "viewport": {
+    "width": 1440,
+    "height": 1000
+  },
+  "route": "http://127.0.0.1:8015/",
+  "selectedVisit": "2",
+  "retrieved": "http://127.0.0.1:8015/visit/demo-semangkuk-hangat-blok-m",
+  "finalObservationMs": 500,
+  "method": "Normal motion and real-time recording; no clock install, seeking, slowMo, animation overrides, screenshot fast-forward or video edits. Fixed server date affects content only. Not a performance benchmark.",
+  "videoSha256": "2ae0beff6418659ec2e7a0806b24c26a3fb66c4d06fbb676517783f466495c97",
+  "buildManifestSha256": "f6e724c57be57bd27121723148c11ea8b8abc86df76c1f22cba97cbf9d656ffa"
+}

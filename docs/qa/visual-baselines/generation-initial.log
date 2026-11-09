@@ -1,0 +1,189 @@
+
+Running 23 tests using 1 worker
+
+(node:22836) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\home-390-hero.png, writing actual.
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\home-390-footer.png, writing actual.
+  ok  1 tests\Browser\public-visual.spec.js:41:9 › Home at 390: hero and footer (6.2s)
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\explore-390-hero.png, writing actual.
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\explore-390-footer.png, writing actual.
+  ok  2 tests\Browser\public-visual.spec.js:41:9 › Explore at 390: hero and footer (8.4s)
+  x   3 tests\Browser\public-visual.spec.js:41:9 › Visit at 390: hero and footer (2.6s)
+(node:18444) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\place-390-hero.png, writing actual.
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\place-390-footer.png, writing actual.
+  ok  4 tests\Browser\public-visual.spec.js:41:9 › Place at 390: hero and footer (2.8s)
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\error-390-hero.png, writing actual.
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\error-390-footer.png, writing actual.
+  ok  5 tests\Browser\public-visual.spec.js:41:9 › Error at 390: hero and footer (1.6s)
+  ok  6 tests\Browser\public-visual.spec.js:41:9 › Home at 1440: hero and footer (5.7s)
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\explore-1440-hero.png, writing actual.
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\explore-1440-footer.png, writing actual.
+  ok  7 tests\Browser\public-visual.spec.js:41:9 › Explore at 1440: hero and footer (8.4s)
+  x   8 tests\Browser\public-visual.spec.js:41:9 › Visit at 1440: hero and footer (3.0s)
+(node:13448) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\place-1440-hero.png, writing actual.
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\place-1440-footer.png, writing actual.
+  ok  9 tests\Browser\public-visual.spec.js:41:9 › Place at 1440: hero and footer (4.4s)
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\error-1440-hero.png, writing actual.
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\error-1440-footer.png, writing actual.
+  ok 10 tests\Browser\public-visual.spec.js:41:9 › Error at 1440: hero and footer (2.5s)
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\home-1920-hero.png, writing actual.
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\home-1920-footer.png, writing actual.
+  ok 11 tests\Browser\public-visual.spec.js:41:9 › Home at 1920: hero and footer (6.4s)
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\explore-1920-hero.png, writing actual.
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\explore-1920-footer.png, writing actual.
+  ok 12 tests\Browser\public-visual.spec.js:41:9 › Explore at 1920: hero and footer (8.4s)
+  x  13 tests\Browser\public-visual.spec.js:41:9 › Visit at 1920: hero and footer (3.0s)
+(node:26992) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\place-1920-hero.png, writing actual.
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\place-1920-footer.png, writing actual.
+  ok 14 tests\Browser\public-visual.spec.js:41:9 › Place at 1920: hero and footer (3.9s)
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\error-1920-hero.png, writing actual.
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\error-1920-footer.png, writing actual.
+  ok 15 tests\Browser\public-visual.spec.js:41:9 › Error at 1920: hero and footer (2.9s)
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\cabinet-on-1440.png, writing actual.
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\cabinet-printed-1440.png, writing actual.
+  ok 16 tests\Browser\public-visual.spec.js:66:1 › cabinet on and printed identity (8.2s)
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\nav-public-midpoint-1440.png, writing actual.
+  ok 17 tests\Browser\public-visual.spec.js:80:5 › navigation midpoint with normal motion on / (5.5s)
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\nav-error-midpoint-1440.png, writing actual.
+  ok 18 tests\Browser\public-visual.spec.js:80:5 › navigation midpoint with normal motion on /visual-missing-page (1.5s)
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\filter-staged-390.png, writing actual.
+  ok 19 tests\Browser\public-visual.spec.js:100:5 › staged filter at 390 (8.8s)
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\filter-staged-1440.png, writing actual.
+  ok 20 tests\Browser\public-visual.spec.js:100:5 › staged filter at 1440 (8.9s)
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\archive-unpublished-390.png, writing actual.
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\filtered-empty-390.png, writing actual.
+  ok 21 tests\Browser\public-visual.spec.js:114:1 › unpublished archive and filtered empty recovery (4.0s)
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\browse-failure-1440.png, writing actual.
+  ok 22 tests\Browser\public-visual.spec.js:126:1 › failed browse retains committed results and retry (8.3s)
+  x  23 tests\Browser\public-visual.spec.js:138:1 › viewer original loads on demand and focus returns (2.3s)
+
+
+  1) tests\Browser\public-visual.spec.js:41:9 › Visit at 390: hero and footer ──────────────────────
+
+    Error: locator.evaluateAll: EncodingError: The source image cannot be decoded.
+
+      19 |
+      20 | async function images(page) {
+    > 21 |     await page.locator('img').evaluateAll(nodes => Promise.all(nodes.map(n => { n.loading = 'eager'; return n.decode(); })));
+         |                               ^
+      22 | }
+      23 |
+      24 | async function shot(page, info, name, target = page) {
+        at images (D:\Github repo\FoodieJournal\tests\Browser\public-visual.spec.js:21:31)
+        at ready (D:\Github repo\FoodieJournal\tests\Browser\public-visual.spec.js:16:11)
+        at D:\Github repo\FoodieJournal\tests\Browser\public-visual.spec.js:45:13
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    tools\.runtime\visual-results\public-visual-Visit-at-390-hero-and-footer\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: tools\.runtime\visual-results\public-visual-Visit-at-390-hero-and-footer\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    tools\.runtime\visual-results\public-visual-Visit-at-390-hero-and-footer\trace.zip
+    Usage:
+
+        npx playwright show-trace tools\.runtime\visual-results\public-visual-Visit-at-390-hero-and-footer\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests\Browser\public-visual.spec.js:41:9 › Visit at 1440: hero and footer ─────────────────────
+
+    Error: locator.evaluateAll: EncodingError: The source image cannot be decoded.
+
+      19 |
+      20 | async function images(page) {
+    > 21 |     await page.locator('img').evaluateAll(nodes => Promise.all(nodes.map(n => { n.loading = 'eager'; return n.decode(); })));
+         |                               ^
+      22 | }
+      23 |
+      24 | async function shot(page, info, name, target = page) {
+        at images (D:\Github repo\FoodieJournal\tests\Browser\public-visual.spec.js:21:31)
+        at ready (D:\Github repo\FoodieJournal\tests\Browser\public-visual.spec.js:16:11)
+        at D:\Github repo\FoodieJournal\tests\Browser\public-visual.spec.js:45:13
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    tools\.runtime\visual-results\public-visual-Visit-at-1440-hero-and-footer\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: tools\.runtime\visual-results\public-visual-Visit-at-1440-hero-and-footer\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    tools\.runtime\visual-results\public-visual-Visit-at-1440-hero-and-footer\trace.zip
+    Usage:
+
+        npx playwright show-trace tools\.runtime\visual-results\public-visual-Visit-at-1440-hero-and-footer\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) tests\Browser\public-visual.spec.js:41:9 › Visit at 1920: hero and footer ─────────────────────
+
+    Error: locator.evaluateAll: EncodingError: The source image cannot be decoded.
+
+      19 |     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+      20 | }
+    > 21 |
+         | ^
+      22 | async function images(page) {
+      23 |     await page.locator('img[src]').evaluateAll(nodes => Promise.all(nodes.map(n => { n.loading = 'eager'; return n.decode(); })));
+      24 | }
+        at images (D:\Github repo\FoodieJournal\tests\Browser\public-visual.spec.js:21:31)
+        at ready (D:\Github repo\FoodieJournal\tests\Browser\public-visual.spec.js:16:11)
+        at D:\Github repo\FoodieJournal\tests\Browser\public-visual.spec.js:45:13
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    tools\.runtime\visual-results\public-visual-Visit-at-1920-hero-and-footer\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: tools\.runtime\visual-results\public-visual-Visit-at-1920-hero-and-footer\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    tools\.runtime\visual-results\public-visual-Visit-at-1920-hero-and-footer\trace.zip
+    Usage:
+
+        npx playwright show-trace tools\.runtime\visual-results\public-visual-Visit-at-1920-hero-and-footer\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) tests\Browser\public-visual.spec.js:138:1 › viewer original loads on demand and focus returns ─
+
+    Error: locator.evaluateAll: EncodingError: The source image cannot be decoded.
+
+      19 |     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+      20 | }
+    > 21 |
+         | ^
+      22 | async function images(page) {
+      23 |     await page.locator('img[src]').evaluateAll(nodes => Promise.all(nodes.map(n => { n.loading = 'eager'; return n.decode(); })));
+      24 | }
+        at images (D:\Github repo\FoodieJournal\tests\Browser\public-visual.spec.js:21:31)
+        at ready (D:\Github repo\FoodieJournal\tests\Browser\public-visual.spec.js:16:11)
+        at D:\Github repo\FoodieJournal\tests\Browser\public-visual.spec.js:141:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    tools\.runtime\visual-results\public-visual-viewer-origi-5d84f-on-demand-and-focus-returns\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: tools\.runtime\visual-results\public-visual-viewer-origi-5d84f-on-demand-and-focus-returns\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    tools\.runtime\visual-results\public-visual-viewer-origi-5d84f-on-demand-and-focus-returns\trace.zip
+    Usage:
+
+        npx playwright show-trace tools\.runtime\visual-results\public-visual-viewer-origi-5d84f-on-demand-and-focus-returns\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4 failed
+    tests\Browser\public-visual.spec.js:41:9 › Visit at 390: hero and footer ───────────────────────
+    tests\Browser\public-visual.spec.js:41:9 › Visit at 1440: hero and footer ──────────────────────
+    tests\Browser\public-visual.spec.js:41:9 › Visit at 1920: hero and footer ──────────────────────
+    tests\Browser\public-visual.spec.js:138:1 › viewer original loads on demand and focus returns ──
+  19 passed (2.0m)

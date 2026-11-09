@@ -1,0 +1,63 @@
+{
+  "text200": [
+    {
+      "name": "home",
+      "width": 375,
+      "scrollWidth": 375
+    },
+    {
+      "name": "explore",
+      "width": 375,
+      "scrollWidth": 375
+    },
+    {
+      "name": "visit",
+      "width": 375,
+      "scrollWidth": 375
+    },
+    {
+      "name": "place",
+      "width": 375,
+      "scrollWidth": 375
+    },
+    {
+      "name": "error",
+      "width": 375,
+      "scrollWidth": 375
+    },
+    {
+      "name": "home",
+      "width": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "name": "explore",
+      "width": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "name": "visit",
+      "width": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "name": "place",
+      "width": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "name": "error",
+      "width": 1440,
+      "scrollWidth": 1440
+    }
+  ],
+  "photoFreeVisit": "/visit/demo-teh-tanpa-kamera",
+  "machine": {
+    "power": "on",
+    "dispenser": "ready",
+    "width": 1634,
+    "sourceWidth": 1634
+  },
+  "placePhotoRemoval": "DOM-only layout stress, not a new database fixture or a production fallback implementation",
+  "adminWidth": 1280
+}

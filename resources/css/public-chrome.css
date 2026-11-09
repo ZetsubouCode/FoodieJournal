@@ -3,13 +3,23 @@
 @font-face { font-family: 'Archive Garamond'; src: url('/assets/fonts/cormorant-garamond-latin-italic.woff2') format('woff2'); font-weight: 300 700; font-style: italic; font-display: swap; }
 @font-face { font-family: 'Archive Sans'; src: url('/assets/fonts/dm-sans-latin.woff2') format('woff2'); font-weight: 100 1000; font-style: normal; font-display: swap; }
 .public-page, .error-page { --font-display: 'Archive Garamond', Georgia, serif; --font-body: 'Archive Sans', 'Segoe UI', sans-serif; }
+.public-page:not(.public-page--admin) .container, .error-page .container, .error-page .error-main { width: min(calc(100% - 2 * var(--public-gutter)), var(--public-content-max)); margin-inline: auto; }
+@media (max-width: 480px) { .public-page, .error-page { --public-gutter: var(--space-4); } }
+@media (min-width: 1024px) { .public-page, .error-page { --public-gutter: clamp(var(--space-8), 3.333vw, var(--space-16)); } }
 .public-page .site-header, .error-page .site-header { display: flex; align-items: center; justify-content: space-between; gap: var(--space-4); padding-block: var(--space-3); min-height: 5rem; }
 .public-page .brand, .error-page .brand { font: 600 2.4rem/1 var(--font-display); letter-spacing: -.06em; color: var(--text-primary); text-decoration: none; }
 .brand span { color: var(--action-primary-bg); }
 .site-header nav[aria-label="Navigasi utama"] { display: flex; align-items: center; gap: clamp(1.25rem, 3vw, 2.5rem); }
 .site-header nav[aria-label="Navigasi utama"] a { display: inline-flex; align-items: center; position: relative; min-height: var(--control-height); font: 400 .875rem/1.4 var(--font-body); color: var(--text-secondary); text-decoration: none; }
-.site-header nav[aria-label="Navigasi utama"] a:is(:hover, [aria-current=page]) { color: var(--action-primary-bg); }
-.site-header nav[aria-label="Navigasi utama"] a[aria-current=page]::after { content: ''; position: absolute; height: 1px; background: currentColor; inset: auto 0 .4rem; }
+.site-header nav[aria-label="Navigasi utama"] a:is(:hover, :focus-visible, [aria-current=page]) { color: var(--action-primary-bg); }
+.site-header nav[aria-label="Navigasi utama"] a::after { content: ''; position: absolute; height: 1px; background: var(--action-primary-bg); inset: auto 0 .4rem; transform: scaleX(0); transform-origin: left; transition: transform var(--motion-fast) linear; pointer-events: none; }
+@media (hover: hover) {
+    .site-header nav[aria-label="Navigasi utama"] a:hover::after { transform: scaleX(1); transition-duration: var(--motion-standard); }
+}
+.site-header nav[aria-label="Navigasi utama"] a:is(:focus-visible, [aria-current=page])::after { transform: scaleX(1); transition: none; }
+@media (prefers-reduced-motion: reduce) {
+    .site-header nav[aria-label="Navigasi utama"] a::after { transition: none !important; }
+}
 .public-page .site-footer, .error-page .site-footer { display: block; margin-top: var(--space-24); padding: var(--space-12) 0 var(--space-6); background: color-mix(in srgb, var(--surface-page) 86%, transparent); color: var(--text-secondary); }
 .public-page .site-footer__inner, .error-page .site-footer__inner { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: var(--space-12); }
 .public-page .site-footer__story, .error-page .site-footer__story { display: block; min-width: 0; overflow-wrap: anywhere; }
@@ -25,3 +35,19 @@
 .public-page .site-footer__top, .error-page .site-footer__top { display: inline-flex; gap: .5rem; }
 .public-page .site-footer__copyright, .error-page .site-footer__copyright { margin-top: var(--space-8); margin-bottom: 0; font: 400 .75rem/1.5 var(--font-body); color: var(--text-muted); }
 @media(max-width: 767px) { .public-page .site-footer__inner, .error-page .site-footer__inner { grid-template-columns: minmax(0, 1fr); gap: var(--space-6); } }
+
+/* Public closing composition; admin keeps the compact shared-shell defaults. */
+:is(.public-page:not(.public-page--admin), .error-page) .site-footer { margin-top: clamp(var(--space-12), 5vw, var(--space-24)); padding-top: clamp(var(--space-12), 5vw, var(--space-24)); background: linear-gradient(115deg, color-mix(in srgb, var(--action-primary-bg) 5%, transparent), transparent 60%), var(--surface-footer); }
+:is(.public-page:not(.public-page--admin), .error-page) .site-footer__inner { grid-template-columns: minmax(0, 1fr) minmax(10rem, .25fr); align-items: start; gap: clamp(var(--space-8), 5vw, var(--space-24)); }
+:is(.public-page:not(.public-page--admin), .error-page) .site-footer__statement { font-size: clamp(2.4rem, 4.5vw, 5.2rem); line-height: 1.03; letter-spacing: -.025em; }
+:is(.public-page:not(.public-page--admin), .error-page) .site-footer__statement br { display: initial; }
+:is(.public-page:not(.public-page--admin), .error-page) .site-footer__statement span::before { content: none; }
+:is(.public-page:not(.public-page--admin), .error-page) .site-footer__description { margin-top: var(--space-6); font-size: var(--text-sm); }
+:is(.public-page:not(.public-page--admin), .error-page) .site-footer__nav { flex-direction: column; align-items: start; gap: var(--space-2); }
+:is(.public-page:not(.public-page--admin), .error-page) .site-footer__nav > p { display: block; margin: 0 0 var(--space-4); color: var(--action-primary-bg); font-size: .75rem; }
+:is(.public-page:not(.public-page--admin), .error-page) .site-footer__nav a { font-size: var(--text-sm); }
+@media (max-width: 767px) {
+    :is(.public-page:not(.public-page--admin), .error-page) .site-footer__inner { grid-template-columns: minmax(0, 1fr); }
+    :is(.public-page:not(.public-page--admin), .error-page) .site-footer__nav { flex-direction: row; flex-wrap: wrap; gap: var(--space-2) var(--space-6); }
+    :is(.public-page:not(.public-page--admin), .error-page) .site-footer__nav > p { flex-basis: 100%; margin-bottom: 0; }
+}

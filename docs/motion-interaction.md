@@ -25,7 +25,7 @@ Apply consistently to primary public nav tabs, including standalone errors. Opti
 | Reduced motion | Full line immediately on hover/focus/active, no interpolated fill/retraction |
 | Touch/no hover | Ordinary link navigation, active route and focus remain; no hover dependency |
 
-Native CSS pseudo-element/transform is sufficient. No JavaScript navigation interception, fake network progress, artificial delay or SPA migration. History confirms the older hover fill in `4f6365b:resources/css/home.css`; the 801cc57 rewrite removed it. Start/mid/end evidence currently shows the absence, not a passing target.
+Native CSS pseudo-element/transform is sufficient. No JavaScript navigation interception, fake network progress, artificial delay or SPA migration. History confirms the older hover fill in `4f6365b:resources/css/home.css`; the 801cc57 rewrite removed it. The 8 November start/mid/end evidence records that historical absence. P0-1 restored this contract on 9 November 2026 using shared CSS and existing tokens; [current state/frame verification](qa/navigation-hover-progress/verification.md) covers public and standalone errors, interruption, active/focus, reduced motion, touch and no-JS navigation.
 
 ## Home mechanical contract
 

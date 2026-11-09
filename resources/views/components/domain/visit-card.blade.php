@@ -9,7 +9,7 @@
 <article class="visit-card" aria-labelledby="{{ $cardId }}-title" data-visit-card>
     <div class="visit-card__media">
         <x-domain.image :media="$cardMedia" sizes="(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw" data-visit-card-image />
-        @if($cardMedia?->variant('card'))<div class="photo-fallback" hidden data-visit-card-image-fallback>Foto belum tersedia</div>@endif
+        @if($cardMedia?->variant('card'))<div class="photo-fallback" hidden data-visit-card-image-fallback>Foto belum dapat dimuat</div>@endif
     </div>
     <a class="visit-card__link" href="{{ route('visit.show', $visit->slug) }}" aria-label="Baca kunjungan: {{ $visit->display_title }} di {{ $visit->place->name }}"></a>
     <div class="visit-card__body">

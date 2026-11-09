@@ -3,7 +3,7 @@
     <x-site.breadcrumb :items="['Jelajah' => url('explore'), $visit->display_title => null]" />
     <article class="visit-dossier">
         <header class="dossier-hero {{ $visit->coverMedia?->variant('hero') ? '' : 'dossier-hero--text' }}">
-            <div class="dossier-hero__photo"><x-domain.image :media="$visit->coverMedia" variant="hero" :priority="true" sizes="(min-width: 1280px) 1280px, 100vw" /></div>
+            <div class="dossier-hero__photo"><x-domain.image :media="$visit->coverMedia" variant="hero" :priority="true" sizes="(min-width: 1920px) 1792px, (min-width: 1024px) 93.334vw, (min-width: 481px) calc(100vw - 3rem), calc(100vw - 2rem)" /></div>
             <div class="dossier-hero__copy">
                 <p class="editorial-caption">The Culinary Dossier</p>
                 <h1>{{ $visit->display_title }}</h1>

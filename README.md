@@ -6,7 +6,7 @@ Foodie is not a restaurant, food-sales site, recipe service, community-review pl
 
 Read [AGENTS](AGENTS.md) and [product vision / document precedence](docs/product-vision.md). The five root specifications retain authority for unchanged domain rules. `design-system-specification.md` §1 owns visual composition and Indonesian voice; `config/error-pages.php` owns approved HTTP copy. Current experience contracts are linked below. Dated design/QA reports are historical evidence, not competing current instructions.
 
-**Current status (8 November 2026):** application baseline `b56db2c`; [frontend audit](docs/implementation-status.md) records working functionality, confirmed hover-underline regression and pending width/identity/state improvements. [Roadmap](docs/roadmap/frontend-experience.md) is planned work, not an implemented redesign. This documentation pass changes no application behavior.
+**Current status (9 November 2026):** P0-1 restores the shared copper hover underline, keyboard/active/reduced-motion states and standalone error styling; [verification](docs/qa/navigation-hover-progress/verification.md). The [frontend audit](docs/implementation-status.md) retains its `b56db2c` baseline and now tracks this fix. P0-2 now adds the wide public shell, warmer environment/editorial footer and responsive media sizing while preserving admin geometry; [before/after evidence](docs/qa/wide-shell/verification.md). P0-3 now distinguishes empty/filtered/partial states and improves essential text/control sizing; [isolated fixtures and evidence](docs/qa/readability-states/verification.md). P0-4 adds 40 reviewed deterministic pixel baselines, an intentional-shift rejection proof and real-time video; [verification/setup](docs/qa/visual-baselines/verification.md). P1 onward in the [roadmap](docs/roadmap/frontend-experience.md) remains pending.
 
 ## Run this workspace
 
@@ -31,7 +31,7 @@ php tools/cinematic-server.php      # loopback http://127.0.0.1:8012
 
 The local demo has 12 fictional places, 20 published visits, one draft/private example each, dishes and bundled illustrative photos. It is labeled demo content, not real owner memories. Preparation verifies its SQLite target and uses a separate media root; it does not create content in the active Foodie database. Existing fixtures can be served without preparing again.
 
-Functional Playwright tests use a different fixture: `php tools/prepare-browser.php`, then `php tools/browser-server.php` on 8011. Tests expecting labels such as “Ingin kembali QA” require 8011; photographic captures use 8012. Do not infer a product regression from mixing these datasets. See [test safety and environment](docs/operations.md#test-and-browser-environments).
+Functional Playwright tests use a different fixture: `php tools/prepare-browser.php`, then `php tools/browser-server.php` on 8011. Tests expecting labels such as “Ingin kembali QA” require 8011; photographic captures use 8012. Do not infer a product regression from mixing these datasets. See [test safety and environment](docs/operations.md#test-and-browser-environments). P0-3 `readability-states.spec.js` also needs the photographic server on 8012 and the dedicated empty/sparse servers on 8013/8014; prepare them with `php tools/readability-qa.php prepare empty` / `prepare sparse`. Full startup and verification commands are in [readability/state evidence](docs/qa/readability-states/verification.md).
 
 `DemoJournalSeeder` remains available for explicitly chosen disposable local/testing installations; running it through ordinary Artisan against the owner-configured app inserts public demo records there. It is not a required owner setup or audit step. It uses the existing owner and is designed not to overwrite their credentials/edits. Normal `db:seed` seeds allergen vocabulary only. Do not refresh an owner database.
 
@@ -44,6 +44,8 @@ composer test
 npm run build
 php vendor/bin/pint --test
 ```
+
+The visual gate runs separately: `npx playwright test --config playwright.visual.config.js`, after building assets and preparing/serving the dedicated fixed-date photo/empty fixtures on 8015/8016. The default functional config excludes this spec. See [setup, reviewed manifest and explicit update procedure](docs/qa/visual-baselines/verification.md); ordinary runs never create/update baselines.
 
 Maintained documentation:
 

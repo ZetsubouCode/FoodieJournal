@@ -127,14 +127,14 @@
 }
 .visit-card__rating { gap: .25rem; font-weight: 700; font-variant-numeric: tabular-nums; }
 .visit-card__rating b { color: var(--visit-card-star); font-size: 1.2rem; line-height: 1; }
-.visit-card__rating small { font-size: .8rem; font-weight: 400; }
-.visit-card__recommendation { color: var(--visit-paper); border-color: var(--visit-paper); font-weight: 600; }
+.visit-card__rating small { font-size: .875rem; font-weight: 400; }
+.visit-card__recommendation { min-height: 44px; color: var(--visit-paper); border-color: var(--visit-paper); font-weight: 600; }
 .visit-card__meta { color: var(--text-secondary); font-size: .89rem; line-height: 1.35; }
 .visit-card__meta > * + * { border-left: 1px solid var(--border-subtle); padding-left: .8rem; }
-.visit-card__warning { color: var(--text-secondary); font-size: .8rem; line-height: 1.35; margin: .65rem 0 0; }
+.visit-card__warning { color: var(--text-secondary); font-size: .875rem; line-height: 1.35; margin: .65rem 0 0; }
 .visit-card__tags { margin-top: auto; padding-top: 1.05rem; }
 .visit-card__tag,
-.visit-card__more { min-height: 2.1rem; font-size: .83rem; color: var(--visit-paper); border-color: var(--visit-card-chip-border); padding: .3rem .7rem; }
+.visit-card__more { min-height: 44px; min-width: 44px; font-size: .875rem; color: var(--visit-paper); border-color: var(--visit-card-chip-border); padding: .3rem .7rem; }
 .visit-card__more { font-family: inherit; cursor: pointer; }
 .visit-card__overflow { position: relative; }
 .visit-card__popover {
@@ -152,8 +152,8 @@
   box-shadow: var(--shadow-popover);
 }
 .visit-card__popover[hidden] { display: none; }
-.visit-card__popover p { margin: .3rem .5rem; color: var(--text-secondary); font-size: .8rem; }
-.visit-card__popover a { display: block; min-height: 2.4rem; padding: .55rem .5rem; color: var(--text-primary); text-decoration: none; overflow-wrap: anywhere; }
+.visit-card__popover p { margin: .3rem .5rem; color: var(--text-secondary); font-size: .875rem; }
+.visit-card__popover a { display: block; min-height: 44px; padding: .55rem .5rem; color: var(--text-primary); text-decoration: none; overflow-wrap: anywhere; }
 .visit-card__link { position: absolute; inset: 0; z-index: 4; }
 .visit-card__tags, .visit-card__recommendation { position: relative; pointer-events: auto; }
 .visit-card__tag:hover, .visit-card__more:hover, .visit-card__recommendation:hover,

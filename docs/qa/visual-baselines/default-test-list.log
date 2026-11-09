@@ -1,0 +1,54 @@
+Listing tests:
+  discovery-machine.spec.js:7:1 › Explore modes retain the document, query, layout and browser history
+  discovery-machine.spec.js:20:1 › rapid requests discard stale modes; failed requests retain committed data
+  discovery-machine.spec.js:33:1 › curiosity photographs apply actual filtering and restore with Back
+  discovery-machine.spec.js:42:1 › filter drawer stages hierarchy, long searchable multiselect, tags and recommendations; apply and cancel
+  discovery-machine.spec.js:78:1 › mode-specific prices, group reset, search/sort/grid/list/pagination and error retry remain coherent
+  discovery-machine.spec.js:104:1 › calendar and location metadata are shared by Home and all Explore card modes
+  error-pages.spec.js:9:1 › editorial 404 scene reflows, loads its photograph and remains keyboard accessible
+  homepage.spec.js:4:1 › homepage editorial collections and shared geometry reflow through desktop, mobile and 200% text
+  homepage.spec.js:24:1 › personal picks link to actual records and keep endorsements distinct from score
+  journal.spec.js:36:1 › public pages reflow at 320, 375, 768, 1024 and 1440 pixels
+  journal.spec.js:49:1 › filters stage, count, cancel, apply and restore browser history
+  journal.spec.js:68:1 › login, keyboard combobox, inline create, repeatable editor and publish preview
+  journal.spec.js:101:1 › gallery loads originals only when opened and dialog restores focus
+  journal.spec.js:113:1 › admin mobile, reduced motion, errors and 200 percent text reflow
+  performance.spec.js:4:1 › record local paint, layout stability and token contrast measurements
+  public-navigation.spec.js:17:5 › public hover progress is interruptible, left anchored and keyboard accessible on /
+  public-navigation.spec.js:17:5 › public hover progress is interruptible, left anchored and keyboard accessible on /missing-error-page-preview
+  public-navigation.spec.js:58:1 › shared navigation retains active and hover states across public routes and responsive sizes
+  public-navigation.spec.js:86:1 › reduced motion is immediate at load and when the preference changes during hover
+  public-navigation.spec.js:99:1 › touch and JavaScript-free navigation use ordinary links without a hover dependency
+  public-shell.spec.js:13:1 › public shell aligns header, main and footer at target and boundary widths without scaling cabinet artwork up
+  public-shell.spec.js:51:1 › reading measure, enlarged text and short landscape remain usable across public surfaces
+  public-shell.spec.js:70:1 › admin keeps its existing narrow container and compact footer
+  public-shell.spec.js:80:1 › wide images use derivatives with layout-aware lazy sizes and an eager capped hero
+  readability-states.spec.js:12:1 › private-only archive and filtered zero have different honest states, including async reset
+  readability-states.spec.js:35:1 › partial records keep absent recommendations, images, scores, Maps and prices honest
+  readability-states.spec.js:59:1 › readable metadata, long chips and touch actions reflow at normal and doubled root text
+  readability-states.spec.js:96:1 › photographic captions remain inside their tiles with enlarged text
+  readability-states.spec.js:109:1 › keyboard focus and overflow controls remain visible and disabled states remain safe without JS
+  readability-states.spec.js:129:1 › denied derivatives show the existing fallback without fetching originals
+  vending-machine.spec.js:20:1 › fresh machine is dark and inert; holding at expanded socket edge waits for release
+  vending-machine.spec.js:35:1 › invalid drops, Escape, pointercancel and lost capture return to the committed origin
+  vending-machine.spec.js:51:1 › valid reverse drop shuts down and session refresh restores the correct physical state
+  vending-machine.spec.js:70:1 › rotary angular drag crosses wrap boundary and keyboard reverses a real six-visit page
+  vending-machine.spec.js:89:1 › rapid page requests discard stale fragments; failure retains committed selection and retries
+  vending-machine.spec.js:111:1 › selection prints exactly one matching photo and retrieval opens its actual visit
+  vending-machine.spec.js:128:1 › reset and a new selection retract the ready card; push-button face depresses without rotating
+  vending-machine.spec.js:140:1 › touch uses lamp then target; reduced-motion runtime changes keep power and print usable
+  vending-machine.spec.js:157:1 › keyboard lamp actions and blocked sessionStorage remain usable
+  vending-machine.spec.js:173:1 › responsive geometry, LED alignment, missing images and WCAG scans in off/on/printed states
+  vending-machine.spec.js:201:1 › no JavaScript leaves semantic visit and Explore navigation available
+  vending-machine.spec.js:207:1 › touch dragging snaps only after release on the compact socket
+  vending-machine.spec.js:219:1 › resize, a second pointer, scroll and visibility interruptions preserve a valid lamp pose
+  vending-machine.spec.js:240:1 › lamp communicates pickup without visible tutorial copy
+  vending-machine.spec.js:246:1 › a now-empty server page clears the old preview and disables printing
+  vending-machine.spec.js:256:1 › compiled CSS durations drive real snap, ignition and paper-feed timings
+  vending-machine.spec.js:271:1 › refined hardware has no pagination widgets; dial resists partial travel and settles at an index
+  vending-machine.spec.js:286:1 › resting tube hangs outside the left side and the compact tray is dark when off
+  vending-machine.spec.js:295:1 › off-state pickup cue is visible even in a discovered session, finite and non-electrical
+  visit-card.spec.js:8:1 › F Refined visit card reflows and keeps independent destinations
+  visit-card.spec.js:87:1 › failed visit-card media reveals a stable fallback
+  visit-card.spec.js:96:1 › touch taps keep card navigation separate from tag disclosure
+Total: 52 tests in 10 files

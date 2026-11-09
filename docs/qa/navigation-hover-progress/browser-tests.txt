@@ -1,0 +1,12 @@
+
+Running 5 tests using 1 worker
+
+(node:17136) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 tests\Browser\public-navigation.spec.js:17:5 › public hover progress is interruptible, left anchored and keyboard accessible on / (8.9s)
+  ok 2 tests\Browser\public-navigation.spec.js:17:5 › public hover progress is interruptible, left anchored and keyboard accessible on /missing-error-page-preview (2.2s)
+  ok 3 tests\Browser\public-navigation.spec.js:58:1 › shared navigation retains active and hover states across public routes and responsive sizes (18.1s)
+  ok 4 tests\Browser\public-navigation.spec.js:86:1 › reduced motion is immediate at load and when the preference changes during hover (2.0s)
+  ok 5 tests\Browser\public-navigation.spec.js:99:1 › touch and JavaScript-free navigation use ordinary links without a hover dependency (1.8s)
+
+  5 passed (34.5s)

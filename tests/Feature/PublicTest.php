@@ -45,6 +45,39 @@ class PublicTest extends TestCase
         $this->get('/place/missing')->assertNotFound();
     }
 
+    public function test_empty_states_use_only_published_existence_in_full_and_fragment_responses(): void
+    {
+        $hidden = Visit::factory()->private()->create(['title' => 'RAHASIA-EMPTY']);
+        Visit::factory()->create(['title' => 'RAHASIA-DRAFT']);
+        foreach ([[], ['X-Explore-Fragment' => '1']] as $headers) {
+            $this->get('/explore?q=tidak-ada', $headers)->assertOk()
+                ->assertSee('Arsip belum dipublikasikan')->assertViewHas('hasPublishedVisits', false)
+                ->assertDontSee('RAHASIA-EMPTY')->assertDontSee('RAHASIA-DRAFT');
+        }
+        $hidden->update(['status' => 'published']);
+        $this->get('/explore?tab=food')->assertOk()->assertSee('Belum ada hidangan yang dicatat')->assertSee('Lihat kunjungan');
+        foreach ([[], ['X-Explore-Fragment' => '1']] as $headers) {
+            $this->get('/explore?q=tidak-ada&view=list', $headers)->assertOk()
+                ->assertSee('Tidak ada catatan yang cocok')->assertSee('Reset filter')
+                ->assertSee('Hapus filter Cari: tidak-ada')->assertSee('tab=visit&amp;view=list', false);
+        }
+        $this->get('/explore?page=9')->assertOk()->assertSee('Halaman ini sudah kosong')->assertSee('Ke halaman pertama');
+        $hidden->update(['status' => 'draft']);
+        $this->get('/explore?page=9')->assertOk()->assertSee('Arsip belum dipublikasikan')->assertDontSee('Halaman ini sudah kosong');
+    }
+
+    public function test_partial_records_keep_unknown_rating_price_and_explicit_zero_distinct(): void
+    {
+        $visit = Visit::factory()->published()->create();
+        VisitItem::factory()->for($visit)->create(['menu_name' => 'Harga tidak diketahui']);
+        VisitItem::factory()->for($visit)->create(['menu_name' => 'Harga nol tercatat', 'unit_price_idr' => 0]);
+        $this->get('/')->assertOk()->assertSee('Belum ada rekomendasi pribadi yang dipublikasikan');
+        $this->get('/explore')->assertOk()->assertSee('Belum Dinilai')->assertSee('Foto belum tersedia')->assertDontSee('0,0');
+        $this->get('/explore?tab=food')->assertOk()->assertSee('Harga belum dicatat')->assertSee('Rp0')->assertSee('Belum Dinilai');
+        $this->get('/visit/'.$visit->slug)->assertOk()->assertSee('Harga belum dicatat')->assertSee('Rp0')->assertSee('Penilaian belum dicatat');
+        $this->get('/place/'.$visit->place->slug)->assertOk()->assertSee('Belum Dinilai')->assertDontSee('Buka Google Maps');
+    }
+
     public function test_homepage_recent_order_curated_picks_and_discovery_use_published_data(): void
     {
         $older = Visit::factory()->published()->create(['title' => 'Catatan lebih lama', 'visited_at' => '2026-10-01 12:00:00']);

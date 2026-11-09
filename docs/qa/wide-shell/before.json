@@ -1,0 +1,1087 @@
+{
+  "phase": "before",
+  "date": "2026-11-09",
+  "fixture": "Existing isolated cinematic.sqlite / cinematic-media; fictional demo photography, no owner data.",
+  "browser": "156.0.8078.4",
+  "pages": [
+    {
+      "name": "home",
+      "path": "/",
+      "width": 375,
+      "status": 200,
+      "viewport": 375,
+      "scrollWidth": 375,
+      "header": {
+        "x": 16,
+        "width": 343
+      },
+      "main": {
+        "x": 16,
+        "width": 343
+      },
+      "footer": {
+        "x": 0,
+        "width": 375
+      },
+      "footerInner": {
+        "x": 16,
+        "width": 343
+      },
+      "images": [
+        {
+          "sizes": "(min-width: 960px) 60vw, 100vw",
+          "slot": 343,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/card",
+          "naturalWidth": 375
+        },
+        {
+          "sizes": "(min-width: 960px) 28vw, 100vw",
+          "slot": 130.796875,
+          "currentSrc": "http://127.0.0.1:8012/media/a48397fd-5c81-4b03-b68d-6a57b11f3eca/thumbnail",
+          "naturalWidth": 374
+        },
+        {
+          "sizes": "(min-width: 960px) 28vw, 100vw",
+          "slot": 130.796875,
+          "currentSrc": "http://127.0.0.1:8012/media/1ae2962a-0b9d-4912-81c3-6878fa9a512d/thumbnail",
+          "naturalWidth": 374
+        },
+        {
+          "sizes": "(min-width: 960px) 28vw, 100vw",
+          "slot": 130.796875,
+          "currentSrc": "http://127.0.0.1:8012/media/319e40c3-65b5-4128-be5e-e77d17feb120/thumbnail",
+          "naturalWidth": 374
+        },
+        {
+          "sizes": "(min-width: 960px) 60vw, 100vw",
+          "slot": 343,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/card",
+          "naturalWidth": 375
+        },
+        {
+          "sizes": "(min-width: 960px) 28vw, 100vw",
+          "slot": 163.5,
+          "currentSrc": "http://127.0.0.1:8012/media/a48397fd-5c81-4b03-b68d-6a57b11f3eca/thumbnail",
+          "naturalWidth": 374
+        },
+        {
+          "sizes": "(min-width: 960px) 28vw, 100vw",
+          "slot": 163.5,
+          "currentSrc": "http://127.0.0.1:8012/media/1ae2962a-0b9d-4912-81c3-6878fa9a512d/thumbnail",
+          "naturalWidth": 374
+        },
+        {
+          "sizes": "(min-width: 960px) 28vw, 100vw",
+          "slot": 130.796875,
+          "currentSrc": "http://127.0.0.1:8012/media/319e40c3-65b5-4128-be5e-e77d17feb120/thumbnail",
+          "naturalWidth": 374
+        }
+      ]
+    },
+    {
+      "name": "explore",
+      "path": "/explore",
+      "width": 375,
+      "status": 200,
+      "viewport": 375,
+      "scrollWidth": 375,
+      "header": {
+        "x": 16,
+        "width": 343
+      },
+      "main": {
+        "x": 16,
+        "width": 343
+      },
+      "footer": {
+        "x": 0,
+        "width": 375
+      },
+      "footerInner": {
+        "x": 16,
+        "width": 343
+      },
+      "images": [
+        {
+          "sizes": "(min-width: 960px) 45vw, 100vw",
+          "slot": 343,
+          "currentSrc": "http://127.0.0.1:8012/media/5ea1ed76-5a91-42f7-a99c-f98e47fa5b48/thumbnail",
+          "naturalWidth": 374
+        },
+        {
+          "sizes": "(min-width: 960px) 45vw, 100vw",
+          "slot": 165.5,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/card",
+          "naturalWidth": 375
+        },
+        {
+          "sizes": "(min-width: 960px) 45vw, 100vw",
+          "slot": 165.5,
+          "currentSrc": "http://127.0.0.1:8012/media/02777d29-5588-4656-bcb9-db59a69db7db/thumbnail",
+          "naturalWidth": 374
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 343,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/card",
+          "naturalWidth": 375
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 343,
+          "currentSrc": "http://127.0.0.1:8012/media/a48397fd-5c81-4b03-b68d-6a57b11f3eca/thumbnail",
+          "naturalWidth": 374
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 343,
+          "currentSrc": "http://127.0.0.1:8012/media/1ae2962a-0b9d-4912-81c3-6878fa9a512d/thumbnail",
+          "naturalWidth": 374
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 343,
+          "currentSrc": "http://127.0.0.1:8012/media/319e40c3-65b5-4128-be5e-e77d17feb120/thumbnail",
+          "naturalWidth": 374
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 343,
+          "currentSrc": "http://127.0.0.1:8012/media/08865e6b-ac7e-41b5-afd6-cd51afbd71dc/thumbnail",
+          "naturalWidth": 374
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 343,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 343,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 343,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 343,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 343,
+          "currentSrc": "http://127.0.0.1:8012/media/02777d29-5588-4656-bcb9-db59a69db7db/thumbnail",
+          "naturalWidth": 374
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 343,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 343,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 343,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 343,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 343,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 343,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 343,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 343,
+          "currentSrc": "",
+          "naturalWidth": 0
+        }
+      ]
+    },
+    {
+      "name": "visit",
+      "path": "/visit/demo-bara-di-ujung-hari",
+      "width": 375,
+      "status": 200,
+      "viewport": 375,
+      "scrollWidth": 375,
+      "header": {
+        "x": 16,
+        "width": 343
+      },
+      "main": {
+        "x": 16,
+        "width": 343
+      },
+      "footer": {
+        "x": 0,
+        "width": 375
+      },
+      "footerInner": {
+        "x": 16,
+        "width": 343
+      },
+      "images": [
+        {
+          "sizes": "(min-width: 1280px) 1280px, 100vw",
+          "slot": 343,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/card",
+          "naturalWidth": 375
+        },
+        {
+          "sizes": "(min-width: 960px) 40vw, 100vw",
+          "slot": 343,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/card",
+          "naturalWidth": 375
+        },
+        {
+          "sizes": "(min-width: 960px) 40vw, 100vw",
+          "slot": 343,
+          "currentSrc": "http://127.0.0.1:8012/media/3f7efed0-b916-4015-82e9-96bdad5b0d38/card",
+          "naturalWidth": 375
+        },
+        {
+          "sizes": "(min-width: 960px) 60vw, 100vw",
+          "slot": 343,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/card",
+          "naturalWidth": 375
+        },
+        {
+          "sizes": "(min-width: 960px) 60vw, 100vw",
+          "slot": 163.5,
+          "currentSrc": "http://127.0.0.1:8012/media/3f7efed0-b916-4015-82e9-96bdad5b0d38/card",
+          "naturalWidth": 375
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 343,
+          "currentSrc": "",
+          "naturalWidth": 0
+        }
+      ]
+    },
+    {
+      "name": "place",
+      "path": "/place/demo-bara-senja",
+      "width": 375,
+      "status": 200,
+      "viewport": 375,
+      "scrollWidth": 375,
+      "header": {
+        "x": 16,
+        "width": 343
+      },
+      "main": {
+        "x": 16,
+        "width": 343
+      },
+      "footer": {
+        "x": 0,
+        "width": 375
+      },
+      "footerInner": {
+        "x": 16,
+        "width": 343
+      },
+      "images": [
+        {
+          "sizes": "(min-width: 768px) 55vw, 100vw",
+          "slot": 343,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/card",
+          "naturalWidth": 375
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 343,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/card",
+          "naturalWidth": 375
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 343,
+          "currentSrc": "http://127.0.0.1:8012/media/8681e2a0-a400-4168-8091-c87a24d48b88/card",
+          "naturalWidth": 375
+        }
+      ]
+    },
+    {
+      "name": "error",
+      "path": "/missing-error-page-preview",
+      "width": 375,
+      "status": 404,
+      "viewport": 375,
+      "scrollWidth": 375,
+      "header": {
+        "x": 24,
+        "width": 327
+      },
+      "main": {
+        "x": 24,
+        "width": 327
+      },
+      "footer": {
+        "x": 0,
+        "width": 375
+      },
+      "footerInner": {
+        "x": 24,
+        "width": 327
+      },
+      "images": []
+    },
+    {
+      "name": "home",
+      "path": "/",
+      "width": 1440,
+      "status": 200,
+      "viewport": 1440,
+      "scrollWidth": 1440,
+      "header": {
+        "x": 80,
+        "width": 1280
+      },
+      "main": {
+        "x": 80,
+        "width": 1280
+      },
+      "footer": {
+        "x": 0,
+        "width": 1440
+      },
+      "footerInner": {
+        "x": 80,
+        "width": 1280
+      },
+      "images": [
+        {
+          "sizes": "(min-width: 960px) 60vw, 100vw",
+          "slot": 713.0625,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/hero",
+          "naturalWidth": 863
+        },
+        {
+          "sizes": "(min-width: 960px) 28vw, 100vw",
+          "slot": 206.25,
+          "currentSrc": "http://127.0.0.1:8012/media/a48397fd-5c81-4b03-b68d-6a57b11f3eca/card",
+          "naturalWidth": 403
+        },
+        {
+          "sizes": "(min-width: 960px) 28vw, 100vw",
+          "slot": 206.25,
+          "currentSrc": "http://127.0.0.1:8012/media/1ae2962a-0b9d-4912-81c3-6878fa9a512d/card",
+          "naturalWidth": 403
+        },
+        {
+          "sizes": "(min-width: 960px) 28vw, 100vw",
+          "slot": 206.25,
+          "currentSrc": "http://127.0.0.1:8012/media/319e40c3-65b5-4128-be5e-e77d17feb120/card",
+          "naturalWidth": 403
+        },
+        {
+          "sizes": "(min-width: 960px) 60vw, 100vw",
+          "slot": 443.921875,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/hero",
+          "naturalWidth": 863
+        },
+        {
+          "sizes": "(min-width: 960px) 28vw, 100vw",
+          "slot": 386.03125,
+          "currentSrc": "http://127.0.0.1:8012/media/a48397fd-5c81-4b03-b68d-6a57b11f3eca/card",
+          "naturalWidth": 403
+        },
+        {
+          "sizes": "(min-width: 960px) 28vw, 100vw",
+          "slot": 386.03125,
+          "currentSrc": "http://127.0.0.1:8012/media/1ae2962a-0b9d-4912-81c3-6878fa9a512d/card",
+          "naturalWidth": 403
+        },
+        {
+          "sizes": "(min-width: 960px) 28vw, 100vw",
+          "slot": 331.515625,
+          "currentSrc": "http://127.0.0.1:8012/media/319e40c3-65b5-4128-be5e-e77d17feb120/card",
+          "naturalWidth": 403
+        }
+      ]
+    },
+    {
+      "name": "explore",
+      "path": "/explore",
+      "width": 1440,
+      "status": 200,
+      "viewport": 1440,
+      "scrollWidth": 1440,
+      "header": {
+        "x": 80,
+        "width": 1280
+      },
+      "main": {
+        "x": 80,
+        "width": 1280
+      },
+      "footer": {
+        "x": 0,
+        "width": 1440
+      },
+      "footerInner": {
+        "x": 80,
+        "width": 1280
+      },
+      "images": [
+        {
+          "sizes": "(min-width: 960px) 45vw, 100vw",
+          "slot": 515.046875,
+          "currentSrc": "http://127.0.0.1:8012/media/5ea1ed76-5a91-42f7-a99c-f98e47fa5b48/card",
+          "naturalWidth": 648
+        },
+        {
+          "sizes": "(min-width: 960px) 45vw, 100vw",
+          "slot": 396.1875,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/hero",
+          "naturalWidth": 648
+        },
+        {
+          "sizes": "(min-width: 960px) 45vw, 100vw",
+          "slot": 336.75,
+          "currentSrc": "http://127.0.0.1:8012/media/02777d29-5588-4656-bcb9-db59a69db7db/card",
+          "naturalWidth": 648
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 290.71875,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/card",
+          "naturalWidth": 403
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 290.71875,
+          "currentSrc": "http://127.0.0.1:8012/media/a48397fd-5c81-4b03-b68d-6a57b11f3eca/card",
+          "naturalWidth": 403
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 290.71875,
+          "currentSrc": "http://127.0.0.1:8012/media/1ae2962a-0b9d-4912-81c3-6878fa9a512d/card",
+          "naturalWidth": 403
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 290.71875,
+          "currentSrc": "http://127.0.0.1:8012/media/319e40c3-65b5-4128-be5e-e77d17feb120/card",
+          "naturalWidth": 403
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 290.71875,
+          "currentSrc": "http://127.0.0.1:8012/media/08865e6b-ac7e-41b5-afd6-cd51afbd71dc/card",
+          "naturalWidth": 403
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 290.71875,
+          "currentSrc": "http://127.0.0.1:8012/media/e98b1437-cf5e-4fa3-bc1c-a7f0f7d27c4a/card",
+          "naturalWidth": 403
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 290.71875,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 290.71875,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 290.71875,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 290.71875,
+          "currentSrc": "http://127.0.0.1:8012/media/02777d29-5588-4656-bcb9-db59a69db7db/card",
+          "naturalWidth": 403
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 290.71875,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 290.71875,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 290.71875,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 290.71875,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 290.71875,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 290.71875,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 290.71875,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 290.71875,
+          "currentSrc": "",
+          "naturalWidth": 0
+        }
+      ]
+    },
+    {
+      "name": "visit",
+      "path": "/visit/demo-bara-di-ujung-hari",
+      "width": 1440,
+      "status": 200,
+      "viewport": 1440,
+      "scrollWidth": 1440,
+      "header": {
+        "x": 80,
+        "width": 1280
+      },
+      "main": {
+        "x": 80,
+        "width": 1280
+      },
+      "footer": {
+        "x": 0,
+        "width": 1440
+      },
+      "footerInner": {
+        "x": 80,
+        "width": 1280
+      },
+      "images": [
+        {
+          "sizes": "(min-width: 1280px) 1280px, 100vw",
+          "slot": 1280,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/hero",
+          "naturalWidth": 1280
+        },
+        {
+          "sizes": "(min-width: 960px) 40vw, 100vw",
+          "slot": 555.625,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/card",
+          "naturalWidth": 576
+        },
+        {
+          "sizes": "(min-width: 960px) 40vw, 100vw",
+          "slot": 555.625,
+          "currentSrc": "http://127.0.0.1:8012/media/3f7efed0-b916-4015-82e9-96bdad5b0d38/card",
+          "naturalWidth": 576
+        },
+        {
+          "sizes": "(min-width: 960px) 60vw, 100vw",
+          "slot": 885.8125,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/hero",
+          "naturalWidth": 863
+        },
+        {
+          "sizes": "(min-width: 960px) 60vw, 100vw",
+          "slot": 378.1875,
+          "currentSrc": "http://127.0.0.1:8012/media/3f7efed0-b916-4015-82e9-96bdad5b0d38/hero",
+          "naturalWidth": 864
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 243.359375,
+          "currentSrc": "",
+          "naturalWidth": 0
+        }
+      ]
+    },
+    {
+      "name": "place",
+      "path": "/place/demo-bara-senja",
+      "width": 1440,
+      "status": 200,
+      "viewport": 1440,
+      "scrollWidth": 1440,
+      "header": {
+        "x": 80,
+        "width": 1280
+      },
+      "main": {
+        "x": 80,
+        "width": 1280
+      },
+      "footer": {
+        "x": 0,
+        "width": 1440
+      },
+      "footerInner": {
+        "x": 80,
+        "width": 1280
+      },
+      "images": [
+        {
+          "sizes": "(min-width: 768px) 55vw, 100vw",
+          "slot": 560,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/hero",
+          "naturalWidth": 792
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 361.90625,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/card",
+          "naturalWidth": 403
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 361.90625,
+          "currentSrc": "http://127.0.0.1:8012/media/8681e2a0-a400-4168-8091-c87a24d48b88/card",
+          "naturalWidth": 403
+        }
+      ]
+    },
+    {
+      "name": "error",
+      "path": "/missing-error-page-preview",
+      "width": 1440,
+      "status": 404,
+      "viewport": 1440,
+      "scrollWidth": 1440,
+      "header": {
+        "x": 80,
+        "width": 1280
+      },
+      "main": {
+        "x": 80,
+        "width": 1280
+      },
+      "footer": {
+        "x": 0,
+        "width": 1440
+      },
+      "footerInner": {
+        "x": 80,
+        "width": 1280
+      },
+      "images": []
+    },
+    {
+      "name": "home",
+      "path": "/",
+      "width": 1920,
+      "status": 200,
+      "viewport": 1920,
+      "scrollWidth": 1920,
+      "header": {
+        "x": 320,
+        "width": 1280
+      },
+      "main": {
+        "x": 320,
+        "width": 1280
+      },
+      "footer": {
+        "x": 0,
+        "width": 1920
+      },
+      "footerInner": {
+        "x": 320,
+        "width": 1280
+      },
+      "images": [
+        {
+          "sizes": "(min-width: 960px) 60vw, 100vw",
+          "slot": 709.328125,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/hero",
+          "naturalWidth": 1152
+        },
+        {
+          "sizes": "(min-width: 960px) 28vw, 100vw",
+          "slot": 205.125,
+          "currentSrc": "http://127.0.0.1:8012/media/a48397fd-5c81-4b03-b68d-6a57b11f3eca/card",
+          "naturalWidth": 537
+        },
+        {
+          "sizes": "(min-width: 960px) 28vw, 100vw",
+          "slot": 205.125,
+          "currentSrc": "http://127.0.0.1:8012/media/1ae2962a-0b9d-4912-81c3-6878fa9a512d/card",
+          "naturalWidth": 537
+        },
+        {
+          "sizes": "(min-width: 960px) 28vw, 100vw",
+          "slot": 205.125,
+          "currentSrc": "http://127.0.0.1:8012/media/319e40c3-65b5-4128-be5e-e77d17feb120/card",
+          "naturalWidth": 537
+        },
+        {
+          "sizes": "(min-width: 960px) 60vw, 100vw",
+          "slot": 443.921875,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/hero",
+          "naturalWidth": 1152
+        },
+        {
+          "sizes": "(min-width: 960px) 28vw, 100vw",
+          "slot": 386.03125,
+          "currentSrc": "http://127.0.0.1:8012/media/a48397fd-5c81-4b03-b68d-6a57b11f3eca/card",
+          "naturalWidth": 537
+        },
+        {
+          "sizes": "(min-width: 960px) 28vw, 100vw",
+          "slot": 386.03125,
+          "currentSrc": "http://127.0.0.1:8012/media/1ae2962a-0b9d-4912-81c3-6878fa9a512d/card",
+          "naturalWidth": 537
+        },
+        {
+          "sizes": "(min-width: 960px) 28vw, 100vw",
+          "slot": 331.515625,
+          "currentSrc": "http://127.0.0.1:8012/media/319e40c3-65b5-4128-be5e-e77d17feb120/card",
+          "naturalWidth": 537
+        }
+      ]
+    },
+    {
+      "name": "explore",
+      "path": "/explore",
+      "width": 1920,
+      "status": 200,
+      "viewport": 1920,
+      "scrollWidth": 1920,
+      "header": {
+        "x": 320,
+        "width": 1280
+      },
+      "main": {
+        "x": 320,
+        "width": 1280
+      },
+      "footer": {
+        "x": 0,
+        "width": 1920
+      },
+      "footerInner": {
+        "x": 320,
+        "width": 1280
+      },
+      "images": [
+        {
+          "sizes": "(min-width: 960px) 45vw, 100vw",
+          "slot": 515.046875,
+          "currentSrc": "http://127.0.0.1:8012/media/5ea1ed76-5a91-42f7-a99c-f98e47fa5b48/card",
+          "naturalWidth": 864
+        },
+        {
+          "sizes": "(min-width: 960px) 45vw, 100vw",
+          "slot": 396.1875,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/hero",
+          "naturalWidth": 863
+        },
+        {
+          "sizes": "(min-width: 960px) 45vw, 100vw",
+          "slot": 336.75,
+          "currentSrc": "http://127.0.0.1:8012/media/02777d29-5588-4656-bcb9-db59a69db7db/card",
+          "naturalWidth": 864
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 290.71875,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/card",
+          "naturalWidth": 537
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 290.71875,
+          "currentSrc": "http://127.0.0.1:8012/media/a48397fd-5c81-4b03-b68d-6a57b11f3eca/card",
+          "naturalWidth": 537
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 290.71875,
+          "currentSrc": "http://127.0.0.1:8012/media/1ae2962a-0b9d-4912-81c3-6878fa9a512d/card",
+          "naturalWidth": 537
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 290.71875,
+          "currentSrc": "http://127.0.0.1:8012/media/319e40c3-65b5-4128-be5e-e77d17feb120/card",
+          "naturalWidth": 537
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 290.71875,
+          "currentSrc": "http://127.0.0.1:8012/media/08865e6b-ac7e-41b5-afd6-cd51afbd71dc/card",
+          "naturalWidth": 537
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 290.71875,
+          "currentSrc": "http://127.0.0.1:8012/media/e98b1437-cf5e-4fa3-bc1c-a7f0f7d27c4a/card",
+          "naturalWidth": 537
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 290.71875,
+          "currentSrc": "http://127.0.0.1:8012/media/df1eccf5-31d8-4ced-9976-b5ab3eb4bf08/card",
+          "naturalWidth": 537
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 290.71875,
+          "currentSrc": "http://127.0.0.1:8012/media/b384429b-7613-4ac8-ad5f-a75a6f9a096d/card",
+          "naturalWidth": 537
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 290.71875,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 290.71875,
+          "currentSrc": "http://127.0.0.1:8012/media/02777d29-5588-4656-bcb9-db59a69db7db/card",
+          "naturalWidth": 537
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 290.71875,
+          "currentSrc": "http://127.0.0.1:8012/media/ef02b955-9953-468b-a577-6faea3994c24/card",
+          "naturalWidth": 537
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 290.71875,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 290.71875,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 290.71875,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 290.71875,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 290.71875,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 290.71875,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 290.71875,
+          "currentSrc": "",
+          "naturalWidth": 0
+        }
+      ]
+    },
+    {
+      "name": "visit",
+      "path": "/visit/demo-bara-di-ujung-hari",
+      "width": 1920,
+      "status": 200,
+      "viewport": 1920,
+      "scrollWidth": 1920,
+      "header": {
+        "x": 320,
+        "width": 1280
+      },
+      "main": {
+        "x": 320,
+        "width": 1280
+      },
+      "footer": {
+        "x": 0,
+        "width": 1920
+      },
+      "footerInner": {
+        "x": 320,
+        "width": 1280
+      },
+      "images": [
+        {
+          "sizes": "(min-width: 1280px) 1280px, 100vw",
+          "slot": 1280,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/hero",
+          "naturalWidth": 1280
+        },
+        {
+          "sizes": "(min-width: 960px) 40vw, 100vw",
+          "slot": 552.71875,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/hero",
+          "naturalWidth": 768
+        },
+        {
+          "sizes": "(min-width: 960px) 40vw, 100vw",
+          "slot": 552.71875,
+          "currentSrc": "http://127.0.0.1:8012/media/3f7efed0-b916-4015-82e9-96bdad5b0d38/hero",
+          "naturalWidth": 768
+        },
+        {
+          "sizes": "(min-width: 960px) 60vw, 100vw",
+          "slot": 885.8125,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/hero",
+          "naturalWidth": 1152
+        },
+        {
+          "sizes": "(min-width: 960px) 60vw, 100vw",
+          "slot": 378.1875,
+          "currentSrc": "http://127.0.0.1:8012/media/3f7efed0-b916-4015-82e9-96bdad5b0d38/hero",
+          "naturalWidth": 1152
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 243.359375,
+          "currentSrc": "",
+          "naturalWidth": 0
+        }
+      ]
+    },
+    {
+      "name": "place",
+      "path": "/place/demo-bara-senja",
+      "width": 1920,
+      "status": 200,
+      "viewport": 1920,
+      "scrollWidth": 1920,
+      "header": {
+        "x": 320,
+        "width": 1280
+      },
+      "main": {
+        "x": 320,
+        "width": 1280
+      },
+      "footer": {
+        "x": 0,
+        "width": 1920
+      },
+      "footerInner": {
+        "x": 320,
+        "width": 1280
+      },
+      "images": [
+        {
+          "sizes": "(min-width: 768px) 55vw, 100vw",
+          "slot": 560,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/hero",
+          "naturalWidth": 1056
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 361.90625,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/card",
+          "naturalWidth": 537
+        },
+        {
+          "sizes": "(min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 361.90625,
+          "currentSrc": "http://127.0.0.1:8012/media/8681e2a0-a400-4168-8091-c87a24d48b88/card",
+          "naturalWidth": 537
+        }
+      ]
+    },
+    {
+      "name": "error",
+      "path": "/missing-error-page-preview",
+      "width": 1920,
+      "status": 404,
+      "viewport": 1920,
+      "scrollWidth": 1920,
+      "header": {
+        "x": 320,
+        "width": 1280
+      },
+      "main": {
+        "x": 320,
+        "width": 1280
+      },
+      "footer": {
+        "x": 0,
+        "width": 1920
+      },
+      "footerInner": {
+        "x": 320,
+        "width": 1280
+      },
+      "images": []
+    }
+  ],
+  "pageErrors": [],
+  "routes": {
+    "home": "/",
+    "explore": "/explore",
+    "visit": "/visit/demo-bara-di-ujung-hari",
+    "place": "/place/demo-bara-senja",
+    "error": "/missing-error-page-preview"
+  }
+}

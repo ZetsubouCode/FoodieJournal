@@ -1,0 +1,9 @@
+
+Fatal error: Uncaught RuntimeException: Usage: php tools/visual-qa.php prepare|serve photo|empty in D:\Github repo\FoodieJournal\tools\visual-qa.php:14
+Stack trace:
+#0 {main}
+  thrown in D:\Github repo\FoodieJournal\tools\visual-qa.php on line 14
+PHP Fatal error:  Uncaught RuntimeException: Usage: php tools/visual-qa.php prepare|serve photo|empty in D:\Github repo\FoodieJournal\tools\visual-qa.php:14
+Stack trace:
+#0 {main}
+  thrown in D:\Github repo\FoodieJournal\tools\visual-qa.php on line 14

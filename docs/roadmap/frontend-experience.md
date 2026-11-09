@@ -1,12 +1,13 @@
 # Frontend experience implementation roadmap
 
-Approved planning direction, 8 November 2026. **These tasks are pending.** This documentation phase implements none of the UI changes below. Start from [baseline findings](../implementation-status.md), follow [authority](../product-vision.md#authority-and-read-order), and preserve [mechanical contracts](../motion-interaction.md). Work in small reviewable changes; no blanket rewrite or new dependency is justified.
+Approved planning direction, 8 November 2026; status updated 9 November. **P0-1 through P0-4 are complete; P1 onward is pending.** The original documentation phase implemented no UI changes. P0-1 through P0-4 were subsequently implemented and verified as scoped changes. Start from [baseline findings](../implementation-status.md), follow [authority](../product-vision.md#authority-and-read-order), and preserve [mechanical contracts](../motion-interaction.md). Work in small reviewable changes; no blanket rewrite or new dependency is justified.
 
 Order: P0 shared identity, state clarity and baselines → P1 physical response → P2 discovery → P3 storytelling → P4 integrated gates. Correctness/accessibility failures found during a later phase move ahead of creative work. Each task updates status, relevant contract and evidence. Keep screenshots deterministic and fixtures isolated.
 
 ## P0-1 — Restore navigation feedback
 
-- **Objective / current:** A01; shared chrome has only a static active underline. Restore the historically approved warm hover fill using one pseudo-element and semantic duration/accent tokens.
+- **Status:** **Complete, 9 November 2026.** Shared CSS and generated error CSS now restore the hover contract; [verification and 30 captures](../qa/navigation-hover-progress/verification.md). Five focused browser cases, three existing browser regressions and nine PHP tests passed.
+- **Objective / prior behavior:** A01; shared chrome had only a static active underline. Restored the historically approved warm hover fill using one pseudo-element and existing semantic duration/accent tokens.
 - **Files:** `resources/css/public-chrome.css`, `tokens.css` only if a semantic token is genuinely missing, `tests/Browser/homepage.spec.js` or one shared-chrome case, standalone error build outputs; contracts/status/QA.
 - **Dependencies:** none; precedes final P0 screenshot approval. No navigation code change.
 - **Acceptance:** inactive hover fills left→right from 0→1 in 220ms; exits in 140ms; re-entry reverses smoothly; active stays full after leave; focus-visible shows immediate line plus outline; reduced motion is immediate. Line is thin copper/amber, no layout shift or navigation delay. All public routes/errors consume the same rule.
@@ -15,7 +16,8 @@ Order: P0 shared identity, state clarity and baselines → P1 physical response 
 
 ## P0-2 — Wide shell and environment
 
-- **Objective / current:** A02/A03; existing shared 80rem cap wastes desktop width; atmosphere variants and reduced footer hierarchy weaken older archival mood. Implement [measurable shell](../art-direction.md#wide-responsive-shell) and align the public world.
+- **Status:** **Complete, 9 November 2026.** Separate wide public shell, shared warm atmosphere/footer, capped source artwork and responsive media sizing are implemented; [before/after evidence and checks](../qa/wide-shell/verification.md). Admin retains its 80rem geometry.
+- **Objective / prior behavior:** A02/A03; the shared 80rem cap wasted desktop width; atmosphere variants and reduced footer hierarchy weakened older archival mood. Implement [measurable shell](../art-direction.md#wide-responsive-shell) and align the public world.
 - **Files:** `resources/css/tokens.css`, `base.css`, `public-chrome.css`, `cinematic.css`, `home.css`, `dossier.css` only for affected child geometry; `components/layout/public.blade.php`, site header/footer only if required; `tools/build-error-css.mjs` and generated error CSS; image `sizes` consumers and viewport tests.
 - **Dependencies:** P0-1 can land separately; P0-4 captures before/after. Check all root consumers of `.container`, including admin and standalone errors, before changing the global token. Scope public width separately if necessary to preserve pragmatic admin geometry.
 - **Acceptance:** shell approximately 288/343/358/720/956/1344/1792px at 320/375/390/768/1024/1440/1920 with 16px root; header/main/footer inner align within 1px; footer/background full width; no doubled gutters. Narrative remains 60–75ch. Tube/LED/source geometry and readable mobile controls survive 959/960 breakpoint and 200% text. Update `sizes` for wider actual media slots; never upscale source artwork arbitrarily or crop controls.
@@ -24,7 +26,8 @@ Order: P0 shared identity, state clarity and baselines → P1 physical response 
 
 ## P0-3 — Readability and honest states
 
-- **Objective / current:** A07/A10; generic Explore no-match copy is also used for a new journal; tiny result metadata and inconsistent local sizing need review. Define first-run/filtered/partial states before decorative additions.
+- **Status:** **Complete, 9 November 2026.** Unpublished/filtered/page-empty/no-food states, explicit no-picks copy, readable metadata, measured touch actions and enlarged-text heading/caption reflow are implemented; [isolated fixture verification and 34 captures](../qa/readability-states/verification.md). P0-1 navigation and P0-2 shell/cabinet geometry are preserved.
+- **Objective / prior behavior:** A07/A10; generic Explore no-match copy also appeared for a new journal; tiny result metadata and inconsistent local sizing weakened readability. First-run/filtered/partial states now have distinct copy and appropriate recovery.
 - **Files:** `public/home*.blade.php`, `public/explore-fragment.blade.php`, discovery empty templates, domain card/image/empty-state/button components, `components.css`, `discovery.css`, `visit-card.css`, `PublicController` only if a bounded published-existence signal is necessary; feature/browser fixtures and tests.
 - **Dependencies:** P0-2 geometry and existing domain/media gates. Reuse empty/fallback/button primitives, not a parallel state library.
 - **Acceptance:** zero published visits says archive not published yet; filtered zero says criteria matched nothing and keeps chips/query/reset. No recommendations, photos, ratings or prices are separately honest. Main text ≥1rem, supporting metadata normally ≥.875rem; smaller engraving must stay secondary and readable. At 200% text, responsive headings should wrap at word boundaries where practicable; fix the captured narrow Explore word split without preventing enlargement. Primary touch actions ≥44×44px, equal-level groups share height/min-width/padding, visible focus/disabled state. No fake Maps/score/photo/guest-create CTA.
@@ -33,7 +36,8 @@ Order: P0 shared identity, state clarity and baselines → P1 physical response 
 
 ## P0-4 — Reviewed visual and state baselines
 
-- **Objective / current:** A12; screenshots exist but no pixel regression matcher guards the shared experience. Add a small deterministic baseline set, not hundreds of brittle snapshots.
+- **Status:** **Complete, 9 November 2026.** Forty reviewed PNGs in 23 cases cover the required hero/footer matrix and ten state crops. Dedicated fixed-date fixtures, pinned Windows Chromium config, no default snapshot updates, repeated clean comparisons and an 8px negative control are implemented; [manifest, proof, video and verification](../qa/visual-baselines/verification.md). Existing UI and P0-1/P0-2/P0-3 evidence are unchanged.
+- **Objective / prior behavior:** A12; screenshots existed without a pixel matcher. The small reviewed gate now compares pixels alongside geometry/state/network assertions.
 - **Files:** existing Playwright config/tests and QA capture helpers; dedicated fixtures under existing isolated preparation tools; `docs/qa/` baseline manifest and verification notes. No owner fixtures.
 - **Dependencies:** capture current baseline before P0 edits, approve new baselines only after P0-1/2/3 review. Fixed font load, image decode, viewport, session state and content; pin browser/build metadata.
 - **Acceptance:** reviewed snapshots for 390/1440/1920 Home/Explore/Visit/Place/error hero/footer; representative state crops for nav progress, off/on/print, filter/empty/error and viewer. Use `toHaveScreenshot` with documented tolerance justified by text rasterization; never blindly update snapshots to silence a failure. Geometry/state/network assertions remain beside pixels.
@@ -88,11 +92,10 @@ Order: P0 shared identity, state clarity and baselines → P1 physical response 
 
 ## Must fix versus experiments
 
-Must fix: confirmed hover regression, shared wide shell/identity contract, unreadable/undersized essential controls, misleading empty/wait/error behavior, stale state/identity/privacy failures and baseline gaps. Preserve working content/query/mechanics throughout.
+P0-1 closed the hover regression, P0-2 delivered the wide shell/shared environment, and P0-3 delivered honest empty/partial states and essential readability/control sizing. P0-4 now adds reviewed pixel baselines and a demonstrated failure/reversion check. Remaining gates include real-wait placeholders (P2), integrated access/device checks (P4), and any newly reproduced stale-state/privacy failure. Preserve working content/query/mechanics throughout.
 
 Creative experiments after those gates: local latch resistance, short ready-paper retraction, deeper photo/note bento, shallow 3D selection layers and subtle story reveals. Evaluate one hypothesis at a time against discoverability, reading effort and measured rendering cost. No dependency or whole-page rewrite is a default deliverable.
 
 ## Next implementation prompts
 
-1. “Implement only P0-1 in `docs/roadmap/frontend-experience.md`. Read AGENTS and canonical contracts, restore shared copper hover-progress behavior including standalone errors, add focused state/frame regression coverage, preserve native navigation, and update status/evidence.”
-2. “Implement only P0-2 after capturing the current baseline. Apply the canonical wide public shell and archival environment/footer contract across Home/Explore/Visit/Place/errors, retain admin practicality and exact cabinet geometry, update responsive image sizes, verify the complete width matrix and record before/after evidence.”
+1. “Implement only P1 in `docs/roadmap/frontend-experience.md`. Read the completed P0 evidence and locked mechanical contract, storyboard one physical-response refinement, preserve exact-visit identity/cancellation/geometry and all fallbacks, then verify against isolated fixtures and the reviewed visual gate. Update status/evidence.”

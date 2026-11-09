@@ -1,0 +1,2473 @@
+{
+  "phase": "after",
+  "date": "2026-11-09",
+  "fixture": "Existing isolated cinematic.sqlite / cinematic-media; fictional demo photography, no owner data.",
+  "browser": "156.0.8078.4",
+  "pages": [
+    {
+      "name": "home",
+      "path": "/",
+      "width": 320,
+      "status": 200,
+      "viewport": 320,
+      "scrollWidth": 320,
+      "header": {
+        "x": 16,
+        "width": 288
+      },
+      "main": {
+        "x": 16,
+        "width": 288
+      },
+      "footer": {
+        "x": 0,
+        "width": 320
+      },
+      "footerInner": {
+        "x": 16,
+        "width": 288
+      },
+      "images": [
+        {
+          "sizes": "auto, (min-width: 960px) 60vw, 100vw",
+          "slot": 288,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/card",
+          "naturalWidth": 288
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw",
+          "slot": 108.796875,
+          "currentSrc": "http://127.0.0.1:8012/media/a48397fd-5c81-4b03-b68d-6a57b11f3eca/thumbnail",
+          "naturalWidth": 109
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw",
+          "slot": 108.796875,
+          "currentSrc": "http://127.0.0.1:8012/media/1ae2962a-0b9d-4912-81c3-6878fa9a512d/thumbnail",
+          "naturalWidth": 109
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw",
+          "slot": 108.796875,
+          "currentSrc": "http://127.0.0.1:8012/media/319e40c3-65b5-4128-be5e-e77d17feb120/thumbnail",
+          "naturalWidth": 109
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 60vw, 100vw",
+          "slot": 288,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/card",
+          "naturalWidth": 288
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw",
+          "slot": 136,
+          "currentSrc": "http://127.0.0.1:8012/media/a48397fd-5c81-4b03-b68d-6a57b11f3eca/thumbnail",
+          "naturalWidth": 136
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw",
+          "slot": 136,
+          "currentSrc": "http://127.0.0.1:8012/media/1ae2962a-0b9d-4912-81c3-6878fa9a512d/thumbnail",
+          "naturalWidth": 136
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw",
+          "slot": 108.796875,
+          "currentSrc": "http://127.0.0.1:8012/media/319e40c3-65b5-4128-be5e-e77d17feb120/thumbnail",
+          "naturalWidth": 109
+        }
+      ]
+    },
+    {
+      "name": "explore",
+      "path": "/explore",
+      "width": 320,
+      "status": 200,
+      "viewport": 320,
+      "scrollWidth": 320,
+      "header": {
+        "x": 16,
+        "width": 288
+      },
+      "main": {
+        "x": 16,
+        "width": 288
+      },
+      "footer": {
+        "x": 0,
+        "width": 320
+      },
+      "footerInner": {
+        "x": 16,
+        "width": 288
+      },
+      "images": [
+        {
+          "sizes": "(min-width: 1920px) 728px, (min-width: 768px) 42vw, calc(100vw - 2rem)",
+          "slot": 288,
+          "currentSrc": "http://127.0.0.1:8012/media/5ea1ed76-5a91-42f7-a99c-f98e47fa5b48/thumbnail",
+          "naturalWidth": 288
+        },
+        {
+          "sizes": "auto, (min-width: 1920px) 560px, (min-width: 768px) 32vw, 50vw",
+          "slot": 138,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/thumbnail",
+          "naturalWidth": 138
+        },
+        {
+          "sizes": "auto, (min-width: 1920px) 560px, (min-width: 768px) 32vw, 50vw",
+          "slot": 138,
+          "currentSrc": "http://127.0.0.1:8012/media/02777d29-5588-4656-bcb9-db59a69db7db/thumbnail",
+          "naturalWidth": 138
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 288,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/card",
+          "naturalWidth": 288
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 288,
+          "currentSrc": "http://127.0.0.1:8012/media/a48397fd-5c81-4b03-b68d-6a57b11f3eca/thumbnail",
+          "naturalWidth": 288
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 288,
+          "currentSrc": "http://127.0.0.1:8012/media/1ae2962a-0b9d-4912-81c3-6878fa9a512d/thumbnail",
+          "naturalWidth": 288
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 288,
+          "currentSrc": "http://127.0.0.1:8012/media/319e40c3-65b5-4128-be5e-e77d17feb120/thumbnail",
+          "naturalWidth": 288
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 288,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 288,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 288,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 288,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 288,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 288,
+          "currentSrc": "http://127.0.0.1:8012/media/02777d29-5588-4656-bcb9-db59a69db7db/thumbnail",
+          "naturalWidth": 288
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 288,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 288,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 288,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 288,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 288,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 288,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 288,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 288,
+          "currentSrc": "",
+          "naturalWidth": 0
+        }
+      ]
+    },
+    {
+      "name": "visit",
+      "path": "/visit/demo-bara-di-ujung-hari",
+      "width": 320,
+      "status": 200,
+      "viewport": 320,
+      "scrollWidth": 320,
+      "header": {
+        "x": 16,
+        "width": 288
+      },
+      "main": {
+        "x": 16,
+        "width": 288
+      },
+      "footer": {
+        "x": 0,
+        "width": 320
+      },
+      "footerInner": {
+        "x": 16,
+        "width": 288
+      },
+      "images": [
+        {
+          "sizes": "(min-width: 1920px) 1792px, (min-width: 1024px) 93.334vw, (min-width: 481px) calc(100vw - 3rem), calc(100vw - 2rem)",
+          "slot": 288,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/card",
+          "naturalWidth": 288
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 40vw, 100vw",
+          "slot": 288,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/card",
+          "naturalWidth": 288
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 40vw, 100vw",
+          "slot": 288,
+          "currentSrc": "http://127.0.0.1:8012/media/3f7efed0-b916-4015-82e9-96bdad5b0d38/thumbnail",
+          "naturalWidth": 288
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 60vw, 100vw",
+          "slot": 288,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/card",
+          "naturalWidth": 288
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 60vw, 100vw",
+          "slot": 136,
+          "currentSrc": "http://127.0.0.1:8012/media/3f7efed0-b916-4015-82e9-96bdad5b0d38/thumbnail",
+          "naturalWidth": 136
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 288,
+          "currentSrc": "",
+          "naturalWidth": 0
+        }
+      ]
+    },
+    {
+      "name": "place",
+      "path": "/place/demo-bara-senja",
+      "width": 320,
+      "status": 200,
+      "viewport": 320,
+      "scrollWidth": 320,
+      "header": {
+        "x": 16,
+        "width": 288
+      },
+      "main": {
+        "x": 16,
+        "width": 288
+      },
+      "footer": {
+        "x": 0,
+        "width": 320
+      },
+      "footerInner": {
+        "x": 16,
+        "width": 288
+      },
+      "images": [
+        {
+          "sizes": "(min-width: 1920px) 800px, (min-width: 768px) 46vw, calc(100vw - 2rem)",
+          "slot": 288,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/card",
+          "naturalWidth": 288
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 288,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/card",
+          "naturalWidth": 288
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 288,
+          "currentSrc": "http://127.0.0.1:8012/media/8681e2a0-a400-4168-8091-c87a24d48b88/card",
+          "naturalWidth": 288
+        }
+      ]
+    },
+    {
+      "name": "error",
+      "path": "/missing-error-page-preview",
+      "width": 320,
+      "status": 404,
+      "viewport": 320,
+      "scrollWidth": 320,
+      "header": {
+        "x": 16,
+        "width": 288
+      },
+      "main": {
+        "x": 16,
+        "width": 288
+      },
+      "footer": {
+        "x": 0,
+        "width": 320
+      },
+      "footerInner": {
+        "x": 16,
+        "width": 288
+      },
+      "images": []
+    },
+    {
+      "name": "home",
+      "path": "/",
+      "width": 375,
+      "status": 200,
+      "viewport": 375,
+      "scrollWidth": 375,
+      "header": {
+        "x": 16,
+        "width": 343
+      },
+      "main": {
+        "x": 16,
+        "width": 343
+      },
+      "footer": {
+        "x": 0,
+        "width": 375
+      },
+      "footerInner": {
+        "x": 16,
+        "width": 343
+      },
+      "images": [
+        {
+          "sizes": "auto, (min-width: 960px) 60vw, 100vw",
+          "slot": 343,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/card",
+          "naturalWidth": 343
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw",
+          "slot": 130.796875,
+          "currentSrc": "http://127.0.0.1:8012/media/a48397fd-5c81-4b03-b68d-6a57b11f3eca/thumbnail",
+          "naturalWidth": 131
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw",
+          "slot": 130.796875,
+          "currentSrc": "http://127.0.0.1:8012/media/1ae2962a-0b9d-4912-81c3-6878fa9a512d/thumbnail",
+          "naturalWidth": 131
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw",
+          "slot": 130.796875,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 60vw, 100vw",
+          "slot": 343,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/card",
+          "naturalWidth": 343
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw",
+          "slot": 163.5,
+          "currentSrc": "http://127.0.0.1:8012/media/a48397fd-5c81-4b03-b68d-6a57b11f3eca/thumbnail",
+          "naturalWidth": 164
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw",
+          "slot": 163.5,
+          "currentSrc": "http://127.0.0.1:8012/media/1ae2962a-0b9d-4912-81c3-6878fa9a512d/thumbnail",
+          "naturalWidth": 164
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw",
+          "slot": 130.796875,
+          "currentSrc": "",
+          "naturalWidth": 0
+        }
+      ]
+    },
+    {
+      "name": "explore",
+      "path": "/explore",
+      "width": 375,
+      "status": 200,
+      "viewport": 375,
+      "scrollWidth": 375,
+      "header": {
+        "x": 16,
+        "width": 343
+      },
+      "main": {
+        "x": 16,
+        "width": 343
+      },
+      "footer": {
+        "x": 0,
+        "width": 375
+      },
+      "footerInner": {
+        "x": 16,
+        "width": 343
+      },
+      "images": [
+        {
+          "sizes": "(min-width: 1920px) 728px, (min-width: 768px) 42vw, calc(100vw - 2rem)",
+          "slot": 343,
+          "currentSrc": "http://127.0.0.1:8012/media/5ea1ed76-5a91-42f7-a99c-f98e47fa5b48/thumbnail",
+          "naturalWidth": 343
+        },
+        {
+          "sizes": "auto, (min-width: 1920px) 560px, (min-width: 768px) 32vw, 50vw",
+          "slot": 165.5,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/thumbnail",
+          "naturalWidth": 166
+        },
+        {
+          "sizes": "auto, (min-width: 1920px) 560px, (min-width: 768px) 32vw, 50vw",
+          "slot": 165.5,
+          "currentSrc": "http://127.0.0.1:8012/media/02777d29-5588-4656-bcb9-db59a69db7db/thumbnail",
+          "naturalWidth": 166
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 343,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/card",
+          "naturalWidth": 343
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 343,
+          "currentSrc": "http://127.0.0.1:8012/media/a48397fd-5c81-4b03-b68d-6a57b11f3eca/thumbnail",
+          "naturalWidth": 343
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 343,
+          "currentSrc": "http://127.0.0.1:8012/media/1ae2962a-0b9d-4912-81c3-6878fa9a512d/thumbnail",
+          "naturalWidth": 343
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 343,
+          "currentSrc": "http://127.0.0.1:8012/media/319e40c3-65b5-4128-be5e-e77d17feb120/thumbnail",
+          "naturalWidth": 343
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 343,
+          "currentSrc": "http://127.0.0.1:8012/media/08865e6b-ac7e-41b5-afd6-cd51afbd71dc/thumbnail",
+          "naturalWidth": 343
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 343,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 343,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 343,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 343,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 343,
+          "currentSrc": "http://127.0.0.1:8012/media/02777d29-5588-4656-bcb9-db59a69db7db/thumbnail",
+          "naturalWidth": 343
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 343,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 343,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 343,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 343,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 343,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 343,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 343,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 343,
+          "currentSrc": "",
+          "naturalWidth": 0
+        }
+      ]
+    },
+    {
+      "name": "visit",
+      "path": "/visit/demo-bara-di-ujung-hari",
+      "width": 375,
+      "status": 200,
+      "viewport": 375,
+      "scrollWidth": 375,
+      "header": {
+        "x": 16,
+        "width": 343
+      },
+      "main": {
+        "x": 16,
+        "width": 343
+      },
+      "footer": {
+        "x": 0,
+        "width": 375
+      },
+      "footerInner": {
+        "x": 16,
+        "width": 343
+      },
+      "images": [
+        {
+          "sizes": "(min-width: 1920px) 1792px, (min-width: 1024px) 93.334vw, (min-width: 481px) calc(100vw - 3rem), calc(100vw - 2rem)",
+          "slot": 343,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/card",
+          "naturalWidth": 343
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 40vw, 100vw",
+          "slot": 343,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/card",
+          "naturalWidth": 343
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 40vw, 100vw",
+          "slot": 343,
+          "currentSrc": "http://127.0.0.1:8012/media/3f7efed0-b916-4015-82e9-96bdad5b0d38/card",
+          "naturalWidth": 343
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 60vw, 100vw",
+          "slot": 343,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/card",
+          "naturalWidth": 343
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 60vw, 100vw",
+          "slot": 163.5,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 343,
+          "currentSrc": "",
+          "naturalWidth": 0
+        }
+      ]
+    },
+    {
+      "name": "place",
+      "path": "/place/demo-bara-senja",
+      "width": 375,
+      "status": 200,
+      "viewport": 375,
+      "scrollWidth": 375,
+      "header": {
+        "x": 16,
+        "width": 343
+      },
+      "main": {
+        "x": 16,
+        "width": 343
+      },
+      "footer": {
+        "x": 0,
+        "width": 375
+      },
+      "footerInner": {
+        "x": 16,
+        "width": 343
+      },
+      "images": [
+        {
+          "sizes": "(min-width: 1920px) 800px, (min-width: 768px) 46vw, calc(100vw - 2rem)",
+          "slot": 343,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/card",
+          "naturalWidth": 343
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 343,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/card",
+          "naturalWidth": 343
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 343,
+          "currentSrc": "http://127.0.0.1:8012/media/8681e2a0-a400-4168-8091-c87a24d48b88/card",
+          "naturalWidth": 343
+        }
+      ]
+    },
+    {
+      "name": "error",
+      "path": "/missing-error-page-preview",
+      "width": 375,
+      "status": 404,
+      "viewport": 375,
+      "scrollWidth": 375,
+      "header": {
+        "x": 16,
+        "width": 343
+      },
+      "main": {
+        "x": 16,
+        "width": 343
+      },
+      "footer": {
+        "x": 0,
+        "width": 375
+      },
+      "footerInner": {
+        "x": 16,
+        "width": 343
+      },
+      "images": []
+    },
+    {
+      "name": "home",
+      "path": "/",
+      "width": 390,
+      "status": 200,
+      "viewport": 390,
+      "scrollWidth": 390,
+      "header": {
+        "x": 16,
+        "width": 358
+      },
+      "main": {
+        "x": 16,
+        "width": 358
+      },
+      "footer": {
+        "x": 0,
+        "width": 390
+      },
+      "footerInner": {
+        "x": 16,
+        "width": 358
+      },
+      "images": [
+        {
+          "sizes": "auto, (min-width: 960px) 60vw, 100vw",
+          "slot": 358,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/card",
+          "naturalWidth": 357
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw",
+          "slot": 136.796875,
+          "currentSrc": "http://127.0.0.1:8012/media/a48397fd-5c81-4b03-b68d-6a57b11f3eca/thumbnail",
+          "naturalWidth": 137
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw",
+          "slot": 136.796875,
+          "currentSrc": "http://127.0.0.1:8012/media/1ae2962a-0b9d-4912-81c3-6878fa9a512d/thumbnail",
+          "naturalWidth": 137
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw",
+          "slot": 136.796875,
+          "currentSrc": "http://127.0.0.1:8012/media/319e40c3-65b5-4128-be5e-e77d17feb120/thumbnail",
+          "naturalWidth": 137
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 60vw, 100vw",
+          "slot": 358,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/card",
+          "naturalWidth": 357
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw",
+          "slot": 171,
+          "currentSrc": "http://127.0.0.1:8012/media/a48397fd-5c81-4b03-b68d-6a57b11f3eca/thumbnail",
+          "naturalWidth": 171
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw",
+          "slot": 171,
+          "currentSrc": "http://127.0.0.1:8012/media/1ae2962a-0b9d-4912-81c3-6878fa9a512d/thumbnail",
+          "naturalWidth": 171
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw",
+          "slot": 136.796875,
+          "currentSrc": "http://127.0.0.1:8012/media/319e40c3-65b5-4128-be5e-e77d17feb120/thumbnail",
+          "naturalWidth": 137
+        }
+      ]
+    },
+    {
+      "name": "explore",
+      "path": "/explore",
+      "width": 390,
+      "status": 200,
+      "viewport": 390,
+      "scrollWidth": 390,
+      "header": {
+        "x": 16,
+        "width": 358
+      },
+      "main": {
+        "x": 16,
+        "width": 358
+      },
+      "footer": {
+        "x": 0,
+        "width": 390
+      },
+      "footerInner": {
+        "x": 16,
+        "width": 358
+      },
+      "images": [
+        {
+          "sizes": "(min-width: 1920px) 728px, (min-width: 768px) 42vw, calc(100vw - 2rem)",
+          "slot": 358,
+          "currentSrc": "http://127.0.0.1:8012/media/5ea1ed76-5a91-42f7-a99c-f98e47fa5b48/thumbnail",
+          "naturalWidth": 358
+        },
+        {
+          "sizes": "auto, (min-width: 1920px) 560px, (min-width: 768px) 32vw, 50vw",
+          "slot": 173,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/thumbnail",
+          "naturalWidth": 173
+        },
+        {
+          "sizes": "auto, (min-width: 1920px) 560px, (min-width: 768px) 32vw, 50vw",
+          "slot": 173,
+          "currentSrc": "http://127.0.0.1:8012/media/02777d29-5588-4656-bcb9-db59a69db7db/thumbnail",
+          "naturalWidth": 172
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 358,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/card",
+          "naturalWidth": 357
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 358,
+          "currentSrc": "http://127.0.0.1:8012/media/a48397fd-5c81-4b03-b68d-6a57b11f3eca/thumbnail",
+          "naturalWidth": 358
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 358,
+          "currentSrc": "http://127.0.0.1:8012/media/1ae2962a-0b9d-4912-81c3-6878fa9a512d/thumbnail",
+          "naturalWidth": 358
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 358,
+          "currentSrc": "http://127.0.0.1:8012/media/319e40c3-65b5-4128-be5e-e77d17feb120/thumbnail",
+          "naturalWidth": 358
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 358,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 358,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 358,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 358,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 358,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 358,
+          "currentSrc": "http://127.0.0.1:8012/media/02777d29-5588-4656-bcb9-db59a69db7db/thumbnail",
+          "naturalWidth": 358
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 358,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 358,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 358,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 358,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 358,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 358,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 358,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 358,
+          "currentSrc": "",
+          "naturalWidth": 0
+        }
+      ]
+    },
+    {
+      "name": "visit",
+      "path": "/visit/demo-bara-di-ujung-hari",
+      "width": 390,
+      "status": 200,
+      "viewport": 390,
+      "scrollWidth": 390,
+      "header": {
+        "x": 16,
+        "width": 358
+      },
+      "main": {
+        "x": 16,
+        "width": 358
+      },
+      "footer": {
+        "x": 0,
+        "width": 390
+      },
+      "footerInner": {
+        "x": 16,
+        "width": 358
+      },
+      "images": [
+        {
+          "sizes": "(min-width: 1920px) 1792px, (min-width: 1024px) 93.334vw, (min-width: 481px) calc(100vw - 3rem), calc(100vw - 2rem)",
+          "slot": 358,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/card",
+          "naturalWidth": 357
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 40vw, 100vw",
+          "slot": 358,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/card",
+          "naturalWidth": 357
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 40vw, 100vw",
+          "slot": 358,
+          "currentSrc": "http://127.0.0.1:8012/media/3f7efed0-b916-4015-82e9-96bdad5b0d38/card",
+          "naturalWidth": 357
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 60vw, 100vw",
+          "slot": 358,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/card",
+          "naturalWidth": 357
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 60vw, 100vw",
+          "slot": 171,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 358,
+          "currentSrc": "",
+          "naturalWidth": 0
+        }
+      ]
+    },
+    {
+      "name": "place",
+      "path": "/place/demo-bara-senja",
+      "width": 390,
+      "status": 200,
+      "viewport": 390,
+      "scrollWidth": 390,
+      "header": {
+        "x": 16,
+        "width": 358
+      },
+      "main": {
+        "x": 16,
+        "width": 358
+      },
+      "footer": {
+        "x": 0,
+        "width": 390
+      },
+      "footerInner": {
+        "x": 16,
+        "width": 358
+      },
+      "images": [
+        {
+          "sizes": "(min-width: 1920px) 800px, (min-width: 768px) 46vw, calc(100vw - 2rem)",
+          "slot": 358,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/card",
+          "naturalWidth": 357
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 358,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/card",
+          "naturalWidth": 357
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 358,
+          "currentSrc": "http://127.0.0.1:8012/media/8681e2a0-a400-4168-8091-c87a24d48b88/card",
+          "naturalWidth": 357
+        }
+      ]
+    },
+    {
+      "name": "error",
+      "path": "/missing-error-page-preview",
+      "width": 390,
+      "status": 404,
+      "viewport": 390,
+      "scrollWidth": 390,
+      "header": {
+        "x": 16,
+        "width": 358
+      },
+      "main": {
+        "x": 16,
+        "width": 358
+      },
+      "footer": {
+        "x": 0,
+        "width": 390
+      },
+      "footerInner": {
+        "x": 16,
+        "width": 358
+      },
+      "images": []
+    },
+    {
+      "name": "home",
+      "path": "/",
+      "width": 768,
+      "status": 200,
+      "viewport": 768,
+      "scrollWidth": 768,
+      "header": {
+        "x": 24,
+        "width": 720
+      },
+      "main": {
+        "x": 24,
+        "width": 720
+      },
+      "footer": {
+        "x": 0,
+        "width": 768
+      },
+      "footerInner": {
+        "x": 24,
+        "width": 720
+      },
+      "images": [
+        {
+          "sizes": "auto, (min-width: 960px) 60vw, 100vw",
+          "slot": 720,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/hero",
+          "naturalWidth": 720
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw",
+          "slot": 229.328125,
+          "currentSrc": "http://127.0.0.1:8012/media/a48397fd-5c81-4b03-b68d-6a57b11f3eca/thumbnail",
+          "naturalWidth": 229
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw",
+          "slot": 229.328125,
+          "currentSrc": "http://127.0.0.1:8012/media/1ae2962a-0b9d-4912-81c3-6878fa9a512d/thumbnail",
+          "naturalWidth": 229
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw",
+          "slot": 229.328125,
+          "currentSrc": "http://127.0.0.1:8012/media/319e40c3-65b5-4128-be5e-e77d17feb120/thumbnail",
+          "naturalWidth": 229
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 60vw, 100vw",
+          "slot": 348,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/card",
+          "naturalWidth": 348
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw",
+          "slot": 344,
+          "currentSrc": "http://127.0.0.1:8012/media/a48397fd-5c81-4b03-b68d-6a57b11f3eca/thumbnail",
+          "naturalWidth": 344
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw",
+          "slot": 344,
+          "currentSrc": "http://127.0.0.1:8012/media/1ae2962a-0b9d-4912-81c3-6878fa9a512d/thumbnail",
+          "naturalWidth": 344
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw",
+          "slot": 295.796875,
+          "currentSrc": "http://127.0.0.1:8012/media/319e40c3-65b5-4128-be5e-e77d17feb120/thumbnail",
+          "naturalWidth": 296
+        }
+      ]
+    },
+    {
+      "name": "explore",
+      "path": "/explore",
+      "width": 768,
+      "status": 200,
+      "viewport": 768,
+      "scrollWidth": 768,
+      "header": {
+        "x": 24,
+        "width": 720
+      },
+      "main": {
+        "x": 24,
+        "width": 720
+      },
+      "footer": {
+        "x": 0,
+        "width": 768
+      },
+      "footerInner": {
+        "x": 24,
+        "width": 720
+      },
+      "images": [
+        {
+          "sizes": "(min-width: 1920px) 728px, (min-width: 768px) 42vw, calc(100vw - 2rem)",
+          "slot": 283.921875,
+          "currentSrc": "http://127.0.0.1:8012/media/5ea1ed76-5a91-42f7-a99c-f98e47fa5b48/thumbnail",
+          "naturalWidth": 322
+        },
+        {
+          "sizes": "auto, (min-width: 1920px) 560px, (min-width: 768px) 32vw, 50vw",
+          "slot": 218.421875,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/card",
+          "naturalWidth": 218
+        },
+        {
+          "sizes": "auto, (min-width: 1920px) 560px, (min-width: 768px) 32vw, 50vw",
+          "slot": 185.640625,
+          "currentSrc": "http://127.0.0.1:8012/media/02777d29-5588-4656-bcb9-db59a69db7db/thumbnail",
+          "naturalWidth": 185
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 720,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/hero",
+          "naturalWidth": 720
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 720,
+          "currentSrc": "http://127.0.0.1:8012/media/a48397fd-5c81-4b03-b68d-6a57b11f3eca/card",
+          "naturalWidth": 720
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 720,
+          "currentSrc": "http://127.0.0.1:8012/media/1ae2962a-0b9d-4912-81c3-6878fa9a512d/card",
+          "naturalWidth": 720
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 720,
+          "currentSrc": "http://127.0.0.1:8012/media/319e40c3-65b5-4128-be5e-e77d17feb120/card",
+          "naturalWidth": 720
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 720,
+          "currentSrc": "http://127.0.0.1:8012/media/08865e6b-ac7e-41b5-afd6-cd51afbd71dc/card",
+          "naturalWidth": 720
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 720,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 720,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 720,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 720,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 720,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 720,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 720,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 720,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 720,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 720,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 720,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 720,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 720,
+          "currentSrc": "",
+          "naturalWidth": 0
+        }
+      ]
+    },
+    {
+      "name": "visit",
+      "path": "/visit/demo-bara-di-ujung-hari",
+      "width": 768,
+      "status": 200,
+      "viewport": 768,
+      "scrollWidth": 768,
+      "header": {
+        "x": 24,
+        "width": 720
+      },
+      "main": {
+        "x": 24,
+        "width": 720
+      },
+      "footer": {
+        "x": 0,
+        "width": 768
+      },
+      "footerInner": {
+        "x": 24,
+        "width": 720
+      },
+      "images": [
+        {
+          "sizes": "(min-width: 1920px) 1792px, (min-width: 1024px) 93.334vw, (min-width: 481px) calc(100vw - 3rem), calc(100vw - 2rem)",
+          "slot": 720,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/hero",
+          "naturalWidth": 720
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 40vw, 100vw",
+          "slot": 313.296875,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/card",
+          "naturalWidth": 313
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 40vw, 100vw",
+          "slot": 313.296875,
+          "currentSrc": "http://127.0.0.1:8012/media/3f7efed0-b916-4015-82e9-96bdad5b0d38/card",
+          "naturalWidth": 312
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 60vw, 100vw",
+          "slot": 720,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/hero",
+          "naturalWidth": 720
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 60vw, 100vw",
+          "slot": 352,
+          "currentSrc": "http://127.0.0.1:8012/media/3f7efed0-b916-4015-82e9-96bdad5b0d38/card",
+          "naturalWidth": 352
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 280.796875,
+          "currentSrc": "",
+          "naturalWidth": 0
+        }
+      ]
+    },
+    {
+      "name": "place",
+      "path": "/place/demo-bara-senja",
+      "width": 768,
+      "status": 200,
+      "viewport": 768,
+      "scrollWidth": 768,
+      "header": {
+        "x": 24,
+        "width": 720
+      },
+      "main": {
+        "x": 24,
+        "width": 720
+      },
+      "footer": {
+        "x": 0,
+        "width": 768
+      },
+      "footerInner": {
+        "x": 24,
+        "width": 720
+      },
+      "images": [
+        {
+          "sizes": "(min-width: 1920px) 800px, (min-width: 768px) 46vw, calc(100vw - 2rem)",
+          "slot": 305.453125,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/card",
+          "naturalWidth": 353
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 280.796875,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/card",
+          "naturalWidth": 281
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 280.796875,
+          "currentSrc": "http://127.0.0.1:8012/media/8681e2a0-a400-4168-8091-c87a24d48b88/card",
+          "naturalWidth": 281
+        }
+      ]
+    },
+    {
+      "name": "error",
+      "path": "/missing-error-page-preview",
+      "width": 768,
+      "status": 404,
+      "viewport": 768,
+      "scrollWidth": 768,
+      "header": {
+        "x": 24,
+        "width": 720
+      },
+      "main": {
+        "x": 24,
+        "width": 720
+      },
+      "footer": {
+        "x": 0,
+        "width": 768
+      },
+      "footerInner": {
+        "x": 24,
+        "width": 720
+      },
+      "images": []
+    },
+    {
+      "name": "home",
+      "path": "/",
+      "width": 1024,
+      "status": 200,
+      "viewport": 1024,
+      "scrollWidth": 1024,
+      "header": {
+        "x": 34.125,
+        "width": 955.734375
+      },
+      "main": {
+        "x": 34.125,
+        "width": 955.734375
+      },
+      "footer": {
+        "x": 0,
+        "width": 1024
+      },
+      "footerInner": {
+        "x": 34.125,
+        "width": 955.734375
+      },
+      "images": [
+        {
+          "sizes": "auto, (min-width: 960px) 60vw, 100vw",
+          "slot": 533.609375,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/card",
+          "naturalWidth": 534
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw",
+          "slot": 151.78125,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw",
+          "slot": 151.78125,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw",
+          "slot": 151.78125,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 60vw, 100vw",
+          "slot": 325.546875,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/card",
+          "naturalWidth": 326
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw",
+          "slot": 283.09375,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw",
+          "slot": 283.078125,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw",
+          "slot": 244.015625,
+          "currentSrc": "",
+          "naturalWidth": 0
+        }
+      ]
+    },
+    {
+      "name": "explore",
+      "path": "/explore",
+      "width": 1024,
+      "status": 200,
+      "viewport": 1024,
+      "scrollWidth": 1024,
+      "header": {
+        "x": 34.125,
+        "width": 955.734375
+      },
+      "main": {
+        "x": 34.125,
+        "width": 955.734375
+      },
+      "footer": {
+        "x": 0,
+        "width": 1024
+      },
+      "footerInner": {
+        "x": 34.125,
+        "width": 955.734375
+      },
+      "images": [
+        {
+          "sizes": "(min-width: 1920px) 728px, (min-width: 768px) 42vw, calc(100vw - 2rem)",
+          "slot": 381.21875,
+          "currentSrc": "http://127.0.0.1:8012/media/5ea1ed76-5a91-42f7-a99c-f98e47fa5b48/card",
+          "naturalWidth": 430
+        },
+        {
+          "sizes": "auto, (min-width: 1920px) 560px, (min-width: 768px) 32vw, 50vw",
+          "slot": 293.25,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/card",
+          "naturalWidth": 293
+        },
+        {
+          "sizes": "auto, (min-width: 1920px) 560px, (min-width: 768px) 32vw, 50vw",
+          "slot": 249.25,
+          "currentSrc": "http://127.0.0.1:8012/media/02777d29-5588-4656-bcb9-db59a69db7db/thumbnail",
+          "naturalWidth": 249
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 216.125,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/card",
+          "naturalWidth": 216
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 216.140625,
+          "currentSrc": "http://127.0.0.1:8012/media/a48397fd-5c81-4b03-b68d-6a57b11f3eca/card",
+          "naturalWidth": 216
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 216.125,
+          "currentSrc": "http://127.0.0.1:8012/media/1ae2962a-0b9d-4912-81c3-6878fa9a512d/card",
+          "naturalWidth": 216
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 216.140625,
+          "currentSrc": "http://127.0.0.1:8012/media/319e40c3-65b5-4128-be5e-e77d17feb120/card",
+          "naturalWidth": 216
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 216.125,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 216.140625,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 216.125,
+          "currentSrc": "http://127.0.0.1:8012/media/df1eccf5-31d8-4ced-9976-b5ab3eb4bf08/thumbnail",
+          "naturalWidth": 216
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 216.140625,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 216.125,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 216.140625,
+          "currentSrc": "http://127.0.0.1:8012/media/02777d29-5588-4656-bcb9-db59a69db7db/thumbnail",
+          "naturalWidth": 216
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 216.125,
+          "currentSrc": "http://127.0.0.1:8012/media/ef02b955-9953-468b-a577-6faea3994c24/thumbnail",
+          "naturalWidth": 216
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 216.140625,
+          "currentSrc": "http://127.0.0.1:8012/media/4b727eb1-502a-43e8-8ced-f6fc7e602944/thumbnail",
+          "naturalWidth": 216
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 216.125,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 216.140625,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 216.125,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 216.140625,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 216.125,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 216.140625,
+          "currentSrc": "",
+          "naturalWidth": 0
+        }
+      ]
+    },
+    {
+      "name": "visit",
+      "path": "/visit/demo-bara-di-ujung-hari",
+      "width": 1024,
+      "status": 200,
+      "viewport": 1024,
+      "scrollWidth": 1024,
+      "header": {
+        "x": 34.125,
+        "width": 955.734375
+      },
+      "main": {
+        "x": 34.125,
+        "width": 955.734375
+      },
+      "footer": {
+        "x": 0,
+        "width": 1024
+      },
+      "footerInner": {
+        "x": 34.125,
+        "width": 955.734375
+      },
+      "images": [
+        {
+          "sizes": "(min-width: 1920px) 1792px, (min-width: 1024px) 93.334vw, (min-width: 481px) calc(100vw - 3rem), calc(100vw - 2rem)",
+          "slot": 955.734375,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/hero",
+          "naturalWidth": 955
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 40vw, 100vw",
+          "slot": 415.796875,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/hero",
+          "naturalWidth": 416
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 40vw, 100vw",
+          "slot": 415.796875,
+          "currentSrc": "http://127.0.0.1:8012/media/3f7efed0-b916-4015-82e9-96bdad5b0d38/card",
+          "naturalWidth": 416
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 60vw, 100vw",
+          "slot": 659.8125,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/hero",
+          "naturalWidth": 660
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 60vw, 100vw",
+          "slot": 279.921875,
+          "currentSrc": "http://127.0.0.1:8012/media/3f7efed0-b916-4015-82e9-96bdad5b0d38/thumbnail",
+          "naturalWidth": 280
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 372.734375,
+          "currentSrc": "",
+          "naturalWidth": 0
+        }
+      ]
+    },
+    {
+      "name": "place",
+      "path": "/place/demo-bara-senja",
+      "width": 1024,
+      "status": 200,
+      "viewport": 1024,
+      "scrollWidth": 1024,
+      "header": {
+        "x": 34.125,
+        "width": 955.734375
+      },
+      "main": {
+        "x": 34.125,
+        "width": 955.734375
+      },
+      "footer": {
+        "x": 0,
+        "width": 1024
+      },
+      "footerInner": {
+        "x": 34.125,
+        "width": 955.734375
+      },
+      "images": [
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 0,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/hero",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 0,
+          "currentSrc": "http://127.0.0.1:8012/media/8681e2a0-a400-4168-8091-c87a24d48b88/hero",
+          "naturalWidth": 0
+        }
+      ]
+    },
+    {
+      "name": "error",
+      "path": "/missing-error-page-preview",
+      "width": 1024,
+      "status": 404,
+      "viewport": 1024,
+      "scrollWidth": 1024,
+      "header": {
+        "x": 34.125,
+        "width": 955.734375
+      },
+      "main": {
+        "x": 34.125,
+        "width": 955.734375
+      },
+      "footer": {
+        "x": 0,
+        "width": 1024
+      },
+      "footerInner": {
+        "x": 34.125,
+        "width": 955.734375
+      },
+      "images": []
+    },
+    {
+      "name": "home",
+      "path": "/",
+      "width": 1440,
+      "status": 200,
+      "viewport": 1440,
+      "scrollWidth": 1440,
+      "header": {
+        "x": 48,
+        "width": 1344
+      },
+      "main": {
+        "x": 48,
+        "width": 1344
+      },
+      "footer": {
+        "x": 0,
+        "width": 1440
+      },
+      "footerInner": {
+        "x": 48,
+        "width": 1344
+      },
+      "images": [
+        {
+          "sizes": "auto, (min-width: 960px) 60vw, 100vw",
+          "slot": 750.390625,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw",
+          "slot": 217.59375,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw",
+          "slot": 217.59375,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw",
+          "slot": 217.59375,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw",
+          "slot": 348.78125,
+          "currentSrc": "",
+          "naturalWidth": 0
+        }
+      ]
+    },
+    {
+      "name": "explore",
+      "path": "/explore",
+      "width": 1440,
+      "status": 200,
+      "viewport": 1440,
+      "scrollWidth": 1440,
+      "header": {
+        "x": 48,
+        "width": 1344
+      },
+      "main": {
+        "x": 48,
+        "width": 1344
+      },
+      "footer": {
+        "x": 0,
+        "width": 1440
+      },
+      "footerInner": {
+        "x": 48,
+        "width": 1344
+      },
+      "images": [
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 0,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/hero",
+          "naturalWidth": 1440
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 0,
+          "currentSrc": "http://127.0.0.1:8012/media/a48397fd-5c81-4b03-b68d-6a57b11f3eca/hero",
+          "naturalWidth": 1440
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 0,
+          "currentSrc": "http://127.0.0.1:8012/media/1ae2962a-0b9d-4912-81c3-6878fa9a512d/hero",
+          "naturalWidth": 1440
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 0,
+          "currentSrc": "http://127.0.0.1:8012/media/319e40c3-65b5-4128-be5e-e77d17feb120/hero",
+          "naturalWidth": 1440
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 0,
+          "currentSrc": "http://127.0.0.1:8012/media/08865e6b-ac7e-41b5-afd6-cd51afbd71dc/hero",
+          "naturalWidth": 1440
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 305.4375,
+          "currentSrc": "http://127.0.0.1:8012/media/e98b1437-cf5e-4fa3-bc1c-a7f0f7d27c4a/thumbnail",
+          "naturalWidth": 305
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 305.4375,
+          "currentSrc": "http://127.0.0.1:8012/media/df1eccf5-31d8-4ced-9976-b5ab3eb4bf08/card",
+          "naturalWidth": 305
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 305.4375,
+          "currentSrc": "http://127.0.0.1:8012/media/b384429b-7613-4ac8-ad5f-a75a6f9a096d/thumbnail",
+          "naturalWidth": 305
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 305.4375,
+          "currentSrc": "http://127.0.0.1:8012/media/5d359169-bf73-4562-afdd-9ea877ba4173/thumbnail",
+          "naturalWidth": 305
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 0,
+          "currentSrc": "http://127.0.0.1:8012/media/02777d29-5588-4656-bcb9-db59a69db7db/hero",
+          "naturalWidth": 1440
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 305.4375,
+          "currentSrc": "http://127.0.0.1:8012/media/ef02b955-9953-468b-a577-6faea3994c24/card",
+          "naturalWidth": 305
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 305.4375,
+          "currentSrc": "http://127.0.0.1:8012/media/4b727eb1-502a-43e8-8ced-f6fc7e602944/card",
+          "naturalWidth": 305
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 305.4375,
+          "currentSrc": "http://127.0.0.1:8012/media/8681e2a0-a400-4168-8091-c87a24d48b88/card",
+          "naturalWidth": 305
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 305.4375,
+          "currentSrc": "http://127.0.0.1:8012/media/131686a8-38a2-44ab-b963-080e29597e22/thumbnail",
+          "naturalWidth": 305
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 305.4375,
+          "currentSrc": "http://127.0.0.1:8012/media/6532f51e-d86e-450e-b55e-13218f8aba13/card",
+          "naturalWidth": 305
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 305.4375,
+          "currentSrc": "http://127.0.0.1:8012/media/4d3eda43-8455-4adc-9008-84918d7399b1/thumbnail",
+          "naturalWidth": 305
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 305.4375,
+          "currentSrc": "http://127.0.0.1:8012/media/e4f21e09-b8ba-468b-a560-d07b63524d2a/thumbnail",
+          "naturalWidth": 305
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 305.4375,
+          "currentSrc": "http://127.0.0.1:8012/media/0d8ea056-724c-4f5a-9e66-90eff61641a9/thumbnail",
+          "naturalWidth": 305
+        }
+      ]
+    },
+    {
+      "name": "visit",
+      "path": "/visit/demo-bara-di-ujung-hari",
+      "width": 1440,
+      "status": 200,
+      "viewport": 1440,
+      "scrollWidth": 1440,
+      "header": {
+        "x": 48,
+        "width": 1344
+      },
+      "main": {
+        "x": 48,
+        "width": 1344
+      },
+      "footer": {
+        "x": 0,
+        "width": 1440
+      },
+      "footerInner": {
+        "x": 48,
+        "width": 1344
+      },
+      "images": [
+        {
+          "sizes": "(min-width: 1920px) 1792px, (min-width: 1024px) 93.334vw, (min-width: 481px) calc(100vw - 3rem), calc(100vw - 2rem)",
+          "slot": 1344,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/hero",
+          "naturalWidth": 1344
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 40vw, 100vw",
+          "slot": 584.71875,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/hero",
+          "naturalWidth": 585
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 40vw, 100vw",
+          "slot": 584.71875,
+          "currentSrc": "http://127.0.0.1:8012/media/3f7efed0-b916-4015-82e9-96bdad5b0d38/card",
+          "naturalWidth": 584
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 60vw, 100vw",
+          "slot": 930.421875,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/hero",
+          "naturalWidth": 930
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 60vw, 100vw",
+          "slot": 397.578125,
+          "currentSrc": "http://127.0.0.1:8012/media/3f7efed0-b916-4015-82e9-96bdad5b0d38/card",
+          "naturalWidth": 398
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 255.828125,
+          "currentSrc": "",
+          "naturalWidth": 0
+        }
+      ]
+    },
+    {
+      "name": "place",
+      "path": "/place/demo-bara-senja",
+      "width": 1440,
+      "status": 200,
+      "viewport": 1440,
+      "scrollWidth": 1440,
+      "header": {
+        "x": 48,
+        "width": 1344
+      },
+      "main": {
+        "x": 48,
+        "width": 1344
+      },
+      "footer": {
+        "x": 0,
+        "width": 1440
+      },
+      "footerInner": {
+        "x": 48,
+        "width": 1344
+      },
+      "images": [
+        {
+          "sizes": "(min-width: 1920px) 800px, (min-width: 768px) 46vw, calc(100vw - 2rem)",
+          "slot": 589.078125,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/hero",
+          "naturalWidth": 662
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 361.90625,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/hero",
+          "naturalWidth": 362
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 361.90625,
+          "currentSrc": "http://127.0.0.1:8012/media/8681e2a0-a400-4168-8091-c87a24d48b88/card",
+          "naturalWidth": 362
+        }
+      ]
+    },
+    {
+      "name": "error",
+      "path": "/missing-error-page-preview",
+      "width": 1440,
+      "status": 404,
+      "viewport": 1440,
+      "scrollWidth": 1440,
+      "header": {
+        "x": 48,
+        "width": 1344
+      },
+      "main": {
+        "x": 48,
+        "width": 1344
+      },
+      "footer": {
+        "x": 0,
+        "width": 1440
+      },
+      "footerInner": {
+        "x": 48,
+        "width": 1344
+      },
+      "images": []
+    },
+    {
+      "name": "home",
+      "path": "/",
+      "width": 1920,
+      "status": 200,
+      "viewport": 1920,
+      "scrollWidth": 1920,
+      "header": {
+        "x": 64,
+        "width": 1792
+      },
+      "main": {
+        "x": 64,
+        "width": 1792
+      },
+      "footer": {
+        "x": 0,
+        "width": 1920
+      },
+      "footerInner": {
+        "x": 64,
+        "width": 1792
+      },
+      "images": [
+        {
+          "sizes": "auto, (min-width: 960px) 60vw, 100vw",
+          "slot": 1008,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/hero",
+          "naturalWidth": 1008
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw",
+          "slot": 295.796875,
+          "currentSrc": "http://127.0.0.1:8012/media/a48397fd-5c81-4b03-b68d-6a57b11f3eca/thumbnail",
+          "naturalWidth": 296
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw",
+          "slot": 295.796875,
+          "currentSrc": "http://127.0.0.1:8012/media/1ae2962a-0b9d-4912-81c3-6878fa9a512d/thumbnail",
+          "naturalWidth": 296
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw",
+          "slot": 295.796875,
+          "currentSrc": "http://127.0.0.1:8012/media/319e40c3-65b5-4128-be5e-e77d17feb120/thumbnail",
+          "naturalWidth": 296
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 60vw, 100vw",
+          "slot": 630.84375,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/hero",
+          "naturalWidth": 631
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw",
+          "slot": 548.578125,
+          "currentSrc": "http://127.0.0.1:8012/media/a48397fd-5c81-4b03-b68d-6a57b11f3eca/card",
+          "naturalWidth": 549
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw",
+          "slot": 548.5625,
+          "currentSrc": "http://127.0.0.1:8012/media/1ae2962a-0b9d-4912-81c3-6878fa9a512d/card",
+          "naturalWidth": 549
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw",
+          "slot": 469.671875,
+          "currentSrc": "http://127.0.0.1:8012/media/319e40c3-65b5-4128-be5e-e77d17feb120/card",
+          "naturalWidth": 470
+        }
+      ]
+    },
+    {
+      "name": "explore",
+      "path": "/explore",
+      "width": 1920,
+      "status": 200,
+      "viewport": 1920,
+      "scrollWidth": 1920,
+      "header": {
+        "x": 64,
+        "width": 1792
+      },
+      "main": {
+        "x": 64,
+        "width": 1792
+      },
+      "footer": {
+        "x": 0,
+        "width": 1920
+      },
+      "footerInner": {
+        "x": 64,
+        "width": 1792
+      },
+      "images": [
+        {
+          "sizes": "(min-width: 1920px) 728px, (min-width: 768px) 42vw, calc(100vw - 2rem)",
+          "slot": 726.34375,
+          "currentSrc": "http://127.0.0.1:8012/media/5ea1ed76-5a91-42f7-a99c-f98e47fa5b48/card",
+          "naturalWidth": 727
+        },
+        {
+          "sizes": "auto, (min-width: 1920px) 560px, (min-width: 768px) 32vw, 50vw",
+          "slot": 558.734375,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/card",
+          "naturalWidth": 558
+        },
+        {
+          "sizes": "auto, (min-width: 1920px) 560px, (min-width: 768px) 32vw, 50vw",
+          "slot": 474.921875,
+          "currentSrc": "http://127.0.0.1:8012/media/02777d29-5588-4656-bcb9-db59a69db7db/card",
+          "naturalWidth": 475
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 408.46875,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/card",
+          "naturalWidth": 408
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 408.46875,
+          "currentSrc": "http://127.0.0.1:8012/media/a48397fd-5c81-4b03-b68d-6a57b11f3eca/card",
+          "naturalWidth": 408
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 408.46875,
+          "currentSrc": "http://127.0.0.1:8012/media/1ae2962a-0b9d-4912-81c3-6878fa9a512d/card",
+          "naturalWidth": 408
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 408.46875,
+          "currentSrc": "http://127.0.0.1:8012/media/319e40c3-65b5-4128-be5e-e77d17feb120/card",
+          "naturalWidth": 408
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 408.46875,
+          "currentSrc": "http://127.0.0.1:8012/media/08865e6b-ac7e-41b5-afd6-cd51afbd71dc/card",
+          "naturalWidth": 408
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 408.46875,
+          "currentSrc": "http://127.0.0.1:8012/media/e98b1437-cf5e-4fa3-bc1c-a7f0f7d27c4a/card",
+          "naturalWidth": 408
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 408.46875,
+          "currentSrc": "http://127.0.0.1:8012/media/df1eccf5-31d8-4ced-9976-b5ab3eb4bf08/card",
+          "naturalWidth": 408
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 408.46875,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 408.46875,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 408.46875,
+          "currentSrc": "http://127.0.0.1:8012/media/02777d29-5588-4656-bcb9-db59a69db7db/card",
+          "naturalWidth": 408
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 408.46875,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 408.46875,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 408.46875,
+          "currentSrc": "http://127.0.0.1:8012/media/8681e2a0-a400-4168-8091-c87a24d48b88/card",
+          "naturalWidth": 408
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 408.46875,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 408.46875,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 408.46875,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 408.46875,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 408.46875,
+          "currentSrc": "",
+          "naturalWidth": 0
+        }
+      ]
+    },
+    {
+      "name": "visit",
+      "path": "/visit/demo-bara-di-ujung-hari",
+      "width": 1920,
+      "status": 200,
+      "viewport": 1920,
+      "scrollWidth": 1920,
+      "header": {
+        "x": 64,
+        "width": 1792
+      },
+      "main": {
+        "x": 64,
+        "width": 1792
+      },
+      "footer": {
+        "x": 0,
+        "width": 1920
+      },
+      "footerInner": {
+        "x": 64,
+        "width": 1792
+      },
+      "images": [
+        {
+          "sizes": "(min-width: 1920px) 1792px, (min-width: 1024px) 93.334vw, (min-width: 481px) calc(100vw - 3rem), calc(100vw - 2rem)",
+          "slot": 1792,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/hero",
+          "naturalWidth": 1792
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 40vw, 100vw",
+          "slot": 785.453125,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/hero",
+          "naturalWidth": 785
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 40vw, 100vw",
+          "slot": 785.453125,
+          "currentSrc": "http://127.0.0.1:8012/media/3f7efed0-b916-4015-82e9-96bdad5b0d38/hero",
+          "naturalWidth": 785
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 60vw, 100vw",
+          "slot": 1242.65625,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/hero",
+          "naturalWidth": 1243
+        },
+        {
+          "sizes": "auto, (min-width: 960px) 60vw, 100vw",
+          "slot": 533.328125,
+          "currentSrc": "",
+          "naturalWidth": 0
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 343.1875,
+          "currentSrc": "",
+          "naturalWidth": 0
+        }
+      ]
+    },
+    {
+      "name": "place",
+      "path": "/place/demo-bara-senja",
+      "width": 1920,
+      "status": 200,
+      "viewport": 1920,
+      "scrollWidth": 1920,
+      "header": {
+        "x": 64,
+        "width": 1792
+      },
+      "main": {
+        "x": 64,
+        "width": 1792
+      },
+      "footer": {
+        "x": 0,
+        "width": 1920
+      },
+      "footerInner": {
+        "x": 64,
+        "width": 1792
+      },
+      "images": [
+        {
+          "sizes": "(min-width: 1920px) 800px, (min-width: 768px) 46vw, calc(100vw - 2rem)",
+          "slot": 792.71875,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/hero",
+          "naturalWidth": 800
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 361.90625,
+          "currentSrc": "http://127.0.0.1:8012/media/4633a527-db81-4ea4-b357-309a1da6871b/hero",
+          "naturalWidth": 362
+        },
+        {
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw",
+          "slot": 361.90625,
+          "currentSrc": "http://127.0.0.1:8012/media/8681e2a0-a400-4168-8091-c87a24d48b88/card",
+          "naturalWidth": 362
+        }
+      ]
+    },
+    {
+      "name": "error",
+      "path": "/missing-error-page-preview",
+      "width": 1920,
+      "status": 404,
+      "viewport": 1920,
+      "scrollWidth": 1920,
+      "header": {
+        "x": 64,
+        "width": 1792
+      },
+      "main": {
+        "x": 64,
+        "width": 1792
+      },
+      "footer": {
+        "x": 0,
+        "width": 1920
+      },
+      "footerInner": {
+        "x": 64,
+        "width": 1792
+      },
+      "images": []
+    }
+  ],
+  "pageErrors": [],
+  "routes": {
+    "home": "/",
+    "explore": "/explore",
+    "visit": "/visit/demo-bara-di-ujung-hari",
+    "place": "/place/demo-bara-senja",
+    "error": "/missing-error-page-preview"
+  }
+}

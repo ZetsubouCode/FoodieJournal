@@ -1,0 +1,13 @@
+
+Running 6 tests using 1 worker
+
+(node:4896) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 tests\Browser\readability-states.spec.js:12:1 › private-only archive and filtered zero have different honest states, including async reset (4.2s)
+  ok 2 tests\Browser\readability-states.spec.js:35:1 › partial records keep absent recommendations, images, scores, Maps and prices honest (2.7s)
+  ok 3 tests\Browser\readability-states.spec.js:59:1 › readable metadata, long chips and touch actions reflow at normal and doubled root text (3.8s)
+  ok 4 tests\Browser\readability-states.spec.js:96:1 › photographic captions remain inside their tiles with enlarged text (10.4s)
+  ok 5 tests\Browser\readability-states.spec.js:109:1 › keyboard focus and overflow controls remain visible and disabled states remain safe without JS (3.1s)
+  ok 6 tests\Browser\readability-states.spec.js:129:1 › denied derivatives show the existing fallback without fetching originals (978ms)
+
+  6 passed (26.2s)

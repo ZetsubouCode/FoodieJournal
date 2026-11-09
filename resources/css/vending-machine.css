@@ -1,4 +1,4 @@
-/* Live hardware over the approved 1634×963 cabinet. Source art is immutable. */
+/* Live hardware over the approved 1634Ã—963 cabinet. Source art is immutable. */
 .vending-machine {
     --vending-snap: 270ms;
     --vending-boot: 960ms;
@@ -197,7 +197,8 @@ html[data-vending-session=off] .vending-machine:not([data-enhanced]) .vending-tr
 .vending-machine:is([data-power=off],[data-power=shutting_down]) .vending-tray::before {opacity:1}
 .vending-machine[data-power=booting] .vending-tray::before {animation:vending-tray-warm 960ms both}
 @media(max-width:959px){.vending-tray-shade{display:none}}
-@media(min-width:960px){.vending-rotary-wrap{top:62%}.vending-reset{top:78%}}@media(max-width:959px){
+/* Centre the reset on its source anchor even when the minimum touch size applies. */
+@media(min-width:960px){.vending-rotary-wrap{top:62%}.vending-reset{top:81.55%;translate:0 -50%}}@media(max-width:959px){
  .vending-machine[data-enhanced]:is([data-power=off],[data-power=shutting_down]) .memory-slots,
  html[data-vending-session=off] .vending-machine:not([data-enhanced]) .memory-slots {opacity:1;pointer-events:none}
  .vending-machine:is([data-power=off],[data-power=shutting_down]) .memory-slot__glass > *,
@@ -212,7 +213,7 @@ html[data-vending-session=off] .vending-machine:not([data-enhanced]) .vending-tr
 }
 html[data-vending-session=off] .vending-machine:not([data-enhanced]) .vending-tray::before {opacity:1}
 /* Side-hung tube: original socket restored; outer bracket has its own gutter. */
-.dispenser-scene__machine { padding-left:clamp(48px,6vw,80px); }
+.dispenser-scene__machine { width:100%; max-width:calc(1634px + clamp(48px,6vw,80px)); margin-inline:auto; padding-left:clamp(48px,6vw,80px); }
 .vending-socket {left:2.8%;top:27%;width:4.25%;height:28.7%}
 .vending-cradle {left:-5.4%;top:27%;width:3.8%;height:28.7%;overflow:visible}
 .vending-cradle::before {content:'';position:absolute;left:63%;top:6%;width:92%;height:8%;border-radius:3px;background:linear-gradient(#ac8050,#302318 45%,#14120e);border:1px solid #705335;box-shadow:0 3px 4px #0009;pointer-events:none}

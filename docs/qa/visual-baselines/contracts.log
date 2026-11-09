@@ -1,0 +1,31 @@
+
+Running 24 tests using 1 worker
+
+(node:27904) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 tests\Browser\public-navigation.spec.js:17:5 › public hover progress is interruptible, left anchored and keyboard accessible on / (8.3s)
+  ok  2 tests\Browser\public-navigation.spec.js:17:5 › public hover progress is interruptible, left anchored and keyboard accessible on /missing-error-page-preview (4.2s)
+  ok  3 tests\Browser\public-navigation.spec.js:58:1 › shared navigation retains active and hover states across public routes and responsive sizes (52.3s)
+  ok  4 tests\Browser\public-navigation.spec.js:86:1 › reduced motion is immediate at load and when the preference changes during hover (6.1s)
+  ok  5 tests\Browser\public-navigation.spec.js:99:1 › touch and JavaScript-free navigation use ordinary links without a hover dependency (6.9s)
+  ok  6 tests\Browser\vending-machine.spec.js:20:1 › fresh machine is dark and inert; holding at expanded socket edge waits for release (6.9s)
+  ok  7 tests\Browser\vending-machine.spec.js:35:1 › invalid drops, Escape, pointercancel and lost capture return to the committed origin (9.1s)
+  ok  8 tests\Browser\vending-machine.spec.js:51:1 › valid reverse drop shuts down and session refresh restores the correct physical state (13.7s)
+  ok  9 tests\Browser\vending-machine.spec.js:70:1 › rotary angular drag crosses wrap boundary and keyboard reverses a real six-visit page (14.0s)
+  ok 10 tests\Browser\vending-machine.spec.js:89:1 › rapid page requests discard stale fragments; failure retains committed selection and retries (10.4s)
+  ok 11 tests\Browser\vending-machine.spec.js:111:1 › selection prints exactly one matching photo and retrieval opens its actual visit (7.6s)
+  ok 12 tests\Browser\vending-machine.spec.js:128:1 › reset and a new selection retract the ready card; push-button face depresses without rotating (6.5s)
+  ok 13 tests\Browser\vending-machine.spec.js:140:1 › touch uses lamp then target; reduced-motion runtime changes keep power and print usable (5.8s)
+  ok 14 tests\Browser\vending-machine.spec.js:157:1 › keyboard lamp actions and blocked sessionStorage remain usable (3.9s)
+  ok 15 tests\Browser\vending-machine.spec.js:173:1 › responsive geometry, LED alignment, missing images and WCAG scans in off/on/printed states (38.8s)
+  ok 16 tests\Browser\vending-machine.spec.js:201:1 › no JavaScript leaves semantic visit and Explore navigation available (5.4s)
+  ok 17 tests\Browser\vending-machine.spec.js:207:1 › touch dragging snaps only after release on the compact socket (6.3s)
+  ok 18 tests\Browser\vending-machine.spec.js:219:1 › resize, a second pointer, scroll and visibility interruptions preserve a valid lamp pose (6.8s)
+  ok 19 tests\Browser\vending-machine.spec.js:240:1 › lamp communicates pickup without visible tutorial copy (5.2s)
+  ok 20 tests\Browser\vending-machine.spec.js:246:1 › a now-empty server page clears the old preview and disables printing (5.3s)
+  ok 21 tests\Browser\vending-machine.spec.js:256:1 › compiled CSS durations drive real snap, ignition and paper-feed timings (6.3s)
+  ok 22 tests\Browser\vending-machine.spec.js:271:1 › refined hardware has no pagination widgets; dial resists partial travel and settles at an index (9.5s)
+  ok 23 tests\Browser\vending-machine.spec.js:286:1 › resting tube hangs outside the left side and the compact tray is dark when off (11.0s)
+  ok 24 tests\Browser\vending-machine.spec.js:295:1 › off-state pickup cue is visible even in a discovered session, finite and non-electrical (3.7s)
+
+  24 passed (4.3m)

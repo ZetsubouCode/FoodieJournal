@@ -22,7 +22,17 @@
         @if($state->get('avoid_allergen'))<x-ui.alert severity="warning" title="Hanya menyembunyikan paparan yang tercatat">{{ config('foodie.allergen_disclaimer') }} Hasil kunjungan/tempat berarti setidaknya satu hidangan cocok, bukan seluruh hidangan. Informasi yang belum tersedia tetap dapat muncul.</x-ui.alert>@endif
         <section class="memory-reel" aria-labelledby="memory-reel-title">
             <header class="memory-reel__head"><div><p class="memory-reel__index">Arsip pengalaman · {{ str_pad((string) $results->currentPage(), 3, '0', STR_PAD_LEFT) }}</p><h2 id="memory-reel-title">Memory Reel</h2></div><p class="numeric">{{ $results->total() }} {{ ['visit' => 'kunjungan', 'food' => 'hidangan', 'place' => 'tempat'][$state->get('tab')] }}</p></header>
-            @if($results->isEmpty())<x-ui.empty-state title="Belum ada pengalaman yang cocok" description="Coba kata lain atau hapus sebagian filter. Pilihanmu tetap tersimpan di URL." :href="url('explore').'?tab='.$state->get('tab')" action="Reset filter" />@else
+            @if($results->isEmpty())
+                @if(! $hasPublishedVisits)
+                    <x-ui.empty-state title="Arsip belum dipublikasikan" description="Belum ada kunjungan yang dipublikasikan. Catatan akan tampil di sini setelah diterbitkan." />
+                @elseif($results->total() > 0)
+                    <x-ui.empty-state title="Halaman ini sudah kosong" description="Hasil masih tersedia di halaman sebelumnya. Pilihan pencarianmu tetap tersimpan." :href="$state->url([], ['page'])" action="Ke halaman pertama" />
+                @elseif(! $chips && $state->get('tab') === 'food')
+                    <x-ui.empty-state title="Belum ada hidangan yang dicatat" description="Kunjungan sudah tersedia, tetapi belum ada rincian hidangan yang dipublikasikan." :href="$state->tabUrl('visit')" action="Lihat kunjungan" />
+                @else
+                    <x-ui.empty-state title="Tidak ada catatan yang cocok" description="Tidak ada hasil untuk pilihan ini. Coba kata lain atau hapus sebagian filter. Pilihanmu tetap tersimpan di URL." :href="url('explore').'?tab='.$state->get('tab').'&view='.$state->get('view')" action="Reset filter" />
+                @endif
+            @else
             <div class="results {{ $state->get('tab') === 'visit' ? 'results--visit' : '' }} {{ $state->get('view') === 'list' ? 'results--list' : '' }}">@foreach($results as $result)
                 @if($state->get('tab') === 'visit')<x-domain.visit-card :visit="$result" :photo="$result->coverMedia?->variant('card') ? $result->coverMedia : $result->media->first(fn ($photo) => $photo->variant('card'))" :allergen-warning="(bool)$state->get('avoid_allergen')" />@elseif($state->get('tab') === 'food')<x-domain.food-card :item="$result" :allergen-warning="(bool)$state->get('avoid_allergen')" />@else<x-domain.place-card :place="$result" :allergen-warning="(bool)$state->get('avoid_allergen')" />@endif
             @endforeach</div>@endif

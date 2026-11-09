@@ -7,32 +7,32 @@
 .discovery-console__head h2 span { color: var(--archive-brass); margin-left: .8rem; }
 .discovery-console__head p { font-size: .75rem; color: var(--text-secondary); margin: 0; }
 .discovery-tabs { margin-block: .5rem; width: min(26rem, 100%); display: flex; border: 1px solid var(--archive-outline); border-radius: .4rem .4rem 0 0; background: var(--archive-recess); padding: .15rem; gap: .15rem; }
-.discovery-tabs a { flex: 1; text-align: center; justify-content: center; min-height: 44px; padding: .4rem .5rem; font-size: .8rem; border: 0; border-radius: .3rem; }
+.discovery-tabs a { flex: 1; text-align: center; justify-content: center; min-height: 44px; padding: .4rem .5rem; font-size: 1rem; border: 0; border-radius: .3rem; }
 .discovery-tabs a[aria-current=page] { color: var(--archive-recess); background: linear-gradient(100deg, var(--archive-brass), var(--archive-highlight), var(--archive-brass)); box-shadow: inset 0 1px 1px var(--text-primary), 0 2px 5px black; }
 .discovery-toolbar { display: grid; grid-template-columns: minmax(12rem, 1fr) auto minmax(10rem, .4fr) auto; gap: var(--space-4); align-items: center; }
 .discovery-toolbar > :not([type=hidden]) { min-height: var(--control-height); }
-.discovery-toolbar .btn { min-width: 7rem; white-space: nowrap; border-color: var(--archive-brass); font-size: .8rem; font-weight: 400; background: linear-gradient(rgb(255 240 204 / .04), transparent), var(--archive-recess); box-shadow: inset 0 1px 1px rgb(255 221 164 / .1), 0 3px 5px var(--archive-shadow); }
+.discovery-toolbar .btn { min-width: 7rem; white-space: nowrap; border-color: var(--archive-brass); font-size: 1rem; font-weight: 400; background: linear-gradient(rgb(255 240 204 / .04), transparent), var(--archive-recess); box-shadow: inset 0 1px 1px rgb(255 221 164 / .1), 0 3px 5px var(--archive-shadow); }
 .discovery-toolbar svg { width: 1.2rem; height: 1.2rem; flex-shrink: 0; }
 .discovery-search-field { position: relative; }
-.discovery-search-field input { padding-left: 3rem; padding-right: .75rem; border-color: var(--archive-outline); background: rgb(18 14 10 / .65); font-size: .8rem; }
+.discovery-search-field input { padding-left: 3rem; padding-right: .75rem; border-color: var(--archive-outline); background: rgb(18 14 10 / .65); font-size: 1rem; }
 .discovery-search-field button { position: absolute; top: 0; left: 0; bottom: 0; width: 44px; border: 0; background: transparent; color: var(--text-secondary); display: grid; place-items: center; padding: 0; }
-.discovery-toolbar select { font-size: .8rem; background-color: var(--archive-recess); border-color: var(--archive-brass); }
+.discovery-toolbar select { font-size: 1rem; background-color: var(--archive-recess); border-color: var(--archive-brass); }
 .discovery-view { display: flex; border: 1px solid var(--archive-brass); border-radius: .5rem; background: var(--archive-recess); box-shadow: 0 3px 5px var(--archive-shadow); }
 .discovery-view a { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; padding: .5rem .65rem; border-radius: .4rem; }
 .discovery-view a[aria-current=page] { background: linear-gradient(120deg, var(--archive-highlight), var(--archive-brass)); color: var(--archive-recess); box-shadow: inset 0 0 0 2px var(--archive-highlight), 0 0 8px rgb(217 143 53 / .25); }
 .discovery-console__selection { min-height: 2.6rem; }
-.discovery-console__hint { margin: .7rem 0 0; font-size: .7rem; color: var(--text-muted); }
+.discovery-console__hint { margin: .7rem 0 0; font-size: .875rem; color: var(--text-muted); }
 .discovery-chips { margin-block: .65rem 0; gap: .4rem .6rem; }
-.discovery-chips .chip { background: rgb(0 0 0 / .2); border: 1px solid var(--archive-outline); border-radius: 99px; font-size: .7rem; text-decoration: none; min-height: 32px; }
-.discovery-chips > a:last-child:not(.chip) { min-height: 32px; display: inline-flex; align-items: center; font-size: .7rem; padding: .2rem .5rem; }
+.discovery-chips .chip { background: rgb(0 0 0 / .2); border: 1px solid var(--archive-outline); border-radius: 99px; font-size: .875rem; max-width: 100%; overflow-wrap: anywhere; text-decoration: none; min-height: 44px; }
+.discovery-chips > a:last-child:not(.chip) { min-height: 44px; display: inline-flex; align-items: center; font-size: .875rem; padding: .2rem .5rem; }
 .discovery-console__handle { position: absolute; width: 5rem; height: .8rem; bottom: -.5rem; left: calc(50% - 2.5rem); background: linear-gradient(var(--archive-highlight), var(--archive-metal) 50%, var(--archive-outline)); border: 1px solid var(--archive-brass); border-radius: .2rem .2rem 1rem 1rem; box-shadow: 0 4px 6px black; }
 .discovery-error { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-4); margin-block: var(--space-4); }
 .memory-reel { margin-top: var(--space-8); }
 .memory-reel__head { display: flex; align-items: end; justify-content: space-between; gap: var(--space-4); padding-block: .5rem 1.2rem; }
 .memory-reel__head::after { content: ''; flex: 1; border-bottom: 1px solid var(--archive-outline); order: 1; margin-bottom: .45rem; }
 .memory-reel__head > div { order: 0; }
-.memory-reel__head > p { order: 2; margin: 0 0 .3rem; font-size: .8rem; color: var(--text-secondary); }
-.memory-reel__index { margin: 0 0 .3rem; font-size: .6rem; letter-spacing: .23em; color: var(--action-primary-bg); text-transform: uppercase; }
+.memory-reel__head > p { order: 2; margin: 0 0 .3rem; font-size: 1rem; color: var(--text-secondary); }
+.memory-reel__index { margin: 0 0 .3rem; font-size: .75rem; letter-spacing: .23em; color: var(--action-primary-bg); text-transform: uppercase; }
 .memory-reel__head h2 { margin: 0; font: italic 500 clamp(2.4rem, 3.7vw, 3.5rem)/.9 var(--font-display); }
 .discovery [data-discovery-results] { transition: opacity var(--motion-fast) ease-out; }
 .discovery [data-discovery-results][aria-busy=true] { opacity: .65; }
@@ -40,17 +40,17 @@
 .discovery .results--visit { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .discovery .visit-card { grid-template-columns: 46% minmax(0, 1fr); min-height: 12.5rem; --visit-panel: var(--surface-raised); }
 .discovery .visit-card__body { padding: .8rem .8rem .8rem .2rem; }
-.discovery .visit-card__eyebrow { font-size: .55rem; margin-bottom: .4rem; }
+.discovery .visit-card__eyebrow { font-size: .75rem; margin-bottom: .4rem; }
 .discovery .visit-card__title { max-width: none; font-size: clamp(1.35rem, 1.95vw, 1.85rem); line-height: .98; }
-.discovery .visit-card__place { font-size: .7rem; margin: .55rem 0 .4rem; }
+.discovery .visit-card__place { font-size: .875rem; margin: .55rem 0 .4rem; }
 .discovery .visit-card__facts { gap: .35rem; margin-bottom: .65rem; }
-.discovery .visit-card__rating, .discovery .visit-card__recommendation { min-height: 1.6rem; font-size: .68rem; padding: .2rem .5rem; }
-.discovery .visit-card__rating small { font-size: .6rem; }
-.discovery .visit-card__rating b { font-size: .8rem; }
-.discovery .visit-card__meta { font-size: .65rem; gap: .3rem .5rem; }
+.discovery .visit-card__rating, .discovery .visit-card__recommendation { min-height: 44px; font-size: .875rem; padding: .2rem .5rem; }
+.discovery .visit-card__rating small { font-size: .875rem; }
+.discovery .visit-card__rating b { font-size: 1rem; }
+.discovery .visit-card__meta { font-size: .875rem; gap: .3rem .5rem; }
 .discovery .visit-card__meta > * + * { padding-left: .5rem; }
 .discovery .visit-card__tags { gap: .4rem; padding-top: .6rem; }
-.discovery .visit-card__tag, .discovery .visit-card__more { min-height: 1.7rem; padding: .2rem .5rem; font-size: .65rem; }
+.discovery .visit-card__tag, .discovery .visit-card__more { min-height: 44px; padding: .2rem .5rem; font-size: .875rem; }
 .discovery .results--list { grid-template-columns: 1fr; }
 .discovery .results--list .visit-card { max-width: none; grid-template-columns: 32% minmax(0, 1fr); }
 .discovery .journal-card { border: 1px solid var(--archive-outline); border-radius: .7rem; overflow: hidden; background: var(--archive-texture) center / cover; }
@@ -60,7 +60,7 @@
 @media (max-width: 959px) {
     #discovery-console { padding: 1.5rem 1rem 1.25rem; border-radius: 1rem; }
     .discovery-console__head { display: block; }
-    .discovery-console__head p { margin-top: .5rem; font-size: .7rem; }
+    .discovery-console__head p { margin-top: .5rem; font-size: .875rem; }
     .discovery-toolbar { grid-template-columns: minmax(0, 1fr) auto; gap: .75rem; }
     .discovery-search-field { grid-column: 1 / -1; }
     .discovery-toolbar .btn { min-width: 0; }
@@ -68,20 +68,20 @@
     .discovery-view { grid-column: 2; grid-row: 3; }
     .discovery-toolbar > .btn { grid-column: 1 / -1; }
     .discovery-console__selection { min-height: 0; }
-    .discovery-console__hint { font-size: .7rem; }
+    .discovery-console__hint { font-size: .875rem; }
     .discovery-chips .chip, .discovery-chips > a:last-child:not(.chip) { min-height: 44px; }
     .memory-reel__head { gap: .75rem; flex-wrap: wrap; }
     .memory-reel__head::after { display: none; }
-    .memory-reel__head > p { font-size: .7rem; }
+    .memory-reel__head > p { font-size: .875rem; }
     .discovery .results, .discovery .results--visit { grid-template-columns: 1fr; }
     .discovery .visit-card { display: block; min-height: 0; }
     .discovery .visit-card__media { aspect-ratio: 1.6; }
     .discovery .visit-card__body { padding: 1.4rem; }
     .discovery .visit-card__title { font-size: 2rem; }
-    .discovery .visit-card__eyebrow { font-size: .6rem; }
-    .discovery .visit-card__place { font-size: .85rem; }
-    .discovery .visit-card__meta { font-size: .75rem; }
-    .discovery .visit-card__rating, .discovery .visit-card__recommendation, .discovery .visit-card__tag, .discovery .visit-card__more { min-height: 44px; font-size: .75rem; padding: .4rem .6rem; }
+    .discovery .visit-card__eyebrow { font-size: .75rem; }
+    .discovery .visit-card__place { font-size: 1rem; }
+    .discovery .visit-card__meta { font-size: .875rem; }
+    .discovery .visit-card__rating, .discovery .visit-card__recommendation, .discovery .visit-card__tag, .discovery .visit-card__more { min-height: 44px; font-size: .875rem; padding: .4rem .6rem; }
     .discovery .results--list .visit-card { display: block; }
 }
 @media (min-width: 700px) and (max-width: 959px) { .discovery .visit-card__media { width: 100%; min-height: 0; } }

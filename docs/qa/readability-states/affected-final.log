@@ -1,0 +1,25 @@
+
+Running 18 tests using 1 worker
+
+(node:9144) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 tests\Browser\discovery-machine.spec.js:7:1 › Explore modes retain the document, query, layout and browser history (4.3s)
+  ok  2 tests\Browser\discovery-machine.spec.js:20:1 › rapid requests discard stale modes; failed requests retain committed data (2.7s)
+  ok  3 tests\Browser\discovery-machine.spec.js:33:1 › curiosity photographs apply actual filtering and restore with Back (4.0s)
+  ok  4 tests\Browser\discovery-machine.spec.js:42:1 › filter drawer stages hierarchy, long searchable multiselect, tags and recommendations; apply and cancel (4.9s)
+  ok  5 tests\Browser\discovery-machine.spec.js:78:1 › mode-specific prices, group reset, search/sort/grid/list/pagination and error retry remain coherent (6.9s)
+  ok  6 tests\Browser\discovery-machine.spec.js:104:1 › calendar and location metadata are shared by Home and all Explore card modes (5.8s)
+  ok  7 tests\Browser\error-pages.spec.js:9:1 › editorial 404 scene reflows, loads its photograph and remains keyboard accessible (6.1s)
+  ok  8 tests\Browser\homepage.spec.js:4:1 › homepage editorial collections and shared geometry reflow through desktop, mobile and 200% text (12.1s)
+  ok  9 tests\Browser\homepage.spec.js:24:1 › personal picks link to actual records and keep endorsements distinct from score (1.9s)
+  ok 10 tests\Browser\readability-states.spec.js:12:1 › private-only archive and filtered zero have different honest states, including async reset (2.6s)
+  ok 11 tests\Browser\readability-states.spec.js:35:1 › partial records keep absent recommendations, images, scores, Maps and prices honest (2.9s)
+  ok 12 tests\Browser\readability-states.spec.js:59:1 › readable metadata, long chips and touch actions reflow at normal and doubled root text (3.6s)
+  ok 13 tests\Browser\readability-states.spec.js:96:1 › photographic captions remain inside their tiles with enlarged text (14.4s)
+  ok 14 tests\Browser\readability-states.spec.js:109:1 › keyboard focus and overflow controls remain visible and disabled states remain safe without JS (2.7s)
+  ok 15 tests\Browser\readability-states.spec.js:129:1 › denied derivatives show the existing fallback without fetching originals (944ms)
+  ok 16 tests\Browser\visit-card.spec.js:8:1 › F Refined visit card reflows and keeps independent destinations (28.3s)
+  ok 17 tests\Browser\visit-card.spec.js:87:1 › failed visit-card media reveals a stable fallback (952ms)
+  ok 18 tests\Browser\visit-card.spec.js:96:1 › touch taps keep card navigation separate from tag disclosure (5.5s)
+
+  18 passed (1.9m)

@@ -46,6 +46,7 @@ class PublicController extends Controller
         $data = [
             'state' => $state, 'results' => $results, 'options' => $options,
             'chips' => $state->chips($options),
+            'hasPublishedVisits' => $results->isNotEmpty() || Visit::publishedVisible()->exists(),
         ];
 
         if ($request->header('X-Explore-Fragment') === '1') {

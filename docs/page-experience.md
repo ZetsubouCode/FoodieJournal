@@ -34,13 +34,14 @@ Current hero selects a photo only from the current paginated visit collection; a
 
 ## State contract
 
-The following is required behavior, not a claim of complete implementation. Use the existing Alert/Modal/Toast, image fallback and empty-state components; add page-specific variants rather than duplicate foundations.
+The following is required behavior, not a claim of complete implementation. P0-3 implements the empty/partial readability slice; [current verification](qa/readability-states/verification.md). Real-wait skeleton work remains P2. Use the existing Alert/Modal/Toast, image fallback and empty-state components; add page-specific variants rather than duplicate foundations.
 
 | Context | Initial / waiting / updating | Empty or partial | Failure / recovery / cancellation |
 | --- | --- | --- | --- |
-| New journal / zero published visits | Immediate server-rendered truthful layout; no pretend loading | Home cabinet has no selectable visit; recent/picks state absence. Explore says no published records, rather than suggesting filters caused the absence | Guest navigation remains; do not expose owner draft counts or suggest guest content creation |
+| New journal / zero published visits | Immediate server-rendered truthful layout; no pretend loading | Home cabinet has no selectable visit; recent/picks state absence. Explore says “Arsip belum dipublikasikan”, with no empty-state reset CTA. A bounded published-only existence check runs only for an empty result page | Guest navigation remains; do not expose owner draft counts or suggest guest content creation |
+| Empty page number / no food details | Render real published availability only | A nonempty total with an empty page offers the first page without clearing criteria; an unfiltered Food tab without items points to published visits | Do not describe pagination or missing food details as a new journal |
 | Filtered results | Keep committed results/count, announce actual loading; stable region height | Explain no match, preserve query/chips, remove one criterion or reset filters | Visible retry; retain committed data/URL; abort stale requests; no stuck busy state |
-| No recommendations | Render actual recommendation relationships only | Quiet “Belum ada kunjungan dengan rekomendasi pribadi”; ordinary discovery available | Do not infer endorsement from high score |
+| No recommendations | Render actual recommendation relationships only | “Belum ada rekomendasi pribadi yang dipublikasikan”; absent recommendation links become quiet text, ordinary discovery remains available | Do not infer endorsement from high score |
 | Missing/unready image | Reserve aspect ratio; neutral material/placeholder while genuinely waiting | Stable “Foto belum tersedia”, text-only story/item/place composition when there is no photo | Failure switches to fallback, never raw original in a listing; retry only where meaningful |
 | Missing ratings / prices | Render known values immediately | “Penilaian belum dicatat” / “Belum Dinilai” per component and “Harga belum dicatat”; retain zero price when actually recorded | No score bar, star fill, total or currency fabricated from null |
 | Cabinet page / print | Distinguish OFF/boot/selected/page busy/printing/ready/retrieving; lock competing actions | Empty six-window page has honest apertures and disabled print/index as appropriate | Keep committed selection on page error; retry; reset/cancel do not leave paper or ghost state |
@@ -56,8 +57,10 @@ No optimistic result count/filter URL before server commitment. Progressive imag
 
 ## Readability, controls and accessibility
 
-Main body is at least 1rem at default settings; supporting metadata normally .875rem, with exceptions justified by secondary engraving. Increase current overly small result metadata before adding visual detail. Coherent button sizes reuse `.btn`: ≥44×44px internal primary touch target, adequate horizontal/vertical padding, same height/min-width within an action group, wrapping for long Indonesian labels. Do not shrink hit areas to eliminate overflow. WCAG 2.2 AA target-size minimum is distinct from the internal 44px goal.
+Main body is at least 1rem at default settings; supporting metadata normally .875rem, with exceptions justified by secondary engraving. P0-3 raises result/Home metadata to .875rem and Home excerpts to 1rem; .75rem archive captions/engravings remain secondary. Coherent button sizes reuse `.btn`: ≥44×44px internal primary touch target, adequate horizontal/vertical padding, same height/min-width within an action group, wrapping for long Indonesian labels. Do not shrink hit areas to eliminate overflow. WCAG 2.2 AA target-size minimum is distinct from the internal 44px goal.
 
 Use consistent SVG icons for date/place/price/rating/navigation/action/status when they improve scanning. Keep readable labels or accessible names; decorative SVGs are hidden from assistive technology. Existing calendar/location components are the starting point, not an invitation to add an icon to every sentence.
+
+Explore uses a root-relative mobile heading and text-space container reflow; tile captions contribute to height and photo-free tiles separate fallback text from captions. Root-text 200% is verified without clipping at 320/390/768/1440; it is not native browser zoom.
 
 Verify headings, landmarks, skip link, contrast over actual images, visible unobscured focus, keyboard-only and touch operation, dialog focus restoration, announcements, 200% text and reflow. Respect reduced motion at load/runtime. Automated axe and screenshot smoke checks cannot certify WCAG conformance. Admin remains efficient and quiet as public play grows richer.

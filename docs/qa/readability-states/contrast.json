@@ -1,0 +1,459 @@
+{
+  "method": "Minimum contrast across complete text rectangles with only sampled text hidden; actual images, gradient, caption backing and panels retained. Rectangles include spaces; this is a conservative bounded sample, not per-glyph or sitewide conformance.",
+  "layouts": [
+    {
+      "width": 1440,
+      "scale": 1,
+      "browser": "156.0.8078.4",
+      "samples": [
+        {
+          "text": "Hidangan, tempat, dan cara memasak.Temukan catatan dari sudut pandangmu.",
+          "color": "rgb(208, 193, 172)",
+          "font": "16px",
+          "rects": [
+            {
+              "x": 867.1875,
+              "y": 258.8125,
+              "width": 281.984375,
+              "height": 21
+            },
+            {
+              "x": 1149.171875,
+              "y": 258.8125,
+              "width": 0,
+              "height": 21
+            },
+            {
+              "x": 867.1875,
+              "y": 285.203125,
+              "width": 302.03125,
+              "height": 21
+            }
+          ],
+          "minimumContrastAcrossTextRect": 5.25
+        },
+        {
+          "text": "Makanan & minuman",
+          "color": "rgb(240, 226, 206)",
+          "font": "14px",
+          "rects": [
+            {
+              "x": 72,
+              "y": 684.84375,
+              "width": 135.4375,
+              "height": 18
+            }
+          ],
+          "minimumContrastAcrossTextRect": 13.78
+        },
+        {
+          "text": "Camilan & pencuci mulut",
+          "color": "rgb(240, 226, 206)",
+          "font": "43.2px",
+          "rects": [
+            {
+              "x": 72,
+              "y": 708.9375,
+              "width": 438.40625,
+              "height": 52
+            }
+          ],
+          "minimumContrastAcrossTextRect": 13.79
+        },
+        {
+          "text": "Kota",
+          "color": "rgb(240, 226, 206)",
+          "font": "14px",
+          "rects": [
+            {
+              "x": 629.453125,
+              "y": 644.84375,
+              "width": 28.84375,
+              "height": 18
+            }
+          ],
+          "minimumContrastAcrossTextRect": 13.15
+        },
+        {
+          "text": "Bandung",
+          "color": "rgb(240, 226, 206)",
+          "font": "43.2px",
+          "rects": [
+            {
+              "x": 629.453125,
+              "y": 668.9375,
+              "width": 150.609375,
+              "height": 52
+            }
+          ],
+          "minimumContrastAcrossTextRect": 13.26
+        },
+        {
+          "text": "Gaya masak",
+          "color": "rgb(240, 226, 206)",
+          "font": "14px",
+          "rects": [
+            {
+              "x": 1061.953125,
+              "y": 684.84375,
+              "width": 78.5,
+              "height": 18
+            }
+          ],
+          "minimumContrastAcrossTextRect": 13.53
+        },
+        {
+          "text": "Bakar",
+          "color": "rgb(240, 226, 206)",
+          "font": "43.2px",
+          "rects": [
+            {
+              "x": 1061.953125,
+              "y": 708.9375,
+              "width": 98.078125,
+              "height": 52
+            }
+          ],
+          "minimumContrastAcrossTextRect": 14.18
+        },
+        {
+          "text": "Bara Senja",
+          "color": "rgb(240, 226, 206)",
+          "font": "14px",
+          "rects": [
+            {
+              "x": 356.625,
+              "y": 1372.046875,
+              "width": 67.71875,
+              "height": 18
+            }
+          ],
+          "minimumContrastAcrossTextRect": 10.77
+        },
+        {
+          "text": "05 Nov 2026    \n    \nBandung",
+          "color": "rgb(187, 171, 148)",
+          "font": "14px",
+          "rects": [
+            {
+              "x": 356.625,
+              "y": 1451.71875,
+              "width": 104.390625,
+              "height": 21
+            },
+            {
+              "x": 376.21875,
+              "y": 1452.71875,
+              "width": 84.796875,
+              "height": 18
+            },
+            {
+              "x": 469.015625,
+              "y": 1451.71875,
+              "width": 85.34375,
+              "height": 21
+            },
+            {
+              "x": 497.609375,
+              "y": 1452.71875,
+              "width": 56.75,
+              "height": 18
+            }
+          ],
+          "minimumContrastAcrossTextRect": 5.99
+        },
+        {
+          "text": "Mangkuk Mie Pagi",
+          "color": "rgb(240, 226, 206)",
+          "font": "14px",
+          "rects": [
+            {
+              "x": 1036.625,
+              "y": 1372.046875,
+              "width": 114.5,
+              "height": 18
+            }
+          ],
+          "minimumContrastAcrossTextRect": 10.77
+        },
+        {
+          "text": "04 Nov 2026    \n    \nJakarta",
+          "color": "rgb(187, 171, 148)",
+          "font": "14px",
+          "rects": [
+            {
+              "x": 1036.625,
+              "y": 1451.71875,
+              "width": 104.34375,
+              "height": 21
+            },
+            {
+              "x": 1056.21875,
+              "y": 1452.71875,
+              "width": 84.75,
+              "height": 18
+            },
+            {
+              "x": 1148.96875,
+              "y": 1451.71875,
+              "width": 76.125,
+              "height": 21
+            },
+            {
+              "x": 1177.5625,
+              "y": 1452.71875,
+              "width": 47.53125,
+              "height": 18
+            }
+          ],
+          "minimumContrastAcrossTextRect": 5.99
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "scale": 2,
+      "browser": "156.0.8078.4",
+      "samples": [
+        {
+          "text": "Hidangan, tempat, dan cara memasak.Temukan catatan dari sudut pandangmu.",
+          "color": "rgb(208, 193, 172)",
+          "font": "32px",
+          "rects": [
+            {
+              "x": 32,
+              "y": 564.421875,
+              "width": 269.09375,
+              "height": 42
+            },
+            {
+              "x": 32,
+              "y": 617.21875,
+              "width": 286.375,
+              "height": 42
+            },
+            {
+              "x": 318.375,
+              "y": 617.21875,
+              "width": 0,
+              "height": 42
+            },
+            {
+              "x": 32,
+              "y": 670.015625,
+              "width": 318.984375,
+              "height": 42
+            },
+            {
+              "x": 32,
+              "y": 722.8125,
+              "width": 276.546875,
+              "height": 42
+            }
+          ],
+          "minimumContrastAcrossTextRect": 7.91
+        },
+        {
+          "text": "Makanan & minuman",
+          "color": "rgb(240, 226, 206)",
+          "font": "28px",
+          "rects": [
+            {
+              "x": 64,
+              "y": 883.40625,
+              "width": 143.390625,
+              "height": 37
+            },
+            {
+              "x": 64,
+              "y": 929.59375,
+              "width": 120.046875,
+              "height": 37
+            }
+          ],
+          "minimumContrastAcrossTextRect": 9.71
+        },
+        {
+          "text": "Camilan & pencuci mulut",
+          "color": "rgb(240, 226, 206)",
+          "font": "51.2px",
+          "rects": [
+            {
+              "x": 64,
+              "y": 981.78125,
+              "width": 219.140625,
+              "height": 62
+            },
+            {
+              "x": 64,
+              "y": 1032.984375,
+              "width": 155.609375,
+              "height": 62
+            },
+            {
+              "x": 64,
+              "y": 1084.1875,
+              "width": 120.890625,
+              "height": 62
+            }
+          ],
+          "minimumContrastAcrossTextRect": 10.37
+        },
+        {
+          "text": "Kota",
+          "color": "rgb(240, 226, 206)",
+          "font": "28px",
+          "rects": [
+            {
+              "x": 64,
+              "y": 1439.515625,
+              "width": 57.6875,
+              "height": 37
+            }
+          ],
+          "minimumContrastAcrossTextRect": 8.4
+        },
+        {
+          "text": "Bandung",
+          "color": "rgb(240, 226, 206)",
+          "font": "51.2px",
+          "rects": [
+            {
+              "x": 64,
+              "y": 1491.703125,
+              "width": 178.484375,
+              "height": 62
+            }
+          ],
+          "minimumContrastAcrossTextRect": 9.1
+        },
+        {
+          "text": "Gaya masak",
+          "color": "rgb(240, 226, 206)",
+          "font": "28px",
+          "rects": [
+            {
+              "x": 64,
+              "y": 1847.03125,
+              "width": 157,
+              "height": 37
+            }
+          ],
+          "minimumContrastAcrossTextRect": 9.05
+        },
+        {
+          "text": "Bakar",
+          "color": "rgb(240, 226, 206)",
+          "font": "51.2px",
+          "rects": [
+            {
+              "x": 64,
+              "y": 1899.21875,
+              "width": 116.234375,
+              "height": 62
+            }
+          ],
+          "minimumContrastAcrossTextRect": 11.04
+        },
+        {
+          "text": "Bara Senja",
+          "color": "rgb(240, 226, 206)",
+          "font": "32px",
+          "rects": [
+            {
+              "x": 76.796875,
+              "y": 4354.125,
+              "width": 154.765625,
+              "height": 42
+            }
+          ],
+          "minimumContrastAcrossTextRect": 10.49
+        },
+        {
+          "text": "05 Nov 2026    \n    \nBandung",
+          "color": "rgb(187, 171, 148)",
+          "font": "28px",
+          "rects": [
+            {
+              "x": 76.796875,
+              "y": 4641.0625,
+              "width": 208.765625,
+              "height": 42
+            },
+            {
+              "x": 115.984375,
+              "y": 4643.0625,
+              "width": 169.578125,
+              "height": 37
+            },
+            {
+              "x": 76.796875,
+              "y": 4692.65625,
+              "width": 169.671875,
+              "height": 42
+            },
+            {
+              "x": 132.984375,
+              "y": 4694.65625,
+              "width": 113.484375,
+              "height": 37
+            }
+          ],
+          "minimumContrastAcrossTextRect": 5.89
+        },
+        {
+          "text": "Mangkuk Mie Pagi",
+          "color": "rgb(240, 226, 206)",
+          "font": "32px",
+          "rects": [
+            {
+              "x": 76.796875,
+              "y": 5689.953125,
+              "width": 192.421875,
+              "height": 42
+            },
+            {
+              "x": 76.796875,
+              "y": 5733.140625,
+              "width": 60.78125,
+              "height": 42
+            }
+          ],
+          "minimumContrastAcrossTextRect": 10.16
+        },
+        {
+          "text": "04 Nov 2026    \n    \nJakarta",
+          "color": "rgb(187, 171, 148)",
+          "font": "28px",
+          "rects": [
+            {
+              "x": 76.796875,
+              "y": 5946.296875,
+              "width": 208.671875,
+              "height": 42
+            },
+            {
+              "x": 115.984375,
+              "y": 5948.296875,
+              "width": 169.484375,
+              "height": 37
+            },
+            {
+              "x": 76.796875,
+              "y": 5997.890625,
+              "width": 151.25,
+              "height": 42
+            },
+            {
+              "x": 132.984375,
+              "y": 5999.890625,
+              "width": 95.0625,
+              "height": 37
+            }
+          ],
+          "minimumContrastAcrossTextRect": 5.89
+        }
+      ]
+    }
+  ]
+}

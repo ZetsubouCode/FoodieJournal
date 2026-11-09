@@ -1,0 +1,10 @@
+
+Running 3 tests using 1 worker
+
+(node:29632) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 tests\Browser\error-pages.spec.js:9:1 › editorial 404 scene reflows, loads its photograph and remains keyboard accessible (4.2s)
+  ok 2 tests\Browser\homepage.spec.js:4:1 › homepage editorial collections and shared geometry reflow through desktop, mobile and 200% text (9.7s)
+  ok 3 tests\Browser\homepage.spec.js:24:1 › personal picks link to actual records and keep endorsements distinct from score (1.5s)
+
+  3 passed (16.2s)

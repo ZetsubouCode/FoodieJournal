@@ -1,0 +1,46 @@
+
+Running 4 tests using 1 worker
+
+(node:16524) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  1 tests\Browser\public-shell.spec.js:13:1 › public shell aligns header, main and footer at target and boundary widths without scaling cabinet artwork up (26.8s)
+(node:9996) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 2 tests\Browser\public-shell.spec.js:51:1 › reading measure, enlarged text and short landscape remain usable across public surfaces (18.0s)
+  ok 3 tests\Browser\public-shell.spec.js:70:1 › admin keeps its existing narrow container and compact footer (1.3s)
+  ok 4 tests\Browser\public-shell.spec.js:80:1 › wide images use derivatives with layout-aware lazy sizes and an eager capped hero (978ms)
+
+
+  1) tests\Browser\public-shell.spec.js:13:1 › public shell aligns header, main and footer at target and boundary widths without scaling cabinet artwork up 
+
+    Error: expect(received).toBeLessThan(expected)
+
+    Expected: < 2
+    Received:   4.203125
+
+      36 |                 });
+      37 |                 expect(geometry.lampLeft).toBeGreaterThanOrEqual(0);
+    > 38 |                 expect(geometry.resetDy).toBeLessThan(2);
+         |                                          ^
+      39 |                 if (width >= 960) {
+      40 |                     expect(geometry.width).toBeLessThanOrEqual(1634);
+      41 |                     expect(geometry.ratio).toBeCloseTo(1634 / 963, 2);
+        at D:\Github repo\FoodieJournal\tests\Browser\public-shell.spec.js:38:42
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    tools\.runtime\p0-2-shell\public-shell-public-shell--fb7d3--scaling-cabinet-artwork-up\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: tools\.runtime\p0-2-shell\public-shell-public-shell--fb7d3--scaling-cabinet-artwork-up\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    tools\.runtime\p0-2-shell\public-shell-public-shell--fb7d3--scaling-cabinet-artwork-up\trace.zip
+    Usage:
+
+        npx playwright show-trace tools\.runtime\p0-2-shell\public-shell-public-shell--fb7d3--scaling-cabinet-artwork-up\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests\Browser\public-shell.spec.js:13:1 › public shell aligns header, main and footer at target and boundary widths without scaling cabinet artwork up 
+  3 passed (48.8s)

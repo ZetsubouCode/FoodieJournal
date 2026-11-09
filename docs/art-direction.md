@@ -1,6 +1,6 @@
 # Foodie art direction
 
-Approved target, 8 November 2026. See [authority](product-vision.md#authority-and-read-order), [current gaps](implementation-status.md) and [implementation phases](roadmap/frontend-experience.md). Target geometry below is not yet implemented.
+Approved target, 8 November 2026. See [authority](product-vision.md#authority-and-read-order), [current gaps](implementation-status.md) and [implementation phases](roadmap/frontend-experience.md). P0-2 implemented the wide-shell geometry, warm variants and footer below on 9 November 2026; [verification](qa/wide-shell/verification.md).
 
 ## Reference lineage
 
@@ -25,9 +25,9 @@ Public display: self-hosted Cormorant Garamond (`Archive Garamond`); body: DM Sa
 
 ## Wide responsive shell
 
-Current `.container` is capped at 80rem: 1280px at 1440/1920, with 80/320px side margins. The footer background already spans the viewport; its inner content uses the same cap. There is no evidence of a second nested `.container` shrinking the principal public shell. Home additionally reserves 48–80px for the outboard lamp; that space has a mechanical purpose.
+The audit baseline capped `.container` at 80rem: 1280px at 1440/1920, with 80/320px side margins. P0-2 now applies a separate public 112rem shell with the tabled gutters; global 80rem remains for admin. Footer background spans the viewport and its inner content aligns with header/main. Home reserves 48–80px for the outboard lamp and caps the cabinet at its native 1634px source width; that space and limit have a mechanical/artwork purpose.
 
-Requested next implementation uses one shared wide shell for nav, main and footer contents, with full-width atmospheric layers and a separate reading measure:
+The implemented public layout uses one shared wide shell for nav, main and footer contents, with full-width atmospheric layers and a separate reading measure:
 
 | Width | Target gutter on each side | Wide shell rule / expected width at 16px root |
 | --- | --- | --- |
@@ -44,13 +44,13 @@ Implement through semantic shell/gutter tokens, not per-page width patches. Neve
 
 Use the older archive's warm localized light and texture across the public journey. Home may show more environment around the cabinet; Explore balances illuminated discovery photos with a quiet filter work surface; Visit/Place lower visual intensity behind reading. Crops and density may differ, while material, palette, fonts, focus and motion remain recognizably related. Error pages keep the approved kitchen image and Editorial Bold layout.
 
-Current `cinematic.css` overrides `memory-dispenser.css`: Home opacity .12, Explore .7, Visit .8, Place .6, varying crop and a fade toward 75rem rather than the older 90rem. Those are observed implementation values, not a new immutable palette. Rebalance against matched screenshots in P0; do not merely make every page equally bright.
+P0-2 `cinematic.css` retains Home .12, warms Explore to .32, Visit to .5 and Place to .42, with Visit left -4rem / Place right -8rem crops and a 90rem fade. The same existing atmosphere asset remains full bleed; reading overlays and semantic surfaces stay dark. Admin retains its previous .7/right-top/75rem treatment. These measured implementation choices are deliberate variants, not immutable palette primitives; compare the retained before/after captures when changing them.
 
 ## Header and footer contract
 
-One `x-site.header`, one `x-site.footer`, one `public-chrome.css`, including standalone errors. Header brand and simple Beranda/Jelajah remain. The approved copper left-to-right hover underline follows [motion behavior](motion-interaction.md#navigation-hover-progress); it is not a loading bar.
+One `x-site.header`, one `x-site.footer`, one `public-chrome.css`, including standalone errors. Header brand and simple Beranda/Jelajah remain. The approved copper left-to-right hover underline follows [motion behavior](motion-interaction.md#navigation-hover-progress); it is not a loading bar. P0-1 restored it on 9 November; [verification](qa/navigation-hover-progress/verification.md).
 
-Footer is a recognizable editorial ending with personal-journal identity, real navigation and back-to-top. Recover deliberate scale, warm material continuity and space for the closing statement. Current CSS hides the line break and eyebrow, reduces the statement to 2.7rem maximum, and makes navigation horizontal; the older homepage rules used up to 5.6rem and a stronger two-column close. Preserve meaning and responsiveness, not every historical divider or fixed font size. Compare full footer crops on Home/Explore/Visit/Place/error at 375/1440/1920 before approval.
+Footer is a recognizable editorial ending with personal-journal identity, real navigation and back-to-top. Recover deliberate scale, warm material continuity and space for the closing statement. P0-2 restores the real line break and an expressive 2.4–5.2rem statement, warm charcoal/copper surface and two-column desktop closing with vertical navigation; mobile uses one semantic column and wrapping navigation. Description and copyright stay visible on errors as on the other public pages. Admin retains the prior compact close. Matched footer crops cover Home/Explore/Visit/Place/error at 375/1440/1920; the original error kitchen scene and status copy remain unchanged.
 
 ## Locked and experimental
 
