@@ -1,0 +1,165 @@
+
+Running 8 tests using 1 worker
+
+(node:31464) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 tests\Browser\place-chronology.spec.js:16:1 › current-page month groups keep the same older hero, 18/2 pagination and published independent story links (5.8s)
+  ok 2 tests\Browser\place-chronology.spec.js:47:1 › long photo-free facts, all-null history and enlarged text reflow without hidden chronology (15.3s)
+  x  3 tests\Browser\place-chronology.spec.js:70:1 › reduced motion at load/runtime and failed derivatives preserve readable history and footer (1.5s)
+(node:19268) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  4 tests\Browser\place-chronology.spec.js:88:1 › native no-JS pagination and emulated touch keep Place to Visit journeys independent of enhancements (5.5s)
+(node:40392) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 5 tests\Browser\visit-story.spec.js:17:1 › original wait, derivative fallback, full failure and keyboard retry keep a stable stage and focus (3.0s)
+  ok 6 tests\Browser\visit-story.spec.js:48:1 › rapid changes and closing pending originals cannot commit a stale image (2.7s)
+  x  7 tests\Browser\visit-story.spec.js:75:1 › one and forty photo boundaries, editable arrows, native close and text-only no-JS story (4.1s)
+(node:37720) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  8 tests\Browser\visit-story.spec.js:100:1 › story, long prose, reduced motion and doubled text reflow across desktop and compact sizes (1.8s)
+
+
+  1) tests\Browser\place-chronology.spec.js:70:1 › reduced motion at load/runtime and failed derivatives preserve readable history and footer 
+
+    Error: expect(locator).not.toHaveAttribute() failed
+
+    Locator: locator('.place-history__entries')
+    Expected: not have attribute
+    Error: strict mode violation: locator('.place-history__entries') resolved to 2 elements:
+        1) <ol role="list" aria-labelledby="history-period-0" class="place-history__entries results results--visit results--list">…</ol> aka getByRole('list', { name: 'November' })
+        2) <ol role="list" aria-labelledby="history-period-1" class="place-history__entries results results--visit results--list">…</ol> aka getByRole('list', { name: 'Oktober' })
+
+    Call log:
+      - Expect "not toHaveAttribute" locator('.place-history__entries') with timeout 5000ms
+      - waiting for locator('.place-history__entries')
+
+
+      72 |     await ready(page, '/place/demo-bara-senja', photo);
+      73 |     const links = await page.locator('.place-history .visit-card__link').evaluateAll(nodes => nodes.map(n => n.href));
+    > 74 |     await expect(page.locator('.place-history__entries')).not.toHaveAttribute('hidden');
+         |                                                               ^
+      75 |     const card = page.locator('.place-history .visit-card').first(); await card.locator('.visit-card__link').focus();
+      76 |     expect(await card.evaluate(n => getComputedStyle(n).opacity)).toBe('1');
+      77 |     await page.emulateMedia({ reducedMotion: 'no-preference' }); await card.hover();
+        at D:\Github repo\FoodieJournal\tests\Browser\place-chronology.spec.js:74:63
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    tools\.runtime\p3p-browser\place-chronology-reduced-m-e9700-readable-history-and-footer\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: tools\.runtime\p3p-browser\place-chronology-reduced-m-e9700-readable-history-and-footer\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    tools\.runtime\p3p-browser\place-chronology-reduced-m-e9700-readable-history-and-footer\trace.zip
+    Usage:
+
+        npx playwright show-trace tools\.runtime\p3p-browser\place-chronology-reduced-m-e9700-readable-history-and-footer\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests\Browser\place-chronology.spec.js:88:1 › native no-JS pagination and emulated touch keep Place to Visit journeys independent of enhancements 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      12 | }
+      13 | const periods = page => page.locator('.place-history__period');
+    > 14 | const noOverflow = async page => expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+         |                                                                                                                        ^
+      15 |
+      16 | test('current-page month groups keep the same older hero, 18/2 pagination and published independent story links', async ({ page }) => {
+      17 |     const originals = []; page.on('request', r => { if (r.url().endsWith('/original')) originals.push(r.url()); });
+        at noOverflow (D:\Github repo\FoodieJournal\tests\Browser\place-chronology.spec.js:14:120)
+        at D:\Github repo\FoodieJournal\tests\Browser\place-chronology.spec.js:101:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    tools\.runtime\p3p-browser\place-chronology-native-no-c8155-independent-of-enhancements\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    tools\.runtime\p3p-browser\place-chronology-native-no-c8155-independent-of-enhancements\test-failed-2.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: tools\.runtime\p3p-browser\place-chronology-native-no-c8155-independent-of-enhancements\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    tools\.runtime\p3p-browser\place-chronology-native-no-c8155-independent-of-enhancements\trace.zip
+    Usage:
+
+        npx playwright show-trace tools\.runtime\p3p-browser\place-chronology-native-no-c8155-independent-of-enhancements\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) tests\Browser\visit-story.spec.js:75:1 › one and forty photo boundaries, editable arrows, native close and text-only no-JS story 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:8014/visit/qa-tanpa-foto
+    Call log:
+      - navigating to "http://127.0.0.1:8014/visit/qa-tanpa-foto", waiting until "load"
+
+
+      93 |     await page.locator('[data-dialog-close]:visible').click(); await expect(page.locator('[data-view-photo]').last()).toBeFocused();
+      94 |     const context = await browser.newContext({ javaScriptEnabled: false }); const nojs = await context.newPage();
+    > 95 |     await nojs.goto(sparse); await expect(nojs.locator('.dossier-story__prose')).toBeVisible();
+         |                ^
+      96 |     await expect(nojs.locator('.tasting-note--text')).toHaveCount(2); await expect(nojs.locator('[data-photo-viewer], #galeri')).toHaveCount(0);
+      97 |     await expect(nojs.locator('main')).toContainText('Rp0'); await context.close();
+      98 | });
+        at D:\Github repo\FoodieJournal\tests\Browser\visit-story.spec.js:95:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    tools\.runtime\p3p-browser\visit-story-one-and-forty--ede71-e-and-text-only-no-JS-story\test-failed-2.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    tools\.runtime\p3p-browser\visit-story-one-and-forty--ede71-e-and-text-only-no-JS-story\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: tools\.runtime\p3p-browser\visit-story-one-and-forty--ede71-e-and-text-only-no-JS-story\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    tools\.runtime\p3p-browser\visit-story-one-and-forty--ede71-e-and-text-only-no-JS-story\trace.zip
+    Usage:
+
+        npx playwright show-trace tools\.runtime\p3p-browser\visit-story-one-and-forty--ede71-e-and-text-only-no-JS-story\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) tests\Browser\visit-story.spec.js:100:1 › story, long prose, reduced motion and doubled text reflow across desktop and compact sizes 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:8014/visit/qa-tanpa-foto
+    Call log:
+      - navigating to "http://127.0.0.1:8014/visit/qa-tanpa-foto", waiting until "load"
+
+
+       6 | const gate = () => { let release; const promise = new Promise(resolve => { release = resolve; }); return { promise, release }; };
+       7 | async function ready(page, target = url) {
+    >  8 |     const response = await page.goto(target);
+         |                                 ^
+       9 |     if (target === url) expect(response.headers()['x-foodie-visual-fixture']).toBe('photo-v1');
+      10 |     await expect(page.locator('html')).toHaveAttribute('data-ui-ready', 'true');
+      11 |     await page.evaluate(() => document.fonts.ready);
+        at ready (D:\Github repo\FoodieJournal\tests\Browser\visit-story.spec.js:8:33)
+        at D:\Github repo\FoodieJournal\tests\Browser\visit-story.spec.js:118:15
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    tools\.runtime\p3p-browser\visit-story-story-long-pro-a5196-s-desktop-and-compact-sizes\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: tools\.runtime\p3p-browser\visit-story-story-long-pro-a5196-s-desktop-and-compact-sizes\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    tools\.runtime\p3p-browser\visit-story-story-long-pro-a5196-s-desktop-and-compact-sizes\trace.zip
+    Usage:
+
+        npx playwright show-trace tools\.runtime\p3p-browser\visit-story-story-long-pro-a5196-s-desktop-and-compact-sizes\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4 failed
+    tests\Browser\place-chronology.spec.js:70:1 › reduced motion at load/runtime and failed derivatives preserve readable history and footer 
+    tests\Browser\place-chronology.spec.js:88:1 › native no-JS pagination and emulated touch keep Place to Visit journeys independent of enhancements 
+    tests\Browser\visit-story.spec.js:75:1 › one and forty photo boundaries, editable arrows, native close and text-only no-JS story 
+    tests\Browser\visit-story.spec.js:100:1 › story, long prose, reduced motion and doubled text reflow across desktop and compact sizes 
+  4 passed (43.2s)

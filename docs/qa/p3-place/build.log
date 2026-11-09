@@ -1,0 +1,59 @@
+
+> build
+> php tools/build-archive-geometry.php && vite build && node tools/build-error-css.mjs
+
+vite v7.3.7 building client environment for production...
+transforming...
+
+/assets/visit-card/outer-mask.svg referenced in /assets/visit-card/outer-mask.svg didn't resolve at build time, it will remain unchanged to be resolved at runtime
+
+/assets/visit-card/outer-edge.svg referenced in /assets/visit-card/outer-edge.svg didn't resolve at build time, it will remain unchanged to be resolved at runtime
+
+/assets/visit-card/photo-mask.svg referenced in /assets/visit-card/photo-mask.svg didn't resolve at build time, it will remain unchanged to be resolved at runtime
+
+/assets/visit-card/vertical-tear.svg referenced in /assets/visit-card/vertical-tear.svg didn't resolve at build time, it will remain unchanged to be resolved at runtime
+
+/assets/visit-card/panel-grain.svg referenced in /assets/visit-card/panel-grain.svg didn't resolve at build time, it will remain unchanged to be resolved at runtime
+
+/assets/visit-card/mobile-outer-mask.svg referenced in /assets/visit-card/mobile-outer-mask.svg didn't resolve at build time, it will remain unchanged to be resolved at runtime
+
+/assets/visit-card/mobile-outer-edge.svg referenced in /assets/visit-card/mobile-outer-edge.svg didn't resolve at build time, it will remain unchanged to be resolved at runtime
+
+/assets/visit-card/mobile-photo-mask.svg referenced in /assets/visit-card/mobile-photo-mask.svg didn't resolve at build time, it will remain unchanged to be resolved at runtime
+
+/assets/visit-card/horizontal-tear.svg referenced in /assets/visit-card/horizontal-tear.svg didn't resolve at build time, it will remain unchanged to be resolved at runtime
+
+/assets/explore/archive/bronze.webp referenced in /assets/explore/archive/bronze.webp didn't resolve at build time, it will remain unchanged to be resolved at runtime
+
+/assets/explore/archive/atmosphere.webp referenced in /assets/explore/archive/atmosphere.webp didn't resolve at build time, it will remain unchanged to be resolved at runtime
+
+/assets/explore/archive/pickup-lip.webp referenced in /assets/explore/archive/pickup-lip.webp didn't resolve at build time, it will remain unchanged to be resolved at runtime
+
+/assets/explore/archive/knob-upper.webp referenced in /assets/explore/archive/knob-upper.webp didn't resolve at build time, it will remain unchanged to be resolved at runtime
+
+/assets/explore/archive/knob-lower.webp referenced in /assets/explore/archive/knob-lower.webp didn't resolve at build time, it will remain unchanged to be resolved at runtime
+
+/assets/explore/archive/slot-compact.webp referenced in /assets/explore/archive/slot-compact.webp didn't resolve at build time, it will remain unchanged to be resolved at runtime
+
+/assets/explore/archive/pickup-compact.webp referenced in /assets/explore/archive/pickup-compact.webp didn't resolve at build time, it will remain unchanged to be resolved at runtime
+
+/assets/fonts/cormorant-garamond-latin.woff2 referenced in /assets/fonts/cormorant-garamond-latin.woff2 didn't resolve at build time, it will remain unchanged to be resolved at runtime
+
+/assets/fonts/cormorant-garamond-latin-italic.woff2 referenced in /assets/fonts/cormorant-garamond-latin-italic.woff2 didn't resolve at build time, it will remain unchanged to be resolved at runtime
+
+/assets/fonts/dm-sans-latin.woff2 referenced in /assets/fonts/dm-sans-latin.woff2 didn't resolve at build time, it will remain unchanged to be resolved at runtime
+✓ 17 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json                        2.50 kB │ gzip:  0.50 kB
+public/build/assets/app-C5Uju0IE.css            102.94 kB │ gzip: 19.92 kB
+public/build/assets/visit-card-CVjg4BYY.js        1.36 kB │ gzip:  0.61 kB
+public/build/assets/viewer-BmpxdoYw.js            2.27 kB │ gzip:  0.93 kB
+public/build/assets/vending-state-CdgCqHNT.js     2.46 kB │ gzip:  0.90 kB
+public/build/assets/editor-C4IDkRCN.js            2.79 kB │ gzip:  1.26 kB
+public/build/assets/visit-carousel-azoy6vDm.js    3.97 kB │ gzip:  1.65 kB
+public/build/assets/combobox-DBxeDb44.js          4.83 kB │ gzip:  2.12 kB
+public/build/assets/app-Cjt1N_1t.js               6.64 kB │ gzip:  2.44 kB
+public/build/assets/explore-Bwskh27R.js           9.54 kB │ gzip:  3.54 kB
+public/build/assets/archive-DFm6CJP8.js          14.76 kB │ gzip:  5.29 kB
+✓ built in 292ms

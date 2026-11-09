@@ -1,0 +1,20 @@
+
+Running 3 tests using 1 worker
+
+(node:17928) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\place-390-hero.png is re-generated, writing actual.
+D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\place-390-hero.png is re-generated, writing actual.
+D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\place-390-footer.png is re-generated, writing actual.
+D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\place-390-footer.png is re-generated, writing actual.
+  ok 1 tests\Browser\public-visual.spec.js:43:9 › Place at 390: hero and footer (2.1s)
+D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\place-1440-hero.png is re-generated, writing actual.
+D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\place-1440-hero.png is re-generated, writing actual.
+  ok 2 tests\Browser\public-visual.spec.js:43:9 › Place at 1440: hero and footer (3.0s)
+D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\place-1920-hero.png is re-generated, writing actual.
+D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\place-1920-hero.png is re-generated, writing actual.
+D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\place-1920-footer.png is re-generated, writing actual.
+D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\place-1920-footer.png is re-generated, writing actual.
+  ok 3 tests\Browser\public-visual.spec.js:43:9 › Place at 1920: hero and footer (3.0s)
+
+  3 passed (8.9s)

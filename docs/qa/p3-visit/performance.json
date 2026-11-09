@@ -1,0 +1,77 @@
+{
+  "samples": [
+    {
+      "width": 390,
+      "cache": "cold",
+      "beforeLcpMedian": 688,
+      "afterLcpMedian": 536,
+      "beforeLcpRange": [
+        600,
+        9232
+      ],
+      "afterLcpRange": [
+        508,
+        660
+      ],
+      "beforeClsMax": 0.013962542187499998,
+      "afterClsMax": 0.013962542187499998,
+      "arrivalMediaBytes": 150870,
+      "identicalArrivalMediaSets": true
+    },
+    {
+      "width": 390,
+      "cache": "warm",
+      "beforeLcpMedian": 536,
+      "afterLcpMedian": 488,
+      "beforeLcpRange": [
+        468,
+        592
+      ],
+      "afterLcpRange": [
+        464,
+        532
+      ],
+      "beforeClsMax": 0.013962542187499998,
+      "afterClsMax": 0.013962542187499998,
+      "arrivalMediaBytes": 150870,
+      "identicalArrivalMediaSets": true
+    },
+    {
+      "width": 1440,
+      "cache": "cold",
+      "beforeLcpMedian": 776,
+      "afterLcpMedian": 576,
+      "beforeLcpRange": [
+        540,
+        828
+      ],
+      "afterLcpRange": [
+        556,
+        852
+      ],
+      "beforeClsMax": 0.0031470987428264853,
+      "afterClsMax": 0.0031470987428264853,
+      "arrivalMediaBytes": 469756,
+      "identicalArrivalMediaSets": true
+    },
+    {
+      "width": 1440,
+      "cache": "warm",
+      "beforeLcpMedian": 564,
+      "afterLcpMedian": 500,
+      "beforeLcpRange": [
+        484,
+        816
+      ],
+      "afterLcpRange": [
+        472,
+        644
+      ],
+      "beforeClsMax": 0.0031470987428264853,
+      "afterClsMax": 0.0031470987428264853,
+      "arrivalMediaBytes": 333094,
+      "identicalArrivalMediaSets": true
+    }
+  ],
+  "limits": "Small local lab sample; completed arrival media only; startup outlier retained; not field vitals or causal speed gains."
+}

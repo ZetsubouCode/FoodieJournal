@@ -1,0 +1,26 @@
+[
+  {
+    "width": 1440,
+    "duration": 8.64,
+    "sampledFractions": [
+      0.05,
+      0.2,
+      0.4,
+      0.6,
+      0.8,
+      0.95
+    ]
+  },
+  {
+    "width": 375,
+    "duration": 7,
+    "sampledFractions": [
+      0.05,
+      0.2,
+      0.4,
+      0.6,
+      0.8,
+      0.95
+    ]
+  }
+]

@@ -1,0 +1,94 @@
+[
+  {
+    "name": "place-1440-footer.png",
+    "before": [
+      1440,
+      352
+    ],
+    "after": [
+      1440,
+      352
+    ],
+    "bbox": null
+  },
+  {
+    "name": "place-1440-hero.png",
+    "before": [
+      1440,
+      1000
+    ],
+    "after": [
+      1440,
+      1000
+    ],
+    "bbox": [
+      48,
+      102,
+      1412,
+      1000
+    ]
+  },
+  {
+    "name": "place-1920-footer.png",
+    "before": [
+      1920,
+      414
+    ],
+    "after": [
+      1920,
+      414
+    ],
+    "bbox": [
+      0,
+      60,
+      1183,
+      362
+    ]
+  },
+  {
+    "name": "place-1920-hero.png",
+    "before": [
+      1920,
+      1000
+    ],
+    "after": [
+      1920,
+      1000
+    ],
+    "bbox": [
+      47,
+      577,
+      1914,
+      1000
+    ]
+  },
+  {
+    "name": "place-390-footer.png",
+    "before": [
+      390,
+      378
+    ],
+    "after": [
+      390,
+      377
+    ],
+    "bbox": "dimension change"
+  },
+  {
+    "name": "place-390-hero.png",
+    "before": [
+      390,
+      1000
+    ],
+    "after": [
+      390,
+      1000
+    ],
+    "bbox": [
+      16,
+      895,
+      368,
+      1000
+    ]
+  }
+]

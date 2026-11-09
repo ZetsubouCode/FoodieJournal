@@ -1,0 +1,230 @@
+{
+  "browser": "156.0.8078.4",
+  "build": "9e934ea826b98913bed44a89e47b2bcd9c09f2116e60f611dcb2fe1fe2abad6d",
+  "samples": [
+    {
+      "width": 390,
+      "run": 0,
+      "cache": "cold",
+      "lcp": 1196,
+      "cls": 0.015841275240384617,
+      "hero": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/card",
+      "media": [
+        {
+          "url": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/card",
+          "bytes": 136662
+        },
+        {
+          "url": "http://127.0.0.1:8015/media/7f3cef56-6fbf-4082-a4d0-576c0e7c6d8f/card",
+          "bytes": 136662
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "run": 0,
+      "cache": "warm",
+      "lcp": 1540,
+      "cls": 0.015841275240384617,
+      "hero": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/card",
+      "media": [
+        {
+          "url": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/card",
+          "bytes": 136662
+        },
+        {
+          "url": "http://127.0.0.1:8015/media/7f3cef56-6fbf-4082-a4d0-576c0e7c6d8f/card",
+          "bytes": 136662
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "run": 1,
+      "cache": "cold",
+      "lcp": 560,
+      "cls": 0.015841275240384617,
+      "hero": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/card",
+      "media": [
+        {
+          "url": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/card",
+          "bytes": 136662
+        },
+        {
+          "url": "http://127.0.0.1:8015/media/7f3cef56-6fbf-4082-a4d0-576c0e7c6d8f/card",
+          "bytes": 136662
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "run": 1,
+      "cache": "warm",
+      "lcp": 2424,
+      "cls": 0.015841275240384617,
+      "hero": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/card",
+      "media": [
+        {
+          "url": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/card",
+          "bytes": 136662
+        },
+        {
+          "url": "http://127.0.0.1:8015/media/7f3cef56-6fbf-4082-a4d0-576c0e7c6d8f/card",
+          "bytes": 136662
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "run": 2,
+      "cache": "cold",
+      "lcp": 1124,
+      "cls": 0.015841275240384617,
+      "hero": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/card",
+      "media": [
+        {
+          "url": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/card",
+          "bytes": 136662
+        },
+        {
+          "url": "http://127.0.0.1:8015/media/7f3cef56-6fbf-4082-a4d0-576c0e7c6d8f/card",
+          "bytes": 136662
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "run": 2,
+      "cache": "warm",
+      "lcp": 1504,
+      "cls": 0.015841275240384617,
+      "hero": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/card",
+      "media": [
+        {
+          "url": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/card",
+          "bytes": 136662
+        },
+        {
+          "url": "http://127.0.0.1:8015/media/7f3cef56-6fbf-4082-a4d0-576c0e7c6d8f/card",
+          "bytes": 136662
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "run": 0,
+      "cache": "cold",
+      "lcp": 1004,
+      "cls": 0.00137435683262201,
+      "hero": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/hero",
+      "media": [
+        {
+          "url": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/hero",
+          "bytes": 318886
+        },
+        {
+          "url": "http://127.0.0.1:8015/media/7f3cef56-6fbf-4082-a4d0-576c0e7c6d8f/card",
+          "bytes": 136662
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "run": 0,
+      "cache": "warm",
+      "lcp": 1340,
+      "cls": 0.00137435683262201,
+      "hero": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/hero",
+      "media": [
+        {
+          "url": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/hero",
+          "bytes": 318886
+        },
+        {
+          "url": "http://127.0.0.1:8015/media/7f3cef56-6fbf-4082-a4d0-576c0e7c6d8f/card",
+          "bytes": 136662
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "run": 1,
+      "cache": "cold",
+      "lcp": 1240,
+      "cls": 0.00137435683262201,
+      "hero": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/hero",
+      "media": [
+        {
+          "url": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/hero",
+          "bytes": 318886
+        },
+        {
+          "url": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/card",
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:8015/media/7f3cef56-6fbf-4082-a4d0-576c0e7c6d8f/card",
+          "bytes": 136662
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "run": 1,
+      "cache": "warm",
+      "lcp": 808,
+      "cls": 0.00137435683262201,
+      "hero": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/hero",
+      "media": [
+        {
+          "url": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/hero",
+          "bytes": 318886
+        },
+        {
+          "url": "http://127.0.0.1:8015/media/7f3cef56-6fbf-4082-a4d0-576c0e7c6d8f/card",
+          "bytes": 136662
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "run": 2,
+      "cache": "cold",
+      "lcp": 524,
+      "cls": 0.00137435683262201,
+      "hero": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/hero",
+      "media": [
+        {
+          "url": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/hero",
+          "bytes": 318886
+        },
+        {
+          "url": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/card",
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:8015/media/7f3cef56-6fbf-4082-a4d0-576c0e7c6d8f/card",
+          "bytes": 136662
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "run": 2,
+      "cache": "warm",
+      "lcp": 480,
+      "cls": 0.00137435683262201,
+      "hero": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/hero",
+      "media": [
+        {
+          "url": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/hero",
+          "bytes": 318886
+        },
+        {
+          "url": "http://127.0.0.1:8015/media/7f3cef56-6fbf-4082-a4d0-576c0e7c6d8f/card",
+          "bytes": 136662
+        }
+      ]
+    }
+  ]
+}

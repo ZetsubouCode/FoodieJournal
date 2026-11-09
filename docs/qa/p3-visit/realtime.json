@@ -1,0 +1,14 @@
+[
+  {
+    "width": 1440,
+    "file": "docs/qa/p3-visit/realtime-1440.webm",
+    "timing": "native production time; no clock, slowMo or seeking",
+    "input": "keyboard plus zoom/retry clicks"
+  },
+  {
+    "width": 375,
+    "file": "docs/qa/p3-visit/realtime-375.webm",
+    "timing": "native production time; no clock, slowMo or seeking",
+    "input": "emulated touch plus arrows"
+  }
+]

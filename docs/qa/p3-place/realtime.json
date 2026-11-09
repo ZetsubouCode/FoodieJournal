@@ -1,0 +1,14 @@
+[
+  {
+    "width": 1440,
+    "file": "docs/qa/p3-place/realtime-1440.webm",
+    "input": "keyboard",
+    "timing": "native production timing; short observation holds on real states, no clock/slowMo/animation rewrite"
+  },
+  {
+    "width": 375,
+    "file": "docs/qa/p3-place/realtime-375.webm",
+    "input": "emulated touch, reduced motion",
+    "timing": "native production timing; short observation holds on real states, no clock/slowMo/animation rewrite"
+  }
+]

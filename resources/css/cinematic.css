@@ -84,6 +84,14 @@
 .place-dossier--text .place-dossier__identity { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); column-gap: var(--space-12); align-items: start; }
 .place-dossier--text .place-dossier__identity > :not(.place-dossier__facts) { grid-column: 1; }
 .place-dossier--text .place-dossier__facts { grid-column: 2; grid-row: 2 / span 2; padding: var(--space-6); background: var(--surface-raised); border-inline-start: 2px solid var(--action-primary-bg); }
+.place-history { container-type: inline-size; }
+.place-history__group { display: grid; grid-template-columns: 12rem minmax(0, 58rem); gap: var(--space-8); align-items: start; margin-block-start: var(--space-12); }
+.place-history__period { margin: 0; padding-inline-start: var(--space-4); border-inline-start: 2px solid var(--action-primary-bg); color: var(--text-secondary); font: 500 clamp(1.6rem, 2.8vw, 2.4rem)/1.12 var(--font-display); overflow-wrap: anywhere; }
+.place-history__entries { list-style: none; margin: 0; padding: 0; min-width: 0; }
+.place-history__entries > li { min-width: 0; }
+@container (max-width: 60rem) {
+    .place-history__group { grid-template-columns: minmax(0, 1fr); gap: var(--space-6); }
+}
 @container (max-width: 50rem) {
     .place-dossier--text .place-dossier__identity { grid-template-columns: minmax(0, 1fr); }
     .place-dossier--text .place-dossier__facts { grid-column: 1; grid-row: auto; }

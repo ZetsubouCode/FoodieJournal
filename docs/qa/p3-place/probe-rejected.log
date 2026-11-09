@@ -1,0 +1,63 @@
+
+Running 1 test using 1 worker
+
+  x  1 tests\Browser\public-visual.spec.js:43:9 › Home at 1440: hero and footer (5.2s)
+
+
+  1) tests\Browser\public-visual.spec.js:43:9 › Home at 1440: hero and footer ──────────────────────
+
+    Error: expect(page).toHaveScreenshot(expected) failed
+
+      2249 pixels (ratio 0.01 of all image pixels) are different.
+
+      Snapshot: home-1440-hero.png
+
+    Call log:
+      - Expect "toHaveScreenshot(home-1440-hero.png)" with timeout 5000ms
+        - verifying given screenshot expectation
+      - taking page screenshot
+      - waiting for fonts to load...
+      - fonts loaded
+      - 2249 pixels (ratio 0.01 of all image pixels) are different.
+      - waiting 100ms before taking screenshot
+      - taking page screenshot
+      - waiting for fonts to load...
+      - fonts loaded
+      - captured a stable screenshot
+      - 2249 pixels (ratio 0.01 of all image pixels) are different.
+
+
+      30 |         fonts: await page.evaluate(() => [...document.fonts].filter(f => f.status === 'loaded').map(f => f.family)),
+      31 |         originals: await page.locator('img[src$="/original"]').count() }) });
+    > 32 |     await expect(target).toHaveScreenshot(`${name}.png`);
+         |                          ^
+      33 | }
+      34 |
+      35 | async function on(page) {
+        at shot (D:\Github repo\FoodieJournal\tests\Browser\public-visual.spec.js:32:26)
+        at D:\Github repo\FoodieJournal\tests\Browser\public-visual.spec.js:61:13
+
+    attachment #2: home-1440-hero (image/png) ──────────────────────────────────────────────────────
+    Expected: tests\Browser\__screenshots__\public-visual-win32-chromium\home-1440-hero.png
+    Received: tools\.runtime\visual-results\public-visual-Home-at-1440-hero-and-footer\home-1440-hero-actual.png
+    Diff:     tools\.runtime\visual-results\public-visual-Home-at-1440-hero-and-footer\home-1440-hero-diff.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: screenshot (image/png) ──────────────────────────────────────────────────────────
+    tools\.runtime\visual-results\public-visual-Home-at-1440-hero-and-footer\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: tools\.runtime\visual-results\public-visual-Home-at-1440-hero-and-footer\error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    tools\.runtime\visual-results\public-visual-Home-at-1440-hero-and-footer\trace.zip
+    Usage:
+
+        npx playwright show-trace tools\.runtime\visual-results\public-visual-Home-at-1440-hero-and-footer\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests\Browser\public-visual.spec.js:43:9 › Home at 1440: hero and footer ───────────────────────
+(node:35424) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)

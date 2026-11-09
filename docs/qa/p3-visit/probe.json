@@ -1,0 +1,11 @@
+{
+  "shift": "DOM-only site-header translateY(8px), Home 1440 hero",
+  "differentPixels": 2249,
+  "allowedPixels": 30,
+  "rejectedExit": 1,
+  "revertedExit": 0,
+  "baselineSha256Before": "d48891f40cf88066fc3dce0675dc1cc5cef8e520a22eae690b9cd412a0a6fbc1",
+  "baselineSha256After": "d48891f40cf88066fc3dce0675dc1cc5cef8e520a22eae690b9cd412a0a6fbc1",
+  "baselineUpdates": "none",
+  "productionSourceMutation": false
+}

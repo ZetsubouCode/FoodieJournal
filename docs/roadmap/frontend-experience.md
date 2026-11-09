@@ -1,6 +1,6 @@
 # Frontend experience implementation roadmap
 
-Approved planning direction, 8 November 2026; status updated 9 November. **P0-1 through P0-4, P0-H and scoped P1/P2 are complete; P3 onward is pending.** The original documentation phase implemented no UI changes. P0-1 through P0-4 were subsequently implemented and verified as scoped changes. Start from [baseline findings](../implementation-status.md), follow [authority](../product-vision.md#authority-and-read-order), and preserve [mechanical contracts](../motion-interaction.md). Work in small reviewable changes; no blanket rewrite or new dependency is justified.
+Approved planning direction, 8 November 2026; status updated 9 November. **P0-1 through P0-4, P0-H and scoped P1/P2/P3-1/P3-2 are complete; P4 remains pending.** The original documentation phase implemented no UI changes. P0-1 through P0-4 were subsequently implemented and verified as scoped changes. Start from [baseline findings](../implementation-status.md), follow [authority](../product-vision.md#authority-and-read-order), and preserve [mechanical contracts](../motion-interaction.md). Work in small reviewable changes; no blanket rewrite or new dependency is justified.
 
 Order: P0 shared identity, state clarity and baselines → P1 physical response → P2 discovery → P3 storytelling → P4 integrated gates. Correctness/accessibility failures found during a later phase move ahead of creative work. Each task updates status, relevant contract and evidence. Keep screenshots deterministic and fixtures isolated.
 
@@ -53,7 +53,7 @@ Order: P0 shared identity, state clarity and baselines → P1 physical response 
 
 ## P1 — Vending-machine physical response
 
-- **Status:** **Complete within the scoped Chromium gate, 9 November 2026.** One [storyboarded weighted socket-seating stroke](../qa/p1-physical-response/storyboard.md) replaces the previous uniform approach/post-snap flex. Existing 270/960/820ms clocks, legal states, exact-print identity, cancellation and all source anchors remain. Optional paper retraction was evaluated and omitted; immediate clearing remains. [Verification, frames, traces, videos and limits](../qa/p1-physical-response/verification.md). P2 completion is recorded below; P3–P4 remain pending.
+- **Status:** **Complete within the scoped Chromium gate, 9 November 2026.** One [storyboarded weighted socket-seating stroke](../qa/p1-physical-response/storyboard.md) replaces the previous uniform approach/post-snap flex. Existing 270/960/820ms clocks, legal states, exact-print identity, cancellation and all source anchors remain. Optional paper retraction was evaluated and omitted; immediate clearing remains. [Verification, frames, traces, videos and limits](../qa/p1-physical-response/verification.md). P2 completion is recorded below; P4 remains pending.
 
 - **Objective / current:** A04/A05; power, detents, masked print and identity already work. Refine the contact→actuation→response chain and optional paper clearing without reimplementing the machine.
 - **Files:** `resources/js/pages/archive.js`, `components/vending-input.js`, `components/vending-state.mjs` only for necessary legal state changes, `resources/css/vending-machine.css`, discovery hardware/print views only if needed, Node reducer and machine browser tests. Audit all `clearPrint`, `motion`, `settle`, `loadPage`, `bindRotary` callers before edits.
@@ -64,7 +64,7 @@ Order: P0 shared identity, state clarity and baselines → P1 physical response 
 
 ## P2 — Explore interaction-led discovery
 
-- **Status:** **Complete within the scoped Chromium gate, 9 November 2026.** The existing asymmetric photographic board now distinguishes press, pending intent and server-applied facets without remounting. Useful results persist through requests; a bounded visible-card entrance follows an atomic validated commit. Visible assigned derivatives alone receive static box-matched placeholders after an unresolved 200ms wait. Focus and failed-Back retry URL recovery are corrected. [Storyboard, isolated checks, reviewed gate, cost and limits](../qa/p2-discovery/verification.md). P1 working-tree changes are preserved; P3–P4 remain pending.
+- **Status:** **Complete within the scoped Chromium gate, 9 November 2026.** The existing asymmetric photographic board now distinguishes press, pending intent and server-applied facets without remounting. Useful results persist through requests; a bounded visible-card entrance follows an atomic validated commit. Visible assigned derivatives alone receive static box-matched placeholders after an unresolved 200ms wait. Focus and failed-Back retry URL recovery are corrected. [Storyboard, isolated checks, reviewed gate, cost and limits](../qa/p2-discovery/verification.md). P1 working-tree changes are preserved; P4 remains pending.
 
 - **Objective / current:** A06/A07; three photo links and practical fragments work, but discovery/selection/loading feels less tactile than the cabinet. Strengthen a photographic bento discovery board and result transitions without obscuring the form.
 - **Files:** `components/discovery/curiosity-index.blade.php`, `public/explore*.blade.php`, `resources/css/cinematic.css`, `discovery.css`, `archive-filter.css`, `resources/js/pages/explore.js`, `filter-drawer.js`, shared image fallback; `CuriosityIndex` only if truthful content selection needs change; existing Explore feature/browser tests.
@@ -75,6 +75,8 @@ Order: P0 shared identity, state clarity and baselines → P1 physical response 
 
 ## P3-1 — Visit storytelling refinements
 
+- **Status:** **Complete within the scoped Chromium gate, 9 November 2026.** Light tasting-photo/note grouping, source-ordered gallery, honest ready-media omission, narrow-column criteria and a stable original-on-demand viewer with stale-request rejection/current/zoom/focus feedback. [Isolated checks, 44 state captures, reviewed baseline lineage and cost](../qa/p3-visit/verification.md). P4 remains pending.
+
 - **Objective / current:** A08; existing Dossier already has a strong story hierarchy. Add restrained tactile photo/note grouping and consistent feedback only where it helps reading.
 - **Files:** `public/visit.blade.php`, domain tasting-note/gallery/image/viewer components, `resources/css/dossier.css`, `resources/js/components/viewer.js`; shared dialog core only for a demonstrated shared issue; related feature/browser tests.
 - **Dependencies:** P0 width/type/state baseline and P2 media/wait patterns; no domain changes.
@@ -82,7 +84,9 @@ Order: P0 shared identity, state clarity and baselines → P1 physical response 
 - **Edges / risks:** no photos, one/40 photos, revoked original, all-null or partial criteria, missing total/free item, long titles/prose, external Maps absent, keyboard arrows in input, narrow landscape/200% text. Do not fragment one story into a generic card catalog.
 - **Tests / evidence:** nullable/historical/visibility feature cases, original network observation, fast gallery changes, error/retry, Escape/focus restoration; full story sections and intermediate viewer wait/failure at 375/768/1440/1920 plus reduced/text enlargement. Measure media bytes and LCP after width changes.
 
-## P3-2 — Place chronology enhancements (pending)
+## P3-2 — Place chronology enhancements
+
+- **Status:** **Complete within the scoped Chromium behavior/visual gate, 9 November 2026.** Current-page local month/year groups label ordered lists of unchanged Visit cards. Stable hero/controller/query/order/pagination and P3-1 source/evidence are preserved. [Isolated checks, reviewed gate, 44 captures and performance investigation](../qa/p3-place/verification.md). Cold LCP increases of 14.3% compact / 21.4% desktop remain explicit lab limitations; P4 remains pending.
 
 - **Objective / current:** A09; P0-H already corrects the stable eligible hero, text/facts opening and empty history-page recovery. Only optional chronology grouping/tactile storytelling remains P3; do not reimplement resolved selection/fallback.
 - **Files:** existing Place/history/visit-card composition only when a reviewed story hypothesis warrants it; reuse P0-H fixtures/tests and shared primitives.
@@ -101,10 +105,10 @@ Order: P0 shared identity, state clarity and baselines → P1 physical response 
 
 ## Must fix versus experiments
 
-P0-1 closed the hover regression, P0-2 delivered the wide shell/shared environment, and P0-3 delivered honest empty/partial states and essential readability/control sizing. P0-4 now adds reviewed pixel baselines and a demonstrated failure/reversion check. Remaining gates include real-wait placeholders (P2), integrated access/device checks (P4), and any newly reproduced stale-state/privacy failure. Preserve working content/query/mechanics throughout.
+P0-1 closed the hover regression, P0-2 delivered the wide shell/shared environment, and P0-3 delivered honest empty/partial states and essential readability/control sizing. P0-4 adds reviewed pixel baselines and a demonstrated failure/reversion check; scoped P1/P2/P3-1/P3-2 are recorded above. Remaining work includes integrated access/device/performance checks (P4), and any newly reproduced stale-state/privacy failure. Preserve working content/query/mechanics throughout.
 
 Creative experiments after those gates: local latch resistance, short ready-paper retraction, deeper photo/note bento, shallow 3D selection layers and subtle story reveals. Evaluate one hypothesis at a time against discoverability, reading effort and measured rendering cost. No dependency or whole-page rewrite is a default deliverable.
 
 ## Next implementation prompts
 
-1. “Implement only P3-1 in `docs/roadmap/frontend-experience.md`. Read completed P0/P1/P2 evidence, preserve historical/nullable/publication/media rules and original-on-demand behavior, refine the Visit story within its scoped contract, and verify isolated fixtures plus the reviewed visual gate. Update status/evidence.”
+1. “Implement only P4 in `docs/roadmap/frontend-experience.md`. Read completed P0/P1/P2/P3 evidence, preserve domain/publication/media/mechanical contracts and working-tree changes, close the integrated accessibility/performance/consistency gates with isolated fixtures and reviewed visuals, investigate the recorded lab limitations, and label unavailable device/assistive/field evidence honestly. Update status/evidence.”

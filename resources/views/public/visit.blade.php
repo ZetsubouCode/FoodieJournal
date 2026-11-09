@@ -1,6 +1,7 @@
 <x-layout.public :title="$visit->display_title" :description="\Illuminate\Support\Str::limit($visit->experience ?: $visit->display_title, 160)" :noindex="$preview" :admin="$preview" :image="!$preview && $visit->coverMedia?->variant('hero') ? url('media/'.$visit->coverMedia->uuid.'/hero') : null">
     @if($preview)<x-ui.alert title="Pratinjau admin">Status: {{ $visit->status }}. Ini pratinjau tersimpan; halaman ini tidak dipublikasikan otomatis. <a href="{{ url('admin/visit/'.$visit->id.'/edit') }}">Kembali ke editor</a></x-ui.alert>@endif
     <x-site.breadcrumb :items="['Jelajah' => url('explore'), $visit->display_title => null]" />
+    @php($galleryMedia = $visit->media->filter(fn ($photo) => $photo->variant('card') || $photo->variant('thumbnail')))
     <article class="visit-dossier">
         <header class="dossier-hero {{ $visit->coverMedia?->variant('hero') ? '' : 'dossier-hero--text' }}">
             <div class="dossier-hero__photo"><x-domain.image :media="$visit->coverMedia" variant="hero" :priority="true" sizes="(min-width: 2560px) 2432px, (min-width: 1920px) calc(100vw - 8rem), (min-width: 1024px) 93.334vw, (min-width: 481px) calc(100vw - 3rem), calc(100vw - 2rem)" /></div>
@@ -23,7 +24,7 @@
             <div class="dossier-story__prose prose">{{ $visit->experience }}</div>
         </section>
         @elseif($visit->recommendations->isNotEmpty())
-            <div class="cluster section">@foreach($visit->recommendations as $term)<a class="chip" href="{{ url('explore').'?'.http_build_query(['recommendation' => [$term->slug]]) }}">{{ $term->name }}</a>@endforeach</div>
+            <div class="dossier-recommendations"><p>Rekomendasi pribadi</p>@foreach($visit->recommendations as $term)<a href="{{ url('explore').'?'.http_build_query(['recommendation' => [$term->slug]]) }}">{{ $term->name }} ↗</a>@endforeach</div>
         @endif
         @if($visit->items->isNotEmpty())
         <section class="dossier-section dossier-tasting" aria-labelledby="tasting-title">
@@ -43,7 +44,7 @@
                 @if($visit->overall_rating === null)<p>Belum ada kriteria yang dinilai.</p>@endif
             </div>
         </section>
-        @if($visit->media->isNotEmpty())<section class="dossier-section dossier-gallery" id="galeri" aria-labelledby="gallery-title"><header class="editorial-heading"><h2 id="gallery-title">Di dalam arsip.</h2><p>Galeri kunjungan</p></header><x-domain.gallery :media="$visit->media" /></section>@endif
+        @if($galleryMedia->isNotEmpty())<section class="dossier-section dossier-gallery" id="galeri" aria-labelledby="gallery-title"><header class="editorial-heading"><h2 id="gallery-title">Di dalam arsip.</h2><p>Galeri kunjungan</p></header><x-domain.gallery :media="$galleryMedia" /></section>@endif
         @if($visit->conclusion)<section class="dossier-section dossier-conclusion" aria-labelledby="conclusion-title"><h2 id="conclusion-title">Yang tinggal<br> <em>setelahnya.</em></h2><p class="prose">{{ $visit->conclusion }}</p></section>@endif
         @if($visit->tags->isNotEmpty())<nav class="cluster" aria-label="Tag kunjungan">@foreach($visit->tags as $term)<a class="chip" href="{{ url('explore').'?'.http_build_query(['tag' => [$term->slug]]) }}">{{ $term->name }}</a>@endforeach</nav>@endif
         <div class="action-group section">@unless($preview)<x-ui.button href="{{ url('place/'.$visit->place->slug) }}">Lihat tempat</x-ui.button>@endunless</div>

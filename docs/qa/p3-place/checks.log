@@ -1,0 +1,2 @@
+{"tool":"pint","result":"passed"}
+PASS: changed PHP Pint, browser/QA JavaScript syntax and git diff --check. Task QA servers stopped; isolated fixtures and completed P3-1 preserved.

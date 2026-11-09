@@ -52,6 +52,10 @@ Explore keeps the discovery board mounted while server fragments update console/
 
 Visit/Place use photo hover/focus, readable section reveals and gallery feedback as aids to storytelling. No mandatory scroll-jacking, long entrance gates or timeline scrubbing to read a visit. Bento ordering follows semantic DOM order on mobile. Meaningful CSS perspective/2.5D/3D is allowed; WebGL requires a measured advantage and equivalent fallback, not a decorative dependency.
 
+P3-1 (9 November) uses the existing 140/220ms hover/focus/press grammar and a static current-photo outline. No new reveal, entrance wait, skeleton timer or idle animation: Visit text is settled immediately with reduced motion and without JS. Original/derivative requests own the viewer's real busy/status transitions within a fixed image stage; old callbacks are ignored after selection/close. [Evidence and limits](qa/p3-visit/verification.md). Place chronology is unchanged.
+
+P3-2 (9 November) adds static month/year grouping to Place history and inherits existing Visit-card hover/focus feedback. No new JS, reveal, animation, sticky marker, loading timer or pagination interception. Ordinary links and browser history own Visit↔Place navigation; reduced-motion load/runtime and no-JS journeys retain settled groups. [Evidence, font-swap investigation and limits](qa/p3-place/verification.md).
+
 ## Accessibility, interruption and performance gates
 
 Every applicable control has idle, hover, focus, press, selected/active and disabled feedback. Async flows additionally expose processing/loading, success, empty, failure/retry and interruption/cancellation. Do not add impossible boolean combinations; extend the existing reducer when state becomes nontrivial.

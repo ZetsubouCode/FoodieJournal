@@ -1,0 +1,20 @@
+
+Running 3 tests using 1 worker
+
+(node:23828) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\visit-1440-hero.png is re-generated, writing actual.
+D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\visit-1440-hero.png is re-generated, writing actual.
+D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\visit-1440-footer.png is re-generated, writing actual.
+D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\visit-1440-footer.png is re-generated, writing actual.
+  ok 1 tests\Browser\public-visual.spec.js:43:9 › Visit at 1440: hero and footer (3.9s)
+D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\visit-1920-hero.png is re-generated, writing actual.
+D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\visit-1920-hero.png is re-generated, writing actual.
+D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\visit-1920-footer.png is re-generated, writing actual.
+D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\visit-1920-footer.png is re-generated, writing actual.
+  ok 2 tests\Browser\public-visual.spec.js:43:9 › Visit at 1920: hero and footer (4.0s)
+D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\viewer-original-390.png is re-generated, writing actual.
+D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\viewer-original-390.png is re-generated, writing actual.
+  ok 3 tests\Browser\public-visual.spec.js:144:1 › viewer original loads on demand and focus returns (2.6s)
+
+  3 passed (11.4s)

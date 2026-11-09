@@ -1,0 +1,498 @@
+{
+  "browser": "156.0.8078.4",
+  "states": [
+    {
+      "width": 375,
+      "state": "story",
+      "url": "http://127.0.0.1:8015/visit/demo-bara-di-ujung-hari",
+      "overflow": false,
+      "stage": null,
+      "status": ""
+    },
+    {
+      "width": 375,
+      "state": "note",
+      "url": "http://127.0.0.1:8015/visit/demo-bara-di-ujung-hari",
+      "overflow": false,
+      "stage": null,
+      "status": ""
+    },
+    {
+      "width": 375,
+      "state": "photo-hover",
+      "url": "http://127.0.0.1:8015/visit/demo-bara-di-ujung-hari",
+      "overflow": false,
+      "stage": null,
+      "status": ""
+    },
+    {
+      "width": 375,
+      "state": "gallery-focus",
+      "url": "http://127.0.0.1:8015/visit/demo-bara-di-ujung-hari",
+      "overflow": false,
+      "stage": null,
+      "status": ""
+    },
+    {
+      "width": 375,
+      "state": "viewer-wait",
+      "url": "http://127.0.0.1:8015/visit/demo-bara-di-ujung-hari",
+      "overflow": false,
+      "stage": {
+        "x": 41,
+        "y": 300.96875,
+        "width": 293,
+        "height": 450,
+        "top": 300.96875,
+        "right": 334,
+        "bottom": 750.96875,
+        "left": 41
+      },
+      "status": "Memuat original 1 dari 2…"
+    },
+    {
+      "width": 375,
+      "state": "viewer-fallback",
+      "url": "http://127.0.0.1:8015/visit/demo-bara-di-ujung-hari",
+      "overflow": false,
+      "stage": {
+        "x": 41,
+        "y": 281.953125,
+        "width": 293,
+        "height": 450,
+        "top": 281.953125,
+        "right": 334,
+        "bottom": 731.953125,
+        "left": 41
+      },
+      "status": "Original tidak dapat dimuat. Menampilkan pratinjau; coba lagi atau tutup."
+    },
+    {
+      "width": 375,
+      "state": "viewer-failure",
+      "url": "http://127.0.0.1:8015/visit/demo-bara-di-ujung-hari",
+      "overflow": false,
+      "stage": {
+        "x": 41,
+        "y": 281.953125,
+        "width": 293,
+        "height": 450,
+        "top": 281.953125,
+        "right": 334,
+        "bottom": 731.953125,
+        "left": 41
+      },
+      "status": "Foto tidak tersedia. Akses mungkin telah dicabut. Coba lagi atau tutup."
+    },
+    {
+      "width": 375,
+      "state": "viewer-success",
+      "url": "http://127.0.0.1:8015/visit/demo-bara-di-ujung-hari",
+      "overflow": false,
+      "stage": {
+        "x": 41,
+        "y": 300.96875,
+        "width": 293,
+        "height": 450,
+        "top": 300.96875,
+        "right": 334,
+        "bottom": 750.96875,
+        "left": 41
+      },
+      "status": "Foto 1 dari 2"
+    },
+    {
+      "width": 375,
+      "state": "focus-restored",
+      "url": "http://127.0.0.1:8015/visit/demo-bara-di-ujung-hari",
+      "overflow": false,
+      "stage": null,
+      "status": "Foto 1 dari 2"
+    },
+    {
+      "width": 375,
+      "state": "reduced-text200",
+      "url": "http://127.0.0.1:8015/visit/demo-bara-di-ujung-hari",
+      "overflow": false,
+      "stage": null,
+      "status": ""
+    },
+    {
+      "width": 375,
+      "state": "text-only",
+      "url": "http://127.0.0.1:8014/visit/qa-tanpa-foto",
+      "overflow": false,
+      "stage": null
+    },
+    {
+      "width": 768,
+      "state": "story",
+      "url": "http://127.0.0.1:8015/visit/demo-bara-di-ujung-hari",
+      "overflow": false,
+      "stage": null,
+      "status": ""
+    },
+    {
+      "width": 768,
+      "state": "note",
+      "url": "http://127.0.0.1:8015/visit/demo-bara-di-ujung-hari",
+      "overflow": false,
+      "stage": null,
+      "status": ""
+    },
+    {
+      "width": 768,
+      "state": "photo-hover",
+      "url": "http://127.0.0.1:8015/visit/demo-bara-di-ujung-hari",
+      "overflow": false,
+      "stage": null,
+      "status": ""
+    },
+    {
+      "width": 768,
+      "state": "gallery-focus",
+      "url": "http://127.0.0.1:8015/visit/demo-bara-di-ujung-hari",
+      "overflow": false,
+      "stage": null,
+      "status": ""
+    },
+    {
+      "width": 768,
+      "state": "viewer-wait",
+      "url": "http://127.0.0.1:8015/visit/demo-bara-di-ujung-hari",
+      "overflow": false,
+      "stage": {
+        "x": 41,
+        "y": 343.78125,
+        "width": 686,
+        "height": 450,
+        "top": 343.78125,
+        "right": 727,
+        "bottom": 793.78125,
+        "left": 41
+      },
+      "status": "Memuat original 1 dari 2…"
+    },
+    {
+      "width": 768,
+      "state": "viewer-fallback",
+      "url": "http://127.0.0.1:8015/visit/demo-bara-di-ujung-hari",
+      "overflow": false,
+      "stage": {
+        "x": 41,
+        "y": 343.78125,
+        "width": 686,
+        "height": 450,
+        "top": 343.78125,
+        "right": 727,
+        "bottom": 793.78125,
+        "left": 41
+      },
+      "status": "Original tidak dapat dimuat. Menampilkan pratinjau; coba lagi atau tutup."
+    },
+    {
+      "width": 768,
+      "state": "viewer-failure",
+      "url": "http://127.0.0.1:8015/visit/demo-bara-di-ujung-hari",
+      "overflow": false,
+      "stage": {
+        "x": 41,
+        "y": 343.78125,
+        "width": 686,
+        "height": 450,
+        "top": 343.78125,
+        "right": 727,
+        "bottom": 793.78125,
+        "left": 41
+      },
+      "status": "Foto tidak tersedia. Akses mungkin telah dicabut. Coba lagi atau tutup."
+    },
+    {
+      "width": 768,
+      "state": "viewer-success",
+      "url": "http://127.0.0.1:8015/visit/demo-bara-di-ujung-hari",
+      "overflow": false,
+      "stage": {
+        "x": 41,
+        "y": 343.78125,
+        "width": 686,
+        "height": 450,
+        "top": 343.78125,
+        "right": 727,
+        "bottom": 793.78125,
+        "left": 41
+      },
+      "status": "Foto 1 dari 2"
+    },
+    {
+      "width": 768,
+      "state": "focus-restored",
+      "url": "http://127.0.0.1:8015/visit/demo-bara-di-ujung-hari",
+      "overflow": false,
+      "stage": null,
+      "status": "Foto 1 dari 2"
+    },
+    {
+      "width": 768,
+      "state": "reduced-text200",
+      "url": "http://127.0.0.1:8015/visit/demo-bara-di-ujung-hari",
+      "overflow": false,
+      "stage": null,
+      "status": ""
+    },
+    {
+      "width": 768,
+      "state": "text-only",
+      "url": "http://127.0.0.1:8014/visit/qa-tanpa-foto",
+      "overflow": false,
+      "stage": null
+    },
+    {
+      "width": 1440,
+      "state": "story",
+      "url": "http://127.0.0.1:8015/visit/demo-bara-di-ujung-hari",
+      "overflow": false,
+      "stage": null,
+      "status": ""
+    },
+    {
+      "width": 1440,
+      "state": "note",
+      "url": "http://127.0.0.1:8015/visit/demo-bara-di-ujung-hari",
+      "overflow": false,
+      "stage": null,
+      "status": ""
+    },
+    {
+      "width": 1440,
+      "state": "photo-hover",
+      "url": "http://127.0.0.1:8015/visit/demo-bara-di-ujung-hari",
+      "overflow": false,
+      "stage": null,
+      "status": ""
+    },
+    {
+      "width": 1440,
+      "state": "gallery-focus",
+      "url": "http://127.0.0.1:8015/visit/demo-bara-di-ujung-hari",
+      "overflow": false,
+      "stage": null,
+      "status": ""
+    },
+    {
+      "width": 1440,
+      "state": "viewer-wait",
+      "url": "http://127.0.0.1:8015/visit/demo-bara-di-ujung-hari",
+      "overflow": false,
+      "stage": {
+        "x": 105,
+        "y": 343.78125,
+        "width": 1230,
+        "height": 450,
+        "top": 343.78125,
+        "right": 1335,
+        "bottom": 793.78125,
+        "left": 105
+      },
+      "status": "Memuat original 1 dari 2…"
+    },
+    {
+      "width": 1440,
+      "state": "viewer-fallback",
+      "url": "http://127.0.0.1:8015/visit/demo-bara-di-ujung-hari",
+      "overflow": false,
+      "stage": {
+        "x": 105,
+        "y": 343.78125,
+        "width": 1230,
+        "height": 450,
+        "top": 343.78125,
+        "right": 1335,
+        "bottom": 793.78125,
+        "left": 105
+      },
+      "status": "Original tidak dapat dimuat. Menampilkan pratinjau; coba lagi atau tutup."
+    },
+    {
+      "width": 1440,
+      "state": "viewer-failure",
+      "url": "http://127.0.0.1:8015/visit/demo-bara-di-ujung-hari",
+      "overflow": false,
+      "stage": {
+        "x": 105,
+        "y": 343.78125,
+        "width": 1230,
+        "height": 450,
+        "top": 343.78125,
+        "right": 1335,
+        "bottom": 793.78125,
+        "left": 105
+      },
+      "status": "Foto tidak tersedia. Akses mungkin telah dicabut. Coba lagi atau tutup."
+    },
+    {
+      "width": 1440,
+      "state": "viewer-success",
+      "url": "http://127.0.0.1:8015/visit/demo-bara-di-ujung-hari",
+      "overflow": false,
+      "stage": {
+        "x": 105,
+        "y": 343.78125,
+        "width": 1230,
+        "height": 450,
+        "top": 343.78125,
+        "right": 1335,
+        "bottom": 793.78125,
+        "left": 105
+      },
+      "status": "Foto 1 dari 2"
+    },
+    {
+      "width": 1440,
+      "state": "focus-restored",
+      "url": "http://127.0.0.1:8015/visit/demo-bara-di-ujung-hari",
+      "overflow": false,
+      "stage": null,
+      "status": "Foto 1 dari 2"
+    },
+    {
+      "width": 1440,
+      "state": "reduced-text200",
+      "url": "http://127.0.0.1:8015/visit/demo-bara-di-ujung-hari",
+      "overflow": false,
+      "stage": null,
+      "status": ""
+    },
+    {
+      "width": 1440,
+      "state": "text-only",
+      "url": "http://127.0.0.1:8014/visit/qa-tanpa-foto",
+      "overflow": false,
+      "stage": null
+    },
+    {
+      "width": 1920,
+      "state": "story",
+      "url": "http://127.0.0.1:8015/visit/demo-bara-di-ujung-hari",
+      "overflow": false,
+      "stage": null,
+      "status": ""
+    },
+    {
+      "width": 1920,
+      "state": "note",
+      "url": "http://127.0.0.1:8015/visit/demo-bara-di-ujung-hari",
+      "overflow": false,
+      "stage": null,
+      "status": ""
+    },
+    {
+      "width": 1920,
+      "state": "photo-hover",
+      "url": "http://127.0.0.1:8015/visit/demo-bara-di-ujung-hari",
+      "overflow": false,
+      "stage": null,
+      "status": ""
+    },
+    {
+      "width": 1920,
+      "state": "gallery-focus",
+      "url": "http://127.0.0.1:8015/visit/demo-bara-di-ujung-hari",
+      "overflow": false,
+      "stage": null,
+      "status": ""
+    },
+    {
+      "width": 1920,
+      "state": "viewer-wait",
+      "url": "http://127.0.0.1:8015/visit/demo-bara-di-ujung-hari",
+      "overflow": false,
+      "stage": {
+        "x": 345,
+        "y": 343.78125,
+        "width": 1230,
+        "height": 450,
+        "top": 343.78125,
+        "right": 1575,
+        "bottom": 793.78125,
+        "left": 345
+      },
+      "status": "Memuat original 1 dari 2…"
+    },
+    {
+      "width": 1920,
+      "state": "viewer-fallback",
+      "url": "http://127.0.0.1:8015/visit/demo-bara-di-ujung-hari",
+      "overflow": false,
+      "stage": {
+        "x": 345,
+        "y": 343.78125,
+        "width": 1230,
+        "height": 450,
+        "top": 343.78125,
+        "right": 1575,
+        "bottom": 793.78125,
+        "left": 345
+      },
+      "status": "Original tidak dapat dimuat. Menampilkan pratinjau; coba lagi atau tutup."
+    },
+    {
+      "width": 1920,
+      "state": "viewer-failure",
+      "url": "http://127.0.0.1:8015/visit/demo-bara-di-ujung-hari",
+      "overflow": false,
+      "stage": {
+        "x": 345,
+        "y": 343.78125,
+        "width": 1230,
+        "height": 450,
+        "top": 343.78125,
+        "right": 1575,
+        "bottom": 793.78125,
+        "left": 345
+      },
+      "status": "Foto tidak tersedia. Akses mungkin telah dicabut. Coba lagi atau tutup."
+    },
+    {
+      "width": 1920,
+      "state": "viewer-success",
+      "url": "http://127.0.0.1:8015/visit/demo-bara-di-ujung-hari",
+      "overflow": false,
+      "stage": {
+        "x": 345,
+        "y": 343.78125,
+        "width": 1230,
+        "height": 450,
+        "top": 343.78125,
+        "right": 1575,
+        "bottom": 793.78125,
+        "left": 345
+      },
+      "status": "Foto 1 dari 2"
+    },
+    {
+      "width": 1920,
+      "state": "focus-restored",
+      "url": "http://127.0.0.1:8015/visit/demo-bara-di-ujung-hari",
+      "overflow": false,
+      "stage": null,
+      "status": "Foto 1 dari 2"
+    },
+    {
+      "width": 1920,
+      "state": "reduced-text200",
+      "url": "http://127.0.0.1:8015/visit/demo-bara-di-ujung-hari",
+      "overflow": false,
+      "stage": null,
+      "status": ""
+    },
+    {
+      "width": 1920,
+      "state": "text-only",
+      "url": "http://127.0.0.1:8014/visit/qa-tanpa-foto",
+      "overflow": false,
+      "stage": null
+    }
+  ],
+  "errors": []
+}

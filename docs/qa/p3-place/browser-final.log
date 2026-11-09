@@ -1,0 +1,16 @@
+
+Running 9 tests using 1 worker
+
+(node:37104) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 tests\Browser\place-chronology.spec.js:16:1 › current-page month groups keep the same older hero, 18/2 pagination and published independent story links (5.8s)
+  ok 2 tests\Browser\place-chronology.spec.js:51:1 › long photo-free facts, all-null history and enlarged text reflow without hidden chronology (15.7s)
+  ok 3 tests\Browser\place-chronology.spec.js:74:1 › reduced motion at load/runtime and failed derivatives preserve readable history and footer (2.4s)
+  ok 4 tests\Browser\place-chronology.spec.js:92:1 › native no-JS pagination and emulated touch keep Place to Visit journeys independent of enhancements (6.7s)
+  ok 5 tests\Browser\place-chronology.spec.js:110:1 › loading real fonts does not move the month groups through a changing caption wrap (1.9s)
+  ok 6 tests\Browser\visit-story.spec.js:17:1 › original wait, derivative fallback, full failure and keyboard retry keep a stable stage and focus (3.1s)
+  ok 7 tests\Browser\visit-story.spec.js:48:1 › rapid changes and closing pending originals cannot commit a stale image (2.7s)
+  ok 8 tests\Browser\visit-story.spec.js:75:1 › one and forty photo boundaries, editable arrows, native close and text-only no-JS story (4.9s)
+  ok 9 tests\Browser\visit-story.spec.js:100:1 › story, long prose, reduced motion and doubled text reflow across desktop and compact sizes (9.1s)
+
+  9 passed (53.3s)

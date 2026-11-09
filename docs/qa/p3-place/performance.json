@@ -1,0 +1,131 @@
+{
+  "samples": [
+    {
+      "width": 390,
+      "cache": "cold",
+      "beforeLcpMedian": 476,
+      "afterLcpMedian": 544,
+      "lcpChangePercent": 14.28571428571428,
+      "beforeRange": [
+        472,
+        540
+      ],
+      "afterRange": [
+        528,
+        560
+      ],
+      "beforeClsMax": 0.015841275240384617,
+      "afterClsMax": 0.015841275240384617,
+      "arrivalMediaBytes": 273324,
+      "identicalHeroAndPositiveByteMedia": true,
+      "zeroByteTimingEntriesBefore": [
+        [],
+        [],
+        []
+      ],
+      "zeroByteTimingEntriesAfter": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "width": 390,
+      "cache": "warm",
+      "beforeLcpMedian": 468,
+      "afterLcpMedian": 512,
+      "lcpChangePercent": 9.401709401709413,
+      "beforeRange": [
+        460,
+        488
+      ],
+      "afterRange": [
+        480,
+        512
+      ],
+      "beforeClsMax": 0.015841275240384617,
+      "afterClsMax": 0.015841275240384617,
+      "arrivalMediaBytes": 273324,
+      "identicalHeroAndPositiveByteMedia": true,
+      "zeroByteTimingEntriesBefore": [
+        [],
+        [],
+        []
+      ],
+      "zeroByteTimingEntriesAfter": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "width": 1440,
+      "cache": "cold",
+      "beforeLcpMedian": 504,
+      "afterLcpMedian": 612,
+      "lcpChangePercent": 21.42857142857142,
+      "beforeRange": [
+        488,
+        632
+      ],
+      "afterRange": [
+        560,
+        700
+      ],
+      "beforeClsMax": 0.00137435683262201,
+      "afterClsMax": 0.001596016875843943,
+      "arrivalMediaBytes": 455548,
+      "identicalHeroAndPositiveByteMedia": true,
+      "zeroByteTimingEntriesBefore": [
+        [
+          "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/card"
+        ],
+        [
+          "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/card"
+        ],
+        [
+          "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/card"
+        ]
+      ],
+      "zeroByteTimingEntriesAfter": [
+        [],
+        [
+          "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/card"
+        ],
+        [
+          "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/card"
+        ]
+      ]
+    },
+    {
+      "width": 1440,
+      "cache": "warm",
+      "beforeLcpMedian": 464,
+      "afterLcpMedian": 492,
+      "lcpChangePercent": 6.034482758620685,
+      "beforeRange": [
+        464,
+        472
+      ],
+      "afterRange": [
+        488,
+        536
+      ],
+      "beforeClsMax": 0.00137435683262201,
+      "afterClsMax": 0.001596016875843943,
+      "arrivalMediaBytes": 455548,
+      "identicalHeroAndPositiveByteMedia": true,
+      "zeroByteTimingEntriesBefore": [
+        [],
+        [],
+        []
+      ],
+      "zeroByteTimingEntriesAfter": [
+        [],
+        [],
+        []
+      ]
+    }
+  ],
+  "limits": "Small local lab sample; cold LCP increase and residual font/card CLS retained. Font and same-build diagnostic do not replace genuine before/after. See verification.md."
+}

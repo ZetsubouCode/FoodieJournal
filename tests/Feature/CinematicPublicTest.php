@@ -61,6 +61,43 @@ class CinematicPublicTest extends TestCase
             ->assertDontSee('0,0')->assertDontSee('Belum Dinilai');
     }
 
+    public function test_dossier_omits_unready_gallery_and_preserves_partial_notes_free_prices_and_endorsements_without_story(): void
+    {
+        $visit = Visit::factory()->published()->create([
+            'experience' => null, 'conclusion' => null, 'total_spent_idr' => null,
+            'service_review' => 'Pelayanan dicatat tanpa angka.', 'service_rating' => null,
+        ]);
+        $visit->place->update(['maps_url' => null]);
+        VisitItem::factory()->for($visit)->create(['unit_price_idr' => 0, 'taste_rating' => null]);
+        $visit->recommendations()->attach(RecommendationLabel::create(['name' => 'Pilihan tanpa skor']));
+        $photo = $visit->media()->create(['uuid' => (string) Str::uuid(), 'original_path' => 'fixture', 'mime_type' => 'image/jpeg', 'original_bytes' => 10, 'width' => 900, 'height' => 600, 'sha256' => str_repeat('a', 64)]);
+        $photo->variants()->create(['variant' => 'thumbnail', 'path' => 'fixture', 'mime_type' => 'image/jpeg', 'width' => 300, 'height' => 200, 'bytes' => 10, 'status' => 'failed']);
+
+        $this->get('/visit/'.$visit->slug)->assertOk()->assertSee('Rp0')->assertSee('Harga belum dicatat')
+            ->assertSee('Pelayanan dicatat tanpa angka.')->assertSee('Penilaian belum dicatat')
+            ->assertSee('Rekomendasi pribadi')->assertSee('Pilihan tanpa skor')
+            ->assertDontSee('id="story-title"', false)->assertDontSee('id="conclusion-title"', false)
+            ->assertDontSee('id="galeri"', false)->assertDontSee('data-photo-viewer', false)->assertDontSee('Buka Google Maps');
+    }
+
+    public function test_dossier_gallery_supports_card_only_thumbnail_only_and_forty_ready_photos_without_eager_originals(): void
+    {
+        $visit = Visit::factory()->published()->create();
+        for ($i = 0; $i < 40; $i++) {
+            $photo = $visit->media()->create(['uuid' => (string) Str::uuid(), 'original_path' => 'fixture', 'mime_type' => 'image/jpeg', 'original_bytes' => 10, 'width' => 900, 'height' => 600, 'sha256' => str_repeat('a', 64)]);
+            $photo->variants()->create(['variant' => $i % 2 ? 'card' : 'thumbnail', 'path' => 'fixture', 'mime_type' => 'image/jpeg', 'width' => 300, 'height' => 200, 'bytes' => 10, 'status' => 'ready']);
+        }
+        $response = $this->get('/visit/'.$visit->slug)->assertOk();
+        $document = new \DOMDocument;
+        @$document->loadHTML($response->getContent());
+        $xpath = new \DOMXPath($document);
+        $this->assertSame(40, $xpath->query('//button[@data-view-photo]')->length);
+        $this->assertSame(0, $xpath->query('//img[contains(@src,"/original")]')->length);
+        $this->assertSame(0, $xpath->query('//link[contains(@href,"/original")]')->length);
+        $this->assertStringEndsWith('/thumbnail', $xpath->query('//button[@data-view-photo]')->item(0)->getAttribute('data-fallback'));
+        $this->assertStringEndsWith('/card', $xpath->query('//button[@data-view-photo]')->item(1)->getAttribute('data-fallback'));
+    }
+
     public function test_curiosity_food_and_technique_photographs_belong_to_matching_published_items(): void
     {
         $category = Category::create(['name' => 'Camilan']);
