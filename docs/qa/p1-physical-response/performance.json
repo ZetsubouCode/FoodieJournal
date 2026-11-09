@@ -1,0 +1,106 @@
+{
+  "method": "Same-fixture unthrottled real socket activation through ON, three samples per width before/after. Trace collection separate from other browser gates. Native frame sampling, no posing.",
+  "samples": [
+    {
+      "width": 1440,
+      "phase": "before",
+      "sampleCount": 3,
+      "medianFrameMs": 16.699999999999818,
+      "medianP95Ms": 16.700000000000273,
+      "maxFrameMs": 16.800000000000182,
+      "layoutShiftCount": 0,
+      "Paint": {
+        "medianMs": 15.045,
+        "medianCount": 65
+      },
+      "Layout": {
+        "medianMs": 5.752,
+        "medianCount": 6
+      },
+      "UpdateLayoutTree": {
+        "medianMs": 19.318,
+        "medianCount": 89
+      },
+      "documentPaint": {
+        "medianCount": 28,
+        "medianMs": 12.415000000000003
+      }
+    },
+    {
+      "width": 1440,
+      "phase": "after",
+      "sampleCount": 3,
+      "medianFrameMs": 16.699999999999818,
+      "medianP95Ms": 16.700000000000728,
+      "maxFrameMs": 16.800000000000182,
+      "layoutShiftCount": 0,
+      "Paint": {
+        "medianMs": 18.174,
+        "medianCount": 67
+      },
+      "Layout": {
+        "medianMs": 5.776,
+        "medianCount": 7
+      },
+      "UpdateLayoutTree": {
+        "medianMs": 23.372,
+        "medianCount": 90
+      },
+      "documentPaint": {
+        "medianCount": 29,
+        "medianMs": 15.412999999999998
+      }
+    },
+    {
+      "width": 390,
+      "phase": "before",
+      "sampleCount": 3,
+      "medianFrameMs": 16.699999999999818,
+      "medianP95Ms": 16.700000000000728,
+      "maxFrameMs": 16.800000000000182,
+      "layoutShiftCount": 0,
+      "Paint": {
+        "medianMs": 18.969,
+        "medianCount": 71
+      },
+      "Layout": {
+        "medianMs": 6.489,
+        "medianCount": 6
+      },
+      "UpdateLayoutTree": {
+        "medianMs": 25.787,
+        "medianCount": 90
+      },
+      "documentPaint": {
+        "medianCount": 31,
+        "medianMs": 14.854
+      }
+    },
+    {
+      "width": 390,
+      "phase": "after",
+      "sampleCount": 3,
+      "medianFrameMs": 16.699999999999818,
+      "medianP95Ms": 16.700000000000728,
+      "maxFrameMs": 16.800000000000182,
+      "layoutShiftCount": 0,
+      "Paint": {
+        "medianMs": 20.329,
+        "medianCount": 73
+      },
+      "Layout": {
+        "medianMs": 6.012,
+        "medianCount": 7
+      },
+      "UpdateLayoutTree": {
+        "medianMs": 26.269,
+        "medianCount": 93
+      },
+      "documentPaint": {
+        "medianCount": 32,
+        "medianMs": 16.37
+      }
+    }
+  ],
+  "investigation": "Desktop Paint +20.8% (+3.129ms total) and UpdateLayoutTree +21.0% (+4.054ms) investigated via raw events. Desktop sample 2 has 29 document paints before/after; median document count 28 to 29, total Paint count 65 to 67, style updates 89 to 90. About 3ms difference belongs to document paints; non-document duration effectively flat. Boot/style invalidation and run variance cannot be fully separated. Only bounded transforms added; no cadence/layout-shift regression. Not a field/device claim."
+}

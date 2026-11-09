@@ -1,0 +1,18 @@
+✔ authored and minified CSS durations resolve to the same WAAPI milliseconds (1.1763ms)
+✔ angles stay continuous through ±180° in both directions (0.8292ms)
+✔ wrap handles negative, zero, one and many pages (0.1564ms)
+✔ expanded elliptical drop zones accept edges without accepting distant slots (0.1748ms)
+✔ holding and snap travel cannot power the machine before commit (0.2856ms)
+✔ invalid removal returns to socket and never cycles power (0.1184ms)
+✔ valid removal commits shutdown only after travel (0.1237ms)
+✔ off controls and illegal transitions leave state unchanged (0.1416ms)
+✔ one print is frozen to a concrete visit, locks competing actions and retrieves once (0.2006ms)
+✔ new selection or page clears a ready photo, reset leaves power on (0.216ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 86.8894

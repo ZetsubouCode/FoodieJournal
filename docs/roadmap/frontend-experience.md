@@ -1,6 +1,6 @@
 # Frontend experience implementation roadmap
 
-Approved planning direction, 8 November 2026; status updated 9 November. **P0-1 through P0-4 are complete; P1 onward is pending.** The original documentation phase implemented no UI changes. P0-1 through P0-4 were subsequently implemented and verified as scoped changes. Start from [baseline findings](../implementation-status.md), follow [authority](../product-vision.md#authority-and-read-order), and preserve [mechanical contracts](../motion-interaction.md). Work in small reviewable changes; no blanket rewrite or new dependency is justified.
+Approved planning direction, 8 November 2026; status updated 9 November. **P0-1 through P0-4, P0-H and scoped P1/P2 are complete; P3 onward is pending.** The original documentation phase implemented no UI changes. P0-1 through P0-4 were subsequently implemented and verified as scoped changes. Start from [baseline findings](../implementation-status.md), follow [authority](../product-vision.md#authority-and-read-order), and preserve [mechanical contracts](../motion-interaction.md). Work in small reviewable changes; no blanket rewrite or new dependency is justified.
 
 Order: P0 shared identity, state clarity and baselines → P1 physical response → P2 discovery → P3 storytelling → P4 integrated gates. Correctness/accessibility failures found during a later phase move ahead of creative work. Each task updates status, relevant contract and evidence. Keep screenshots deterministic and fixtures isolated.
 
@@ -9,7 +9,7 @@ Order: P0 shared identity, state clarity and baselines → P1 physical response 
 - **Implemented:** seven [owner decisions / ADR 002](../adr/002-p0-hardening.md): adaptive 152rem visual cap with 68ch prose/native cabinet, ultrawide result reflow and bounded discovery photo height; deterministic eligible Place cover and responsive photo-free facts; retained warm public atmosphere/footer; minimal system-font/plain admin; shared primitive inventory and single saved-success announcement; existing state/retry verification without new skeletons; bounded out-of-range Place recovery.
 - **Evidence/status:** [current report](../qa/p0-hardening/verification.md) lists actual PHP/build/browser/pixel results and dimensions. P0-1–4 QA remains historical. No automatic baseline acceptance, tolerance changes or P1–P4 work.
 - **Partial/unknown:** changed PHP checked separately from existing whole-repository Pint formatting failures; native zoom/assistive hardware/cross-engine/field performance remain unverified. Do not convert these into blanket conformance or P0-complete claims.
-- **Pending:** new real-wait skeletons belong exclusively to P2 (choice 6A); physicality, broader discovery, storytelling and integrated UAT retain their phases below. P1 may start with one storyboarded local response refinement once the scoped P0-H evidence is reviewed.
+- **Pending:** new real-wait skeletons belong exclusively to P2 (choice 6A); broader discovery, storytelling and integrated UAT retain their phases below. P1 reviewed that evidence and implemented one local socket-seating response; see its scoped evidence below.
 
 ## P0-1 — Restore navigation feedback
 
@@ -53,6 +53,8 @@ Order: P0 shared identity, state clarity and baselines → P1 physical response 
 
 ## P1 — Vending-machine physical response
 
+- **Status:** **Complete within the scoped Chromium gate, 9 November 2026.** One [storyboarded weighted socket-seating stroke](../qa/p1-physical-response/storyboard.md) replaces the previous uniform approach/post-snap flex. Existing 270/960/820ms clocks, legal states, exact-print identity, cancellation and all source anchors remain. Optional paper retraction was evaluated and omitted; immediate clearing remains. [Verification, frames, traces, videos and limits](../qa/p1-physical-response/verification.md). P2 completion is recorded below; P3–P4 remain pending.
+
 - **Objective / current:** A04/A05; power, detents, masked print and identity already work. Refine the contact→actuation→response chain and optional paper clearing without reimplementing the machine.
 - **Files:** `resources/js/pages/archive.js`, `components/vending-input.js`, `components/vending-state.mjs` only for necessary legal state changes, `resources/css/vending-machine.css`, discovery hardware/print views only if needed, Node reducer and machine browser tests. Audit all `clearPrint`, `motion`, `settle`, `loadPage`, `bindRotary` callers before edits.
 - **Dependencies:** P0 baselines/legibility; existing exact-visit and cancellation tests must stay green. First make a short storyboard with ownership, interruption and reduced behavior; implement one mechanical improvement per change.
@@ -61,6 +63,8 @@ Order: P0 shared identity, state clarity and baselines → P1 physical response 
 - **Tests / evidence:** reducer assertion for each new transition; all 19 machine cases plus repeated/interrupted retraction. Production-time off→pickup→snap→boot→selected→print→ready→retrieve and reverse/off recording, contact/mid/end frames at desktop/compact, reduced/no JS/keyboard/touch. Compare frame/paint trace against baseline; no animated viewport-sized filter or dependency.
 
 ## P2 — Explore interaction-led discovery
+
+- **Status:** **Complete within the scoped Chromium gate, 9 November 2026.** The existing asymmetric photographic board now distinguishes press, pending intent and server-applied facets without remounting. Useful results persist through requests; a bounded visible-card entrance follows an atomic validated commit. Visible assigned derivatives alone receive static box-matched placeholders after an unresolved 200ms wait. Focus and failed-Back retry URL recovery are corrected. [Storyboard, isolated checks, reviewed gate, cost and limits](../qa/p2-discovery/verification.md). P1 working-tree changes are preserved; P3–P4 remain pending.
 
 - **Objective / current:** A06/A07; three photo links and practical fragments work, but discovery/selection/loading feels less tactile than the cabinet. Strengthen a photographic bento discovery board and result transitions without obscuring the form.
 - **Files:** `components/discovery/curiosity-index.blade.php`, `public/explore*.blade.php`, `resources/css/cinematic.css`, `discovery.css`, `archive-filter.css`, `resources/js/pages/explore.js`, `filter-drawer.js`, shared image fallback; `CuriosityIndex` only if truthful content selection needs change; existing Explore feature/browser tests.
@@ -103,4 +107,4 @@ Creative experiments after those gates: local latch resistance, short ready-pape
 
 ## Next implementation prompts
 
-1. “Implement only P1 in `docs/roadmap/frontend-experience.md`. Read the completed P0 evidence and locked mechanical contract, storyboard one physical-response refinement, preserve exact-visit identity/cancellation/geometry and all fallbacks, then verify against isolated fixtures and the reviewed visual gate. Update status/evidence.”
+1. “Implement only P3-1 in `docs/roadmap/frontend-experience.md`. Read completed P0/P1/P2 evidence, preserve historical/nullable/publication/media rules and original-on-demand behavior, refine the Visit story within its scoped contract, and verify isolated fixtures plus the reviewed visual gate. Update status/evidence.”

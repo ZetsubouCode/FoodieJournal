@@ -1,0 +1,149 @@
+{
+  "method": "Only local visible-card effects paused/seeked for start/110/220ms frames; not timing/performance evidence.",
+  "records": [
+    {
+      "width": 1440,
+      "ms": 0,
+      "effects": [
+        {
+          "duration": 220,
+          "top": 423.4375
+        },
+        {
+          "duration": 220,
+          "top": 423.4375
+        },
+        {
+          "duration": 220,
+          "top": 423.4375
+        }
+      ],
+      "states": [
+        {
+          "opacity": "0.7",
+          "transform": "matrix(1, 0, 0, 1, 0, 4)"
+        },
+        {
+          "opacity": "0.7",
+          "transform": "matrix(1, 0, 0, 1, 0, 4)"
+        },
+        {
+          "opacity": "0.7",
+          "transform": "matrix(1, 0, 0, 1, 0, 4)"
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "ms": 110,
+      "effects": [
+        {
+          "duration": 220,
+          "top": 423.4375
+        },
+        {
+          "duration": 220,
+          "top": 423.4375
+        },
+        {
+          "duration": 220,
+          "top": 423.4375
+        }
+      ],
+      "states": [
+        {
+          "opacity": "0.978841",
+          "transform": "matrix(1, 0, 0, 1, 0, 0.282121)"
+        },
+        {
+          "opacity": "0.978841",
+          "transform": "matrix(1, 0, 0, 1, 0, 0.282121)"
+        },
+        {
+          "opacity": "0.978841",
+          "transform": "matrix(1, 0, 0, 1, 0, 0.282121)"
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "ms": 220,
+      "effects": [
+        {
+          "duration": 220,
+          "top": 423.4375
+        },
+        {
+          "duration": 220,
+          "top": 423.4375
+        },
+        {
+          "duration": 220,
+          "top": 423.4375
+        }
+      ],
+      "states": [
+        {
+          "opacity": "1",
+          "transform": "none"
+        },
+        {
+          "opacity": "1",
+          "transform": "none"
+        },
+        {
+          "opacity": "1",
+          "transform": "none"
+        }
+      ]
+    },
+    {
+      "width": 375,
+      "ms": 0,
+      "effects": [
+        {
+          "duration": 220,
+          "top": 522.421875
+        }
+      ],
+      "states": [
+        {
+          "opacity": "0.7",
+          "transform": "matrix(1, 0, 0, 1, 0, 4)"
+        }
+      ]
+    },
+    {
+      "width": 375,
+      "ms": 110,
+      "effects": [
+        {
+          "duration": 220,
+          "top": 522.421875
+        }
+      ],
+      "states": [
+        {
+          "opacity": "0.978841",
+          "transform": "matrix(1, 0, 0, 1, 0, 0.282121)"
+        }
+      ]
+    },
+    {
+      "width": 375,
+      "ms": 220,
+      "effects": [
+        {
+          "duration": 220,
+          "top": 522.421875
+        }
+      ],
+      "states": [
+        {
+          "opacity": "1",
+          "transform": "none"
+        }
+      ]
+    }
+  ]
+}

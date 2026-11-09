@@ -1,0 +1,72 @@
+
+Running 1 test using 1 worker
+
+(node:23700) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  1 tests\Browser\public-visual.spec.js:120:1 › unpublished archive and filtered empty recovery (3.2s)
+
+
+  1) tests\Browser\public-visual.spec.js:120:1 › unpublished archive and filtered empty recovery ───
+
+    Error: expect(locator).toHaveScreenshot(expected) failed
+
+    Locator: locator('[data-discovery-console]').locator('..')
+      262 pixels (ratio 0.01 of all image pixels) are different.
+
+      Snapshot: filtered-empty-390.png
+
+    Call log:
+      - Expect "toHaveScreenshot(filtered-empty-390.png)" locator('[data-discovery-console]').locator('..') with timeout 5000ms
+        - verifying given screenshot expectation
+      - waiting for locator('[data-discovery-console]').locator('..')
+        - locator resolved to <div class="discovery" data-discovery="" data-mode="visit" data-enhanced="true" data-browse-state="{"tab":"visit","view":"list","sort":"newest","q":"tidak-ada"}">…</div>
+      - taking element screenshot
+      - waiting for fonts to load...
+      - fonts loaded
+      - attempting scroll into view action
+        - waiting for element to be stable
+      - 262 pixels (ratio 0.01 of all image pixels) are different.
+      - waiting 100ms before taking screenshot
+      - waiting for locator('[data-discovery-console]').locator('..')
+        - locator resolved to <div class="discovery" data-discovery="" data-mode="visit" data-enhanced="true" data-browse-state="{"tab":"visit","view":"list","sort":"newest","q":"tidak-ada"}">…</div>
+      - taking element screenshot
+      - waiting for fonts to load...
+      - fonts loaded
+      - attempting scroll into view action
+        - waiting for element to be stable
+      - captured a stable screenshot
+      - 262 pixels (ratio 0.01 of all image pixels) are different.
+
+
+      30 |         fonts: await page.evaluate(() => [...document.fonts].filter(f => f.status === 'loaded').map(f => f.family)),
+      31 |         originals: await page.locator('img[src$="/original"]').count() }) });
+    > 32 |     await expect(target).toHaveScreenshot(`${name}.png`);
+         |                          ^
+      33 | }
+      34 |
+      35 | async function on(page) {
+        at shot (D:\Github repo\FoodieJournal\tests\Browser\public-visual.spec.js:32:26)
+        at D:\Github repo\FoodieJournal\tests\Browser\public-visual.spec.js:129:5
+
+    attachment #3: filtered-empty-390 (image/png) ──────────────────────────────────────────────────
+    Expected: tests\Browser\__screenshots__\public-visual-win32-chromium\filtered-empty-390.png
+    Received: tools\.runtime\visual-results\public-visual-unpublished--29d44-and-filtered-empty-recovery\filtered-empty-390-actual.png
+    Diff:     tools\.runtime\visual-results\public-visual-unpublished--29d44-and-filtered-empty-recovery\filtered-empty-390-diff.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #4: screenshot (image/png) ──────────────────────────────────────────────────────────
+    tools\.runtime\visual-results\public-visual-unpublished--29d44-and-filtered-empty-recovery\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: tools\.runtime\visual-results\public-visual-unpublished--29d44-and-filtered-empty-recovery\error-context.md
+
+    attachment #6: trace (application/zip) ─────────────────────────────────────────────────────────
+    tools\.runtime\visual-results\public-visual-unpublished--29d44-and-filtered-empty-recovery\trace.zip
+    Usage:
+
+        npx playwright show-trace tools\.runtime\visual-results\public-visual-unpublished--29d44-and-filtered-empty-recovery\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests\Browser\public-visual.spec.js:120:1 › unpublished archive and filtered empty recovery ────

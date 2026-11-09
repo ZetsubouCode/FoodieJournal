@@ -59,4 +59,8 @@ Footer is a recognizable editorial ending with personal-journal identity, real n
 
 Locked: single author, published-only photographs, one Home cabinet, current lamp/reset/dial geometry, no visible pickup tutorial or pagination arrows, accessible alternatives, shared chrome, approved HTTP error scene/copy, F Refined result-card identity and no autoplay Home rails.
 
-Experiments: broader bento arrangements, shallow perspective, local latch/paper response and warmer atmospheric balance. Prototype one at a time after correctness gates; reject any that hurts reading, discovery speed, touch, keyboard or rendering cost. See [decision register](adr/001-experience-authority.md).
+P1 implements one local latch response: a final tube seating stroke and socket-image flex, keeping the source anchors, materials and snap clock. [Scoped visual review](qa/p1-physical-response/verification.md).
+
+P2 retains the approved asymmetric photographic category/city/technique grouping and semantic mobile order. Its interaction layer now distinguishes local contact, pending intent and applied facets, with bounded result entrances and honest progressive-photo material. [Review and limits](qa/p2-discovery/verification.md).
+
+Experiments: broader bento arrangements, shallow perspective, optional paper response and warmer atmospheric balance. Prototype one at a time after correctness gates; reject any that hurts reading, discovery speed, touch, keyboard or rendering cost. See [decision register](adr/001-experience-authority.md).

@@ -1,0 +1,128 @@
+{
+  "browser": "156.0.8078.4",
+  "method": "Unmodified production-time recording; no clock, seeking, slowMo, screenshot posing, animation override or edits. Mouse drag at 1440; touch tap-target at 390. Retrieve, Back, print again, reverse/off clears paper.",
+  "records": [
+    {
+      "width": 1440,
+      "video": "docs/qa/p1-physical-response/realtime-1440.webm",
+      "videoSha256": "2be086db8e13a125f2893887d759d9603b7764e41155a616318989aa67ee691a",
+      "id": "2",
+      "href": "http://127.0.0.1:8015/visit/demo-semangkuk-hangat-blok-m",
+      "stages": [
+        {
+          "ms": 3889.800000011921,
+          "power": "off",
+          "lamp": "cradle",
+          "dispenser": "idle"
+        },
+        {
+          "ms": 4016.199999988079,
+          "power": "off",
+          "lamp": "dragging",
+          "dispenser": "idle"
+        },
+        {
+          "ms": 4293.400000035763,
+          "power": "off",
+          "lamp": "animating",
+          "dispenser": "idle"
+        },
+        {
+          "ms": 4597,
+          "power": "booting",
+          "lamp": "socket",
+          "dispenser": "idle"
+        },
+        {
+          "ms": 5610,
+          "power": "on",
+          "lamp": "socket",
+          "dispenser": "idle"
+        },
+        {
+          "ms": 5733.5,
+          "power": "on",
+          "lamp": "socket",
+          "dispenser": "idle"
+        },
+        {
+          "ms": 5838.800000011921,
+          "power": "on",
+          "lamp": "socket",
+          "dispenser": "printing"
+        },
+        {
+          "ms": 6697.5,
+          "power": "on",
+          "lamp": "socket",
+          "dispenser": "ready"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "width": 390,
+      "video": "docs/qa/p1-physical-response/realtime-390.webm",
+      "videoSha256": "eaa9c8a5cb3d080685f732c484387a118219d4240f4e040772c7314bfcd93fab",
+      "id": "2",
+      "href": "http://127.0.0.1:8015/visit/demo-semangkuk-hangat-blok-m",
+      "stages": [
+        {
+          "ms": 2618.699999988079,
+          "power": "off",
+          "lamp": "cradle",
+          "dispenser": "idle"
+        },
+        {
+          "ms": 3143.899999976158,
+          "power": "off",
+          "lamp": "dragging",
+          "dispenser": "idle"
+        },
+        {
+          "ms": 3144.399999976158,
+          "power": "off",
+          "lamp": "dragging",
+          "dispenser": "idle"
+        },
+        {
+          "ms": 3209.5,
+          "power": "off",
+          "lamp": "animating",
+          "dispenser": "idle"
+        },
+        {
+          "ms": 3508.099999964237,
+          "power": "booting",
+          "lamp": "socket",
+          "dispenser": "idle"
+        },
+        {
+          "ms": 4486.199999988079,
+          "power": "on",
+          "lamp": "socket",
+          "dispenser": "idle"
+        },
+        {
+          "ms": 4612.699999988079,
+          "power": "on",
+          "lamp": "socket",
+          "dispenser": "idle"
+        },
+        {
+          "ms": 4666,
+          "power": "on",
+          "lamp": "socket",
+          "dispenser": "printing"
+        },
+        {
+          "ms": 5503.299999952316,
+          "power": "on",
+          "lamp": "socket",
+          "dispenser": "ready"
+        }
+      ],
+      "errors": []
+    }
+  ]
+}

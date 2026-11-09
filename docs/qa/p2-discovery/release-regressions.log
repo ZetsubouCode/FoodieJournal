@@ -1,0 +1,28 @@
+
+Running 21 tests using 1 worker
+
+(node:17084) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 tests\Browser\discovery-machine.spec.js:7:1 › Explore modes retain the document, query, layout and browser history (3.2s)
+  ok  2 tests\Browser\discovery-machine.spec.js:20:1 › rapid requests discard stale modes; failed requests retain committed data (2.4s)
+  ok  3 tests\Browser\discovery-machine.spec.js:33:1 › curiosity photographs apply actual filtering and restore with Back (2.8s)
+  ok  4 tests\Browser\discovery-machine.spec.js:42:1 › filter drawer stages hierarchy, long searchable multiselect, tags and recommendations; apply and cancel (3.9s)
+  ok  5 tests\Browser\discovery-machine.spec.js:78:1 › mode-specific prices, group reset, search/sort/grid/list/pagination and error retry remain coherent (6.2s)
+  ok  6 tests\Browser\discovery-machine.spec.js:104:1 › calendar and location metadata are shared by Home and all Explore card modes (5.1s)
+  ok  7 tests\Browser\explore-response.spec.js:12:1 › board pending intent commits its actual facet once, keeps the board and restores keyboard focus (7.6s)
+  ok  8 tests\Browser\explore-response.spec.js:33:1 › malformed response cannot partially replace committed controls or results, and retry recovers (5.1s)
+  ok  9 tests\Browser\explore-response.spec.js:49:1 › offline failure and malformed state keep committed facets until a successful retry (5.6s)
+  ok 10 tests\Browser\explore-response.spec.js:65:1 › a failed Back rolls back, and retry restores the requested history URL with its actual data (8.0s)
+  ok 11 tests\Browser\explore-response.spec.js:78:1 › rapid board intents discard older responses and markers; committed controls keep logical focus (8.6s)
+  ok 12 tests\Browser\explore-response.spec.js:96:1 › actual delayed derivatives get static box-matched placeholders; success and failure remove them (7.7s)
+  ok 13 tests\Browser\explore-response.spec.js:118:1 › decoded fast photos never flash a placeholder and runtime reduction finishes visible result entrances (8.3s)
+  ok 14 tests\Browser\explore-response.spec.js:140:1 › real outstanding request timeout keeps committed data and clears pending intent (19.4s)
+  ok 15 tests\Browser\explore-response.spec.js:150:1 › a response committed in a hidden tab settles without starting a result entrance (3.6s)
+  ok 16 tests\Browser\explore-response.spec.js:165:1 › responsive board keeps semantic order, touch links, no-JS and enlarged-text access (33.2s)
+  ok 17 tests\Browser\vending-seating.spec.js:20:5 › weighted seating follows contact without moving anchors at 1440 (2.5s)
+  ok 18 tests\Browser\vending-seating.spec.js:20:5 › weighted seating follows contact without moving anchors at 390 (2.7s)
+  ok 19 tests\Browser\vending-seating.spec.js:55:1 › seating interruptions finish both local effects and retain exact print/off semantics (8.2s)
+  ok 20 tests\Browser\vending-seating.spec.js:80:1 › reduced load and missing WAAPI keep immediate seating and cancel a pending page on power-off (2.2s)
+  ok 21 tests\Browser\vending-seating.spec.js:109:1 › 200% root text preserves seated geometry and keyboard print identity (2.0s)
+
+  21 passed (2.5m)

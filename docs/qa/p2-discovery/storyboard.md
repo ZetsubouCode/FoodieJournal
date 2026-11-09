@@ -1,0 +1,17 @@
+# P2 — Discovery feedback and progressive photographs
+
+9 November 2026, Asia/Jakarta. Starting HEAD `21e443a7254ae3a3e72989a83aa06584dba0c005` plus the completed, uncommitted P1 implementation/evidence. Preserve that working tree and all older QA. Read P0-1–4/P0-H/P1 evidence, brief/tokens, design-system §1 and canonical page/motion contracts first.
+
+Craft read: a photographic discovery board for journal readers, product language, existing charcoal/copper materials, variance 7; signature refinement is a photo lens that distinguishes touch/contact, outstanding intent and committed filtering without remounting the board.
+
+| State | Response and owner | Interruption / fallback |
+| --- | --- | --- |
+| Resting board | Retain the source photographs, asymmetric category/city/technique grouping and mobile DOM order; directory lenses remain real links. Server state identifies applied facets. | No-JS GETs, missing photos, unavailable recommendations and 200% text keep existing truthful layouts. |
+| Hover / focus / contact | Local image/caption/arrow movement uses existing fast/standard durations; press compresses locally, focus retains its outline. | Reduced motion removes travel; no controls/selection are inferred from decoration. |
+| Outstanding fragment | Immediate existing busy cue/status, distinct pending treatment on the requested board link; all committed results/counts/URL remain until a valid response. | New intent aborts old request and cancels old entrance; no placeholder over useful committed results, optimistic URL or minimum wait. |
+| Commit | Validate every replacement region before mutation, replace console/results/drawer as one synchronous commit, reflect server-normalized facet state on the same board, restore a logical control and reveal one bounded results group. | Only the latest generation commits. Failure retains old data/selection/URL and retry; failed history restoration rolls back its URL. Runtime reduction finishes entrance; hidden/pagehide releases local work. |
+| Incoming photo still outstanding | In visible Explore photo slots, observe native loading of an assigned derivative; after 200ms unresolved native loading show a static, aria-hidden material placeholder matching the reserved photo box. Text remains usable. | Cached/fast images skip it. Native load/error removes it immediately; existing image fallbacks own failure text. No original request, fake data, image retry loop or screenshot-only delay. |
+
+Scope/callers: initializeExplore has one app bootstrap caller; navigate is local to drawer Apply, board/tab/chip/view/pagination links, search/sort, retry and history. Filter drawer owns staged counts/cancel/reset independently; keep it unchanged unless a test demonstrates a defect. Image fallback is shared with every public route; preserve its implementation and limit progressive loading to Explore. CuriosityIndex has one controller caller and existing same-item/public-photo tests; only expose its already-selected facet value for presentation, with no new selection/query logic. ExploreState/ExploreQuery/PublicOptions remain authoritative.
+
+Validation: complete existing discovery/filter/query feature and browser suites, new latest-generation/failure/focus/progressive-image tests, same-fixture normal-time traces before/after, 375/768/1440/1920 state captures, root-text/keyboard/touch/reduced/no-JS checks and unchanged reviewed visual gate. P3 story/viewer and P4 integrated/device work are excluded.

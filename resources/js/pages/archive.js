@@ -120,13 +120,19 @@ export function initializeArchive() {
         const destination = target ?? origin;
         const from = poseTransform(pose), toPose = { ...anchors[destination] };
         const to = poseTransform(toPose);
+        const frames = [{ transform: from }];
+        if (target === 'socket') {
+            // Seat the tube before the plate recovers; both share the existing snap clock.
+            frames.push({ transform: poseTransform({ ...toPose, y: toPose.y - 4 }), offset: .72 }, { transform: to, offset: .86 });
+            motion(socket.querySelector('img'), [{ transform: 'scale(1)', offset: 0 }, { transform: 'scale(1)', offset: .72 }, { transform: 'scale(1.035, .985)', offset: .86 }, { transform: 'scale(1)' }], timing('snap'));
+        }
+        frames.push({ transform: to });
         // Commit the final transform before WAAPI finishes; fill never leaves stale layers.
         lamp.style.transform = to;
-        const complete = await motion(lamp, [{ transform: from }, { transform: to }], timing('snap'));
+        const complete = await motion(lamp, frames, timing('snap'));
         if (!complete || signal.aborted) return;
         pose = toPose; dispatch({ type: 'COMMIT_LAMP' });
         if (destination === origin) { if (restoreKeyboardFocus) lamp.focus({ preventScroll: true }); return; }
-        if (destination === 'socket') motion(socket.querySelector('img'), [{ transform: 'scaleX(1.035)' }, { transform: 'scaleX(1)' }], 125);
         clearPrint(); request?.abort(); sequence++; dispatch({ type: 'PAGE_CANCEL' });
         persist(destination === 'socket');
         announce(destination === 'socket' ? 'Lampu terkunci. Mesin menyala…' : 'Lampu kembali ke dudukan. Mesin dimatikan.');

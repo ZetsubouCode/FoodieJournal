@@ -1,0 +1,367 @@
+{
+  "browser": "156.0.8078.4",
+  "build": "2118ab10aeaa0a066836d3b48e84d609f3a463bcb55dd907873405d1fa659d4c",
+  "states": [
+    {
+      "width": 375,
+      "state": "initial",
+      "url": "http://127.0.0.1:8015/explore",
+      "mode": "visit",
+      "busy": "false",
+      "count": "20 kunjungan",
+      "overflow": false
+    },
+    {
+      "width": 375,
+      "state": "hover",
+      "url": "http://127.0.0.1:8015/explore",
+      "mode": "visit",
+      "busy": "false",
+      "count": "20 kunjungan",
+      "overflow": false
+    },
+    {
+      "width": 375,
+      "state": "focus",
+      "url": "http://127.0.0.1:8015/explore",
+      "mode": "visit",
+      "busy": "false",
+      "count": "20 kunjungan",
+      "overflow": false
+    },
+    {
+      "width": 375,
+      "state": "press",
+      "url": "http://127.0.0.1:8015/explore",
+      "mode": "visit",
+      "busy": "false",
+      "count": "20 kunjungan",
+      "overflow": false
+    },
+    {
+      "width": 375,
+      "state": "pending",
+      "url": "http://127.0.0.1:8015/explore",
+      "mode": "visit",
+      "busy": "true",
+      "count": "20 kunjungan",
+      "overflow": false
+    },
+    {
+      "width": 375,
+      "state": "error",
+      "url": "http://127.0.0.1:8015/explore",
+      "mode": "visit",
+      "busy": "false",
+      "count": "20 kunjungan",
+      "overflow": false
+    },
+    {
+      "width": 375,
+      "state": "selected",
+      "url": "http://127.0.0.1:8015/explore?tab=food&style%5B0%5D=bakar",
+      "mode": "food",
+      "busy": "false",
+      "count": "3 hidangan",
+      "overflow": false
+    },
+    {
+      "width": 375,
+      "state": "filter",
+      "url": "http://127.0.0.1:8015/explore?tab=food&style%5B0%5D=bakar",
+      "mode": "food",
+      "busy": "false",
+      "count": "3 hidangan",
+      "overflow": false
+    },
+    {
+      "width": 375,
+      "state": "empty",
+      "url": "http://127.0.0.1:8015/explore?tab=food&view=grid&style%5B%5D=bakar&q=p2-tidak-ada&sort=newest",
+      "mode": "food",
+      "busy": "false",
+      "count": "0 hidangan",
+      "overflow": false
+    },
+    {
+      "width": 375,
+      "state": "photo-wait",
+      "url": "http://127.0.0.1:8015/explore",
+      "mode": "visit",
+      "busy": "false",
+      "count": "20 kunjungan",
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "state": "initial",
+      "url": "http://127.0.0.1:8015/explore",
+      "mode": "visit",
+      "busy": "false",
+      "count": "20 kunjungan",
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "state": "hover",
+      "url": "http://127.0.0.1:8015/explore",
+      "mode": "visit",
+      "busy": "false",
+      "count": "20 kunjungan",
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "state": "focus",
+      "url": "http://127.0.0.1:8015/explore",
+      "mode": "visit",
+      "busy": "false",
+      "count": "20 kunjungan",
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "state": "press",
+      "url": "http://127.0.0.1:8015/explore",
+      "mode": "visit",
+      "busy": "false",
+      "count": "20 kunjungan",
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "state": "pending",
+      "url": "http://127.0.0.1:8015/explore",
+      "mode": "visit",
+      "busy": "true",
+      "count": "20 kunjungan",
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "state": "error",
+      "url": "http://127.0.0.1:8015/explore",
+      "mode": "visit",
+      "busy": "false",
+      "count": "20 kunjungan",
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "state": "selected",
+      "url": "http://127.0.0.1:8015/explore?tab=food&style%5B0%5D=bakar",
+      "mode": "food",
+      "busy": "false",
+      "count": "3 hidangan",
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "state": "filter",
+      "url": "http://127.0.0.1:8015/explore?tab=food&style%5B0%5D=bakar",
+      "mode": "food",
+      "busy": "false",
+      "count": "3 hidangan",
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "state": "empty",
+      "url": "http://127.0.0.1:8015/explore?tab=food&view=grid&style%5B%5D=bakar&q=p2-tidak-ada&sort=newest",
+      "mode": "food",
+      "busy": "false",
+      "count": "0 hidangan",
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "state": "photo-wait",
+      "url": "http://127.0.0.1:8015/explore",
+      "mode": "visit",
+      "busy": "false",
+      "count": "20 kunjungan",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "state": "initial",
+      "url": "http://127.0.0.1:8015/explore",
+      "mode": "visit",
+      "busy": "false",
+      "count": "20 kunjungan",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "state": "hover",
+      "url": "http://127.0.0.1:8015/explore",
+      "mode": "visit",
+      "busy": "false",
+      "count": "20 kunjungan",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "state": "focus",
+      "url": "http://127.0.0.1:8015/explore",
+      "mode": "visit",
+      "busy": "false",
+      "count": "20 kunjungan",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "state": "press",
+      "url": "http://127.0.0.1:8015/explore",
+      "mode": "visit",
+      "busy": "false",
+      "count": "20 kunjungan",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "state": "pending",
+      "url": "http://127.0.0.1:8015/explore",
+      "mode": "visit",
+      "busy": "true",
+      "count": "20 kunjungan",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "state": "error",
+      "url": "http://127.0.0.1:8015/explore",
+      "mode": "visit",
+      "busy": "false",
+      "count": "20 kunjungan",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "state": "selected",
+      "url": "http://127.0.0.1:8015/explore?tab=food&style%5B0%5D=bakar",
+      "mode": "food",
+      "busy": "false",
+      "count": "3 hidangan",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "state": "filter",
+      "url": "http://127.0.0.1:8015/explore?tab=food&style%5B0%5D=bakar",
+      "mode": "food",
+      "busy": "false",
+      "count": "3 hidangan",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "state": "empty",
+      "url": "http://127.0.0.1:8015/explore?tab=food&view=grid&style%5B%5D=bakar&q=p2-tidak-ada&sort=newest",
+      "mode": "food",
+      "busy": "false",
+      "count": "0 hidangan",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "state": "photo-wait",
+      "url": "http://127.0.0.1:8015/explore",
+      "mode": "visit",
+      "busy": "false",
+      "count": "20 kunjungan",
+      "overflow": false
+    },
+    {
+      "width": 1920,
+      "state": "initial",
+      "url": "http://127.0.0.1:8015/explore",
+      "mode": "visit",
+      "busy": "false",
+      "count": "20 kunjungan",
+      "overflow": false
+    },
+    {
+      "width": 1920,
+      "state": "hover",
+      "url": "http://127.0.0.1:8015/explore",
+      "mode": "visit",
+      "busy": "false",
+      "count": "20 kunjungan",
+      "overflow": false
+    },
+    {
+      "width": 1920,
+      "state": "focus",
+      "url": "http://127.0.0.1:8015/explore",
+      "mode": "visit",
+      "busy": "false",
+      "count": "20 kunjungan",
+      "overflow": false
+    },
+    {
+      "width": 1920,
+      "state": "press",
+      "url": "http://127.0.0.1:8015/explore",
+      "mode": "visit",
+      "busy": "false",
+      "count": "20 kunjungan",
+      "overflow": false
+    },
+    {
+      "width": 1920,
+      "state": "pending",
+      "url": "http://127.0.0.1:8015/explore",
+      "mode": "visit",
+      "busy": "true",
+      "count": "20 kunjungan",
+      "overflow": false
+    },
+    {
+      "width": 1920,
+      "state": "error",
+      "url": "http://127.0.0.1:8015/explore",
+      "mode": "visit",
+      "busy": "false",
+      "count": "20 kunjungan",
+      "overflow": false
+    },
+    {
+      "width": 1920,
+      "state": "selected",
+      "url": "http://127.0.0.1:8015/explore?tab=food&style%5B0%5D=bakar",
+      "mode": "food",
+      "busy": "false",
+      "count": "3 hidangan",
+      "overflow": false
+    },
+    {
+      "width": 1920,
+      "state": "filter",
+      "url": "http://127.0.0.1:8015/explore?tab=food&style%5B0%5D=bakar",
+      "mode": "food",
+      "busy": "false",
+      "count": "3 hidangan",
+      "overflow": false
+    },
+    {
+      "width": 1920,
+      "state": "empty",
+      "url": "http://127.0.0.1:8015/explore?tab=food&view=grid&style%5B%5D=bakar&q=p2-tidak-ada&sort=newest",
+      "mode": "food",
+      "busy": "false",
+      "count": "0 hidangan",
+      "overflow": false
+    },
+    {
+      "width": 1920,
+      "state": "photo-wait",
+      "url": "http://127.0.0.1:8015/explore",
+      "mode": "visit",
+      "busy": "false",
+      "count": "20 kunjungan",
+      "overflow": false
+    }
+  ],
+  "errors": []
+}

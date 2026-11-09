@@ -1,0 +1,195 @@
+{
+  "method": "Same real fixture/browser, three cold/warm arrivals and native navigation traces per width before/after. No throttle, clock, seeking or effects rewrite. Partial arrival transfer bytes exclude outstanding lazy images; do not treat them as total bytes.",
+  "samples": [
+    {
+      "phase": "before",
+      "width": 1440,
+      "samples": 3,
+      "medianFrameMs": 16.699999999999818,
+      "medianP95Ms": 16.800000000000182,
+      "maxFrameMs": 16.800000000000182,
+      "Paint": {
+        "medianMs": 31.57,
+        "medianCount": 22
+      },
+      "Layout": {
+        "medianMs": 5.789,
+        "medianCount": 78
+      },
+      "UpdateLayoutTree": {
+        "medianMs": 6.24,
+        "medianCount": 34
+      },
+      "cold": {
+        "medianLcpMs": 2628,
+        "lcpRange": [
+          580,
+          2712
+        ],
+        "maxArrivalCls": 0.02099024291992187,
+        "partialMediaBytes": [
+          312388,
+          312388,
+          312388
+        ]
+      },
+      "warm": {
+        "medianLcpMs": 2920,
+        "lcpRange": [
+          2904,
+          3008
+        ],
+        "maxArrivalCls": 0.02099024291992187,
+        "partialMediaBytes": [
+          248302,
+          248302,
+          248302
+        ]
+      },
+      "interactionLayoutShiftEvents": 0
+    },
+    {
+      "phase": "before",
+      "width": 390,
+      "samples": 3,
+      "medianFrameMs": 16.699999999999818,
+      "medianP95Ms": 16.799999999999727,
+      "maxFrameMs": 33.40000000000009,
+      "Paint": {
+        "medianMs": 32.015,
+        "medianCount": 18
+      },
+      "Layout": {
+        "medianMs": 5.119,
+        "medianCount": 68
+      },
+      "UpdateLayoutTree": {
+        "medianMs": 5.99,
+        "medianCount": 34
+      },
+      "cold": {
+        "medianLcpMs": 748,
+        "lcpRange": [
+          660,
+          2764
+        ],
+        "maxArrivalCls": 0.0027196229567307694,
+        "partialMediaBytes": [
+          292476,
+          292476,
+          292476
+        ]
+      },
+      "warm": {
+        "medianLcpMs": 952,
+        "lcpRange": [
+          916,
+          984
+        ],
+        "maxArrivalCls": 0.0027196229567307694,
+        "partialMediaBytes": [
+          263778,
+          292476,
+          292476
+        ]
+      },
+      "interactionLayoutShiftEvents": 0
+    },
+    {
+      "phase": "after",
+      "width": 1440,
+      "samples": 3,
+      "medianFrameMs": 16.699999999999818,
+      "medianP95Ms": 16.800000000000182,
+      "maxFrameMs": 33.399999999999636,
+      "Paint": {
+        "medianMs": 37.692,
+        "medianCount": 32
+      },
+      "Layout": {
+        "medianMs": 6.977,
+        "medianCount": 81
+      },
+      "UpdateLayoutTree": {
+        "medianMs": 7.806,
+        "medianCount": 35
+      },
+      "cold": {
+        "medianLcpMs": 1868,
+        "lcpRange": [
+          792,
+          2364
+        ],
+        "maxArrivalCls": 0.02099024291992187,
+        "partialMediaBytes": [
+          312388,
+          312388,
+          312388
+        ]
+      },
+      "warm": {
+        "medianLcpMs": 3336,
+        "lcpRange": [
+          3108,
+          3976
+        ],
+        "maxArrivalCls": 0.02099024291992187,
+        "partialMediaBytes": [
+          312388,
+          312388,
+          312388
+        ]
+      },
+      "interactionLayoutShiftEvents": 0
+    },
+    {
+      "phase": "after",
+      "width": 390,
+      "samples": 3,
+      "medianFrameMs": 16.699999999999818,
+      "medianP95Ms": 16.700000000000273,
+      "maxFrameMs": 33.5,
+      "Paint": {
+        "medianMs": 28.106,
+        "medianCount": 22
+      },
+      "Layout": {
+        "medianMs": 5.506,
+        "medianCount": 69
+      },
+      "UpdateLayoutTree": {
+        "medianMs": 6.631,
+        "medianCount": 36
+      },
+      "cold": {
+        "medianLcpMs": 664,
+        "lcpRange": [
+          588,
+          2364
+        ],
+        "maxArrivalCls": 0.0027196229567307694,
+        "partialMediaBytes": [
+          292476,
+          292476,
+          292476
+        ]
+      },
+      "warm": {
+        "medianLcpMs": 920,
+        "lcpRange": [
+          900,
+          936
+        ],
+        "maxArrivalCls": 0.0027196229567307694,
+        "partialMediaBytes": [
+          292476,
+          292476,
+          292476
+        ]
+      },
+      "interactionLayoutShiftEvents": 0
+    }
+  ],
+  "networkAudit": "Same-fixture/current markup/style with baseline versus P2 client, decoding visible images before resource accounting, selects identical derivatives and completed media bytes at both widths. See network-investigation.json.",
+  "investigation": "Earlier eager promotion was removed to preserve sizes=auto eligibility. Final source retains native lazy loading. Additional bounded intent/selection and visible-card feedback raises small trace paint/style costs; warm desktop LCP remains slower in this small unthrottled sample. No new query, media URL, image variant, dependency or viewport filter. Timing variance and backend/network scheduling cannot be separated here; slower-device/field verification remains P4."
+}

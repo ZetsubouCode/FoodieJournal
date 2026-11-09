@@ -1,0 +1,251 @@
+{
+  "phase": "before",
+  "browser": "156.0.8078.4",
+  "buildSha256": "26fa5fd42ff277f87d527b5726b388bed997545883764255d1b238d74750e2aa",
+  "samples": [
+    {
+      "width": 1440,
+      "sample": 1,
+      "traceFile": "before-1440-trace-1.json.gz",
+      "frameCount": 85,
+      "medianGap": 16.699999999999818,
+      "p95Gap": 16.700000000000273,
+      "maxGap": 16.800000000000182,
+      "shifts": [],
+      "trace": {
+        "Paint": {
+          "count": 60,
+          "ms": 14.29
+        },
+        "Layout": {
+          "count": 6,
+          "ms": 5.823
+        },
+        "UpdateLayoutTree": {
+          "count": 89,
+          "ms": 19.635
+        },
+        "CompositeLayers": {
+          "count": 0,
+          "ms": 0
+        }
+      }
+    },
+    {
+      "width": 1440,
+      "sample": 2,
+      "traceFile": "before-1440-trace-2.json.gz",
+      "frameCount": 83,
+      "medianGap": 16.699999999999818,
+      "p95Gap": 16.700000000000273,
+      "maxGap": 16.800000000000182,
+      "shifts": [],
+      "trace": {
+        "Paint": {
+          "count": 67,
+          "ms": 15.793
+        },
+        "Layout": {
+          "count": 6,
+          "ms": 5.752
+        },
+        "UpdateLayoutTree": {
+          "count": 90,
+          "ms": 19.318
+        },
+        "CompositeLayers": {
+          "count": 0,
+          "ms": 0
+        }
+      }
+    },
+    {
+      "width": 1440,
+      "sample": 3,
+      "traceFile": "before-1440-trace-3.json.gz",
+      "frameCount": 84,
+      "medianGap": 16.699999999999818,
+      "p95Gap": 16.700000000000728,
+      "maxGap": 16.800000000000182,
+      "shifts": [],
+      "trace": {
+        "Paint": {
+          "count": 65,
+          "ms": 15.045
+        },
+        "Layout": {
+          "count": 6,
+          "ms": 5.546
+        },
+        "UpdateLayoutTree": {
+          "count": 89,
+          "ms": 18.513
+        },
+        "CompositeLayers": {
+          "count": 0,
+          "ms": 0
+        }
+      }
+    },
+    {
+      "width": 390,
+      "sample": 1,
+      "traceFile": "before-390-trace-1.json.gz",
+      "frameCount": 83,
+      "medianGap": 16.699999999999818,
+      "p95Gap": 16.700000000000728,
+      "maxGap": 16.800000000000182,
+      "shifts": [],
+      "trace": {
+        "Paint": {
+          "count": 71,
+          "ms": 18.969
+        },
+        "Layout": {
+          "count": 6,
+          "ms": 7.097
+        },
+        "UpdateLayoutTree": {
+          "count": 90,
+          "ms": 25.787
+        },
+        "CompositeLayers": {
+          "count": 0,
+          "ms": 0
+        }
+      }
+    },
+    {
+      "width": 390,
+      "sample": 2,
+      "traceFile": "before-390-trace-2.json.gz",
+      "frameCount": 83,
+      "medianGap": 16.699999999999818,
+      "p95Gap": 16.700000000000728,
+      "maxGap": 16.800000000000182,
+      "shifts": [],
+      "trace": {
+        "Paint": {
+          "count": 71,
+          "ms": 16.712
+        },
+        "Layout": {
+          "count": 6,
+          "ms": 5.76
+        },
+        "UpdateLayoutTree": {
+          "count": 90,
+          "ms": 23.787
+        },
+        "CompositeLayers": {
+          "count": 0,
+          "ms": 0
+        }
+      }
+    },
+    {
+      "width": 390,
+      "sample": 3,
+      "traceFile": "before-390-trace-3.json.gz",
+      "frameCount": 84,
+      "medianGap": 16.699999999999818,
+      "p95Gap": 16.800000000000182,
+      "maxGap": 16.800000000000182,
+      "shifts": [],
+      "trace": {
+        "Paint": {
+          "count": 73,
+          "ms": 20.379
+        },
+        "Layout": {
+          "count": 6,
+          "ms": 6.489
+        },
+        "UpdateLayoutTree": {
+          "count": 91,
+          "ms": 28.75
+        },
+        "CompositeLayers": {
+          "count": 0,
+          "ms": 0
+        }
+      }
+    }
+  ],
+  "frames": [
+    {
+      "width": 1440,
+      "progress": 0,
+      "power": "off",
+      "lamp": {
+        "x": 83.9375,
+        "y": 862.71875,
+        "width": 32.34375,
+        "height": 183.265625
+      },
+      "socket": {
+        "x": 190.25,
+        "y": 563.1171875,
+        "width": 53.71875,
+        "height": 213.796875
+      },
+      "plate": "none"
+    },
+    {
+      "width": 1440,
+      "progress": 0.72,
+      "power": "off",
+      "lamp": {
+        "x": 160.6062469482422,
+        "y": 647.1012573242188,
+        "width": 32.34375,
+        "height": 183.265625
+      },
+      "socket": {
+        "x": 190.25,
+        "y": 563.1171875,
+        "width": 53.71875,
+        "height": 213.796875
+      },
+      "plate": "none"
+    },
+    {
+      "width": 1440,
+      "progress": 0.86,
+      "power": "off",
+      "lamp": {
+        "x": 175.51406860351562,
+        "y": 605.1756591796875,
+        "width": 32.34375,
+        "height": 183.265625
+      },
+      "socket": {
+        "x": 190.25,
+        "y": 563.1171875,
+        "width": 53.71875,
+        "height": 213.796875
+      },
+      "plate": "none"
+    },
+    {
+      "width": 1440,
+      "progress": 1,
+      "power": "off",
+      "lamp": {
+        "x": 190.421875,
+        "y": 563.25,
+        "width": 32.34375,
+        "height": 183.265625
+      },
+      "socket": {
+        "x": 190.25,
+        "y": 563.1171875,
+        "width": 53.71875,
+        "height": 213.796875
+      },
+      "plate": "none"
+    }
+  ],
+  "errors": [],
+  "discardedCompactPoses": "Initial element screenshot resized the viewport and exercised cancellation. Discarded invalid compact poses; all six real-time baseline traces completed ON and remain valid. Final after frames use an 1800px-high capture viewport and assert active seating effects."
+}

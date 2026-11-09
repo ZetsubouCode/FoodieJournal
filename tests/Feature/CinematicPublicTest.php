@@ -88,5 +88,12 @@ class CinematicPublicTest extends TestCase
         $response = $this->get('/explore')->assertOk()->assertDontSee($secret->uuid);
         $this->assertSame($matching->id, $response->viewData('discovery')['food']['media']->id);
         $this->assertSame($matching->id, $response->viewData('discovery')['style']['media']->id);
+        $this->assertSame($style->slug, $response->viewData('discovery')['style']['value']);
+        $selected = $this->get('/explore?tab=food&style[]='.$style->slug)->assertOk()->assertDontSee($secret->uuid);
+        $document = new \DOMDocument;
+        @$document->loadHTML($selected->getContent());
+        $link = (new \DOMXPath($document))->query('//a[@data-curiosity-key="style"]')->item(0);
+        $this->assertSame('true', $link->getAttribute('data-selected'));
+        $this->assertStringContainsString('Filter aktif', $link->getAttribute('aria-label'));
     }
 }

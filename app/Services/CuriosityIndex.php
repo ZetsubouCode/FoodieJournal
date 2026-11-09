@@ -39,6 +39,7 @@ class CuriosityIndex
             }
             $tiles[$name] = [
                 ...$config,
+                'value' => $option['value'] ?? null,
                 'detail' => $option['label'] ?? null,
                 'url' => route('explore.index').'?'.http_build_query($params, '', '&', PHP_QUERY_RFC3986),
                 'media' => $media,

@@ -1,0 +1,16 @@
+
+Running 9 tests using 1 worker
+
+(node:35844) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 tests\Browser\explore-response.spec.js:12:1 › board pending intent commits its actual facet once, keeps the board and restores keyboard focus (7.8s)
+  ok 2 tests\Browser\explore-response.spec.js:33:1 › malformed response cannot partially replace committed controls or results, and retry recovers (4.5s)
+  ok 3 tests\Browser\explore-response.spec.js:49:1 › offline failure and malformed state keep committed facets until a successful retry (5.3s)
+  ok 4 tests\Browser\explore-response.spec.js:65:1 › a failed Back rolls back, and retry restores the requested history URL with its actual data (8.0s)
+  ok 5 tests\Browser\explore-response.spec.js:78:1 › rapid board intents discard older responses and markers; committed controls keep logical focus (9.7s)
+  ok 6 tests\Browser\explore-response.spec.js:96:1 › actual delayed derivatives get static box-matched placeholders; success and failure remove them (6.9s)
+  ok 7 tests\Browser\explore-response.spec.js:118:1 › decoded fast photos never flash a placeholder and runtime reduction finishes visible result entrances (7.5s)
+  ok 8 tests\Browser\explore-response.spec.js:140:1 › real outstanding request timeout keeps committed data and clears pending intent (20.1s)
+  ok 9 tests\Browser\explore-response.spec.js:150:1 › responsive board keeps semantic order, touch links, no-JS and enlarged-text access (34.1s)
+
+  9 passed (1.8m)

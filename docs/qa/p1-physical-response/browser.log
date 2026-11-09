@@ -1,0 +1,70 @@
+
+Running 24 tests using 1 worker
+
+(node:35556) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 tests\Browser\vending-machine.spec.js:20:1 › fresh machine is dark and inert; holding at expanded socket edge waits for release (5.4s)
+  ok  2 tests\Browser\vending-machine.spec.js:35:1 › invalid drops, Escape, pointercancel and lost capture return to the committed origin (7.9s)
+  ok  3 tests\Browser\vending-machine.spec.js:51:1 › valid reverse drop shuts down and session refresh restores the correct physical state (14.2s)
+  ok  4 tests\Browser\vending-machine.spec.js:70:1 › rotary angular drag crosses wrap boundary and keyboard reverses a real six-visit page (10.6s)
+  ok  5 tests\Browser\vending-machine.spec.js:89:1 › rapid page requests discard stale fragments; failure retains committed selection and retries (7.3s)
+  ok  6 tests\Browser\vending-machine.spec.js:111:1 › selection prints exactly one matching photo and retrieval opens its actual visit (6.7s)
+  ok  7 tests\Browser\vending-machine.spec.js:128:1 › reset and a new selection retract the ready card; push-button face depresses without rotating (5.7s)
+  ok  8 tests\Browser\vending-machine.spec.js:140:1 › touch uses lamp then target; reduced-motion runtime changes keep power and print usable (5.1s)
+  ok  9 tests\Browser\vending-machine.spec.js:157:1 › keyboard lamp actions and blocked sessionStorage remain usable (4.4s)
+  ok 10 tests\Browser\vending-machine.spec.js:173:1 › responsive geometry, LED alignment, missing images and WCAG scans in off/on/printed states (34.5s)
+  ok 11 tests\Browser\vending-machine.spec.js:201:1 › no JavaScript leaves semantic visit and Explore navigation available (4.6s)
+  ok 12 tests\Browser\vending-machine.spec.js:207:1 › touch dragging snaps only after release on the compact socket (5.6s)
+  ok 13 tests\Browser\vending-machine.spec.js:219:1 › resize, a second pointer, scroll and visibility interruptions preserve a valid lamp pose (5.9s)
+  ok 14 tests\Browser\vending-machine.spec.js:240:1 › lamp communicates pickup without visible tutorial copy (4.4s)
+  ok 15 tests\Browser\vending-machine.spec.js:246:1 › a now-empty server page clears the old preview and disables printing (4.8s)
+  ok 16 tests\Browser\vending-machine.spec.js:256:1 › compiled CSS durations drive real snap, ignition and paper-feed timings (5.7s)
+  ok 17 tests\Browser\vending-machine.spec.js:271:1 › refined hardware has no pagination widgets; dial resists partial travel and settles at an index (8.9s)
+  ok 18 tests\Browser\vending-machine.spec.js:286:1 › resting tube hangs outside the left side and the compact tray is dark when off (9.5s)
+  ok 19 tests\Browser\vending-machine.spec.js:295:1 › off-state pickup cue is visible even in a discovered session, finite and non-electrical (3.2s)
+  x  20 tests\Browser\vending-seating.spec.js:20:5 › weighted seating follows contact without moving anchors at 1440 (3.7s)
+(node:20796) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 21 tests\Browser\vending-seating.spec.js:20:5 › weighted seating follows contact without moving anchors at 390 (5.0s)
+  ok 22 tests\Browser\vending-seating.spec.js:54:1 › seating interruptions finish both local effects and retain exact print/off semantics (20.0s)
+  ok 23 tests\Browser\vending-seating.spec.js:79:1 › reduced load and missing WAAPI keep immediate seating and cancel a pending page on power-off (7.1s)
+  ok 24 tests\Browser\vending-seating.spec.js:103:1 › 200% root text preserves seated geometry and keyboard print identity (7.3s)
+
+
+  1) tests\Browser\vending-seating.spec.js:20:5 › weighted seating follows contact without moving anchors at 1440 
+
+    Error: expect(received).toBeCloseTo(expected, precision)
+
+    Expected: -4
+    Received: -3.8671875
+
+    Expected precision:    1
+    Expected difference: < 0.05
+    Received difference:   0.1328125
+
+      40 |                 return { dx: a.x + a.width / 2 - b.x - b.width / 2, dy: a.y + a.height / 2 - b.y - b.height / 2, scaleX: m.a, scaleY: m.d };
+      41 |             }, progress);
+    > 42 |             expect(Math.abs(measured.dx)).toBeLessThan(1); expect(measured.dy).toBeCloseTo(dy, 1);
+         |                                                                                ^
+      43 |             expect(measured.scaleX).toBeCloseTo(scaleX, 3); expect(measured.scaleY).toBeCloseTo(scaleY, 3);
+      44 |             expect(await socket.boundingBox()).toEqual(original);
+      45 |             await expect(page.locator('[data-machine]')).toHaveAttribute('data-power', 'off');
+        at D:\Github repo\FoodieJournal\tests\Browser\vending-seating.spec.js:42:80
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    tools\.runtime\p1-contract-results\vending-seating-weighted-s-6cc88-hout-moving-anchors-at-1440\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: tools\.runtime\p1-contract-results\vending-seating-weighted-s-6cc88-hout-moving-anchors-at-1440\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    tools\.runtime\p1-contract-results\vending-seating-weighted-s-6cc88-hout-moving-anchors-at-1440\trace.zip
+    Usage:
+
+        npx playwright show-trace tools\.runtime\p1-contract-results\vending-seating-weighted-s-6cc88-hout-moving-anchors-at-1440\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests\Browser\vending-seating.spec.js:20:5 › weighted seating follows contact without moving anchors at 1440 
+  23 passed (3.3m)

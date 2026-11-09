@@ -1,0 +1,322 @@
+{
+  "phase": "after",
+  "browser": "156.0.8078.4",
+  "buildSha256": "aa6dfb77e5ff8269967fdb240b4dc97bdc9feff900aa8fd2d063a67529794901",
+  "samples": [
+    {
+      "width": 1440,
+      "sample": 1,
+      "traceFile": "after-1440-trace-1.json.gz",
+      "frameCount": 85,
+      "medianGap": 16.699999999999818,
+      "p95Gap": 16.700000000000728,
+      "maxGap": 16.800000000000182,
+      "shifts": [],
+      "trace": {
+        "Paint": {
+          "count": 58,
+          "ms": 14.953
+        },
+        "Layout": {
+          "count": 7,
+          "ms": 7.236
+        },
+        "UpdateLayoutTree": {
+          "count": 89,
+          "ms": 20.492
+        },
+        "CompositeLayers": {
+          "count": 0,
+          "ms": 0
+        }
+      }
+    },
+    {
+      "width": 1440,
+      "sample": 2,
+      "traceFile": "after-1440-trace-2.json.gz",
+      "frameCount": 83,
+      "medianGap": 16.699999999999818,
+      "p95Gap": 16.799999999999727,
+      "maxGap": 16.800000000000182,
+      "shifts": [],
+      "trace": {
+        "Paint": {
+          "count": 67,
+          "ms": 18.548
+        },
+        "Layout": {
+          "count": 7,
+          "ms": 5.776
+        },
+        "UpdateLayoutTree": {
+          "count": 90,
+          "ms": 25.794
+        },
+        "CompositeLayers": {
+          "count": 0,
+          "ms": 0
+        }
+      }
+    },
+    {
+      "width": 1440,
+      "sample": 3,
+      "traceFile": "after-1440-trace-3.json.gz",
+      "frameCount": 83,
+      "medianGap": 16.699999999999818,
+      "p95Gap": 16.700000000000273,
+      "maxGap": 16.700000000000728,
+      "shifts": [],
+      "trace": {
+        "Paint": {
+          "count": 67,
+          "ms": 18.174
+        },
+        "Layout": {
+          "count": 7,
+          "ms": 5.615
+        },
+        "UpdateLayoutTree": {
+          "count": 90,
+          "ms": 23.372
+        },
+        "CompositeLayers": {
+          "count": 0,
+          "ms": 0
+        }
+      }
+    },
+    {
+      "width": 390,
+      "sample": 1,
+      "traceFile": "after-390-trace-1.json.gz",
+      "frameCount": 84,
+      "medianGap": 16.699999999999818,
+      "p95Gap": 16.700000000000273,
+      "maxGap": 16.800000000000182,
+      "shifts": [],
+      "trace": {
+        "Paint": {
+          "count": 73,
+          "ms": 18.553
+        },
+        "Layout": {
+          "count": 7,
+          "ms": 6.012
+        },
+        "UpdateLayoutTree": {
+          "count": 93,
+          "ms": 24.066
+        },
+        "CompositeLayers": {
+          "count": 0,
+          "ms": 0
+        }
+      }
+    },
+    {
+      "width": 390,
+      "sample": 2,
+      "traceFile": "after-390-trace-2.json.gz",
+      "frameCount": 85,
+      "medianGap": 16.699999999999818,
+      "p95Gap": 16.700000000000728,
+      "maxGap": 16.800000000000182,
+      "shifts": [],
+      "trace": {
+        "Paint": {
+          "count": 73,
+          "ms": 20.363
+        },
+        "Layout": {
+          "count": 7,
+          "ms": 5.724
+        },
+        "UpdateLayoutTree": {
+          "count": 93,
+          "ms": 26.269
+        },
+        "CompositeLayers": {
+          "count": 0,
+          "ms": 0
+        }
+      }
+    },
+    {
+      "width": 390,
+      "sample": 3,
+      "traceFile": "after-390-trace-3.json.gz",
+      "frameCount": 85,
+      "medianGap": 16.699999999999818,
+      "p95Gap": 16.700000000000728,
+      "maxGap": 16.800000000000182,
+      "shifts": [],
+      "trace": {
+        "Paint": {
+          "count": 73,
+          "ms": 20.329
+        },
+        "Layout": {
+          "count": 7,
+          "ms": 7.193
+        },
+        "UpdateLayoutTree": {
+          "count": 93,
+          "ms": 27.636
+        },
+        "CompositeLayers": {
+          "count": 0,
+          "ms": 0
+        }
+      }
+    }
+  ],
+  "frames": [
+    {
+      "width": 1440,
+      "progress": 0,
+      "power": "off",
+      "lamp": {
+        "x": 83.9375,
+        "y": 862.71875,
+        "width": 32.34375,
+        "height": 183.265625
+      },
+      "socket": {
+        "x": 190.25,
+        "y": 563.1171875,
+        "width": 53.71875,
+        "height": 213.796875
+      },
+      "plate": "matrix(1, 0, 0, 1, 0, 0)"
+    },
+    {
+      "width": 1440,
+      "progress": 0.72,
+      "power": "off",
+      "lamp": {
+        "x": 190.421875,
+        "y": 559.25,
+        "width": 32.34375,
+        "height": 183.265625
+      },
+      "socket": {
+        "x": 190.25,
+        "y": 563.1171875,
+        "width": 53.71875,
+        "height": 213.796875
+      },
+      "plate": "matrix(1, 0, 0, 1, 0, 0)"
+    },
+    {
+      "width": 1440,
+      "progress": 0.86,
+      "power": "off",
+      "lamp": {
+        "x": 190.421875,
+        "y": 563.25,
+        "width": 32.34375,
+        "height": 183.265625
+      },
+      "socket": {
+        "x": 190.25,
+        "y": 563.1171875,
+        "width": 53.71875,
+        "height": 213.796875
+      },
+      "plate": "matrix(1.035, 0, 0, 0.985, 0, 0)"
+    },
+    {
+      "width": 1440,
+      "progress": 1,
+      "power": "off",
+      "lamp": {
+        "x": 190.421875,
+        "y": 563.25,
+        "width": 32.34375,
+        "height": 183.265625
+      },
+      "socket": {
+        "x": 190.25,
+        "y": 563.1171875,
+        "width": 53.71875,
+        "height": 213.796875
+      },
+      "plate": "none"
+    },
+    {
+      "width": 390,
+      "progress": 0,
+      "power": "off",
+      "lamp": {
+        "x": 36.390625,
+        "y": 460.09375,
+        "width": 27,
+        "height": 145
+      },
+      "socket": {
+        "x": 115.46875,
+        "y": 423.09375,
+        "width": 48,
+        "height": 170
+      },
+      "plate": "matrix(1, 0, 0, 1, 0, 0)"
+    },
+    {
+      "width": 390,
+      "progress": 0.72,
+      "power": "off",
+      "lamp": {
+        "x": 115.46875,
+        "y": 419.09375,
+        "width": 27,
+        "height": 145
+      },
+      "socket": {
+        "x": 115.46875,
+        "y": 423.09375,
+        "width": 48,
+        "height": 170
+      },
+      "plate": "matrix(1, 0, 0, 1, 0, 0)"
+    },
+    {
+      "width": 390,
+      "progress": 0.86,
+      "power": "off",
+      "lamp": {
+        "x": 115.46875,
+        "y": 423.09375,
+        "width": 27,
+        "height": 145
+      },
+      "socket": {
+        "x": 115.46875,
+        "y": 423.09375,
+        "width": 48,
+        "height": 170
+      },
+      "plate": "matrix(1.035, 0, 0, 0.985, 0, 0)"
+    },
+    {
+      "width": 390,
+      "progress": 1,
+      "power": "off",
+      "lamp": {
+        "x": 115.46875,
+        "y": 423.09375,
+        "width": 27,
+        "height": 145
+      },
+      "socket": {
+        "x": 115.46875,
+        "y": 423.09375,
+        "width": 48,
+        "height": 170
+      },
+      "plate": "none"
+    }
+  ],
+  "errors": []
+}

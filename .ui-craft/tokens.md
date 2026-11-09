@@ -24,6 +24,12 @@ P0-4 (9 November) adds testing only, with no token changes. The pinned Windows C
 
 ## Approved targets, not implemented tokens
 
-Choice 6A: new real-wait skeleton experiences remain P2. P0-H inventories the unused generic foundation and verifies truthful existing status/empty/error/retry; no skeleton or delay was mounted. Choice 5B keeps existing semantic primitives and fixes only evidenced shared defects.
+Choice 6A placed new real-wait skeleton experiences in P2; scoped Explore photo waits are now implemented below. P0-H inventories the unused generic foundation and verifies truthful existing status/empty/error/retry; no skeleton or delay was mounted. Choice 5B keeps existing semantic primitives and fixes only evidenced shared defects.
 
 Home 5/Explore 3/Detail 3 qualitative motion ambition; no blanket ban on 3D. Add semantic enter/exit/easing/responsive-density roles only as required by scoped implementation. Reuse existing material tokens; avoid more one-off hex/spacing/motion overrides. Contrast must be measured on final rendered backgrounds; no global conformance claim follows from this inventory.
+
+P1 (9 November): no new CSS/token roles. The existing --vending-snap 270ms and cubic-bezier(.2,.72,.22,1) drive both the tube seating stroke and socket-image flex. Authored .72/.86/1 eased-progress beats replace the old 125ms post-snap plate tween; no change to boot/off/print, rotary or source coordinates. [Evidence](../docs/qa/p1-physical-response/verification.md).
+
+P2 (9 November) adds no global token. Existing fast/standard 140/220ms and semantic surface/border/action/focus roles own board contact, pending/applied outlines and the bounded visible-result entrance. A 200ms unresolved-request threshold is an enhancement timer, with no minimum display duration. Photo placeholders are static CSS material on reserved Explore image boxes; reduced motion removes board travel and cancels entrances. [Current evidence](../docs/qa/p2-discovery/verification.md).
+
+P2 reviewed gate lineage: 39 original PNG hashes remain; one filtered-empty native-select text crop was explicitly re-reviewed (one-pixel text baseline shift, same geometry/font/behavior). Original PNG/hash and diff are retained in P2 evidence; no comparison tolerance changed.

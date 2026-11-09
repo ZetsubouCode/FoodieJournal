@@ -1,0 +1,237 @@
+{
+  "phase": "after",
+  "browser": "156.0.8078.4",
+  "build": "05a0b8bb16a3e57382431f2b58b3de6a19f216b823be360ef485e804e2da9924",
+  "method": "Unthrottled fixed photographic SQLite fixture; fresh context per sample, cold then same-context warm reload. Native clocks, no seeking or animation rewrite. Normal-time socket-independent Explore navigation trace.",
+  "samples": [
+    {
+      "width": 1440,
+      "sample": 1,
+      "arrivals": [
+        {
+          "cache": "cold",
+          "lcp": 992,
+          "cls": 0.02099024291992187,
+          "navigation": 2517.399999976158,
+          "imageBytes": 312388
+        },
+        {
+          "cache": "warm",
+          "lcp": 3632,
+          "cls": 0.02099024291992187,
+          "navigation": 4191.800000011921,
+          "imageBytes": 312388
+        }
+      ],
+      "traceFile": "investigation-eager-1440-trace-1.json.gz",
+      "medianGap": 16.699999999999818,
+      "p95Gap": 16.700000000000728,
+      "maxGap": 16.800000000000182,
+      "trace": {
+        "Paint": {
+          "count": 32,
+          "ms": 36.006
+        },
+        "Layout": {
+          "count": 81,
+          "ms": 7.562
+        },
+        "UpdateLayoutTree": {
+          "count": 36,
+          "ms": 8.57
+        }
+      }
+    },
+    {
+      "width": 1440,
+      "sample": 2,
+      "arrivals": [
+        {
+          "cache": "cold",
+          "lcp": 2300,
+          "cls": 0.02099024291992187,
+          "navigation": 3593.100000023842,
+          "imageBytes": 312388
+        },
+        {
+          "cache": "warm",
+          "lcp": 3156,
+          "cls": 0.02099024291992187,
+          "navigation": 3615.699999988079,
+          "imageBytes": 312388
+        }
+      ],
+      "traceFile": "investigation-eager-1440-trace-2.json.gz",
+      "medianGap": 16.699999999999818,
+      "p95Gap": 16.799999999999272,
+      "maxGap": 16.800000000000182,
+      "trace": {
+        "Paint": {
+          "count": 32,
+          "ms": 32.108
+        },
+        "Layout": {
+          "count": 81,
+          "ms": 7.229
+        },
+        "UpdateLayoutTree": {
+          "count": 36,
+          "ms": 8.114
+        }
+      }
+    },
+    {
+      "width": 1440,
+      "sample": 3,
+      "arrivals": [
+        {
+          "cache": "cold",
+          "lcp": 2292,
+          "cls": 0.02099024291992187,
+          "navigation": 3595.900000035763,
+          "imageBytes": 312388
+        },
+        {
+          "cache": "warm",
+          "lcp": 3228,
+          "cls": 0.02099024291992187,
+          "navigation": 3699.300000011921,
+          "imageBytes": 312388
+        }
+      ],
+      "traceFile": "investigation-eager-1440-trace-3.json.gz",
+      "medianGap": 16.699999999999818,
+      "p95Gap": 16.700000000000728,
+      "maxGap": 16.800000000000182,
+      "trace": {
+        "Paint": {
+          "count": 32,
+          "ms": 35.746
+        },
+        "Layout": {
+          "count": 81,
+          "ms": 7.089
+        },
+        "UpdateLayoutTree": {
+          "count": 36,
+          "ms": 7.684
+        }
+      }
+    },
+    {
+      "width": 390,
+      "sample": 1,
+      "arrivals": [
+        {
+          "cache": "cold",
+          "lcp": 2260,
+          "cls": 0.0027196229567307694,
+          "navigation": 3856,
+          "imageBytes": 292476
+        },
+        {
+          "cache": "warm",
+          "lcp": 868,
+          "cls": 0.0027196229567307694,
+          "navigation": 2357.199999988079,
+          "imageBytes": 292476
+        }
+      ],
+      "traceFile": "investigation-eager-390-trace-1.json.gz",
+      "medianGap": 16.699999999999818,
+      "p95Gap": 16.800000000000182,
+      "maxGap": 33.40000000000009,
+      "trace": {
+        "Paint": {
+          "count": 22,
+          "ms": 34.146
+        },
+        "Layout": {
+          "count": 69,
+          "ms": 5.146
+        },
+        "UpdateLayoutTree": {
+          "count": 36,
+          "ms": 7.002
+        }
+      }
+    },
+    {
+      "width": 390,
+      "sample": 2,
+      "arrivals": [
+        {
+          "cache": "cold",
+          "lcp": 624,
+          "cls": 0.0027196229567307694,
+          "navigation": 2095.699999988079,
+          "imageBytes": 292476
+        },
+        {
+          "cache": "warm",
+          "lcp": 868,
+          "cls": 0.0027196229567307694,
+          "navigation": 2329.400000035763,
+          "imageBytes": 292476
+        }
+      ],
+      "traceFile": "investigation-eager-390-trace-2.json.gz",
+      "medianGap": 16.699999999999818,
+      "p95Gap": 16.800000000000182,
+      "maxGap": 33.29999999999973,
+      "trace": {
+        "Paint": {
+          "count": 20,
+          "ms": 31.498
+        },
+        "Layout": {
+          "count": 69,
+          "ms": 5.632
+        },
+        "UpdateLayoutTree": {
+          "count": 36,
+          "ms": 7.414
+        }
+      }
+    },
+    {
+      "width": 390,
+      "sample": 3,
+      "arrivals": [
+        {
+          "cache": "cold",
+          "lcp": 580,
+          "cls": 0.0027196229567307694,
+          "navigation": 2093.300000011921,
+          "imageBytes": 292476
+        },
+        {
+          "cache": "warm",
+          "lcp": 900,
+          "cls": 0.0027196229567307694,
+          "navigation": 2409,
+          "imageBytes": 292476
+        }
+      ],
+      "traceFile": "investigation-eager-390-trace-3.json.gz",
+      "medianGap": 16.699999999999818,
+      "p95Gap": 16.799999999999727,
+      "maxGap": 33.40000000000009,
+      "trace": {
+        "Paint": {
+          "count": 20,
+          "ms": 33.761
+        },
+        "Layout": {
+          "count": 69,
+          "ms": 6.1
+        },
+        "UpdateLayoutTree": {
+          "count": 35,
+          "ms": 6.316
+        }
+      }
+    }
+  ],
+  "errors": []
+}

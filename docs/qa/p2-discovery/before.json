@@ -1,0 +1,237 @@
+{
+  "phase": "before",
+  "browser": "156.0.8078.4",
+  "build": "aa6dfb77e5ff8269967fdb240b4dc97bdc9feff900aa8fd2d063a67529794901",
+  "method": "Unthrottled fixed photographic SQLite fixture; fresh context per sample, cold then same-context warm reload. Native clocks, no seeking or animation rewrite. Normal-time socket-independent Explore navigation trace.",
+  "samples": [
+    {
+      "width": 1440,
+      "sample": 1,
+      "arrivals": [
+        {
+          "cache": "cold",
+          "lcp": 580,
+          "cls": 0.02099024291992187,
+          "navigation": 1815.699999988079,
+          "imageBytes": 312388
+        },
+        {
+          "cache": "warm",
+          "lcp": 3008,
+          "cls": 0.02099024291992187,
+          "navigation": 3460,
+          "imageBytes": 248302
+        }
+      ],
+      "traceFile": "before-1440-trace-1.json.gz",
+      "medianGap": 16.699999999999818,
+      "p95Gap": 16.799999999999272,
+      "maxGap": 16.800000000000182,
+      "trace": {
+        "Paint": {
+          "count": 22,
+          "ms": 31.416
+        },
+        "Layout": {
+          "count": 78,
+          "ms": 7.369
+        },
+        "UpdateLayoutTree": {
+          "count": 34,
+          "ms": 6.523
+        }
+      }
+    },
+    {
+      "width": 1440,
+      "sample": 2,
+      "arrivals": [
+        {
+          "cache": "cold",
+          "lcp": 2628,
+          "cls": 0.02099024291992187,
+          "navigation": 3850.399999976158,
+          "imageBytes": 312388
+        },
+        {
+          "cache": "warm",
+          "lcp": 2904,
+          "cls": 0.02099024291992187,
+          "navigation": 3336.899999976158,
+          "imageBytes": 248302
+        }
+      ],
+      "traceFile": "before-1440-trace-2.json.gz",
+      "medianGap": 16.699999999999818,
+      "p95Gap": 16.800000000000182,
+      "maxGap": 16.800000000000182,
+      "trace": {
+        "Paint": {
+          "count": 22,
+          "ms": 33.703
+        },
+        "Layout": {
+          "count": 78,
+          "ms": 5.789
+        },
+        "UpdateLayoutTree": {
+          "count": 34,
+          "ms": 5.667
+        }
+      }
+    },
+    {
+      "width": 1440,
+      "sample": 3,
+      "arrivals": [
+        {
+          "cache": "cold",
+          "lcp": 2712,
+          "cls": 0.02099024291992187,
+          "navigation": 4002.399999976158,
+          "imageBytes": 312388
+        },
+        {
+          "cache": "warm",
+          "lcp": 2920,
+          "cls": 0.02099024291992187,
+          "navigation": 3355.5,
+          "imageBytes": 248302
+        }
+      ],
+      "traceFile": "before-1440-trace-3.json.gz",
+      "medianGap": 16.699999999999818,
+      "p95Gap": 16.800000000000182,
+      "maxGap": 16.800000000000182,
+      "trace": {
+        "Paint": {
+          "count": 22,
+          "ms": 31.57
+        },
+        "Layout": {
+          "count": 78,
+          "ms": 5.787
+        },
+        "UpdateLayoutTree": {
+          "count": 34,
+          "ms": 6.24
+        }
+      }
+    },
+    {
+      "width": 390,
+      "sample": 1,
+      "arrivals": [
+        {
+          "cache": "cold",
+          "lcp": 2764,
+          "cls": 0.0027196229567307694,
+          "navigation": 4300.899999976158,
+          "imageBytes": 292476
+        },
+        {
+          "cache": "warm",
+          "lcp": 984,
+          "cls": 0.0027196229567307694,
+          "navigation": 1564.2999999523163,
+          "imageBytes": 263778
+        }
+      ],
+      "traceFile": "before-390-trace-1.json.gz",
+      "medianGap": 16.699999999999818,
+      "p95Gap": 16.799999999999727,
+      "maxGap": 16.800000000000182,
+      "trace": {
+        "Paint": {
+          "count": 20,
+          "ms": 32.015
+        },
+        "Layout": {
+          "count": 70,
+          "ms": 5.692
+        },
+        "UpdateLayoutTree": {
+          "count": 34,
+          "ms": 7.788
+        }
+      }
+    },
+    {
+      "width": 390,
+      "sample": 2,
+      "arrivals": [
+        {
+          "cache": "cold",
+          "lcp": 748,
+          "cls": 0.0027196229567307694,
+          "navigation": 2250.300000011921,
+          "imageBytes": 292476
+        },
+        {
+          "cache": "warm",
+          "lcp": 916,
+          "cls": 0.0027196229567307694,
+          "navigation": 2369.5,
+          "imageBytes": 292476
+        }
+      ],
+      "traceFile": "before-390-trace-2.json.gz",
+      "medianGap": 16.699999999999818,
+      "p95Gap": 16.700000000000273,
+      "maxGap": 33.40000000000009,
+      "trace": {
+        "Paint": {
+          "count": 18,
+          "ms": 27.718
+        },
+        "Layout": {
+          "count": 68,
+          "ms": 5.119
+        },
+        "UpdateLayoutTree": {
+          "count": 34,
+          "ms": 5.381
+        }
+      }
+    },
+    {
+      "width": 390,
+      "sample": 3,
+      "arrivals": [
+        {
+          "cache": "cold",
+          "lcp": 660,
+          "cls": 0.0027196229567307694,
+          "navigation": 2112.5,
+          "imageBytes": 292476
+        },
+        {
+          "cache": "warm",
+          "lcp": 952,
+          "cls": 0.0027196229567307694,
+          "navigation": 2393,
+          "imageBytes": 292476
+        }
+      ],
+      "traceFile": "before-390-trace-3.json.gz",
+      "medianGap": 16.699999999999818,
+      "p95Gap": 16.799999999999727,
+      "maxGap": 33.40000000000009,
+      "trace": {
+        "Paint": {
+          "count": 16,
+          "ms": 32.73
+        },
+        "Layout": {
+          "count": 68,
+          "ms": 5.079
+        },
+        "UpdateLayoutTree": {
+          "count": 34,
+          "ms": 5.99
+        }
+      }
+    }
+  ],
+  "errors": []
+}

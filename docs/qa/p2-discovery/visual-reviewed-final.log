@@ -1,0 +1,30 @@
+
+Running 23 tests using 1 worker
+
+(node:29876) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 tests\Browser\public-visual.spec.js:43:9 › Home at 390: hero and footer (4.2s)
+  ok  2 tests\Browser\public-visual.spec.js:43:9 › Explore at 390: hero and footer (5.8s)
+  ok  3 tests\Browser\public-visual.spec.js:43:9 › Visit at 390: hero and footer (2.9s)
+  ok  4 tests\Browser\public-visual.spec.js:43:9 › Place at 390: hero and footer (2.4s)
+  ok  5 tests\Browser\public-visual.spec.js:43:9 › Error at 390: hero and footer (993ms)
+  ok  6 tests\Browser\public-visual.spec.js:43:9 › Home at 1440: hero and footer (4.4s)
+  ok  7 tests\Browser\public-visual.spec.js:43:9 › Explore at 1440: hero and footer (5.5s)
+  ok  8 tests\Browser\public-visual.spec.js:43:9 › Visit at 1440: hero and footer (2.5s)
+  ok  9 tests\Browser\public-visual.spec.js:43:9 › Place at 1440: hero and footer (2.3s)
+  ok 10 tests\Browser\public-visual.spec.js:43:9 › Error at 1440: hero and footer (1.2s)
+  ok 11 tests\Browser\public-visual.spec.js:43:9 › Home at 1920: hero and footer (4.3s)
+  ok 12 tests\Browser\public-visual.spec.js:43:9 › Explore at 1920: hero and footer (6.3s)
+  ok 13 tests\Browser\public-visual.spec.js:43:9 › Visit at 1920: hero and footer (3.3s)
+  ok 14 tests\Browser\public-visual.spec.js:43:9 › Place at 1920: hero and footer (3.4s)
+  ok 15 tests\Browser\public-visual.spec.js:43:9 › Error at 1920: hero and footer (2.4s)
+  ok 16 tests\Browser\public-visual.spec.js:68:1 › cabinet on and printed identity (12.6s)
+  ok 17 tests\Browser\public-visual.spec.js:82:5 › navigation midpoint with normal motion on / (5.3s)
+  ok 18 tests\Browser\public-visual.spec.js:82:5 › navigation midpoint with normal motion on /visual-missing-page (1.0s)
+  ok 19 tests\Browser\public-visual.spec.js:102:5 › staged filter at 390 (6.0s)
+  ok 20 tests\Browser\public-visual.spec.js:102:5 › staged filter at 1440 (6.1s)
+  ok 21 tests\Browser\public-visual.spec.js:120:1 › unpublished archive and filtered empty recovery (2.6s)
+  ok 22 tests\Browser\public-visual.spec.js:132:1 › failed browse retains committed results and retry (5.3s)
+  ok 23 tests\Browser\public-visual.spec.js:144:1 › viewer original loads on demand and focus returns (2.5s)
+
+  23 passed (1.6m)

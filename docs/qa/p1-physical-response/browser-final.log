@@ -1,0 +1,12 @@
+
+Running 5 tests using 1 worker
+
+(node:9436) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 tests\Browser\vending-seating.spec.js:20:5 › weighted seating follows contact without moving anchors at 1440 (5.7s)
+  ok 2 tests\Browser\vending-seating.spec.js:20:5 › weighted seating follows contact without moving anchors at 390 (5.0s)
+  ok 3 tests\Browser\vending-seating.spec.js:55:1 › seating interruptions finish both local effects and retain exact print/off semantics (14.8s)
+  ok 4 tests\Browser\vending-seating.spec.js:80:1 › reduced load and missing WAAPI keep immediate seating and cancel a pending page on power-off (6.4s)
+  ok 5 tests\Browser\vending-seating.spec.js:109:1 › 200% root text preserves seated geometry and keyboard print identity (7.3s)
+
+  5 passed (40.2s)

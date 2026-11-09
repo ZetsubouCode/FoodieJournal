@@ -1,0 +1,59 @@
+
+Running 8 tests using 1 worker
+
+(node:22788) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 tests\Browser\explore-response.spec.js:12:1 › board pending intent commits its actual facet once, keeps the board and restores keyboard focus (9.5s)
+  ok 2 tests\Browser\explore-response.spec.js:33:1 › malformed response cannot partially replace committed controls or results, and retry recovers (4.9s)
+  ok 3 tests\Browser\explore-response.spec.js:49:1 › a failed Back rolls back, and retry restores the requested history URL with its actual data (8.0s)
+  x  4 tests\Browser\explore-response.spec.js:62:1 › rapid board intents discard older responses and markers; committed controls keep logical focus (10.5s)
+(node:33184) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 5 tests\Browser\explore-response.spec.js:80:1 › actual delayed derivatives get static box-matched placeholders; success and failure remove them (7.3s)
+  ok 6 tests\Browser\explore-response.spec.js:102:1 › decoded fast photos never flash a placeholder and runtime reduction finishes visible result entrances (8.0s)
+  ok 7 tests\Browser\explore-response.spec.js:113:1 › real outstanding request timeout keeps committed data and clears pending intent (18.9s)
+  ok 8 tests\Browser\explore-response.spec.js:123:1 › responsive board keeps semantic order, touch links, no-JS and enlarged-text access (33.2s)
+
+
+  1) tests\Browser\explore-response.spec.js:62:1 › rapid board intents discard older responses and markers; committed controls keep logical focus 
+
+    Error: expect(locator).toBeFocused() failed
+
+    Locator:  locator('#discovery-sort')
+    Expected: focused
+    Received: inactive
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeFocused" locator('#discovery-sort') with timeout 5000ms
+      - waiting for locator('#discovery-sort')
+        14 × locator resolved to <select name="sort" id="discovery-sort" aria-label="Urutkan hasil">…</select>
+           - unexpected value "inactive"
+
+
+      69 |     await expect(city).toHaveAttribute('data-selected', 'true');
+      70 |     await page.locator('#discovery-sort').selectOption('oldest');
+    > 71 |     await expect(page.locator('#discovery-sort')).toHaveValue('oldest'); await expect(page.locator('#discovery-sort')).toBeFocused();
+         |                                                                                                                        ^
+      72 |     await page.getByRole('link', { name: 'Daftar', exact: true }).focus(); await page.keyboard.press('Enter');
+      73 |     await expect(page.locator('.results')).toHaveClass(/results--list/);
+      74 |     await expect(page.getByRole('link', { name: 'Daftar', exact: true })).toBeFocused();
+        at D:\Github repo\FoodieJournal\tests\Browser\explore-response.spec.js:71:120
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    tools\.runtime\p2-response-initial\explore-response-rapid-boa-5c41d-controls-keep-logical-focus\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: tools\.runtime\p2-response-initial\explore-response-rapid-boa-5c41d-controls-keep-logical-focus\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    tools\.runtime\p2-response-initial\explore-response-rapid-boa-5c41d-controls-keep-logical-focus\trace.zip
+    Usage:
+
+        npx playwright show-trace tools\.runtime\p2-response-initial\explore-response-rapid-boa-5c41d-controls-keep-logical-focus\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests\Browser\explore-response.spec.js:62:1 › rapid board intents discard older responses and markers; committed controls keep logical focus 
+  7 passed (1.7m)

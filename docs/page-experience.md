@@ -10,13 +10,15 @@ Keep the approved shell/LED geometry and [latest mechanical contract](motion-int
 
 At compact widths preserve semantic hardware → windows → actions → tray → preview ordering, fully visible outboard tube and reserved paper space. The 768px hardware/window stack is tall in the current capture; improve compact density only if labels, touch areas and hand-to-target relationships remain usable. Do not squeeze the desktop raster into tiny controls.
 
+P1 (9 November) refines valid socket installation with one weighted seating stroke and local plate flex inside the existing 270ms snap. Boot follows seating; power stays OFF while held. No layout, control, legal-state or print-clearing change. [Frames, interruption checks and reviewed gate](qa/p1-physical-response/verification.md).
+
 ## Explore: interactive discovery plus practical browsing
 
 An asymmetric photographic discovery board invites category/city/technique exploration; compact food-type/recommendation links offer alternative entry points. Build bento grouping around those distinct purposes, not equal decorative cards. One clear browse work area contains Visit/Food/Place navigation, search, filters, sort, grid/list and result count. Memory Reel remains real results, not a second game.
 
 Sample journey: choose a technique photograph → compatible Food URL/filter → adjust staged drawer selections → Apply → results/count/chips commit together → open a dated visit → Back restores state. Cancel discards pending drawer changes. Group reset and all reset have explicit scope. Preserve query on sorting/view/pagination and compatible tab changes. Reset price context between Food/Visit/Place with feedback; Food uses item unit price, Visit total, Place has no price filter. Same-item AND, per-dimension OR and published-only counts remain backend responsibilities.
 
-During requests retain the discovery board and committed results. Busy feedback belongs to the region being updated. On failure retain the committed URL/data and offer retry; a failed history restoration returns to the committed URL. Rapid requests must never display stale fragments. Focus returns to the logical initiating control or replacement equivalent. Full GET navigation remains usable without JS.
+During requests retain the discovery board and committed results. Busy feedback belongs to the region being updated. On failure retain the committed URL/data and offer retry; a failed history restoration returns to the committed URL. Rapid requests must never display stale fragments. Focus returns to the logical initiating control or replacement equivalent. P2 restores sort/view/filter controls, sends removed chip/page or board-to-results focus to the result heading, and repairs the requested URL when retrying a failed Back. All replacement regions and normalized facet metadata are validated before any DOM commit. Full GET navigation remains usable without JS.
 
 ## Visit: one dated culinary dossier
 
@@ -40,7 +42,7 @@ Choice 4A explicitly uses system UI fonts for headings/body, a plain semantic pa
 
 ## State contract
 
-The following is required behavior, not a claim of complete implementation. P0-3 implements the empty/partial readability slice; [current verification](qa/readability-states/verification.md). Real-wait skeleton work remains P2. Use the existing Alert/Modal/Toast, image fallback and empty-state components; add page-specific variants rather than duplicate foundations.
+The following is required behavior, not a claim of complete implementation. P0-3 implements the empty/partial readability slice; [current verification](qa/readability-states/verification.md). P2 implements scoped Explore progressive-photo placeholders; it does not add a universal waiting layer. Use the existing Alert/Modal/Toast, image fallback and empty-state components; add page-specific variants rather than duplicate foundations.
 
 | Context | Initial / waiting / updating | Empty or partial | Failure / recovery / cancellation |
 | --- | --- | --- | --- |
@@ -51,15 +53,17 @@ The following is required behavior, not a claim of complete implementation. P0-3
 | Missing/unready image | Reserve aspect ratio; neutral material/placeholder while genuinely waiting | Stable “Foto belum tersedia”, text-only story/item/place composition when there is no photo | Failure switches to fallback, never raw original in a listing; retry only where meaningful |
 | Missing ratings / prices | Render known values immediately | “Penilaian belum dicatat” / “Belum Dinilai” per component and “Harga belum dicatat”; retain zero price when actually recorded | No score bar, star fill, total or currency fabricated from null |
 | Cabinet page / print | Distinguish OFF/boot/selected/page busy/printing/ready/retrieving; lock competing actions | Empty six-window page has honest apertures and disabled print/index as appropriate | Keep committed selection on page error; retry; reset/cancel do not leave paper or ghost state |
-| Viewer original | Fixed viewer geometry + actual status; new skeleton deferred to P2 | Derivative remains useful if original unavailable | Error text + retry/close; no trapped keyboard; close releases image and restores focus |
+| Viewer original | Fixed viewer geometry + actual status; no viewer change in scoped Explore P2 | Derivative remains useful if original unavailable | Error text + retry/close; no trapped keyboard; close releases image and restores focus |
 | Unavailable page/data | Do not fake content | 404 for ineligible detail; approved error scene for actual request errors | Status-specific action/copy from config, no exception leakage; retry only safe methods |
 | Admin first run / save / upload | Clear bootstrap/empty guidance, real submit/upload status | Missing data stays editable; publish gate explains required facts | Keep fields on failure, shared error summary and inline messages, no optimistic publication or destructive reset |
 
-### Skeleton transitions — P2 only (choice 6A)
+### Skeleton transitions — P2 (choice 6A)
 
-P0-H inventories the unused skeleton foundation and verifies current busy/empty/error/retry semantics only. The following defines future P2 work; it does not authorize mounting new skeletons during P0-H.
+P0-H inventories the unused skeleton foundation and verifies current busy/empty/error/retry semantics only. P2 now implements this contract for visible Explore derivative slots. P0-H mounted none. Existing viewer/admin waiting semantics remain unchanged; no generic skeleton is mounted.
 
 Initial server-rendered GETs need no simulated skeleton or forced delay. For actual image/async waits, reserve geometry from image dimensions or last committed layout. Refresh keeps useful content instead of blanking it; if a delay persists (starting design threshold about 200ms), show a noninteractive region-matched placeholder only where it adds clarity. The threshold never postpones a request/response. Fast responses skip it, reduced motion uses static material, `aria-busy`/status express the real task, and failure replaces the placeholder with recovery. Placeholders are `aria-hidden`; no fake count/text/data. Avoid minimum display timers that slow success.
+
+P2 keeps all useful committed results during fragment waits. Native photo loading is observed for an assigned visible derivative, and a CSS-only decorative material placeholder appears if still unresolved after 200ms; the image dimensions reserve its box. Native load/error removes it immediately and existing fallbacks own failure text. Offscreen lazy slots do not run wait timers; cached/fast complete images skip them. No extra announcement or original request. [Verification](qa/p2-discovery/verification.md).
 
 No optimistic result count/filter URL before server commitment. Progressive images may load into reserved slots without reflow. A delayed older image/request cannot overwrite the latest selection. Initial/refresh/progressive/failed transitions need separate test assertions; one global `.skeleton { min-height:10rem }` is not a finished system.
 

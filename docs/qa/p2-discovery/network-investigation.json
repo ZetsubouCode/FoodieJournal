@@ -1,0 +1,213 @@
+{
+  "method": "Controlled same-fixture/current markup/style audit with old versus P2 Explore client. Decode every visible native image before resource accounting; no eager promotion. This is a diagnostic, not a replacement for the real before/after lab captures.",
+  "records": [
+    {
+      "width": 1440,
+      "client": "baseline",
+      "images": [
+        {
+          "loading": "eager",
+          "currentSrc": "http://127.0.0.1:8015/media/af4be0ef-eac7-4ac8-a124-932e471a95d6/card",
+          "sizes": "(min-width: 1920px) 728px, (min-width: 768px) 42vw, calc(100vw - 2rem)",
+          "width": 541
+        },
+        {
+          "loading": "lazy",
+          "currentSrc": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/card",
+          "sizes": "auto, (min-width: 1920px) 560px, (min-width: 768px) 32vw, 50vw",
+          "width": 417
+        },
+        {
+          "loading": "lazy",
+          "currentSrc": "http://127.0.0.1:8015/media/9921afd0-331d-4a13-9f64-89c77ab9c502/thumbnail",
+          "sizes": "auto, (min-width: 1920px) 560px, (min-width: 768px) 32vw, 50vw",
+          "width": 354
+        }
+      ],
+      "media": [
+        {
+          "url": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/card",
+          "bytes": 136962
+        },
+        {
+          "url": "http://127.0.0.1:8015/media/73a99b4a-9cb2-4896-ac48-f7b91c9956b0/thumbnail",
+          "bytes": 28698
+        },
+        {
+          "url": "http://127.0.0.1:8015/media/9921afd0-331d-4a13-9f64-89c77ab9c502/thumbnail",
+          "bytes": 33574
+        },
+        {
+          "url": "http://127.0.0.1:8015/media/af4be0ef-eac7-4ac8-a124-932e471a95d6/card",
+          "bytes": 77766
+        },
+        {
+          "url": "http://127.0.0.1:8015/media/c0b8aa6f-6fa7-4272-9762-a4cad49a7892/thumbnail",
+          "bytes": 23978
+        },
+        {
+          "url": "http://127.0.0.1:8015/media/f6fb78c4-5c8a-47f1-a4ae-d7d94cd89756/thumbnail",
+          "bytes": 35388
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "client": "p2",
+      "images": [
+        {
+          "loading": "eager",
+          "currentSrc": "http://127.0.0.1:8015/media/af4be0ef-eac7-4ac8-a124-932e471a95d6/card",
+          "sizes": "(min-width: 1920px) 728px, (min-width: 768px) 42vw, calc(100vw - 2rem)",
+          "width": 541
+        },
+        {
+          "loading": "lazy",
+          "currentSrc": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/card",
+          "sizes": "auto, (min-width: 1920px) 560px, (min-width: 768px) 32vw, 50vw",
+          "width": 417
+        },
+        {
+          "loading": "lazy",
+          "currentSrc": "http://127.0.0.1:8015/media/9921afd0-331d-4a13-9f64-89c77ab9c502/thumbnail",
+          "sizes": "auto, (min-width: 1920px) 560px, (min-width: 768px) 32vw, 50vw",
+          "width": 354
+        }
+      ],
+      "media": [
+        {
+          "url": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/card",
+          "bytes": 136962
+        },
+        {
+          "url": "http://127.0.0.1:8015/media/73a99b4a-9cb2-4896-ac48-f7b91c9956b0/thumbnail",
+          "bytes": 28698
+        },
+        {
+          "url": "http://127.0.0.1:8015/media/9921afd0-331d-4a13-9f64-89c77ab9c502/thumbnail",
+          "bytes": 33574
+        },
+        {
+          "url": "http://127.0.0.1:8015/media/af4be0ef-eac7-4ac8-a124-932e471a95d6/card",
+          "bytes": 77766
+        },
+        {
+          "url": "http://127.0.0.1:8015/media/c0b8aa6f-6fa7-4272-9762-a4cad49a7892/thumbnail",
+          "bytes": 23978
+        },
+        {
+          "url": "http://127.0.0.1:8015/media/f6fb78c4-5c8a-47f1-a4ae-d7d94cd89756/thumbnail",
+          "bytes": 35388
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "client": "baseline",
+      "images": [
+        {
+          "loading": "eager",
+          "currentSrc": "http://127.0.0.1:8015/media/af4be0ef-eac7-4ac8-a124-932e471a95d6/thumbnail",
+          "sizes": "(min-width: 1920px) 728px, (min-width: 768px) 42vw, calc(100vw - 2rem)",
+          "width": 358
+        },
+        {
+          "loading": "lazy",
+          "currentSrc": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/thumbnail",
+          "sizes": "auto, (min-width: 1920px) 560px, (min-width: 768px) 32vw, 50vw",
+          "width": 173
+        },
+        {
+          "loading": "lazy",
+          "currentSrc": "http://127.0.0.1:8015/media/9921afd0-331d-4a13-9f64-89c77ab9c502/thumbnail",
+          "sizes": "auto, (min-width: 1920px) 560px, (min-width: 768px) 32vw, 50vw",
+          "width": 173
+        }
+      ],
+      "media": [
+        {
+          "url": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/card",
+          "bytes": 136962
+        },
+        {
+          "url": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/thumbnail",
+          "bytes": 36332
+        },
+        {
+          "url": "http://127.0.0.1:8015/media/73a99b4a-9cb2-4896-ac48-f7b91c9956b0/thumbnail",
+          "bytes": 28698
+        },
+        {
+          "url": "http://127.0.0.1:8015/media/9921afd0-331d-4a13-9f64-89c77ab9c502/thumbnail",
+          "bytes": 33574
+        },
+        {
+          "url": "http://127.0.0.1:8015/media/af4be0ef-eac7-4ac8-a124-932e471a95d6/thumbnail",
+          "bytes": 21522
+        },
+        {
+          "url": "http://127.0.0.1:8015/media/c0b8aa6f-6fa7-4272-9762-a4cad49a7892/thumbnail",
+          "bytes": 23978
+        },
+        {
+          "url": "http://127.0.0.1:8015/media/f6fb78c4-5c8a-47f1-a4ae-d7d94cd89756/thumbnail",
+          "bytes": 35388
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "client": "p2",
+      "images": [
+        {
+          "loading": "eager",
+          "currentSrc": "http://127.0.0.1:8015/media/af4be0ef-eac7-4ac8-a124-932e471a95d6/thumbnail",
+          "sizes": "(min-width: 1920px) 728px, (min-width: 768px) 42vw, calc(100vw - 2rem)",
+          "width": 358
+        },
+        {
+          "loading": "lazy",
+          "currentSrc": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/thumbnail",
+          "sizes": "auto, (min-width: 1920px) 560px, (min-width: 768px) 32vw, 50vw",
+          "width": 173
+        },
+        {
+          "loading": "lazy",
+          "currentSrc": "http://127.0.0.1:8015/media/9921afd0-331d-4a13-9f64-89c77ab9c502/thumbnail",
+          "sizes": "auto, (min-width: 1920px) 560px, (min-width: 768px) 32vw, 50vw",
+          "width": 173
+        }
+      ],
+      "media": [
+        {
+          "url": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/card",
+          "bytes": 136962
+        },
+        {
+          "url": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/thumbnail",
+          "bytes": 36332
+        },
+        {
+          "url": "http://127.0.0.1:8015/media/73a99b4a-9cb2-4896-ac48-f7b91c9956b0/thumbnail",
+          "bytes": 28698
+        },
+        {
+          "url": "http://127.0.0.1:8015/media/9921afd0-331d-4a13-9f64-89c77ab9c502/thumbnail",
+          "bytes": 33574
+        },
+        {
+          "url": "http://127.0.0.1:8015/media/af4be0ef-eac7-4ac8-a124-932e471a95d6/thumbnail",
+          "bytes": 21522
+        },
+        {
+          "url": "http://127.0.0.1:8015/media/c0b8aa6f-6fa7-4272-9762-a4cad49a7892/thumbnail",
+          "bytes": 23978
+        },
+        {
+          "url": "http://127.0.0.1:8015/media/f6fb78c4-5c8a-47f1-a4ae-d7d94cd89756/thumbnail",
+          "bytes": 35388
+        }
+      ]
+    }
+  ]
+}

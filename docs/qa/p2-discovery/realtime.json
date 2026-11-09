@@ -1,0 +1,23 @@
+{
+  "browser": "156.0.8078.4",
+  "build": "2118ab10aeaa0a066836d3b48e84d609f3a463bcb55dd907873405d1fa659d4c",
+  "method": "Normal-time keyboard/touch board, staged price Apply, list, actual failed request/retry, Back restoration and actual Visit navigation. No clock, seeking, slowMo, motion override or edits. Observation holds do not alter application work.",
+  "recordings": [
+    {
+      "width": 1440,
+      "target": "http://127.0.0.1:8015/explore?tab=food&style%5B0%5D=bakar",
+      "retrieved": "http://127.0.0.1:8015/visit/demo-bara-di-ujung-hari#hidangan-1",
+      "file": "docs/qa/p2-discovery/realtime-1440.webm",
+      "sha256": "3e2844bc2d713af9e6e7a8a3364d7a5f326900519c49f44e74a2007ea538ffd0",
+      "errors": []
+    },
+    {
+      "width": 375,
+      "target": "http://127.0.0.1:8015/explore?tab=food&style%5B0%5D=bakar",
+      "retrieved": "http://127.0.0.1:8015/visit/demo-bara-di-ujung-hari#hidangan-1",
+      "file": "docs/qa/p2-discovery/realtime-375.webm",
+      "sha256": "71788a70a792eb3c3052b0d1e0dafcf9694a592e37973ea76b8d2988db8dcfc1",
+      "errors": []
+    }
+  ]
+}

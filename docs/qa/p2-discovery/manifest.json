@@ -1,0 +1,1453 @@
+{
+  "date": "2026-11-09",
+  "head": "21e443a7254ae3a3e72989a83aa06584dba0c005",
+  "start": "Completed uncommitted P1 source/docs/evidence preserved. No commit/push/deployment.",
+  "environment": {
+    "browser": "156.0.8078.4",
+    "platform": "win32",
+    "node": "v26.3.1",
+    "timezone": "Asia/Jakarta",
+    "fixture": "Dedicated fixed-date photo-v1/empty-v1 SQLite/media plus existing isolated functional/readability fixtures"
+  },
+  "review": "Opened full-size desktop/compact selected/pending/photographic waits, contact sheets, native-select expected/actual/diff and decoded normal-time videos. Limits and measured regression are in verification.md.",
+  "parent": {
+    "file": "docs/qa/visual-baselines/manifest.json",
+    "sha256": "d78e00624f3d605f0bc22f5ccc01815ad2979a2289f94086f41c8c56a05e6b56"
+  },
+  "baselineUpdates": {
+    "unchanged": 39,
+    "explicitlyReviewed": "tests/Browser/__screenshots__/public-visual-win32-chromium/filtered-empty-390.png",
+    "originalSaved": "docs/qa/p2-discovery/filtered-empty-before.png",
+    "reason": "Stable one-pixel native select text baseline shift, 262 differing pixels; font, box, labels, values and actions unchanged. Full expected/actual/diff inspected; no mask/tolerance change."
+  },
+  "snapshots": [
+    {
+      "name": "home-390-hero",
+      "route": "http://127.0.0.1:8015/",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "browser": "156.0.8078.4",
+      "motion": "reduce unless state specifies normal",
+      "fonts": [
+        "Archive Garamond",
+        "Archive Garamond",
+        "Archive Sans"
+      ],
+      "originals": 0,
+      "state": "arrival; Home is power OFF",
+      "fixture": "photo-v1",
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/home-390-hero.png",
+      "width": 390,
+      "height": 1000,
+      "sha256": "a523490d5a365d2b186ec2e8c063aa52bf28cb204ef4648046c8afbda2ba18bd"
+    },
+    {
+      "name": "home-390-footer",
+      "route": "http://127.0.0.1:8015/",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "browser": "156.0.8078.4",
+      "motion": "reduce unless state specifies normal",
+      "fonts": [
+        "Archive Garamond",
+        "Archive Garamond",
+        "Archive Sans"
+      ],
+      "originals": 0,
+      "state": "footer",
+      "fixture": "photo-v1",
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/home-390-footer.png",
+      "width": 390,
+      "height": 377,
+      "sha256": "2ff301d7d23dc0d9f71df58ec395385896c66d8536c77e20ec9405be396b1477"
+    },
+    {
+      "name": "explore-390-hero",
+      "route": "http://127.0.0.1:8015/explore",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "browser": "156.0.8078.4",
+      "motion": "reduce unless state specifies normal",
+      "fonts": [
+        "Archive Garamond",
+        "Archive Garamond",
+        "Archive Sans"
+      ],
+      "originals": 0,
+      "state": "arrival; Home is power OFF",
+      "fixture": "photo-v1",
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/explore-390-hero.png",
+      "width": 390,
+      "height": 1000,
+      "sha256": "e436561e62bf75db1355a2535ecba2ac00d74ffc57b44c038dba644c5b09d081"
+    },
+    {
+      "name": "explore-390-footer",
+      "route": "http://127.0.0.1:8015/explore",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "browser": "156.0.8078.4",
+      "motion": "reduce unless state specifies normal",
+      "fonts": [
+        "Archive Garamond",
+        "Archive Garamond",
+        "Archive Sans"
+      ],
+      "originals": 0,
+      "state": "footer",
+      "fixture": "photo-v1",
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/explore-390-footer.png",
+      "width": 390,
+      "height": 377,
+      "sha256": "eabb319849d3c7d45df04e9cb69c204c20887475f2a43eca5c31569afd781eb4"
+    },
+    {
+      "name": "visit-390-hero",
+      "route": "http://127.0.0.1:8015/visit/demo-bara-di-ujung-hari",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "browser": "156.0.8078.4",
+      "motion": "reduce unless state specifies normal",
+      "fonts": [
+        "Archive Garamond",
+        "Archive Garamond",
+        "Archive Sans"
+      ],
+      "originals": 0,
+      "state": "arrival; Home is power OFF",
+      "fixture": "photo-v1",
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/visit-390-hero.png",
+      "width": 390,
+      "height": 1000,
+      "sha256": "7fdcd4849f16e0f9612ec4e05457ef831c7a115d703a3d87dff240551f7a710d"
+    },
+    {
+      "name": "visit-390-footer",
+      "route": "http://127.0.0.1:8015/visit/demo-bara-di-ujung-hari",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "browser": "156.0.8078.4",
+      "motion": "reduce unless state specifies normal",
+      "fonts": [
+        "Archive Garamond",
+        "Archive Garamond",
+        "Archive Sans"
+      ],
+      "originals": 0,
+      "state": "footer",
+      "fixture": "photo-v1",
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/visit-390-footer.png",
+      "width": 390,
+      "height": 378,
+      "sha256": "5d60f038d8b219057a723adb40b390f035fe2d283be318c11785c5e73e2556b8"
+    },
+    {
+      "name": "place-390-hero",
+      "route": "http://127.0.0.1:8015/place/demo-bara-senja",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "browser": "156.0.8078.4",
+      "motion": "reduce unless state specifies normal",
+      "fonts": [
+        "Archive Garamond",
+        "Archive Garamond",
+        "Archive Sans"
+      ],
+      "originals": 0,
+      "state": "arrival; Home is power OFF",
+      "fixture": "photo-v1",
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/place-390-hero.png",
+      "width": 390,
+      "height": 1000,
+      "sha256": "99a942e5f9a6d32d5568796ea24caf44f3bd5ec7305bbade9e537a71831ae64a"
+    },
+    {
+      "name": "place-390-footer",
+      "route": "http://127.0.0.1:8015/place/demo-bara-senja",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "browser": "156.0.8078.4",
+      "motion": "reduce unless state specifies normal",
+      "fonts": [
+        "Archive Garamond",
+        "Archive Garamond",
+        "Archive Sans"
+      ],
+      "originals": 0,
+      "state": "footer",
+      "fixture": "photo-v1",
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/place-390-footer.png",
+      "width": 390,
+      "height": 378,
+      "sha256": "eba64c7118a819058253b1b86435990bf40a0071f276223dcd69e7a96f5da4da"
+    },
+    {
+      "name": "error-390-hero",
+      "route": "http://127.0.0.1:8015/visual-missing-page",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "browser": "156.0.8078.4",
+      "motion": "reduce unless state specifies normal",
+      "fonts": [
+        "Archive Garamond",
+        "Archive Garamond",
+        "Archive Sans"
+      ],
+      "originals": 0,
+      "state": "arrival; Home is power OFF",
+      "fixture": "photo-v1",
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/error-390-hero.png",
+      "width": 390,
+      "height": 1000,
+      "sha256": "a1c861f12878c117f9fa776c8c5cc678da140c2246f8f4b99249becb5e41588e"
+    },
+    {
+      "name": "error-390-footer",
+      "route": "http://127.0.0.1:8015/visual-missing-page",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "browser": "156.0.8078.4",
+      "motion": "reduce unless state specifies normal",
+      "fonts": [
+        "Archive Garamond",
+        "Archive Garamond",
+        "Archive Sans"
+      ],
+      "originals": 0,
+      "state": "footer",
+      "fixture": "photo-v1",
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/error-390-footer.png",
+      "width": 390,
+      "height": 376,
+      "sha256": "dfd80bdc8d7d39108f726103ac041d058f9361a08a5557ba3b1aaa47eb5bf928"
+    },
+    {
+      "name": "home-1440-hero",
+      "route": "http://127.0.0.1:8015/",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "browser": "156.0.8078.4",
+      "motion": "reduce unless state specifies normal",
+      "fonts": [
+        "Archive Garamond",
+        "Archive Garamond",
+        "Archive Sans"
+      ],
+      "originals": 0,
+      "state": "arrival; Home is power OFF",
+      "fixture": "photo-v1",
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/home-1440-hero.png",
+      "width": 1440,
+      "height": 1000,
+      "sha256": "d48891f40cf88066fc3dce0675dc1cc5cef8e520a22eae690b9cd412a0a6fbc1"
+    },
+    {
+      "name": "home-1440-footer",
+      "route": "http://127.0.0.1:8015/",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "browser": "156.0.8078.4",
+      "motion": "reduce unless state specifies normal",
+      "fonts": [
+        "Archive Garamond",
+        "Archive Garamond",
+        "Archive Sans"
+      ],
+      "originals": 0,
+      "state": "footer",
+      "fixture": "photo-v1",
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/home-1440-footer.png",
+      "width": 1440,
+      "height": 352,
+      "sha256": "0617303079110cc0e27e39a008352454c929f401de2fd192ad3fa8e465e08ee9"
+    },
+    {
+      "name": "explore-1440-hero",
+      "route": "http://127.0.0.1:8015/explore",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "browser": "156.0.8078.4",
+      "motion": "reduce unless state specifies normal",
+      "fonts": [
+        "Archive Garamond",
+        "Archive Garamond",
+        "Archive Sans"
+      ],
+      "originals": 0,
+      "state": "arrival; Home is power OFF",
+      "fixture": "photo-v1",
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/explore-1440-hero.png",
+      "width": 1440,
+      "height": 1000,
+      "sha256": "6b4d0b0fab7f4db0d2c406497c4db37f6f228bca21e266327ae67aebd609ef15"
+    },
+    {
+      "name": "explore-1440-footer",
+      "route": "http://127.0.0.1:8015/explore",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "browser": "156.0.8078.4",
+      "motion": "reduce unless state specifies normal",
+      "fonts": [
+        "Archive Garamond",
+        "Archive Garamond",
+        "Archive Sans"
+      ],
+      "originals": 0,
+      "state": "footer",
+      "fixture": "photo-v1",
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/explore-1440-footer.png",
+      "width": 1440,
+      "height": 352,
+      "sha256": "0617303079110cc0e27e39a008352454c929f401de2fd192ad3fa8e465e08ee9"
+    },
+    {
+      "name": "visit-1440-hero",
+      "route": "http://127.0.0.1:8015/visit/demo-bara-di-ujung-hari",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "browser": "156.0.8078.4",
+      "motion": "reduce unless state specifies normal",
+      "fonts": [
+        "Archive Garamond",
+        "Archive Garamond",
+        "Archive Sans"
+      ],
+      "originals": 0,
+      "state": "arrival; Home is power OFF",
+      "fixture": "photo-v1",
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/visit-1440-hero.png",
+      "width": 1440,
+      "height": 1000,
+      "sha256": "722b25699a0bb8e5bb83bd600f9aff3fbb6509c8a358809c30e2d5c974de4324"
+    },
+    {
+      "name": "visit-1440-footer",
+      "route": "http://127.0.0.1:8015/visit/demo-bara-di-ujung-hari",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "browser": "156.0.8078.4",
+      "motion": "reduce unless state specifies normal",
+      "fonts": [
+        "Archive Garamond",
+        "Archive Garamond",
+        "Archive Sans"
+      ],
+      "originals": 0,
+      "state": "footer",
+      "fixture": "photo-v1",
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/visit-1440-footer.png",
+      "width": 1440,
+      "height": 353,
+      "sha256": "ed8630e6c13131036eaaf3cae5fea28d8900af5ac83d3ba8f8634de1ff2e533b"
+    },
+    {
+      "name": "place-1440-hero",
+      "route": "http://127.0.0.1:8015/place/demo-bara-senja",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "browser": "156.0.8078.4",
+      "motion": "reduce unless state specifies normal",
+      "fonts": [
+        "Archive Garamond",
+        "Archive Garamond",
+        "Archive Sans"
+      ],
+      "originals": 0,
+      "state": "arrival; Home is power OFF",
+      "fixture": "photo-v1",
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/place-1440-hero.png",
+      "width": 1440,
+      "height": 1000,
+      "sha256": "605eba02e6cfabfef227b7452c463685bca0338bb2517ea42ac70a1a88f71b3e"
+    },
+    {
+      "name": "place-1440-footer",
+      "route": "http://127.0.0.1:8015/place/demo-bara-senja",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "browser": "156.0.8078.4",
+      "motion": "reduce unless state specifies normal",
+      "fonts": [
+        "Archive Garamond",
+        "Archive Garamond",
+        "Archive Sans"
+      ],
+      "originals": 0,
+      "state": "footer",
+      "fixture": "photo-v1",
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/place-1440-footer.png",
+      "width": 1440,
+      "height": 352,
+      "sha256": "f922c1f837018e9dd7610098b87e408cb6bbac9b1cafd41be89ae27eb3cdcd67"
+    },
+    {
+      "name": "error-1440-hero",
+      "route": "http://127.0.0.1:8015/visual-missing-page",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "browser": "156.0.8078.4",
+      "motion": "reduce unless state specifies normal",
+      "fonts": [
+        "Archive Garamond",
+        "Archive Garamond",
+        "Archive Sans"
+      ],
+      "originals": 0,
+      "state": "arrival; Home is power OFF",
+      "fixture": "photo-v1",
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/error-1440-hero.png",
+      "width": 1440,
+      "height": 1000,
+      "sha256": "e5e27da092a1f3f65f75bbcd5bad08a12ace283d081e7263775ef7619a77a93f"
+    },
+    {
+      "name": "error-1440-footer",
+      "route": "http://127.0.0.1:8015/visual-missing-page",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "browser": "156.0.8078.4",
+      "motion": "reduce unless state specifies normal",
+      "fonts": [
+        "Archive Garamond",
+        "Archive Garamond",
+        "Archive Sans"
+      ],
+      "originals": 0,
+      "state": "footer",
+      "fixture": "photo-v1",
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/error-1440-footer.png",
+      "width": 1440,
+      "height": 352,
+      "sha256": "1c864a94745c64f3455f5270f3e2de32de4fc8af4113fa7504f7f3aba96ae996"
+    },
+    {
+      "name": "home-1920-hero",
+      "route": "http://127.0.0.1:8015/",
+      "viewport": {
+        "width": 1920,
+        "height": 1000
+      },
+      "browser": "156.0.8078.4",
+      "motion": "reduce unless state specifies normal",
+      "fonts": [
+        "Archive Garamond",
+        "Archive Garamond",
+        "Archive Sans"
+      ],
+      "originals": 0,
+      "state": "arrival; Home is power OFF",
+      "fixture": "photo-v1",
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/home-1920-hero.png",
+      "width": 1920,
+      "height": 1000,
+      "sha256": "80f8c0aa103c8cd43a14b34df7a24daa69047502261e6dda4e9a186463ce5ebb"
+    },
+    {
+      "name": "home-1920-footer",
+      "route": "http://127.0.0.1:8015/",
+      "viewport": {
+        "width": 1920,
+        "height": 1000
+      },
+      "browser": "156.0.8078.4",
+      "motion": "reduce unless state specifies normal",
+      "fonts": [
+        "Archive Garamond",
+        "Archive Garamond",
+        "Archive Sans"
+      ],
+      "originals": 0,
+      "state": "footer",
+      "fixture": "photo-v1",
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/home-1920-footer.png",
+      "width": 1920,
+      "height": 414,
+      "sha256": "b0a19ac247b824855d140c93929fa4529c4cc5b62f961d1fad02ffcc5c0c1fd9"
+    },
+    {
+      "name": "explore-1920-hero",
+      "route": "http://127.0.0.1:8015/explore",
+      "viewport": {
+        "width": 1920,
+        "height": 1000
+      },
+      "browser": "156.0.8078.4",
+      "motion": "reduce unless state specifies normal",
+      "fonts": [
+        "Archive Garamond",
+        "Archive Garamond",
+        "Archive Sans"
+      ],
+      "originals": 0,
+      "state": "arrival; Home is power OFF",
+      "fixture": "photo-v1",
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/explore-1920-hero.png",
+      "width": 1920,
+      "height": 1000,
+      "sha256": "1f91c101363e220eea8723cad31b9264d560faaa7c7ebb7c2faa73751da44612"
+    },
+    {
+      "name": "explore-1920-footer",
+      "route": "http://127.0.0.1:8015/explore",
+      "viewport": {
+        "width": 1920,
+        "height": 1000
+      },
+      "browser": "156.0.8078.4",
+      "motion": "reduce unless state specifies normal",
+      "fonts": [
+        "Archive Garamond",
+        "Archive Garamond",
+        "Archive Sans"
+      ],
+      "originals": 0,
+      "state": "footer",
+      "fixture": "photo-v1",
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/explore-1920-footer.png",
+      "width": 1920,
+      "height": 414,
+      "sha256": "273ba060c197c383e932c89d028d8ac327223025025180c878d1b239311a3768"
+    },
+    {
+      "name": "visit-1920-hero",
+      "route": "http://127.0.0.1:8015/visit/demo-bara-di-ujung-hari",
+      "viewport": {
+        "width": 1920,
+        "height": 1000
+      },
+      "browser": "156.0.8078.4",
+      "motion": "reduce unless state specifies normal",
+      "fonts": [
+        "Archive Garamond",
+        "Archive Garamond",
+        "Archive Sans"
+      ],
+      "originals": 0,
+      "state": "arrival; Home is power OFF",
+      "fixture": "photo-v1",
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/visit-1920-hero.png",
+      "width": 1920,
+      "height": 1000,
+      "sha256": "502a5d7e589139690ed70df987275f50648b9a7be3b035e564fe42c20ed53673"
+    },
+    {
+      "name": "visit-1920-footer",
+      "route": "http://127.0.0.1:8015/visit/demo-bara-di-ujung-hari",
+      "viewport": {
+        "width": 1920,
+        "height": 1000
+      },
+      "browser": "156.0.8078.4",
+      "motion": "reduce unless state specifies normal",
+      "fonts": [
+        "Archive Garamond",
+        "Archive Garamond",
+        "Archive Sans"
+      ],
+      "originals": 0,
+      "state": "footer",
+      "fixture": "photo-v1",
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/visit-1920-footer.png",
+      "width": 1920,
+      "height": 414,
+      "sha256": "df441dc83c52fb7e2ef0324836799bacbfa8fbccac17ca9830750237efba2909"
+    },
+    {
+      "name": "place-1920-hero",
+      "route": "http://127.0.0.1:8015/place/demo-bara-senja",
+      "viewport": {
+        "width": 1920,
+        "height": 1000
+      },
+      "browser": "156.0.8078.4",
+      "motion": "reduce unless state specifies normal",
+      "fonts": [
+        "Archive Garamond",
+        "Archive Garamond",
+        "Archive Sans"
+      ],
+      "originals": 0,
+      "state": "arrival; Home is power OFF",
+      "fixture": "photo-v1",
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/place-1920-hero.png",
+      "width": 1920,
+      "height": 1000,
+      "sha256": "1520f9f4780a3241faaf69bde8bc6ce9d24c4b0ba283db4a6af448f7f0875a68"
+    },
+    {
+      "name": "place-1920-footer",
+      "route": "http://127.0.0.1:8015/place/demo-bara-senja",
+      "viewport": {
+        "width": 1920,
+        "height": 1000
+      },
+      "browser": "156.0.8078.4",
+      "motion": "reduce unless state specifies normal",
+      "fonts": [
+        "Archive Garamond",
+        "Archive Garamond",
+        "Archive Sans"
+      ],
+      "originals": 0,
+      "state": "footer",
+      "fixture": "photo-v1",
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/place-1920-footer.png",
+      "width": 1920,
+      "height": 414,
+      "sha256": "3acf480dc0da7ea2e250ce8b29dd370b14e5ebcbc874b0b33303b61644594a5f"
+    },
+    {
+      "name": "error-1920-hero",
+      "route": "http://127.0.0.1:8015/visual-missing-page",
+      "viewport": {
+        "width": 1920,
+        "height": 1000
+      },
+      "browser": "156.0.8078.4",
+      "motion": "reduce unless state specifies normal",
+      "fonts": [
+        "Archive Garamond",
+        "Archive Garamond",
+        "Archive Sans"
+      ],
+      "originals": 0,
+      "state": "arrival; Home is power OFF",
+      "fixture": "photo-v1",
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/error-1920-hero.png",
+      "width": 1920,
+      "height": 1000,
+      "sha256": "19f502b447e0f5232b3beb6f07a0521a0af927ee5319b242eaf4775e1aee7253"
+    },
+    {
+      "name": "error-1920-footer",
+      "route": "http://127.0.0.1:8015/visual-missing-page",
+      "viewport": {
+        "width": 1920,
+        "height": 1000
+      },
+      "browser": "156.0.8078.4",
+      "motion": "reduce unless state specifies normal",
+      "fonts": [
+        "Archive Garamond",
+        "Archive Garamond",
+        "Archive Sans"
+      ],
+      "originals": 0,
+      "state": "footer",
+      "fixture": "photo-v1",
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/error-1920-footer.png",
+      "width": 1920,
+      "height": 414,
+      "sha256": "8cf27e38aff932d6ea1a30c65b930866f24f1155e4b958d789c33a1d5798bb07"
+    },
+    {
+      "name": "cabinet-on-1440",
+      "route": "http://127.0.0.1:8015/",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "browser": "156.0.8078.4",
+      "motion": "reduce unless state specifies normal",
+      "fonts": [
+        "Archive Garamond",
+        "Archive Garamond",
+        "Archive Sans"
+      ],
+      "originals": 0,
+      "state": "cabinet-on-1440",
+      "fixture": "photo-v1",
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/cabinet-on-1440.png",
+      "width": 1344,
+      "height": 1009,
+      "sha256": "c2f31c17419cdb7034bbbc5eba5d2996aa2bd94e1cb6adc60662203fce6de05e"
+    },
+    {
+      "name": "cabinet-printed-1440",
+      "route": "http://127.0.0.1:8015/",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "browser": "156.0.8078.4",
+      "motion": "reduce unless state specifies normal",
+      "fonts": [
+        "Archive Garamond",
+        "Archive Garamond",
+        "Archive Sans"
+      ],
+      "originals": 0,
+      "state": "cabinet-printed-1440",
+      "fixture": "photo-v1",
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/cabinet-printed-1440.png",
+      "width": 1344,
+      "height": 1009,
+      "sha256": "06b0860e43803954608432fc64d5dac6d272faf87ec711ea031ae152e6761e8f"
+    },
+    {
+      "name": "nav-public-midpoint-1440",
+      "route": "http://127.0.0.1:8015/",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "state": "normal motion, actual transform paused at 110/220ms",
+      "fixture": "photo-v1",
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/nav-public-midpoint-1440.png",
+      "width": 1344,
+      "height": 80,
+      "sha256": "48eb0136c8d9d579809ffb4f4357213f4700e95f08057822809e35874014da88"
+    },
+    {
+      "name": "nav-error-midpoint-1440",
+      "route": "http://127.0.0.1:8015/visual-missing-page",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "state": "normal motion, actual transform paused at 110/220ms",
+      "fixture": "photo-v1",
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/nav-error-midpoint-1440.png",
+      "width": 1344,
+      "height": 80,
+      "sha256": "cb20dd5017df78752cfc4c6d81b39dfe70c3dd99faea2e18b52b93cbbdc7e5dc"
+    },
+    {
+      "name": "filter-staged-390",
+      "route": "http://127.0.0.1:8015/explore",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "browser": "156.0.8078.4",
+      "motion": "reduce unless state specifies normal",
+      "fonts": [
+        "Archive Garamond",
+        "Archive Garamond",
+        "Archive Sans"
+      ],
+      "originals": 0,
+      "state": "filter-staged-390",
+      "fixture": "photo-v1",
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/filter-staged-390.png",
+      "width": 374,
+      "height": 788,
+      "sha256": "eac6c1c2c57c4cda24137f824a0fe5ebf05cd8b8b8f4b02b92add2282f23e4e9"
+    },
+    {
+      "name": "filter-staged-1440",
+      "route": "http://127.0.0.1:8015/explore",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "browser": "156.0.8078.4",
+      "motion": "reduce unless state specifies normal",
+      "fonts": [
+        "Archive Garamond",
+        "Archive Garamond",
+        "Archive Sans"
+      ],
+      "originals": 0,
+      "state": "filter-staged-1440",
+      "fixture": "photo-v1",
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/filter-staged-1440.png",
+      "width": 1056,
+      "height": 712,
+      "sha256": "57c4bf2d3ed6a09cd5dcd30da4353dda073fe612ba32e7ada9666df712fa7eb9"
+    },
+    {
+      "name": "archive-unpublished-390",
+      "route": "http://127.0.0.1:8016/explore",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "browser": "156.0.8078.4",
+      "motion": "reduce unless state specifies normal",
+      "fonts": [
+        "Archive Garamond",
+        "Archive Garamond",
+        "Archive Sans"
+      ],
+      "originals": 0,
+      "state": "archive-unpublished-390",
+      "fixture": "empty-v1",
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/archive-unpublished-390.png",
+      "width": 358,
+      "height": 293,
+      "sha256": "4c123757c0ca58ef01d04ff45e418455eb3072511ad716ed460bd48ab2f89516"
+    },
+    {
+      "name": "filtered-empty-390",
+      "route": "http://127.0.0.1:8015/explore?q=tidak-ada&view=list",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "browser": "156.0.8078.4",
+      "motion": "reduce unless state specifies normal",
+      "fonts": [
+        "Archive Garamond",
+        "Archive Garamond",
+        "Archive Sans"
+      ],
+      "originals": 0,
+      "state": "filtered-empty-390",
+      "fixture": "photo-v1",
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/filtered-empty-390.png",
+      "width": 358,
+      "height": 763,
+      "sha256": "81faf9252a419f02ceb4a0728e8b902416c6345548965c4d5f7c921d82a0a92f"
+    },
+    {
+      "name": "browse-failure-1440",
+      "route": "http://127.0.0.1:8015/explore",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "browser": "156.0.8078.4",
+      "motion": "reduce unless state specifies normal",
+      "fonts": [
+        "Archive Garamond",
+        "Archive Garamond",
+        "Archive Sans"
+      ],
+      "originals": 0,
+      "state": "browse-failure-1440",
+      "fixture": "photo-v1",
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/browse-failure-1440.png",
+      "width": 1344,
+      "height": 95,
+      "sha256": "2baa44421e0ad9f764150b35ed6ee8d8e323ec30fff30b9589428a7db9f191c1"
+    },
+    {
+      "name": "viewer-original-390",
+      "route": "http://127.0.0.1:8015/visit/demo-bara-di-ujung-hari",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "browser": "156.0.8078.4",
+      "motion": "reduce unless state specifies normal",
+      "fonts": [
+        "Archive Garamond",
+        "Archive Garamond",
+        "Archive Sans"
+      ],
+      "originals": 1,
+      "state": "viewer-original-390",
+      "fixture": "photo-v1",
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/viewer-original-390.png",
+      "width": 358,
+      "height": 848,
+      "sha256": "c41ce2e0911b127e4e7b61d3971fb04331361f34bba7e14cc0c7b672219e586c"
+    }
+  ],
+  "preservedP1": {
+    "file": "resources/js/pages/archive.js",
+    "sha256": "7e3ae5c52ca161ce176ba94c8d31ebb0b54eb1f5f268add0feed615203bfe804"
+  },
+  "inputs": [
+    {
+      "file": "resources/js/pages/explore.js",
+      "sha256": "ce8405abce3eea48c7f68d4f520bf77e7e8d928d79b0d4f76f3d5856f886c931"
+    },
+    {
+      "file": "resources/css/cinematic.css",
+      "sha256": "984e3721237e43000823e73e3e08e0b2fbcc0ca26ada407e2a134ec61dbb7373"
+    },
+    {
+      "file": "resources/css/discovery.css",
+      "sha256": "6a2e58ae4315c7f76435e43c497cd40fce5b7928bb26bda81036098692da06b9"
+    },
+    {
+      "file": "app/Services/CuriosityIndex.php",
+      "sha256": "deb4f7069a1dfe8ccc29daccdb8de7aa2a3b9e5122fbda0a416c1c593e8c1f8e"
+    },
+    {
+      "file": "resources/views/public/explore.blade.php",
+      "sha256": "457120c9ea2e99288ffe9c1d76d56533e8c8aa0253829caa02fd106d0e812e5c"
+    },
+    {
+      "file": "resources/views/public/explore-fragment.blade.php",
+      "sha256": "1e4de4deae4ac382603294c336d502b49ab565e0f7e68bb977ee355ff06e9213"
+    },
+    {
+      "file": "resources/views/components/discovery/curiosity-index.blade.php",
+      "sha256": "70172c0e202413cb1c37eb259e4ed7d5cae1fb07e831bdde9f149b7cab98800d"
+    },
+    {
+      "file": "tests/Browser/explore-response.spec.js",
+      "sha256": "a2dec78aa21edc1794917adaedbd57580f8c3f8a4b17a16d13a0e5eca131c911"
+    },
+    {
+      "file": "tests/Feature/CinematicPublicTest.php",
+      "sha256": "f807a6db44fccf74170fc2e8335554958af2395f18eebec197f1d6e3c3693e3b"
+    },
+    {
+      "file": "public/build/manifest.json",
+      "sha256": "2118ab10aeaa0a066836d3b48e84d609f3a463bcb55dd907873405d1fa659d4c"
+    },
+    {
+      "file": "playwright.visual.config.js",
+      "sha256": "847067d4ec5eda72077ff7bfae3bd51afe2f55826046e0bcdf471ad58cc9a539"
+    },
+    {
+      "file": "tests/Browser/public-visual.spec.js",
+      "sha256": "53b0d842615330913bc407cdbe31ba5bdd324d4a770e244a580e8bad233a2d78"
+    },
+    {
+      "file": "tools/.runtime/visual-photo.sqlite",
+      "sha256": "23dac63d798c4a4db36fd303fe7cb0a264992587187b32c829ec94bab19b4b9f"
+    },
+    {
+      "file": "tools/.runtime/visual-empty.sqlite",
+      "sha256": "df6b82ff9a1239820cf77863224bf542b895c95ee15aedf1ebabbbe7ccc975e5"
+    }
+  ],
+  "evidence": [
+    {
+      "file": "docs/qa/p2-discovery/1440-empty.jpg",
+      "sha256": "f41e7a57835447c23e4d8e365aefa93cd94dc9af61bdf5077ee44f652b948ae3"
+    },
+    {
+      "file": "docs/qa/p2-discovery/1440-error.jpg",
+      "sha256": "aa73f963fbe84077b71a763d599fdd060b5af1830666fad20de44aa4a7c2c8f0"
+    },
+    {
+      "file": "docs/qa/p2-discovery/1440-filter.jpg",
+      "sha256": "f3875530bdcd9a407476eb8a106955e0ef26afff75370854159eed4486a486f1"
+    },
+    {
+      "file": "docs/qa/p2-discovery/1440-focus.jpg",
+      "sha256": "14915d239b974a293ac2d9cb9e63f6c59627196aa0338d0fc3e749a90705edc1"
+    },
+    {
+      "file": "docs/qa/p2-discovery/1440-hover.jpg",
+      "sha256": "84addcb03f12a5516001bb18e4941a2b59e8e66a4d4f45a3bc533912b535adcf"
+    },
+    {
+      "file": "docs/qa/p2-discovery/1440-initial.jpg",
+      "sha256": "ae9e1e7b3df7b874ef2c27dfa774aa8fc4eacbb8dd536a29ba3e35689bbe2084"
+    },
+    {
+      "file": "docs/qa/p2-discovery/1440-pending.jpg",
+      "sha256": "a116279adc1dabf4a7595e201798fdcb3f0e51e7880daef373a037f02a083b05"
+    },
+    {
+      "file": "docs/qa/p2-discovery/1440-photo-wait.jpg",
+      "sha256": "f14e796d2825faed7a429fb1b50d24708b42847962d42d9163de4f3270dd37d0"
+    },
+    {
+      "file": "docs/qa/p2-discovery/1440-press.jpg",
+      "sha256": "f25eda94049822acd8d719e681921fed7f4a6b401e13a56c9e88c87382a37601"
+    },
+    {
+      "file": "docs/qa/p2-discovery/1440-result-0.jpg",
+      "sha256": "066ddd13b3e5cda516d34cfd638d0d3d5a6add8ed815b530ce155af596f1381f"
+    },
+    {
+      "file": "docs/qa/p2-discovery/1440-result-110.jpg",
+      "sha256": "49a4698bd4f4091d63c91b4aefb6a00937339d981b682c68c95eae2f186fc13c"
+    },
+    {
+      "file": "docs/qa/p2-discovery/1440-result-220.jpg",
+      "sha256": "b19b67e030b3ccb6ac579a922ef2d2b7f33afb4e3b6537821fdadb91429778d2"
+    },
+    {
+      "file": "docs/qa/p2-discovery/1440-selected.jpg",
+      "sha256": "839ddc466c9ee5376bca32a24583d978061d43c1b26025e9051d5ef7c25352b9"
+    },
+    {
+      "file": "docs/qa/p2-discovery/1920-empty.jpg",
+      "sha256": "c8917b794315f43bb2b9f93c6ebe23bfe3fe3e037a1ec599240c12c06bdd89e4"
+    },
+    {
+      "file": "docs/qa/p2-discovery/1920-error.jpg",
+      "sha256": "9fd44d4a0dd50f922e9a1e5df389f131401253286cd8b7edc03704343ac91f7c"
+    },
+    {
+      "file": "docs/qa/p2-discovery/1920-filter.jpg",
+      "sha256": "6c5c3fed78c74651cdbf671b4faaa506d701403dc6056999f3cc62b5a1e0eb84"
+    },
+    {
+      "file": "docs/qa/p2-discovery/1920-focus.jpg",
+      "sha256": "dad22d9cbf20d6a1ecc3a2db337139e76dfb6a163df231bc3b2b00196cca5397"
+    },
+    {
+      "file": "docs/qa/p2-discovery/1920-hover.jpg",
+      "sha256": "70a854a99b96a7463c0b9c919274b9fe334d31b535f00bad4d8ba6722886acf4"
+    },
+    {
+      "file": "docs/qa/p2-discovery/1920-initial.jpg",
+      "sha256": "bfaedfc18b8cf152439ac815d6a78b5d96273a77b3074259720f9e322ce85b34"
+    },
+    {
+      "file": "docs/qa/p2-discovery/1920-pending.jpg",
+      "sha256": "f1f2f4b1dbaa9c7609c13fd008668c79380af1a1d7627c7f204999c1bf6bf27e"
+    },
+    {
+      "file": "docs/qa/p2-discovery/1920-photo-wait.jpg",
+      "sha256": "9e1588d02c23020976e6ab27bd342080430665601120258a33ffeb46a2563900"
+    },
+    {
+      "file": "docs/qa/p2-discovery/1920-press.jpg",
+      "sha256": "e2f5072440ab83b295c8e455577a076ce429042bea3dbb1dfddc8c2e2228416d"
+    },
+    {
+      "file": "docs/qa/p2-discovery/1920-selected.jpg",
+      "sha256": "70735324bb46dfbba95ce06d27a136a1715df4929c0c1e5f4af8e6274dd40af6"
+    },
+    {
+      "file": "docs/qa/p2-discovery/375-empty.jpg",
+      "sha256": "6c2e01985e0d7de1ff2f170c4458772cc81919e6b58447811b0a89542a35f80a"
+    },
+    {
+      "file": "docs/qa/p2-discovery/375-error.jpg",
+      "sha256": "27f9cd6e3f1974d243b2de02a0af5163ad40968f94af370c582442219ef74393"
+    },
+    {
+      "file": "docs/qa/p2-discovery/375-filter.jpg",
+      "sha256": "bc455b4b614d8d166d83c3f479ef7c36c103a60ba90598319dc11823f7d1920e"
+    },
+    {
+      "file": "docs/qa/p2-discovery/375-focus.jpg",
+      "sha256": "5001c6f5dea2f968c0e69008f8a37fa9fa95e2896a5d2b2910485dd1043460a7"
+    },
+    {
+      "file": "docs/qa/p2-discovery/375-hover.jpg",
+      "sha256": "1223757162cdaefb0550d6a9841799f477f9820c1c68f769195a4c1e3dc18423"
+    },
+    {
+      "file": "docs/qa/p2-discovery/375-initial.jpg",
+      "sha256": "429dba437851ea8c5b8b641bdd227712f815a2fd5e6c9fff6334dcd97401046c"
+    },
+    {
+      "file": "docs/qa/p2-discovery/375-pending.jpg",
+      "sha256": "c0eece0dfb8b5d0133cdf164a9b81b9de260ac3f8a0bbad406cca7a94210bcd4"
+    },
+    {
+      "file": "docs/qa/p2-discovery/375-photo-wait.jpg",
+      "sha256": "edea3ace718524e3c4c119bbca3a74e1d9ffc628a6a7930c46fa8e66555ed074"
+    },
+    {
+      "file": "docs/qa/p2-discovery/375-press.jpg",
+      "sha256": "e3ad4abe1b4e4bdb4ce58c2cba02dfa4fd1c25a25ceceb3e65930a0cee435a7d"
+    },
+    {
+      "file": "docs/qa/p2-discovery/375-result-0.jpg",
+      "sha256": "b1d997da0a84afefa78b3de5a3550a2cc5df0f986d09f3377ac49f269b06cf15"
+    },
+    {
+      "file": "docs/qa/p2-discovery/375-result-110.jpg",
+      "sha256": "007b19d14602896b768bcba95243049de00addcaaebc246684dd131aa21d19e0"
+    },
+    {
+      "file": "docs/qa/p2-discovery/375-result-220.jpg",
+      "sha256": "a37cea7258a283e9ac4b851b3dbf4fdb642207f5579f3bf69054ce6653eee390"
+    },
+    {
+      "file": "docs/qa/p2-discovery/375-selected.jpg",
+      "sha256": "06ef7d17337b58cfe5e1e3c5dbaf077d93c4ba2eeee22d1ff21362db5170da0d"
+    },
+    {
+      "file": "docs/qa/p2-discovery/768-empty.jpg",
+      "sha256": "2a1315849b57d48b38d43b554888ab4e0bd627f5e30df83cfaa7ab24d62bc8bf"
+    },
+    {
+      "file": "docs/qa/p2-discovery/768-error.jpg",
+      "sha256": "39369daefa4574722d435264e651b2ee89d5a93e2554fa8daeaff14a20f650fa"
+    },
+    {
+      "file": "docs/qa/p2-discovery/768-filter.jpg",
+      "sha256": "f7e6fb26e0c596449d10d0bbb1d0ec89d6a2a76e1f9d722200cfb628ee574bbd"
+    },
+    {
+      "file": "docs/qa/p2-discovery/768-focus.jpg",
+      "sha256": "0e1c64ac7cf6bffb6eb20cb7002d8aee8f6105cabfe2447fbf4293f672439ad7"
+    },
+    {
+      "file": "docs/qa/p2-discovery/768-hover.jpg",
+      "sha256": "bb472347c33715f59fb0b3de4d7ff7c61a1895ed351e6fd4fb54c0a4896b2871"
+    },
+    {
+      "file": "docs/qa/p2-discovery/768-initial.jpg",
+      "sha256": "31294dcee0f3bf0940de75187f6468f936ae021c4b179c5150debea07e342736"
+    },
+    {
+      "file": "docs/qa/p2-discovery/768-pending.jpg",
+      "sha256": "c1cc6dda36510e3067f31f30982044c94dd11bc882b665916da0beae30dd5f39"
+    },
+    {
+      "file": "docs/qa/p2-discovery/768-photo-wait.jpg",
+      "sha256": "32a5eb8a464e32de0a49e6f7fd9ae898815f3c9212678b9f42ef11aefd7a1e5e"
+    },
+    {
+      "file": "docs/qa/p2-discovery/768-press.jpg",
+      "sha256": "584e8eaa0c2055ce16f30323761a662a5d460ba5eaca3089bbdb5016eaddffa2"
+    },
+    {
+      "file": "docs/qa/p2-discovery/768-selected.jpg",
+      "sha256": "1db89f1b6410e24dcc00d6b69895824042d526fe7ad3a20d711dc057f1c110a2"
+    },
+    {
+      "file": "docs/qa/p2-discovery/after-1440-trace-1.json.gz",
+      "sha256": "c88d09c9ff23417679c78dd1f3d0e977dd175f770deeb76010203a1231e1ac4d"
+    },
+    {
+      "file": "docs/qa/p2-discovery/after-1440-trace-2.json.gz",
+      "sha256": "13e1503b037d658b316c156f9a6e8bc2b48999c38d9a832033edb2ac33b6cd93"
+    },
+    {
+      "file": "docs/qa/p2-discovery/after-1440-trace-3.json.gz",
+      "sha256": "0a6261835889acd78ed5bb8018973ca657c98d12349f9fc026da80f5ceada799"
+    },
+    {
+      "file": "docs/qa/p2-discovery/after-390-trace-1.json.gz",
+      "sha256": "791efbf6e371cbb7ac71edf87e4e48acea28c98d4a48b5084a694b94bf73e7f5"
+    },
+    {
+      "file": "docs/qa/p2-discovery/after-390-trace-2.json.gz",
+      "sha256": "017bf875b3b44946670e4ed617d965f36fcde8bbcd05303136a399347873449e"
+    },
+    {
+      "file": "docs/qa/p2-discovery/after-390-trace-3.json.gz",
+      "sha256": "94eaaf031c870c750eb1360f214e6f5c3cf09ccc6b8fdc431ea5152525428285"
+    },
+    {
+      "file": "docs/qa/p2-discovery/after.json",
+      "sha256": "d839014f1bfe4252391ff781c7569ed5021f1dc3751155db180caf35fa4b9f58"
+    },
+    {
+      "file": "docs/qa/p2-discovery/before-1440-trace-1.json.gz",
+      "sha256": "9084430976ad8b5779178f9796144d9efc9a129cecd5fa668d73e8183b3570bd"
+    },
+    {
+      "file": "docs/qa/p2-discovery/before-1440-trace-2.json.gz",
+      "sha256": "8b5fa02be9910da004e3e3ed7ccb406b749a9da50ce17e8115dcf19121f0cb16"
+    },
+    {
+      "file": "docs/qa/p2-discovery/before-1440-trace-3.json.gz",
+      "sha256": "6b33faa7c4ae4d517f2d5fd775e3f3221e692020991b98b0ef5aeaf7142cd562"
+    },
+    {
+      "file": "docs/qa/p2-discovery/before-390-trace-1.json.gz",
+      "sha256": "1598af982bfc49753e4996793850069650c3e111a5e4f965679fb1ba83d82a41"
+    },
+    {
+      "file": "docs/qa/p2-discovery/before-390-trace-2.json.gz",
+      "sha256": "28e007afec5f7c013b8542d05db3386355211c38e621c61c6c4961ebfe42731f"
+    },
+    {
+      "file": "docs/qa/p2-discovery/before-390-trace-3.json.gz",
+      "sha256": "4a34ecc69ad57567f73a55f8e59a1b3e67ef8b138eac967b17076a846e9fe847"
+    },
+    {
+      "file": "docs/qa/p2-discovery/before.json",
+      "sha256": "72cc7f3ba6f59601a47a90284df8cbc082b02f9699487dd7af3f9c0b9e615f8f"
+    },
+    {
+      "file": "docs/qa/p2-discovery/browser-final.log",
+      "sha256": "c88a1869ab09d40affa4929bba7f7dfc11c82e656a69848b2c29b55e577ba85c"
+    },
+    {
+      "file": "docs/qa/p2-discovery/browser-initial.log",
+      "sha256": "48ebd7d3d4d7a084690cb0b92598e0ac8a690b1380a6f1524dd0385e6ef0fff9"
+    },
+    {
+      "file": "docs/qa/p2-discovery/build.log",
+      "sha256": "7bb4b57192cc56d5cb200a34e729e2c4f2f88b51ae4e1ead23c73a066d71125d"
+    },
+    {
+      "file": "docs/qa/p2-discovery/capture-final.log",
+      "sha256": "d8b8198a902d06fafc772b57fed6c70732c75bd71c302e9e636dfefef5580e5f"
+    },
+    {
+      "file": "docs/qa/p2-discovery/capture.log",
+      "sha256": "cca649812aae543bcbba5c7754ba0aab34a0e54cd0fda6ee97e4b48108598a5f"
+    },
+    {
+      "file": "docs/qa/p2-discovery/capture.mjs",
+      "sha256": "664d337a9771898c2c5d0631a2642db66c167cd729884846ae9df18ecaf8fdb8"
+    },
+    {
+      "file": "docs/qa/p2-discovery/diff-check.log",
+      "sha256": "48b25e00a28db3d44ddf56c076179a0e9ee61046e4be6bf45b346c98b10b21c2"
+    },
+    {
+      "file": "docs/qa/p2-discovery/filtered-empty-before.png",
+      "sha256": "55995d4e59c176c5332591586626785434b1b0f77c90cd735cb10f1e373ba2c7"
+    },
+    {
+      "file": "docs/qa/p2-discovery/filtered-empty-diff.png",
+      "sha256": "3382a34c0853b3788e58587d1ee5b4c48fb96235469451c73430e03210ae186e"
+    },
+    {
+      "file": "docs/qa/p2-discovery/filtered-empty-reviewed.png",
+      "sha256": "81faf9252a419f02ceb4a0728e8b902416c6345548965c4d5f7c921d82a0a92f"
+    },
+    {
+      "file": "docs/qa/p2-discovery/investigation-eager-1440-trace-1.json.gz",
+      "sha256": "9170d71c3b2cf04d539eaf72dfa6f3279e1a9092a9feae511ac9a252e0017c60"
+    },
+    {
+      "file": "docs/qa/p2-discovery/investigation-eager-1440-trace-2.json.gz",
+      "sha256": "9441ba932958ffa0d088d2dac960e096991f29b34ae1102a3963ca12e0ca6b91"
+    },
+    {
+      "file": "docs/qa/p2-discovery/investigation-eager-1440-trace-3.json.gz",
+      "sha256": "a3b6df8be437b3b4d719aa0eb9af79d9273584cd61bbc53a181c81cc319a2418"
+    },
+    {
+      "file": "docs/qa/p2-discovery/investigation-eager-390-trace-1.json.gz",
+      "sha256": "16ea7b46c49bb3e89f7a929b5f201793dfa4b315e1b96af4105f09471b5731d4"
+    },
+    {
+      "file": "docs/qa/p2-discovery/investigation-eager-390-trace-2.json.gz",
+      "sha256": "2d8be90aaa8f4fc3916222e4776fac2d02ba33ede6c990e7d490ead4c40d3011"
+    },
+    {
+      "file": "docs/qa/p2-discovery/investigation-eager-390-trace-3.json.gz",
+      "sha256": "76547b36b772d380a8ad1e35e0040d19a3e63d65884b211ef7cb5e96e623fec6"
+    },
+    {
+      "file": "docs/qa/p2-discovery/investigation-eager.json",
+      "sha256": "5a3e59c889ee0df1a8d4b95a172b9173f6ac06d694ea9655e3434bebcaf1015f"
+    },
+    {
+      "file": "docs/qa/p2-discovery/manifest.mjs",
+      "sha256": "b930681b6ed39cefb479ba5c25311a04cfe0259cc532074c3e95d7a9db9776c0"
+    },
+    {
+      "file": "docs/qa/p2-discovery/measure-after.log",
+      "sha256": "3dee7f8470c9ccde0c2d6f8bdabc7125664aeefc7edb39a982a2fadb2e1e92b9"
+    },
+    {
+      "file": "docs/qa/p2-discovery/measure-before.log",
+      "sha256": "b992cd4f4dfd588cb37ca2068aaa581ebc8be9034135ba72ce36c4dad2afe4bb"
+    },
+    {
+      "file": "docs/qa/p2-discovery/measure.mjs",
+      "sha256": "f6a236cf4f27692e206a6edd5a8692ca90643e70b9f455285c211be6eda76a61"
+    },
+    {
+      "file": "docs/qa/p2-discovery/network-investigation.json",
+      "sha256": "1454869b6b171be0d99f631b3b749d71abdd3599d7517a3723363b8b30bbc235"
+    },
+    {
+      "file": "docs/qa/p2-discovery/network.log",
+      "sha256": "2b69b44354a336cd1b90291a578e160a12eac31c3447aedffad516a419f44ac9"
+    },
+    {
+      "file": "docs/qa/p2-discovery/network.mjs",
+      "sha256": "e56a456a91430820546ebfe4450387e5d106095323478521888ec650820ec1ae"
+    },
+    {
+      "file": "docs/qa/p2-discovery/performance.json",
+      "sha256": "8ade1eaba1802c6ef51ba557f4ae2ba230412d36fbbd0496ffb3bea4faddc245"
+    },
+    {
+      "file": "docs/qa/p2-discovery/php.log",
+      "sha256": "19876eaf55be964987592d65f2ad50d50b5edf9a9cf49b83f1cbd6feac815eac"
+    },
+    {
+      "file": "docs/qa/p2-discovery/pint.log",
+      "sha256": "acbf5da6385237b6f4cd342c4454d93f6c4df8bfcf1687838edb3b651981c4e1"
+    },
+    {
+      "file": "docs/qa/p2-discovery/pose.log",
+      "sha256": "ef5f435288e9810f148658454559692f97b34d1b36900399dd4a2c0d0272a86b"
+    },
+    {
+      "file": "docs/qa/p2-discovery/pose.mjs",
+      "sha256": "e26e0a5bf65d97b167ce5cebae45eb07e395f1d45fea1178754ec36f2eefe6e5"
+    },
+    {
+      "file": "docs/qa/p2-discovery/poses.json",
+      "sha256": "2c9fcfc9254ca3dd04e6737aaa1430c5857f886dd0ace13fcadd3569de600e6c"
+    },
+    {
+      "file": "docs/qa/p2-discovery/probe-actual.png",
+      "sha256": "9c466366fd2e70d7de4ae035a10021f911589669279eed11faeaa42f8937bb18"
+    },
+    {
+      "file": "docs/qa/p2-discovery/probe-diff.png",
+      "sha256": "bace3a950bcaedc7a4086b3747dda2fd286ab224170b067c53c88bbf90db5311"
+    },
+    {
+      "file": "docs/qa/p2-discovery/probe-rejected.log",
+      "sha256": "f31e58a58b18cf387ae821065b296b13e60cecf02d91d3de743ece910f265365"
+    },
+    {
+      "file": "docs/qa/p2-discovery/probe-reverted.log",
+      "sha256": "143b23f6d53b510d559491c274c9c53b6ae85e81c6414d5fb0c46a083d326ba8"
+    },
+    {
+      "file": "docs/qa/p2-discovery/probe.json",
+      "sha256": "7358f966bff8488ee43c1f48d6ed0910e7e40cb4243329a430bda361159d3b07"
+    },
+    {
+      "file": "docs/qa/p2-discovery/proof.log",
+      "sha256": "f65c0a420673cbfbd3b13365462b3b75744857a8379c3fb69b4fb11c6e307994"
+    },
+    {
+      "file": "docs/qa/p2-discovery/readability.log",
+      "sha256": "49e206280be970de3aa59f36cf843c4e176b0a6244f7b7eaef9621486fc84536"
+    },
+    {
+      "file": "docs/qa/p2-discovery/realtime-1440.webm",
+      "sha256": "3e2844bc2d713af9e6e7a8a3364d7a5f326900519c49f44e74a2007ea538ffd0"
+    },
+    {
+      "file": "docs/qa/p2-discovery/realtime-375.webm",
+      "sha256": "71788a70a792eb3c3052b0d1e0dafcf9694a592e37973ea76b8d2988db8dcfc1"
+    },
+    {
+      "file": "docs/qa/p2-discovery/realtime.json",
+      "sha256": "648a6b78658832fc9b3670f3f523ac941d1ce9f9031669838b92a2765fcb3cc3"
+    },
+    {
+      "file": "docs/qa/p2-discovery/realtime.log",
+      "sha256": "89b9f1115cf5d584515a3a1baab4d61936e864ec953ca3a70bc634fb1028ef00"
+    },
+    {
+      "file": "docs/qa/p2-discovery/record.mjs",
+      "sha256": "c328a23cc341c1592ab327461b45b9352a66749c6e212e54279c720431496e12"
+    },
+    {
+      "file": "docs/qa/p2-discovery/reducer.log",
+      "sha256": "f31533d4cf3f39feb7275d732ce08c6bd2630d9b5ee47019efb7483b84282ee2"
+    },
+    {
+      "file": "docs/qa/p2-discovery/release-regressions.log",
+      "sha256": "5f711c0c85074e7f7ef7c897b15749a7fbe2dcd7977da2f5b07b958ba9ec1e15"
+    },
+    {
+      "file": "docs/qa/p2-discovery/response-final.log",
+      "sha256": "040aca2bfab4ccab9ad7fa087a290ab86d22f1cf1cacf1cd75b09128b2b09d03"
+    },
+    {
+      "file": "docs/qa/p2-discovery/response-native-final.log",
+      "sha256": "d12a7317504dfbe2432f09698e11e70ec8d4a0bf4ad97784e1a1852622573478"
+    },
+    {
+      "file": "docs/qa/p2-discovery/responsive-rerun.log",
+      "sha256": "1abd1594162103721044c95793fe954ad14b94f364ed1741aa8c53b6a1ece282"
+    },
+    {
+      "file": "docs/qa/p2-discovery/review-states.jpg",
+      "sha256": "731b1b97c78954ab9f46a0a16f99685cd464f915f0e74cf45dac3a96302bbea0"
+    },
+    {
+      "file": "docs/qa/p2-discovery/review-video-1440.jpg",
+      "sha256": "8113b4940a0fddb6cd43691f55673a3011242decb3fc296fa58e851cfb1b382a"
+    },
+    {
+      "file": "docs/qa/p2-discovery/review-video-375.jpg",
+      "sha256": "168f9a48d5f308d9079934b0f8fedcb6889bbbf2488ff100d763efca47d72b56"
+    },
+    {
+      "file": "docs/qa/p2-discovery/select-actual.png",
+      "sha256": "eeeb6c481eb7c32ea440f260187e8c6a3840fca4c8c43e1b49a87927d600bb93"
+    },
+    {
+      "file": "docs/qa/p2-discovery/select-expected.png",
+      "sha256": "550d05684cca70faac9c4ca4b052c1eccfb1fe287ac62b9e1d9448913a1fdbc4"
+    },
+    {
+      "file": "docs/qa/p2-discovery/staged-filter.log",
+      "sha256": "7a74e77e0aa51582ec642b260bdc4ff149ead68068fa4c2db331cc09412a249e"
+    },
+    {
+      "file": "docs/qa/p2-discovery/states.json",
+      "sha256": "3c45d9bc611baecb69126174259d2a4d945d171ab1f2de2db5950bc032f1175c"
+    },
+    {
+      "file": "docs/qa/p2-discovery/storyboard.md",
+      "sha256": "a957630c8cfca6d2ab9f836bd970ffe86bcc1283be69f224a5d52cc625d1189e"
+    },
+    {
+      "file": "docs/qa/p2-discovery/verification.md",
+      "sha256": "cccb33f4914444d59b77a7867b3d51edae11e30af8b62e546dcd88ce5ca370c4"
+    },
+    {
+      "file": "docs/qa/p2-discovery/visual-before.log",
+      "sha256": "c395ef5a6eedace5cf2cc85c44147d6b8b5c167b87b0422ca2e5999ff032c5b4"
+    },
+    {
+      "file": "docs/qa/p2-discovery/visual-empty-fixed.log",
+      "sha256": "bc2a7cc362e949885bfd6eff2bbc9fdf5d0fd5edf447752656c3d1fed7706ece"
+    },
+    {
+      "file": "docs/qa/p2-discovery/visual-empty-rerun.log",
+      "sha256": "ddcd52d687c04fb4ec9cc7ff10b595ed2d9fa0428b58f08760a020ab4323484e"
+    },
+    {
+      "file": "docs/qa/p2-discovery/visual-final.log",
+      "sha256": "da23685e49df698e1deadad544cecb094ce5f08b4199c29acbdbfcf23eee719a"
+    },
+    {
+      "file": "docs/qa/p2-discovery/visual-font-gate.log",
+      "sha256": "51551c19a0962f033dfbd548c712778ab779b419d6491515750434e6cb29302e"
+    },
+    {
+      "file": "docs/qa/p2-discovery/visual-named-review.log",
+      "sha256": "6a7b2f2c146cbf9f3c5bfeccefce8d46f394a9805fc6b6f0a110afe286aa31aa"
+    },
+    {
+      "file": "docs/qa/p2-discovery/visual-native-lazy.log",
+      "sha256": "9ec425a034da0ba6118d4f855944790b89395d7063da9a3cc47f7edbe30d561c"
+    },
+    {
+      "file": "docs/qa/p2-discovery/visual-release.log",
+      "sha256": "aa856d891b026399f688a5cb1f0eaf64720ea62a6705b9848f17127e11fbbdab"
+    },
+    {
+      "file": "docs/qa/p2-discovery/visual-reviewed-final.log",
+      "sha256": "063e5db59e72ea8dfe8da081516f33e655d4d8995282ceddc5724fea30f842b7"
+    }
+  ]
+}

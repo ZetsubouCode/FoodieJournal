@@ -1,0 +1,10 @@
+
+Running 1 test using 1 worker
+
+(node:35112) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\filtered-empty-390.png is re-generated, writing actual.
+D:\Github repo\FoodieJournal\tests\Browser\__screenshots__\public-visual-win32-chromium\filtered-empty-390.png is re-generated, writing actual.
+  ok 1 tests\Browser\public-visual.spec.js:120:1 › unpublished archive and filtered empty recovery (3.2s)
+
+  1 passed (3.8s)
