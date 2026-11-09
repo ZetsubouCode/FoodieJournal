@@ -3,7 +3,7 @@ import fs from 'node:fs';
 
 const fixture = JSON.parse(fs.readFileSync('tools/.runtime/browser-credentials.json', 'utf8'));
 const routes = ['/', '/explore', `/visit/${fixture.visitSlug}`, `/place/${fixture.placeSlug}`, '/missing-error-page-preview'];
-const shellWidth = width => Math.min(1792, width - 2 * (width <= 480 ? 16 : width < 1024 ? 24 : Math.min(64, Math.max(32, width * .03333))));
+const shellWidth = width => Math.min(2432, width - 2 * (width <= 480 ? 16 : width < 1024 ? 24 : Math.min(64, Math.max(32, width * .03333))));
 async function ready(page, route) {
     await page.goto(route);
     if (!route.includes('missing-error')) await expect(page.locator('html')).toHaveAttribute('data-ui-ready', 'true');
@@ -13,7 +13,7 @@ async function ready(page, route) {
 test('public shell aligns header, main and footer at target and boundary widths without scaling cabinet artwork up', async ({ page }) => {
     test.setTimeout(180000);
     await page.emulateMedia({ reducedMotion: 'reduce' });
-    for (const width of [320, 375, 390, 768, 959, 960, 1023, 1024, 1440, 1920, 2560]) {
+    for (const width of [320, 375, 390, 768, 959, 960, 1023, 1024, 1440, 1920, 2560, 3440]) {
         await page.setViewportSize({ width, height: 1000 });
         for (const route of routes) {
             await ready(page, route);
@@ -50,7 +50,7 @@ test('public shell aligns header, main and footer at target and boundary widths 
 
 test('reading measure, enlarged text and short landscape remain usable across public surfaces', async ({ page }) => {
     test.setTimeout(90000);
-    for (const viewport of [{width:375,height:812},{width:1440,height:900},{width:812,height:375}]) {
+    for (const viewport of [{width:375,height:812},{width:1440,height:900},{width:2560,height:1000},{width:812,height:375}]) {
         await page.setViewportSize(viewport);
         for (const route of routes) {
             await ready(page, route);
@@ -81,7 +81,7 @@ test('wide images use derivatives with layout-aware lazy sizes and an eager capp
     let originals = 0; page.on('request', r => { if (r.url().endsWith('/original')) originals++; });
     await page.setViewportSize({ width: 1920, height: 1000 }); await ready(page, `/visit/${fixture.visitSlug}`);
     const hero = page.locator('.dossier-hero img');
-    await expect(hero).toHaveAttribute('loading', 'eager'); await expect(hero).toHaveAttribute('sizes', /1792px/);
+    await expect(hero).toHaveAttribute('loading', 'eager'); await expect(hero).toHaveAttribute('sizes', /2432px/);
     await expect(hero).toHaveJSProperty('complete', true);
     expect(await hero.evaluate(n => n.currentSrc.endsWith('/hero'))).toBe(true);
     const image = page.locator('.dossier-gallery img').first();

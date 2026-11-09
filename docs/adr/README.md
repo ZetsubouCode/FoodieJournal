@@ -3,6 +3,7 @@
 Read [authority and precedence](../product-vision.md#authority-and-read-order) first. This register tracks approved decisions and reversals; it does not approve a proposed implementation as completed.
 
 - [001 — Experience authority, placement and state corrections](001-experience-authority.md)
+- [002 — P0 hardening: adaptive width, eligible Place cover, minimal admin, P2 skeleton ownership](002-p0-hardening.md)
 
 ## Document classification
 

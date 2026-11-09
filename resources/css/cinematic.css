@@ -10,7 +10,7 @@
 .public-page--explore { --ambient-opacity: .32; --ambient-position: right top; }
 .public-page--visit { --ambient-opacity: .5; --ambient-position: left -4rem; }
 .public-page--place { --ambient-opacity: .42; --ambient-position: right -8rem; }
-.public-page--admin { --ambient-opacity: .7; --ambient-position: right top; --ambient-fade: 75rem; }
+.public-page--admin { background: var(--surface-page); }
 .public-page h1, .public-page h2 { font-family: var(--font-display); text-wrap: balance; overflow-wrap: anywhere; }
 .public-page .editorial-caption { color: var(--action-primary-bg); margin: 0 0 var(--space-3); font-size: .75rem; letter-spacing: .16em; }
 .editorial-heading { display: flex; justify-content: space-between; align-items: end; gap: var(--space-6); margin-bottom: var(--space-8); }
@@ -29,7 +29,7 @@
 .public-page .memory-reel { margin-top: var(--space-8); }
 .public-page .memory-reel__head::after { display: none; }
 .public-page .memory-reel__index { font-size: .75rem; letter-spacing: 0; text-transform: none; color: var(--text-secondary); }
-.curiosity-index { container-type: inline-size; margin: var(--space-8) 0 var(--space-12); }
+.curiosity-index { --curiosity-photo-max: 32rem; container-type: inline-size; margin: var(--space-8) 0 var(--space-12); }
 .curiosity-index__intro { display: grid; grid-template-columns: 1.5fr 1fr; align-items: end; gap: var(--space-8); margin-bottom: var(--space-8); }
 .curiosity-index h1 { font: 500 clamp(3.4rem, 6.5vw, 6rem)/.92 var(--font-display); margin: 0; letter-spacing: -.035em; }
 .curiosity-index h1 em { color: var(--action-primary-bg); font-weight: 400; }
@@ -53,15 +53,27 @@
 .curiosity-surface__copy strong { font: 500 clamp(1.8rem, 3vw, 2.8rem)/1 var(--font-display); overflow-wrap: anywhere; }
 .curiosity-surface__copy > span:last-child { font-size: 1.5rem; align-self: end; }
 .curiosity-surface:is(:hover, :focus-visible) > img { transform: scale(1.035); }
+@media (min-width: 2000px) {
+    .curiosity-surface::before { max-block-size: var(--curiosity-photo-max); }
+}
 .curiosity-index__directory { display: flex; flex-wrap: wrap; gap: var(--space-8); padding-top: var(--space-6); }
 .curiosity-index__directory :is(a, p) { display: flex; align-items: center; flex-wrap: wrap; gap: .25rem 1rem; min-height: var(--control-height); text-decoration: none; }
 .curiosity-index__directory :is(a, p) > span:first-child { color: var(--text-muted); font-size: .875rem; }
 .curiosity-index__directory p { margin: 0; }
 .curiosity-index__directory strong { font-weight: 400; }
-.place-dossier { display: grid; grid-template-columns: 1.2fr 1fr; gap: var(--space-12); align-items: center; margin-block: var(--space-8) var(--space-16); }
+.place-dossier { --place-photo-max: 50rem; container-type: inline-size; display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: var(--space-12); align-items: center; margin-block: var(--space-8) var(--space-16); }
 .place-dossier h1 { font: 500 clamp(3rem, 5.8vw, 5.5rem)/.95 var(--font-display); }
 .place-dossier .prose { max-width: var(--reading-max); }
+.place-dossier__photo { inline-size: 100%; max-inline-size: var(--place-photo-max); justify-self: end; }
 .place-dossier__photo .media-image { aspect-ratio: 1.25; border-radius: 0; }
+.place-dossier--text { grid-template-columns: minmax(0, 1fr); padding-block: var(--space-8); border-block: 1px solid var(--archive-outline); }
+.place-dossier--text .place-dossier__identity { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); column-gap: var(--space-12); align-items: start; }
+.place-dossier--text .place-dossier__identity > :not(.place-dossier__facts) { grid-column: 1; }
+.place-dossier--text .place-dossier__facts { grid-column: 2; grid-row: 2 / span 2; padding: var(--space-6); background: var(--surface-raised); border-inline-start: 2px solid var(--action-primary-bg); }
+@container (max-width: 50rem) {
+    .place-dossier--text .place-dossier__identity { grid-template-columns: minmax(0, 1fr); }
+    .place-dossier--text .place-dossier__facts { grid-column: 1; grid-row: auto; }
+}
 @media(max-width: 1000px) {
     .curiosity-index h1 { font-size: clamp(1.875rem, 1rem + 8vw, 3.4rem); line-height: 1.1; }
 }

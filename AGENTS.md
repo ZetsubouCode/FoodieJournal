@@ -1,6 +1,6 @@
 # Repository guidance
 
-For UI design, implementation or review, load `C:\Users\kigna\.codex\skills\ui-craft\SKILL.md` first. Read `.ui-craft/brief.md`, `.ui-craft/tokens.md`, `design-system-specification.md` §1 (composition and Brand Voice & Microcopy), then the relevant canonical experience contract.
+For UI design, implementation or review, load `$HOME/.codex/skills/ui-craft/SKILL.md` first (`$env:USERPROFILE\.codex\skills\ui-craft\SKILL.md` is the Windows equivalent). If that personal skill is unavailable, continue using the repository contracts and record the limitation; do not install or vendor it automatically. Read `.ui-craft/brief.md`, `.ui-craft/tokens.md`, `design-system-specification.md` §1 (composition and Brand Voice & Microcopy), then the relevant canonical experience contract.
 
 ## Authority and read order
 
@@ -12,7 +12,8 @@ For UI design, implementation or review, load `C:\Users\kigna\.codex\skills\ui-c
 
 - One playable vintage Memory Archive on Home; Explore is a discovery board plus complete photographic Visit/Food/Place browsing; Visit/Place share cinematic archival storytelling. Keep shared header/footer, approved Editorial Bold errors and `config/error-pages.php` status copy.
 - Resting tube is vertical outside LEFT at RESET height, original socket unchanged, two-gusset bolted side bracket. No visible pickup tutorial/tooltip/label or pagination arrows. Keep indexed rotary, square reset, power/print identity, cancellation and keyboard/touch/no-JS alternatives. See the motion contract before touching mechanics.
-- Use semantic tokens, wide responsive shell with separate reading measure, real content and shared primitives. Home 5/Explore 3/Detail 3 are qualitative motion ambitions; meaningful 3D is allowed with measured cost and fallbacks. Admin stays quiet. Mark requested targets as pending until implemented.
+- Use semantic tokens, adaptive public shell (152rem cap; 68ch reading measure), real content and shared primitives. Keep source-native cabinet limits; reflow ultrawide result groups. Home 5/Explore 3/Detail 3 are qualitative motion ambitions; meaningful 3D is allowed with measured cost and fallbacks. Admin is minimal, system-font, plain-background and 80rem. Mark requested targets as pending until implemented.
+- Place hero is independent of history pagination: latest visited_at then id among published same-visit covers with a ready, existing hero derivative; otherwise use the text/facts composition. Preserve publication/media revocation. New real-wait skeletons belong to P2 (choice 6A); P0-H verifies existing busy/empty/error/retry semantics. See [P0-H decisions](docs/adr/002-p0-hardening.md).
 - Preserve working-tree changes. Audit callers/consumers before edits. Run relevant non-destructive tests/build and `git diff --check`; UI work also needs real desktop/mobile, intermediate-state, keyboard, reduced-motion and enlarged-text evidence. Record unknowns; screenshots/axe alone are not WCAG certification.
 - Done means scoped behavior verified, no feature/privacy/mechanical regression, and affected contracts, brief/tokens, status and roadmap synchronized. Record reversals in an ADR; retain old QA as dated history.
 

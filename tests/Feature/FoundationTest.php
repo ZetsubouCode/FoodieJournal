@@ -29,4 +29,14 @@ class FoundationTest extends TestCase
         $this->assertSame('Rp0', Presentation::price(0));
         $this->assertSame('Harga belum dicatat', Presentation::price(null));
     }
+
+    public function test_saved_feedback_is_rendered_once_without_a_duplicate_toast(): void
+    {
+        $this->withoutVite();
+        $this->withSession(['success' => 'Catatan QA tersimpan.']);
+        view()->share('errors', new ViewErrorBag);
+        $html = view('components.layout.public', ['slot' => new HtmlString('<h1>Catatan</h1>')])->render();
+        $this->assertSame(1, substr_count($html, 'Catatan QA tersimpan.'));
+        $this->assertStringNotContainsString('data-message=', $html);
+    }
 }

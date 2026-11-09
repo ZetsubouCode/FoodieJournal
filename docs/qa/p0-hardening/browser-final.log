@@ -1,0 +1,17 @@
+
+Running 10 tests using 1 worker
+
+(node:25300) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 tests\Browser\p0-hardening.spec.js:19:1 › Place hero comes from older published history and stays the same on pages 1 and 2 (6.7s)
+  ok  2 tests\Browser\p0-hardening.spec.js:41:1 › photo-free Place has genuine facts and no unused photo track at every width and enlarged text (16.3s)
+  ok  3 tests\Browser\p0-hardening.spec.js:70:1 › minimal admin uses system fonts, measured controls, persistent errors and one saved announcement (14.2s)
+  ok  4 tests\Browser\p0-hardening.spec.js:110:1 › six real HTTP error responses preserve approved scene, status and standalone shared CSS (12.7s)
+  ok  5 tests\Browser\p0-hardening.spec.js:125:1 › real Explore wait keeps committed results and URL, then offers recovery without a skeleton (1.9s)
+  ok  6 tests\Browser\p0-hardening.spec.js:150:1 › ultrawide discovery caps photo height and reflows result columns (17.6s)
+  ok  7 tests\Browser\public-shell.spec.js:13:1 › public shell aligns header, main and footer at target and boundary widths without scaling cabinet artwork up (1.2m)
+  ok  8 tests\Browser\public-shell.spec.js:51:1 › reading measure, enlarged text and short landscape remain usable across public surfaces (27.9s)
+  ok  9 tests\Browser\public-shell.spec.js:70:1 › admin keeps its existing narrow container and compact footer (1.1s)
+  ok 10 tests\Browser\public-shell.spec.js:80:1 › wide images use derivatives with layout-aware lazy sizes and an eager capped hero (1.1s)
+
+  10 passed (2.9m)

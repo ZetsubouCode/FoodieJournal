@@ -4,6 +4,13 @@ Approved planning direction, 8 November 2026; status updated 9 November. **P0-1 
 
 Order: P0 shared identity, state clarity and baselines → P1 physical response → P2 discovery → P3 storytelling → P4 integrated gates. Correctness/accessibility failures found during a later phase move ahead of creative work. Each task updates status, relevant contract and evidence. Keep screenshots deterministic and fixtures isolated.
 
+## P0-H — Corrective hardening before P1
+
+- **Implemented:** seven [owner decisions / ADR 002](../adr/002-p0-hardening.md): adaptive 152rem visual cap with 68ch prose/native cabinet, ultrawide result reflow and bounded discovery photo height; deterministic eligible Place cover and responsive photo-free facts; retained warm public atmosphere/footer; minimal system-font/plain admin; shared primitive inventory and single saved-success announcement; existing state/retry verification without new skeletons; bounded out-of-range Place recovery.
+- **Evidence/status:** [current report](../qa/p0-hardening/verification.md) lists actual PHP/build/browser/pixel results and dimensions. P0-1–4 QA remains historical. No automatic baseline acceptance, tolerance changes or P1–P4 work.
+- **Partial/unknown:** changed PHP checked separately from existing whole-repository Pint formatting failures; native zoom/assistive hardware/cross-engine/field performance remain unverified. Do not convert these into blanket conformance or P0-complete claims.
+- **Pending:** new real-wait skeletons belong exclusively to P2 (choice 6A); physicality, broader discovery, storytelling and integrated UAT retain their phases below. P1 may start with one storyboarded local response refinement once the scoped P0-H evidence is reviewed.
+
 ## P0-1 — Restore navigation feedback
 
 - **Status:** **Complete, 9 November 2026.** Shared CSS and generated error CSS now restore the hover contract; [verification and 30 captures](../qa/navigation-hover-progress/verification.md). Five focused browser cases, three existing browser regressions and nine PHP tests passed.
@@ -71,14 +78,12 @@ Order: P0 shared identity, state clarity and baselines → P1 physical response 
 - **Edges / risks:** no photos, one/40 photos, revoked original, all-null or partial criteria, missing total/free item, long titles/prose, external Maps absent, keyboard arrows in input, narrow landscape/200% text. Do not fragment one story into a generic card catalog.
 - **Tests / evidence:** nullable/historical/visibility feature cases, original network observation, fast gallery changes, error/retry, Escape/focus restoration; full story sections and intermediate viewer wait/failure at 375/768/1440/1920 plus reduced/text enlargement. Measure media bytes and LCP after width changes.
 
-## P3-2 — Place history and missing-photo composition
+## P3-2 — Place chronology enhancements (pending)
 
-- **Objective / current:** A09; shared atmosphere exists, but header assumes two columns and photo selection depends on the current history page. Give chronology and sparse-data layouts explicit composition.
-- **Files:** `public/place.blade.php`, `.place-dossier` in `cinematic.css`, reused history/visit-card components; `PublicController::place` or `Place` photo relation only if a stable published-photo query is justified; PHP/browser fixtures/tests.
-- **Dependencies:** P0/P3-1 reusable environment; inspect photo-query consumers before any service change.
-- **Acceptance:** no-photo header intentionally uses available width; place name/location and rated-visit count stay primary; dated visits remain independently navigable with own score. If stabilizing hero selection, only eligible published photos and bounded queries, stable across page 1/2. No published visits still 404; no fake menu/current prices, Maps or community-review language.
-- **Edges / risks:** all visits unrated/photo-free, >18 visits, older eligible photo versus private newer photo, deleted place/unpublish, long address/name, no location. Do not add N+1 or fetch every visit merely to find a photo.
-- **Tests / evidence:** new isolated >18-visit/photo-free/null fixtures, pagination and photo provenance assertions, query-count check if query changes. Desktop/mobile header/history/footer and empty-photo captures; keyboard link order and reduced-motion journey Visit↔Place.
+- **Objective / current:** A09; P0-H already corrects the stable eligible hero, text/facts opening and empty history-page recovery. Only optional chronology grouping/tactile storytelling remains P3; do not reimplement resolved selection/fallback.
+- **Files:** existing Place/history/visit-card composition only when a reviewed story hypothesis warrants it; reuse P0-H fixtures/tests and shared primitives.
+- **Dependencies:** accepted P0-H and P3-1; preserve published photo eligibility, date/id ordering, query budget and pagination.
+- **Acceptance:** dated visits remain independently navigable with their own historical facts/scores. No fake menu/current price, Maps or crowd-review claims. Preserve long-title/address, no-location, all-null and >18-visit coverage; recheck desktop/mobile history/footer, keyboard and reduced-motion Visit↔Place journeys.
 
 ## P4 — Integrated accessibility, performance and consistency gates
 

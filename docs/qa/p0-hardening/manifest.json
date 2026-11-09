@@ -1,0 +1,320 @@
+{
+  "reviewed": "2026-11-09",
+  "baselineHead": "5ca68464f17af5e8ea330a5bcfe3bd98760ba10d",
+  "workingTreeAtStart": "clean",
+  "reviewer": "Codex: opened matched contact sheets and selected full-size captures",
+  "parentManifest": {
+    "file": "docs/qa/visual-baselines/manifest.json",
+    "sha256": "d78e00624f3d605f0bc22f5ccc01815ad2979a2289f94086f41c8c56a05e6b56"
+  },
+  "visualBaselineChanges": "none; all 40 PNGs retain original SHA-256; no tolerance or mask changes",
+  "comparison": {
+    "threshold": 0.15,
+    "maxDiffPixels": 30,
+    "navigationMidpointMaxDiffPixels": 0,
+    "animations": "allow",
+    "masks": "none",
+    "updateDefault": "none"
+  },
+  "environment": {
+    "platform": "win32",
+    "release": "10.0.26100",
+    "node": "v26.3.1",
+    "browser": "156.0.8078.4",
+    "playwright": "1.64.1",
+    "locale": "id-ID",
+    "timezone": "Asia/Jakarta",
+    "deviceScaleFactor": 1,
+    "theme": "dark",
+    "fixedServerDate": "2026-11-09T12:00:00Z"
+  },
+  "verifiedCases": 23,
+  "snapshots": [
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/home-390-hero.png",
+      "sha256": "a523490d5a365d2b186ec2e8c063aa52bf28cb204ef4648046c8afbda2ba18bd",
+      "width": 390,
+      "height": 1000
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/home-390-footer.png",
+      "sha256": "2ff301d7d23dc0d9f71df58ec395385896c66d8536c77e20ec9405be396b1477",
+      "width": 390,
+      "height": 377
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/explore-390-hero.png",
+      "sha256": "e436561e62bf75db1355a2535ecba2ac00d74ffc57b44c038dba644c5b09d081",
+      "width": 390,
+      "height": 1000
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/explore-390-footer.png",
+      "sha256": "eabb319849d3c7d45df04e9cb69c204c20887475f2a43eca5c31569afd781eb4",
+      "width": 390,
+      "height": 377
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/visit-390-hero.png",
+      "sha256": "7fdcd4849f16e0f9612ec4e05457ef831c7a115d703a3d87dff240551f7a710d",
+      "width": 390,
+      "height": 1000
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/visit-390-footer.png",
+      "sha256": "5d60f038d8b219057a723adb40b390f035fe2d283be318c11785c5e73e2556b8",
+      "width": 390,
+      "height": 378
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/place-390-hero.png",
+      "sha256": "99a942e5f9a6d32d5568796ea24caf44f3bd5ec7305bbade9e537a71831ae64a",
+      "width": 390,
+      "height": 1000
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/place-390-footer.png",
+      "sha256": "eba64c7118a819058253b1b86435990bf40a0071f276223dcd69e7a96f5da4da",
+      "width": 390,
+      "height": 378
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/error-390-hero.png",
+      "sha256": "a1c861f12878c117f9fa776c8c5cc678da140c2246f8f4b99249becb5e41588e",
+      "width": 390,
+      "height": 1000
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/error-390-footer.png",
+      "sha256": "dfd80bdc8d7d39108f726103ac041d058f9361a08a5557ba3b1aaa47eb5bf928",
+      "width": 390,
+      "height": 376
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/home-1440-hero.png",
+      "sha256": "d48891f40cf88066fc3dce0675dc1cc5cef8e520a22eae690b9cd412a0a6fbc1",
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/home-1440-footer.png",
+      "sha256": "0617303079110cc0e27e39a008352454c929f401de2fd192ad3fa8e465e08ee9",
+      "width": 1440,
+      "height": 352
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/explore-1440-hero.png",
+      "sha256": "6b4d0b0fab7f4db0d2c406497c4db37f6f228bca21e266327ae67aebd609ef15",
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/explore-1440-footer.png",
+      "sha256": "0617303079110cc0e27e39a008352454c929f401de2fd192ad3fa8e465e08ee9",
+      "width": 1440,
+      "height": 352
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/visit-1440-hero.png",
+      "sha256": "722b25699a0bb8e5bb83bd600f9aff3fbb6509c8a358809c30e2d5c974de4324",
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/visit-1440-footer.png",
+      "sha256": "ed8630e6c13131036eaaf3cae5fea28d8900af5ac83d3ba8f8634de1ff2e533b",
+      "width": 1440,
+      "height": 353
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/place-1440-hero.png",
+      "sha256": "605eba02e6cfabfef227b7452c463685bca0338bb2517ea42ac70a1a88f71b3e",
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/place-1440-footer.png",
+      "sha256": "f922c1f837018e9dd7610098b87e408cb6bbac9b1cafd41be89ae27eb3cdcd67",
+      "width": 1440,
+      "height": 352
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/error-1440-hero.png",
+      "sha256": "e5e27da092a1f3f65f75bbcd5bad08a12ace283d081e7263775ef7619a77a93f",
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/error-1440-footer.png",
+      "sha256": "1c864a94745c64f3455f5270f3e2de32de4fc8af4113fa7504f7f3aba96ae996",
+      "width": 1440,
+      "height": 352
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/home-1920-hero.png",
+      "sha256": "80f8c0aa103c8cd43a14b34df7a24daa69047502261e6dda4e9a186463ce5ebb",
+      "width": 1920,
+      "height": 1000
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/home-1920-footer.png",
+      "sha256": "b0a19ac247b824855d140c93929fa4529c4cc5b62f961d1fad02ffcc5c0c1fd9",
+      "width": 1920,
+      "height": 414
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/explore-1920-hero.png",
+      "sha256": "1f91c101363e220eea8723cad31b9264d560faaa7c7ebb7c2faa73751da44612",
+      "width": 1920,
+      "height": 1000
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/explore-1920-footer.png",
+      "sha256": "273ba060c197c383e932c89d028d8ac327223025025180c878d1b239311a3768",
+      "width": 1920,
+      "height": 414
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/visit-1920-hero.png",
+      "sha256": "502a5d7e589139690ed70df987275f50648b9a7be3b035e564fe42c20ed53673",
+      "width": 1920,
+      "height": 1000
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/visit-1920-footer.png",
+      "sha256": "df441dc83c52fb7e2ef0324836799bacbfa8fbccac17ca9830750237efba2909",
+      "width": 1920,
+      "height": 414
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/place-1920-hero.png",
+      "sha256": "1520f9f4780a3241faaf69bde8bc6ce9d24c4b0ba283db4a6af448f7f0875a68",
+      "width": 1920,
+      "height": 1000
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/place-1920-footer.png",
+      "sha256": "3acf480dc0da7ea2e250ce8b29dd370b14e5ebcbc874b0b33303b61644594a5f",
+      "width": 1920,
+      "height": 414
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/error-1920-hero.png",
+      "sha256": "19f502b447e0f5232b3beb6f07a0521a0af927ee5319b242eaf4775e1aee7253",
+      "width": 1920,
+      "height": 1000
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/error-1920-footer.png",
+      "sha256": "8cf27e38aff932d6ea1a30c65b930866f24f1155e4b958d789c33a1d5798bb07",
+      "width": 1920,
+      "height": 414
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/cabinet-on-1440.png",
+      "sha256": "c2f31c17419cdb7034bbbc5eba5d2996aa2bd94e1cb6adc60662203fce6de05e",
+      "width": 1344,
+      "height": 1009
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/cabinet-printed-1440.png",
+      "sha256": "06b0860e43803954608432fc64d5dac6d272faf87ec711ea031ae152e6761e8f",
+      "width": 1344,
+      "height": 1009
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/nav-public-midpoint-1440.png",
+      "sha256": "48eb0136c8d9d579809ffb4f4357213f4700e95f08057822809e35874014da88",
+      "width": 1344,
+      "height": 80
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/nav-error-midpoint-1440.png",
+      "sha256": "cb20dd5017df78752cfc4c6d81b39dfe70c3dd99faea2e18b52b93cbbdc7e5dc",
+      "width": 1344,
+      "height": 80
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/filter-staged-390.png",
+      "sha256": "eac6c1c2c57c4cda24137f824a0fe5ebf05cd8b8b8f4b02b92add2282f23e4e9",
+      "width": 374,
+      "height": 788
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/filter-staged-1440.png",
+      "sha256": "57c4bf2d3ed6a09cd5dcd30da4353dda073fe612ba32e7ada9666df712fa7eb9",
+      "width": 1056,
+      "height": 712
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/archive-unpublished-390.png",
+      "sha256": "4c123757c0ca58ef01d04ff45e418455eb3072511ad716ed460bd48ab2f89516",
+      "width": 358,
+      "height": 293
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/filtered-empty-390.png",
+      "sha256": "55995d4e59c176c5332591586626785434b1b0f77c90cd735cb10f1e373ba2c7",
+      "width": 358,
+      "height": 763
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/browse-failure-1440.png",
+      "sha256": "2baa44421e0ad9f764150b35ed6ee8d8e323ec30fff30b9589428a7db9f191c1",
+      "width": 1344,
+      "height": 95
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/viewer-original-390.png",
+      "sha256": "c41ce2e0911b127e4e7b61d3971fb04331361f34bba7e14cc0c7b672219e586c",
+      "width": 358,
+      "height": 848
+    }
+  ],
+  "inputs": [
+    {
+      "file": "public/build/manifest.json",
+      "sha256": "26fa5fd42ff277f87d527b5726b388bed997545883764255d1b238d74750e2aa"
+    },
+    {
+      "file": "public/assets/css/error.css",
+      "sha256": "d285335f852000972a4ba772dd9f3e64ba69928a6422d9d889d4a247be9c6f32"
+    },
+    {
+      "file": "playwright.visual.config.js",
+      "sha256": "847067d4ec5eda72077ff7bfae3bd51afe2f55826046e0bcdf471ad58cc9a539"
+    },
+    {
+      "file": "tests/Browser/public-visual.spec.js",
+      "sha256": "53b0d842615330913bc407cdbe31ba5bdd324d4a770e244a580e8bad233a2d78"
+    },
+    {
+      "file": "tools/visual-qa.php",
+      "sha256": "5e2c6d00e0b7776cca214e5075ce2255021e863bca0500f8a681c2d5321b123d"
+    },
+    {
+      "file": "tools/p0-hardening-qa.php",
+      "sha256": "1325f53eaca75132bf26cf3091fbd58da585d0375c409f340601e894a9ff12b3"
+    },
+    {
+      "file": "tests/Feature/PlaceHeroTest.php",
+      "sha256": "b8cc91dc8f039646ddc254524ffdbb26ab1195076b15c354e17d4873d92ec8ae"
+    },
+    {
+      "file": "tests/Browser/p0-hardening.spec.js",
+      "sha256": "3eb6fcd8b5d5aa1e97cb5441dba00b9ecf1b85f108ab238c4a859a5a168a4dee"
+    },
+    {
+      "file": "tools/.runtime/visual-photo.sqlite",
+      "sha256": "23dac63d798c4a4db36fd303fe7cb0a264992587187b32c829ec94bab19b4b9f"
+    },
+    {
+      "file": "tools/.runtime/visual-empty.sqlite",
+      "sha256": "df6b82ff9a1239820cf77863224bf542b895c95ee15aedf1ebabbbe7ccc975e5"
+    },
+    {
+      "file": "tools/.runtime/p0-hardening.sqlite",
+      "sha256": "21aced1724648044eeab0de98e648c06404e79a959eb405bcd72ec0c8f0a4e89"
+    }
+  ]
+}

@@ -30,7 +30,13 @@ Gallery thumbnail activation opens the shared native viewer and only then reques
 
 Lead with actual place identity/location, optional Maps, rating and number of rated published visits. Follow with dated published history and each visit's own score. It shares Dossier atmosphere/components while emphasizing chronology. No invented current menu or price, no crowd-review wording. Null aggregate is unrecorded, never zero. Without any eligible visit the public route is 404.
 
-Current hero selects a photo only from the current paginated visit collection; a photo may disappear on another history page, and a photo-free header retains a two-column grid. Plan explicit text-only geometry and assess a stable published photo selection if needed; do not silently change the query in this documentation phase.
+P0-H (choice 2B+C) selects the latest published-visible visit cover with a ready, physically available hero derivative, ordered by visited_at then id descending, independent of the paginated history. The media must belong to that same visit. Older eligible covers remain usable when newer visits have no photo. Unavailable responsive derivatives are omitted from the selected hero's srcset. Publication, deletion and derivative eligibility are re-evaluated every request; no public cache or per-history-visit query is added. Photo width caps at 50rem to keep the opening proportionate to chronology on ultrawide displays. See [ADR 002](adr/002-p0-hardening.md).
+
+Without an eligible cover, the text/material opening groups the expressive title/location and genuine address/rating/rated count/optional Maps facts. The single outer track has no reserved photo column; the inner facts group reflows by available text space. Omit missing location/address/Maps, retain “Belum Dinilai” and zero rated visits. History remains chronological and paginated; an out-of-range page offers the first history page without implying the place is unpublished.
+
+## Admin: minimal owner work surface
+
+Choice 4A explicitly uses system UI fonts for headings/body, a plain semantic page surface, 80rem shell and compact footer. Retain visible labels, validation summary/inline errors, predictable forms/lists, focus, confirmation and upload/save status. Public cinematic artwork/display typography are excluded; shared accessible controls and subdued brand colors remain. A saved-success message persists once in the alert, without a duplicate toast announcement. The shared toast service remains available; no current async caller is added by P0-H.
 
 ## State contract
 
@@ -45,11 +51,13 @@ The following is required behavior, not a claim of complete implementation. P0-3
 | Missing/unready image | Reserve aspect ratio; neutral material/placeholder while genuinely waiting | Stable “Foto belum tersedia”, text-only story/item/place composition when there is no photo | Failure switches to fallback, never raw original in a listing; retry only where meaningful |
 | Missing ratings / prices | Render known values immediately | “Penilaian belum dicatat” / “Belum Dinilai” per component and “Harga belum dicatat”; retain zero price when actually recorded | No score bar, star fill, total or currency fabricated from null |
 | Cabinet page / print | Distinguish OFF/boot/selected/page busy/printing/ready/retrieving; lock competing actions | Empty six-window page has honest apertures and disabled print/index as appropriate | Keep committed selection on page error; retry; reset/cancel do not leave paper or ghost state |
-| Viewer original | Fixed viewer geometry + status; optional geometry-matched skeleton | Derivative remains useful if original unavailable | Error text + retry/close; no trapped keyboard; close releases image and restores focus |
+| Viewer original | Fixed viewer geometry + actual status; new skeleton deferred to P2 | Derivative remains useful if original unavailable | Error text + retry/close; no trapped keyboard; close releases image and restores focus |
 | Unavailable page/data | Do not fake content | 404 for ineligible detail; approved error scene for actual request errors | Status-specific action/copy from config, no exception leakage; retry only safe methods |
 | Admin first run / save / upload | Clear bootstrap/empty guidance, real submit/upload status | Missing data stays editable; publish gate explains required facts | Keep fields on failure, shared error summary and inline messages, no optimistic publication or destructive reset |
 
-### Skeleton transitions
+### Skeleton transitions — P2 only (choice 6A)
+
+P0-H inventories the unused skeleton foundation and verifies current busy/empty/error/retry semantics only. The following defines future P2 work; it does not authorize mounting new skeletons during P0-H.
 
 Initial server-rendered GETs need no simulated skeleton or forced delay. For actual image/async waits, reserve geometry from image dimensions or last committed layout. Refresh keeps useful content instead of blanking it; if a delay persists (starting design threshold about 200ms), show a noninteractive region-matched placeholder only where it adds clarity. The threshold never postpones a request/response. Fast responses skip it, reduced motion uses static material, `aria-busy`/status express the real task, and failure replaces the placeholder with recovery. Placeholders are `aria-hidden`; no fake count/text/data. Avoid minimum display timers that slow success.
 

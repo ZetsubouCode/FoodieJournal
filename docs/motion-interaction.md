@@ -46,7 +46,7 @@ LED centres stay (1012,267), (1012,405), (1012,546); circular lenses do not stre
 
 ## Explore and detail
 
-Explore keeps the discovery board mounted while server fragments update console/results/drawer. Give immediate busy feedback, preserve committed results, abort obsolete requests, then reveal the committed group without taking focus away. Filter staging, Apply/Cancel, URL and Back/Forward outrank animation. Use layout-matched skeletons only for genuinely waiting geometry; [page-state rules](page-experience.md#state-contract) define their transitions.
+Explore keeps the discovery board mounted while server fragments update console/results/drawer. Give immediate busy feedback, preserve committed results, abort obsolete requests, then reveal the committed group without taking focus away. Filter staging, Apply/Cancel, URL and Back/Forward outrank animation. New layout-matched real-wait skeletons are P2 only (choice 6A); P0-H verifies existing state semantics and adds none. [Page-state rules](page-experience.md#state-contract) define future transitions.
 
 Visit/Place use photo hover/focus, readable section reveals and gallery feedback as aids to storytelling. No mandatory scroll-jacking, long entrance gates or timeline scrubbing to read a visit. Bento ordering follows semantic DOM order on mobile. Meaningful CSS perspective/2.5D/3D is allowed; WebGL requires a measured advantage and equivalent fallback, not a decorative dependency.
 

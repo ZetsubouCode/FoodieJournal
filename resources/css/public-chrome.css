@@ -2,7 +2,9 @@
 @font-face { font-family: 'Archive Garamond'; src: url('/assets/fonts/cormorant-garamond-latin.woff2') format('woff2'); font-weight: 300 700; font-style: normal; font-display: swap; }
 @font-face { font-family: 'Archive Garamond'; src: url('/assets/fonts/cormorant-garamond-latin-italic.woff2') format('woff2'); font-weight: 300 700; font-style: italic; font-display: swap; }
 @font-face { font-family: 'Archive Sans'; src: url('/assets/fonts/dm-sans-latin.woff2') format('woff2'); font-weight: 100 1000; font-style: normal; font-display: swap; }
-.public-page, .error-page { --font-display: 'Archive Garamond', Georgia, serif; --font-body: 'Archive Sans', 'Segoe UI', sans-serif; }
+.public-page:not(.public-page--admin), .error-page { --font-display: 'Archive Garamond', Georgia, serif; --font-body: 'Archive Sans', 'Segoe UI', sans-serif; }
+.public-page--admin { --font-body: system-ui, 'Segoe UI', sans-serif; --font-display: var(--font-body); }
+.public-page.public-page--admin .site-footer__statement { font-size: 1.25rem; font-weight: 600; }
 .public-page:not(.public-page--admin) .container, .error-page .container, .error-page .error-main { width: min(calc(100% - 2 * var(--public-gutter)), var(--public-content-max)); margin-inline: auto; }
 @media (max-width: 480px) { .public-page, .error-page { --public-gutter: var(--space-4); } }
 @media (min-width: 1024px) { .public-page, .error-page { --public-gutter: clamp(var(--space-8), 3.333vw, var(--space-16)); } }

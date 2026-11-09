@@ -8,7 +8,6 @@ initializeForms();
 initializeImageFallbacks();
 const container = document.querySelector('[data-toast-container]');
 export const toast = new ToastService(container);
-if (container?.dataset.message) toast.show(container.dataset.message);
 const pending = [];
 if (document.querySelector('[data-combobox]')) pending.push(import('./components/combobox').then(m => m.initializeComboboxes()));
 if (document.querySelector('[data-editor]')) pending.push(import('./admin/editor').then(m => m.initializeEditor()));

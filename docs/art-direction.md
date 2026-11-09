@@ -1,6 +1,6 @@
 # Foodie art direction
 
-Approved target, 8 November 2026. See [authority](product-vision.md#authority-and-read-order), [current gaps](implementation-status.md) and [implementation phases](roadmap/frontend-experience.md). P0-2 implemented the wide-shell geometry, warm variants and footer below on 9 November 2026; [verification](qa/wide-shell/verification.md).
+Approved target, 8 November 2026; hardened by the seven owner decisions on 9 November. See [authority](product-vision.md#authority-and-read-order), [current gaps](implementation-status.md), [phases](roadmap/frontend-experience.md) and [P0-H decisions/evidence](adr/002-p0-hardening.md). P0-2's [dated verification](qa/wide-shell/verification.md) remains the earlier 112rem baseline.
 
 ## Reference lineage
 
@@ -25,7 +25,7 @@ Public display: self-hosted Cormorant Garamond (`Archive Garamond`); body: DM Sa
 
 ## Wide responsive shell
 
-The audit baseline capped `.container` at 80rem: 1280px at 1440/1920, with 80/320px side margins. P0-2 now applies a separate public 112rem shell with the tabled gutters; global 80rem remains for admin. Footer background spans the viewport and its inner content aligns with header/main. Home reserves 48–80px for the outboard lamp and caps the cabinet at its native 1634px source width; that space and limit have a mechanical/artwork purpose.
+The audit baseline capped `.container` at 80rem; P0-2 raised public capacity to 112rem. Choice 1B in P0-H expands the visual shell cap to 152rem while keeping the tabled gutters and the 80rem admin shell. Footer background spans the viewport and its inner content aligns with header/main. Home reserves 48–80px for the outboard lamp and caps the cabinet at native 1634px source width; that space and limit have a mechanical/artwork purpose.
 
 The implemented public layout uses one shared wide shell for nav, main and footer contents, with full-width atmospheric layers and a separate reading measure:
 
@@ -36,15 +36,18 @@ The implemented public layout uses one shared wide shell for nav, main and foote
 | 1024 | `clamp(32px, 3.333vw, 64px)` | About 956px |
 | 1440 | Same fluid rule | About 1344px; 48px gutters |
 | 1920 | Same fluid rule | 1792px; 64px gutters |
-| Larger | Same gutter, max 112rem | Reading remains narrow; outer scene may continue full bleed |
+| 2560 | 64px | 2432px; Explore grids gain columns rather than stretching two cards |
+| 3440 and larger | Same gutter, max 152rem | 2432px; deliberate cap bounds photographic/card scale; atmosphere continues full bleed |
 
-Implement through semantic shell/gutter tokens, not per-page width patches. Never apply the container width formula twice to a child. Keep lamp gutter inside the scene allocation and source proportions intact. Wide photos and asymmetric bento groups may use the shell; paragraphs never stretch to 112rem. At 200% text, wrap controls and simplify columns before shrinking type or hit areas. Test at 959/960 and 1023/1024 as well as the named screenshot widths. No horizontal document overflow, clipped tube, text or controls; header/main/footer alignment within 1 CSS px.
+Implement through semantic shell/gutter tokens, not per-page width patches. Never apply the container width formula twice to a child. Keep lamp gutter inside the scene allocation and source proportions intact. Wide photos and asymmetric bento groups may use the shell; paragraphs remain 60–75ch. At 200% text, wrap controls and simplify columns before shrinking type or hit areas. Test at 959/960 and 1023/1024 as well as named screenshot widths. No horizontal document overflow, clipped tube, text or controls; header/main/footer alignment within 1 CSS px. Above 2000px Explore uses three Visit / four Food/Place columns, retaining one-column lists. Existing derivative sizes stay unchanged; never fetch originals to fill a wider slot.
+
+Visual sections have different purposes: Explore photo height caps at 32rem on ultrawide screens to keep its captions visible; Place photo width caps at 50rem to preserve chronology's priority; Home's artwork stays native while surrounding editorial groups expand; Visit hero/gallery can use the wider shell with bounded prose. Place history cards retain their 58rem list measure and intentional lateral reading space. The 152rem cap at 3440px bounds photographic enlargement rather than filling every edge.
 
 ## One environment, deliberate variants
 
 Use the older archive's warm localized light and texture across the public journey. Home may show more environment around the cabinet; Explore balances illuminated discovery photos with a quiet filter work surface; Visit/Place lower visual intensity behind reading. Crops and density may differ, while material, palette, fonts, focus and motion remain recognizably related. Error pages keep the approved kitchen image and Editorial Bold layout.
 
-P0-2 `cinematic.css` retains Home .12, warms Explore to .32, Visit to .5 and Place to .42, with Visit left -4rem / Place right -8rem crops and a 90rem fade. The same existing atmosphere asset remains full bleed; reading overlays and semantic surfaces stay dark. Admin retains its previous .7/right-top/75rem treatment. These measured implementation choices are deliberate variants, not immutable palette primitives; compare the retained before/after captures when changing them.
+`cinematic.css` retains Home .12, Explore .32, Visit .5 and Place .42, with Visit left -4rem / Place right -8rem crops and a 90rem fade. The same existing atmosphere asset remains full bleed; reading overlays and semantic surfaces stay dark. P0-H's comparison with the older Explore reference supports retaining these public materials and footer (design judgment, not pixel-equal restoration). Choice 4A removes the decorative background from admin: plain semantic surface and system fonts intentionally separate work from public spectacle. Compare [matched captures](qa/p0-hardening/verification.md) when changing these variants.
 
 ## Header and footer contract
 

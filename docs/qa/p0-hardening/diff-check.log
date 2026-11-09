@@ -1,0 +1,11 @@
+warning: in the working copy of '.ui-craft/brief.md', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of '.ui-craft/tokens.md', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'README.md', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'docs/implementation-status.md', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'docs/page-experience.md', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'docs/roadmap/frontend-experience.md', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'resources/css/cinematic.css', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'resources/css/discovery.css', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'resources/js/app.js', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'tools/prove-visual-baseline.mjs', CRLF will be replaced by LF the next time Git touches it
+git diff --check exit: 0

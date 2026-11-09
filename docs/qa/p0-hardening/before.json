@@ -1,0 +1,2218 @@
+{
+  "phase": "before",
+  "browser": "156.0.8078.4",
+  "motion": "reduce",
+  "measurements": [
+    {
+      "name": "home",
+      "width": 390,
+      "url": "http://127.0.0.1:8015/",
+      "viewport": 390,
+      "scrollWidth": 390,
+      "header": {
+        "x": 16,
+        "y": 0,
+        "width": 358,
+        "height": 80
+      },
+      "main": {
+        "x": 16,
+        "y": 80,
+        "width": 358,
+        "height": 4597.140625
+      },
+      "footer": {
+        "x": 0,
+        "y": 4725.140625,
+        "width": 390,
+        "height": 376.484375
+      },
+      "inner": {
+        "x": 16,
+        "y": 4773.140625,
+        "width": 358,
+        "height": 254.484375
+      },
+      "bodyFont": "\"Archive Sans\", \"Segoe UI\", sans-serif",
+      "headingFont": "\"Archive Garamond\", Georgia, serif",
+      "background": "linear-gradient(rgba(13, 12, 10, 0.12), rgb(16, 14, 11) 1440px), url(\"http://127.0.0.1:8015/assets/explore/archive/atmosphere.webp\"), none",
+      "placeColumns": null,
+      "prose": null,
+      "cards": [],
+      "images": [
+        {
+          "slot": 358,
+          "height": 247,
+          "naturalWidth": 357,
+          "currentSrc": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/card",
+          "sizes": "auto, (min-width: 960px) 60vw, 100vw"
+        },
+        {
+          "slot": 137,
+          "height": 137,
+          "naturalWidth": 137,
+          "currentSrc": "http://127.0.0.1:8015/media/f6fb78c4-5c8a-47f1-a4ae-d7d94cd89756/thumbnail",
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw"
+        },
+        {
+          "slot": 137,
+          "height": 137,
+          "naturalWidth": 137,
+          "currentSrc": "http://127.0.0.1:8015/media/73a99b4a-9cb2-4896-ac48-f7b91c9956b0/thumbnail",
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw"
+        },
+        {
+          "slot": 137,
+          "height": 137,
+          "naturalWidth": 137,
+          "currentSrc": "http://127.0.0.1:8015/media/c0b8aa6f-6fa7-4272-9762-a4cad49a7892/thumbnail",
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw"
+        },
+        {
+          "slot": 358,
+          "height": 298,
+          "naturalWidth": 357,
+          "currentSrc": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/card",
+          "sizes": "auto, (min-width: 960px) 60vw, 100vw"
+        },
+        {
+          "slot": 171,
+          "height": 194,
+          "naturalWidth": 171,
+          "currentSrc": "http://127.0.0.1:8015/media/f6fb78c4-5c8a-47f1-a4ae-d7d94cd89756/thumbnail",
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw"
+        },
+        {
+          "slot": 171,
+          "height": 194,
+          "naturalWidth": 171,
+          "currentSrc": "http://127.0.0.1:8015/media/73a99b4a-9cb2-4896-ac48-f7b91c9956b0/thumbnail",
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw"
+        },
+        {
+          "slot": 137,
+          "height": 155,
+          "naturalWidth": 137,
+          "currentSrc": "http://127.0.0.1:8015/media/c0b8aa6f-6fa7-4272-9762-a4cad49a7892/thumbnail",
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw"
+        }
+      ]
+    },
+    {
+      "name": "explore",
+      "width": 390,
+      "url": "http://127.0.0.1:8015/explore",
+      "viewport": 390,
+      "scrollWidth": 390,
+      "header": {
+        "x": 16,
+        "y": 0,
+        "width": 358,
+        "height": 80
+      },
+      "main": {
+        "x": 16,
+        "y": 112,
+        "width": 358,
+        "height": 10773.109375
+      },
+      "footer": {
+        "x": 0,
+        "y": 10933.109375,
+        "width": 390,
+        "height": 376.484375
+      },
+      "inner": {
+        "x": 16,
+        "y": 10981.109375,
+        "width": 358,
+        "height": 254.484375
+      },
+      "bodyFont": "\"Archive Sans\", \"Segoe UI\", sans-serif",
+      "headingFont": "\"Archive Garamond\", Georgia, serif",
+      "background": "linear-gradient(rgba(13, 12, 10, 0.32), rgb(16, 14, 11) 1440px), url(\"http://127.0.0.1:8015/assets/explore/archive/atmosphere.webp\"), none",
+      "placeColumns": null,
+      "prose": null,
+      "cards": [
+        358,
+        358,
+        358,
+        358
+      ],
+      "images": [
+        {
+          "slot": 358,
+          "height": 224,
+          "naturalWidth": 358,
+          "currentSrc": "http://127.0.0.1:8015/media/af4be0ef-eac7-4ac8-a124-932e471a95d6/thumbnail",
+          "sizes": "(min-width: 1920px) 728px, (min-width: 768px) 42vw, calc(100vw - 2rem)"
+        },
+        {
+          "slot": 173,
+          "height": 204,
+          "naturalWidth": 173,
+          "currentSrc": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/thumbnail",
+          "sizes": "auto, (min-width: 1920px) 560px, (min-width: 768px) 32vw, 50vw"
+        },
+        {
+          "slot": 173,
+          "height": 204,
+          "naturalWidth": 172,
+          "currentSrc": "http://127.0.0.1:8015/media/9921afd0-331d-4a13-9f64-89c77ab9c502/thumbnail",
+          "sizes": "auto, (min-width: 1920px) 560px, (min-width: 768px) 32vw, 50vw"
+        },
+        {
+          "slot": 358,
+          "height": 224,
+          "naturalWidth": 357,
+          "currentSrc": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 358,
+          "height": 224,
+          "naturalWidth": 358,
+          "currentSrc": "http://127.0.0.1:8015/media/f6fb78c4-5c8a-47f1-a4ae-d7d94cd89756/thumbnail",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 358,
+          "height": 224,
+          "naturalWidth": 358,
+          "currentSrc": "http://127.0.0.1:8015/media/73a99b4a-9cb2-4896-ac48-f7b91c9956b0/thumbnail",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 358,
+          "height": 224,
+          "naturalWidth": 358,
+          "currentSrc": "http://127.0.0.1:8015/media/c0b8aa6f-6fa7-4272-9762-a4cad49a7892/thumbnail",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 358,
+          "height": 224,
+          "naturalWidth": 358,
+          "currentSrc": "http://127.0.0.1:8015/media/009f931c-b225-48ca-b0ff-cf1878a9befe/thumbnail",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 358,
+          "height": 224,
+          "naturalWidth": 358,
+          "currentSrc": "http://127.0.0.1:8015/media/9a5f9ba9-7358-4731-a33e-1c94d9bf48de/thumbnail",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 358,
+          "height": 224,
+          "naturalWidth": 357,
+          "currentSrc": "http://127.0.0.1:8015/media/fe518825-4a6a-46e5-b724-80e691b70297/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 358,
+          "height": 224,
+          "naturalWidth": 358,
+          "currentSrc": "http://127.0.0.1:8015/media/51f9d4a0-1ee2-4670-9cb0-0cda008d6680/thumbnail",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 358,
+          "height": 224,
+          "naturalWidth": 358,
+          "currentSrc": "http://127.0.0.1:8015/media/303611fe-bc0b-491e-8926-62743e9a8cbc/thumbnail",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 358,
+          "height": 224,
+          "naturalWidth": 358,
+          "currentSrc": "http://127.0.0.1:8015/media/9921afd0-331d-4a13-9f64-89c77ab9c502/thumbnail",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 358,
+          "height": 224,
+          "naturalWidth": 357,
+          "currentSrc": "http://127.0.0.1:8015/media/75024ed7-aa8f-4d92-b61e-72de1e4c55d1/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 358,
+          "height": 224,
+          "naturalWidth": 357,
+          "currentSrc": "http://127.0.0.1:8015/media/55b132bf-2564-45a2-b0c1-40ece50f2d2f/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 358,
+          "height": 224,
+          "naturalWidth": 357,
+          "currentSrc": "http://127.0.0.1:8015/media/7f3cef56-6fbf-4082-a4d0-576c0e7c6d8f/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 358,
+          "height": 224,
+          "naturalWidth": 358,
+          "currentSrc": "http://127.0.0.1:8015/media/f5a4331c-0e03-4f7e-82ec-d511ec2ad316/thumbnail",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 358,
+          "height": 224,
+          "naturalWidth": 357,
+          "currentSrc": "http://127.0.0.1:8015/media/f2987c70-1cf8-47ac-bba0-775ae9bf51be/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 358,
+          "height": 224,
+          "naturalWidth": 358,
+          "currentSrc": "http://127.0.0.1:8015/media/4e392aa5-307b-4aca-bf76-8656152a9137/thumbnail",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 358,
+          "height": 224,
+          "naturalWidth": 358,
+          "currentSrc": "http://127.0.0.1:8015/media/f50b41db-755c-43c5-a5b0-147fce47fa06/thumbnail",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 358,
+          "height": 224,
+          "naturalWidth": 358,
+          "currentSrc": "http://127.0.0.1:8015/media/938e6bf6-4b70-4880-bc7b-084ecc63aa7e/thumbnail",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        }
+      ]
+    },
+    {
+      "name": "visit",
+      "width": 390,
+      "url": "http://127.0.0.1:8015/visit/demo-bara-di-ujung-hari",
+      "viewport": 390,
+      "scrollWidth": 390,
+      "header": {
+        "x": 16,
+        "y": 0,
+        "width": 358,
+        "height": 80
+      },
+      "main": {
+        "x": 16,
+        "y": 104,
+        "width": 358,
+        "height": 6267.921875
+      },
+      "footer": {
+        "x": 0,
+        "y": 6419.921875,
+        "width": 390,
+        "height": 376.484375
+      },
+      "inner": {
+        "x": 16,
+        "y": 6467.921875,
+        "width": 358,
+        "height": 254.484375
+      },
+      "bodyFont": "\"Archive Sans\", \"Segoe UI\", sans-serif",
+      "headingFont": "\"Archive Garamond\", Georgia, serif",
+      "background": "linear-gradient(rgba(13, 12, 10, 0.5), rgb(16, 14, 11) 1440px), url(\"http://127.0.0.1:8015/assets/explore/archive/atmosphere.webp\"), none",
+      "placeColumns": null,
+      "prose": {
+        "x": 16,
+        "y": 1213.5625,
+        "width": 358,
+        "height": 319.0625
+      },
+      "cards": [
+        358
+      ],
+      "images": [
+        {
+          "slot": 358,
+          "height": 544,
+          "naturalWidth": 357,
+          "currentSrc": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/card",
+          "sizes": "(min-width: 1920px) 1792px, (min-width: 1024px) 93.334vw, (min-width: 481px) calc(100vw - 3rem), calc(100vw - 2rem)"
+        },
+        {
+          "slot": 358,
+          "height": 286,
+          "naturalWidth": 357,
+          "currentSrc": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/card",
+          "sizes": "auto, (min-width: 960px) 40vw, 100vw"
+        },
+        {
+          "slot": 358,
+          "height": 286,
+          "naturalWidth": 357,
+          "currentSrc": "http://127.0.0.1:8015/media/21946faa-132d-461c-aa65-420e2357991d/card",
+          "sizes": "auto, (min-width: 960px) 40vw, 100vw"
+        },
+        {
+          "slot": 358,
+          "height": 275,
+          "naturalWidth": 357,
+          "currentSrc": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/card",
+          "sizes": "auto, (min-width: 960px) 60vw, 100vw"
+        },
+        {
+          "slot": 171,
+          "height": 137,
+          "naturalWidth": 171,
+          "currentSrc": "http://127.0.0.1:8015/media/21946faa-132d-461c-aa65-420e2357991d/thumbnail",
+          "sizes": "auto, (min-width: 960px) 60vw, 100vw"
+        },
+        {
+          "slot": 358,
+          "height": 231,
+          "naturalWidth": 357,
+          "currentSrc": "http://127.0.0.1:8015/media/7f3cef56-6fbf-4082-a4d0-576c0e7c6d8f/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        }
+      ]
+    },
+    {
+      "name": "place",
+      "width": 390,
+      "url": "http://127.0.0.1:8015/place/demo-bara-senja",
+      "viewport": 390,
+      "scrollWidth": 390,
+      "header": {
+        "x": 16,
+        "y": 0,
+        "width": 358,
+        "height": 80
+      },
+      "main": {
+        "x": 16,
+        "y": 104,
+        "width": 358,
+        "height": 2026.984375
+      },
+      "footer": {
+        "x": 0,
+        "y": 2178.984375,
+        "width": 390,
+        "height": 376.484375
+      },
+      "inner": {
+        "x": 16,
+        "y": 2226.984375,
+        "width": 358,
+        "height": 254.484375
+      },
+      "bodyFont": "\"Archive Sans\", \"Segoe UI\", sans-serif",
+      "headingFont": "\"Archive Garamond\", Georgia, serif",
+      "background": "linear-gradient(rgba(13, 12, 10, 0.42), rgb(16, 14, 11) 1440px), url(\"http://127.0.0.1:8015/assets/explore/archive/atmosphere.webp\"), none",
+      "placeColumns": "358px",
+      "prose": null,
+      "cards": [
+        358,
+        358
+      ],
+      "images": [
+        {
+          "slot": 358,
+          "height": 286,
+          "naturalWidth": 357,
+          "currentSrc": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/card",
+          "sizes": "(min-width: 1920px) 800px, (min-width: 768px) 46vw, calc(100vw - 2rem)"
+        },
+        {
+          "slot": 358,
+          "height": 231,
+          "naturalWidth": 357,
+          "currentSrc": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 358,
+          "height": 231,
+          "naturalWidth": 357,
+          "currentSrc": "http://127.0.0.1:8015/media/7f3cef56-6fbf-4082-a4d0-576c0e7c6d8f/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        }
+      ]
+    },
+    {
+      "name": "error",
+      "width": 390,
+      "url": "http://127.0.0.1:8015/visual-missing-page",
+      "viewport": 390,
+      "scrollWidth": 390,
+      "header": {
+        "x": 16,
+        "y": 0,
+        "width": 358,
+        "height": 80
+      },
+      "main": {
+        "x": 16,
+        "y": 80,
+        "width": 358,
+        "height": 697.46875
+      },
+      "footer": {
+        "x": 0,
+        "y": 825.46875,
+        "width": 390,
+        "height": 375.28125
+      },
+      "inner": {
+        "x": 16,
+        "y": 873.46875,
+        "width": 358,
+        "height": 253.28125
+      },
+      "bodyFont": "\"Archive Sans\", \"Segoe UI\", sans-serif",
+      "headingFont": "\"Archive Garamond\", Georgia, serif",
+      "background": "none",
+      "placeColumns": null,
+      "prose": null,
+      "cards": [],
+      "images": []
+    },
+    {
+      "name": "home",
+      "width": 1440,
+      "url": "http://127.0.0.1:8015/",
+      "viewport": 1440,
+      "scrollWidth": 1440,
+      "header": {
+        "x": 48,
+        "y": 0,
+        "width": 1344,
+        "height": 80
+      },
+      "main": {
+        "x": 48,
+        "y": 80,
+        "width": 1344,
+        "height": 3519.328125
+      },
+      "footer": {
+        "x": 0,
+        "y": 3671.328125,
+        "width": 1440,
+        "height": 351.0625
+      },
+      "inner": {
+        "x": 48,
+        "y": 3743.328125,
+        "width": 1344,
+        "height": 205.0625
+      },
+      "bodyFont": "\"Archive Sans\", \"Segoe UI\", sans-serif",
+      "headingFont": "\"Archive Garamond\", Georgia, serif",
+      "background": "linear-gradient(rgba(13, 12, 10, 0.12), rgb(16, 14, 11) 1440px), url(\"http://127.0.0.1:8015/assets/explore/archive/atmosphere.webp\"), none",
+      "placeColumns": null,
+      "prose": null,
+      "cards": [],
+      "images": [
+        {
+          "slot": 750,
+          "height": 518,
+          "naturalWidth": 750,
+          "currentSrc": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/hero",
+          "sizes": "auto, (min-width: 960px) 60vw, 100vw"
+        },
+        {
+          "slot": 218,
+          "height": 218,
+          "naturalWidth": 218,
+          "currentSrc": "http://127.0.0.1:8015/media/f6fb78c4-5c8a-47f1-a4ae-d7d94cd89756/thumbnail",
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw"
+        },
+        {
+          "slot": 218,
+          "height": 218,
+          "naturalWidth": 218,
+          "currentSrc": "http://127.0.0.1:8015/media/73a99b4a-9cb2-4896-ac48-f7b91c9956b0/thumbnail",
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw"
+        },
+        {
+          "slot": 218,
+          "height": 218,
+          "naturalWidth": 218,
+          "currentSrc": "http://127.0.0.1:8015/media/c0b8aa6f-6fa7-4272-9762-a4cad49a7892/thumbnail",
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw"
+        },
+        {
+          "slot": 467,
+          "height": 584,
+          "naturalWidth": 466,
+          "currentSrc": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/card",
+          "sizes": "auto, (min-width: 960px) 60vw, 100vw"
+        },
+        {
+          "slot": 406,
+          "height": 462,
+          "naturalWidth": 406,
+          "currentSrc": "http://127.0.0.1:8015/media/f6fb78c4-5c8a-47f1-a4ae-d7d94cd89756/card",
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw"
+        },
+        {
+          "slot": 406,
+          "height": 462,
+          "naturalWidth": 406,
+          "currentSrc": "http://127.0.0.1:8015/media/73a99b4a-9cb2-4896-ac48-f7b91c9956b0/card",
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw"
+        },
+        {
+          "slot": 349,
+          "height": 396,
+          "naturalWidth": 349,
+          "currentSrc": "http://127.0.0.1:8015/media/c0b8aa6f-6fa7-4272-9762-a4cad49a7892/thumbnail",
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw"
+        }
+      ]
+    },
+    {
+      "name": "explore",
+      "width": 1440,
+      "url": "http://127.0.0.1:8015/explore",
+      "viewport": 1440,
+      "scrollWidth": 1440,
+      "header": {
+        "x": 48,
+        "y": 0,
+        "width": 1344,
+        "height": 80
+      },
+      "main": {
+        "x": 48,
+        "y": 112,
+        "width": 1344,
+        "height": 3885.25
+      },
+      "footer": {
+        "x": 0,
+        "y": 4069.25,
+        "width": 1440,
+        "height": 351.0625
+      },
+      "inner": {
+        "x": 48,
+        "y": 4141.25,
+        "width": 1344,
+        "height": 205.0625
+      },
+      "bodyFont": "\"Archive Sans\", \"Segoe UI\", sans-serif",
+      "headingFont": "\"Archive Garamond\", Georgia, serif",
+      "background": "linear-gradient(rgba(13, 12, 10, 0.32), rgb(16, 14, 11) 1440px), url(\"http://127.0.0.1:8015/assets/explore/archive/atmosphere.webp\"), none",
+      "placeColumns": null,
+      "prose": null,
+      "cards": [
+        664,
+        664,
+        664,
+        664
+      ],
+      "images": [
+        {
+          "slot": 541,
+          "height": 433,
+          "naturalWidth": 604,
+          "currentSrc": "http://127.0.0.1:8015/media/af4be0ef-eac7-4ac8-a124-932e471a95d6/card",
+          "sizes": "(min-width: 1920px) 728px, (min-width: 768px) 42vw, calc(100vw - 2rem)"
+        },
+        {
+          "slot": 417,
+          "height": 379,
+          "naturalWidth": 417,
+          "currentSrc": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/card",
+          "sizes": "auto, (min-width: 1920px) 560px, (min-width: 768px) 32vw, 50vw"
+        },
+        {
+          "slot": 354,
+          "height": 393,
+          "naturalWidth": 354,
+          "currentSrc": "http://127.0.0.1:8015/media/9921afd0-331d-4a13-9f64-89c77ab9c502/thumbnail",
+          "sizes": "auto, (min-width: 1920px) 560px, (min-width: 768px) 32vw, 50vw"
+        },
+        {
+          "slot": 305,
+          "height": 267,
+          "naturalWidth": 305,
+          "currentSrc": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 305,
+          "height": 267,
+          "naturalWidth": 305,
+          "currentSrc": "http://127.0.0.1:8015/media/f6fb78c4-5c8a-47f1-a4ae-d7d94cd89756/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 305,
+          "height": 267,
+          "naturalWidth": 305,
+          "currentSrc": "http://127.0.0.1:8015/media/73a99b4a-9cb2-4896-ac48-f7b91c9956b0/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 305,
+          "height": 267,
+          "naturalWidth": 305,
+          "currentSrc": "http://127.0.0.1:8015/media/c0b8aa6f-6fa7-4272-9762-a4cad49a7892/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 305,
+          "height": 267,
+          "naturalWidth": 305,
+          "currentSrc": "http://127.0.0.1:8015/media/009f931c-b225-48ca-b0ff-cf1878a9befe/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 305,
+          "height": 267,
+          "naturalWidth": 305,
+          "currentSrc": "http://127.0.0.1:8015/media/9a5f9ba9-7358-4731-a33e-1c94d9bf48de/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 305,
+          "height": 267,
+          "naturalWidth": 305,
+          "currentSrc": "http://127.0.0.1:8015/media/fe518825-4a6a-46e5-b724-80e691b70297/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 305,
+          "height": 267,
+          "naturalWidth": 305,
+          "currentSrc": "http://127.0.0.1:8015/media/51f9d4a0-1ee2-4670-9cb0-0cda008d6680/thumbnail",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 305,
+          "height": 267,
+          "naturalWidth": 305,
+          "currentSrc": "http://127.0.0.1:8015/media/303611fe-bc0b-491e-8926-62743e9a8cbc/thumbnail",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 305,
+          "height": 267,
+          "naturalWidth": 305,
+          "currentSrc": "http://127.0.0.1:8015/media/9921afd0-331d-4a13-9f64-89c77ab9c502/thumbnail",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 305,
+          "height": 318,
+          "naturalWidth": 305,
+          "currentSrc": "http://127.0.0.1:8015/media/75024ed7-aa8f-4d92-b61e-72de1e4c55d1/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 305,
+          "height": 318,
+          "naturalWidth": 305,
+          "currentSrc": "http://127.0.0.1:8015/media/55b132bf-2564-45a2-b0c1-40ece50f2d2f/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 305,
+          "height": 267,
+          "naturalWidth": 305,
+          "currentSrc": "http://127.0.0.1:8015/media/7f3cef56-6fbf-4082-a4d0-576c0e7c6d8f/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 305,
+          "height": 267,
+          "naturalWidth": 305,
+          "currentSrc": "http://127.0.0.1:8015/media/f5a4331c-0e03-4f7e-82ec-d511ec2ad316/thumbnail",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 305,
+          "height": 267,
+          "naturalWidth": 305,
+          "currentSrc": "http://127.0.0.1:8015/media/f2987c70-1cf8-47ac-bba0-775ae9bf51be/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 305,
+          "height": 267,
+          "naturalWidth": 305,
+          "currentSrc": "http://127.0.0.1:8015/media/4e392aa5-307b-4aca-bf76-8656152a9137/thumbnail",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 305,
+          "height": 267,
+          "naturalWidth": 305,
+          "currentSrc": "http://127.0.0.1:8015/media/f50b41db-755c-43c5-a5b0-147fce47fa06/thumbnail",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 305,
+          "height": 267,
+          "naturalWidth": 305,
+          "currentSrc": "http://127.0.0.1:8015/media/938e6bf6-4b70-4880-bc7b-084ecc63aa7e/thumbnail",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        }
+      ]
+    },
+    {
+      "name": "visit",
+      "width": 1440,
+      "url": "http://127.0.0.1:8015/visit/demo-bara-di-ujung-hari",
+      "viewport": 1440,
+      "scrollWidth": 1440,
+      "header": {
+        "x": 48,
+        "y": 0,
+        "width": 1344,
+        "height": 80
+      },
+      "main": {
+        "x": 48,
+        "y": 104,
+        "width": 1344,
+        "height": 5908.953125
+      },
+      "footer": {
+        "x": 0,
+        "y": 6084.953125,
+        "width": 1440,
+        "height": 351.0625
+      },
+      "inner": {
+        "x": 48,
+        "y": 6156.953125,
+        "width": 1344,
+        "height": 205.0625
+      },
+      "bodyFont": "\"Archive Sans\", \"Segoe UI\", sans-serif",
+      "headingFont": "\"Archive Garamond\", Georgia, serif",
+      "background": "linear-gradient(rgba(13, 12, 10, 0.5), rgb(16, 14, 11) 1440px), url(\"http://127.0.0.1:8015/assets/explore/archive/atmosphere.webp\"), none",
+      "placeColumns": null,
+      "prose": {
+        "x": 600.171875,
+        "y": 1064.328125,
+        "width": 791.828125,
+        "height": 274.359375
+      },
+      "cards": [
+        656
+      ],
+      "images": [
+        {
+          "slot": 1344,
+          "height": 688,
+          "naturalWidth": 1344,
+          "currentSrc": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/hero",
+          "sizes": "(min-width: 1920px) 1792px, (min-width: 1024px) 93.334vw, (min-width: 481px) calc(100vw - 3rem), calc(100vw - 2rem)"
+        },
+        {
+          "slot": 585,
+          "height": 532,
+          "naturalWidth": 585,
+          "currentSrc": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/hero",
+          "sizes": "auto, (min-width: 960px) 40vw, 100vw"
+        },
+        {
+          "slot": 585,
+          "height": 532,
+          "naturalWidth": 584,
+          "currentSrc": "http://127.0.0.1:8015/media/21946faa-132d-461c-aa65-420e2357991d/card",
+          "sizes": "auto, (min-width: 960px) 40vw, 100vw"
+        },
+        {
+          "slot": 930,
+          "height": 809,
+          "naturalWidth": 930,
+          "currentSrc": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/hero",
+          "sizes": "auto, (min-width: 960px) 60vw, 100vw"
+        },
+        {
+          "slot": 398,
+          "height": 318,
+          "naturalWidth": 398,
+          "currentSrc": "http://127.0.0.1:8015/media/21946faa-132d-461c-aa65-420e2357991d/card",
+          "sizes": "auto, (min-width: 960px) 60vw, 100vw"
+        },
+        {
+          "slot": 256,
+          "height": 360,
+          "naturalWidth": 256,
+          "currentSrc": "http://127.0.0.1:8015/media/7f3cef56-6fbf-4082-a4d0-576c0e7c6d8f/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        }
+      ]
+    },
+    {
+      "name": "place",
+      "width": 1440,
+      "url": "http://127.0.0.1:8015/place/demo-bara-senja",
+      "viewport": 1440,
+      "scrollWidth": 1440,
+      "header": {
+        "x": 48,
+        "y": 0,
+        "width": 1344,
+        "height": 80
+      },
+      "main": {
+        "x": 48,
+        "y": 104,
+        "width": 1344,
+        "height": 1562.171875
+      },
+      "footer": {
+        "x": 0,
+        "y": 1738.171875,
+        "width": 1440,
+        "height": 351.0625
+      },
+      "inner": {
+        "x": 48,
+        "y": 1810.171875,
+        "width": 1344,
+        "height": 205.0625
+      },
+      "bodyFont": "\"Archive Sans\", \"Segoe UI\", sans-serif",
+      "headingFont": "\"Archive Garamond\", Georgia, serif",
+      "background": "linear-gradient(rgba(13, 12, 10, 0.42), rgb(16, 14, 11) 1440px), url(\"http://127.0.0.1:8015/assets/explore/archive/atmosphere.webp\"), none",
+      "placeColumns": "706.906px 589.078px",
+      "prose": null,
+      "cards": [
+        928,
+        928
+      ],
+      "images": [
+        {
+          "slot": 589,
+          "height": 471,
+          "naturalWidth": 662,
+          "currentSrc": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/hero",
+          "sizes": "(min-width: 1920px) 800px, (min-width: 768px) 46vw, calc(100vw - 2rem)"
+        },
+        {
+          "slot": 362,
+          "height": 390,
+          "naturalWidth": 362,
+          "currentSrc": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/hero",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 362,
+          "height": 360,
+          "naturalWidth": 362,
+          "currentSrc": "http://127.0.0.1:8015/media/7f3cef56-6fbf-4082-a4d0-576c0e7c6d8f/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        }
+      ]
+    },
+    {
+      "name": "error",
+      "width": 1440,
+      "url": "http://127.0.0.1:8015/visual-missing-page",
+      "viewport": 1440,
+      "scrollWidth": 1440,
+      "header": {
+        "x": 48,
+        "y": 0,
+        "width": 1344,
+        "height": 80
+      },
+      "main": {
+        "x": 48,
+        "y": 80,
+        "width": 1344,
+        "height": 562.890625
+      },
+      "footer": {
+        "x": 0,
+        "y": 714.890625,
+        "width": 1440,
+        "height": 351.0625
+      },
+      "inner": {
+        "x": 48,
+        "y": 786.890625,
+        "width": 1344,
+        "height": 205.0625
+      },
+      "bodyFont": "\"Archive Sans\", \"Segoe UI\", sans-serif",
+      "headingFont": "\"Archive Garamond\", Georgia, serif",
+      "background": "none",
+      "placeColumns": null,
+      "prose": null,
+      "cards": [],
+      "images": []
+    },
+    {
+      "name": "home",
+      "width": 1920,
+      "url": "http://127.0.0.1:8015/",
+      "viewport": 1920,
+      "scrollWidth": 1920,
+      "header": {
+        "x": 64,
+        "y": 0,
+        "width": 1792,
+        "height": 80
+      },
+      "main": {
+        "x": 64,
+        "y": 80,
+        "width": 1792,
+        "height": 4180.6875
+      },
+      "footer": {
+        "x": 0,
+        "y": 4356.6875,
+        "width": 1920,
+        "height": 412.96875
+      },
+      "inner": {
+        "x": 64,
+        "y": 4452.6875,
+        "width": 1792,
+        "height": 242.96875
+      },
+      "bodyFont": "\"Archive Sans\", \"Segoe UI\", sans-serif",
+      "headingFont": "\"Archive Garamond\", Georgia, serif",
+      "background": "linear-gradient(rgba(13, 12, 10, 0.12), rgb(16, 14, 11) 1440px), url(\"http://127.0.0.1:8015/assets/explore/archive/atmosphere.webp\"), none",
+      "placeColumns": null,
+      "prose": null,
+      "cards": [],
+      "images": [
+        {
+          "slot": 1008,
+          "height": 695,
+          "naturalWidth": 1008,
+          "currentSrc": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/hero",
+          "sizes": "auto, (min-width: 960px) 60vw, 100vw"
+        },
+        {
+          "slot": 296,
+          "height": 296,
+          "naturalWidth": 296,
+          "currentSrc": "http://127.0.0.1:8015/media/f6fb78c4-5c8a-47f1-a4ae-d7d94cd89756/thumbnail",
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw"
+        },
+        {
+          "slot": 296,
+          "height": 296,
+          "naturalWidth": 296,
+          "currentSrc": "http://127.0.0.1:8015/media/73a99b4a-9cb2-4896-ac48-f7b91c9956b0/thumbnail",
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw"
+        },
+        {
+          "slot": 296,
+          "height": 296,
+          "naturalWidth": 296,
+          "currentSrc": "http://127.0.0.1:8015/media/c0b8aa6f-6fa7-4272-9762-a4cad49a7892/thumbnail",
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw"
+        },
+        {
+          "slot": 631,
+          "height": 789,
+          "naturalWidth": 631,
+          "currentSrc": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/hero",
+          "sizes": "auto, (min-width: 960px) 60vw, 100vw"
+        },
+        {
+          "slot": 549,
+          "height": 623,
+          "naturalWidth": 549,
+          "currentSrc": "http://127.0.0.1:8015/media/f6fb78c4-5c8a-47f1-a4ae-d7d94cd89756/card",
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw"
+        },
+        {
+          "slot": 549,
+          "height": 623,
+          "naturalWidth": 549,
+          "currentSrc": "http://127.0.0.1:8015/media/73a99b4a-9cb2-4896-ac48-f7b91c9956b0/card",
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw"
+        },
+        {
+          "slot": 470,
+          "height": 534,
+          "naturalWidth": 470,
+          "currentSrc": "http://127.0.0.1:8015/media/c0b8aa6f-6fa7-4272-9762-a4cad49a7892/card",
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw"
+        }
+      ]
+    },
+    {
+      "name": "explore",
+      "width": 1920,
+      "url": "http://127.0.0.1:8015/explore",
+      "viewport": 1920,
+      "scrollWidth": 1920,
+      "header": {
+        "x": 64,
+        "y": 0,
+        "width": 1792,
+        "height": 80
+      },
+      "main": {
+        "x": 64,
+        "y": 112,
+        "width": 1792,
+        "height": 3871.359375
+      },
+      "footer": {
+        "x": 0,
+        "y": 4079.359375,
+        "width": 1920,
+        "height": 412.96875
+      },
+      "inner": {
+        "x": 64,
+        "y": 4175.359375,
+        "width": 1792,
+        "height": 242.96875
+      },
+      "bodyFont": "\"Archive Sans\", \"Segoe UI\", sans-serif",
+      "headingFont": "\"Archive Garamond\", Georgia, serif",
+      "background": "linear-gradient(rgba(13, 12, 10, 0.32), rgb(16, 14, 11) 1440px), url(\"http://127.0.0.1:8015/assets/explore/archive/atmosphere.webp\"), none",
+      "placeColumns": null,
+      "prose": null,
+      "cards": [
+        888,
+        888,
+        888,
+        888
+      ],
+      "images": [
+        {
+          "slot": 726,
+          "height": 581,
+          "naturalWidth": 727,
+          "currentSrc": "http://127.0.0.1:8015/media/af4be0ef-eac7-4ac8-a124-932e471a95d6/card",
+          "sizes": "(min-width: 1920px) 728px, (min-width: 768px) 42vw, calc(100vw - 2rem)"
+        },
+        {
+          "slot": 559,
+          "height": 508,
+          "naturalWidth": 558,
+          "currentSrc": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/card",
+          "sizes": "auto, (min-width: 1920px) 560px, (min-width: 768px) 32vw, 50vw"
+        },
+        {
+          "slot": 475,
+          "height": 528,
+          "naturalWidth": 475,
+          "currentSrc": "http://127.0.0.1:8015/media/9921afd0-331d-4a13-9f64-89c77ab9c502/card",
+          "sizes": "auto, (min-width: 1920px) 560px, (min-width: 768px) 32vw, 50vw"
+        },
+        {
+          "slot": 408,
+          "height": 270,
+          "naturalWidth": 408,
+          "currentSrc": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 408,
+          "height": 270,
+          "naturalWidth": 408,
+          "currentSrc": "http://127.0.0.1:8015/media/f6fb78c4-5c8a-47f1-a4ae-d7d94cd89756/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 408,
+          "height": 270,
+          "naturalWidth": 408,
+          "currentSrc": "http://127.0.0.1:8015/media/73a99b4a-9cb2-4896-ac48-f7b91c9956b0/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 408,
+          "height": 270,
+          "naturalWidth": 408,
+          "currentSrc": "http://127.0.0.1:8015/media/c0b8aa6f-6fa7-4272-9762-a4cad49a7892/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 408,
+          "height": 270,
+          "naturalWidth": 408,
+          "currentSrc": "http://127.0.0.1:8015/media/009f931c-b225-48ca-b0ff-cf1878a9befe/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 408,
+          "height": 270,
+          "naturalWidth": 408,
+          "currentSrc": "http://127.0.0.1:8015/media/9a5f9ba9-7358-4731-a33e-1c94d9bf48de/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 408,
+          "height": 241,
+          "naturalWidth": 408,
+          "currentSrc": "http://127.0.0.1:8015/media/fe518825-4a6a-46e5-b724-80e691b70297/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 408,
+          "height": 241,
+          "naturalWidth": 408,
+          "currentSrc": "http://127.0.0.1:8015/media/51f9d4a0-1ee2-4670-9cb0-0cda008d6680/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 408,
+          "height": 241,
+          "naturalWidth": 408,
+          "currentSrc": "http://127.0.0.1:8015/media/303611fe-bc0b-491e-8926-62743e9a8cbc/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 408,
+          "height": 241,
+          "naturalWidth": 408,
+          "currentSrc": "http://127.0.0.1:8015/media/9921afd0-331d-4a13-9f64-89c77ab9c502/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 408,
+          "height": 241,
+          "naturalWidth": 408,
+          "currentSrc": "http://127.0.0.1:8015/media/75024ed7-aa8f-4d92-b61e-72de1e4c55d1/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 408,
+          "height": 241,
+          "naturalWidth": 408,
+          "currentSrc": "http://127.0.0.1:8015/media/55b132bf-2564-45a2-b0c1-40ece50f2d2f/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 408,
+          "height": 270,
+          "naturalWidth": 408,
+          "currentSrc": "http://127.0.0.1:8015/media/7f3cef56-6fbf-4082-a4d0-576c0e7c6d8f/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 408,
+          "height": 270,
+          "naturalWidth": 408,
+          "currentSrc": "http://127.0.0.1:8015/media/f5a4331c-0e03-4f7e-82ec-d511ec2ad316/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 408,
+          "height": 241,
+          "naturalWidth": 408,
+          "currentSrc": "http://127.0.0.1:8015/media/f2987c70-1cf8-47ac-bba0-775ae9bf51be/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 408,
+          "height": 241,
+          "naturalWidth": 408,
+          "currentSrc": "http://127.0.0.1:8015/media/4e392aa5-307b-4aca-bf76-8656152a9137/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 408,
+          "height": 241,
+          "naturalWidth": 408,
+          "currentSrc": "http://127.0.0.1:8015/media/f50b41db-755c-43c5-a5b0-147fce47fa06/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 408,
+          "height": 241,
+          "naturalWidth": 408,
+          "currentSrc": "http://127.0.0.1:8015/media/938e6bf6-4b70-4880-bc7b-084ecc63aa7e/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        }
+      ]
+    },
+    {
+      "name": "visit",
+      "width": 1920,
+      "url": "http://127.0.0.1:8015/visit/demo-bara-di-ujung-hari",
+      "viewport": 1920,
+      "scrollWidth": 1920,
+      "header": {
+        "x": 64,
+        "y": 0,
+        "width": 1792,
+        "height": 80
+      },
+      "main": {
+        "x": 64,
+        "y": 104,
+        "width": 1792,
+        "height": 6660.609375
+      },
+      "footer": {
+        "x": 0,
+        "y": 6860.609375,
+        "width": 1920,
+        "height": 412.96875
+      },
+      "inner": {
+        "x": 64,
+        "y": 6956.609375,
+        "width": 1792,
+        "height": 242.96875
+      },
+      "bodyFont": "\"Archive Sans\", \"Segoe UI\", sans-serif",
+      "headingFont": "\"Archive Garamond\", Georgia, serif",
+      "background": "linear-gradient(rgba(13, 12, 10, 0.5), rgb(16, 14, 11) 1440px), url(\"http://127.0.0.1:8015/assets/explore/archive/atmosphere.webp\"), none",
+      "placeColumns": null,
+      "prose": {
+        "x": 788.140625,
+        "y": 1075.53125,
+        "width": 893.015625,
+        "height": 286.671875
+      },
+      "cards": [
+        880
+      ],
+      "images": [
+        {
+          "slot": 1792,
+          "height": 688,
+          "naturalWidth": 1792,
+          "currentSrc": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/hero",
+          "sizes": "(min-width: 1920px) 1792px, (min-width: 1024px) 93.334vw, (min-width: 481px) calc(100vw - 3rem), calc(100vw - 2rem)"
+        },
+        {
+          "slot": 785,
+          "height": 714,
+          "naturalWidth": 785,
+          "currentSrc": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/hero",
+          "sizes": "auto, (min-width: 960px) 40vw, 100vw"
+        },
+        {
+          "slot": 785,
+          "height": 714,
+          "naturalWidth": 785,
+          "currentSrc": "http://127.0.0.1:8015/media/21946faa-132d-461c-aa65-420e2357991d/hero",
+          "sizes": "auto, (min-width: 960px) 40vw, 100vw"
+        },
+        {
+          "slot": 1243,
+          "height": 1081,
+          "naturalWidth": 1243,
+          "currentSrc": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/hero",
+          "sizes": "auto, (min-width: 960px) 60vw, 100vw"
+        },
+        {
+          "slot": 533,
+          "height": 427,
+          "naturalWidth": 533,
+          "currentSrc": "http://127.0.0.1:8015/media/21946faa-132d-461c-aa65-420e2357991d/card",
+          "sizes": "auto, (min-width: 960px) 60vw, 100vw"
+        },
+        {
+          "slot": 343,
+          "height": 360,
+          "naturalWidth": 343,
+          "currentSrc": "http://127.0.0.1:8015/media/7f3cef56-6fbf-4082-a4d0-576c0e7c6d8f/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        }
+      ]
+    },
+    {
+      "name": "place",
+      "width": 1920,
+      "url": "http://127.0.0.1:8015/place/demo-bara-senja",
+      "viewport": 1920,
+      "scrollWidth": 1920,
+      "header": {
+        "x": 64,
+        "y": 0,
+        "width": 1792,
+        "height": 80
+      },
+      "main": {
+        "x": 64,
+        "y": 104,
+        "width": 1792,
+        "height": 1725.09375
+      },
+      "footer": {
+        "x": 0,
+        "y": 1925.09375,
+        "width": 1920,
+        "height": 412.96875
+      },
+      "inner": {
+        "x": 64,
+        "y": 2021.09375,
+        "width": 1792,
+        "height": 242.96875
+      },
+      "bodyFont": "\"Archive Sans\", \"Segoe UI\", sans-serif",
+      "headingFont": "\"Archive Garamond\", Georgia, serif",
+      "background": "linear-gradient(rgba(13, 12, 10, 0.42), rgb(16, 14, 11) 1440px), url(\"http://127.0.0.1:8015/assets/explore/archive/atmosphere.webp\"), none",
+      "placeColumns": "951.266px 792.719px",
+      "prose": null,
+      "cards": [
+        928,
+        928
+      ],
+      "images": [
+        {
+          "slot": 793,
+          "height": 634,
+          "naturalWidth": 800,
+          "currentSrc": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/hero",
+          "sizes": "(min-width: 1920px) 800px, (min-width: 768px) 46vw, calc(100vw - 2rem)"
+        },
+        {
+          "slot": 362,
+          "height": 390,
+          "naturalWidth": 362,
+          "currentSrc": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/hero",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 362,
+          "height": 360,
+          "naturalWidth": 362,
+          "currentSrc": "http://127.0.0.1:8015/media/7f3cef56-6fbf-4082-a4d0-576c0e7c6d8f/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        }
+      ]
+    },
+    {
+      "name": "error",
+      "width": 1920,
+      "url": "http://127.0.0.1:8015/visual-missing-page",
+      "viewport": 1920,
+      "scrollWidth": 1920,
+      "header": {
+        "x": 64,
+        "y": 0,
+        "width": 1792,
+        "height": 80
+      },
+      "main": {
+        "x": 64,
+        "y": 80,
+        "width": 1792,
+        "height": 615.625
+      },
+      "footer": {
+        "x": 0,
+        "y": 791.625,
+        "width": 1920,
+        "height": 412.96875
+      },
+      "inner": {
+        "x": 64,
+        "y": 887.625,
+        "width": 1792,
+        "height": 242.96875
+      },
+      "bodyFont": "\"Archive Sans\", \"Segoe UI\", sans-serif",
+      "headingFont": "\"Archive Garamond\", Georgia, serif",
+      "background": "none",
+      "placeColumns": null,
+      "prose": null,
+      "cards": [],
+      "images": []
+    },
+    {
+      "name": "home",
+      "width": 2560,
+      "url": "http://127.0.0.1:8015/",
+      "viewport": 2560,
+      "scrollWidth": 2560,
+      "header": {
+        "x": 384,
+        "y": 0,
+        "width": 1792,
+        "height": 80
+      },
+      "main": {
+        "x": 384,
+        "y": 80,
+        "width": 1792,
+        "height": 4196.6875
+      },
+      "footer": {
+        "x": 0,
+        "y": 4372.6875,
+        "width": 2560,
+        "height": 412.96875
+      },
+      "inner": {
+        "x": 384,
+        "y": 4468.6875,
+        "width": 1792,
+        "height": 242.96875
+      },
+      "bodyFont": "\"Archive Sans\", \"Segoe UI\", sans-serif",
+      "headingFont": "\"Archive Garamond\", Georgia, serif",
+      "background": "linear-gradient(rgba(13, 12, 10, 0.12), rgb(16, 14, 11) 1440px), url(\"http://127.0.0.1:8015/assets/explore/archive/atmosphere.webp\"), none",
+      "placeColumns": null,
+      "prose": null,
+      "cards": [],
+      "images": [
+        {
+          "slot": 1008,
+          "height": 695,
+          "naturalWidth": 1008,
+          "currentSrc": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/hero",
+          "sizes": "auto, (min-width: 960px) 60vw, 100vw"
+        },
+        {
+          "slot": 296,
+          "height": 296,
+          "naturalWidth": 296,
+          "currentSrc": "http://127.0.0.1:8015/media/f6fb78c4-5c8a-47f1-a4ae-d7d94cd89756/thumbnail",
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw"
+        },
+        {
+          "slot": 296,
+          "height": 296,
+          "naturalWidth": 296,
+          "currentSrc": "http://127.0.0.1:8015/media/73a99b4a-9cb2-4896-ac48-f7b91c9956b0/thumbnail",
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw"
+        },
+        {
+          "slot": 296,
+          "height": 296,
+          "naturalWidth": 296,
+          "currentSrc": "http://127.0.0.1:8015/media/c0b8aa6f-6fa7-4272-9762-a4cad49a7892/thumbnail",
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw"
+        },
+        {
+          "slot": 631,
+          "height": 789,
+          "naturalWidth": 631,
+          "currentSrc": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/hero",
+          "sizes": "auto, (min-width: 960px) 60vw, 100vw"
+        },
+        {
+          "slot": 549,
+          "height": 623,
+          "naturalWidth": 549,
+          "currentSrc": "http://127.0.0.1:8015/media/f6fb78c4-5c8a-47f1-a4ae-d7d94cd89756/card",
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw"
+        },
+        {
+          "slot": 549,
+          "height": 623,
+          "naturalWidth": 549,
+          "currentSrc": "http://127.0.0.1:8015/media/73a99b4a-9cb2-4896-ac48-f7b91c9956b0/card",
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw"
+        },
+        {
+          "slot": 470,
+          "height": 534,
+          "naturalWidth": 470,
+          "currentSrc": "http://127.0.0.1:8015/media/c0b8aa6f-6fa7-4272-9762-a4cad49a7892/card",
+          "sizes": "auto, (min-width: 960px) 28vw, 100vw"
+        }
+      ]
+    },
+    {
+      "name": "explore",
+      "width": 2560,
+      "url": "http://127.0.0.1:8015/explore",
+      "viewport": 2560,
+      "scrollWidth": 2560,
+      "header": {
+        "x": 384,
+        "y": 0,
+        "width": 1792,
+        "height": 80
+      },
+      "main": {
+        "x": 384,
+        "y": 112,
+        "width": 1792,
+        "height": 3871.359375
+      },
+      "footer": {
+        "x": 0,
+        "y": 4079.359375,
+        "width": 2560,
+        "height": 412.96875
+      },
+      "inner": {
+        "x": 384,
+        "y": 4175.359375,
+        "width": 1792,
+        "height": 242.96875
+      },
+      "bodyFont": "\"Archive Sans\", \"Segoe UI\", sans-serif",
+      "headingFont": "\"Archive Garamond\", Georgia, serif",
+      "background": "linear-gradient(rgba(13, 12, 10, 0.32), rgb(16, 14, 11) 1440px), url(\"http://127.0.0.1:8015/assets/explore/archive/atmosphere.webp\"), none",
+      "placeColumns": null,
+      "prose": null,
+      "cards": [
+        888,
+        888,
+        888,
+        888
+      ],
+      "images": [
+        {
+          "slot": 726,
+          "height": 581,
+          "naturalWidth": 727,
+          "currentSrc": "http://127.0.0.1:8015/media/af4be0ef-eac7-4ac8-a124-932e471a95d6/card",
+          "sizes": "(min-width: 1920px) 728px, (min-width: 768px) 42vw, calc(100vw - 2rem)"
+        },
+        {
+          "slot": 559,
+          "height": 508,
+          "naturalWidth": 558,
+          "currentSrc": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/card",
+          "sizes": "auto, (min-width: 1920px) 560px, (min-width: 768px) 32vw, 50vw"
+        },
+        {
+          "slot": 475,
+          "height": 528,
+          "naturalWidth": 475,
+          "currentSrc": "http://127.0.0.1:8015/media/9921afd0-331d-4a13-9f64-89c77ab9c502/card",
+          "sizes": "auto, (min-width: 1920px) 560px, (min-width: 768px) 32vw, 50vw"
+        },
+        {
+          "slot": 408,
+          "height": 270,
+          "naturalWidth": 408,
+          "currentSrc": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 408,
+          "height": 270,
+          "naturalWidth": 408,
+          "currentSrc": "http://127.0.0.1:8015/media/f6fb78c4-5c8a-47f1-a4ae-d7d94cd89756/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 408,
+          "height": 270,
+          "naturalWidth": 408,
+          "currentSrc": "http://127.0.0.1:8015/media/73a99b4a-9cb2-4896-ac48-f7b91c9956b0/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 408,
+          "height": 270,
+          "naturalWidth": 408,
+          "currentSrc": "http://127.0.0.1:8015/media/c0b8aa6f-6fa7-4272-9762-a4cad49a7892/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 408,
+          "height": 270,
+          "naturalWidth": 408,
+          "currentSrc": "http://127.0.0.1:8015/media/009f931c-b225-48ca-b0ff-cf1878a9befe/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 408,
+          "height": 270,
+          "naturalWidth": 408,
+          "currentSrc": "http://127.0.0.1:8015/media/9a5f9ba9-7358-4731-a33e-1c94d9bf48de/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 408,
+          "height": 241,
+          "naturalWidth": 408,
+          "currentSrc": "http://127.0.0.1:8015/media/fe518825-4a6a-46e5-b724-80e691b70297/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 408,
+          "height": 241,
+          "naturalWidth": 408,
+          "currentSrc": "http://127.0.0.1:8015/media/51f9d4a0-1ee2-4670-9cb0-0cda008d6680/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 408,
+          "height": 241,
+          "naturalWidth": 408,
+          "currentSrc": "http://127.0.0.1:8015/media/303611fe-bc0b-491e-8926-62743e9a8cbc/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 408,
+          "height": 241,
+          "naturalWidth": 408,
+          "currentSrc": "http://127.0.0.1:8015/media/9921afd0-331d-4a13-9f64-89c77ab9c502/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 408,
+          "height": 241,
+          "naturalWidth": 408,
+          "currentSrc": "http://127.0.0.1:8015/media/75024ed7-aa8f-4d92-b61e-72de1e4c55d1/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 408,
+          "height": 241,
+          "naturalWidth": 408,
+          "currentSrc": "http://127.0.0.1:8015/media/55b132bf-2564-45a2-b0c1-40ece50f2d2f/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 408,
+          "height": 270,
+          "naturalWidth": 408,
+          "currentSrc": "http://127.0.0.1:8015/media/7f3cef56-6fbf-4082-a4d0-576c0e7c6d8f/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 408,
+          "height": 270,
+          "naturalWidth": 408,
+          "currentSrc": "http://127.0.0.1:8015/media/f5a4331c-0e03-4f7e-82ec-d511ec2ad316/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 408,
+          "height": 241,
+          "naturalWidth": 408,
+          "currentSrc": "http://127.0.0.1:8015/media/f2987c70-1cf8-47ac-bba0-775ae9bf51be/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 408,
+          "height": 241,
+          "naturalWidth": 408,
+          "currentSrc": "http://127.0.0.1:8015/media/4e392aa5-307b-4aca-bf76-8656152a9137/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 408,
+          "height": 241,
+          "naturalWidth": 408,
+          "currentSrc": "http://127.0.0.1:8015/media/f50b41db-755c-43c5-a5b0-147fce47fa06/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 408,
+          "height": 241,
+          "naturalWidth": 408,
+          "currentSrc": "http://127.0.0.1:8015/media/938e6bf6-4b70-4880-bc7b-084ecc63aa7e/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        }
+      ]
+    },
+    {
+      "name": "visit",
+      "width": 2560,
+      "url": "http://127.0.0.1:8015/visit/demo-bara-di-ujung-hari",
+      "viewport": 2560,
+      "scrollWidth": 2560,
+      "header": {
+        "x": 384,
+        "y": 0,
+        "width": 1792,
+        "height": 80
+      },
+      "main": {
+        "x": 384,
+        "y": 104,
+        "width": 1792,
+        "height": 6660.609375
+      },
+      "footer": {
+        "x": 0,
+        "y": 6860.609375,
+        "width": 2560,
+        "height": 412.96875
+      },
+      "inner": {
+        "x": 384,
+        "y": 6956.609375,
+        "width": 1792,
+        "height": 242.96875
+      },
+      "bodyFont": "\"Archive Sans\", \"Segoe UI\", sans-serif",
+      "headingFont": "\"Archive Garamond\", Georgia, serif",
+      "background": "linear-gradient(rgba(13, 12, 10, 0.5), rgb(16, 14, 11) 1440px), url(\"http://127.0.0.1:8015/assets/explore/archive/atmosphere.webp\"), none",
+      "placeColumns": null,
+      "prose": {
+        "x": 1108.140625,
+        "y": 1075.53125,
+        "width": 893.015625,
+        "height": 286.671875
+      },
+      "cards": [
+        880
+      ],
+      "images": [
+        {
+          "slot": 1792,
+          "height": 688,
+          "naturalWidth": 1792,
+          "currentSrc": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/hero",
+          "sizes": "(min-width: 1920px) 1792px, (min-width: 1024px) 93.334vw, (min-width: 481px) calc(100vw - 3rem), calc(100vw - 2rem)"
+        },
+        {
+          "slot": 785,
+          "height": 714,
+          "naturalWidth": 785,
+          "currentSrc": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/hero",
+          "sizes": "auto, (min-width: 960px) 40vw, 100vw"
+        },
+        {
+          "slot": 785,
+          "height": 714,
+          "naturalWidth": 785,
+          "currentSrc": "http://127.0.0.1:8015/media/21946faa-132d-461c-aa65-420e2357991d/hero",
+          "sizes": "auto, (min-width: 960px) 40vw, 100vw"
+        },
+        {
+          "slot": 1243,
+          "height": 1081,
+          "naturalWidth": 1243,
+          "currentSrc": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/hero",
+          "sizes": "auto, (min-width: 960px) 60vw, 100vw"
+        },
+        {
+          "slot": 533,
+          "height": 427,
+          "naturalWidth": 533,
+          "currentSrc": "http://127.0.0.1:8015/media/21946faa-132d-461c-aa65-420e2357991d/card",
+          "sizes": "auto, (min-width: 960px) 60vw, 100vw"
+        },
+        {
+          "slot": 343,
+          "height": 360,
+          "naturalWidth": 343,
+          "currentSrc": "http://127.0.0.1:8015/media/7f3cef56-6fbf-4082-a4d0-576c0e7c6d8f/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        }
+      ]
+    },
+    {
+      "name": "place",
+      "width": 2560,
+      "url": "http://127.0.0.1:8015/place/demo-bara-senja",
+      "viewport": 2560,
+      "scrollWidth": 2560,
+      "header": {
+        "x": 384,
+        "y": 0,
+        "width": 1792,
+        "height": 80
+      },
+      "main": {
+        "x": 384,
+        "y": 104,
+        "width": 1792,
+        "height": 1725.09375
+      },
+      "footer": {
+        "x": 0,
+        "y": 1925.09375,
+        "width": 2560,
+        "height": 412.96875
+      },
+      "inner": {
+        "x": 384,
+        "y": 2021.09375,
+        "width": 1792,
+        "height": 242.96875
+      },
+      "bodyFont": "\"Archive Sans\", \"Segoe UI\", sans-serif",
+      "headingFont": "\"Archive Garamond\", Georgia, serif",
+      "background": "linear-gradient(rgba(13, 12, 10, 0.42), rgb(16, 14, 11) 1440px), url(\"http://127.0.0.1:8015/assets/explore/archive/atmosphere.webp\"), none",
+      "placeColumns": "951.266px 792.719px",
+      "prose": null,
+      "cards": [
+        928,
+        928
+      ],
+      "images": [
+        {
+          "slot": 793,
+          "height": 634,
+          "naturalWidth": 800,
+          "currentSrc": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/hero",
+          "sizes": "(min-width: 1920px) 800px, (min-width: 768px) 46vw, calc(100vw - 2rem)"
+        },
+        {
+          "slot": 362,
+          "height": 390,
+          "naturalWidth": 362,
+          "currentSrc": "http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/hero",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        },
+        {
+          "slot": 362,
+          "height": 360,
+          "naturalWidth": 362,
+          "currentSrc": "http://127.0.0.1:8015/media/7f3cef56-6fbf-4082-a4d0-576c0e7c6d8f/card",
+          "sizes": "auto, (min-width: 1024px) 28vw, (min-width: 700px) 35vw, 100vw"
+        }
+      ]
+    },
+    {
+      "name": "error",
+      "width": 2560,
+      "url": "http://127.0.0.1:8015/visual-missing-page",
+      "viewport": 2560,
+      "scrollWidth": 2560,
+      "header": {
+        "x": 384,
+        "y": 0,
+        "width": 1792,
+        "height": 80
+      },
+      "main": {
+        "x": 384,
+        "y": 80,
+        "width": 1792,
+        "height": 615.625
+      },
+      "footer": {
+        "x": 0,
+        "y": 791.625,
+        "width": 2560,
+        "height": 412.96875
+      },
+      "inner": {
+        "x": 384,
+        "y": 887.625,
+        "width": 1792,
+        "height": 242.96875
+      },
+      "bodyFont": "\"Archive Sans\", \"Segoe UI\", sans-serif",
+      "headingFont": "\"Archive Garamond\", Georgia, serif",
+      "background": "none",
+      "placeColumns": null,
+      "prose": null,
+      "cards": [],
+      "images": []
+    },
+    {
+      "name": "photo-free-place",
+      "width": 390,
+      "url": "http://127.0.0.1:8014/place/warung-morissette",
+      "viewport": 390,
+      "scrollWidth": 390,
+      "header": {
+        "x": 16,
+        "y": 0,
+        "width": 358,
+        "height": 80
+      },
+      "main": {
+        "x": 16,
+        "y": 104,
+        "width": 358,
+        "height": 1415.90625
+      },
+      "footer": {
+        "x": 0,
+        "y": 1567.90625,
+        "width": 390,
+        "height": 376.484375
+      },
+      "inner": {
+        "x": 16,
+        "y": 1615.90625,
+        "width": 358,
+        "height": 254.484375
+      },
+      "bodyFont": "\"Archive Sans\", \"Segoe UI\", sans-serif",
+      "headingFont": "\"Archive Garamond\", Georgia, serif",
+      "background": "linear-gradient(rgba(13, 12, 10, 0.42), rgb(16, 14, 11) 1440px), url(\"http://127.0.0.1:8014/assets/explore/archive/atmosphere.webp\"), none",
+      "placeColumns": "358px",
+      "prose": null,
+      "cards": [
+        358
+      ],
+      "images": []
+    },
+    {
+      "name": "photo-free-place",
+      "width": 1440,
+      "url": "http://127.0.0.1:8014/place/warung-morissette",
+      "viewport": 1440,
+      "scrollWidth": 1440,
+      "header": {
+        "x": 48,
+        "y": 0,
+        "width": 1344,
+        "height": 80
+      },
+      "main": {
+        "x": 48,
+        "y": 104,
+        "width": 1344,
+        "height": 1233.609375
+      },
+      "footer": {
+        "x": 0,
+        "y": 1409.609375,
+        "width": 1440,
+        "height": 351.0625
+      },
+      "inner": {
+        "x": 48,
+        "y": 1481.609375,
+        "width": 1344,
+        "height": 205.0625
+      },
+      "bodyFont": "\"Archive Sans\", \"Segoe UI\", sans-serif",
+      "headingFont": "\"Archive Garamond\", Georgia, serif",
+      "background": "linear-gradient(rgba(13, 12, 10, 0.42), rgb(16, 14, 11) 1440px), url(\"http://127.0.0.1:8014/assets/explore/archive/atmosphere.webp\"), none",
+      "placeColumns": "706.906px 589.078px",
+      "prose": null,
+      "cards": [
+        928
+      ],
+      "images": []
+    },
+    {
+      "name": "photo-free-place",
+      "width": 2560,
+      "url": "http://127.0.0.1:8014/place/warung-morissette",
+      "viewport": 2560,
+      "scrollWidth": 2560,
+      "header": {
+        "x": 384,
+        "y": 0,
+        "width": 1792,
+        "height": 80
+      },
+      "main": {
+        "x": 384,
+        "y": 104,
+        "width": 1792,
+        "height": 1167.078125
+      },
+      "footer": {
+        "x": 0,
+        "y": 1367.078125,
+        "width": 2560,
+        "height": 412.96875
+      },
+      "inner": {
+        "x": 384,
+        "y": 1463.078125,
+        "width": 1792,
+        "height": 242.96875
+      },
+      "bodyFont": "\"Archive Sans\", \"Segoe UI\", sans-serif",
+      "headingFont": "\"Archive Garamond\", Georgia, serif",
+      "background": "linear-gradient(rgba(13, 12, 10, 0.42), rgb(16, 14, 11) 1440px), url(\"http://127.0.0.1:8014/assets/explore/archive/atmosphere.webp\"), none",
+      "placeColumns": "951.266px 792.719px",
+      "prose": null,
+      "cards": [
+        928
+      ],
+      "images": []
+    },
+    {
+      "name": "admin-login",
+      "width": 1440,
+      "url": "http://127.0.0.1:8011/admin/login",
+      "viewport": 1440,
+      "scrollWidth": 1440,
+      "header": {
+        "x": 80,
+        "y": 0,
+        "width": 1280,
+        "height": 80
+      },
+      "main": {
+        "x": 80,
+        "y": 144,
+        "width": 1280,
+        "height": 550
+      },
+      "footer": {
+        "x": 0,
+        "y": 790,
+        "width": 1440,
+        "height": 226.53125
+      },
+      "inner": {
+        "x": 80,
+        "y": 838,
+        "width": 1280,
+        "height": 104.53125
+      },
+      "bodyFont": "\"Archive Sans\", \"Segoe UI\", sans-serif",
+      "headingFont": "\"Archive Garamond\", Georgia, serif",
+      "background": "linear-gradient(rgba(13, 12, 10, 0.7), rgb(16, 14, 11) 1200px), url(\"http://127.0.0.1:8011/assets/explore/archive/atmosphere.webp\"), none",
+      "placeColumns": null,
+      "prose": null,
+      "cards": [],
+      "images": []
+    },
+    {
+      "name": "admin-table",
+      "width": 390,
+      "url": "http://127.0.0.1:8011/admin/visit",
+      "viewport": 390,
+      "scrollWidth": 390,
+      "header": {
+        "x": 16,
+        "y": 0,
+        "width": 358,
+        "height": 206.40625
+      },
+      "main": {
+        "x": 16,
+        "y": 206.40625,
+        "width": 358,
+        "height": 4176.15625
+      },
+      "footer": {
+        "x": 0,
+        "y": 4478.5625,
+        "width": 390,
+        "height": 278.328125
+      },
+      "inner": {
+        "x": 16,
+        "y": 4526.5625,
+        "width": 358,
+        "height": 156.328125
+      },
+      "bodyFont": "\"Archive Sans\", \"Segoe UI\", sans-serif",
+      "headingFont": "\"Archive Garamond\", Georgia, serif",
+      "background": "linear-gradient(rgba(13, 12, 10, 0.7), rgb(16, 14, 11) 1200px), url(\"http://127.0.0.1:8011/assets/explore/archive/atmosphere.webp\"), none",
+      "placeColumns": null,
+      "prose": null,
+      "cards": [],
+      "images": []
+    },
+    {
+      "name": "admin-table",
+      "width": 1440,
+      "url": "http://127.0.0.1:8011/admin/visit",
+      "viewport": 1440,
+      "scrollWidth": 1440,
+      "header": {
+        "x": 80,
+        "y": 0,
+        "width": 1280,
+        "height": 92
+      },
+      "main": {
+        "x": 80,
+        "y": 92,
+        "width": 1280,
+        "height": 4102.515625
+      },
+      "footer": {
+        "x": 0,
+        "y": 4290.515625,
+        "width": 1440,
+        "height": 226.53125
+      },
+      "inner": {
+        "x": 80,
+        "y": 4338.515625,
+        "width": 1280,
+        "height": 104.53125
+      },
+      "bodyFont": "\"Archive Sans\", \"Segoe UI\", sans-serif",
+      "headingFont": "\"Archive Garamond\", Georgia, serif",
+      "background": "linear-gradient(rgba(13, 12, 10, 0.7), rgb(16, 14, 11) 1200px), url(\"http://127.0.0.1:8011/assets/explore/archive/atmosphere.webp\"), none",
+      "placeColumns": null,
+      "prose": null,
+      "cards": [],
+      "images": []
+    },
+    {
+      "name": "admin-form",
+      "width": 390,
+      "url": "http://127.0.0.1:8011/admin/visit/create",
+      "viewport": 390,
+      "scrollWidth": 390,
+      "header": {
+        "x": 16,
+        "y": 0,
+        "width": 358,
+        "height": 206.40625
+      },
+      "main": {
+        "x": 16,
+        "y": 230.40625,
+        "width": 358,
+        "height": 1151.8125
+      },
+      "footer": {
+        "x": 0,
+        "y": 1478.21875,
+        "width": 390,
+        "height": 278.328125
+      },
+      "inner": {
+        "x": 16,
+        "y": 1526.21875,
+        "width": 358,
+        "height": 156.328125
+      },
+      "bodyFont": "\"Archive Sans\", \"Segoe UI\", sans-serif",
+      "headingFont": "\"Archive Garamond\", Georgia, serif",
+      "background": "linear-gradient(rgba(13, 12, 10, 0.7), rgb(16, 14, 11) 1200px), url(\"http://127.0.0.1:8011/assets/explore/archive/atmosphere.webp\"), none",
+      "placeColumns": null,
+      "prose": null,
+      "cards": [],
+      "images": []
+    },
+    {
+      "name": "admin-form",
+      "width": 1440,
+      "url": "http://127.0.0.1:8011/admin/visit/create",
+      "viewport": 1440,
+      "scrollWidth": 1440,
+      "header": {
+        "x": 80,
+        "y": 0,
+        "width": 1280,
+        "height": 92
+      },
+      "main": {
+        "x": 80,
+        "y": 116,
+        "width": 1280,
+        "height": 903
+      },
+      "footer": {
+        "x": 0,
+        "y": 1115,
+        "width": 1440,
+        "height": 226.53125
+      },
+      "inner": {
+        "x": 80,
+        "y": 1163,
+        "width": 1280,
+        "height": 104.53125
+      },
+      "bodyFont": "\"Archive Sans\", \"Segoe UI\", sans-serif",
+      "headingFont": "\"Archive Garamond\", Georgia, serif",
+      "background": "linear-gradient(rgba(13, 12, 10, 0.7), rgb(16, 14, 11) 1200px), url(\"http://127.0.0.1:8011/assets/explore/archive/atmosphere.webp\"), none",
+      "placeColumns": null,
+      "prose": null,
+      "cards": [],
+      "images": []
+    }
+  ],
+  "errors": []
+}

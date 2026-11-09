@@ -6,6 +6,8 @@ Foodie is not a restaurant, food-sales site, recipe service, community-review pl
 
 Read [AGENTS](AGENTS.md) and [product vision / document precedence](docs/product-vision.md). The five root specifications retain authority for unchanged domain rules. `design-system-specification.md` §1 owns visual composition and Indonesian voice; `config/error-pages.php` owns approved HTTP copy. Current experience contracts are linked below. Dated design/QA reports are historical evidence, not competing current instructions.
 
+**P0-H, 9 November:** the [seven owner decisions](docs/adr/002-p0-hardening.md) harden P0 before P1: adaptive 152rem public visual shell with 68ch prose/native cabinet, stable eligible Place covers across pagination and genuine photo-free composition, minimal system-font/plain admin, shared primitive/state audit and one saved-success announcement. Public warm materials/footer remain. New real-wait skeletons are P2 only. [Current verification and limits](docs/qa/p0-hardening/verification.md) distinguish implemented, partial, pending and unknown; earlier P0 records below remain dated lineage.
+
 **Current status (9 November 2026):** P0-1 restores the shared copper hover underline, keyboard/active/reduced-motion states and standalone error styling; [verification](docs/qa/navigation-hover-progress/verification.md). The [frontend audit](docs/implementation-status.md) retains its `b56db2c` baseline and now tracks this fix. P0-2 now adds the wide public shell, warmer environment/editorial footer and responsive media sizing while preserving admin geometry; [before/after evidence](docs/qa/wide-shell/verification.md). P0-3 now distinguishes empty/filtered/partial states and improves essential text/control sizing; [isolated fixtures and evidence](docs/qa/readability-states/verification.md). P0-4 adds 40 reviewed deterministic pixel baselines, an intentional-shift rejection proof and real-time video; [verification/setup](docs/qa/visual-baselines/verification.md). P1 onward in the [roadmap](docs/roadmap/frontend-experience.md) remains pending.
 
 ## Run this workspace
@@ -46,6 +48,8 @@ php vendor/bin/pint --test
 ```
 
 The visual gate runs separately: `npx playwright test --config playwright.visual.config.js`, after building assets and preparing/serving the dedicated fixed-date photo/empty fixtures on 8015/8016. The default functional config excludes this spec. See [setup, reviewed manifest and explicit update procedure](docs/qa/visual-baselines/verification.md); ordinary runs never create/update baselines.
+
+P0-H browser cases additionally use `php tools/p0-hardening-qa.php prepare`, then `php tools/p0-hardening-qa.php serve` on loopback 8017. This fixed separate SQLite/media fixture has a cover only on history page 2, a long photo-free Place and isolated real-error routes; it never refreshes owner data. See [all fixture identities and reproduction](docs/qa/p0-hardening/verification.md). Existing admin views use task lists rather than HTML tables; QA checks their real list/form consumers.
 
 Maintained documentation:
 

@@ -56,6 +56,10 @@
 .discovery .journal-card { border: 1px solid var(--archive-outline); border-radius: .7rem; overflow: hidden; background: var(--archive-texture) center / cover; }
 .discovery .journal-card > a > div:not(.photo-fallback) { padding: .5rem 1rem 1rem; }
 .discovery .journal-card .media-image { border-radius: 0; }
+@media (min-width: 2000px) {
+    .discovery .results:not(.results--list) { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .discovery .results--visit:not(.results--list) { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
 @media (max-width: 1000px) { .discovery-toolbar { gap: .6rem; grid-template-columns: minmax(8rem, 1fr) auto minmax(9rem, .5fr) auto; } #discovery-console { padding-inline: 1.5rem; } }
 @media (max-width: 959px) {
     #discovery-console { padding: 1.5rem 1rem 1.25rem; border-radius: 1rem; }

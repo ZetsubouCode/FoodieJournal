@@ -17,3 +17,5 @@ These are decision aids, not formulas or proof of usability. Validate them throu
 | Cognitive load | One cabinet on Home; practical Explore work area; text and photo variants omit unavailable content honestly | Richness supports finding/remembering stories; reduce repeated tiny labels and needless motion before adding decoration |
 
 Use these rationales when choosing between maintainable alternatives. A richer bento or 3D treatment succeeds only if the visitor can still recognize content, operate controls and recover reliably.
+
+P0-H applies these concretely: a Place cover stays recognizable across history pages; unavailable photography yields real facts rather than an empty column; ultrawide grids gain useful columns while prose/cabinet retain their limits; admin uses system fonts/plain surfaces for repeatable work. Saved success is announced once, and actual Explore waits retain committed results/URL with retry on failure. New skeletons stay P2; no artificial waiting is introduced. [Decisions and evidence](adr/002-p0-hardening.md).

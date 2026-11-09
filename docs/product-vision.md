@@ -4,7 +4,7 @@ Approved experience contract, 8 November 2026 (Asia/Jakarta). Implementation cla
 
 ## Authority and read order
 
-1. Latest explicit owner instruction governs its stated scope. The 004 task authorizes documentation and planning, not a frontend rewrite.
+1. Latest explicit owner instruction governs its stated scope. The earlier 004 task authorized documentation/planning; the 9 November P0-H owner instructions authorize scoped corrective implementation under [ADR 002](adr/002-p0-hardening.md), without starting P1–P4 creative work.
 2. The five root specifications remain authoritative for product/domain rules: [blueprint](../product-blueprint.md), [sitemap](../sitemap.md), [ERD](../erd-database-specification.md), [flows](../user-flow-wireframe.md), [design system](../design-system-specification.md). Their planning checkboxes and proposed routes are not implementation evidence. Design-system §1 owns visual composition and Indonesian brand voice; `config/error-pages.php` owns approved HTTP status copy.
 3. These maintained experience contracts elaborate the latest approved direction: [art direction](art-direction.md), [motion](motion-interaction.md), [page experience](page-experience.md), [UX principles](ux-principles.md). [ADRs](adr/README.md) resolve design reversals explicitly. `.ui-craft/brief.md` and `tokens.md` are concise working summaries, not competing authority.
 4. [Implementation status](implementation-status.md) describes observed code/runtime at a named baseline. [Roadmap](roadmap/frontend-experience.md) describes work still to do. Code establishes current behavior, not automatic design approval.

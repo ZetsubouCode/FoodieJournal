@@ -12,6 +12,7 @@ use App\Services\VendingMachine;
 use App\Support\ExploreState;
 use App\Support\PublicOptions;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class PublicController extends Controller
 {
@@ -98,8 +99,18 @@ class PublicController extends Controller
             return $this->redirectSlug('place', $slug);
         }
         $visits = $place->visits()->publishedVisible()->withRating()->with($this->cardRelations())->orderByDesc('visited_at')->orderByDesc('id')->paginate(18);
+        // History pagination must not change the cover; skip missing derivatives without reading originals.
+        $coverVisit = $place->visits()->publishedVisible()
+            ->whereHas('coverMedia', fn ($media) => $media->whereColumn('media.visit_id', 'visit.id')
+                ->whereHas('variants', fn ($variant) => $variant->where('variant', 'hero')->where('status', 'ready')))
+            ->with('coverMedia.variants')->orderByDesc('visited_at')->orderByDesc('id')
+            ->lazy(50)->first(fn ($visit) => Storage::disk('media')->exists($visit->coverMedia->variant('hero')->path));
+        $coverMedia = $coverVisit?->coverMedia;
+        if ($coverMedia) {
+            $coverMedia->setRelation('variants', $coverMedia->variants->filter(fn ($variant) => $variant->status === 'ready' && Storage::disk('media')->exists($variant->path)));
+        }
 
-        return view('public.place', compact('place', 'visits'));
+        return view('public.place', compact('place', 'visits', 'coverMedia'));
     }
 
     private function redirectSlug(string $type, string $old)
