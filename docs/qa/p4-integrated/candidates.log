@@ -1,0 +1,70 @@
+
+Running 23 tests using 1 worker
+
+(node:36544) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\docs\qa\p4-integrated\candidates\home-390-hero.png, writing actual.
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\docs\qa\p4-integrated\candidates\home-390-footer.png, writing actual.
+  ok  1 tests\Browser\public-visual.spec.js:43:9 › Home at 390: hero and footer (6.5s)
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\docs\qa\p4-integrated\candidates\explore-390-hero.png, writing actual.
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\docs\qa\p4-integrated\candidates\explore-390-footer.png, writing actual.
+  ok  2 tests\Browser\public-visual.spec.js:43:9 › Explore at 390: hero and footer (9.4s)
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\docs\qa\p4-integrated\candidates\visit-390-hero.png, writing actual.
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\docs\qa\p4-integrated\candidates\visit-390-footer.png, writing actual.
+  ok  3 tests\Browser\public-visual.spec.js:43:9 › Visit at 390: hero and footer (3.7s)
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\docs\qa\p4-integrated\candidates\place-390-hero.png, writing actual.
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\docs\qa\p4-integrated\candidates\place-390-footer.png, writing actual.
+  ok  4 tests\Browser\public-visual.spec.js:43:9 › Place at 390: hero and footer (3.3s)
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\docs\qa\p4-integrated\candidates\error-390-hero.png, writing actual.
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\docs\qa\p4-integrated\candidates\error-390-footer.png, writing actual.
+  ok  5 tests\Browser\public-visual.spec.js:43:9 › Error at 390: hero and footer (1.7s)
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\docs\qa\p4-integrated\candidates\home-1440-hero.png, writing actual.
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\docs\qa\p4-integrated\candidates\home-1440-footer.png, writing actual.
+  ok  6 tests\Browser\public-visual.spec.js:43:9 › Home at 1440: hero and footer (7.1s)
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\docs\qa\p4-integrated\candidates\explore-1440-hero.png, writing actual.
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\docs\qa\p4-integrated\candidates\explore-1440-footer.png, writing actual.
+  ok  7 tests\Browser\public-visual.spec.js:43:9 › Explore at 1440: hero and footer (8.8s)
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\docs\qa\p4-integrated\candidates\visit-1440-hero.png, writing actual.
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\docs\qa\p4-integrated\candidates\visit-1440-footer.png, writing actual.
+  ok  8 tests\Browser\public-visual.spec.js:43:9 › Visit at 1440: hero and footer (4.9s)
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\docs\qa\p4-integrated\candidates\place-1440-hero.png, writing actual.
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\docs\qa\p4-integrated\candidates\place-1440-footer.png, writing actual.
+  ok  9 tests\Browser\public-visual.spec.js:43:9 › Place at 1440: hero and footer (4.3s)
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\docs\qa\p4-integrated\candidates\error-1440-hero.png, writing actual.
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\docs\qa\p4-integrated\candidates\error-1440-footer.png, writing actual.
+  ok 10 tests\Browser\public-visual.spec.js:43:9 › Error at 1440: hero and footer (2.5s)
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\docs\qa\p4-integrated\candidates\home-1920-hero.png, writing actual.
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\docs\qa\p4-integrated\candidates\home-1920-footer.png, writing actual.
+  ok 11 tests\Browser\public-visual.spec.js:43:9 › Home at 1920: hero and footer (6.9s)
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\docs\qa\p4-integrated\candidates\explore-1920-hero.png, writing actual.
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\docs\qa\p4-integrated\candidates\explore-1920-footer.png, writing actual.
+  ok 12 tests\Browser\public-visual.spec.js:43:9 › Explore at 1920: hero and footer (9.1s)
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\docs\qa\p4-integrated\candidates\visit-1920-hero.png, writing actual.
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\docs\qa\p4-integrated\candidates\visit-1920-footer.png, writing actual.
+  ok 13 tests\Browser\public-visual.spec.js:43:9 › Visit at 1920: hero and footer (5.3s)
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\docs\qa\p4-integrated\candidates\place-1920-hero.png, writing actual.
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\docs\qa\p4-integrated\candidates\place-1920-footer.png, writing actual.
+  ok 14 tests\Browser\public-visual.spec.js:43:9 › Place at 1920: hero and footer (5.0s)
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\docs\qa\p4-integrated\candidates\error-1920-hero.png, writing actual.
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\docs\qa\p4-integrated\candidates\error-1920-footer.png, writing actual.
+  ok 15 tests\Browser\public-visual.spec.js:43:9 › Error at 1920: hero and footer (2.8s)
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\docs\qa\p4-integrated\candidates\cabinet-on-1440.png, writing actual.
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\docs\qa\p4-integrated\candidates\cabinet-printed-1440.png, writing actual.
+  ok 16 tests\Browser\public-visual.spec.js:68:1 › cabinet on and printed identity (9.0s)
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\docs\qa\p4-integrated\candidates\nav-public-midpoint-1440.png, writing actual.
+  ok 17 tests\Browser\public-visual.spec.js:82:5 › navigation midpoint with normal motion on / (5.8s)
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\docs\qa\p4-integrated\candidates\nav-error-midpoint-1440.png, writing actual.
+  ok 18 tests\Browser\public-visual.spec.js:82:5 › navigation midpoint with normal motion on /visual-missing-page (1.7s)
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\docs\qa\p4-integrated\candidates\filter-staged-390.png, writing actual.
+  ok 19 tests\Browser\public-visual.spec.js:102:5 › staged filter at 390 (9.6s)
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\docs\qa\p4-integrated\candidates\filter-staged-1440.png, writing actual.
+  ok 20 tests\Browser\public-visual.spec.js:102:5 › staged filter at 1440 (9.0s)
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\docs\qa\p4-integrated\candidates\archive-unpublished-390.png, writing actual.
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\docs\qa\p4-integrated\candidates\filtered-empty-390.png, writing actual.
+  ok 21 tests\Browser\public-visual.spec.js:120:1 › unpublished archive and filtered empty recovery (4.5s)
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\docs\qa\p4-integrated\candidates\browse-failure-1440.png, writing actual.
+  ok 22 tests\Browser\public-visual.spec.js:132:1 › failed browse retains committed results and retry (8.1s)
+A snapshot doesn't exist at D:\Github repo\FoodieJournal\docs\qa\p4-integrated\candidates\viewer-original-390.png, writing actual.
+  ok 23 tests\Browser\public-visual.spec.js:144:1 › viewer original loads on demand and focus returns (4.2s)
+
+  23 passed (2.2m)

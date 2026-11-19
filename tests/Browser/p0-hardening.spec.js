@@ -3,7 +3,8 @@ import AxeBuilder from '@axe-core/playwright';
 import fs from 'node:fs';
 
 const qa = 'http://127.0.0.1:8017';
-const output = 'docs/qa/p0-hardening';
+const output = process.env.FOODIE_QA_OUTPUT || 'docs/qa/p0-hardening';
+fs.mkdirSync(output, { recursive: true });
 const widths = [320, 375, 390, 768, 959, 960, 1023, 1024, 1440, 1920, 2560, 3440];
 async function ready(page, path) {
     const response = await page.goto(qa + path);
@@ -27,8 +28,8 @@ test('Place hero comes from older published history and stays the same on pages 
         if (source) await expect(hero).toHaveAttribute('src', source);
         source = await hero.getAttribute('src');
         await expect(page.locator('body')).not.toContainText(/P0H-(PRIVATE|DRAFT)/);
-        if (number === 1) await expect(page.locator('.results')).not.toContainText('Foto lama QA di halaman kedua');
-        else await expect(page.locator('.results')).toContainText('Foto lama QA di halaman kedua');
+        if (number === 1) await expect(page.locator('.place-history')).not.toContainText('Foto lama QA di halaman kedua');
+        else await expect(page.locator('.place-history')).toContainText('Foto lama QA di halaman kedua');
         await page.screenshot({ path: `${output}/stable-hero-page-${number}.jpg`, quality: 75 });
     }
     expect(originals).toEqual([]);

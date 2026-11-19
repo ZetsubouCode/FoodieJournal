@@ -1,0 +1,8 @@
+{
+  "status": "unverified",
+  "method": "Headed Chromium launched on isolated photo-v1; Windows computer-use sky.list_windows then get_window/get_window_state on the returned browser window",
+  "observedInitialMetrics": {"width": 1426, "height": 857, "dpr": 1.5, "root": "16px", "scrollWidth": 1411, "zoom": "1", "visualScale": 1},
+  "blocker": "window id 14618386 no longer belongs to Chrome.P5HGLVVCRMA2KSUX7RK6SDZSIM; current owner is Chrome.P5HGLVVCRMA2KSUX7RK6SDZSIM",
+  "result": "The same ownership error repeated for the returned app-qualified, id-only and direct returned handle. No native zoom input was sent. Waiting script was interrupted; root-font and viewport checks do not count as native zoom.",
+  "physicalDevices": "Unavailable: iOS/Safari, Android, assistive technologies and field telemetry. No installations or owner browser changes."
+}

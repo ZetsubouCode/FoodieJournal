@@ -1,0 +1,1131 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\Github repo\\FoodieJournal\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config",
+      "playwright.visual.config.js",
+      "--update-snapshots=none"
+    ],
+    "configFile": "D:\\Github repo\\FoodieJournal\\playwright.visual.config.js",
+    "rootDir": "D:/Github repo/FoodieJournal/tests/Browser",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/Github repo/FoodieJournal/tools/.runtime/visual-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "D:/Github repo/FoodieJournal/tests/Browser",
+        "testIgnore": [],
+        "testMatch": [
+          "public-visual.spec.js"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\Github repo\\FoodieJournal\\tools\\.runtime\\visual-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "D:\\Github repo\\FoodieJournal\\tests\\Browser",
+        "snapshotDir": "D:\\Github repo\\FoodieJournal\\tests\\Browser",
+        "testIgnore": [],
+        "testMatch": "public-visual.spec.js",
+        "timeout": 60000,
+        "use": {
+          "browserName": "chromium",
+          "baseURL": "http://127.0.0.1:8015",
+          "locale": "id-ID",
+          "timezoneId": "Asia/Jakarta",
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "deviceScaleFactor": 1,
+          "colorScheme": "dark",
+          "reducedMotion": "reduce",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "actionTimeout": 10000,
+          "navigationTimeout": 20000
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "tools/.runtime/visual-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "none",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "public-visual.spec.js",
+      "file": "public-visual.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Home at 390: hero and footer",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4498,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T16:42:53.004Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoiaG9tZS0zOTAtaGVybyIsInJvdXRlIjoiaHR0cDovLzEyNy4wLjAuMTo4MDE1LyIsInZpZXdwb3J0Ijp7IndpZHRoIjozOTAsImhlaWdodCI6MTAwMH0sImJyb3dzZXIiOiIxNTYuMC44MDc4LjQiLCJtb3Rpb24iOiJyZWR1Y2UgdW5sZXNzIHN0YXRlIHNwZWNpZmllcyBub3JtYWwiLCJmb250cyI6WyJBcmNoaXZlIEdhcmFtb25kIiwiQXJjaGl2ZSBHYXJhbW9uZCIsIkFyY2hpdmUgU2FucyJdLCJvcmlnaW5hbHMiOjB9"
+                    },
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoiaG9tZS0zOTAtZm9vdGVyIiwicm91dGUiOiJodHRwOi8vMTI3LjAuMC4xOjgwMTUvIiwidmlld3BvcnQiOnsid2lkdGgiOjM5MCwiaGVpZ2h0IjoxMDAwfSwiYnJvd3NlciI6IjE1Ni4wLjgwNzguNCIsIm1vdGlvbiI6InJlZHVjZSB1bmxlc3Mgc3RhdGUgc3BlY2lmaWVzIG5vcm1hbCIsImZvbnRzIjpbIkFyY2hpdmUgR2FyYW1vbmQiLCJBcmNoaXZlIEdhcmFtb25kIiwiQXJjaGl2ZSBTYW5zIl0sIm9yaWdpbmFscyI6MH0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "58ac71969675d208f6e9-4fa801cfdbebe8319307",
+          "file": "public-visual.spec.js",
+          "line": 43,
+          "column": 9
+        },
+        {
+          "title": "Explore at 390: hero and footer",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6373,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T16:42:58.508Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoiZXhwbG9yZS0zOTAtaGVybyIsInJvdXRlIjoiaHR0cDovLzEyNy4wLjAuMTo4MDE1L2V4cGxvcmUiLCJ2aWV3cG9ydCI6eyJ3aWR0aCI6MzkwLCJoZWlnaHQiOjEwMDB9LCJicm93c2VyIjoiMTU2LjAuODA3OC40IiwibW90aW9uIjoicmVkdWNlIHVubGVzcyBzdGF0ZSBzcGVjaWZpZXMgbm9ybWFsIiwiZm9udHMiOlsiQXJjaGl2ZSBHYXJhbW9uZCIsIkFyY2hpdmUgR2FyYW1vbmQiLCJBcmNoaXZlIFNhbnMiXSwib3JpZ2luYWxzIjowfQ=="
+                    },
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoiZXhwbG9yZS0zOTAtZm9vdGVyIiwicm91dGUiOiJodHRwOi8vMTI3LjAuMC4xOjgwMTUvZXhwbG9yZSIsInZpZXdwb3J0Ijp7IndpZHRoIjozOTAsImhlaWdodCI6MTAwMH0sImJyb3dzZXIiOiIxNTYuMC44MDc4LjQiLCJtb3Rpb24iOiJyZWR1Y2UgdW5sZXNzIHN0YXRlIHNwZWNpZmllcyBub3JtYWwiLCJmb250cyI6WyJBcmNoaXZlIEdhcmFtb25kIiwiQXJjaGl2ZSBHYXJhbW9uZCIsIkFyY2hpdmUgU2FucyJdLCJvcmlnaW5hbHMiOjB9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "58ac71969675d208f6e9-af4f000e3fbaf952374b",
+          "file": "public-visual.spec.js",
+          "line": 43,
+          "column": 9
+        },
+        {
+          "title": "Visit at 390: hero and footer",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2492,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T16:43:04.894Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoidmlzaXQtMzkwLWhlcm8iLCJyb3V0ZSI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAxNS92aXNpdC9kZW1vLWJhcmEtZGktdWp1bmctaGFyaSIsInZpZXdwb3J0Ijp7IndpZHRoIjozOTAsImhlaWdodCI6MTAwMH0sImJyb3dzZXIiOiIxNTYuMC44MDc4LjQiLCJtb3Rpb24iOiJyZWR1Y2UgdW5sZXNzIHN0YXRlIHNwZWNpZmllcyBub3JtYWwiLCJmb250cyI6WyJBcmNoaXZlIEdhcmFtb25kIiwiQXJjaGl2ZSBHYXJhbW9uZCIsIkFyY2hpdmUgU2FucyJdLCJvcmlnaW5hbHMiOjB9"
+                    },
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoidmlzaXQtMzkwLWZvb3RlciIsInJvdXRlIjoiaHR0cDovLzEyNy4wLjAuMTo4MDE1L3Zpc2l0L2RlbW8tYmFyYS1kaS11anVuZy1oYXJpIiwidmlld3BvcnQiOnsid2lkdGgiOjM5MCwiaGVpZ2h0IjoxMDAwfSwiYnJvd3NlciI6IjE1Ni4wLjgwNzguNCIsIm1vdGlvbiI6InJlZHVjZSB1bmxlc3Mgc3RhdGUgc3BlY2lmaWVzIG5vcm1hbCIsImZvbnRzIjpbIkFyY2hpdmUgR2FyYW1vbmQiLCJBcmNoaXZlIEdhcmFtb25kIiwiQXJjaGl2ZSBTYW5zIl0sIm9yaWdpbmFscyI6MH0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "58ac71969675d208f6e9-2875bd34633e037cc483",
+          "file": "public-visual.spec.js",
+          "line": 43,
+          "column": 9
+        },
+        {
+          "title": "Place at 390: hero and footer",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1933,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T16:43:07.396Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoicGxhY2UtMzkwLWhlcm8iLCJyb3V0ZSI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAxNS9wbGFjZS9kZW1vLWJhcmEtc2VuamEiLCJ2aWV3cG9ydCI6eyJ3aWR0aCI6MzkwLCJoZWlnaHQiOjEwMDB9LCJicm93c2VyIjoiMTU2LjAuODA3OC40IiwibW90aW9uIjoicmVkdWNlIHVubGVzcyBzdGF0ZSBzcGVjaWZpZXMgbm9ybWFsIiwiZm9udHMiOlsiQXJjaGl2ZSBHYXJhbW9uZCIsIkFyY2hpdmUgR2FyYW1vbmQiLCJBcmNoaXZlIFNhbnMiXSwib3JpZ2luYWxzIjowfQ=="
+                    },
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoicGxhY2UtMzkwLWZvb3RlciIsInJvdXRlIjoiaHR0cDovLzEyNy4wLjAuMTo4MDE1L3BsYWNlL2RlbW8tYmFyYS1zZW5qYSIsInZpZXdwb3J0Ijp7IndpZHRoIjozOTAsImhlaWdodCI6MTAwMH0sImJyb3dzZXIiOiIxNTYuMC44MDc4LjQiLCJtb3Rpb24iOiJyZWR1Y2UgdW5sZXNzIHN0YXRlIHNwZWNpZmllcyBub3JtYWwiLCJmb250cyI6WyJBcmNoaXZlIEdhcmFtb25kIiwiQXJjaGl2ZSBHYXJhbW9uZCIsIkFyY2hpdmUgU2FucyJdLCJvcmlnaW5hbHMiOjB9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "58ac71969675d208f6e9-af7f2f55a94958c18b27",
+          "file": "public-visual.spec.js",
+          "line": 43,
+          "column": 9
+        },
+        {
+          "title": "Error at 390: hero and footer",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 996,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T16:43:09.340Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoiZXJyb3ItMzkwLWhlcm8iLCJyb3V0ZSI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAxNS92aXN1YWwtbWlzc2luZy1wYWdlIiwidmlld3BvcnQiOnsid2lkdGgiOjM5MCwiaGVpZ2h0IjoxMDAwfSwiYnJvd3NlciI6IjE1Ni4wLjgwNzguNCIsIm1vdGlvbiI6InJlZHVjZSB1bmxlc3Mgc3RhdGUgc3BlY2lmaWVzIG5vcm1hbCIsImZvbnRzIjpbIkFyY2hpdmUgR2FyYW1vbmQiLCJBcmNoaXZlIEdhcmFtb25kIiwiQXJjaGl2ZSBTYW5zIl0sIm9yaWdpbmFscyI6MH0="
+                    },
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoiZXJyb3ItMzkwLWZvb3RlciIsInJvdXRlIjoiaHR0cDovLzEyNy4wLjAuMTo4MDE1L3Zpc3VhbC1taXNzaW5nLXBhZ2UiLCJ2aWV3cG9ydCI6eyJ3aWR0aCI6MzkwLCJoZWlnaHQiOjEwMDB9LCJicm93c2VyIjoiMTU2LjAuODA3OC40IiwibW90aW9uIjoicmVkdWNlIHVubGVzcyBzdGF0ZSBzcGVjaWZpZXMgbm9ybWFsIiwiZm9udHMiOlsiQXJjaGl2ZSBHYXJhbW9uZCIsIkFyY2hpdmUgR2FyYW1vbmQiLCJBcmNoaXZlIFNhbnMiXSwib3JpZ2luYWxzIjowfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "58ac71969675d208f6e9-6abe6c749a26fbd673c1",
+          "file": "public-visual.spec.js",
+          "line": 43,
+          "column": 9
+        },
+        {
+          "title": "Home at 1440: hero and footer",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4289,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T16:43:10.349Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoiaG9tZS0xNDQwLWhlcm8iLCJyb3V0ZSI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAxNS8iLCJ2aWV3cG9ydCI6eyJ3aWR0aCI6MTQ0MCwiaGVpZ2h0IjoxMDAwfSwiYnJvd3NlciI6IjE1Ni4wLjgwNzguNCIsIm1vdGlvbiI6InJlZHVjZSB1bmxlc3Mgc3RhdGUgc3BlY2lmaWVzIG5vcm1hbCIsImZvbnRzIjpbIkFyY2hpdmUgR2FyYW1vbmQiLCJBcmNoaXZlIEdhcmFtb25kIiwiQXJjaGl2ZSBTYW5zIl0sIm9yaWdpbmFscyI6MH0="
+                    },
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoiaG9tZS0xNDQwLWZvb3RlciIsInJvdXRlIjoiaHR0cDovLzEyNy4wLjAuMTo4MDE1LyIsInZpZXdwb3J0Ijp7IndpZHRoIjoxNDQwLCJoZWlnaHQiOjEwMDB9LCJicm93c2VyIjoiMTU2LjAuODA3OC40IiwibW90aW9uIjoicmVkdWNlIHVubGVzcyBzdGF0ZSBzcGVjaWZpZXMgbm9ybWFsIiwiZm9udHMiOlsiQXJjaGl2ZSBHYXJhbW9uZCIsIkFyY2hpdmUgR2FyYW1vbmQiLCJBcmNoaXZlIFNhbnMiXSwib3JpZ2luYWxzIjowfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "58ac71969675d208f6e9-abdfda1f731e9c43c3c1",
+          "file": "public-visual.spec.js",
+          "line": 43,
+          "column": 9
+        },
+        {
+          "title": "Explore at 1440: hero and footer",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5662,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T16:43:14.651Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoiZXhwbG9yZS0xNDQwLWhlcm8iLCJyb3V0ZSI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAxNS9leHBsb3JlIiwidmlld3BvcnQiOnsid2lkdGgiOjE0NDAsImhlaWdodCI6MTAwMH0sImJyb3dzZXIiOiIxNTYuMC44MDc4LjQiLCJtb3Rpb24iOiJyZWR1Y2UgdW5sZXNzIHN0YXRlIHNwZWNpZmllcyBub3JtYWwiLCJmb250cyI6WyJBcmNoaXZlIEdhcmFtb25kIiwiQXJjaGl2ZSBHYXJhbW9uZCIsIkFyY2hpdmUgU2FucyJdLCJvcmlnaW5hbHMiOjB9"
+                    },
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoiZXhwbG9yZS0xNDQwLWZvb3RlciIsInJvdXRlIjoiaHR0cDovLzEyNy4wLjAuMTo4MDE1L2V4cGxvcmUiLCJ2aWV3cG9ydCI6eyJ3aWR0aCI6MTQ0MCwiaGVpZ2h0IjoxMDAwfSwiYnJvd3NlciI6IjE1Ni4wLjgwNzguNCIsIm1vdGlvbiI6InJlZHVjZSB1bmxlc3Mgc3RhdGUgc3BlY2lmaWVzIG5vcm1hbCIsImZvbnRzIjpbIkFyY2hpdmUgR2FyYW1vbmQiLCJBcmNoaXZlIEdhcmFtb25kIiwiQXJjaGl2ZSBTYW5zIl0sIm9yaWdpbmFscyI6MH0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "58ac71969675d208f6e9-57938fba358f82d23a65",
+          "file": "public-visual.spec.js",
+          "line": 43,
+          "column": 9
+        },
+        {
+          "title": "Visit at 1440: hero and footer",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2724,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T16:43:20.324Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoidmlzaXQtMTQ0MC1oZXJvIiwicm91dGUiOiJodHRwOi8vMTI3LjAuMC4xOjgwMTUvdmlzaXQvZGVtby1iYXJhLWRpLXVqdW5nLWhhcmkiLCJ2aWV3cG9ydCI6eyJ3aWR0aCI6MTQ0MCwiaGVpZ2h0IjoxMDAwfSwiYnJvd3NlciI6IjE1Ni4wLjgwNzguNCIsIm1vdGlvbiI6InJlZHVjZSB1bmxlc3Mgc3RhdGUgc3BlY2lmaWVzIG5vcm1hbCIsImZvbnRzIjpbIkFyY2hpdmUgR2FyYW1vbmQiLCJBcmNoaXZlIEdhcmFtb25kIiwiQXJjaGl2ZSBTYW5zIl0sIm9yaWdpbmFscyI6MH0="
+                    },
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoidmlzaXQtMTQ0MC1mb290ZXIiLCJyb3V0ZSI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAxNS92aXNpdC9kZW1vLWJhcmEtZGktdWp1bmctaGFyaSIsInZpZXdwb3J0Ijp7IndpZHRoIjoxNDQwLCJoZWlnaHQiOjEwMDB9LCJicm93c2VyIjoiMTU2LjAuODA3OC40IiwibW90aW9uIjoicmVkdWNlIHVubGVzcyBzdGF0ZSBzcGVjaWZpZXMgbm9ybWFsIiwiZm9udHMiOlsiQXJjaGl2ZSBHYXJhbW9uZCIsIkFyY2hpdmUgR2FyYW1vbmQiLCJBcmNoaXZlIFNhbnMiXSwib3JpZ2luYWxzIjowfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "58ac71969675d208f6e9-feb727feab7c9c7bb6bf",
+          "file": "public-visual.spec.js",
+          "line": 43,
+          "column": 9
+        },
+        {
+          "title": "Place at 1440: hero and footer",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2382,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T16:43:23.060Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoicGxhY2UtMTQ0MC1oZXJvIiwicm91dGUiOiJodHRwOi8vMTI3LjAuMC4xOjgwMTUvcGxhY2UvZGVtby1iYXJhLXNlbmphIiwidmlld3BvcnQiOnsid2lkdGgiOjE0NDAsImhlaWdodCI6MTAwMH0sImJyb3dzZXIiOiIxNTYuMC44MDc4LjQiLCJtb3Rpb24iOiJyZWR1Y2UgdW5sZXNzIHN0YXRlIHNwZWNpZmllcyBub3JtYWwiLCJmb250cyI6WyJBcmNoaXZlIEdhcmFtb25kIiwiQXJjaGl2ZSBHYXJhbW9uZCIsIkFyY2hpdmUgU2FucyJdLCJvcmlnaW5hbHMiOjB9"
+                    },
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoicGxhY2UtMTQ0MC1mb290ZXIiLCJyb3V0ZSI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAxNS9wbGFjZS9kZW1vLWJhcmEtc2VuamEiLCJ2aWV3cG9ydCI6eyJ3aWR0aCI6MTQ0MCwiaGVpZ2h0IjoxMDAwfSwiYnJvd3NlciI6IjE1Ni4wLjgwNzguNCIsIm1vdGlvbiI6InJlZHVjZSB1bmxlc3Mgc3RhdGUgc3BlY2lmaWVzIG5vcm1hbCIsImZvbnRzIjpbIkFyY2hpdmUgR2FyYW1vbmQiLCJBcmNoaXZlIEdhcmFtb25kIiwiQXJjaGl2ZSBTYW5zIl0sIm9yaWdpbmFscyI6MH0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "58ac71969675d208f6e9-ae7b35c0269c5e78d4ce",
+          "file": "public-visual.spec.js",
+          "line": 43,
+          "column": 9
+        },
+        {
+          "title": "Error at 1440: hero and footer",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1311,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T16:43:25.453Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoiZXJyb3ItMTQ0MC1oZXJvIiwicm91dGUiOiJodHRwOi8vMTI3LjAuMC4xOjgwMTUvdmlzdWFsLW1pc3NpbmctcGFnZSIsInZpZXdwb3J0Ijp7IndpZHRoIjoxNDQwLCJoZWlnaHQiOjEwMDB9LCJicm93c2VyIjoiMTU2LjAuODA3OC40IiwibW90aW9uIjoicmVkdWNlIHVubGVzcyBzdGF0ZSBzcGVjaWZpZXMgbm9ybWFsIiwiZm9udHMiOlsiQXJjaGl2ZSBHYXJhbW9uZCIsIkFyY2hpdmUgR2FyYW1vbmQiLCJBcmNoaXZlIFNhbnMiXSwib3JpZ2luYWxzIjowfQ=="
+                    },
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoiZXJyb3ItMTQ0MC1mb290ZXIiLCJyb3V0ZSI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAxNS92aXN1YWwtbWlzc2luZy1wYWdlIiwidmlld3BvcnQiOnsid2lkdGgiOjE0NDAsImhlaWdodCI6MTAwMH0sImJyb3dzZXIiOiIxNTYuMC44MDc4LjQiLCJtb3Rpb24iOiJyZWR1Y2UgdW5sZXNzIHN0YXRlIHNwZWNpZmllcyBub3JtYWwiLCJmb250cyI6WyJBcmNoaXZlIEdhcmFtb25kIiwiQXJjaGl2ZSBHYXJhbW9uZCIsIkFyY2hpdmUgU2FucyJdLCJvcmlnaW5hbHMiOjB9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "58ac71969675d208f6e9-0f351e395633a6e9efbc",
+          "file": "public-visual.spec.js",
+          "line": 43,
+          "column": 9
+        },
+        {
+          "title": "Home at 1920: hero and footer",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4537,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T16:43:26.774Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoiaG9tZS0xOTIwLWhlcm8iLCJyb3V0ZSI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAxNS8iLCJ2aWV3cG9ydCI6eyJ3aWR0aCI6MTkyMCwiaGVpZ2h0IjoxMDAwfSwiYnJvd3NlciI6IjE1Ni4wLjgwNzguNCIsIm1vdGlvbiI6InJlZHVjZSB1bmxlc3Mgc3RhdGUgc3BlY2lmaWVzIG5vcm1hbCIsImZvbnRzIjpbIkFyY2hpdmUgR2FyYW1vbmQiLCJBcmNoaXZlIEdhcmFtb25kIiwiQXJjaGl2ZSBTYW5zIl0sIm9yaWdpbmFscyI6MH0="
+                    },
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoiaG9tZS0xOTIwLWZvb3RlciIsInJvdXRlIjoiaHR0cDovLzEyNy4wLjAuMTo4MDE1LyIsInZpZXdwb3J0Ijp7IndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwMDB9LCJicm93c2VyIjoiMTU2LjAuODA3OC40IiwibW90aW9uIjoicmVkdWNlIHVubGVzcyBzdGF0ZSBzcGVjaWZpZXMgbm9ybWFsIiwiZm9udHMiOlsiQXJjaGl2ZSBHYXJhbW9uZCIsIkFyY2hpdmUgR2FyYW1vbmQiLCJBcmNoaXZlIFNhbnMiXSwib3JpZ2luYWxzIjowfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "58ac71969675d208f6e9-6225a2c5cf04ca1ae456",
+          "file": "public-visual.spec.js",
+          "line": 43,
+          "column": 9
+        },
+        {
+          "title": "Explore at 1920: hero and footer",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5836,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T16:43:31.324Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoiZXhwbG9yZS0xOTIwLWhlcm8iLCJyb3V0ZSI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAxNS9leHBsb3JlIiwidmlld3BvcnQiOnsid2lkdGgiOjE5MjAsImhlaWdodCI6MTAwMH0sImJyb3dzZXIiOiIxNTYuMC44MDc4LjQiLCJtb3Rpb24iOiJyZWR1Y2UgdW5sZXNzIHN0YXRlIHNwZWNpZmllcyBub3JtYWwiLCJmb250cyI6WyJBcmNoaXZlIEdhcmFtb25kIiwiQXJjaGl2ZSBHYXJhbW9uZCIsIkFyY2hpdmUgU2FucyJdLCJvcmlnaW5hbHMiOjB9"
+                    },
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoiZXhwbG9yZS0xOTIwLWZvb3RlciIsInJvdXRlIjoiaHR0cDovLzEyNy4wLjAuMTo4MDE1L2V4cGxvcmUiLCJ2aWV3cG9ydCI6eyJ3aWR0aCI6MTkyMCwiaGVpZ2h0IjoxMDAwfSwiYnJvd3NlciI6IjE1Ni4wLjgwNzguNCIsIm1vdGlvbiI6InJlZHVjZSB1bmxlc3Mgc3RhdGUgc3BlY2lmaWVzIG5vcm1hbCIsImZvbnRzIjpbIkFyY2hpdmUgR2FyYW1vbmQiLCJBcmNoaXZlIEdhcmFtb25kIiwiQXJjaGl2ZSBTYW5zIl0sIm9yaWdpbmFscyI6MH0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "58ac71969675d208f6e9-c2fa5da635aad4e9057b",
+          "file": "public-visual.spec.js",
+          "line": 43,
+          "column": 9
+        },
+        {
+          "title": "Visit at 1920: hero and footer",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2839,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T16:43:37.172Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoidmlzaXQtMTkyMC1oZXJvIiwicm91dGUiOiJodHRwOi8vMTI3LjAuMC4xOjgwMTUvdmlzaXQvZGVtby1iYXJhLWRpLXVqdW5nLWhhcmkiLCJ2aWV3cG9ydCI6eyJ3aWR0aCI6MTkyMCwiaGVpZ2h0IjoxMDAwfSwiYnJvd3NlciI6IjE1Ni4wLjgwNzguNCIsIm1vdGlvbiI6InJlZHVjZSB1bmxlc3Mgc3RhdGUgc3BlY2lmaWVzIG5vcm1hbCIsImZvbnRzIjpbIkFyY2hpdmUgR2FyYW1vbmQiLCJBcmNoaXZlIEdhcmFtb25kIiwiQXJjaGl2ZSBTYW5zIl0sIm9yaWdpbmFscyI6MH0="
+                    },
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoidmlzaXQtMTkyMC1mb290ZXIiLCJyb3V0ZSI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAxNS92aXNpdC9kZW1vLWJhcmEtZGktdWp1bmctaGFyaSIsInZpZXdwb3J0Ijp7IndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwMDB9LCJicm93c2VyIjoiMTU2LjAuODA3OC40IiwibW90aW9uIjoicmVkdWNlIHVubGVzcyBzdGF0ZSBzcGVjaWZpZXMgbm9ybWFsIiwiZm9udHMiOlsiQXJjaGl2ZSBHYXJhbW9uZCIsIkFyY2hpdmUgR2FyYW1vbmQiLCJBcmNoaXZlIFNhbnMiXSwib3JpZ2luYWxzIjowfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "58ac71969675d208f6e9-ccf60f00ae59c96e9bcf",
+          "file": "public-visual.spec.js",
+          "line": 43,
+          "column": 9
+        },
+        {
+          "title": "Place at 1920: hero and footer",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2389,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T16:43:40.020Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoicGxhY2UtMTkyMC1oZXJvIiwicm91dGUiOiJodHRwOi8vMTI3LjAuMC4xOjgwMTUvcGxhY2UvZGVtby1iYXJhLXNlbmphIiwidmlld3BvcnQiOnsid2lkdGgiOjE5MjAsImhlaWdodCI6MTAwMH0sImJyb3dzZXIiOiIxNTYuMC44MDc4LjQiLCJtb3Rpb24iOiJyZWR1Y2UgdW5sZXNzIHN0YXRlIHNwZWNpZmllcyBub3JtYWwiLCJmb250cyI6WyJBcmNoaXZlIEdhcmFtb25kIiwiQXJjaGl2ZSBHYXJhbW9uZCIsIkFyY2hpdmUgU2FucyJdLCJvcmlnaW5hbHMiOjB9"
+                    },
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoicGxhY2UtMTkyMC1mb290ZXIiLCJyb3V0ZSI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAxNS9wbGFjZS9kZW1vLWJhcmEtc2VuamEiLCJ2aWV3cG9ydCI6eyJ3aWR0aCI6MTkyMCwiaGVpZ2h0IjoxMDAwfSwiYnJvd3NlciI6IjE1Ni4wLjgwNzguNCIsIm1vdGlvbiI6InJlZHVjZSB1bmxlc3Mgc3RhdGUgc3BlY2lmaWVzIG5vcm1hbCIsImZvbnRzIjpbIkFyY2hpdmUgR2FyYW1vbmQiLCJBcmNoaXZlIEdhcmFtb25kIiwiQXJjaGl2ZSBTYW5zIl0sIm9yaWdpbmFscyI6MH0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "58ac71969675d208f6e9-cb349d2b68245139b677",
+          "file": "public-visual.spec.js",
+          "line": 43,
+          "column": 9
+        },
+        {
+          "title": "Error at 1920: hero and footer",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1432,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T16:43:42.421Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoiZXJyb3ItMTkyMC1oZXJvIiwicm91dGUiOiJodHRwOi8vMTI3LjAuMC4xOjgwMTUvdmlzdWFsLW1pc3NpbmctcGFnZSIsInZpZXdwb3J0Ijp7IndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwMDB9LCJicm93c2VyIjoiMTU2LjAuODA3OC40IiwibW90aW9uIjoicmVkdWNlIHVubGVzcyBzdGF0ZSBzcGVjaWZpZXMgbm9ybWFsIiwiZm9udHMiOlsiQXJjaGl2ZSBHYXJhbW9uZCIsIkFyY2hpdmUgR2FyYW1vbmQiLCJBcmNoaXZlIFNhbnMiXSwib3JpZ2luYWxzIjowfQ=="
+                    },
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoiZXJyb3ItMTkyMC1mb290ZXIiLCJyb3V0ZSI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAxNS92aXN1YWwtbWlzc2luZy1wYWdlIiwidmlld3BvcnQiOnsid2lkdGgiOjE5MjAsImhlaWdodCI6MTAwMH0sImJyb3dzZXIiOiIxNTYuMC44MDc4LjQiLCJtb3Rpb24iOiJyZWR1Y2UgdW5sZXNzIHN0YXRlIHNwZWNpZmllcyBub3JtYWwiLCJmb250cyI6WyJBcmNoaXZlIEdhcmFtb25kIiwiQXJjaGl2ZSBHYXJhbW9uZCIsIkFyY2hpdmUgU2FucyJdLCJvcmlnaW5hbHMiOjB9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "58ac71969675d208f6e9-025d5792e11b382036ce",
+          "file": "public-visual.spec.js",
+          "line": 43,
+          "column": 9
+        },
+        {
+          "title": "cabinet on and printed identity",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5427,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T16:43:43.863Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoiY2FiaW5ldC1vbi0xNDQwIiwicm91dGUiOiJodHRwOi8vMTI3LjAuMC4xOjgwMTUvIiwidmlld3BvcnQiOnsid2lkdGgiOjE0NDAsImhlaWdodCI6MTAwMH0sImJyb3dzZXIiOiIxNTYuMC44MDc4LjQiLCJtb3Rpb24iOiJyZWR1Y2UgdW5sZXNzIHN0YXRlIHNwZWNpZmllcyBub3JtYWwiLCJmb250cyI6WyJBcmNoaXZlIEdhcmFtb25kIiwiQXJjaGl2ZSBHYXJhbW9uZCIsIkFyY2hpdmUgU2FucyJdLCJvcmlnaW5hbHMiOjB9"
+                    },
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoiY2FiaW5ldC1wcmludGVkLTE0NDAiLCJyb3V0ZSI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAxNS8iLCJ2aWV3cG9ydCI6eyJ3aWR0aCI6MTQ0MCwiaGVpZ2h0IjoxMDAwfSwiYnJvd3NlciI6IjE1Ni4wLjgwNzguNCIsIm1vdGlvbiI6InJlZHVjZSB1bmxlc3Mgc3RhdGUgc3BlY2lmaWVzIG5vcm1hbCIsImZvbnRzIjpbIkFyY2hpdmUgR2FyYW1vbmQiLCJBcmNoaXZlIEdhcmFtb25kIiwiQXJjaGl2ZSBTYW5zIl0sIm9yaWdpbmFscyI6MH0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "58ac71969675d208f6e9-e3d1182aadeecc128fb3",
+          "file": "public-visual.spec.js",
+          "line": 68,
+          "column": 1
+        },
+        {
+          "title": "navigation midpoint with normal motion on /",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3961,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T16:43:49.300Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoibmF2LXB1YmxpYy1taWRwb2ludC0xNDQwIiwicm91dGUiOiJodHRwOi8vMTI3LjAuMC4xOjgwMTUvIiwidmlld3BvcnQiOnsid2lkdGgiOjE0NDAsImhlaWdodCI6MTAwMH0sInN0YXRlIjoibm9ybWFsIG1vdGlvbiwgYWN0dWFsIHRyYW5zZm9ybSBwYXVzZWQgYXQgMTEwLzIyMG1zIn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "58ac71969675d208f6e9-18760d88127f5ac57f6e",
+          "file": "public-visual.spec.js",
+          "line": 82,
+          "column": 5
+        },
+        {
+          "title": "navigation midpoint with normal motion on /visual-missing-page",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 927,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T16:43:53.276Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoibmF2LWVycm9yLW1pZHBvaW50LTE0NDAiLCJyb3V0ZSI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAxNS92aXN1YWwtbWlzc2luZy1wYWdlIiwidmlld3BvcnQiOnsid2lkdGgiOjE0NDAsImhlaWdodCI6MTAwMH0sInN0YXRlIjoibm9ybWFsIG1vdGlvbiwgYWN0dWFsIHRyYW5zZm9ybSBwYXVzZWQgYXQgMTEwLzIyMG1zIn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "58ac71969675d208f6e9-491b4cf95121554e1012",
+          "file": "public-visual.spec.js",
+          "line": 82,
+          "column": 5
+        },
+        {
+          "title": "staged filter at 390",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5946,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T16:43:54.214Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoiZmlsdGVyLXN0YWdlZC0zOTAiLCJyb3V0ZSI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAxNS9leHBsb3JlIiwidmlld3BvcnQiOnsid2lkdGgiOjM5MCwiaGVpZ2h0IjoxMDAwfSwiYnJvd3NlciI6IjE1Ni4wLjgwNzguNCIsIm1vdGlvbiI6InJlZHVjZSB1bmxlc3Mgc3RhdGUgc3BlY2lmaWVzIG5vcm1hbCIsImZvbnRzIjpbIkFyY2hpdmUgR2FyYW1vbmQiLCJBcmNoaXZlIEdhcmFtb25kIiwiQXJjaGl2ZSBTYW5zIl0sIm9yaWdpbmFscyI6MH0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "58ac71969675d208f6e9-ed7aa32d8c6ac93a026a",
+          "file": "public-visual.spec.js",
+          "line": 102,
+          "column": 5
+        },
+        {
+          "title": "staged filter at 1440",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5955,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T16:44:00.173Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoiZmlsdGVyLXN0YWdlZC0xNDQwIiwicm91dGUiOiJodHRwOi8vMTI3LjAuMC4xOjgwMTUvZXhwbG9yZSIsInZpZXdwb3J0Ijp7IndpZHRoIjoxNDQwLCJoZWlnaHQiOjEwMDB9LCJicm93c2VyIjoiMTU2LjAuODA3OC40IiwibW90aW9uIjoicmVkdWNlIHVubGVzcyBzdGF0ZSBzcGVjaWZpZXMgbm9ybWFsIiwiZm9udHMiOlsiQXJjaGl2ZSBHYXJhbW9uZCIsIkFyY2hpdmUgR2FyYW1vbmQiLCJBcmNoaXZlIFNhbnMiXSwib3JpZ2luYWxzIjowfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "58ac71969675d208f6e9-af57ea267baf3a10c8d5",
+          "file": "public-visual.spec.js",
+          "line": 102,
+          "column": 5
+        },
+        {
+          "title": "unpublished archive and filtered empty recovery",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2649,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T16:44:06.136Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoiYXJjaGl2ZS11bnB1Ymxpc2hlZC0zOTAiLCJyb3V0ZSI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAxNi9leHBsb3JlIiwidmlld3BvcnQiOnsid2lkdGgiOjM5MCwiaGVpZ2h0IjoxMDAwfSwiYnJvd3NlciI6IjE1Ni4wLjgwNzguNCIsIm1vdGlvbiI6InJlZHVjZSB1bmxlc3Mgc3RhdGUgc3BlY2lmaWVzIG5vcm1hbCIsImZvbnRzIjpbIkFyY2hpdmUgR2FyYW1vbmQiLCJBcmNoaXZlIEdhcmFtb25kIiwiQXJjaGl2ZSBTYW5zIl0sIm9yaWdpbmFscyI6MH0="
+                    },
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoiZmlsdGVyZWQtZW1wdHktMzkwIiwicm91dGUiOiJodHRwOi8vMTI3LjAuMC4xOjgwMTUvZXhwbG9yZT9xPXRpZGFrLWFkYSZ2aWV3PWxpc3QiLCJ2aWV3cG9ydCI6eyJ3aWR0aCI6MzkwLCJoZWlnaHQiOjEwMDB9LCJicm93c2VyIjoiMTU2LjAuODA3OC40IiwibW90aW9uIjoicmVkdWNlIHVubGVzcyBzdGF0ZSBzcGVjaWZpZXMgbm9ybWFsIiwiZm9udHMiOlsiQXJjaGl2ZSBHYXJhbW9uZCIsIkFyY2hpdmUgR2FyYW1vbmQiLCJBcmNoaXZlIFNhbnMiXSwib3JpZ2luYWxzIjowfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "58ac71969675d208f6e9-4c8cf641e2832e185db0",
+          "file": "public-visual.spec.js",
+          "line": 120,
+          "column": 1
+        },
+        {
+          "title": "failed browse retains committed results and retry",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5189,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T16:44:08.793Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoiYnJvd3NlLWZhaWx1cmUtMTQ0MCIsInJvdXRlIjoiaHR0cDovLzEyNy4wLjAuMTo4MDE1L2V4cGxvcmUiLCJ2aWV3cG9ydCI6eyJ3aWR0aCI6MTQ0MCwiaGVpZ2h0IjoxMDAwfSwiYnJvd3NlciI6IjE1Ni4wLjgwNzguNCIsIm1vdGlvbiI6InJlZHVjZSB1bmxlc3Mgc3RhdGUgc3BlY2lmaWVzIG5vcm1hbCIsImZvbnRzIjpbIkFyY2hpdmUgR2FyYW1vbmQiLCJBcmNoaXZlIEdhcmFtb25kIiwiQXJjaGl2ZSBTYW5zIl0sIm9yaWdpbmFscyI6MH0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "58ac71969675d208f6e9-4b259ab4dbc747aa5583",
+          "file": "public-visual.spec.js",
+          "line": 132,
+          "column": 1
+        },
+        {
+          "title": "viewer original loads on demand and focus returns",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2334,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T16:44:13.991Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoidmlld2VyLW9yaWdpbmFsLTM5MCIsInJvdXRlIjoiaHR0cDovLzEyNy4wLjAuMTo4MDE1L3Zpc2l0L2RlbW8tYmFyYS1kaS11anVuZy1oYXJpIiwidmlld3BvcnQiOnsid2lkdGgiOjM5MCwiaGVpZ2h0IjoxMDAwfSwiYnJvd3NlciI6IjE1Ni4wLjgwNzguNCIsIm1vdGlvbiI6InJlZHVjZSB1bmxlc3Mgc3RhdGUgc3BlY2lmaWVzIG5vcm1hbCIsImZvbnRzIjpbIkFyY2hpdmUgR2FyYW1vbmQiLCJBcmNoaXZlIEdhcmFtb25kIiwiQXJjaGl2ZSBTYW5zIl0sIm9yaWdpbmFscyI6MX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "58ac71969675d208f6e9-c903826784b0f807cdfe",
+          "file": "public-visual.spec.js",
+          "line": 144,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-09T16:42:52.486Z",
+    "duration": 83987.094,
+    "expected": 23,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

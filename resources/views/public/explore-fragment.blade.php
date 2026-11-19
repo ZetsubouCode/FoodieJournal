@@ -14,7 +14,7 @@
         <nav class="discovery-view" aria-label="Tampilan hasil">@foreach(['grid' => 'Grid', 'list' => 'Daftar'] as $key => $label)<a href="{{ $state->url(['view' => $key]) }}" aria-label="{{ $label }}" @if($state->get('view') === $key) aria-current="page" @endif><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">@if($key === 'grid')<path d="M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z"/>@else<path d="M8 5h13M8 12h13M8 19h13M3 5h1M3 12h1M3 19h1"/>@endif</svg></a>@endforeach</nav>
     </form>
     <div class="discovery-console__selection">
-        @if($chips)<div class="cluster discovery-chips" aria-label="Filter aktif">@foreach($chips as $chip)<a class="chip" href="{{ $chip['url'] }}" aria-label="Hapus filter {{ $chip['label'] }}">{{ $chip['label'] }} ×</a>@endforeach<a href="{{ url('explore').'?tab='.$state->get('tab').'&view='.$state->get('view') }}">Hapus semua filter</a></div>@endif
+        @if($chips)<div class="cluster discovery-chips" role="group" aria-label="Filter aktif">@foreach($chips as $chip)<a class="chip" href="{{ $chip['url'] }}" aria-label="Hapus filter {{ $chip['label'] }}">{{ $chip['label'] }} ×</a>@endforeach<a href="{{ url('explore').'?tab='.$state->get('tab').'&view='.$state->get('view') }}">Hapus semua filter</a></div>@endif
     </div>
     </div>
     <p class="sr-only" role="status" data-browse-status></p>

@@ -1,0 +1,12 @@
+[
+  {
+    "engine": "firefox",
+    "available": false,
+    "reason": "browserType.launch: Executable doesn't exist at C:\\Users\\kigna\\AppData\\Local\\ms-playwright\\firefox-1555\\firefox\\firefox.exe"
+  },
+  {
+    "engine": "webkit",
+    "available": false,
+    "reason": "browserType.launch: Executable doesn't exist at C:\\Users\\kigna\\AppData\\Local\\ms-playwright\\webkit-2370\\Playwright.exe"
+  }
+]

@@ -1,6 +1,6 @@
 # Foodie tokens
 
-Maintained 9 November 2026. Actual sources: `resources/css/tokens.css`, `memory-dispenser.css`, `public-chrome.css`, `vending-machine.css`. [Art direction](../docs/art-direction.md) and [motion](../docs/motion-interaction.md) describe approved targets; [status](../docs/implementation-status.md) records gaps.
+Maintained 10 November 2026. Actual sources: `resources/css/tokens.css`, `memory-dispenser.css`, `public-chrome.css`, `vending-machine.css`. [Art direction](../docs/art-direction.md) and [motion](../docs/motion-interaction.md) describe approved targets; [status](../docs/implementation-status.md) records gaps.
 
 ## Current implementation
 
@@ -23,6 +23,10 @@ P0-3 readability (9 November): Home excerpts 1rem; Home/card/date/location/filte
 P0-4 (9 November) adds testing only, with no token changes. The pinned Windows Chromium baseline gate uses 40 reviewed PNGs, threshold .15 / 30 differing pixels maximum (nav midpoint zero), explicit updates only, and geometry/state/network assertions. [Review/negative control](../docs/qa/visual-baselines/verification.md).
 
 ## Approved targets, not implemented tokens
+
+P4 (9–10 November) adds no global token, font, image or clock. `--surface-page` supplies two small static text-shadow layers behind public navigation, breadcrumbs, the Visit photo caption and error eyebrow; `--text-secondary` supplies engraved marquee/Reset text, with `--archive-recess` retaining a dark engraved edge. A local 48rem Explore console query reflows enlarged text. Removing the pending-results opacity fade preserves readable committed text; busy/status/intent semantics and the 220ms committed-card entrance remain. [Rendered contrast, reviewed pixel lineage and lab limits](../docs/qa/p4-integrated/verification.md).
+
+P4 painted focus uses the existing 2px `--focus-ring` plus static `--surface-page` backing: 7px outward on public header/hardware controls, 6px around the Visit-card title. Only the main overlay link's `:focus-visible` exposes that title frame; it does not raise the hit overlay above independent actions or change the rough mask. These are keyboard feedback rules, not idle pickup outlines or new motion.
 
 Choice 6A placed new real-wait skeleton experiences in P2; scoped Explore photo waits are now implemented below. P0-H inventories the unused generic foundation and verifies truthful existing status/empty/error/retry; no skeleton or delay was mounted. Choice 5B keeps existing semantic primitives and fixes only evidenced shared defects.
 

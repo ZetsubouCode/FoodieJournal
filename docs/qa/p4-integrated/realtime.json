@@ -1,0 +1,22 @@
+[
+  {
+    "width": 1440,
+    "file": "docs/qa/p4-integrated/realtime-1440.webm",
+    "visit": "http://127.0.0.1:8015/visit/demo-bara-di-ujung-hari",
+    "selectedId": "1",
+    "browser": "156.0.8078.4",
+    "build": "128df10b610e835c3603c6dc57a65401c6bb1d496649fa18acea270352092639",
+    "input": "keyboard activation and native Tab/Escape",
+    "timing": "Production time, no clock/slowMo/animation rewrite; 350ms observation holds at settled states"
+  },
+  {
+    "width": 390,
+    "file": "docs/qa/p4-integrated/realtime-390.webm",
+    "visit": "http://127.0.0.1:8015/visit/demo-bara-di-ujung-hari",
+    "selectedId": "1",
+    "browser": "156.0.8078.4",
+    "build": "128df10b610e835c3603c6dc57a65401c6bb1d496649fa18acea270352092639",
+    "input": "emulated touch with reduced motion",
+    "timing": "Production time, no clock/slowMo/animation rewrite; 350ms observation holds at settled states"
+  }
+]

@@ -33,6 +33,7 @@ test('record local paint, layout stability and token contrast measurements', asy
         return { ...window.foodieMeasurements, navigation_ms: performance.getEntriesByType('navigation')[0].duration, contrast: pairs.map(([foreground, background, minimum]) => ({ foreground, background, minimum, ratio: contrast(foreground, background) })) };
     });
     for (const pair of measured.contrast) expect(pair.ratio).toBeGreaterThanOrEqual(pair.minimum);
-    fs.mkdirSync('docs/qa', { recursive: true });
-    fs.writeFileSync('docs/qa/lab-measurements.json', JSON.stringify({ environment: 'Local Chromium, isolated QA fixtures, no network throttling. Single lab sample, not field Core Web Vitals.', browser: browser.version(), viewport: { width: 1440, height: 1000 }, ...measured, inp: 'Not measured; no field INP claim.' }, null, 2));
+    const output = process.env.FOODIE_QA_OUTPUT || 'docs/qa';
+    fs.mkdirSync(output, { recursive: true });
+    fs.writeFileSync(`${output}/lab-measurements.json`, JSON.stringify({ environment: 'Local Chromium, isolated QA fixtures, no network throttling. Single lab sample, not field Core Web Vitals.', browser: browser.version(), viewport: { width: 1440, height: 1000 }, ...measured, inp: 'Not measured; no field INP claim.' }, null, 2));
 });

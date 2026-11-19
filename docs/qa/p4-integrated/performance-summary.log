@@ -1,0 +1,656 @@
+{
+  "navigation": [
+    {
+      "name": "home",
+      "width": 390,
+      "cache": "cold",
+      "lcpMedian": 2060,
+      "clsMaximum": 0.05487263353365385
+    },
+    {
+      "name": "home",
+      "width": 390,
+      "cache": "warm",
+      "lcpMedian": 1964,
+      "clsMaximum": 0.05487263353365385
+    },
+    {
+      "name": "home",
+      "width": 1440,
+      "cache": "cold",
+      "lcpMedian": 1396,
+      "clsMaximum": 0.00011999723457995756
+    },
+    {
+      "name": "home",
+      "width": 1440,
+      "cache": "warm",
+      "lcpMedian": 1268,
+      "clsMaximum": 0.00011999723457995756
+    },
+    {
+      "name": "explore",
+      "width": 390,
+      "cache": "cold",
+      "lcpMedian": 612,
+      "clsMaximum": 0.002725133533653846
+    },
+    {
+      "name": "explore",
+      "width": 390,
+      "cache": "warm",
+      "lcpMedian": 644,
+      "clsMaximum": 0.002725133533653846
+    },
+    {
+      "name": "explore",
+      "width": 1440,
+      "cache": "cold",
+      "lcpMedian": 1568,
+      "clsMaximum": 0.02099200941297743
+    },
+    {
+      "name": "explore",
+      "width": 1440,
+      "cache": "warm",
+      "lcpMedian": 2340,
+      "clsMaximum": 0.02099200941297743
+    },
+    {
+      "name": "visit",
+      "width": 390,
+      "cache": "cold",
+      "lcpMedian": 628,
+      "clsMaximum": 0.013969608493589742
+    },
+    {
+      "name": "visit",
+      "width": 390,
+      "cache": "warm",
+      "lcpMedian": 552,
+      "clsMaximum": 0.013969608493589742
+    },
+    {
+      "name": "visit",
+      "width": 1440,
+      "cache": "cold",
+      "lcpMedian": 504,
+      "clsMaximum": 0.003149775548864294
+    },
+    {
+      "name": "visit",
+      "width": 1440,
+      "cache": "warm",
+      "lcpMedian": 472,
+      "clsMaximum": 0.003149775548864294
+    },
+    {
+      "name": "place",
+      "width": 390,
+      "cache": "cold",
+      "lcpMedian": 500,
+      "clsMaximum": 0.015882552884615386
+    },
+    {
+      "name": "place",
+      "width": 390,
+      "cache": "warm",
+      "lcpMedian": 460,
+      "clsMaximum": 0.015882552884615386
+    },
+    {
+      "name": "place",
+      "width": 1440,
+      "cache": "cold",
+      "lcpMedian": 516,
+      "clsMaximum": 0.0015984254286024306
+    },
+    {
+      "name": "place",
+      "width": 1440,
+      "cache": "warm",
+      "lcpMedian": 480,
+      "clsMaximum": 0.0015984254286024306
+    }
+  ],
+  "interactions": [
+    {
+      "name": "archive",
+      "width": 390,
+      "cpuRate": 1,
+      "trace": {
+        "Paint": {
+          "oldMedian": 17.314,
+          "currentMedian": 17.649,
+          "changePercent": 1.9348504100727748,
+          "oldRange": [
+            16.727,
+            17.877
+          ],
+          "currentRange": [
+            17.147,
+            20.531
+          ]
+        },
+        "Layout": {
+          "oldMedian": 6.543,
+          "currentMedian": 7.721,
+          "changePercent": 18.003973712364353,
+          "oldRange": [
+            6.288,
+            10.464
+          ],
+          "currentRange": [
+            5.774,
+            7.93
+          ]
+        },
+        "UpdateLayoutTree": {
+          "oldMedian": 25.031,
+          "currentMedian": 23.806,
+          "changePercent": -4.893931524909101,
+          "oldRange": [
+            23.551,
+            25.429
+          ],
+          "currentRange": [
+            23.113,
+            25.966
+          ]
+        }
+      },
+      "currentP95Median": 16.700000000000728
+    },
+    {
+      "name": "archive",
+      "width": 390,
+      "cpuRate": 4,
+      "trace": {
+        "Paint": {
+          "oldMedian": 105.13,
+          "currentMedian": 100.993,
+          "changePercent": -3.9351279368400993,
+          "oldRange": [
+            98.249,
+            108.105
+          ],
+          "currentRange": [
+            100.807,
+            106.666
+          ]
+        },
+        "Layout": {
+          "oldMedian": 40.325,
+          "currentMedian": 40.177,
+          "changePercent": -0.3670179789212691,
+          "oldRange": [
+            39.867,
+            42.401
+          ],
+          "currentRange": [
+            36.855,
+            40.225
+          ]
+        },
+        "UpdateLayoutTree": {
+          "oldMedian": 110.989,
+          "currentMedian": 114.882,
+          "changePercent": 3.5075548027281966,
+          "oldRange": [
+            105.812,
+            120.125
+          ],
+          "currentRange": [
+            97.395,
+            138.9
+          ]
+        }
+      },
+      "currentP95Median": 16.799999999999727
+    },
+    {
+      "name": "archive",
+      "width": 1440,
+      "cpuRate": 1,
+      "trace": {
+        "Paint": {
+          "oldMedian": 16.307,
+          "currentMedian": 15.836,
+          "changePercent": -2.888330164959818,
+          "oldRange": [
+            14.374,
+            18.445
+          ],
+          "currentRange": [
+            15.367,
+            17.452
+          ]
+        },
+        "Layout": {
+          "oldMedian": 5.515,
+          "currentMedian": 5.868,
+          "changePercent": 6.400725294650966,
+          "oldRange": [
+            4.958,
+            5.582
+          ],
+          "currentRange": [
+            5.475,
+            6.431
+          ]
+        },
+        "UpdateLayoutTree": {
+          "oldMedian": 19.425,
+          "currentMedian": 23.097,
+          "changePercent": 18.903474903474905,
+          "oldRange": [
+            17.32,
+            25.2
+          ],
+          "currentRange": [
+            19.166,
+            23.814
+          ]
+        }
+      },
+      "currentP95Median": 16.799999999999727
+    },
+    {
+      "name": "archive",
+      "width": 1440,
+      "cpuRate": 4,
+      "trace": {
+        "Paint": {
+          "oldMedian": 92.59,
+          "currentMedian": 95.837,
+          "changePercent": 3.506858192029383,
+          "oldRange": [
+            87.819,
+            97.079
+          ],
+          "currentRange": [
+            93.589,
+            99.463
+          ]
+        },
+        "Layout": {
+          "oldMedian": 34.113,
+          "currentMedian": 34.265,
+          "changePercent": 0.4455779321666187,
+          "oldRange": [
+            30.084,
+            37.855
+          ],
+          "currentRange": [
+            32.449,
+            35.576
+          ]
+        },
+        "UpdateLayoutTree": {
+          "oldMedian": 84.083,
+          "currentMedian": 88.547,
+          "changePercent": 5.309039877264121,
+          "oldRange": [
+            83.117,
+            96.53
+          ],
+          "currentRange": [
+            83.305,
+            100.035
+          ]
+        }
+      },
+      "currentP95Median": 16.700000000000728
+    },
+    {
+      "name": "explore",
+      "width": 390,
+      "cpuRate": 1,
+      "trace": {
+        "Paint": {
+          "oldMedian": 3.586,
+          "currentMedian": 4.087,
+          "changePercent": 13.970998326826557,
+          "oldRange": [
+            3.193,
+            3.994
+          ],
+          "currentRange": [
+            4.077,
+            4.558
+          ]
+        },
+        "Layout": {
+          "oldMedian": 4.103,
+          "currentMedian": 4.198,
+          "changePercent": 2.3153789909822198,
+          "oldRange": [
+            4.084,
+            4.4
+          ],
+          "currentRange": [
+            3.985,
+            4.261
+          ]
+        },
+        "UpdateLayoutTree": {
+          "oldMedian": 4.88,
+          "currentMedian": 5.477,
+          "changePercent": 12.233606557377064,
+          "oldRange": [
+            4.795,
+            5.349
+          ],
+          "currentRange": [
+            5.39,
+            5.854
+          ]
+        }
+      },
+      "currentP95Median": 16.800000000000182
+    },
+    {
+      "name": "explore",
+      "width": 390,
+      "cpuRate": 4,
+      "trace": {
+        "Paint": {
+          "oldMedian": 20.818,
+          "currentMedian": 19.781,
+          "changePercent": -4.98126621193199,
+          "oldRange": [
+            13.861,
+            20.957
+          ],
+          "currentRange": [
+            18.485,
+            23.138
+          ]
+        },
+        "Layout": {
+          "oldMedian": 24.534,
+          "currentMedian": 26.661,
+          "changePercent": 8.669601369528014,
+          "oldRange": [
+            20.707,
+            27.965
+          ],
+          "currentRange": [
+            21.14,
+            29.249
+          ]
+        },
+        "UpdateLayoutTree": {
+          "oldMedian": 19.167,
+          "currentMedian": 22.344,
+          "changePercent": 16.575363906714657,
+          "oldRange": [
+            16.143,
+            23.417
+          ],
+          "currentRange": [
+            21.744,
+            22.453
+          ]
+        }
+      },
+      "currentP95Median": 83.30000000000018
+    },
+    {
+      "name": "explore",
+      "width": 1440,
+      "cpuRate": 1,
+      "trace": {
+        "Paint": {
+          "oldMedian": 3.266,
+          "currentMedian": 2.913,
+          "changePercent": -10.808328230251075,
+          "oldRange": [
+            2.705,
+            3.909
+          ],
+          "currentRange": [
+            2.865,
+            3.49
+          ]
+        },
+        "Layout": {
+          "oldMedian": 4.928,
+          "currentMedian": 6.076,
+          "changePercent": 23.29545454545454,
+          "oldRange": [
+            4.78,
+            6.048
+          ],
+          "currentRange": [
+            5.512,
+            7.031
+          ]
+        },
+        "UpdateLayoutTree": {
+          "oldMedian": 4.527,
+          "currentMedian": 5.97,
+          "changePercent": 31.8754141815772,
+          "oldRange": [
+            4.449,
+            6.504
+          ],
+          "currentRange": [
+            5.379,
+            7.76
+          ]
+        }
+      },
+      "currentP95Median": 16.800000000000182
+    },
+    {
+      "name": "explore",
+      "width": 1440,
+      "cpuRate": 4,
+      "trace": {
+        "Paint": {
+          "oldMedian": 24.125,
+          "currentMedian": 23.566,
+          "changePercent": -2.3170984455958554,
+          "oldRange": [
+            19.752,
+            24.414
+          ],
+          "currentRange": [
+            22.972,
+            28.987
+          ]
+        },
+        "Layout": {
+          "oldMedian": 32.611,
+          "currentMedian": 31.25,
+          "changePercent": -4.173438410352325,
+          "oldRange": [
+            28.075,
+            38.231
+          ],
+          "currentRange": [
+            29.923,
+            32.047
+          ]
+        },
+        "UpdateLayoutTree": {
+          "oldMedian": 28.871,
+          "currentMedian": 31.426,
+          "changePercent": 8.849710782446053,
+          "oldRange": [
+            23.69,
+            31.702
+          ],
+          "currentRange": [
+            28.899,
+            35.425
+          ]
+        }
+      },
+      "currentP95Median": 116.59999999999945
+    }
+  ],
+  "place": [
+    {
+      "width": 390,
+      "cpuRate": 1,
+      "cache": "cold",
+      "oldMedian": 556,
+      "currentMedian": 544,
+      "changePercent": -2.1582733812949617,
+      "oldRange": [
+        504,
+        628
+      ],
+      "currentRange": [
+        512,
+        584
+      ],
+      "oldTtfbMedian": 217.30000001192093,
+      "currentTtfbMedian": 226.69999998807907,
+      "oldClsMaximum": 0.015882552884615386,
+      "currentClsMaximum": 0.015882552884615386
+    },
+    {
+      "width": 390,
+      "cpuRate": 1,
+      "cache": "warm",
+      "oldMedian": 536,
+      "currentMedian": 564,
+      "changePercent": 5.223880597014929,
+      "oldRange": [
+        536,
+        568
+      ],
+      "currentRange": [
+        556,
+        668
+      ],
+      "oldTtfbMedian": 227.89999997615814,
+      "currentTtfbMedian": 257.60000002384186,
+      "oldClsMaximum": 0.015882552884615386,
+      "currentClsMaximum": 0.015882552884615386
+    },
+    {
+      "width": 390,
+      "cpuRate": 4,
+      "cache": "cold",
+      "oldMedian": 856,
+      "currentMedian": 784,
+      "changePercent": -8.41121495327103,
+      "oldRange": [
+        800,
+        996
+      ],
+      "currentRange": [
+        780,
+        884
+      ],
+      "oldTtfbMedian": 272,
+      "currentTtfbMedian": 253.89999997615814,
+      "oldClsMaximum": 0.015882552884615386,
+      "currentClsMaximum": 0.015882552884615386
+    },
+    {
+      "width": 390,
+      "cpuRate": 4,
+      "cache": "warm",
+      "oldMedian": 720,
+      "currentMedian": 644,
+      "changePercent": -10.555555555555552,
+      "oldRange": [
+        712,
+        820
+      ],
+      "currentRange": [
+        588,
+        740
+      ],
+      "oldTtfbMedian": 303.69999998807907,
+      "currentTtfbMedian": 258.89999997615814,
+      "oldClsMaximum": 0.015882552884615386,
+      "currentClsMaximum": 0.015882552884615386
+    },
+    {
+      "width": 1440,
+      "cpuRate": 1,
+      "cache": "cold",
+      "oldMedian": 632,
+      "currentMedian": 544,
+      "changePercent": -13.924050632911388,
+      "oldRange": [
+        560,
+        660
+      ],
+      "currentRange": [
+        504,
+        636
+      ],
+      "oldTtfbMedian": 261.10000002384186,
+      "currentTtfbMedian": 238.69999998807907,
+      "oldClsMaximum": 0.0013767653853804975,
+      "currentClsMaximum": 0.0013767653853804975
+    },
+    {
+      "width": 1440,
+      "cpuRate": 1,
+      "cache": "warm",
+      "oldMedian": 664,
+      "currentMedian": 532,
+      "changePercent": -19.87951807228916,
+      "oldRange": [
+        592,
+        668
+      ],
+      "currentRange": [
+        524,
+        560
+      ],
+      "oldTtfbMedian": 252.4000000357628,
+      "currentTtfbMedian": 216.60000002384186,
+      "oldClsMaximum": 0.0013767653853804975,
+      "currentClsMaximum": 0.0013767653853804975
+    },
+    {
+      "width": 1440,
+      "cpuRate": 4,
+      "cache": "cold",
+      "oldMedian": 748,
+      "currentMedian": 716,
+      "changePercent": -4.278074866310155,
+      "oldRange": [
+        732,
+        780
+      ],
+      "currentRange": [
+        708,
+        872
+      ],
+      "oldTtfbMedian": 249.5,
+      "currentTtfbMedian": 233,
+      "oldClsMaximum": 0.0013767653853804975,
+      "currentClsMaximum": 0.0013767653853804975
+    },
+    {
+      "width": 1440,
+      "cpuRate": 4,
+      "cache": "warm",
+      "oldMedian": 620,
+      "currentMedian": 604,
+      "changePercent": -2.580645161290318,
+      "oldRange": [
+        604,
+        636
+      ],
+      "currentRange": [
+        592,
+        704
+      ],
+      "oldTtfbMedian": 233.10000002384186,
+      "currentTtfbMedian": 246.60000002384186,
+      "oldClsMaximum": 0.0013767653853804975,
+      "currentClsMaximum": 0.0013767653853804975
+    }
+  ]
+}

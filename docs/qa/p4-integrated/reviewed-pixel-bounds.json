@@ -1,0 +1,80 @@
+[
+  {
+    "name": "home-390-hero",
+    "size": [
+      390,
+      1000
+    ],
+    "changedBounds": [
+      76,
+      32,
+      376,
+      307
+    ]
+  },
+  {
+    "name": "home-1440-hero",
+    "size": [
+      1440,
+      1000
+    ],
+    "changedBounds": [
+      279,
+      32,
+      1394,
+      397
+    ]
+  },
+  {
+    "name": "home-1920-hero",
+    "size": [
+      1920,
+      1000
+    ],
+    "changedBounds": [
+      378,
+      32,
+      1858,
+      435
+    ]
+  },
+  {
+    "name": "explore-390-hero",
+    "size": [
+      390,
+      1000
+    ],
+    "changedBounds": [
+      254,
+      32,
+      376,
+      50
+    ]
+  },
+  {
+    "name": "cabinet-on-1440",
+    "size": [
+      1344,
+      1009
+    ],
+    "changedBounds": [
+      231,
+      284,
+      777,
+      317
+    ]
+  },
+  {
+    "name": "cabinet-printed-1440",
+    "size": [
+      1344,
+      1009
+    ],
+    "changedBounds": [
+      231,
+      284,
+      777,
+      317
+    ]
+  }
+]

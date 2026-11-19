@@ -1,0 +1,15 @@
+
+Running 8 tests using 1 worker
+
+(node:6412) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 tests\Browser\vending-machine.spec.js:70:1 › rotary angular drag crosses wrap boundary and keyboard reverses a real six-visit page (8.3s)
+  ok 2 tests\Browser\vending-machine.spec.js:140:1 › touch uses lamp then target; reduced-motion runtime changes keep power and print usable (4.5s)
+  ok 3 tests\Browser\vending-machine.spec.js:157:1 › keyboard lamp actions and blocked sessionStorage remain usable (2.2s)
+  ok 4 tests\Browser\vending-machine.spec.js:201:1 › no JavaScript leaves semantic visit and Explore navigation available (2.9s)
+  ok 5 tests\Browser\vending-machine.spec.js:207:1 › touch dragging snaps only after release on the compact socket (3.6s)
+  ok 6 tests\Browser\vending-machine.spec.js:219:1 › resize, a second pointer, scroll and visibility interruptions preserve a valid lamp pose (4.9s)
+  ok 7 tests\Browser\vending-seating.spec.js:55:1 › seating interruptions finish both local effects and retain exact print/off semantics (10.6s)
+  ok 8 tests\Browser\vending-seating.spec.js:109:1 › 200% root text preserves seated geometry and keyboard print identity (3.4s)
+
+  8 passed (42.3s)

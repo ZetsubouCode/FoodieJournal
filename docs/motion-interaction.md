@@ -58,6 +58,8 @@ P3-2 (9 November) adds static month/year grouping to Place history and inherits 
 
 ## Accessibility, interruption and performance gates
 
+P4 (9–10 November) removes the Explore refresh opacity fade because it reduced retained metadata contrast. Useful results stay fully readable while existing immediate busy/status/pending feedback and the bounded committed-card entrance retain ownership. Static local text contrast repairs add no animation; native error skip focus and semantic groups add no mechanical event or wait. Source anchors, 270/960/820ms clocks, 32° commitments, cancellation and exact-print identity remain locked. [Integrated checks, repeat lab investigation and unavailable evidence](qa/p4-integrated/verification.md).
+
 Every applicable control has idle, hover, focus, press, selected/active and disabled feedback. Async flows additionally expose processing/loading, success, empty, failure/retry and interruption/cancellation. Do not add impossible boolean combinations; extend the existing reducer when state becomes nontrivial.
 
 `prefers-reduced-motion` applies at load and changes at runtime: finish meaningful state immediately, cancel decorative travel, retain static cues and all actions. Hidden tabs/pagehide, resize, lost pointer capture, repeated requests and Back/Forward must settle safely. No uncaught animation rejection, duplicate listener, stuck `inert` or infinite idle loop. Shared native dialogs restore focus; announce real changes once with meaningful live regions.

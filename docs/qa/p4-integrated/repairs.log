@@ -1,0 +1,185 @@
+
+Running 4 tests using 1 worker
+
+(node:28712) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 tests\Browser\integrated-gates.spec.js:30:1 › integrated public reflow, enlarged root text and primary focus at all target boundaries (2.4m)
+  x  2 tests\Browser\integrated-gates.spec.js:58:1 › whole-page axe and actual keyboard focus cover drawer, busy error retry and viewer (9.1s)
+(node:20876) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 3 tests\Browser\integrated-gates.spec.js:102:1 › six actual HTTP statuses retain approved copy, recovery, JSON and responsive standalone scenes (15.9s)
+  ok 4 tests\Browser\p0-hardening.spec.js:20:1 › Place hero comes from older published history and stays the same on pages 1 and 2 (4.1s)
+
+
+  1) tests\Browser\integrated-gates.spec.js:58:1 › whole-page axe and actual keyboard focus cover drawer, busy error retry and viewer 
+
+    Error: 390 /explore: manual semantic review
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  -   1
+    + Received  + 134
+
+    - Array []
+    + Array [
+    +   Object {
+    +     "id": "aria-prohibited-attr",
+    +     "impact": "serious",
+    +     "nodes": Array [
+    +       Object {
+    +         "summary": "Fix all of the following:
+    +   aria-label attribute is not well supported on \"div\" elements with no valid role attribute.",
+    +         "target": Array [
+    +           "article[aria-labelledby=\"visit-card-1-nIf89KTs-title\"] > .visit-card__body > .visit-card__tags[aria-label=\"Tag kunjungan\"]",
+    +         ],
+    +       },
+    +       Object {
+    +         "summary": "Fix all of the following:
+    +   aria-label attribute is not well supported on \"div\" elements with no valid role attribute.",
+    +         "target": Array [
+    +           "article[aria-labelledby=\"visit-card-2-bXQ0bEkM-title\"] > .visit-card__body > .visit-card__tags[aria-label=\"Tag kunjungan\"]",
+    +         ],
+    +       },
+    +       Object {
+    +         "summary": "Fix all of the following:
+    +   aria-label attribute is not well supported on \"div\" elements with no valid role attribute.",
+    +         "target": Array [
+    +           "article[aria-labelledby=\"visit-card-3-GOvg88JR-title\"] > .visit-card__body > .visit-card__tags[aria-label=\"Tag kunjungan\"]",
+    +         ],
+    +       },
+    +       Object {
+    +         "summary": "Fix all of the following:
+    +   aria-label attribute is not well supported on \"div\" elements with no valid role attribute.",
+    +         "target": Array [
+    +           "article[aria-labelledby=\"visit-card-4-cZqZwGAg-title\"] > .visit-card__body > .visit-card__tags[aria-label=\"Tag kunjungan\"]",
+    +         ],
+    +       },
+    +       Object {
+    +         "summary": "Fix all of the following:
+    +   aria-label attribute is not well supported on \"div\" elements with no valid role attribute.",
+    +         "target": Array [
+    +           "article[aria-labelledby=\"visit-card-5-kngXgXlb-title\"] > .visit-card__body > .visit-card__tags[aria-label=\"Tag kunjungan\"]",
+    +         ],
+    +       },
+    +       Object {
+    +         "summary": "Fix all of the following:
+    +   aria-label attribute is not well supported on \"div\" elements with no valid role attribute.",
+    +         "target": Array [
+    +           "article[aria-labelledby=\"visit-card-6-jO6g5oN7-title\"] > .visit-card__body > .visit-card__tags[aria-label=\"Tag kunjungan\"]",
+    +         ],
+    +       },
+    +       Object {
+    +         "summary": "Fix all of the following:
+    +   aria-label attribute is not well supported on \"div\" elements with no valid role attribute.",
+    +         "target": Array [
+    +           "article[aria-labelledby=\"visit-card-7-Ia6Nh71B-title\"] > .visit-card__body > .visit-card__tags[aria-label=\"Tag kunjungan\"]",
+    +         ],
+    +       },
+    +       Object {
+    +         "summary": "Fix all of the following:
+    +   aria-label attribute is not well supported on \"div\" elements with no valid role attribute.",
+    +         "target": Array [
+    +           "article[aria-labelledby=\"visit-card-8-2tlZAj3H-title\"] > .visit-card__body > .visit-card__tags[aria-label=\"Tag kunjungan\"]",
+    +         ],
+    +       },
+    +       Object {
+    +         "summary": "Fix all of the following:
+    +   aria-label attribute is not well supported on \"div\" elements with no valid role attribute.",
+    +         "target": Array [
+    +           "article[aria-labelledby=\"visit-card-9-rw9LwDcC-title\"] > .visit-card__body > .visit-card__tags[aria-label=\"Tag kunjungan\"]",
+    +         ],
+    +       },
+    +       Object {
+    +         "summary": "Fix all of the following:
+    +   aria-label attribute is not well supported on \"div\" elements with no valid role attribute.",
+    +         "target": Array [
+    +           "article[aria-labelledby=\"visit-card-10-TsV8GTUE-title\"] > .visit-card__body > .visit-card__tags[aria-label=\"Tag kunjungan\"]",
+    +         ],
+    +       },
+    +       Object {
+    +         "summary": "Fix all of the following:
+    +   aria-label attribute is not well supported on \"div\" elements with no valid role attribute.",
+    +         "target": Array [
+    +           "article[aria-labelledby=\"visit-card-11-PazM8roL-title\"] > .visit-card__body > .visit-card__tags[aria-label=\"Tag kunjungan\"]",
+    +         ],
+    +       },
+    +       Object {
+    +         "summary": "Fix all of the following:
+    +   aria-label attribute is not well supported on \"div\" elements with no valid role attribute.",
+    +         "target": Array [
+    +           "article[aria-labelledby=\"visit-card-12-0nQbYQoM-title\"] > .visit-card__body > .visit-card__tags[aria-label=\"Tag kunjungan\"]",
+    +         ],
+    +       },
+    +       Object {
+    +         "summary": "Fix all of the following:
+    +   aria-label attribute is not well supported on \"div\" elements with no valid role attribute.",
+    +         "target": Array [
+    +           "article[aria-labelledby=\"visit-card-13-Qb9PRVMn-title\"] > .visit-card__body > .visit-card__tags[aria-label=\"Tag kunjungan\"]",
+    +         ],
+    +       },
+    +       Object {
+    +         "summary": "Fix all of the following:
+    +   aria-label attribute is not well supported on \"div\" elements with no valid role attribute.",
+    +         "target": Array [
+    +           "article[aria-labelledby=\"visit-card-14-0rUwa5Qd-title\"] > .visit-card__body > .visit-card__tags[aria-label=\"Tag kunjungan\"]",
+    +         ],
+    +       },
+    +       Object {
+    +         "summary": "Fix all of the following:
+    +   aria-label attribute is not well supported on \"div\" elements with no valid role attribute.",
+    +         "target": Array [
+    +           "article[aria-labelledby=\"visit-card-15-YL3RiIBs-title\"] > .visit-card__body > .visit-card__tags[aria-label=\"Tag kunjungan\"]",
+    +         ],
+    +       },
+    +       Object {
+    +         "summary": "Fix all of the following:
+    +   aria-label attribute is not well supported on \"div\" elements with no valid role attribute.",
+    +         "target": Array [
+    +           "article[aria-labelledby=\"visit-card-16-frVQkMXM-title\"] > .visit-card__body > .visit-card__tags[aria-label=\"Tag kunjungan\"]",
+    +         ],
+    +       },
+    +       Object {
+    +         "summary": "Fix all of the following:
+    +   aria-label attribute is not well supported on \"div\" elements with no valid role attribute.",
+    +         "target": Array [
+    +           "article[aria-labelledby=\"visit-card-17-B0cQYw6w-title\"] > .visit-card__body > .visit-card__tags[aria-label=\"Tag kunjungan\"]",
+    +         ],
+    +       },
+    +       Object {
+    +         "summary": "Fix all of the following:
+    +   aria-label attribute is not well supported on \"div\" elements with no valid role attribute.",
+    +         "target": Array [
+    +           "article[aria-labelledby=\"visit-card-18-FA8BWjCl-title\"] > .visit-card__body > .visit-card__tags[aria-label=\"Tag kunjungan\"]",
+    +         ],
+    +       },
+    +     ],
+    +   },
+    + ]
+
+      18 |     fs.writeFileSync(`${output}/${file}`, JSON.stringify(report, null, 2));
+      19 |     expect(simplify(result.violations), name).toEqual([]);
+    > 20 |     expect(simplify(result.incomplete.filter(v => v.id !== 'color-contrast')), `${name}: manual semantic review`).toEqual([]);
+         |                                                                                                                   ^
+      21 | }
+      22 | async function trap(page, dialog) {
+      23 |     for (const key of ['Tab', 'Shift+Tab']) for (let n = 0; n < 12; n++) {
+        at scan (D:\Github repo\FoodieJournal\tests\Browser\integrated-gates.spec.js:20:115)
+        at D:\Github repo\FoodieJournal\tests\Browser\integrated-gates.spec.js:67:13
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\integrated-gates-whole-pag-c96e8-busy-error-retry-and-viewer\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\integrated-gates-whole-pag-c96e8-busy-error-retry-and-viewer\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\integrated-gates-whole-pag-c96e8-busy-error-retry-and-viewer\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\integrated-gates-whole-pag-c96e8-busy-error-retry-and-viewer\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests\Browser\integrated-gates.spec.js:58:1 › whole-page axe and actual keyboard focus cover drawer, busy error retry and viewer 
+  3 passed (2.9m)

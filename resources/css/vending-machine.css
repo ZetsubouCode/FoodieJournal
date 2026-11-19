@@ -50,9 +50,9 @@
 .vending-reset img { position: absolute; inset: 0; }
 .vending-reset__face { transition: transform 150ms var(--vending-ease); }
 .vending-reset:not(:disabled):active .vending-reset__face { transform: translateY(3px) scale(.95); transition-duration: 85ms; }
-.vending-reset__label { position: absolute; left: -10%; right: -10%; bottom: -1.3cqi; color: var(--text-muted); font: .65cqi/1 var(--font-body); letter-spacing: .05em; }
+.vending-reset__label { position: absolute; left: -10%; right: -10%; bottom: -1.3cqi; color: var(--text-secondary); font: .65cqi/1 var(--font-body); letter-spacing: .05em; }
 .vending-hardware button:disabled { cursor: default; }
-.vending-hardware button:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 4px; }
+.vending-hardware button:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 4px; box-shadow: 0 0 0 7px var(--surface-page); }
 
 .vending-machine .memory-machine__display { pointer-events: auto; }
 .vending-machine .memory-machine__step { padding: 0; border: 0; background: transparent; min-height: 44px; color: var(--text-secondary); transform: translateY(-22px); border-radius: 50%; cursor: pointer; }
@@ -150,8 +150,8 @@ html[data-vending-session=off] .vending-machine:not([data-enhanced]) .vending-tr
 .vending-machine[data-power=booting] .vending-tray-shade { animation:vending-tray-warm 960ms both; }
 @keyframes vending-tray-warm { 0%,45%{opacity:1} 100%{opacity:0} }
 .vending-machine:is([data-power=off],[data-power=shutting_down]) .vending-roller { opacity:.3; }
-.vending-machine .memory-machine__marquee { color:#bda17c; text-shadow:0 1px 0 #e7c89940,0 -1px 1px #080604; }
-.vending-machine .memory-machine__marquee small { color:#ad9475; text-shadow:0 1px 0 #e7c89933,0 -1px 1px #080604; }
+.vending-machine .memory-machine__marquee { color:var(--text-secondary); text-shadow:0 -1px 1px var(--archive-recess),0 0 2px var(--archive-recess); }
+.vending-machine .memory-machine__marquee small { color:inherit; text-shadow:inherit; }
 .vending-rotary__legend,.vending-reset__label,.vending-machine .memory-slot__name { text-shadow:0 -1px 1px #100b06,0 1px 0 #eed2a044; }
 .vending-machine[data-power=on] .memory-slot[aria-current=true] { box-shadow:inset 0 0 0 1.5px var(--archive-highlight),0 0 8px #e7a45a30; }
 .vending-machine[data-power=on] .memory-slot[aria-current=true] .memory-slot__glass img { filter:brightness(1.08) saturate(1); }

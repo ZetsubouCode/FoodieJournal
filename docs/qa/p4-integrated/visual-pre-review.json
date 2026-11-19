@@ -1,0 +1,1376 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\Github repo\\FoodieJournal\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config",
+      "playwright.visual.config.js",
+      "--update-snapshots=none"
+    ],
+    "configFile": "D:\\Github repo\\FoodieJournal\\playwright.visual.config.js",
+    "rootDir": "D:/Github repo/FoodieJournal/tests/Browser",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/Github repo/FoodieJournal/tools/.runtime/visual-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "D:/Github repo/FoodieJournal/tests/Browser",
+        "testIgnore": [],
+        "testMatch": [
+          "public-visual.spec.js"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\Github repo\\FoodieJournal\\tools\\.runtime\\visual-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "D:\\Github repo\\FoodieJournal\\tests\\Browser",
+        "snapshotDir": "D:\\Github repo\\FoodieJournal\\tests\\Browser",
+        "testIgnore": [],
+        "testMatch": "public-visual.spec.js",
+        "timeout": 60000,
+        "use": {
+          "browserName": "chromium",
+          "baseURL": "http://127.0.0.1:8015",
+          "locale": "id-ID",
+          "timezoneId": "Asia/Jakarta",
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "deviceScaleFactor": 1,
+          "colorScheme": "dark",
+          "reducedMotion": "reduce",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "actionTimeout": 10000,
+          "navigationTimeout": 20000
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "tools/.runtime/visual-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "none",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "public-visual.spec.js",
+      "file": "public-visual.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Home at 390: hero and footer",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6180,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  83 pixels (ratio 0.01 of all image pixels) are different.\n\n  Snapshot: home-390-hero.png\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot(home-390-hero.png)\" with timeout 5000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - 83 pixels (ratio 0.01 of all image pixels) are different.\u001b[22m\n\u001b[2m  - waiting 100ms before taking screenshot\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - captured a stable screenshot\u001b[22m\n\u001b[2m  - 83 pixels (ratio 0.01 of all image pixels) are different.\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  83 pixels (ratio 0.01 of all image pixels) are different.\n\n  Snapshot: home-390-hero.png\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot(home-390-hero.png)\" with timeout 5000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - 83 pixels (ratio 0.01 of all image pixels) are different.\u001b[22m\n\u001b[2m  - waiting 100ms before taking screenshot\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - captured a stable screenshot\u001b[22m\n\u001b[2m  - 83 pixels (ratio 0.01 of all image pixels) are different.\u001b[22m\n\n    at shot (D:\\Github repo\\FoodieJournal\\tests\\Browser\\public-visual.spec.js:32:26)\n    at D:\\Github repo\\FoodieJournal\\tests\\Browser\\public-visual.spec.js:61:13",
+                    "location": {
+                      "file": "D:\\Github repo\\FoodieJournal\\tests\\Browser\\public-visual.spec.js",
+                      "column": 26,
+                      "line": 32
+                    },
+                    "snippet": "  30 |         fonts: await page.evaluate(() => [...document.fonts].filter(f => f.status === 'loaded').map(f => f.family)),\n  31 |         originals: await page.locator('img[src$=\"/original\"]').count() }) });\n> 32 |     await expect(target).toHaveScreenshot(`${name}.png`);\n     |                          ^\n  33 | }\n  34 |\n  35 | async function on(page) {"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\Github repo\\FoodieJournal\\tests\\Browser\\public-visual.spec.js",
+                        "column": 26,
+                        "line": 32
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  83 pixels (ratio 0.01 of all image pixels) are different.\n\n  Snapshot: home-390-hero.png\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot(home-390-hero.png)\" with timeout 5000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - 83 pixels (ratio 0.01 of all image pixels) are different.\u001b[22m\n\u001b[2m  - waiting 100ms before taking screenshot\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - captured a stable screenshot\u001b[22m\n\u001b[2m  - 83 pixels (ratio 0.01 of all image pixels) are different.\u001b[22m\n\n\n  30 |         fonts: await page.evaluate(() => [...document.fonts].filter(f => f.status === 'loaded').map(f => f.family)),\n  31 |         originals: await page.locator('img[src$=\"/original\"]').count() }) });\n> 32 |     await expect(target).toHaveScreenshot(`${name}.png`);\n     |                          ^\n  33 | }\n  34 |\n  35 | async function on(page) {\n    at shot (D:\\Github repo\\FoodieJournal\\tests\\Browser\\public-visual.spec.js:32:26)\n    at D:\\Github repo\\FoodieJournal\\tests\\Browser\\public-visual.spec.js:61:13"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T12:08:26.089Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoiaG9tZS0zOTAtaGVybyIsInJvdXRlIjoiaHR0cDovLzEyNy4wLjAuMTo4MDE1LyIsInZpZXdwb3J0Ijp7IndpZHRoIjozOTAsImhlaWdodCI6MTAwMH0sImJyb3dzZXIiOiIxNTYuMC44MDc4LjQiLCJtb3Rpb24iOiJyZWR1Y2UgdW5sZXNzIHN0YXRlIHNwZWNpZmllcyBub3JtYWwiLCJmb250cyI6WyJBcmNoaXZlIEdhcmFtb25kIiwiQXJjaGl2ZSBHYXJhbW9uZCIsIkFyY2hpdmUgU2FucyJdLCJvcmlnaW5hbHMiOjB9"
+                    },
+                    {
+                      "name": "home-390-hero-expected.png",
+                      "contentType": "image/png",
+                      "path": "D:\\Github repo\\FoodieJournal\\tests\\Browser\\__screenshots__\\public-visual-win32-chromium\\home-390-hero.png"
+                    },
+                    {
+                      "name": "home-390-hero-actual.png",
+                      "contentType": "image/png",
+                      "path": "D:\\Github repo\\FoodieJournal\\tools\\.runtime\\visual-results\\public-visual-Home-at-390-hero-and-footer\\home-390-hero-actual.png"
+                    },
+                    {
+                      "name": "home-390-hero-diff.png",
+                      "contentType": "image/png",
+                      "path": "D:\\Github repo\\FoodieJournal\\tools\\.runtime\\visual-results\\public-visual-Home-at-390-hero-and-footer\\home-390-hero-diff.png"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\Github repo\\FoodieJournal\\tools\\.runtime\\visual-results\\public-visual-Home-at-390-hero-and-footer\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\Github repo\\FoodieJournal\\tools\\.runtime\\visual-results\\public-visual-Home-at-390-hero-and-footer\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\Github repo\\FoodieJournal\\tools\\.runtime\\visual-results\\public-visual-Home-at-390-hero-and-footer\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\Github repo\\FoodieJournal\\tests\\Browser\\public-visual.spec.js",
+                    "column": 26,
+                    "line": 32
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "58ac71969675d208f6e9-4fa801cfdbebe8319307",
+          "file": "public-visual.spec.js",
+          "line": 43,
+          "column": 9
+        },
+        {
+          "title": "Explore at 390: hero and footer",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 10354,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  31 pixels (ratio 0.01 of all image pixels) are different.\n\n  Snapshot: explore-390-hero.png\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot(explore-390-hero.png)\" with timeout 5000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - 31 pixels (ratio 0.01 of all image pixels) are different.\u001b[22m\n\u001b[2m  - waiting 100ms before taking screenshot\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - captured a stable screenshot\u001b[22m\n\u001b[2m  - 31 pixels (ratio 0.01 of all image pixels) are different.\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  31 pixels (ratio 0.01 of all image pixels) are different.\n\n  Snapshot: explore-390-hero.png\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot(explore-390-hero.png)\" with timeout 5000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - 31 pixels (ratio 0.01 of all image pixels) are different.\u001b[22m\n\u001b[2m  - waiting 100ms before taking screenshot\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - captured a stable screenshot\u001b[22m\n\u001b[2m  - 31 pixels (ratio 0.01 of all image pixels) are different.\u001b[22m\n\n    at shot (D:\\Github repo\\FoodieJournal\\tests\\Browser\\public-visual.spec.js:32:26)\n    at D:\\Github repo\\FoodieJournal\\tests\\Browser\\public-visual.spec.js:61:13",
+                    "location": {
+                      "file": "D:\\Github repo\\FoodieJournal\\tests\\Browser\\public-visual.spec.js",
+                      "column": 26,
+                      "line": 32
+                    },
+                    "snippet": "  30 |         fonts: await page.evaluate(() => [...document.fonts].filter(f => f.status === 'loaded').map(f => f.family)),\n  31 |         originals: await page.locator('img[src$=\"/original\"]').count() }) });\n> 32 |     await expect(target).toHaveScreenshot(`${name}.png`);\n     |                          ^\n  33 | }\n  34 |\n  35 | async function on(page) {"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\Github repo\\FoodieJournal\\tests\\Browser\\public-visual.spec.js",
+                        "column": 26,
+                        "line": 32
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  31 pixels (ratio 0.01 of all image pixels) are different.\n\n  Snapshot: explore-390-hero.png\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot(explore-390-hero.png)\" with timeout 5000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - 31 pixels (ratio 0.01 of all image pixels) are different.\u001b[22m\n\u001b[2m  - waiting 100ms before taking screenshot\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - captured a stable screenshot\u001b[22m\n\u001b[2m  - 31 pixels (ratio 0.01 of all image pixels) are different.\u001b[22m\n\n\n  30 |         fonts: await page.evaluate(() => [...document.fonts].filter(f => f.status === 'loaded').map(f => f.family)),\n  31 |         originals: await page.locator('img[src$=\"/original\"]').count() }) });\n> 32 |     await expect(target).toHaveScreenshot(`${name}.png`);\n     |                          ^\n  33 | }\n  34 |\n  35 | async function on(page) {\n    at shot (D:\\Github repo\\FoodieJournal\\tests\\Browser\\public-visual.spec.js:32:26)\n    at D:\\Github repo\\FoodieJournal\\tests\\Browser\\public-visual.spec.js:61:13"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T12:08:33.732Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoiZXhwbG9yZS0zOTAtaGVybyIsInJvdXRlIjoiaHR0cDovLzEyNy4wLjAuMTo4MDE1L2V4cGxvcmUiLCJ2aWV3cG9ydCI6eyJ3aWR0aCI6MzkwLCJoZWlnaHQiOjEwMDB9LCJicm93c2VyIjoiMTU2LjAuODA3OC40IiwibW90aW9uIjoicmVkdWNlIHVubGVzcyBzdGF0ZSBzcGVjaWZpZXMgbm9ybWFsIiwiZm9udHMiOlsiQXJjaGl2ZSBHYXJhbW9uZCIsIkFyY2hpdmUgR2FyYW1vbmQiLCJBcmNoaXZlIFNhbnMiXSwib3JpZ2luYWxzIjowfQ=="
+                    },
+                    {
+                      "name": "explore-390-hero-expected.png",
+                      "contentType": "image/png",
+                      "path": "D:\\Github repo\\FoodieJournal\\tests\\Browser\\__screenshots__\\public-visual-win32-chromium\\explore-390-hero.png"
+                    },
+                    {
+                      "name": "explore-390-hero-actual.png",
+                      "contentType": "image/png",
+                      "path": "D:\\Github repo\\FoodieJournal\\tools\\.runtime\\visual-results\\public-visual-Explore-at-390-hero-and-footer\\explore-390-hero-actual.png"
+                    },
+                    {
+                      "name": "explore-390-hero-diff.png",
+                      "contentType": "image/png",
+                      "path": "D:\\Github repo\\FoodieJournal\\tools\\.runtime\\visual-results\\public-visual-Explore-at-390-hero-and-footer\\explore-390-hero-diff.png"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\Github repo\\FoodieJournal\\tools\\.runtime\\visual-results\\public-visual-Explore-at-390-hero-and-footer\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\Github repo\\FoodieJournal\\tools\\.runtime\\visual-results\\public-visual-Explore-at-390-hero-and-footer\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\Github repo\\FoodieJournal\\tools\\.runtime\\visual-results\\public-visual-Explore-at-390-hero-and-footer\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\Github repo\\FoodieJournal\\tests\\Browser\\public-visual.spec.js",
+                    "column": 26,
+                    "line": 32
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "58ac71969675d208f6e9-af4f000e3fbaf952374b",
+          "file": "public-visual.spec.js",
+          "line": 43,
+          "column": 9
+        },
+        {
+          "title": "Visit at 390: hero and footer",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3443,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T12:08:45.372Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoidmlzaXQtMzkwLWhlcm8iLCJyb3V0ZSI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAxNS92aXNpdC9kZW1vLWJhcmEtZGktdWp1bmctaGFyaSIsInZpZXdwb3J0Ijp7IndpZHRoIjozOTAsImhlaWdodCI6MTAwMH0sImJyb3dzZXIiOiIxNTYuMC44MDc4LjQiLCJtb3Rpb24iOiJyZWR1Y2UgdW5sZXNzIHN0YXRlIHNwZWNpZmllcyBub3JtYWwiLCJmb250cyI6WyJBcmNoaXZlIEdhcmFtb25kIiwiQXJjaGl2ZSBHYXJhbW9uZCIsIkFyY2hpdmUgU2FucyJdLCJvcmlnaW5hbHMiOjB9"
+                    },
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoidmlzaXQtMzkwLWZvb3RlciIsInJvdXRlIjoiaHR0cDovLzEyNy4wLjAuMTo4MDE1L3Zpc2l0L2RlbW8tYmFyYS1kaS11anVuZy1oYXJpIiwidmlld3BvcnQiOnsid2lkdGgiOjM5MCwiaGVpZ2h0IjoxMDAwfSwiYnJvd3NlciI6IjE1Ni4wLjgwNzguNCIsIm1vdGlvbiI6InJlZHVjZSB1bmxlc3Mgc3RhdGUgc3BlY2lmaWVzIG5vcm1hbCIsImZvbnRzIjpbIkFyY2hpdmUgR2FyYW1vbmQiLCJBcmNoaXZlIEdhcmFtb25kIiwiQXJjaGl2ZSBTYW5zIl0sIm9yaWdpbmFscyI6MH0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "58ac71969675d208f6e9-2875bd34633e037cc483",
+          "file": "public-visual.spec.js",
+          "line": 43,
+          "column": 9
+        },
+        {
+          "title": "Place at 390: hero and footer",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2686,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T12:08:49.043Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoicGxhY2UtMzkwLWhlcm8iLCJyb3V0ZSI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAxNS9wbGFjZS9kZW1vLWJhcmEtc2VuamEiLCJ2aWV3cG9ydCI6eyJ3aWR0aCI6MzkwLCJoZWlnaHQiOjEwMDB9LCJicm93c2VyIjoiMTU2LjAuODA3OC40IiwibW90aW9uIjoicmVkdWNlIHVubGVzcyBzdGF0ZSBzcGVjaWZpZXMgbm9ybWFsIiwiZm9udHMiOlsiQXJjaGl2ZSBHYXJhbW9uZCIsIkFyY2hpdmUgR2FyYW1vbmQiLCJBcmNoaXZlIFNhbnMiXSwib3JpZ2luYWxzIjowfQ=="
+                    },
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoicGxhY2UtMzkwLWZvb3RlciIsInJvdXRlIjoiaHR0cDovLzEyNy4wLjAuMTo4MDE1L3BsYWNlL2RlbW8tYmFyYS1zZW5qYSIsInZpZXdwb3J0Ijp7IndpZHRoIjozOTAsImhlaWdodCI6MTAwMH0sImJyb3dzZXIiOiIxNTYuMC44MDc4LjQiLCJtb3Rpb24iOiJyZWR1Y2UgdW5sZXNzIHN0YXRlIHNwZWNpZmllcyBub3JtYWwiLCJmb250cyI6WyJBcmNoaXZlIEdhcmFtb25kIiwiQXJjaGl2ZSBHYXJhbW9uZCIsIkFyY2hpdmUgU2FucyJdLCJvcmlnaW5hbHMiOjB9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "58ac71969675d208f6e9-af7f2f55a94958c18b27",
+          "file": "public-visual.spec.js",
+          "line": 43,
+          "column": 9
+        },
+        {
+          "title": "Error at 390: hero and footer",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1393,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T12:08:51.745Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoiZXJyb3ItMzkwLWhlcm8iLCJyb3V0ZSI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAxNS92aXN1YWwtbWlzc2luZy1wYWdlIiwidmlld3BvcnQiOnsid2lkdGgiOjM5MCwiaGVpZ2h0IjoxMDAwfSwiYnJvd3NlciI6IjE1Ni4wLjgwNzguNCIsIm1vdGlvbiI6InJlZHVjZSB1bmxlc3Mgc3RhdGUgc3BlY2lmaWVzIG5vcm1hbCIsImZvbnRzIjpbIkFyY2hpdmUgR2FyYW1vbmQiLCJBcmNoaXZlIEdhcmFtb25kIiwiQXJjaGl2ZSBTYW5zIl0sIm9yaWdpbmFscyI6MH0="
+                    },
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoiZXJyb3ItMzkwLWZvb3RlciIsInJvdXRlIjoiaHR0cDovLzEyNy4wLjAuMTo4MDE1L3Zpc3VhbC1taXNzaW5nLXBhZ2UiLCJ2aWV3cG9ydCI6eyJ3aWR0aCI6MzkwLCJoZWlnaHQiOjEwMDB9LCJicm93c2VyIjoiMTU2LjAuODA3OC40IiwibW90aW9uIjoicmVkdWNlIHVubGVzcyBzdGF0ZSBzcGVjaWZpZXMgbm9ybWFsIiwiZm9udHMiOlsiQXJjaGl2ZSBHYXJhbW9uZCIsIkFyY2hpdmUgR2FyYW1vbmQiLCJBcmNoaXZlIFNhbnMiXSwib3JpZ2luYWxzIjowfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "58ac71969675d208f6e9-6abe6c749a26fbd673c1",
+          "file": "public-visual.spec.js",
+          "line": 43,
+          "column": 9
+        },
+        {
+          "title": "Home at 1440: hero and footer",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 8102,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  60 pixels (ratio 0.01 of all image pixels) are different.\n\n  Snapshot: home-1440-hero.png\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot(home-1440-hero.png)\" with timeout 5000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - 60 pixels (ratio 0.01 of all image pixels) are different.\u001b[22m\n\u001b[2m  - waiting 100ms before taking screenshot\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - captured a stable screenshot\u001b[22m\n\u001b[2m  - 60 pixels (ratio 0.01 of all image pixels) are different.\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  60 pixels (ratio 0.01 of all image pixels) are different.\n\n  Snapshot: home-1440-hero.png\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot(home-1440-hero.png)\" with timeout 5000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - 60 pixels (ratio 0.01 of all image pixels) are different.\u001b[22m\n\u001b[2m  - waiting 100ms before taking screenshot\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - captured a stable screenshot\u001b[22m\n\u001b[2m  - 60 pixels (ratio 0.01 of all image pixels) are different.\u001b[22m\n\n    at shot (D:\\Github repo\\FoodieJournal\\tests\\Browser\\public-visual.spec.js:32:26)\n    at D:\\Github repo\\FoodieJournal\\tests\\Browser\\public-visual.spec.js:61:13",
+                    "location": {
+                      "file": "D:\\Github repo\\FoodieJournal\\tests\\Browser\\public-visual.spec.js",
+                      "column": 26,
+                      "line": 32
+                    },
+                    "snippet": "  30 |         fonts: await page.evaluate(() => [...document.fonts].filter(f => f.status === 'loaded').map(f => f.family)),\n  31 |         originals: await page.locator('img[src$=\"/original\"]').count() }) });\n> 32 |     await expect(target).toHaveScreenshot(`${name}.png`);\n     |                          ^\n  33 | }\n  34 |\n  35 | async function on(page) {"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\Github repo\\FoodieJournal\\tests\\Browser\\public-visual.spec.js",
+                        "column": 26,
+                        "line": 32
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  60 pixels (ratio 0.01 of all image pixels) are different.\n\n  Snapshot: home-1440-hero.png\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot(home-1440-hero.png)\" with timeout 5000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - 60 pixels (ratio 0.01 of all image pixels) are different.\u001b[22m\n\u001b[2m  - waiting 100ms before taking screenshot\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - captured a stable screenshot\u001b[22m\n\u001b[2m  - 60 pixels (ratio 0.01 of all image pixels) are different.\u001b[22m\n\n\n  30 |         fonts: await page.evaluate(() => [...document.fonts].filter(f => f.status === 'loaded').map(f => f.family)),\n  31 |         originals: await page.locator('img[src$=\"/original\"]').count() }) });\n> 32 |     await expect(target).toHaveScreenshot(`${name}.png`);\n     |                          ^\n  33 | }\n  34 |\n  35 | async function on(page) {\n    at shot (D:\\Github repo\\FoodieJournal\\tests\\Browser\\public-visual.spec.js:32:26)\n    at D:\\Github repo\\FoodieJournal\\tests\\Browser\\public-visual.spec.js:61:13"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T12:08:53.156Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoiaG9tZS0xNDQwLWhlcm8iLCJyb3V0ZSI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAxNS8iLCJ2aWV3cG9ydCI6eyJ3aWR0aCI6MTQ0MCwiaGVpZ2h0IjoxMDAwfSwiYnJvd3NlciI6IjE1Ni4wLjgwNzguNCIsIm1vdGlvbiI6InJlZHVjZSB1bmxlc3Mgc3RhdGUgc3BlY2lmaWVzIG5vcm1hbCIsImZvbnRzIjpbIkFyY2hpdmUgR2FyYW1vbmQiLCJBcmNoaXZlIEdhcmFtb25kIiwiQXJjaGl2ZSBTYW5zIl0sIm9yaWdpbmFscyI6MH0="
+                    },
+                    {
+                      "name": "home-1440-hero-expected.png",
+                      "contentType": "image/png",
+                      "path": "D:\\Github repo\\FoodieJournal\\tests\\Browser\\__screenshots__\\public-visual-win32-chromium\\home-1440-hero.png"
+                    },
+                    {
+                      "name": "home-1440-hero-actual.png",
+                      "contentType": "image/png",
+                      "path": "D:\\Github repo\\FoodieJournal\\tools\\.runtime\\visual-results\\public-visual-Home-at-1440-hero-and-footer\\home-1440-hero-actual.png"
+                    },
+                    {
+                      "name": "home-1440-hero-diff.png",
+                      "contentType": "image/png",
+                      "path": "D:\\Github repo\\FoodieJournal\\tools\\.runtime\\visual-results\\public-visual-Home-at-1440-hero-and-footer\\home-1440-hero-diff.png"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\Github repo\\FoodieJournal\\tools\\.runtime\\visual-results\\public-visual-Home-at-1440-hero-and-footer\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\Github repo\\FoodieJournal\\tools\\.runtime\\visual-results\\public-visual-Home-at-1440-hero-and-footer\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\Github repo\\FoodieJournal\\tools\\.runtime\\visual-results\\public-visual-Home-at-1440-hero-and-footer\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\Github repo\\FoodieJournal\\tests\\Browser\\public-visual.spec.js",
+                    "column": 26,
+                    "line": 32
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "58ac71969675d208f6e9-abdfda1f731e9c43c3c1",
+          "file": "public-visual.spec.js",
+          "line": 43,
+          "column": 9
+        },
+        {
+          "title": "Explore at 1440: hero and footer",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8711,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T12:09:02.369Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoiZXhwbG9yZS0xNDQwLWhlcm8iLCJyb3V0ZSI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAxNS9leHBsb3JlIiwidmlld3BvcnQiOnsid2lkdGgiOjE0NDAsImhlaWdodCI6MTAwMH0sImJyb3dzZXIiOiIxNTYuMC44MDc4LjQiLCJtb3Rpb24iOiJyZWR1Y2UgdW5sZXNzIHN0YXRlIHNwZWNpZmllcyBub3JtYWwiLCJmb250cyI6WyJBcmNoaXZlIEdhcmFtb25kIiwiQXJjaGl2ZSBHYXJhbW9uZCIsIkFyY2hpdmUgU2FucyJdLCJvcmlnaW5hbHMiOjB9"
+                    },
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoiZXhwbG9yZS0xNDQwLWZvb3RlciIsInJvdXRlIjoiaHR0cDovLzEyNy4wLjAuMTo4MDE1L2V4cGxvcmUiLCJ2aWV3cG9ydCI6eyJ3aWR0aCI6MTQ0MCwiaGVpZ2h0IjoxMDAwfSwiYnJvd3NlciI6IjE1Ni4wLjgwNzguNCIsIm1vdGlvbiI6InJlZHVjZSB1bmxlc3Mgc3RhdGUgc3BlY2lmaWVzIG5vcm1hbCIsImZvbnRzIjpbIkFyY2hpdmUgR2FyYW1vbmQiLCJBcmNoaXZlIEdhcmFtb25kIiwiQXJjaGl2ZSBTYW5zIl0sIm9yaWdpbmFscyI6MH0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "58ac71969675d208f6e9-57938fba358f82d23a65",
+          "file": "public-visual.spec.js",
+          "line": 43,
+          "column": 9
+        },
+        {
+          "title": "Visit at 1440: hero and footer",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4145,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T12:09:11.317Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoidmlzaXQtMTQ0MC1oZXJvIiwicm91dGUiOiJodHRwOi8vMTI3LjAuMC4xOjgwMTUvdmlzaXQvZGVtby1iYXJhLWRpLXVqdW5nLWhhcmkiLCJ2aWV3cG9ydCI6eyJ3aWR0aCI6MTQ0MCwiaGVpZ2h0IjoxMDAwfSwiYnJvd3NlciI6IjE1Ni4wLjgwNzguNCIsIm1vdGlvbiI6InJlZHVjZSB1bmxlc3Mgc3RhdGUgc3BlY2lmaWVzIG5vcm1hbCIsImZvbnRzIjpbIkFyY2hpdmUgR2FyYW1vbmQiLCJBcmNoaXZlIEdhcmFtb25kIiwiQXJjaGl2ZSBTYW5zIl0sIm9yaWdpbmFscyI6MH0="
+                    },
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoidmlzaXQtMTQ0MC1mb290ZXIiLCJyb3V0ZSI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAxNS92aXNpdC9kZW1vLWJhcmEtZGktdWp1bmctaGFyaSIsInZpZXdwb3J0Ijp7IndpZHRoIjoxNDQwLCJoZWlnaHQiOjEwMDB9LCJicm93c2VyIjoiMTU2LjAuODA3OC40IiwibW90aW9uIjoicmVkdWNlIHVubGVzcyBzdGF0ZSBzcGVjaWZpZXMgbm9ybWFsIiwiZm9udHMiOlsiQXJjaGl2ZSBHYXJhbW9uZCIsIkFyY2hpdmUgR2FyYW1vbmQiLCJBcmNoaXZlIFNhbnMiXSwib3JpZ2luYWxzIjowfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "58ac71969675d208f6e9-feb727feab7c9c7bb6bf",
+          "file": "public-visual.spec.js",
+          "line": 43,
+          "column": 9
+        },
+        {
+          "title": "Place at 1440: hero and footer",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3793,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T12:09:15.480Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoicGxhY2UtMTQ0MC1oZXJvIiwicm91dGUiOiJodHRwOi8vMTI3LjAuMC4xOjgwMTUvcGxhY2UvZGVtby1iYXJhLXNlbmphIiwidmlld3BvcnQiOnsid2lkdGgiOjE0NDAsImhlaWdodCI6MTAwMH0sImJyb3dzZXIiOiIxNTYuMC44MDc4LjQiLCJtb3Rpb24iOiJyZWR1Y2UgdW5sZXNzIHN0YXRlIHNwZWNpZmllcyBub3JtYWwiLCJmb250cyI6WyJBcmNoaXZlIEdhcmFtb25kIiwiQXJjaGl2ZSBHYXJhbW9uZCIsIkFyY2hpdmUgU2FucyJdLCJvcmlnaW5hbHMiOjB9"
+                    },
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoicGxhY2UtMTQ0MC1mb290ZXIiLCJyb3V0ZSI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAxNS9wbGFjZS9kZW1vLWJhcmEtc2VuamEiLCJ2aWV3cG9ydCI6eyJ3aWR0aCI6MTQ0MCwiaGVpZ2h0IjoxMDAwfSwiYnJvd3NlciI6IjE1Ni4wLjgwNzguNCIsIm1vdGlvbiI6InJlZHVjZSB1bmxlc3Mgc3RhdGUgc3BlY2lmaWVzIG5vcm1hbCIsImZvbnRzIjpbIkFyY2hpdmUgR2FyYW1vbmQiLCJBcmNoaXZlIEdhcmFtb25kIiwiQXJjaGl2ZSBTYW5zIl0sIm9yaWdpbmFscyI6MH0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "58ac71969675d208f6e9-ae7b35c0269c5e78d4ce",
+          "file": "public-visual.spec.js",
+          "line": 43,
+          "column": 9
+        },
+        {
+          "title": "Error at 1440: hero and footer",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2133,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T12:09:19.288Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoiZXJyb3ItMTQ0MC1oZXJvIiwicm91dGUiOiJodHRwOi8vMTI3LjAuMC4xOjgwMTUvdmlzdWFsLW1pc3NpbmctcGFnZSIsInZpZXdwb3J0Ijp7IndpZHRoIjoxNDQwLCJoZWlnaHQiOjEwMDB9LCJicm93c2VyIjoiMTU2LjAuODA3OC40IiwibW90aW9uIjoicmVkdWNlIHVubGVzcyBzdGF0ZSBzcGVjaWZpZXMgbm9ybWFsIiwiZm9udHMiOlsiQXJjaGl2ZSBHYXJhbW9uZCIsIkFyY2hpdmUgR2FyYW1vbmQiLCJBcmNoaXZlIFNhbnMiXSwib3JpZ2luYWxzIjowfQ=="
+                    },
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoiZXJyb3ItMTQ0MC1mb290ZXIiLCJyb3V0ZSI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAxNS92aXN1YWwtbWlzc2luZy1wYWdlIiwidmlld3BvcnQiOnsid2lkdGgiOjE0NDAsImhlaWdodCI6MTAwMH0sImJyb3dzZXIiOiIxNTYuMC44MDc4LjQiLCJtb3Rpb24iOiJyZWR1Y2UgdW5sZXNzIHN0YXRlIHNwZWNpZmllcyBub3JtYWwiLCJmb250cyI6WyJBcmNoaXZlIEdhcmFtb25kIiwiQXJjaGl2ZSBHYXJhbW9uZCIsIkFyY2hpdmUgU2FucyJdLCJvcmlnaW5hbHMiOjB9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "58ac71969675d208f6e9-0f351e395633a6e9efbc",
+          "file": "public-visual.spec.js",
+          "line": 43,
+          "column": 9
+        },
+        {
+          "title": "Home at 1920: hero and footer",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 9091,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  155 pixels (ratio 0.01 of all image pixels) are different.\n\n  Snapshot: home-1920-hero.png\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot(home-1920-hero.png)\" with timeout 5000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - 155 pixels (ratio 0.01 of all image pixels) are different.\u001b[22m\n\u001b[2m  - waiting 100ms before taking screenshot\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - captured a stable screenshot\u001b[22m\n\u001b[2m  - 155 pixels (ratio 0.01 of all image pixels) are different.\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  155 pixels (ratio 0.01 of all image pixels) are different.\n\n  Snapshot: home-1920-hero.png\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot(home-1920-hero.png)\" with timeout 5000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - 155 pixels (ratio 0.01 of all image pixels) are different.\u001b[22m\n\u001b[2m  - waiting 100ms before taking screenshot\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - captured a stable screenshot\u001b[22m\n\u001b[2m  - 155 pixels (ratio 0.01 of all image pixels) are different.\u001b[22m\n\n    at shot (D:\\Github repo\\FoodieJournal\\tests\\Browser\\public-visual.spec.js:32:26)\n    at D:\\Github repo\\FoodieJournal\\tests\\Browser\\public-visual.spec.js:61:13",
+                    "location": {
+                      "file": "D:\\Github repo\\FoodieJournal\\tests\\Browser\\public-visual.spec.js",
+                      "column": 26,
+                      "line": 32
+                    },
+                    "snippet": "  30 |         fonts: await page.evaluate(() => [...document.fonts].filter(f => f.status === 'loaded').map(f => f.family)),\n  31 |         originals: await page.locator('img[src$=\"/original\"]').count() }) });\n> 32 |     await expect(target).toHaveScreenshot(`${name}.png`);\n     |                          ^\n  33 | }\n  34 |\n  35 | async function on(page) {"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\Github repo\\FoodieJournal\\tests\\Browser\\public-visual.spec.js",
+                        "column": 26,
+                        "line": 32
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  155 pixels (ratio 0.01 of all image pixels) are different.\n\n  Snapshot: home-1920-hero.png\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot(home-1920-hero.png)\" with timeout 5000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - 155 pixels (ratio 0.01 of all image pixels) are different.\u001b[22m\n\u001b[2m  - waiting 100ms before taking screenshot\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - captured a stable screenshot\u001b[22m\n\u001b[2m  - 155 pixels (ratio 0.01 of all image pixels) are different.\u001b[22m\n\n\n  30 |         fonts: await page.evaluate(() => [...document.fonts].filter(f => f.status === 'loaded').map(f => f.family)),\n  31 |         originals: await page.locator('img[src$=\"/original\"]').count() }) });\n> 32 |     await expect(target).toHaveScreenshot(`${name}.png`);\n     |                          ^\n  33 | }\n  34 |\n  35 | async function on(page) {\n    at shot (D:\\Github repo\\FoodieJournal\\tests\\Browser\\public-visual.spec.js:32:26)\n    at D:\\Github repo\\FoodieJournal\\tests\\Browser\\public-visual.spec.js:61:13"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T12:09:21.439Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoiaG9tZS0xOTIwLWhlcm8iLCJyb3V0ZSI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAxNS8iLCJ2aWV3cG9ydCI6eyJ3aWR0aCI6MTkyMCwiaGVpZ2h0IjoxMDAwfSwiYnJvd3NlciI6IjE1Ni4wLjgwNzguNCIsIm1vdGlvbiI6InJlZHVjZSB1bmxlc3Mgc3RhdGUgc3BlY2lmaWVzIG5vcm1hbCIsImZvbnRzIjpbIkFyY2hpdmUgR2FyYW1vbmQiLCJBcmNoaXZlIEdhcmFtb25kIiwiQXJjaGl2ZSBTYW5zIl0sIm9yaWdpbmFscyI6MH0="
+                    },
+                    {
+                      "name": "home-1920-hero-expected.png",
+                      "contentType": "image/png",
+                      "path": "D:\\Github repo\\FoodieJournal\\tests\\Browser\\__screenshots__\\public-visual-win32-chromium\\home-1920-hero.png"
+                    },
+                    {
+                      "name": "home-1920-hero-actual.png",
+                      "contentType": "image/png",
+                      "path": "D:\\Github repo\\FoodieJournal\\tools\\.runtime\\visual-results\\public-visual-Home-at-1920-hero-and-footer\\home-1920-hero-actual.png"
+                    },
+                    {
+                      "name": "home-1920-hero-diff.png",
+                      "contentType": "image/png",
+                      "path": "D:\\Github repo\\FoodieJournal\\tools\\.runtime\\visual-results\\public-visual-Home-at-1920-hero-and-footer\\home-1920-hero-diff.png"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\Github repo\\FoodieJournal\\tools\\.runtime\\visual-results\\public-visual-Home-at-1920-hero-and-footer\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\Github repo\\FoodieJournal\\tools\\.runtime\\visual-results\\public-visual-Home-at-1920-hero-and-footer\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\Github repo\\FoodieJournal\\tools\\.runtime\\visual-results\\public-visual-Home-at-1920-hero-and-footer\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\Github repo\\FoodieJournal\\tests\\Browser\\public-visual.spec.js",
+                    "column": 26,
+                    "line": 32
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "58ac71969675d208f6e9-6225a2c5cf04ca1ae456",
+          "file": "public-visual.spec.js",
+          "line": 43,
+          "column": 9
+        },
+        {
+          "title": "Explore at 1920: hero and footer",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9490,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T12:09:31.885Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoiZXhwbG9yZS0xOTIwLWhlcm8iLCJyb3V0ZSI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAxNS9leHBsb3JlIiwidmlld3BvcnQiOnsid2lkdGgiOjE5MjAsImhlaWdodCI6MTAwMH0sImJyb3dzZXIiOiIxNTYuMC44MDc4LjQiLCJtb3Rpb24iOiJyZWR1Y2UgdW5sZXNzIHN0YXRlIHNwZWNpZmllcyBub3JtYWwiLCJmb250cyI6WyJBcmNoaXZlIEdhcmFtb25kIiwiQXJjaGl2ZSBHYXJhbW9uZCIsIkFyY2hpdmUgU2FucyJdLCJvcmlnaW5hbHMiOjB9"
+                    },
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoiZXhwbG9yZS0xOTIwLWZvb3RlciIsInJvdXRlIjoiaHR0cDovLzEyNy4wLjAuMTo4MDE1L2V4cGxvcmUiLCJ2aWV3cG9ydCI6eyJ3aWR0aCI6MTkyMCwiaGVpZ2h0IjoxMDAwfSwiYnJvd3NlciI6IjE1Ni4wLjgwNzguNCIsIm1vdGlvbiI6InJlZHVjZSB1bmxlc3Mgc3RhdGUgc3BlY2lmaWVzIG5vcm1hbCIsImZvbnRzIjpbIkFyY2hpdmUgR2FyYW1vbmQiLCJBcmNoaXZlIEdhcmFtb25kIiwiQXJjaGl2ZSBTYW5zIl0sIm9yaWdpbmFscyI6MH0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "58ac71969675d208f6e9-c2fa5da635aad4e9057b",
+          "file": "public-visual.spec.js",
+          "line": 43,
+          "column": 9
+        },
+        {
+          "title": "Visit at 1920: hero and footer",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4194,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T12:09:41.619Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoidmlzaXQtMTkyMC1oZXJvIiwicm91dGUiOiJodHRwOi8vMTI3LjAuMC4xOjgwMTUvdmlzaXQvZGVtby1iYXJhLWRpLXVqdW5nLWhhcmkiLCJ2aWV3cG9ydCI6eyJ3aWR0aCI6MTkyMCwiaGVpZ2h0IjoxMDAwfSwiYnJvd3NlciI6IjE1Ni4wLjgwNzguNCIsIm1vdGlvbiI6InJlZHVjZSB1bmxlc3Mgc3RhdGUgc3BlY2lmaWVzIG5vcm1hbCIsImZvbnRzIjpbIkFyY2hpdmUgR2FyYW1vbmQiLCJBcmNoaXZlIEdhcmFtb25kIiwiQXJjaGl2ZSBTYW5zIl0sIm9yaWdpbmFscyI6MH0="
+                    },
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoidmlzaXQtMTkyMC1mb290ZXIiLCJyb3V0ZSI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAxNS92aXNpdC9kZW1vLWJhcmEtZGktdWp1bmctaGFyaSIsInZpZXdwb3J0Ijp7IndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwMDB9LCJicm93c2VyIjoiMTU2LjAuODA3OC40IiwibW90aW9uIjoicmVkdWNlIHVubGVzcyBzdGF0ZSBzcGVjaWZpZXMgbm9ybWFsIiwiZm9udHMiOlsiQXJjaGl2ZSBHYXJhbW9uZCIsIkFyY2hpdmUgR2FyYW1vbmQiLCJBcmNoaXZlIFNhbnMiXSwib3JpZ2luYWxzIjowfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "58ac71969675d208f6e9-ccf60f00ae59c96e9bcf",
+          "file": "public-visual.spec.js",
+          "line": 43,
+          "column": 9
+        },
+        {
+          "title": "Place at 1920: hero and footer",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3356,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T12:09:45.829Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoicGxhY2UtMTkyMC1oZXJvIiwicm91dGUiOiJodHRwOi8vMTI3LjAuMC4xOjgwMTUvcGxhY2UvZGVtby1iYXJhLXNlbmphIiwidmlld3BvcnQiOnsid2lkdGgiOjE5MjAsImhlaWdodCI6MTAwMH0sImJyb3dzZXIiOiIxNTYuMC44MDc4LjQiLCJtb3Rpb24iOiJyZWR1Y2UgdW5sZXNzIHN0YXRlIHNwZWNpZmllcyBub3JtYWwiLCJmb250cyI6WyJBcmNoaXZlIEdhcmFtb25kIiwiQXJjaGl2ZSBHYXJhbW9uZCIsIkFyY2hpdmUgU2FucyJdLCJvcmlnaW5hbHMiOjB9"
+                    },
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoicGxhY2UtMTkyMC1mb290ZXIiLCJyb3V0ZSI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAxNS9wbGFjZS9kZW1vLWJhcmEtc2VuamEiLCJ2aWV3cG9ydCI6eyJ3aWR0aCI6MTkyMCwiaGVpZ2h0IjoxMDAwfSwiYnJvd3NlciI6IjE1Ni4wLjgwNzguNCIsIm1vdGlvbiI6InJlZHVjZSB1bmxlc3Mgc3RhdGUgc3BlY2lmaWVzIG5vcm1hbCIsImZvbnRzIjpbIkFyY2hpdmUgR2FyYW1vbmQiLCJBcmNoaXZlIEdhcmFtb25kIiwiQXJjaGl2ZSBTYW5zIl0sIm9yaWdpbmFscyI6MH0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "58ac71969675d208f6e9-cb349d2b68245139b677",
+          "file": "public-visual.spec.js",
+          "line": 43,
+          "column": 9
+        },
+        {
+          "title": "Error at 1920: hero and footer",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1801,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T12:09:49.199Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoiZXJyb3ItMTkyMC1oZXJvIiwicm91dGUiOiJodHRwOi8vMTI3LjAuMC4xOjgwMTUvdmlzdWFsLW1pc3NpbmctcGFnZSIsInZpZXdwb3J0Ijp7IndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwMDB9LCJicm93c2VyIjoiMTU2LjAuODA3OC40IiwibW90aW9uIjoicmVkdWNlIHVubGVzcyBzdGF0ZSBzcGVjaWZpZXMgbm9ybWFsIiwiZm9udHMiOlsiQXJjaGl2ZSBHYXJhbW9uZCIsIkFyY2hpdmUgR2FyYW1vbmQiLCJBcmNoaXZlIFNhbnMiXSwib3JpZ2luYWxzIjowfQ=="
+                    },
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoiZXJyb3ItMTkyMC1mb290ZXIiLCJyb3V0ZSI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAxNS92aXN1YWwtbWlzc2luZy1wYWdlIiwidmlld3BvcnQiOnsid2lkdGgiOjE5MjAsImhlaWdodCI6MTAwMH0sImJyb3dzZXIiOiIxNTYuMC44MDc4LjQiLCJtb3Rpb24iOiJyZWR1Y2UgdW5sZXNzIHN0YXRlIHNwZWNpZmllcyBub3JtYWwiLCJmb250cyI6WyJBcmNoaXZlIEdhcmFtb25kIiwiQXJjaGl2ZSBHYXJhbW9uZCIsIkFyY2hpdmUgU2FucyJdLCJvcmlnaW5hbHMiOjB9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "58ac71969675d208f6e9-025d5792e11b382036ce",
+          "file": "public-visual.spec.js",
+          "line": 43,
+          "column": 9
+        },
+        {
+          "title": "cabinet on and printed identity",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 8121,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('[data-discovery-scene]')\n  60 pixels (ratio 0.01 of all image pixels) are different.\n\n  Snapshot: cabinet-on-1440.png\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot(cabinet-on-1440.png)\" locator('[data-discovery-scene]') with timeout 5000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - waiting for locator('[data-discovery-scene]')\u001b[22m\n\u001b[2m    - locator resolved to <section class=\"dispenser-scene\" data-discovery-scene=\"\" aria-labelledby=\"discovery-title\">…</section>\u001b[22m\n\u001b[2m  - taking element screenshot\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - attempting scroll into view action\u001b[22m\n\u001b[2m    - waiting for element to be stable\u001b[22m\n\u001b[2m  - 60 pixels (ratio 0.01 of all image pixels) are different.\u001b[22m\n\u001b[2m  - waiting 100ms before taking screenshot\u001b[22m\n\u001b[2m  - waiting for locator('[data-discovery-scene]')\u001b[22m\n\u001b[2m    - locator resolved to <section class=\"dispenser-scene\" data-discovery-scene=\"\" aria-labelledby=\"discovery-title\">…</section>\u001b[22m\n\u001b[2m  - taking element screenshot\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - attempting scroll into view action\u001b[22m\n\u001b[2m    - waiting for element to be stable\u001b[22m\n\u001b[2m  - captured a stable screenshot\u001b[22m\n\u001b[2m  - 60 pixels (ratio 0.01 of all image pixels) are different.\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('[data-discovery-scene]')\n  60 pixels (ratio 0.01 of all image pixels) are different.\n\n  Snapshot: cabinet-on-1440.png\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot(cabinet-on-1440.png)\" locator('[data-discovery-scene]') with timeout 5000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - waiting for locator('[data-discovery-scene]')\u001b[22m\n\u001b[2m    - locator resolved to <section class=\"dispenser-scene\" data-discovery-scene=\"\" aria-labelledby=\"discovery-title\">…</section>\u001b[22m\n\u001b[2m  - taking element screenshot\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - attempting scroll into view action\u001b[22m\n\u001b[2m    - waiting for element to be stable\u001b[22m\n\u001b[2m  - 60 pixels (ratio 0.01 of all image pixels) are different.\u001b[22m\n\u001b[2m  - waiting 100ms before taking screenshot\u001b[22m\n\u001b[2m  - waiting for locator('[data-discovery-scene]')\u001b[22m\n\u001b[2m    - locator resolved to <section class=\"dispenser-scene\" data-discovery-scene=\"\" aria-labelledby=\"discovery-title\">…</section>\u001b[22m\n\u001b[2m  - taking element screenshot\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - attempting scroll into view action\u001b[22m\n\u001b[2m    - waiting for element to be stable\u001b[22m\n\u001b[2m  - captured a stable screenshot\u001b[22m\n\u001b[2m  - 60 pixels (ratio 0.01 of all image pixels) are different.\u001b[22m\n\n    at shot (D:\\Github repo\\FoodieJournal\\tests\\Browser\\public-visual.spec.js:32:26)\n    at D:\\Github repo\\FoodieJournal\\tests\\Browser\\public-visual.spec.js:70:5",
+                    "location": {
+                      "file": "D:\\Github repo\\FoodieJournal\\tests\\Browser\\public-visual.spec.js",
+                      "column": 26,
+                      "line": 32
+                    },
+                    "snippet": "  30 |         fonts: await page.evaluate(() => [...document.fonts].filter(f => f.status === 'loaded').map(f => f.family)),\n  31 |         originals: await page.locator('img[src$=\"/original\"]').count() }) });\n> 32 |     await expect(target).toHaveScreenshot(`${name}.png`);\n     |                          ^\n  33 | }\n  34 |\n  35 | async function on(page) {"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\Github repo\\FoodieJournal\\tests\\Browser\\public-visual.spec.js",
+                        "column": 26,
+                        "line": 32
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('[data-discovery-scene]')\n  60 pixels (ratio 0.01 of all image pixels) are different.\n\n  Snapshot: cabinet-on-1440.png\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot(cabinet-on-1440.png)\" locator('[data-discovery-scene]') with timeout 5000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - waiting for locator('[data-discovery-scene]')\u001b[22m\n\u001b[2m    - locator resolved to <section class=\"dispenser-scene\" data-discovery-scene=\"\" aria-labelledby=\"discovery-title\">…</section>\u001b[22m\n\u001b[2m  - taking element screenshot\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - attempting scroll into view action\u001b[22m\n\u001b[2m    - waiting for element to be stable\u001b[22m\n\u001b[2m  - 60 pixels (ratio 0.01 of all image pixels) are different.\u001b[22m\n\u001b[2m  - waiting 100ms before taking screenshot\u001b[22m\n\u001b[2m  - waiting for locator('[data-discovery-scene]')\u001b[22m\n\u001b[2m    - locator resolved to <section class=\"dispenser-scene\" data-discovery-scene=\"\" aria-labelledby=\"discovery-title\">…</section>\u001b[22m\n\u001b[2m  - taking element screenshot\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - attempting scroll into view action\u001b[22m\n\u001b[2m    - waiting for element to be stable\u001b[22m\n\u001b[2m  - captured a stable screenshot\u001b[22m\n\u001b[2m  - 60 pixels (ratio 0.01 of all image pixels) are different.\u001b[22m\n\n\n  30 |         fonts: await page.evaluate(() => [...document.fonts].filter(f => f.status === 'loaded').map(f => f.family)),\n  31 |         originals: await page.locator('img[src$=\"/original\"]').count() }) });\n> 32 |     await expect(target).toHaveScreenshot(`${name}.png`);\n     |                          ^\n  33 | }\n  34 |\n  35 | async function on(page) {\n    at shot (D:\\Github repo\\FoodieJournal\\tests\\Browser\\public-visual.spec.js:32:26)\n    at D:\\Github repo\\FoodieJournal\\tests\\Browser\\public-visual.spec.js:70:5"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T12:09:51.014Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoiY2FiaW5ldC1vbi0xNDQwIiwicm91dGUiOiJodHRwOi8vMTI3LjAuMC4xOjgwMTUvIiwidmlld3BvcnQiOnsid2lkdGgiOjE0NDAsImhlaWdodCI6MTAwMH0sImJyb3dzZXIiOiIxNTYuMC44MDc4LjQiLCJtb3Rpb24iOiJyZWR1Y2UgdW5sZXNzIHN0YXRlIHNwZWNpZmllcyBub3JtYWwiLCJmb250cyI6WyJBcmNoaXZlIEdhcmFtb25kIiwiQXJjaGl2ZSBHYXJhbW9uZCIsIkFyY2hpdmUgU2FucyJdLCJvcmlnaW5hbHMiOjB9"
+                    },
+                    {
+                      "name": "cabinet-on-1440-expected.png",
+                      "contentType": "image/png",
+                      "path": "D:\\Github repo\\FoodieJournal\\tests\\Browser\\__screenshots__\\public-visual-win32-chromium\\cabinet-on-1440.png"
+                    },
+                    {
+                      "name": "cabinet-on-1440-actual.png",
+                      "contentType": "image/png",
+                      "path": "D:\\Github repo\\FoodieJournal\\tools\\.runtime\\visual-results\\public-visual-cabinet-on-and-printed-identity\\cabinet-on-1440-actual.png"
+                    },
+                    {
+                      "name": "cabinet-on-1440-diff.png",
+                      "contentType": "image/png",
+                      "path": "D:\\Github repo\\FoodieJournal\\tools\\.runtime\\visual-results\\public-visual-cabinet-on-and-printed-identity\\cabinet-on-1440-diff.png"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\Github repo\\FoodieJournal\\tools\\.runtime\\visual-results\\public-visual-cabinet-on-and-printed-identity\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\Github repo\\FoodieJournal\\tools\\.runtime\\visual-results\\public-visual-cabinet-on-and-printed-identity\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\Github repo\\FoodieJournal\\tools\\.runtime\\visual-results\\public-visual-cabinet-on-and-printed-identity\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\Github repo\\FoodieJournal\\tests\\Browser\\public-visual.spec.js",
+                    "column": 26,
+                    "line": 32
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "58ac71969675d208f6e9-e3d1182aadeecc128fb3",
+          "file": "public-visual.spec.js",
+          "line": 68,
+          "column": 1
+        },
+        {
+          "title": "navigation midpoint with normal motion on /",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5357,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T12:10:00.344Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoibmF2LXB1YmxpYy1taWRwb2ludC0xNDQwIiwicm91dGUiOiJodHRwOi8vMTI3LjAuMC4xOjgwMTUvIiwidmlld3BvcnQiOnsid2lkdGgiOjE0NDAsImhlaWdodCI6MTAwMH0sInN0YXRlIjoibm9ybWFsIG1vdGlvbiwgYWN0dWFsIHRyYW5zZm9ybSBwYXVzZWQgYXQgMTEwLzIyMG1zIn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "58ac71969675d208f6e9-18760d88127f5ac57f6e",
+          "file": "public-visual.spec.js",
+          "line": 82,
+          "column": 5
+        },
+        {
+          "title": "navigation midpoint with normal motion on /visual-missing-page",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1370,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T12:10:05.932Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoibmF2LWVycm9yLW1pZHBvaW50LTE0NDAiLCJyb3V0ZSI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAxNS92aXN1YWwtbWlzc2luZy1wYWdlIiwidmlld3BvcnQiOnsid2lkdGgiOjE0NDAsImhlaWdodCI6MTAwMH0sInN0YXRlIjoibm9ybWFsIG1vdGlvbiwgYWN0dWFsIHRyYW5zZm9ybSBwYXVzZWQgYXQgMTEwLzIyMG1zIn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "58ac71969675d208f6e9-491b4cf95121554e1012",
+          "file": "public-visual.spec.js",
+          "line": 82,
+          "column": 5
+        },
+        {
+          "title": "staged filter at 390",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7887,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T12:10:07.318Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoiZmlsdGVyLXN0YWdlZC0zOTAiLCJyb3V0ZSI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAxNS9leHBsb3JlIiwidmlld3BvcnQiOnsid2lkdGgiOjM5MCwiaGVpZ2h0IjoxMDAwfSwiYnJvd3NlciI6IjE1Ni4wLjgwNzguNCIsIm1vdGlvbiI6InJlZHVjZSB1bmxlc3Mgc3RhdGUgc3BlY2lmaWVzIG5vcm1hbCIsImZvbnRzIjpbIkFyY2hpdmUgR2FyYW1vbmQiLCJBcmNoaXZlIEdhcmFtb25kIiwiQXJjaGl2ZSBTYW5zIl0sIm9yaWdpbmFscyI6MH0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "58ac71969675d208f6e9-ed7aa32d8c6ac93a026a",
+          "file": "public-visual.spec.js",
+          "line": 102,
+          "column": 5
+        },
+        {
+          "title": "staged filter at 1440",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7928,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T12:10:15.221Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoiZmlsdGVyLXN0YWdlZC0xNDQwIiwicm91dGUiOiJodHRwOi8vMTI3LjAuMC4xOjgwMTUvZXhwbG9yZSIsInZpZXdwb3J0Ijp7IndpZHRoIjoxNDQwLCJoZWlnaHQiOjEwMDB9LCJicm93c2VyIjoiMTU2LjAuODA3OC40IiwibW90aW9uIjoicmVkdWNlIHVubGVzcyBzdGF0ZSBzcGVjaWZpZXMgbm9ybWFsIiwiZm9udHMiOlsiQXJjaGl2ZSBHYXJhbW9uZCIsIkFyY2hpdmUgR2FyYW1vbmQiLCJBcmNoaXZlIFNhbnMiXSwib3JpZ2luYWxzIjowfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "58ac71969675d208f6e9-af57ea267baf3a10c8d5",
+          "file": "public-visual.spec.js",
+          "line": 102,
+          "column": 5
+        },
+        {
+          "title": "unpublished archive and filtered empty recovery",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3956,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T12:10:23.164Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoiYXJjaGl2ZS11bnB1Ymxpc2hlZC0zOTAiLCJyb3V0ZSI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAxNi9leHBsb3JlIiwidmlld3BvcnQiOnsid2lkdGgiOjM5MCwiaGVpZ2h0IjoxMDAwfSwiYnJvd3NlciI6IjE1Ni4wLjgwNzguNCIsIm1vdGlvbiI6InJlZHVjZSB1bmxlc3Mgc3RhdGUgc3BlY2lmaWVzIG5vcm1hbCIsImZvbnRzIjpbIkFyY2hpdmUgR2FyYW1vbmQiLCJBcmNoaXZlIEdhcmFtb25kIiwiQXJjaGl2ZSBTYW5zIl0sIm9yaWdpbmFscyI6MH0="
+                    },
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoiZmlsdGVyZWQtZW1wdHktMzkwIiwicm91dGUiOiJodHRwOi8vMTI3LjAuMC4xOjgwMTUvZXhwbG9yZT9xPXRpZGFrLWFkYSZ2aWV3PWxpc3QiLCJ2aWV3cG9ydCI6eyJ3aWR0aCI6MzkwLCJoZWlnaHQiOjEwMDB9LCJicm93c2VyIjoiMTU2LjAuODA3OC40IiwibW90aW9uIjoicmVkdWNlIHVubGVzcyBzdGF0ZSBzcGVjaWZpZXMgbm9ybWFsIiwiZm9udHMiOlsiQXJjaGl2ZSBHYXJhbW9uZCIsIkFyY2hpdmUgR2FyYW1vbmQiLCJBcmNoaXZlIFNhbnMiXSwib3JpZ2luYWxzIjowfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "58ac71969675d208f6e9-4c8cf641e2832e185db0",
+          "file": "public-visual.spec.js",
+          "line": 120,
+          "column": 1
+        },
+        {
+          "title": "failed browse retains committed results and retry",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7497,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T12:10:27.134Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoiYnJvd3NlLWZhaWx1cmUtMTQ0MCIsInJvdXRlIjoiaHR0cDovLzEyNy4wLjAuMTo4MDE1L2V4cGxvcmUiLCJ2aWV3cG9ydCI6eyJ3aWR0aCI6MTQ0MCwiaGVpZ2h0IjoxMDAwfSwiYnJvd3NlciI6IjE1Ni4wLjgwNzguNCIsIm1vdGlvbiI6InJlZHVjZSB1bmxlc3Mgc3RhdGUgc3BlY2lmaWVzIG5vcm1hbCIsImZvbnRzIjpbIkFyY2hpdmUgR2FyYW1vbmQiLCJBcmNoaXZlIEdhcmFtb25kIiwiQXJjaGl2ZSBTYW5zIl0sIm9yaWdpbmFscyI6MH0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "58ac71969675d208f6e9-4b259ab4dbc747aa5583",
+          "file": "public-visual.spec.js",
+          "line": 132,
+          "column": 1
+        },
+        {
+          "title": "viewer original loads on demand and focus returns",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3651,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T12:10:34.645Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoidmlld2VyLW9yaWdpbmFsLTM5MCIsInJvdXRlIjoiaHR0cDovLzEyNy4wLjAuMTo4MDE1L3Zpc2l0L2RlbW8tYmFyYS1kaS11anVuZy1oYXJpIiwidmlld3BvcnQiOnsid2lkdGgiOjM5MCwiaGVpZ2h0IjoxMDAwfSwiYnJvd3NlciI6IjE1Ni4wLjgwNzguNCIsIm1vdGlvbiI6InJlZHVjZSB1bmxlc3Mgc3RhdGUgc3BlY2lmaWVzIG5vcm1hbCIsImZvbnRzIjpbIkFyY2hpdmUgR2FyYW1vbmQiLCJBcmNoaXZlIEdhcmFtb25kIiwiQXJjaGl2ZSBTYW5zIl0sIm9yaWdpbmFscyI6MX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "58ac71969675d208f6e9-c903826784b0f807cdfe",
+          "file": "public-visual.spec.js",
+          "line": 144,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-09T12:08:25.256Z",
+    "duration": 133216.797,
+    "expected": 18,
+    "skipped": 0,
+    "unexpected": 5,
+    "flaky": 0
+  }
+}

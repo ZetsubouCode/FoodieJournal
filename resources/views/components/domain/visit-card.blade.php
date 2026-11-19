@@ -28,7 +28,7 @@
         <x-domain.card-meta class="visit-card__meta" :date="$visit->visited_at" :location="$visit->place->city_name" />
         @if($allergenWarning)<p class="visit-card__warning">Informasi belum tersedia untuk alergen yang dipilih pada setidaknya satu hidangan.</p>@endif
         @if($cardTags)
-            <div class="visit-card__tags" aria-label="Tag kunjungan">
+            <div class="visit-card__tags" role="group" aria-label="Tag kunjungan">
                 @foreach($visibleTags as $index => $tag)
                     <a class="visit-card__tag {{ $index === 1 ? 'visit-card__tag--second' : '' }}" href="{{ $tag['url'] }}" aria-label="Jelajahi {{ $tag['name'] }}">{{ $tag['name'] }}</a>
                 @endforeach

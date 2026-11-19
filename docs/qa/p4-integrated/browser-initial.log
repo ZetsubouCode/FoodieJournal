@@ -1,0 +1,170 @@
+
+Running 85 tests using 1 worker
+
+(node:8308) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 tests\Browser\discovery-machine.spec.js:7:1 › Explore modes retain the document, query, layout and browser history (4.1s)
+  ok  2 tests\Browser\discovery-machine.spec.js:20:1 › rapid requests discard stale modes; failed requests retain committed data (2.5s)
+  ok  3 tests\Browser\discovery-machine.spec.js:33:1 › curiosity photographs apply actual filtering and restore with Back (3.1s)
+  ok  4 tests\Browser\discovery-machine.spec.js:42:1 › filter drawer stages hierarchy, long searchable multiselect, tags and recommendations; apply and cancel (4.0s)
+  ok  5 tests\Browser\discovery-machine.spec.js:78:1 › mode-specific prices, group reset, search/sort/grid/list/pagination and error retry remain coherent (6.9s)
+  ok  6 tests\Browser\discovery-machine.spec.js:104:1 › calendar and location metadata are shared by Home and all Explore card modes (5.7s)
+  ok  7 tests\Browser\error-pages.spec.js:9:1 › editorial 404 scene reflows, loads its photograph and remains keyboard accessible (7.1s)
+  ok  8 tests\Browser\explore-response.spec.js:12:1 › board pending intent commits its actual facet once, keeps the board and restores keyboard focus (8.6s)
+  ok  9 tests\Browser\explore-response.spec.js:33:1 › malformed response cannot partially replace committed controls or results, and retry recovers (4.6s)
+  ok 10 tests\Browser\explore-response.spec.js:49:1 › offline failure and malformed state keep committed facets until a successful retry (5.8s)
+  ok 11 tests\Browser\explore-response.spec.js:65:1 › a failed Back rolls back, and retry restores the requested history URL with its actual data (9.1s)
+  ok 12 tests\Browser\explore-response.spec.js:78:1 › rapid board intents discard older responses and markers; committed controls keep logical focus (10.3s)
+  ok 13 tests\Browser\explore-response.spec.js:96:1 › actual delayed derivatives get static box-matched placeholders; success and failure remove them (7.3s)
+  ok 14 tests\Browser\explore-response.spec.js:118:1 › decoded fast photos never flash a placeholder and runtime reduction finishes visible result entrances (8.6s)
+  ok 15 tests\Browser\explore-response.spec.js:140:1 › real outstanding request timeout keeps committed data and clears pending intent (20.2s)
+  ok 16 tests\Browser\explore-response.spec.js:150:1 › a response committed in a hidden tab settles without starting a result entrance (4.7s)
+  ok 17 tests\Browser\explore-response.spec.js:165:1 › responsive board keeps semantic order, touch links, no-JS and enlarged-text access (35.8s)
+  ok 18 tests\Browser\homepage.spec.js:4:1 › homepage editorial collections and shared geometry reflow through desktop, mobile and 200% text (11.7s)
+  ok 19 tests\Browser\homepage.spec.js:24:1 › personal picks link to actual records and keep endorsements distinct from score (1.9s)
+  x  20 tests\Browser\integrated-gates.spec.js:29:1 › integrated public reflow, enlarged root text and primary focus at all target boundaries (40.9s)
+(node:29572) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 21 tests\Browser\integrated-gates.spec.js:57:1 › whole-page axe and actual keyboard focus cover drawer, busy error retry and viewer (38.8s)
+  ok 22 tests\Browser\integrated-gates.spec.js:97:1 › six actual HTTP statuses retain approved copy, recovery, JSON and responsive standalone scenes (18.3s)
+  ok 23 tests\Browser\journal.spec.js:36:1 › public pages reflow at 320, 375, 768, 1024 and 1440 pixels (39.5s)
+  ok 24 tests\Browser\journal.spec.js:49:1 › filters stage, count, cancel, apply and restore browser history (3.4s)
+  ok 25 tests\Browser\journal.spec.js:68:1 › login, keyboard combobox, inline create, repeatable editor and publish preview (7.2s)
+  ok 26 tests\Browser\journal.spec.js:101:1 › gallery loads originals only when opened and dialog restores focus (2.4s)
+  ok 27 tests\Browser\journal.spec.js:113:1 › admin mobile, reduced motion, errors and 200 percent text reflow (5.9s)
+  x  28 tests\Browser\p0-hardening.spec.js:20:1 › Place hero comes from older published history and stays the same on pages 1 and 2 (2.7s)
+(node:38604) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 29 tests\Browser\p0-hardening.spec.js:42:1 › photo-free Place has genuine facts and no unused photo track at every width and enlarged text (14.8s)
+  ok 30 tests\Browser\p0-hardening.spec.js:71:1 › minimal admin uses system fonts, measured controls, persistent errors and one saved announcement (11.9s)
+  ok 31 tests\Browser\p0-hardening.spec.js:111:1 › six real HTTP error responses preserve approved scene, status and standalone shared CSS (12.6s)
+  ok 32 tests\Browser\p0-hardening.spec.js:126:1 › real Explore wait keeps committed results and URL, then offers recovery without a skeleton (1.8s)
+  ok 33 tests\Browser\p0-hardening.spec.js:151:1 › ultrawide discovery caps photo height and reflows result columns (10.8s)
+  ok 34 tests\Browser\performance.spec.js:4:1 › record local paint, layout stability and token contrast measurements (1.5s)
+  ok 35 tests\Browser\place-chronology.spec.js:16:1 › current-page month groups keep the same older hero, 18/2 pagination and published independent story links (6.2s)
+  ok 36 tests\Browser\place-chronology.spec.js:51:1 › long photo-free facts, all-null history and enlarged text reflow without hidden chronology (16.9s)
+  ok 37 tests\Browser\place-chronology.spec.js:74:1 › reduced motion at load/runtime and failed derivatives preserve readable history and footer (2.5s)
+  ok 38 tests\Browser\place-chronology.spec.js:92:1 › native no-JS pagination and emulated touch keep Place to Visit journeys independent of enhancements (7.1s)
+  ok 39 tests\Browser\place-chronology.spec.js:110:1 › loading real fonts does not move the month groups through a changing caption wrap (2.0s)
+  ok 40 tests\Browser\public-navigation.spec.js:17:5 › public hover progress is interruptible, left anchored and keyboard accessible on / (4.0s)
+  ok 41 tests\Browser\public-navigation.spec.js:17:5 › public hover progress is interruptible, left anchored and keyboard accessible on /missing-error-page-preview (2.1s)
+  ok 42 tests\Browser\public-navigation.spec.js:58:1 › shared navigation retains active and hover states across public routes and responsive sizes (21.0s)
+  ok 43 tests\Browser\public-navigation.spec.js:86:1 › reduced motion is immediate at load and when the preference changes during hover (2.6s)
+  ok 44 tests\Browser\public-navigation.spec.js:99:1 › touch and JavaScript-free navigation use ordinary links without a hover dependency (1.8s)
+  ok 45 tests\Browser\public-shell.spec.js:13:1 › public shell aligns header, main and footer at target and boundary widths without scaling cabinet artwork up (1.0m)
+  ok 46 tests\Browser\public-shell.spec.js:51:1 › reading measure, enlarged text and short landscape remain usable across public surfaces (23.7s)
+  ok 47 tests\Browser\public-shell.spec.js:70:1 › admin keeps its existing narrow container and compact footer (943ms)
+  ok 48 tests\Browser\public-shell.spec.js:80:1 › wide images use derivatives with layout-aware lazy sizes and an eager capped hero (979ms)
+  ok 49 tests\Browser\readability-states.spec.js:12:1 › private-only archive and filtered zero have different honest states, including async reset (2.7s)
+  ok 50 tests\Browser\readability-states.spec.js:35:1 › partial records keep absent recommendations, images, scores, Maps and prices honest (2.6s)
+  ok 51 tests\Browser\readability-states.spec.js:59:1 › readable metadata, long chips and touch actions reflow at normal and doubled root text (3.6s)
+  ok 52 tests\Browser\readability-states.spec.js:96:1 › photographic captions remain inside their tiles with enlarged text (11.0s)
+  ok 53 tests\Browser\readability-states.spec.js:109:1 › keyboard focus and overflow controls remain visible and disabled states remain safe without JS (2.6s)
+  ok 54 tests\Browser\readability-states.spec.js:129:1 › denied derivatives show the existing fallback without fetching originals (971ms)
+  ok 55 tests\Browser\vending-machine.spec.js:20:1 › fresh machine is dark and inert; holding at expanded socket edge waits for release (3.6s)
+  ok 56 tests\Browser\vending-machine.spec.js:35:1 › invalid drops, Escape, pointercancel and lost capture return to the committed origin (5.9s)
+  ok 57 tests\Browser\vending-machine.spec.js:51:1 › valid reverse drop shuts down and session refresh restores the correct physical state (6.8s)
+  ok 58 tests\Browser\vending-machine.spec.js:70:1 › rotary angular drag crosses wrap boundary and keyboard reverses a real six-visit page (6.6s)
+  ok 59 tests\Browser\vending-machine.spec.js:89:1 › rapid page requests discard stale fragments; failure retains committed selection and retries (5.3s)
+  ok 60 tests\Browser\vending-machine.spec.js:111:1 › selection prints exactly one matching photo and retrieval opens its actual visit (5.0s)
+  ok 61 tests\Browser\vending-machine.spec.js:128:1 › reset and a new selection retract the ready card; push-button face depresses without rotating (4.1s)
+  ok 62 tests\Browser\vending-machine.spec.js:140:1 › touch uses lamp then target; reduced-motion runtime changes keep power and print usable (3.3s)
+  ok 63 tests\Browser\vending-machine.spec.js:157:1 › keyboard lamp actions and blocked sessionStorage remain usable (1.6s)
+  ok 64 tests\Browser\vending-machine.spec.js:173:1 › responsive geometry, LED alignment, missing images and WCAG scans in off/on/printed states (14.1s)
+  ok 65 tests\Browser\vending-machine.spec.js:201:1 › no JavaScript leaves semantic visit and Explore navigation available (2.1s)
+  ok 66 tests\Browser\vending-machine.spec.js:207:1 › touch dragging snaps only after release on the compact socket (3.0s)
+  ok 67 tests\Browser\vending-machine.spec.js:219:1 › resize, a second pointer, scroll and visibility interruptions preserve a valid lamp pose (3.9s)
+  ok 68 tests\Browser\vending-machine.spec.js:240:1 › lamp communicates pickup without visible tutorial copy (2.8s)
+  ok 69 tests\Browser\vending-machine.spec.js:246:1 › a now-empty server page clears the old preview and disables printing (3.0s)
+  ok 70 tests\Browser\vending-machine.spec.js:256:1 › compiled CSS durations drive real snap, ignition and paper-feed timings (4.5s)
+  ok 71 tests\Browser\vending-machine.spec.js:271:1 › refined hardware has no pagination widgets; dial resists partial travel and settles at an index (6.3s)
+  ok 72 tests\Browser\vending-machine.spec.js:286:1 › resting tube hangs outside the left side and the compact tray is dark when off (2.9s)
+  ok 73 tests\Browser\vending-machine.spec.js:295:1 › off-state pickup cue is visible even in a discovered session, finite and non-electrical (1.3s)
+  ok 74 tests\Browser\vending-seating.spec.js:20:5 › weighted seating follows contact without moving anchors at 1440 (2.9s)
+  ok 75 tests\Browser\vending-seating.spec.js:20:5 › weighted seating follows contact without moving anchors at 390 (2.7s)
+  ok 76 tests\Browser\vending-seating.spec.js:55:1 › seating interruptions finish both local effects and retain exact print/off semantics (9.1s)
+  ok 77 tests\Browser\vending-seating.spec.js:80:1 › reduced load and missing WAAPI keep immediate seating and cancel a pending page on power-off (3.3s)
+  ok 78 tests\Browser\vending-seating.spec.js:109:1 › 200% root text preserves seated geometry and keyboard print identity (2.9s)
+  ok 79 tests\Browser\visit-card.spec.js:8:1 › F Refined visit card reflows and keeps independent destinations (29.2s)
+  ok 80 tests\Browser\visit-card.spec.js:87:1 › failed visit-card media reveals a stable fallback (841ms)
+  ok 81 tests\Browser\visit-card.spec.js:96:1 › touch taps keep card navigation separate from tag disclosure (4.7s)
+  ok 82 tests\Browser\visit-story.spec.js:17:1 › original wait, derivative fallback, full failure and keyboard retry keep a stable stage and focus (3.8s)
+  ok 83 tests\Browser\visit-story.spec.js:48:1 › rapid changes and closing pending originals cannot commit a stale image (3.6s)
+  ok 84 tests\Browser\visit-story.spec.js:75:1 › one and forty photo boundaries, editable arrows, native close and text-only no-JS story (4.9s)
+  ok 85 tests\Browser\visit-story.spec.js:100:1 › story, long prose, reduced motion and doubled text reflow across desktop and compact sizes (9.7s)
+
+
+  1) tests\Browser\integrated-gates.spec.js:29:1 › integrated public reflow, enlarged root text and primary focus at all target boundaries 
+
+    Error: /explore/960/200
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      37 |             for (const scale of [100, 200]) {
+      38 |                 await page.evaluate(scale => document.documentElement.style.fontSize = `${scale}%`, scale);
+    > 39 |                 expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), `${route}/${width}/${scale}`).toBe(true);
+         |                                                                                                                                     ^
+      40 |                 const controls = await page.locator('.site-footer__nav a').evaluateAll(nodes => nodes.map(n => { const r = n.getBoundingClientRect(); return { width: r.width, height: r.height, x: r.x }; }));
+      41 |                 expect(controls.every(r => r.width >= 44 && r.height >= 44 && r.x >= 0 && r.x + r.width <= width + 1)).toBe(true);
+      42 |                 measurements.push({ width, route, scale, controls });
+        at D:\Github repo\FoodieJournal\tests\Browser\integrated-gates.spec.js:39:133
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\integrated-gates-integrate-9af37-us-at-all-target-boundaries\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\integrated-gates-integrate-9af37-us-at-all-target-boundaries\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\integrated-gates-integrate-9af37-us-at-all-target-boundaries\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\integrated-gates-integrate-9af37-us-at-all-target-boundaries\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests\Browser\p0-hardening.spec.js:20:1 › Place hero comes from older published history and stays the same on pages 1 and 2 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('.results')
+    Expected substring: "Foto lama QA di halaman kedua"
+    Error: strict mode violation: locator('.results') resolved to 2 elements:
+        1) <ol role="list" aria-labelledby="history-period-0" class="place-history__entries results results--visit results--list">…</ol> aka getByRole('list', { name: 'November' })
+        2) <ol role="list" aria-labelledby="history-period-1" class="place-history__entries results results--visit results--list">…</ol> aka getByRole('list', { name: 'Januari' })
+
+    Call log:
+      - Expect "toContainText" locator('.results') with timeout 5000ms
+      - waiting for locator('.results')
+
+
+      30 |         await expect(page.locator('body')).not.toContainText(/P0H-(PRIVATE|DRAFT)/);
+      31 |         if (number === 1) await expect(page.locator('.results')).not.toContainText('Foto lama QA di halaman kedua');
+    > 32 |         else await expect(page.locator('.results')).toContainText('Foto lama QA di halaman kedua');
+         |                                                     ^
+      33 |         await page.screenshot({ path: `${output}/stable-hero-page-${number}.jpg`, quality: 75 });
+      34 |     }
+      35 |     expect(originals).toEqual([]);
+        at D:\Github repo\FoodieJournal\tests\Browser\p0-hardening.spec.js:32:53
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\p0-hardening-Place-hero-co-8d95c-s-the-same-on-pages-1-and-2\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\p0-hardening-Place-hero-co-8d95c-s-the-same-on-pages-1-and-2\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\p0-hardening-Place-hero-co-8d95c-s-the-same-on-pages-1-and-2\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\p0-hardening-Place-hero-co-8d95c-s-the-same-on-pages-1-and-2\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2 failed
+    tests\Browser\integrated-gates.spec.js:29:1 › integrated public reflow, enlarged root text and primary focus at all target boundaries 
+    tests\Browser\p0-hardening.spec.js:20:1 › Place hero comes from older published history and stays the same on pages 1 and 2 
+  83 passed (12.0m)

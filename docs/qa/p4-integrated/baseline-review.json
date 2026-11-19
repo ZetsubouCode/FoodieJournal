@@ -1,0 +1,173 @@
+{
+  "reason": "Reviewed all 40 separately generated candidates and six named before/after pairs. Brighter engraved plaque text and local contrast shadows only; no geometry/source/media/identity change. No mask, threshold, font, browser or fixture change.",
+  "accepted": [
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/home-390-hero.png",
+      "before": "a523490d5a365d2b186ec2e8c063aa52bf28cb204ef4648046c8afbda2ba18bd",
+      "after": "7ac281ac89e07d9adafa2b73fe296de555d4d7af3a2d6ae7cf454555ac777791"
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/home-1440-hero.png",
+      "before": "d48891f40cf88066fc3dce0675dc1cc5cef8e520a22eae690b9cd412a0a6fbc1",
+      "after": "e889485241eb5b1b78ed266bd5ace0521b7b4338f0eb93577775131f4ec09877"
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/home-1920-hero.png",
+      "before": "80f8c0aa103c8cd43a14b34df7a24daa69047502261e6dda4e9a186463ce5ebb",
+      "after": "9509dd8326b4f01892f5c36d53b99c3417a23a18abd37106f2c8698a9ad67771"
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/explore-390-hero.png",
+      "before": "e436561e62bf75db1355a2535ecba2ac00d74ffc57b44c038dba644c5b09d081",
+      "after": "60d81a847374c8a12ee32dfb8734fb75a75183aeadedc48dc7db1a17bc77b436"
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/cabinet-on-1440.png",
+      "before": "c2f31c17419cdb7034bbbc5eba5d2996aa2bd94e1cb6adc60662203fce6de05e",
+      "after": "65245c9fb016a194cf4b733d6f50744ed44399f5b4e0459bc89f21ea62561601"
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/cabinet-printed-1440.png",
+      "before": "06b0860e43803954608432fc64d5dac6d272faf87ec711ea031ae152e6761e8f",
+      "after": "8f767968635cf12f01c7c012bd15643e3f38b0ea5975db037df0ec57babbeee8"
+    }
+  ],
+  "preserved": [
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/archive-unpublished-390.png",
+      "sha256": "4c123757c0ca58ef01d04ff45e418455eb3072511ad716ed460bd48ab2f89516"
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/browse-failure-1440.png",
+      "sha256": "2baa44421e0ad9f764150b35ed6ee8d8e323ec30fff30b9589428a7db9f191c1"
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/error-1440-footer.png",
+      "sha256": "1c864a94745c64f3455f5270f3e2de32de4fc8af4113fa7504f7f3aba96ae996"
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/error-1440-hero.png",
+      "sha256": "e5e27da092a1f3f65f75bbcd5bad08a12ace283d081e7263775ef7619a77a93f"
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/error-1920-footer.png",
+      "sha256": "8cf27e38aff932d6ea1a30c65b930866f24f1155e4b958d789c33a1d5798bb07"
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/error-1920-hero.png",
+      "sha256": "19f502b447e0f5232b3beb6f07a0521a0af927ee5319b242eaf4775e1aee7253"
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/error-390-footer.png",
+      "sha256": "dfd80bdc8d7d39108f726103ac041d058f9361a08a5557ba3b1aaa47eb5bf928"
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/error-390-hero.png",
+      "sha256": "a1c861f12878c117f9fa776c8c5cc678da140c2246f8f4b99249becb5e41588e"
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/explore-1440-footer.png",
+      "sha256": "0617303079110cc0e27e39a008352454c929f401de2fd192ad3fa8e465e08ee9"
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/explore-1440-hero.png",
+      "sha256": "6b4d0b0fab7f4db0d2c406497c4db37f6f228bca21e266327ae67aebd609ef15"
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/explore-1920-footer.png",
+      "sha256": "273ba060c197c383e932c89d028d8ac327223025025180c878d1b239311a3768"
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/explore-1920-hero.png",
+      "sha256": "1f91c101363e220eea8723cad31b9264d560faaa7c7ebb7c2faa73751da44612"
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/explore-390-footer.png",
+      "sha256": "eabb319849d3c7d45df04e9cb69c204c20887475f2a43eca5c31569afd781eb4"
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/filter-staged-1440.png",
+      "sha256": "57c4bf2d3ed6a09cd5dcd30da4353dda073fe612ba32e7ada9666df712fa7eb9"
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/filter-staged-390.png",
+      "sha256": "eac6c1c2c57c4cda24137f824a0fe5ebf05cd8b8b8f4b02b92add2282f23e4e9"
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/filtered-empty-390.png",
+      "sha256": "81faf9252a419f02ceb4a0728e8b902416c6345548965c4d5f7c921d82a0a92f"
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/home-1440-footer.png",
+      "sha256": "0617303079110cc0e27e39a008352454c929f401de2fd192ad3fa8e465e08ee9"
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/home-1920-footer.png",
+      "sha256": "b0a19ac247b824855d140c93929fa4529c4cc5b62f961d1fad02ffcc5c0c1fd9"
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/home-390-footer.png",
+      "sha256": "2ff301d7d23dc0d9f71df58ec395385896c66d8536c77e20ec9405be396b1477"
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/nav-error-midpoint-1440.png",
+      "sha256": "cb20dd5017df78752cfc4c6d81b39dfe70c3dd99faea2e18b52b93cbbdc7e5dc"
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/nav-public-midpoint-1440.png",
+      "sha256": "48eb0136c8d9d579809ffb4f4357213f4700e95f08057822809e35874014da88"
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/place-1440-footer.png",
+      "sha256": "f922c1f837018e9dd7610098b87e408cb6bbac9b1cafd41be89ae27eb3cdcd67"
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/place-1440-hero.png",
+      "sha256": "9c50d39964e79f9f7f39c5f654ff3490a420a00370bddccb780c50482e1f5e25"
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/place-1920-footer.png",
+      "sha256": "9184b2c681a79e611417eeb1c139e10716e5260afaeec4d0050f0c937aa29e9e"
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/place-1920-hero.png",
+      "sha256": "664a7a877cc1f93336b19c4ddd0f530b351be1ad110900ee133024813ae13e8a"
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/place-390-footer.png",
+      "sha256": "edba001134143c5deb17bd4a23cb56a2e91b6d4524d043af9be7cd62e17f7d6c"
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/place-390-hero.png",
+      "sha256": "42162100ad0ff23affd2693e901e8ce75fb12072d816298ebb127f287e85fdb4"
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/viewer-original-390.png",
+      "sha256": "16032b8a05840ba68ab5f3aff4c3323cb334b1ad912c828543420453d4a7a35b"
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/visit-1440-footer.png",
+      "sha256": "42b0711be70e1633dd99353f9c50493b365a87478e000efa1beddd3d6de74b1d"
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/visit-1440-hero.png",
+      "sha256": "722b25699a0bb8e5bb83bd600f9aff3fbb6509c8a358809c30e2d5c974de4324"
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/visit-1920-footer.png",
+      "sha256": "ba593a0d7374007b86126c2cbcd1f7db6550a21a85d8ed46e50b3e59e7e914ba"
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/visit-1920-hero.png",
+      "sha256": "502a5d7e589139690ed70df987275f50648b9a7be3b035e564fe42c20ed53673"
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/visit-390-footer.png",
+      "sha256": "5d60f038d8b219057a723adb40b390f035fe2d283be318c11785c5e73e2556b8"
+    },
+    {
+      "file": "tests/Browser/__screenshots__/public-visual-win32-chromium/visit-390-hero.png",
+      "sha256": "7fdcd4849f16e0f9612ec4e05457ef831c7a115d703a3d87dff240551f7a710d"
+    }
+  ]
+}

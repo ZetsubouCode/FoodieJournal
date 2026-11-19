@@ -23,10 +23,10 @@
     <a class="error-skip" href="#error-main">Lewati ke isi</a>
     <div class="error-scene">
         <x-site.header />
-        <main id="error-main" class="error-main">
+        <main id="error-main" class="error-main" tabindex="-1">
             <div class="error-copy">
                 <p class="error-eyebrow"><span class="error-eyebrow-line" aria-hidden="true"></span>{{ $page['eyebrow'] }}</p>
-                <p class="error-code numeric" aria-label="Kesalahan {{ $code }}"><span class="error-code-text">{{ $code }}</span><svg class="error-stroke" viewBox="0 0 520 90" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M6 64C88 43 172 46 254 34C336 21 427 24 514 6" /><path d="M46 76C166 52 305 39 471 27" /></svg></p>
+                <p class="error-code numeric"><span class="error-code-text">{{ $code }}</span><svg class="error-stroke" viewBox="0 0 520 90" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M6 64C88 43 172 46 254 34C336 21 427 24 514 6" /><path d="M46 76C166 52 305 39 471 27" /></svg></p>
                 <h1>{{ $page['heading'] }}</h1>
                 <p class="error-description">{{ $page['description'] }}</p>
                 <nav class="error-actions" aria-label="Langkah selanjutnya">

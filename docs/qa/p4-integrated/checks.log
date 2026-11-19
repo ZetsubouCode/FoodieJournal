@@ -1,0 +1,5 @@
+PASS: node --check for 15 JavaScript files (P4 helpers and affected browser specs).
+PASS: Python helper AST parsing and new-text trailing whitespace checks.
+PASS: git diff --check; existing CRLF normalization notices only.
+PASS: final build/gates/sample/visual hashes and starting-file preservation verified by integrity.mjs.
+Known pre-existing whole-repository Pint failures remain in pint.log.

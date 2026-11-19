@@ -1,0 +1,304 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\Github repo\\FoodieJournal\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "tests/Browser/integrated-gates.spec.js",
+      "tests/Browser/p0-hardening.spec.js",
+      "--grep",
+      "integrated|whole-page|six actual|Place hero comes"
+    ],
+    "configFile": "D:\\Github repo\\FoodieJournal\\playwright.config.js",
+    "rootDir": "D:/Github repo/FoodieJournal/tests/Browser",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/Github repo/FoodieJournal/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "D:/Github repo/FoodieJournal/tests/Browser",
+        "testIgnore": [
+          "public-visual.spec.js"
+        ],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\Github repo\\FoodieJournal\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "D:\\Github repo\\FoodieJournal\\tests\\Browser",
+        "snapshotDir": "D:\\Github repo\\FoodieJournal\\tests\\Browser",
+        "testIgnore": "public-visual.spec.js",
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://127.0.0.1:8011",
+          "browserName": "chromium",
+          "actionTimeout": 10000,
+          "navigationTimeout": 20000,
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/browser-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "integrated-gates.spec.js",
+      "file": "integrated-gates.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "integrated public reflow, enlarged root text and primary focus at all target boundaries",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 143892,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T11:53:47.472Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "68a61a00f038d24ef655-36e7f223429d3817bd5d",
+          "file": "integrated-gates.spec.js",
+          "line": 30,
+          "column": 1
+        },
+        {
+          "title": "whole-page axe and actual keyboard focus cover drawer, busy error retry and viewer",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 9096,
+                  "error": {
+                    "message": "Error: 390 /explore: manual semantic review\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  -   1\u001b[39m\n\u001b[31m+ Received  + 134\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"id\": \"aria-prohibited-attr\",\u001b[39m\n\u001b[31m+     \"impact\": \"serious\",\u001b[39m\n\u001b[31m+     \"nodes\": Array [\u001b[39m\n\u001b[31m+       Object {\u001b[39m\n\u001b[31m+         \"summary\": \"Fix all of the following:\u001b[39m\n\u001b[31m+   aria-label attribute is not well supported on \\\"div\\\" elements with no valid role attribute.\",\u001b[39m\n\u001b[31m+         \"target\": Array [\u001b[39m\n\u001b[31m+           \"article[aria-labelledby=\\\"visit-card-1-nIf89KTs-title\\\"] > .visit-card__body > .visit-card__tags[aria-label=\\\"Tag kunjungan\\\"]\",\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+       Object {\u001b[39m\n\u001b[31m+         \"summary\": \"Fix all of the following:\u001b[39m\n\u001b[31m+   aria-label attribute is not well supported on \\\"div\\\" elements with no valid role attribute.\",\u001b[39m\n\u001b[31m+         \"target\": Array [\u001b[39m\n\u001b[31m+           \"article[aria-labelledby=\\\"visit-card-2-bXQ0bEkM-title\\\"] > .visit-card__body > .visit-card__tags[aria-label=\\\"Tag kunjungan\\\"]\",\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+       Object {\u001b[39m\n\u001b[31m+         \"summary\": \"Fix all of the following:\u001b[39m\n\u001b[31m+   aria-label attribute is not well supported on \\\"div\\\" elements with no valid role attribute.\",\u001b[39m\n\u001b[31m+         \"target\": Array [\u001b[39m\n\u001b[31m+           \"article[aria-labelledby=\\\"visit-card-3-GOvg88JR-title\\\"] > .visit-card__body > .visit-card__tags[aria-label=\\\"Tag kunjungan\\\"]\",\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+       Object {\u001b[39m\n\u001b[31m+         \"summary\": \"Fix all of the following:\u001b[39m\n\u001b[31m+   aria-label attribute is not well supported on \\\"div\\\" elements with no valid role attribute.\",\u001b[39m\n\u001b[31m+         \"target\": Array [\u001b[39m\n\u001b[31m+           \"article[aria-labelledby=\\\"visit-card-4-cZqZwGAg-title\\\"] > .visit-card__body > .visit-card__tags[aria-label=\\\"Tag kunjungan\\\"]\",\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+       Object {\u001b[39m\n\u001b[31m+         \"summary\": \"Fix all of the following:\u001b[39m\n\u001b[31m+   aria-label attribute is not well supported on \\\"div\\\" elements with no valid role attribute.\",\u001b[39m\n\u001b[31m+         \"target\": Array [\u001b[39m\n\u001b[31m+           \"article[aria-labelledby=\\\"visit-card-5-kngXgXlb-title\\\"] > .visit-card__body > .visit-card__tags[aria-label=\\\"Tag kunjungan\\\"]\",\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+       Object {\u001b[39m\n\u001b[31m+         \"summary\": \"Fix all of the following:\u001b[39m\n\u001b[31m+   aria-label attribute is not well supported on \\\"div\\\" elements with no valid role attribute.\",\u001b[39m\n\u001b[31m+         \"target\": Array [\u001b[39m\n\u001b[31m+           \"article[aria-labelledby=\\\"visit-card-6-jO6g5oN7-title\\\"] > .visit-card__body > .visit-card__tags[aria-label=\\\"Tag kunjungan\\\"]\",\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+       Object {\u001b[39m\n\u001b[31m+         \"summary\": \"Fix all of the following:\u001b[39m\n\u001b[31m+   aria-label attribute is not well supported on \\\"div\\\" elements with no valid role attribute.\",\u001b[39m\n\u001b[31m+         \"target\": Array [\u001b[39m\n\u001b[31m+           \"article[aria-labelledby=\\\"visit-card-7-Ia6Nh71B-title\\\"] > .visit-card__body > .visit-card__tags[aria-label=\\\"Tag kunjungan\\\"]\",\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+       Object {\u001b[39m\n\u001b[31m+         \"summary\": \"Fix all of the following:\u001b[39m\n\u001b[31m+   aria-label attribute is not well supported on \\\"div\\\" elements with no valid role attribute.\",\u001b[39m\n\u001b[31m+         \"target\": Array [\u001b[39m\n\u001b[31m+           \"article[aria-labelledby=\\\"visit-card-8-2tlZAj3H-title\\\"] > .visit-card__body > .visit-card__tags[aria-label=\\\"Tag kunjungan\\\"]\",\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+       Object {\u001b[39m\n\u001b[31m+         \"summary\": \"Fix all of the following:\u001b[39m\n\u001b[31m+   aria-label attribute is not well supported on \\\"div\\\" elements with no valid role attribute.\",\u001b[39m\n\u001b[31m+         \"target\": Array [\u001b[39m\n\u001b[31m+           \"article[aria-labelledby=\\\"visit-card-9-rw9LwDcC-title\\\"] > .visit-card__body > .visit-card__tags[aria-label=\\\"Tag kunjungan\\\"]\",\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+       Object {\u001b[39m\n\u001b[31m+         \"summary\": \"Fix all of the following:\u001b[39m\n\u001b[31m+   aria-label attribute is not well supported on \\\"div\\\" elements with no valid role attribute.\",\u001b[39m\n\u001b[31m+         \"target\": Array [\u001b[39m\n\u001b[31m+           \"article[aria-labelledby=\\\"visit-card-10-TsV8GTUE-title\\\"] > .visit-card__body > .visit-card__tags[aria-label=\\\"Tag kunjungan\\\"]\",\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+       Object {\u001b[39m\n\u001b[31m+         \"summary\": \"Fix all of the following:\u001b[39m\n\u001b[31m+   aria-label attribute is not well supported on \\\"div\\\" elements with no valid role attribute.\",\u001b[39m\n\u001b[31m+         \"target\": Array [\u001b[39m\n\u001b[31m+           \"article[aria-labelledby=\\\"visit-card-11-PazM8roL-title\\\"] > .visit-card__body > .visit-card__tags[aria-label=\\\"Tag kunjungan\\\"]\",\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+       Object {\u001b[39m\n\u001b[31m+         \"summary\": \"Fix all of the following:\u001b[39m\n\u001b[31m+   aria-label attribute is not well supported on \\\"div\\\" elements with no valid role attribute.\",\u001b[39m\n\u001b[31m+         \"target\": Array [\u001b[39m\n\u001b[31m+           \"article[aria-labelledby=\\\"visit-card-12-0nQbYQoM-title\\\"] > .visit-card__body > .visit-card__tags[aria-label=\\\"Tag kunjungan\\\"]\",\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+       Object {\u001b[39m\n\u001b[31m+         \"summary\": \"Fix all of the following:\u001b[39m\n\u001b[31m+   aria-label attribute is not well supported on \\\"div\\\" elements with no valid role attribute.\",\u001b[39m\n\u001b[31m+         \"target\": Array [\u001b[39m\n\u001b[31m+           \"article[aria-labelledby=\\\"visit-card-13-Qb9PRVMn-title\\\"] > .visit-card__body > .visit-card__tags[aria-label=\\\"Tag kunjungan\\\"]\",\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+       Object {\u001b[39m\n\u001b[31m+         \"summary\": \"Fix all of the following:\u001b[39m\n\u001b[31m+   aria-label attribute is not well supported on \\\"div\\\" elements with no valid role attribute.\",\u001b[39m\n\u001b[31m+         \"target\": Array [\u001b[39m\n\u001b[31m+           \"article[aria-labelledby=\\\"visit-card-14-0rUwa5Qd-title\\\"] > .visit-card__body > .visit-card__tags[aria-label=\\\"Tag kunjungan\\\"]\",\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+       Object {\u001b[39m\n\u001b[31m+         \"summary\": \"Fix all of the following:\u001b[39m\n\u001b[31m+   aria-label attribute is not well supported on \\\"div\\\" elements with no valid role attribute.\",\u001b[39m\n\u001b[31m+         \"target\": Array [\u001b[39m\n\u001b[31m+           \"article[aria-labelledby=\\\"visit-card-15-YL3RiIBs-title\\\"] > .visit-card__body > .visit-card__tags[aria-label=\\\"Tag kunjungan\\\"]\",\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+       Object {\u001b[39m\n\u001b[31m+         \"summary\": \"Fix all of the following:\u001b[39m\n\u001b[31m+   aria-label attribute is not well supported on \\\"div\\\" elements with no valid role attribute.\",\u001b[39m\n\u001b[31m+         \"target\": Array [\u001b[39m\n\u001b[31m+           \"article[aria-labelledby=\\\"visit-card-16-frVQkMXM-title\\\"] > .visit-card__body > .visit-card__tags[aria-label=\\\"Tag kunjungan\\\"]\",\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+       Object {\u001b[39m\n\u001b[31m+         \"summary\": \"Fix all of the following:\u001b[39m\n\u001b[31m+   aria-label attribute is not well supported on \\\"div\\\" elements with no valid role attribute.\",\u001b[39m\n\u001b[31m+         \"target\": Array [\u001b[39m\n\u001b[31m+           \"article[aria-labelledby=\\\"visit-card-17-B0cQYw6w-title\\\"] > .visit-card__body > .visit-card__tags[aria-label=\\\"Tag kunjungan\\\"]\",\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+       Object {\u001b[39m\n\u001b[31m+         \"summary\": \"Fix all of the following:\u001b[39m\n\u001b[31m+   aria-label attribute is not well supported on \\\"div\\\" elements with no valid role attribute.\",\u001b[39m\n\u001b[31m+         \"target\": Array [\u001b[39m\n\u001b[31m+           \"article[aria-labelledby=\\\"visit-card-18-FA8BWjCl-title\\\"] > .visit-card__body > .visit-card__tags[aria-label=\\\"Tag kunjungan\\\"]\",\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+     ],\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+ ]\u001b[39m",
+                    "stack": "Error: 390 /explore: manual semantic review\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  -   1\u001b[39m\n\u001b[31m+ Received  + 134\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"id\": \"aria-prohibited-attr\",\u001b[39m\n\u001b[31m+     \"impact\": \"serious\",\u001b[39m\n\u001b[31m+     \"nodes\": Array [\u001b[39m\n\u001b[31m+       Object {\u001b[39m\n\u001b[31m+         \"summary\": \"Fix all of the following:\u001b[39m\n\u001b[31m+   aria-label attribute is not well supported on \\\"div\\\" elements with no valid role attribute.\",\u001b[39m\n\u001b[31m+         \"target\": Array [\u001b[39m\n\u001b[31m+           \"article[aria-labelledby=\\\"visit-card-1-nIf89KTs-title\\\"] > .visit-card__body > .visit-card__tags[aria-label=\\\"Tag kunjungan\\\"]\",\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+       Object {\u001b[39m\n\u001b[31m+         \"summary\": \"Fix all of the following:\u001b[39m\n\u001b[31m+   aria-label attribute is not well supported on \\\"div\\\" elements with no valid role attribute.\",\u001b[39m\n\u001b[31m+         \"target\": Array [\u001b[39m\n\u001b[31m+           \"article[aria-labelledby=\\\"visit-card-2-bXQ0bEkM-title\\\"] > .visit-card__body > .visit-card__tags[aria-label=\\\"Tag kunjungan\\\"]\",\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+       Object {\u001b[39m\n\u001b[31m+         \"summary\": \"Fix all of the following:\u001b[39m\n\u001b[31m+   aria-label attribute is not well supported on \\\"div\\\" elements with no valid role attribute.\",\u001b[39m\n\u001b[31m+         \"target\": Array [\u001b[39m\n\u001b[31m+           \"article[aria-labelledby=\\\"visit-card-3-GOvg88JR-title\\\"] > .visit-card__body > .visit-card__tags[aria-label=\\\"Tag kunjungan\\\"]\",\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+       Object {\u001b[39m\n\u001b[31m+         \"summary\": \"Fix all of the following:\u001b[39m\n\u001b[31m+   aria-label attribute is not well supported on \\\"div\\\" elements with no valid role attribute.\",\u001b[39m\n\u001b[31m+         \"target\": Array [\u001b[39m\n\u001b[31m+           \"article[aria-labelledby=\\\"visit-card-4-cZqZwGAg-title\\\"] > .visit-card__body > .visit-card__tags[aria-label=\\\"Tag kunjungan\\\"]\",\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+       Object {\u001b[39m\n\u001b[31m+         \"summary\": \"Fix all of the following:\u001b[39m\n\u001b[31m+   aria-label attribute is not well supported on \\\"div\\\" elements with no valid role attribute.\",\u001b[39m\n\u001b[31m+         \"target\": Array [\u001b[39m\n\u001b[31m+           \"article[aria-labelledby=\\\"visit-card-5-kngXgXlb-title\\\"] > .visit-card__body > .visit-card__tags[aria-label=\\\"Tag kunjungan\\\"]\",\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+       Object {\u001b[39m\n\u001b[31m+         \"summary\": \"Fix all of the following:\u001b[39m\n\u001b[31m+   aria-label attribute is not well supported on \\\"div\\\" elements with no valid role attribute.\",\u001b[39m\n\u001b[31m+         \"target\": Array [\u001b[39m\n\u001b[31m+           \"article[aria-labelledby=\\\"visit-card-6-jO6g5oN7-title\\\"] > .visit-card__body > .visit-card__tags[aria-label=\\\"Tag kunjungan\\\"]\",\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+       Object {\u001b[39m\n\u001b[31m+         \"summary\": \"Fix all of the following:\u001b[39m\n\u001b[31m+   aria-label attribute is not well supported on \\\"div\\\" elements with no valid role attribute.\",\u001b[39m\n\u001b[31m+         \"target\": Array [\u001b[39m\n\u001b[31m+           \"article[aria-labelledby=\\\"visit-card-7-Ia6Nh71B-title\\\"] > .visit-card__body > .visit-card__tags[aria-label=\\\"Tag kunjungan\\\"]\",\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+       Object {\u001b[39m\n\u001b[31m+         \"summary\": \"Fix all of the following:\u001b[39m\n\u001b[31m+   aria-label attribute is not well supported on \\\"div\\\" elements with no valid role attribute.\",\u001b[39m\n\u001b[31m+         \"target\": Array [\u001b[39m\n\u001b[31m+           \"article[aria-labelledby=\\\"visit-card-8-2tlZAj3H-title\\\"] > .visit-card__body > .visit-card__tags[aria-label=\\\"Tag kunjungan\\\"]\",\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+       Object {\u001b[39m\n\u001b[31m+         \"summary\": \"Fix all of the following:\u001b[39m\n\u001b[31m+   aria-label attribute is not well supported on \\\"div\\\" elements with no valid role attribute.\",\u001b[39m\n\u001b[31m+         \"target\": Array [\u001b[39m\n\u001b[31m+           \"article[aria-labelledby=\\\"visit-card-9-rw9LwDcC-title\\\"] > .visit-card__body > .visit-card__tags[aria-label=\\\"Tag kunjungan\\\"]\",\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+       Object {\u001b[39m\n\u001b[31m+         \"summary\": \"Fix all of the following:\u001b[39m\n\u001b[31m+   aria-label attribute is not well supported on \\\"div\\\" elements with no valid role attribute.\",\u001b[39m\n\u001b[31m+         \"target\": Array [\u001b[39m\n\u001b[31m+           \"article[aria-labelledby=\\\"visit-card-10-TsV8GTUE-title\\\"] > .visit-card__body > .visit-card__tags[aria-label=\\\"Tag kunjungan\\\"]\",\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+       Object {\u001b[39m\n\u001b[31m+         \"summary\": \"Fix all of the following:\u001b[39m\n\u001b[31m+   aria-label attribute is not well supported on \\\"div\\\" elements with no valid role attribute.\",\u001b[39m\n\u001b[31m+         \"target\": Array [\u001b[39m\n\u001b[31m+           \"article[aria-labelledby=\\\"visit-card-11-PazM8roL-title\\\"] > .visit-card__body > .visit-card__tags[aria-label=\\\"Tag kunjungan\\\"]\",\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+       Object {\u001b[39m\n\u001b[31m+         \"summary\": \"Fix all of the following:\u001b[39m\n\u001b[31m+   aria-label attribute is not well supported on \\\"div\\\" elements with no valid role attribute.\",\u001b[39m\n\u001b[31m+         \"target\": Array [\u001b[39m\n\u001b[31m+           \"article[aria-labelledby=\\\"visit-card-12-0nQbYQoM-title\\\"] > .visit-card__body > .visit-card__tags[aria-label=\\\"Tag kunjungan\\\"]\",\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+       Object {\u001b[39m\n\u001b[31m+         \"summary\": \"Fix all of the following:\u001b[39m\n\u001b[31m+   aria-label attribute is not well supported on \\\"div\\\" elements with no valid role attribute.\",\u001b[39m\n\u001b[31m+         \"target\": Array [\u001b[39m\n\u001b[31m+           \"article[aria-labelledby=\\\"visit-card-13-Qb9PRVMn-title\\\"] > .visit-card__body > .visit-card__tags[aria-label=\\\"Tag kunjungan\\\"]\",\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+       Object {\u001b[39m\n\u001b[31m+         \"summary\": \"Fix all of the following:\u001b[39m\n\u001b[31m+   aria-label attribute is not well supported on \\\"div\\\" elements with no valid role attribute.\",\u001b[39m\n\u001b[31m+         \"target\": Array [\u001b[39m\n\u001b[31m+           \"article[aria-labelledby=\\\"visit-card-14-0rUwa5Qd-title\\\"] > .visit-card__body > .visit-card__tags[aria-label=\\\"Tag kunjungan\\\"]\",\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+       Object {\u001b[39m\n\u001b[31m+         \"summary\": \"Fix all of the following:\u001b[39m\n\u001b[31m+   aria-label attribute is not well supported on \\\"div\\\" elements with no valid role attribute.\",\u001b[39m\n\u001b[31m+         \"target\": Array [\u001b[39m\n\u001b[31m+           \"article[aria-labelledby=\\\"visit-card-15-YL3RiIBs-title\\\"] > .visit-card__body > .visit-card__tags[aria-label=\\\"Tag kunjungan\\\"]\",\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+       Object {\u001b[39m\n\u001b[31m+         \"summary\": \"Fix all of the following:\u001b[39m\n\u001b[31m+   aria-label attribute is not well supported on \\\"div\\\" elements with no valid role attribute.\",\u001b[39m\n\u001b[31m+         \"target\": Array [\u001b[39m\n\u001b[31m+           \"article[aria-labelledby=\\\"visit-card-16-frVQkMXM-title\\\"] > .visit-card__body > .visit-card__tags[aria-label=\\\"Tag kunjungan\\\"]\",\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+       Object {\u001b[39m\n\u001b[31m+         \"summary\": \"Fix all of the following:\u001b[39m\n\u001b[31m+   aria-label attribute is not well supported on \\\"div\\\" elements with no valid role attribute.\",\u001b[39m\n\u001b[31m+         \"target\": Array [\u001b[39m\n\u001b[31m+           \"article[aria-labelledby=\\\"visit-card-17-B0cQYw6w-title\\\"] > .visit-card__body > .visit-card__tags[aria-label=\\\"Tag kunjungan\\\"]\",\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+       Object {\u001b[39m\n\u001b[31m+         \"summary\": \"Fix all of the following:\u001b[39m\n\u001b[31m+   aria-label attribute is not well supported on \\\"div\\\" elements with no valid role attribute.\",\u001b[39m\n\u001b[31m+         \"target\": Array [\u001b[39m\n\u001b[31m+           \"article[aria-labelledby=\\\"visit-card-18-FA8BWjCl-title\\\"] > .visit-card__body > .visit-card__tags[aria-label=\\\"Tag kunjungan\\\"]\",\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+     ],\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+ ]\u001b[39m\n    at scan (D:\\Github repo\\FoodieJournal\\tests\\Browser\\integrated-gates.spec.js:20:115)\n    at D:\\Github repo\\FoodieJournal\\tests\\Browser\\integrated-gates.spec.js:67:13",
+                    "location": {
+                      "file": "D:\\Github repo\\FoodieJournal\\tests\\Browser\\integrated-gates.spec.js",
+                      "column": 115,
+                      "line": 20
+                    },
+                    "snippet": "  18 |     fs.writeFileSync(`${output}/${file}`, JSON.stringify(report, null, 2));\n  19 |     expect(simplify(result.violations), name).toEqual([]);\n> 20 |     expect(simplify(result.incomplete.filter(v => v.id !== 'color-contrast')), `${name}: manual semantic review`).toEqual([]);\n     |                                                                                                                   ^\n  21 | }\n  22 | async function trap(page, dialog) {\n  23 |     for (const key of ['Tab', 'Shift+Tab']) for (let n = 0; n < 12; n++) {"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\Github repo\\FoodieJournal\\tests\\Browser\\integrated-gates.spec.js",
+                        "column": 115,
+                        "line": 20
+                      },
+                      "message": "Error: 390 /explore: manual semantic review\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  -   1\u001b[39m\n\u001b[31m+ Received  + 134\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"id\": \"aria-prohibited-attr\",\u001b[39m\n\u001b[31m+     \"impact\": \"serious\",\u001b[39m\n\u001b[31m+     \"nodes\": Array [\u001b[39m\n\u001b[31m+       Object {\u001b[39m\n\u001b[31m+         \"summary\": \"Fix all of the following:\u001b[39m\n\u001b[31m+   aria-label attribute is not well supported on \\\"div\\\" elements with no valid role attribute.\",\u001b[39m\n\u001b[31m+         \"target\": Array [\u001b[39m\n\u001b[31m+           \"article[aria-labelledby=\\\"visit-card-1-nIf89KTs-title\\\"] > .visit-card__body > .visit-card__tags[aria-label=\\\"Tag kunjungan\\\"]\",\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+       Object {\u001b[39m\n\u001b[31m+         \"summary\": \"Fix all of the following:\u001b[39m\n\u001b[31m+   aria-label attribute is not well supported on \\\"div\\\" elements with no valid role attribute.\",\u001b[39m\n\u001b[31m+         \"target\": Array [\u001b[39m\n\u001b[31m+           \"article[aria-labelledby=\\\"visit-card-2-bXQ0bEkM-title\\\"] > .visit-card__body > .visit-card__tags[aria-label=\\\"Tag kunjungan\\\"]\",\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+       Object {\u001b[39m\n\u001b[31m+         \"summary\": \"Fix all of the following:\u001b[39m\n\u001b[31m+   aria-label attribute is not well supported on \\\"div\\\" elements with no valid role attribute.\",\u001b[39m\n\u001b[31m+         \"target\": Array [\u001b[39m\n\u001b[31m+           \"article[aria-labelledby=\\\"visit-card-3-GOvg88JR-title\\\"] > .visit-card__body > .visit-card__tags[aria-label=\\\"Tag kunjungan\\\"]\",\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+       Object {\u001b[39m\n\u001b[31m+         \"summary\": \"Fix all of the following:\u001b[39m\n\u001b[31m+   aria-label attribute is not well supported on \\\"div\\\" elements with no valid role attribute.\",\u001b[39m\n\u001b[31m+         \"target\": Array [\u001b[39m\n\u001b[31m+           \"article[aria-labelledby=\\\"visit-card-4-cZqZwGAg-title\\\"] > .visit-card__body > .visit-card__tags[aria-label=\\\"Tag kunjungan\\\"]\",\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+       Object {\u001b[39m\n\u001b[31m+         \"summary\": \"Fix all of the following:\u001b[39m\n\u001b[31m+   aria-label attribute is not well supported on \\\"div\\\" elements with no valid role attribute.\",\u001b[39m\n\u001b[31m+         \"target\": Array [\u001b[39m\n\u001b[31m+           \"article[aria-labelledby=\\\"visit-card-5-kngXgXlb-title\\\"] > .visit-card__body > .visit-card__tags[aria-label=\\\"Tag kunjungan\\\"]\",\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+       Object {\u001b[39m\n\u001b[31m+         \"summary\": \"Fix all of the following:\u001b[39m\n\u001b[31m+   aria-label attribute is not well supported on \\\"div\\\" elements with no valid role attribute.\",\u001b[39m\n\u001b[31m+         \"target\": Array [\u001b[39m\n\u001b[31m+           \"article[aria-labelledby=\\\"visit-card-6-jO6g5oN7-title\\\"] > .visit-card__body > .visit-card__tags[aria-label=\\\"Tag kunjungan\\\"]\",\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+       Object {\u001b[39m\n\u001b[31m+         \"summary\": \"Fix all of the following:\u001b[39m\n\u001b[31m+   aria-label attribute is not well supported on \\\"div\\\" elements with no valid role attribute.\",\u001b[39m\n\u001b[31m+         \"target\": Array [\u001b[39m\n\u001b[31m+           \"article[aria-labelledby=\\\"visit-card-7-Ia6Nh71B-title\\\"] > .visit-card__body > .visit-card__tags[aria-label=\\\"Tag kunjungan\\\"]\",\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+       Object {\u001b[39m\n\u001b[31m+         \"summary\": \"Fix all of the following:\u001b[39m\n\u001b[31m+   aria-label attribute is not well supported on \\\"div\\\" elements with no valid role attribute.\",\u001b[39m\n\u001b[31m+         \"target\": Array [\u001b[39m\n\u001b[31m+           \"article[aria-labelledby=\\\"visit-card-8-2tlZAj3H-title\\\"] > .visit-card__body > .visit-card__tags[aria-label=\\\"Tag kunjungan\\\"]\",\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+       Object {\u001b[39m\n\u001b[31m+         \"summary\": \"Fix all of the following:\u001b[39m\n\u001b[31m+   aria-label attribute is not well supported on \\\"div\\\" elements with no valid role attribute.\",\u001b[39m\n\u001b[31m+         \"target\": Array [\u001b[39m\n\u001b[31m+           \"article[aria-labelledby=\\\"visit-card-9-rw9LwDcC-title\\\"] > .visit-card__body > .visit-card__tags[aria-label=\\\"Tag kunjungan\\\"]\",\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+       Object {\u001b[39m\n\u001b[31m+         \"summary\": \"Fix all of the following:\u001b[39m\n\u001b[31m+   aria-label attribute is not well supported on \\\"div\\\" elements with no valid role attribute.\",\u001b[39m\n\u001b[31m+         \"target\": Array [\u001b[39m\n\u001b[31m+           \"article[aria-labelledby=\\\"visit-card-10-TsV8GTUE-title\\\"] > .visit-card__body > .visit-card__tags[aria-label=\\\"Tag kunjungan\\\"]\",\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+       Object {\u001b[39m\n\u001b[31m+         \"summary\": \"Fix all of the following:\u001b[39m\n\u001b[31m+   aria-label attribute is not well supported on \\\"div\\\" elements with no valid role attribute.\",\u001b[39m\n\u001b[31m+         \"target\": Array [\u001b[39m\n\u001b[31m+           \"article[aria-labelledby=\\\"visit-card-11-PazM8roL-title\\\"] > .visit-card__body > .visit-card__tags[aria-label=\\\"Tag kunjungan\\\"]\",\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+       Object {\u001b[39m\n\u001b[31m+         \"summary\": \"Fix all of the following:\u001b[39m\n\u001b[31m+   aria-label attribute is not well supported on \\\"div\\\" elements with no valid role attribute.\",\u001b[39m\n\u001b[31m+         \"target\": Array [\u001b[39m\n\u001b[31m+           \"article[aria-labelledby=\\\"visit-card-12-0nQbYQoM-title\\\"] > .visit-card__body > .visit-card__tags[aria-label=\\\"Tag kunjungan\\\"]\",\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+       Object {\u001b[39m\n\u001b[31m+         \"summary\": \"Fix all of the following:\u001b[39m\n\u001b[31m+   aria-label attribute is not well supported on \\\"div\\\" elements with no valid role attribute.\",\u001b[39m\n\u001b[31m+         \"target\": Array [\u001b[39m\n\u001b[31m+           \"article[aria-labelledby=\\\"visit-card-13-Qb9PRVMn-title\\\"] > .visit-card__body > .visit-card__tags[aria-label=\\\"Tag kunjungan\\\"]\",\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+       Object {\u001b[39m\n\u001b[31m+         \"summary\": \"Fix all of the following:\u001b[39m\n\u001b[31m+   aria-label attribute is not well supported on \\\"div\\\" elements with no valid role attribute.\",\u001b[39m\n\u001b[31m+         \"target\": Array [\u001b[39m\n\u001b[31m+           \"article[aria-labelledby=\\\"visit-card-14-0rUwa5Qd-title\\\"] > .visit-card__body > .visit-card__tags[aria-label=\\\"Tag kunjungan\\\"]\",\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+       Object {\u001b[39m\n\u001b[31m+         \"summary\": \"Fix all of the following:\u001b[39m\n\u001b[31m+   aria-label attribute is not well supported on \\\"div\\\" elements with no valid role attribute.\",\u001b[39m\n\u001b[31m+         \"target\": Array [\u001b[39m\n\u001b[31m+           \"article[aria-labelledby=\\\"visit-card-15-YL3RiIBs-title\\\"] > .visit-card__body > .visit-card__tags[aria-label=\\\"Tag kunjungan\\\"]\",\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+       Object {\u001b[39m\n\u001b[31m+         \"summary\": \"Fix all of the following:\u001b[39m\n\u001b[31m+   aria-label attribute is not well supported on \\\"div\\\" elements with no valid role attribute.\",\u001b[39m\n\u001b[31m+         \"target\": Array [\u001b[39m\n\u001b[31m+           \"article[aria-labelledby=\\\"visit-card-16-frVQkMXM-title\\\"] > .visit-card__body > .visit-card__tags[aria-label=\\\"Tag kunjungan\\\"]\",\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+       Object {\u001b[39m\n\u001b[31m+         \"summary\": \"Fix all of the following:\u001b[39m\n\u001b[31m+   aria-label attribute is not well supported on \\\"div\\\" elements with no valid role attribute.\",\u001b[39m\n\u001b[31m+         \"target\": Array [\u001b[39m\n\u001b[31m+           \"article[aria-labelledby=\\\"visit-card-17-B0cQYw6w-title\\\"] > .visit-card__body > .visit-card__tags[aria-label=\\\"Tag kunjungan\\\"]\",\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+       Object {\u001b[39m\n\u001b[31m+         \"summary\": \"Fix all of the following:\u001b[39m\n\u001b[31m+   aria-label attribute is not well supported on \\\"div\\\" elements with no valid role attribute.\",\u001b[39m\n\u001b[31m+         \"target\": Array [\u001b[39m\n\u001b[31m+           \"article[aria-labelledby=\\\"visit-card-18-FA8BWjCl-title\\\"] > .visit-card__body > .visit-card__tags[aria-label=\\\"Tag kunjungan\\\"]\",\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+     ],\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n  18 |     fs.writeFileSync(`${output}/${file}`, JSON.stringify(report, null, 2));\n  19 |     expect(simplify(result.violations), name).toEqual([]);\n> 20 |     expect(simplify(result.incomplete.filter(v => v.id !== 'color-contrast')), `${name}: manual semantic review`).toEqual([]);\n     |                                                                                                                   ^\n  21 | }\n  22 | async function trap(page, dialog) {\n  23 |     for (const key of ['Tab', 'Shift+Tab']) for (let n = 0; n < 12; n++) {\n    at scan (D:\\Github repo\\FoodieJournal\\tests\\Browser\\integrated-gates.spec.js:20:115)\n    at D:\\Github repo\\FoodieJournal\\tests\\Browser\\integrated-gates.spec.js:67:13"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T11:56:11.546Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\Github repo\\FoodieJournal\\test-results\\integrated-gates-whole-pag-c96e8-busy-error-retry-and-viewer\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\Github repo\\FoodieJournal\\test-results\\integrated-gates-whole-pag-c96e8-busy-error-retry-and-viewer\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\Github repo\\FoodieJournal\\test-results\\integrated-gates-whole-pag-c96e8-busy-error-retry-and-viewer\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\Github repo\\FoodieJournal\\tests\\Browser\\integrated-gates.spec.js",
+                    "column": 115,
+                    "line": 20
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "68a61a00f038d24ef655-d7043dd6716b77c8e9f7",
+          "file": "integrated-gates.spec.js",
+          "line": 58,
+          "column": 1
+        },
+        {
+          "title": "six actual HTTP statuses retain approved copy, recovery, JSON and responsive standalone scenes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 15943,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T11:56:21.796Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "68a61a00f038d24ef655-9f3dc23ed4565cb7c2a3",
+          "file": "integrated-gates.spec.js",
+          "line": 102,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "p0-hardening.spec.js",
+      "file": "p0-hardening.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Place hero comes from older published history and stays the same on pages 1 and 2",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4118,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T11:56:37.890Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c679c45d2ec5138aa6da-225604424ef314dd0c57",
+          "file": "p0-hardening.spec.js",
+          "line": 20,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-09T11:53:46.219Z",
+    "duration": 175929.031,
+    "expected": 3,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

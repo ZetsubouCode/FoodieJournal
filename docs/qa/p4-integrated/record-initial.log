@@ -1,0 +1,58 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+ExpectError: expect(locator).toBeFocused() failed
+
+Locator:  locator('[data-view-photo]').first()
+Expected: focused
+Received: inactive
+Timeout:  5000ms
+
+Call log:
+  - Expect "toBeFocused" locator('[data-view-photo]').first() with timeout 5000ms
+  - waiting for locator('[data-view-photo]').first()
+    5 × locator resolved to <button disabled type="button" data-js-control="" data-view-photo="" data-alt="Foto ilustrasi Piring panggang campur untuk catatan demo" data-fallback="http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/card" aria-label="Perbesar foto 1: Foto ilustrasi Piring panggang campur untuk catatan demo" data-original="http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/original">…</button>
+      - unexpected value "inactive"
+    9 × locator resolved to <button type="button" data-js-control="" data-view-photo="" data-alt="Foto ilustrasi Piring panggang campur untuk catatan demo" data-fallback="http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/card" aria-label="Perbesar foto 1: Foto ilustrasi Piring panggang campur untuk catatan demo" data-original="http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/original">…</button>
+      - unexpected value "inactive"
+
+    at captureRawStack (D:\Github repo\FoodieJournal\node_modules\playwright-core\lib\coreBundle.js:9282:17)
+    at callMatcherAsStep (D:\Github repo\FoodieJournal\node_modules\playwright\lib\matchers\expect.js:13316:57)
+    at Object.toBeFocused (D:\Github repo\FoodieJournal\node_modules\playwright\lib\matchers\expect.js:13308:23)
+    at D:\Github repo\FoodieJournal\docs\qa\p4-integrated\record.mjs:26:130 {
+  matcherResult: {
+    message: 'expect(locator).toBeFocused() failed\n' +
+      '\n' +
+      "Locator:  locator('[data-view-photo]').first()\n" +
+      'Expected: focused\n' +
+      'Received: inactive\n' +
+      'Timeout:  5000ms\n' +
+      '\n' +
+      'Call log:\n' +
+      `  - Expect "toBeFocused" locator('[data-view-photo]').first() with timeout 5000ms\n` +
+      "  - waiting for locator('[data-view-photo]').first()\n" +
+      '    5 × locator resolved to <button disabled type="button" data-js-control="" data-view-photo="" data-alt="Foto ilustrasi Piring panggang campur untuk catatan demo" data-fallback="http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/card" aria-label="Perbesar foto 1: Foto ilustrasi Piring panggang campur untuk catatan demo" data-original="http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/original">…</button>\n' +
+      '      - unexpected value "inactive"\n' +
+      '    9 × locator resolved to <button type="button" data-js-control="" data-view-photo="" data-alt="Foto ilustrasi Piring panggang campur untuk catatan demo" data-fallback="http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/card" aria-label="Perbesar foto 1: Foto ilustrasi Piring panggang campur untuk catatan demo" data-original="http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/original">…</button>\n' +
+      '      - unexpected value "inactive"\n',
+    pass: false,
+    actual: 'inactive',
+    name: 'toBeFocused',
+    expected: 'focused',
+    log: [
+      `  - Expect "toBeFocused" locator('[data-view-photo]').first() with timeout 5000ms`,
+      "  - waiting for locator('[data-view-photo]').first()",
+      '    5 × locator resolved to <button disabled type="button" data-js-control="" data-view-photo="" data-alt="Foto ilustrasi Piring panggang campur untuk catatan demo" data-fallback="http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/card" aria-label="Perbesar foto 1: Foto ilustrasi Piring panggang campur untuk catatan demo" data-original="http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/original">…</button>',
+      '      - unexpected value "inactive"',
+      '    9 × locator resolved to <button type="button" data-js-control="" data-view-photo="" data-alt="Foto ilustrasi Piring panggang campur untuk catatan demo" data-fallback="http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/card" aria-label="Perbesar foto 1: Foto ilustrasi Piring panggang campur untuk catatan demo" data-original="http://127.0.0.1:8015/media/59ad79be-ed2a-449d-9fc3-b7a0885d05ae/original">…</button>',
+      '      - unexpected value "inactive"'
+    ],
+    timeout: 5000,
+    ariaSnapshot: `- 'button "Perbesar foto 1: Foto ilustrasi Piring panggang campur untuk catatan demo"':\n` +
+      '  - img "Foto ilustrasi Piring panggang campur untuk catatan demo"\n' +
+      '  - text: ↗'
+  }
+}
+
+Node.js v26.3.1

@@ -163,6 +163,7 @@
 .visit-card__more:focus-visible,
 .visit-card__recommendation:focus-visible,
 .visit-card__popover a:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: -4px; }
+.visit-card:has(> .visit-card__link:focus-visible) .visit-card__title { outline: 2px solid var(--focus-ring); outline-offset: 3px; box-shadow: 0 0 0 6px var(--surface-page); }
 .visit-card:hover .visit-card__media .media-image,
 .visit-card:focus-within .visit-card__media .media-image { transform: scale(1.025); }
 .visit-card:hover::after, .visit-card:focus-within::after { opacity: 1; }

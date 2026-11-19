@@ -1,5 +1,5 @@
 @props(['vending'])
-<div class="memory-machine vending-machine" data-machine data-page="{{ $vending['page'] }}" data-pages="{{ $vending['pages'] }}" data-total="{{ $vending['total'] }}" aria-label="Memory Archive">
+<div class="memory-machine vending-machine" role="group" data-machine data-page="{{ $vending['page'] }}" data-pages="{{ $vending['pages'] }}" data-total="{{ $vending['total'] }}" aria-label="Memory Archive">
     <img class="memory-machine__shell" src="{{ asset('assets/explore/archive/cabinet-v2.webp') }}" width="1634" height="963" alt="" fetchpriority="high" aria-hidden="true">
     <img class="vending-rail" src="{{ asset('assets/vending/rail.svg') }}" width="140" height="840" alt="" aria-hidden="true">
     <div class="memory-machine__marquee archive-position"><span>Arsip rasa</span><span>Nº <span data-page-number>{{ str_pad((string) $vending['page'], 2, '0', STR_PAD_LEFT) }}</span><small>Koleksi pribadi</small></span></div>

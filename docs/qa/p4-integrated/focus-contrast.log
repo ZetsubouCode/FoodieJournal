@@ -1,0 +1,42 @@
+Traceback (most recent call last):
+  File "D:\Github repo\FoodieJournal\docs\qa\p4-integrated\focus-contrast.py", line 35, in <module>
+    assert all(s['minimum'] is not None and s['minimum'] >= 3 for s in samples), 'Inspect saved focus contrast evidence'
+AssertionError: Inspect saved focus contrast evidence
+node:internal/errors:998
+  const err = new Error(message);
+              ^
+
+Error: Command failed: python docs/qa/p4-integrated/focus-contrast.py
+Traceback (most recent call last):
+
+  File "D:\Github repo\FoodieJournal\docs\qa\p4-integrated\focus-contrast.py", line 35, in <module>
+
+    assert all(s['minimum'] is not None and s['minimum'] >= 3 for s in samples), 'Inspect saved focus contrast evidence'
+
+AssertionError: Inspect saved focus contrast evidence
+
+
+    at genericNodeError (node:internal/errors:998:15)
+    at wrappedFn (node:internal/errors:543:14)
+    at checkExecSyncError (node:child_process:926:11)
+    at execFileSync (node:child_process:962:15)
+    at file:///D:/Github%20repo/FoodieJournal/docs/qa/p4-integrated/focus-contrast.mjs:24:13 {
+  status: 1,
+  signal: null,
+  output: [
+    null,
+    "[('nav', 44.78125, 10.602), ('lamp', 27, 1.904), ('reset', 60, 8.922), ('filter', 358, 12.029), ('gallery', 358, 12.206), ('history', 358, None), ('nav', 44.78125, 1.791), ('lamp', 32.34375, 1.131), ('reset', 60.671875, 8.388), ('filter', 112, 12.029), ('gallery', 930.421875, 12.206), ('history', 928, None)]\r\n",
+    'Traceback (most recent call last):\r\n' +
+      '  File "D:\\Github repo\\FoodieJournal\\docs\\qa\\p4-integrated\\focus-contrast.py", line 35, in <module>\r\n' +
+      "    assert all(s['minimum'] is not None and s['minimum'] >= 3 for s in samples), 'Inspect saved focus contrast evidence'\r\n" +
+      'AssertionError: Inspect saved focus contrast evidence\r\n'
+  ],
+  pid: 40136,
+  stdout: "[('nav', 44.78125, 10.602), ('lamp', 27, 1.904), ('reset', 60, 8.922), ('filter', 358, 12.029), ('gallery', 358, 12.206), ('history', 358, None), ('nav', 44.78125, 1.791), ('lamp', 32.34375, 1.131), ('reset', 60.671875, 8.388), ('filter', 112, 12.029), ('gallery', 930.421875, 12.206), ('history', 928, None)]\r\n",
+  stderr: 'Traceback (most recent call last):\r\n' +
+    '  File "D:\\Github repo\\FoodieJournal\\docs\\qa\\p4-integrated\\focus-contrast.py", line 35, in <module>\r\n' +
+    "    assert all(s['minimum'] is not None and s['minimum'] >= 3 for s in samples), 'Inspect saved focus contrast evidence'\r\n" +
+    'AssertionError: Inspect saved focus contrast evidence\r\n'
+}
+
+Node.js v26.3.1

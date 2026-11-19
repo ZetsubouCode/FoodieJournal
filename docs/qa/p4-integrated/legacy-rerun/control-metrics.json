@@ -1,0 +1,1568 @@
+[
+  {
+    "viewport": 320,
+    "route": "/admin/visit",
+    "text": "Tambah Kunjungan",
+    "width": 180.328125,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 320,
+    "route": "/admin/visit",
+    "text": "Terapkan",
+    "width": 80,
+    "height": 64.375,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 320,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 320,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 320,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 320,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 320,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 320,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 320,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 320,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 320,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 320,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 320,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 320,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 320,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 320,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 320,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 320,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 320,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 320,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 320,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 320,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 320,
+    "route": "/admin/visit",
+    "text": "Berikutnya",
+    "width": 117.984375,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 320,
+    "route": "/admin/place",
+    "text": "Tambah tempat",
+    "width": 153.640625,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 320,
+    "route": "/admin/place",
+    "text": "Cari",
+    "width": 288,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 320,
+    "route": "/admin/place",
+    "text": "Berikutnya",
+    "width": 117.984375,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 320,
+    "route": "/admin/visit/create",
+    "text": "Tambah tempat",
+    "width": 288,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 320,
+    "route": "/admin/visit/create",
+    "text": "Kembali",
+    "width": 288,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 320,
+    "route": "/admin/visit/create",
+    "text": "Simpan draft",
+    "width": 288,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 390,
+    "route": "/admin/visit",
+    "text": "Tambah Kunjungan",
+    "width": 180.328125,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 390,
+    "route": "/admin/visit",
+    "text": "Terapkan",
+    "width": 150,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 390,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 390,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 390,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 390,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 390,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 390,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 390,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 390,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 390,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 390,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 390,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 390,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 390,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 390,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 390,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 390,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 390,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 390,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 390,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 390,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 390,
+    "route": "/admin/visit",
+    "text": "Berikutnya",
+    "width": 117.984375,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 390,
+    "route": "/admin/place",
+    "text": "Tambah tempat",
+    "width": 153.640625,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 390,
+    "route": "/admin/place",
+    "text": "Cari",
+    "width": 47.1875,
+    "height": 109.15625,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 390,
+    "route": "/admin/place",
+    "text": "Berikutnya",
+    "width": 117.984375,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 390,
+    "route": "/admin/visit/create",
+    "text": "Tambah tempat",
+    "width": 358,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 390,
+    "route": "/admin/visit/create",
+    "text": "Kembali",
+    "width": 358,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 390,
+    "route": "/admin/visit/create",
+    "text": "Simpan draft",
+    "width": 358,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 768,
+    "route": "/admin/visit",
+    "text": "Tambah Kunjungan",
+    "width": 180.328125,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 768,
+    "route": "/admin/visit",
+    "text": "Terapkan",
+    "width": 106.15625,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 768,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 768,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 768,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 768,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 768,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 768,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 768,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 768,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 768,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 768,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 768,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 768,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 768,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 768,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 768,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 768,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 768,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 768,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 768,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 768,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 768,
+    "route": "/admin/visit",
+    "text": "Berikutnya",
+    "width": 117.984375,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 768,
+    "route": "/admin/place",
+    "text": "Tambah tempat",
+    "width": 153.640625,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 768,
+    "route": "/admin/place",
+    "text": "Cari",
+    "width": 68.765625,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 768,
+    "route": "/admin/place",
+    "text": "Berikutnya",
+    "width": 117.984375,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 768,
+    "route": "/admin/visit/create",
+    "text": "Tambah tempat",
+    "width": 348,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 768,
+    "route": "/admin/visit/create",
+    "text": "Kembali",
+    "width": 120,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 768,
+    "route": "/admin/visit/create",
+    "text": "Simpan draft",
+    "width": 134.484375,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1440,
+    "route": "/admin/visit",
+    "text": "Tambah Kunjungan",
+    "width": 180.328125,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1440,
+    "route": "/admin/visit",
+    "text": "Terapkan",
+    "width": 106.15625,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1440,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1440,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1440,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1440,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1440,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1440,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1440,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1440,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1440,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1440,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1440,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1440,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1440,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1440,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1440,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1440,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1440,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1440,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1440,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1440,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1440,
+    "route": "/admin/visit",
+    "text": "Berikutnya",
+    "width": 117.984375,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1440,
+    "route": "/admin/place",
+    "text": "Tambah tempat",
+    "width": 153.640625,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1440,
+    "route": "/admin/place",
+    "text": "Cari",
+    "width": 68.765625,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1440,
+    "route": "/admin/place",
+    "text": "Berikutnya",
+    "width": 117.984375,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1440,
+    "route": "/admin/visit/create",
+    "text": "Tambah tempat",
+    "width": 628,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1440,
+    "route": "/admin/visit/create",
+    "text": "Kembali",
+    "width": 120,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1440,
+    "route": "/admin/visit/create",
+    "text": "Simpan draft",
+    "width": 134.484375,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1920,
+    "route": "/admin/visit",
+    "text": "Tambah Kunjungan",
+    "width": 180.328125,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1920,
+    "route": "/admin/visit",
+    "text": "Terapkan",
+    "width": 106.15625,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1920,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1920,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1920,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1920,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1920,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1920,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1920,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1920,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1920,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1920,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1920,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1920,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1920,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1920,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1920,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1920,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1920,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1920,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1920,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1920,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1920,
+    "route": "/admin/visit",
+    "text": "Berikutnya",
+    "width": 117.984375,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1920,
+    "route": "/admin/place",
+    "text": "Tambah tempat",
+    "width": 153.640625,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1920,
+    "route": "/admin/place",
+    "text": "Cari",
+    "width": 68.765625,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1920,
+    "route": "/admin/place",
+    "text": "Berikutnya",
+    "width": 117.984375,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1920,
+    "route": "/admin/visit/create",
+    "text": "Tambah tempat",
+    "width": 628,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1920,
+    "route": "/admin/visit/create",
+    "text": "Kembali",
+    "width": 120,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 1920,
+    "route": "/admin/visit/create",
+    "text": "Simpan draft",
+    "width": 134.484375,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 2560,
+    "route": "/admin/visit",
+    "text": "Tambah Kunjungan",
+    "width": 180.328125,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 2560,
+    "route": "/admin/visit",
+    "text": "Terapkan",
+    "width": 106.15625,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 2560,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 2560,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 2560,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 2560,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 2560,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 2560,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 2560,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 2560,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 2560,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 2560,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 2560,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 2560,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 2560,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 2560,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 2560,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 2560,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 2560,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 2560,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 2560,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 2560,
+    "route": "/admin/visit",
+    "text": "Pratinjau",
+    "width": 105.171875,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 2560,
+    "route": "/admin/visit",
+    "text": "Berikutnya",
+    "width": 117.984375,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 2560,
+    "route": "/admin/place",
+    "text": "Tambah tempat",
+    "width": 153.640625,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 2560,
+    "route": "/admin/place",
+    "text": "Cari",
+    "width": 68.765625,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 2560,
+    "route": "/admin/place",
+    "text": "Berikutnya",
+    "width": 117.984375,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 2560,
+    "route": "/admin/visit/create",
+    "text": "Tambah tempat",
+    "width": 628,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 2560,
+    "route": "/admin/visit/create",
+    "text": "Kembali",
+    "width": 120,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  },
+  {
+    "viewport": 2560,
+    "route": "/admin/visit/create",
+    "text": "Simpan draft",
+    "width": 134.484375,
+    "height": 44,
+    "paddingX": 19.2,
+    "paddingY": 8.8
+  }
+]

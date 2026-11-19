@@ -1,0 +1,11 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+page.addStyleTag: Applying inline style violates the following Content Security Policy directive 'style-src 'self''. Either the 'unsafe-inline' keyword, a hash ('sha256-GBglZN8x24RIllZghm8U46ER459LjqkU+NLHjqsJNgA='), or a nonce ('nonce-...') is required to enable inline execution. The action has been blocked.
+    at D:\Github repo\FoodieJournal\docs\qa\p4-integrated\contrast.mjs:26:16 {
+  log: [],
+  name: 'Error'
+}
+
+Node.js v26.3.1

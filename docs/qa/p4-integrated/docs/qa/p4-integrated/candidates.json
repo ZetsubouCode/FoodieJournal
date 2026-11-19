@@ -1,0 +1,334 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\Github repo\\FoodieJournal\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config",
+      "docs/qa/p4-integrated/review.config.mjs",
+      "--grep",
+      "Home at|cabinet on"
+    ],
+    "configFile": "D:\\Github repo\\FoodieJournal\\docs\\qa\\p4-integrated\\review.config.mjs",
+    "rootDir": "D:/Github repo/FoodieJournal/tests/Browser",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/Github repo/FoodieJournal/tools/.runtime/p4-candidate-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "D:/Github repo/FoodieJournal/tests/Browser",
+        "testIgnore": [],
+        "testMatch": [
+          "public-visual.spec.js"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\Github repo\\FoodieJournal\\tools\\.runtime\\p4-candidate-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "D:\\Github repo\\FoodieJournal\\tests\\Browser",
+        "snapshotDir": "D:\\Github repo\\FoodieJournal\\tests\\Browser",
+        "testIgnore": [],
+        "testMatch": "public-visual.spec.js",
+        "timeout": 60000,
+        "use": {
+          "browserName": "chromium",
+          "baseURL": "http://127.0.0.1:8015",
+          "locale": "id-ID",
+          "timezoneId": "Asia/Jakarta",
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "deviceScaleFactor": 1,
+          "colorScheme": "dark",
+          "reducedMotion": "reduce",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "actionTimeout": 10000,
+          "navigationTimeout": 20000
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "docs/qa/p4-integrated/candidates.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "all",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "public-visual.spec.js",
+      "file": "public-visual.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Home at 390: hero and footer",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5644,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "D:\\Github repo\\FoodieJournal\\docs\\qa\\p4-integrated\\candidates\\home-390-hero.png is re-generated, writing actual.\n"
+                    },
+                    {
+                      "text": "D:\\Github repo\\FoodieJournal\\docs\\qa\\p4-integrated\\candidates\\home-390-hero.png is re-generated, writing actual.\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T12:18:26.728Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoiaG9tZS0zOTAtaGVybyIsInJvdXRlIjoiaHR0cDovLzEyNy4wLjAuMTo4MDE1LyIsInZpZXdwb3J0Ijp7IndpZHRoIjozOTAsImhlaWdodCI6MTAwMH0sImJyb3dzZXIiOiIxNTYuMC44MDc4LjQiLCJtb3Rpb24iOiJyZWR1Y2UgdW5sZXNzIHN0YXRlIHNwZWNpZmllcyBub3JtYWwiLCJmb250cyI6WyJBcmNoaXZlIEdhcmFtb25kIiwiQXJjaGl2ZSBHYXJhbW9uZCIsIkFyY2hpdmUgU2FucyJdLCJvcmlnaW5hbHMiOjB9"
+                    },
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoiaG9tZS0zOTAtZm9vdGVyIiwicm91dGUiOiJodHRwOi8vMTI3LjAuMC4xOjgwMTUvIiwidmlld3BvcnQiOnsid2lkdGgiOjM5MCwiaGVpZ2h0IjoxMDAwfSwiYnJvd3NlciI6IjE1Ni4wLjgwNzguNCIsIm1vdGlvbiI6InJlZHVjZSB1bmxlc3Mgc3RhdGUgc3BlY2lmaWVzIG5vcm1hbCIsImZvbnRzIjpbIkFyY2hpdmUgR2FyYW1vbmQiLCJBcmNoaXZlIEdhcmFtb25kIiwiQXJjaGl2ZSBTYW5zIl0sIm9yaWdpbmFscyI6MH0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "58ac71969675d208f6e9-4fa801cfdbebe8319307",
+          "file": "public-visual.spec.js",
+          "line": 43,
+          "column": 9
+        },
+        {
+          "title": "Home at 1440: hero and footer",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6694,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "D:\\Github repo\\FoodieJournal\\docs\\qa\\p4-integrated\\candidates\\home-1440-hero.png is re-generated, writing actual.\n"
+                    },
+                    {
+                      "text": "D:\\Github repo\\FoodieJournal\\docs\\qa\\p4-integrated\\candidates\\home-1440-hero.png is re-generated, writing actual.\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T12:18:32.594Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoiaG9tZS0xNDQwLWhlcm8iLCJyb3V0ZSI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAxNS8iLCJ2aWV3cG9ydCI6eyJ3aWR0aCI6MTQ0MCwiaGVpZ2h0IjoxMDAwfSwiYnJvd3NlciI6IjE1Ni4wLjgwNzguNCIsIm1vdGlvbiI6InJlZHVjZSB1bmxlc3Mgc3RhdGUgc3BlY2lmaWVzIG5vcm1hbCIsImZvbnRzIjpbIkFyY2hpdmUgR2FyYW1vbmQiLCJBcmNoaXZlIEdhcmFtb25kIiwiQXJjaGl2ZSBTYW5zIl0sIm9yaWdpbmFscyI6MH0="
+                    },
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoiaG9tZS0xNDQwLWZvb3RlciIsInJvdXRlIjoiaHR0cDovLzEyNy4wLjAuMTo4MDE1LyIsInZpZXdwb3J0Ijp7IndpZHRoIjoxNDQwLCJoZWlnaHQiOjEwMDB9LCJicm93c2VyIjoiMTU2LjAuODA3OC40IiwibW90aW9uIjoicmVkdWNlIHVubGVzcyBzdGF0ZSBzcGVjaWZpZXMgbm9ybWFsIiwiZm9udHMiOlsiQXJjaGl2ZSBHYXJhbW9uZCIsIkFyY2hpdmUgR2FyYW1vbmQiLCJBcmNoaXZlIFNhbnMiXSwib3JpZ2luYWxzIjowfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "58ac71969675d208f6e9-abdfda1f731e9c43c3c1",
+          "file": "public-visual.spec.js",
+          "line": 43,
+          "column": 9
+        },
+        {
+          "title": "Home at 1920: hero and footer",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6875,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T12:18:39.304Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoiaG9tZS0xOTIwLWhlcm8iLCJyb3V0ZSI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAxNS8iLCJ2aWV3cG9ydCI6eyJ3aWR0aCI6MTkyMCwiaGVpZ2h0IjoxMDAwfSwiYnJvd3NlciI6IjE1Ni4wLjgwNzguNCIsIm1vdGlvbiI6InJlZHVjZSB1bmxlc3Mgc3RhdGUgc3BlY2lmaWVzIG5vcm1hbCIsImZvbnRzIjpbIkFyY2hpdmUgR2FyYW1vbmQiLCJBcmNoaXZlIEdhcmFtb25kIiwiQXJjaGl2ZSBTYW5zIl0sIm9yaWdpbmFscyI6MH0="
+                    },
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoiaG9tZS0xOTIwLWZvb3RlciIsInJvdXRlIjoiaHR0cDovLzEyNy4wLjAuMTo4MDE1LyIsInZpZXdwb3J0Ijp7IndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwMDB9LCJicm93c2VyIjoiMTU2LjAuODA3OC40IiwibW90aW9uIjoicmVkdWNlIHVubGVzcyBzdGF0ZSBzcGVjaWZpZXMgbm9ybWFsIiwiZm9udHMiOlsiQXJjaGl2ZSBHYXJhbW9uZCIsIkFyY2hpdmUgR2FyYW1vbmQiLCJBcmNoaXZlIFNhbnMiXSwib3JpZ2luYWxzIjowfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "58ac71969675d208f6e9-6225a2c5cf04ca1ae456",
+          "file": "public-visual.spec.js",
+          "line": 43,
+          "column": 9
+        },
+        {
+          "title": "cabinet on and printed identity",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9107,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "D:\\Github repo\\FoodieJournal\\docs\\qa\\p4-integrated\\candidates\\cabinet-on-1440.png is re-generated, writing actual.\n"
+                    },
+                    {
+                      "text": "D:\\Github repo\\FoodieJournal\\docs\\qa\\p4-integrated\\candidates\\cabinet-on-1440.png is re-generated, writing actual.\n"
+                    },
+                    {
+                      "text": "D:\\Github repo\\FoodieJournal\\docs\\qa\\p4-integrated\\candidates\\cabinet-printed-1440.png is re-generated, writing actual.\n"
+                    },
+                    {
+                      "text": "D:\\Github repo\\FoodieJournal\\docs\\qa\\p4-integrated\\candidates\\cabinet-printed-1440.png is re-generated, writing actual.\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T12:18:46.197Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoiY2FiaW5ldC1vbi0xNDQwIiwicm91dGUiOiJodHRwOi8vMTI3LjAuMC4xOjgwMTUvIiwidmlld3BvcnQiOnsid2lkdGgiOjE0NDAsImhlaWdodCI6MTAwMH0sImJyb3dzZXIiOiIxNTYuMC44MDc4LjQiLCJtb3Rpb24iOiJyZWR1Y2UgdW5sZXNzIHN0YXRlIHNwZWNpZmllcyBub3JtYWwiLCJmb250cyI6WyJBcmNoaXZlIEdhcmFtb25kIiwiQXJjaGl2ZSBHYXJhbW9uZCIsIkFyY2hpdmUgU2FucyJdLCJvcmlnaW5hbHMiOjB9"
+                    },
+                    {
+                      "name": "visual-case",
+                      "contentType": "application/json",
+                      "body": "eyJuYW1lIjoiY2FiaW5ldC1wcmludGVkLTE0NDAiLCJyb3V0ZSI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAxNS8iLCJ2aWV3cG9ydCI6eyJ3aWR0aCI6MTQ0MCwiaGVpZ2h0IjoxMDAwfSwiYnJvd3NlciI6IjE1Ni4wLjgwNzguNCIsIm1vdGlvbiI6InJlZHVjZSB1bmxlc3Mgc3RhdGUgc3BlY2lmaWVzIG5vcm1hbCIsImZvbnRzIjpbIkFyY2hpdmUgR2FyYW1vbmQiLCJBcmNoaXZlIEdhcmFtb25kIiwiQXJjaGl2ZSBTYW5zIl0sIm9yaWdpbmFscyI6MH0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "58ac71969675d208f6e9-e3d1182aadeecc128fb3",
+          "file": "public-visual.spec.js",
+          "line": 68,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-09T12:18:25.949Z",
+    "duration": 29533.232,
+    "expected": 4,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

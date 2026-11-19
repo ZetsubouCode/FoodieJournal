@@ -1,0 +1,164 @@
+[
+  {
+    "width": 390,
+    "status": 403,
+    "heading": "Halaman ini tidak bisa diakses",
+    "actions": [
+      "Jelajahi catatan ↗",
+      "Ke beranda"
+    ]
+  },
+  {
+    "width": 390,
+    "status": 404,
+    "heading": "Halaman yang dicari tidak ditemukan",
+    "actions": [
+      "Jelajahi catatan ↗",
+      "Ke beranda"
+    ]
+  },
+  {
+    "width": 390,
+    "status": 419,
+    "heading": "Sesi telah berakhir",
+    "actions": [
+      "Masuk kembali ↗",
+      "Ke beranda"
+    ]
+  },
+  {
+    "width": 390,
+    "status": 429,
+    "heading": "Terlalu banyak permintaan",
+    "actions": [
+      "Ke beranda ↗",
+      "Jelajahi catatan"
+    ]
+  },
+  {
+    "width": 390,
+    "status": 500,
+    "heading": "Jurnal sedang mengalami gangguan",
+    "actions": [
+      "Coba lagi ↗",
+      "Ke beranda"
+    ]
+  },
+  {
+    "width": 390,
+    "status": 503,
+    "heading": "Foodie sementara tidak tersedia",
+    "actions": [
+      "Coba lagi ↗",
+      "Ke beranda"
+    ]
+  },
+  {
+    "width": 1440,
+    "status": 403,
+    "heading": "Halaman ini tidak bisa diakses",
+    "actions": [
+      "Jelajahi catatan ↗",
+      "Ke beranda"
+    ]
+  },
+  {
+    "width": 1440,
+    "status": 404,
+    "heading": "Halaman yang dicari tidak ditemukan",
+    "actions": [
+      "Jelajahi catatan ↗",
+      "Ke beranda"
+    ]
+  },
+  {
+    "width": 1440,
+    "status": 419,
+    "heading": "Sesi telah berakhir",
+    "actions": [
+      "Masuk kembali ↗",
+      "Ke beranda"
+    ]
+  },
+  {
+    "width": 1440,
+    "status": 429,
+    "heading": "Terlalu banyak permintaan",
+    "actions": [
+      "Ke beranda ↗",
+      "Jelajahi catatan"
+    ]
+  },
+  {
+    "width": 1440,
+    "status": 500,
+    "heading": "Jurnal sedang mengalami gangguan",
+    "actions": [
+      "Coba lagi ↗",
+      "Ke beranda"
+    ]
+  },
+  {
+    "width": 1440,
+    "status": 503,
+    "heading": "Foodie sementara tidak tersedia",
+    "actions": [
+      "Coba lagi ↗",
+      "Ke beranda"
+    ]
+  },
+  {
+    "width": 2560,
+    "status": 403,
+    "heading": "Halaman ini tidak bisa diakses",
+    "actions": [
+      "Jelajahi catatan ↗",
+      "Ke beranda"
+    ]
+  },
+  {
+    "width": 2560,
+    "status": 404,
+    "heading": "Halaman yang dicari tidak ditemukan",
+    "actions": [
+      "Jelajahi catatan ↗",
+      "Ke beranda"
+    ]
+  },
+  {
+    "width": 2560,
+    "status": 419,
+    "heading": "Sesi telah berakhir",
+    "actions": [
+      "Masuk kembali ↗",
+      "Ke beranda"
+    ]
+  },
+  {
+    "width": 2560,
+    "status": 429,
+    "heading": "Terlalu banyak permintaan",
+    "actions": [
+      "Ke beranda ↗",
+      "Jelajahi catatan"
+    ]
+  },
+  {
+    "width": 2560,
+    "status": 500,
+    "heading": "Jurnal sedang mengalami gangguan",
+    "actions": [
+      "Coba lagi ↗",
+      "Ke beranda"
+    ]
+  },
+  {
+    "width": 2560,
+    "status": 503,
+    "heading": "Foodie sementara tidak tersedia",
+    "actions": [
+      "Coba lagi ↗",
+      "Ke beranda"
+    ]
+  }
+]

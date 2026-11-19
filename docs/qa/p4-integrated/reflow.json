@@ -1,0 +1,1938 @@
+[
+  {
+    "width": 320,
+    "route": "/",
+    "scale": 100,
+    "controls": [
+      {
+        "width": 53.625,
+        "height": 44,
+        "x": 16
+      },
+      {
+        "width": 44.78125,
+        "height": 44,
+        "x": 93.625
+      },
+      {
+        "width": 120.515625,
+        "height": 44,
+        "x": 162.40625
+      }
+    ]
+  },
+  {
+    "width": 320,
+    "route": "/",
+    "scale": 200,
+    "controls": [
+      {
+        "width": 107.25,
+        "height": 88,
+        "x": 32
+      },
+      {
+        "width": 89.546875,
+        "height": 88,
+        "x": 187.25
+      },
+      {
+        "width": 241.015625,
+        "height": 88,
+        "x": 32
+      }
+    ]
+  },
+  {
+    "width": 320,
+    "route": "/explore",
+    "scale": 100,
+    "controls": [
+      {
+        "width": 53.625,
+        "height": 44,
+        "x": 16
+      },
+      {
+        "width": 44.78125,
+        "height": 44,
+        "x": 93.625
+      },
+      {
+        "width": 120.515625,
+        "height": 44,
+        "x": 162.40625
+      }
+    ]
+  },
+  {
+    "width": 320,
+    "route": "/explore",
+    "scale": 200,
+    "controls": [
+      {
+        "width": 107.25,
+        "height": 88,
+        "x": 32
+      },
+      {
+        "width": 89.546875,
+        "height": 88,
+        "x": 187.25
+      },
+      {
+        "width": 241.015625,
+        "height": 88,
+        "x": 32
+      }
+    ]
+  },
+  {
+    "width": 320,
+    "route": "/visit/demo-bara-di-ujung-hari",
+    "scale": 100,
+    "controls": [
+      {
+        "width": 53.625,
+        "height": 44,
+        "x": 16
+      },
+      {
+        "width": 44.78125,
+        "height": 44,
+        "x": 93.625
+      },
+      {
+        "width": 120.515625,
+        "height": 44,
+        "x": 162.40625
+      }
+    ]
+  },
+  {
+    "width": 320,
+    "route": "/visit/demo-bara-di-ujung-hari",
+    "scale": 200,
+    "controls": [
+      {
+        "width": 107.25,
+        "height": 88,
+        "x": 32
+      },
+      {
+        "width": 89.546875,
+        "height": 88,
+        "x": 187.25
+      },
+      {
+        "width": 241.015625,
+        "height": 88,
+        "x": 32
+      }
+    ]
+  },
+  {
+    "width": 320,
+    "route": "/place/demo-bara-senja",
+    "scale": 100,
+    "controls": [
+      {
+        "width": 53.625,
+        "height": 44,
+        "x": 16
+      },
+      {
+        "width": 44.78125,
+        "height": 44,
+        "x": 93.625
+      },
+      {
+        "width": 120.515625,
+        "height": 44,
+        "x": 162.40625
+      }
+    ]
+  },
+  {
+    "width": 320,
+    "route": "/place/demo-bara-senja",
+    "scale": 200,
+    "controls": [
+      {
+        "width": 107.25,
+        "height": 88,
+        "x": 32
+      },
+      {
+        "width": 89.546875,
+        "height": 88,
+        "x": 187.25
+      },
+      {
+        "width": 241.015625,
+        "height": 88,
+        "x": 32
+      }
+    ]
+  },
+  {
+    "width": 375,
+    "route": "/",
+    "scale": 100,
+    "controls": [
+      {
+        "width": 53.625,
+        "height": 44,
+        "x": 16
+      },
+      {
+        "width": 44.78125,
+        "height": 44,
+        "x": 93.625
+      },
+      {
+        "width": 120.515625,
+        "height": 44,
+        "x": 162.40625
+      }
+    ]
+  },
+  {
+    "width": 375,
+    "route": "/",
+    "scale": 200,
+    "controls": [
+      {
+        "width": 107.25,
+        "height": 88,
+        "x": 32
+      },
+      {
+        "width": 89.546875,
+        "height": 88,
+        "x": 187.25
+      },
+      {
+        "width": 241.015625,
+        "height": 88,
+        "x": 32
+      }
+    ]
+  },
+  {
+    "width": 375,
+    "route": "/explore",
+    "scale": 100,
+    "controls": [
+      {
+        "width": 53.625,
+        "height": 44,
+        "x": 16
+      },
+      {
+        "width": 44.78125,
+        "height": 44,
+        "x": 93.625
+      },
+      {
+        "width": 120.515625,
+        "height": 44,
+        "x": 162.40625
+      }
+    ]
+  },
+  {
+    "width": 375,
+    "route": "/explore",
+    "scale": 200,
+    "controls": [
+      {
+        "width": 107.25,
+        "height": 88,
+        "x": 32
+      },
+      {
+        "width": 89.546875,
+        "height": 88,
+        "x": 187.25
+      },
+      {
+        "width": 241.015625,
+        "height": 88,
+        "x": 32
+      }
+    ]
+  },
+  {
+    "width": 375,
+    "route": "/visit/demo-bara-di-ujung-hari",
+    "scale": 100,
+    "controls": [
+      {
+        "width": 53.625,
+        "height": 44,
+        "x": 16
+      },
+      {
+        "width": 44.78125,
+        "height": 44,
+        "x": 93.625
+      },
+      {
+        "width": 120.515625,
+        "height": 44,
+        "x": 162.40625
+      }
+    ]
+  },
+  {
+    "width": 375,
+    "route": "/visit/demo-bara-di-ujung-hari",
+    "scale": 200,
+    "controls": [
+      {
+        "width": 107.25,
+        "height": 88,
+        "x": 32
+      },
+      {
+        "width": 89.546875,
+        "height": 88,
+        "x": 187.25
+      },
+      {
+        "width": 241.015625,
+        "height": 88,
+        "x": 32
+      }
+    ]
+  },
+  {
+    "width": 375,
+    "route": "/place/demo-bara-senja",
+    "scale": 100,
+    "controls": [
+      {
+        "width": 53.625,
+        "height": 44,
+        "x": 16
+      },
+      {
+        "width": 44.78125,
+        "height": 44,
+        "x": 93.625
+      },
+      {
+        "width": 120.515625,
+        "height": 44,
+        "x": 162.40625
+      }
+    ]
+  },
+  {
+    "width": 375,
+    "route": "/place/demo-bara-senja",
+    "scale": 200,
+    "controls": [
+      {
+        "width": 107.25,
+        "height": 88,
+        "x": 32
+      },
+      {
+        "width": 89.546875,
+        "height": 88,
+        "x": 187.25
+      },
+      {
+        "width": 241.015625,
+        "height": 88,
+        "x": 32
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "route": "/",
+    "scale": 100,
+    "controls": [
+      {
+        "width": 53.625,
+        "height": 44,
+        "x": 16
+      },
+      {
+        "width": 44.78125,
+        "height": 44,
+        "x": 93.625
+      },
+      {
+        "width": 120.515625,
+        "height": 44,
+        "x": 162.40625
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "route": "/",
+    "scale": 200,
+    "controls": [
+      {
+        "width": 107.25,
+        "height": 88,
+        "x": 32
+      },
+      {
+        "width": 89.546875,
+        "height": 88,
+        "x": 187.25
+      },
+      {
+        "width": 241.015625,
+        "height": 88,
+        "x": 32
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "route": "/explore",
+    "scale": 100,
+    "controls": [
+      {
+        "width": 53.625,
+        "height": 44,
+        "x": 16
+      },
+      {
+        "width": 44.78125,
+        "height": 44,
+        "x": 93.625
+      },
+      {
+        "width": 120.515625,
+        "height": 44,
+        "x": 162.40625
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "route": "/explore",
+    "scale": 200,
+    "controls": [
+      {
+        "width": 107.25,
+        "height": 88,
+        "x": 32
+      },
+      {
+        "width": 89.546875,
+        "height": 88,
+        "x": 187.25
+      },
+      {
+        "width": 241.015625,
+        "height": 88,
+        "x": 32
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "route": "/visit/demo-bara-di-ujung-hari",
+    "scale": 100,
+    "controls": [
+      {
+        "width": 53.625,
+        "height": 44,
+        "x": 16
+      },
+      {
+        "width": 44.78125,
+        "height": 44,
+        "x": 93.625
+      },
+      {
+        "width": 120.515625,
+        "height": 44,
+        "x": 162.40625
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "route": "/visit/demo-bara-di-ujung-hari",
+    "scale": 200,
+    "controls": [
+      {
+        "width": 107.25,
+        "height": 88,
+        "x": 32
+      },
+      {
+        "width": 89.546875,
+        "height": 88,
+        "x": 187.25
+      },
+      {
+        "width": 241.015625,
+        "height": 88,
+        "x": 32
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "route": "/place/demo-bara-senja",
+    "scale": 100,
+    "controls": [
+      {
+        "width": 53.625,
+        "height": 44,
+        "x": 16
+      },
+      {
+        "width": 44.78125,
+        "height": 44,
+        "x": 93.625
+      },
+      {
+        "width": 120.515625,
+        "height": 44,
+        "x": 162.40625
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "route": "/place/demo-bara-senja",
+    "scale": 200,
+    "controls": [
+      {
+        "width": 107.25,
+        "height": 88,
+        "x": 32
+      },
+      {
+        "width": 89.546875,
+        "height": 88,
+        "x": 187.25
+      },
+      {
+        "width": 241.015625,
+        "height": 88,
+        "x": 32
+      }
+    ]
+  },
+  {
+    "width": 768,
+    "route": "/",
+    "scale": 100,
+    "controls": [
+      {
+        "width": 53.625,
+        "height": 44,
+        "x": 584
+      },
+      {
+        "width": 44.78125,
+        "height": 44,
+        "x": 584
+      },
+      {
+        "width": 120.515625,
+        "height": 44,
+        "x": 584
+      }
+    ]
+  },
+  {
+    "width": 768,
+    "route": "/",
+    "scale": 200,
+    "controls": [
+      {
+        "width": 107.25,
+        "height": 88,
+        "x": 400
+      },
+      {
+        "width": 89.546875,
+        "height": 88,
+        "x": 400
+      },
+      {
+        "width": 241.015625,
+        "height": 88,
+        "x": 400
+      }
+    ]
+  },
+  {
+    "width": 768,
+    "route": "/explore",
+    "scale": 100,
+    "controls": [
+      {
+        "width": 53.625,
+        "height": 44,
+        "x": 584
+      },
+      {
+        "width": 44.78125,
+        "height": 44,
+        "x": 584
+      },
+      {
+        "width": 120.515625,
+        "height": 44,
+        "x": 584
+      }
+    ]
+  },
+  {
+    "width": 768,
+    "route": "/explore",
+    "scale": 200,
+    "controls": [
+      {
+        "width": 107.25,
+        "height": 88,
+        "x": 400
+      },
+      {
+        "width": 89.546875,
+        "height": 88,
+        "x": 400
+      },
+      {
+        "width": 241.015625,
+        "height": 88,
+        "x": 400
+      }
+    ]
+  },
+  {
+    "width": 768,
+    "route": "/visit/demo-bara-di-ujung-hari",
+    "scale": 100,
+    "controls": [
+      {
+        "width": 53.625,
+        "height": 44,
+        "x": 584
+      },
+      {
+        "width": 44.78125,
+        "height": 44,
+        "x": 584
+      },
+      {
+        "width": 120.515625,
+        "height": 44,
+        "x": 584
+      }
+    ]
+  },
+  {
+    "width": 768,
+    "route": "/visit/demo-bara-di-ujung-hari",
+    "scale": 200,
+    "controls": [
+      {
+        "width": 107.25,
+        "height": 88,
+        "x": 400
+      },
+      {
+        "width": 89.546875,
+        "height": 88,
+        "x": 400
+      },
+      {
+        "width": 241.015625,
+        "height": 88,
+        "x": 400
+      }
+    ]
+  },
+  {
+    "width": 768,
+    "route": "/place/demo-bara-senja",
+    "scale": 100,
+    "controls": [
+      {
+        "width": 53.625,
+        "height": 44,
+        "x": 584
+      },
+      {
+        "width": 44.78125,
+        "height": 44,
+        "x": 584
+      },
+      {
+        "width": 120.515625,
+        "height": 44,
+        "x": 584
+      }
+    ]
+  },
+  {
+    "width": 768,
+    "route": "/place/demo-bara-senja",
+    "scale": 200,
+    "controls": [
+      {
+        "width": 107.25,
+        "height": 88,
+        "x": 400
+      },
+      {
+        "width": 89.546875,
+        "height": 88,
+        "x": 400
+      },
+      {
+        "width": 241.015625,
+        "height": 88,
+        "x": 400
+      }
+    ]
+  },
+  {
+    "width": 959,
+    "route": "/",
+    "scale": 100,
+    "controls": [
+      {
+        "width": 53.625,
+        "height": 44,
+        "x": 762.375
+      },
+      {
+        "width": 44.78125,
+        "height": 44,
+        "x": 762.375
+      },
+      {
+        "width": 120.515625,
+        "height": 44,
+        "x": 762.375
+      }
+    ]
+  },
+  {
+    "width": 959,
+    "route": "/",
+    "scale": 200,
+    "controls": [
+      {
+        "width": 107.25,
+        "height": 88,
+        "x": 591
+      },
+      {
+        "width": 89.546875,
+        "height": 88,
+        "x": 591
+      },
+      {
+        "width": 241.015625,
+        "height": 88,
+        "x": 591
+      }
+    ]
+  },
+  {
+    "width": 959,
+    "route": "/explore",
+    "scale": 100,
+    "controls": [
+      {
+        "width": 53.625,
+        "height": 44,
+        "x": 762.375
+      },
+      {
+        "width": 44.78125,
+        "height": 44,
+        "x": 762.375
+      },
+      {
+        "width": 120.515625,
+        "height": 44,
+        "x": 762.375
+      }
+    ]
+  },
+  {
+    "width": 959,
+    "route": "/explore",
+    "scale": 200,
+    "controls": [
+      {
+        "width": 107.25,
+        "height": 88,
+        "x": 591
+      },
+      {
+        "width": 89.546875,
+        "height": 88,
+        "x": 591
+      },
+      {
+        "width": 241.015625,
+        "height": 88,
+        "x": 591
+      }
+    ]
+  },
+  {
+    "width": 959,
+    "route": "/visit/demo-bara-di-ujung-hari",
+    "scale": 100,
+    "controls": [
+      {
+        "width": 53.625,
+        "height": 44,
+        "x": 762.375
+      },
+      {
+        "width": 44.78125,
+        "height": 44,
+        "x": 762.375
+      },
+      {
+        "width": 120.515625,
+        "height": 44,
+        "x": 762.375
+      }
+    ]
+  },
+  {
+    "width": 959,
+    "route": "/visit/demo-bara-di-ujung-hari",
+    "scale": 200,
+    "controls": [
+      {
+        "width": 107.25,
+        "height": 88,
+        "x": 591
+      },
+      {
+        "width": 89.546875,
+        "height": 88,
+        "x": 591
+      },
+      {
+        "width": 241.015625,
+        "height": 88,
+        "x": 591
+      }
+    ]
+  },
+  {
+    "width": 959,
+    "route": "/place/demo-bara-senja",
+    "scale": 100,
+    "controls": [
+      {
+        "width": 53.625,
+        "height": 44,
+        "x": 762.375
+      },
+      {
+        "width": 44.78125,
+        "height": 44,
+        "x": 762.375
+      },
+      {
+        "width": 120.515625,
+        "height": 44,
+        "x": 762.375
+      }
+    ]
+  },
+  {
+    "width": 959,
+    "route": "/place/demo-bara-senja",
+    "scale": 200,
+    "controls": [
+      {
+        "width": 107.25,
+        "height": 88,
+        "x": 591
+      },
+      {
+        "width": 89.546875,
+        "height": 88,
+        "x": 591
+      },
+      {
+        "width": 241.015625,
+        "height": 88,
+        "x": 591
+      }
+    ]
+  },
+  {
+    "width": 960,
+    "route": "/",
+    "scale": 100,
+    "controls": [
+      {
+        "width": 53.625,
+        "height": 44,
+        "x": 763.1875
+      },
+      {
+        "width": 44.78125,
+        "height": 44,
+        "x": 763.1875
+      },
+      {
+        "width": 120.515625,
+        "height": 44,
+        "x": 763.1875
+      }
+    ]
+  },
+  {
+    "width": 960,
+    "route": "/",
+    "scale": 200,
+    "controls": [
+      {
+        "width": 107.25,
+        "height": 88,
+        "x": 592
+      },
+      {
+        "width": 89.546875,
+        "height": 88,
+        "x": 592
+      },
+      {
+        "width": 241.015625,
+        "height": 88,
+        "x": 592
+      }
+    ]
+  },
+  {
+    "width": 960,
+    "route": "/explore",
+    "scale": 100,
+    "controls": [
+      {
+        "width": 53.625,
+        "height": 44,
+        "x": 763.1875
+      },
+      {
+        "width": 44.78125,
+        "height": 44,
+        "x": 763.1875
+      },
+      {
+        "width": 120.515625,
+        "height": 44,
+        "x": 763.1875
+      }
+    ]
+  },
+  {
+    "width": 960,
+    "route": "/explore",
+    "scale": 200,
+    "controls": [
+      {
+        "width": 107.25,
+        "height": 88,
+        "x": 592
+      },
+      {
+        "width": 89.546875,
+        "height": 88,
+        "x": 592
+      },
+      {
+        "width": 241.015625,
+        "height": 88,
+        "x": 592
+      }
+    ]
+  },
+  {
+    "width": 960,
+    "route": "/visit/demo-bara-di-ujung-hari",
+    "scale": 100,
+    "controls": [
+      {
+        "width": 53.625,
+        "height": 44,
+        "x": 763.1875
+      },
+      {
+        "width": 44.78125,
+        "height": 44,
+        "x": 763.1875
+      },
+      {
+        "width": 120.515625,
+        "height": 44,
+        "x": 763.1875
+      }
+    ]
+  },
+  {
+    "width": 960,
+    "route": "/visit/demo-bara-di-ujung-hari",
+    "scale": 200,
+    "controls": [
+      {
+        "width": 107.25,
+        "height": 88,
+        "x": 592
+      },
+      {
+        "width": 89.546875,
+        "height": 88,
+        "x": 592
+      },
+      {
+        "width": 241.015625,
+        "height": 88,
+        "x": 592
+      }
+    ]
+  },
+  {
+    "width": 960,
+    "route": "/place/demo-bara-senja",
+    "scale": 100,
+    "controls": [
+      {
+        "width": 53.625,
+        "height": 44,
+        "x": 763.1875
+      },
+      {
+        "width": 44.78125,
+        "height": 44,
+        "x": 763.1875
+      },
+      {
+        "width": 120.515625,
+        "height": 44,
+        "x": 763.1875
+      }
+    ]
+  },
+  {
+    "width": 960,
+    "route": "/place/demo-bara-senja",
+    "scale": 200,
+    "controls": [
+      {
+        "width": 107.25,
+        "height": 88,
+        "x": 592
+      },
+      {
+        "width": 89.546875,
+        "height": 88,
+        "x": 592
+      },
+      {
+        "width": 241.015625,
+        "height": 88,
+        "x": 592
+      }
+    ]
+  },
+  {
+    "width": 1023,
+    "route": "/",
+    "scale": 100,
+    "controls": [
+      {
+        "width": 53.625,
+        "height": 44,
+        "x": 814.21875
+      },
+      {
+        "width": 44.78125,
+        "height": 44,
+        "x": 814.21875
+      },
+      {
+        "width": 120.515625,
+        "height": 44,
+        "x": 814.21875
+      }
+    ]
+  },
+  {
+    "width": 1023,
+    "route": "/",
+    "scale": 200,
+    "controls": [
+      {
+        "width": 107.25,
+        "height": 88,
+        "x": 655
+      },
+      {
+        "width": 89.546875,
+        "height": 88,
+        "x": 655
+      },
+      {
+        "width": 241.015625,
+        "height": 88,
+        "x": 655
+      }
+    ]
+  },
+  {
+    "width": 1023,
+    "route": "/explore",
+    "scale": 100,
+    "controls": [
+      {
+        "width": 53.625,
+        "height": 44,
+        "x": 814.21875
+      },
+      {
+        "width": 44.78125,
+        "height": 44,
+        "x": 814.21875
+      },
+      {
+        "width": 120.515625,
+        "height": 44,
+        "x": 814.21875
+      }
+    ]
+  },
+  {
+    "width": 1023,
+    "route": "/explore",
+    "scale": 200,
+    "controls": [
+      {
+        "width": 107.25,
+        "height": 88,
+        "x": 655
+      },
+      {
+        "width": 89.546875,
+        "height": 88,
+        "x": 655
+      },
+      {
+        "width": 241.015625,
+        "height": 88,
+        "x": 655
+      }
+    ]
+  },
+  {
+    "width": 1023,
+    "route": "/visit/demo-bara-di-ujung-hari",
+    "scale": 100,
+    "controls": [
+      {
+        "width": 53.625,
+        "height": 44,
+        "x": 814.21875
+      },
+      {
+        "width": 44.78125,
+        "height": 44,
+        "x": 814.21875
+      },
+      {
+        "width": 120.515625,
+        "height": 44,
+        "x": 814.21875
+      }
+    ]
+  },
+  {
+    "width": 1023,
+    "route": "/visit/demo-bara-di-ujung-hari",
+    "scale": 200,
+    "controls": [
+      {
+        "width": 107.25,
+        "height": 88,
+        "x": 655
+      },
+      {
+        "width": 89.546875,
+        "height": 88,
+        "x": 655
+      },
+      {
+        "width": 241.015625,
+        "height": 88,
+        "x": 655
+      }
+    ]
+  },
+  {
+    "width": 1023,
+    "route": "/place/demo-bara-senja",
+    "scale": 100,
+    "controls": [
+      {
+        "width": 53.625,
+        "height": 44,
+        "x": 814.21875
+      },
+      {
+        "width": 44.78125,
+        "height": 44,
+        "x": 814.21875
+      },
+      {
+        "width": 120.515625,
+        "height": 44,
+        "x": 814.21875
+      }
+    ]
+  },
+  {
+    "width": 1023,
+    "route": "/place/demo-bara-senja",
+    "scale": 200,
+    "controls": [
+      {
+        "width": 107.25,
+        "height": 88,
+        "x": 655
+      },
+      {
+        "width": 89.546875,
+        "height": 88,
+        "x": 655
+      },
+      {
+        "width": 241.015625,
+        "height": 88,
+        "x": 655
+      }
+    ]
+  },
+  {
+    "width": 1024,
+    "route": "/",
+    "scale": 100,
+    "controls": [
+      {
+        "width": 53.625,
+        "height": 44,
+        "x": 808.9375
+      },
+      {
+        "width": 44.78125,
+        "height": 44,
+        "x": 808.9375
+      },
+      {
+        "width": 120.515625,
+        "height": 44,
+        "x": 808.9375
+      }
+    ]
+  },
+  {
+    "width": 1024,
+    "route": "/",
+    "scale": 200,
+    "controls": [
+      {
+        "width": 107.25,
+        "height": 88,
+        "x": 640
+      },
+      {
+        "width": 89.546875,
+        "height": 88,
+        "x": 640
+      },
+      {
+        "width": 241.015625,
+        "height": 88,
+        "x": 640
+      }
+    ]
+  },
+  {
+    "width": 1024,
+    "route": "/explore",
+    "scale": 100,
+    "controls": [
+      {
+        "width": 53.625,
+        "height": 44,
+        "x": 808.9375
+      },
+      {
+        "width": 44.78125,
+        "height": 44,
+        "x": 808.9375
+      },
+      {
+        "width": 120.515625,
+        "height": 44,
+        "x": 808.9375
+      }
+    ]
+  },
+  {
+    "width": 1024,
+    "route": "/explore",
+    "scale": 200,
+    "controls": [
+      {
+        "width": 107.25,
+        "height": 88,
+        "x": 640
+      },
+      {
+        "width": 89.546875,
+        "height": 88,
+        "x": 640
+      },
+      {
+        "width": 241.015625,
+        "height": 88,
+        "x": 640
+      }
+    ]
+  },
+  {
+    "width": 1024,
+    "route": "/visit/demo-bara-di-ujung-hari",
+    "scale": 100,
+    "controls": [
+      {
+        "width": 53.625,
+        "height": 44,
+        "x": 808.9375
+      },
+      {
+        "width": 44.78125,
+        "height": 44,
+        "x": 808.9375
+      },
+      {
+        "width": 120.515625,
+        "height": 44,
+        "x": 808.9375
+      }
+    ]
+  },
+  {
+    "width": 1024,
+    "route": "/visit/demo-bara-di-ujung-hari",
+    "scale": 200,
+    "controls": [
+      {
+        "width": 107.25,
+        "height": 88,
+        "x": 640
+      },
+      {
+        "width": 89.546875,
+        "height": 88,
+        "x": 640
+      },
+      {
+        "width": 241.015625,
+        "height": 88,
+        "x": 640
+      }
+    ]
+  },
+  {
+    "width": 1024,
+    "route": "/place/demo-bara-senja",
+    "scale": 100,
+    "controls": [
+      {
+        "width": 53.625,
+        "height": 44,
+        "x": 808.9375
+      },
+      {
+        "width": 44.78125,
+        "height": 44,
+        "x": 808.9375
+      },
+      {
+        "width": 120.515625,
+        "height": 44,
+        "x": 808.9375
+      }
+    ]
+  },
+  {
+    "width": 1024,
+    "route": "/place/demo-bara-senja",
+    "scale": 200,
+    "controls": [
+      {
+        "width": 107.25,
+        "height": 88,
+        "x": 640
+      },
+      {
+        "width": 89.546875,
+        "height": 88,
+        "x": 640
+      },
+      {
+        "width": 241.015625,
+        "height": 88,
+        "x": 640
+      }
+    ]
+  },
+  {
+    "width": 1440,
+    "route": "/",
+    "scale": 100,
+    "controls": [
+      {
+        "width": 53.625,
+        "height": 44,
+        "x": 1137.59375
+      },
+      {
+        "width": 44.78125,
+        "height": 44,
+        "x": 1137.59375
+      },
+      {
+        "width": 120.515625,
+        "height": 44,
+        "x": 1137.59375
+      }
+    ]
+  },
+  {
+    "width": 1440,
+    "route": "/",
+    "scale": 200,
+    "controls": [
+      {
+        "width": 107.25,
+        "height": 88,
+        "x": 1056
+      },
+      {
+        "width": 89.546875,
+        "height": 88,
+        "x": 1056
+      },
+      {
+        "width": 241.015625,
+        "height": 88,
+        "x": 1056
+      }
+    ]
+  },
+  {
+    "width": 1440,
+    "route": "/explore",
+    "scale": 100,
+    "controls": [
+      {
+        "width": 53.625,
+        "height": 44,
+        "x": 1137.59375
+      },
+      {
+        "width": 44.78125,
+        "height": 44,
+        "x": 1137.59375
+      },
+      {
+        "width": 120.515625,
+        "height": 44,
+        "x": 1137.59375
+      }
+    ]
+  },
+  {
+    "width": 1440,
+    "route": "/explore",
+    "scale": 200,
+    "controls": [
+      {
+        "width": 107.25,
+        "height": 88,
+        "x": 1056
+      },
+      {
+        "width": 89.546875,
+        "height": 88,
+        "x": 1056
+      },
+      {
+        "width": 241.015625,
+        "height": 88,
+        "x": 1056
+      }
+    ]
+  },
+  {
+    "width": 1440,
+    "route": "/visit/demo-bara-di-ujung-hari",
+    "scale": 100,
+    "controls": [
+      {
+        "width": 53.625,
+        "height": 44,
+        "x": 1137.59375
+      },
+      {
+        "width": 44.78125,
+        "height": 44,
+        "x": 1137.59375
+      },
+      {
+        "width": 120.515625,
+        "height": 44,
+        "x": 1137.59375
+      }
+    ]
+  },
+  {
+    "width": 1440,
+    "route": "/visit/demo-bara-di-ujung-hari",
+    "scale": 200,
+    "controls": [
+      {
+        "width": 107.25,
+        "height": 88,
+        "x": 1056
+      },
+      {
+        "width": 89.546875,
+        "height": 88,
+        "x": 1056
+      },
+      {
+        "width": 241.015625,
+        "height": 88,
+        "x": 1056
+      }
+    ]
+  },
+  {
+    "width": 1440,
+    "route": "/place/demo-bara-senja",
+    "scale": 100,
+    "controls": [
+      {
+        "width": 53.625,
+        "height": 44,
+        "x": 1137.59375
+      },
+      {
+        "width": 44.78125,
+        "height": 44,
+        "x": 1137.59375
+      },
+      {
+        "width": 120.515625,
+        "height": 44,
+        "x": 1137.59375
+      }
+    ]
+  },
+  {
+    "width": 1440,
+    "route": "/place/demo-bara-senja",
+    "scale": 200,
+    "controls": [
+      {
+        "width": 107.25,
+        "height": 88,
+        "x": 1056
+      },
+      {
+        "width": 89.546875,
+        "height": 88,
+        "x": 1056
+      },
+      {
+        "width": 241.015625,
+        "height": 88,
+        "x": 1056
+      }
+    ]
+  },
+  {
+    "width": 1920,
+    "route": "/",
+    "scale": 100,
+    "controls": [
+      {
+        "width": 53.625,
+        "height": 44,
+        "x": 1516.796875
+      },
+      {
+        "width": 44.78125,
+        "height": 44,
+        "x": 1516.796875
+      },
+      {
+        "width": 120.515625,
+        "height": 44,
+        "x": 1516.796875
+      }
+    ]
+  },
+  {
+    "width": 1920,
+    "route": "/",
+    "scale": 200,
+    "controls": [
+      {
+        "width": 107.25,
+        "height": 88,
+        "x": 1516.796875
+      },
+      {
+        "width": 89.546875,
+        "height": 88,
+        "x": 1516.796875
+      },
+      {
+        "width": 241.015625,
+        "height": 88,
+        "x": 1516.796875
+      }
+    ]
+  },
+  {
+    "width": 1920,
+    "route": "/explore",
+    "scale": 100,
+    "controls": [
+      {
+        "width": 53.625,
+        "height": 44,
+        "x": 1516.796875
+      },
+      {
+        "width": 44.78125,
+        "height": 44,
+        "x": 1516.796875
+      },
+      {
+        "width": 120.515625,
+        "height": 44,
+        "x": 1516.796875
+      }
+    ]
+  },
+  {
+    "width": 1920,
+    "route": "/explore",
+    "scale": 200,
+    "controls": [
+      {
+        "width": 107.25,
+        "height": 88,
+        "x": 1516.796875
+      },
+      {
+        "width": 89.546875,
+        "height": 88,
+        "x": 1516.796875
+      },
+      {
+        "width": 241.015625,
+        "height": 88,
+        "x": 1516.796875
+      }
+    ]
+  },
+  {
+    "width": 1920,
+    "route": "/visit/demo-bara-di-ujung-hari",
+    "scale": 100,
+    "controls": [
+      {
+        "width": 53.625,
+        "height": 44,
+        "x": 1516.796875
+      },
+      {
+        "width": 44.78125,
+        "height": 44,
+        "x": 1516.796875
+      },
+      {
+        "width": 120.515625,
+        "height": 44,
+        "x": 1516.796875
+      }
+    ]
+  },
+  {
+    "width": 1920,
+    "route": "/visit/demo-bara-di-ujung-hari",
+    "scale": 200,
+    "controls": [
+      {
+        "width": 107.25,
+        "height": 88,
+        "x": 1516.796875
+      },
+      {
+        "width": 89.546875,
+        "height": 88,
+        "x": 1516.796875
+      },
+      {
+        "width": 241.015625,
+        "height": 88,
+        "x": 1516.796875
+      }
+    ]
+  },
+  {
+    "width": 1920,
+    "route": "/place/demo-bara-senja",
+    "scale": 100,
+    "controls": [
+      {
+        "width": 53.625,
+        "height": 44,
+        "x": 1516.796875
+      },
+      {
+        "width": 44.78125,
+        "height": 44,
+        "x": 1516.796875
+      },
+      {
+        "width": 120.515625,
+        "height": 44,
+        "x": 1516.796875
+      }
+    ]
+  },
+  {
+    "width": 1920,
+    "route": "/place/demo-bara-senja",
+    "scale": 200,
+    "controls": [
+      {
+        "width": 107.25,
+        "height": 88,
+        "x": 1516.796875
+      },
+      {
+        "width": 89.546875,
+        "height": 88,
+        "x": 1516.796875
+      },
+      {
+        "width": 241.015625,
+        "height": 88,
+        "x": 1516.796875
+      }
+    ]
+  },
+  {
+    "width": 2560,
+    "route": "/",
+    "scale": 100,
+    "controls": [
+      {
+        "width": 53.625,
+        "height": 44,
+        "x": 2028.796875
+      },
+      {
+        "width": 44.78125,
+        "height": 44,
+        "x": 2028.796875
+      },
+      {
+        "width": 120.515625,
+        "height": 44,
+        "x": 2028.796875
+      }
+    ]
+  },
+  {
+    "width": 2560,
+    "route": "/",
+    "scale": 200,
+    "controls": [
+      {
+        "width": 107.25,
+        "height": 88,
+        "x": 2022.390625
+      },
+      {
+        "width": 89.546875,
+        "height": 88,
+        "x": 2022.390625
+      },
+      {
+        "width": 241.015625,
+        "height": 88,
+        "x": 2022.390625
+      }
+    ]
+  },
+  {
+    "width": 2560,
+    "route": "/explore",
+    "scale": 100,
+    "controls": [
+      {
+        "width": 53.625,
+        "height": 44,
+        "x": 2028.796875
+      },
+      {
+        "width": 44.78125,
+        "height": 44,
+        "x": 2028.796875
+      },
+      {
+        "width": 120.515625,
+        "height": 44,
+        "x": 2028.796875
+      }
+    ]
+  },
+  {
+    "width": 2560,
+    "route": "/explore",
+    "scale": 200,
+    "controls": [
+      {
+        "width": 107.25,
+        "height": 88,
+        "x": 2022.390625
+      },
+      {
+        "width": 89.546875,
+        "height": 88,
+        "x": 2022.390625
+      },
+      {
+        "width": 241.015625,
+        "height": 88,
+        "x": 2022.390625
+      }
+    ]
+  },
+  {
+    "width": 2560,
+    "route": "/visit/demo-bara-di-ujung-hari",
+    "scale": 100,
+    "controls": [
+      {
+        "width": 53.625,
+        "height": 44,
+        "x": 2028.796875
+      },
+      {
+        "width": 44.78125,
+        "height": 44,
+        "x": 2028.796875
+      },
+      {
+        "width": 120.515625,
+        "height": 44,
+        "x": 2028.796875
+      }
+    ]
+  },
+  {
+    "width": 2560,
+    "route": "/visit/demo-bara-di-ujung-hari",
+    "scale": 200,
+    "controls": [
+      {
+        "width": 107.25,
+        "height": 88,
+        "x": 2022.390625
+      },
+      {
+        "width": 89.546875,
+        "height": 88,
+        "x": 2022.390625
+      },
+      {
+        "width": 241.015625,
+        "height": 88,
+        "x": 2022.390625
+      }
+    ]
+  },
+  {
+    "width": 2560,
+    "route": "/place/demo-bara-senja",
+    "scale": 100,
+    "controls": [
+      {
+        "width": 53.625,
+        "height": 44,
+        "x": 2028.796875
+      },
+      {
+        "width": 44.78125,
+        "height": 44,
+        "x": 2028.796875
+      },
+      {
+        "width": 120.515625,
+        "height": 44,
+        "x": 2028.796875
+      }
+    ]
+  },
+  {
+    "width": 2560,
+    "route": "/place/demo-bara-senja",
+    "scale": 200,
+    "controls": [
+      {
+        "width": 107.25,
+        "height": 88,
+        "x": 2022.390625
+      },
+      {
+        "width": 89.546875,
+        "height": 88,
+        "x": 2022.390625
+      },
+      {
+        "width": 241.015625,
+        "height": 88,
+        "x": 2022.390625
+      }
+    ]
+  }
+]

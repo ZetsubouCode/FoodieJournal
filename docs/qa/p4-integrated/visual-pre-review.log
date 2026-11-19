@@ -1,0 +1,321 @@
+
+Running 23 tests using 1 worker
+
+(node:31236) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x   1 tests\Browser\public-visual.spec.js:43:9 › Home at 390: hero and footer (6.2s)
+(node:40928) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x   2 tests\Browser\public-visual.spec.js:43:9 › Explore at 390: hero and footer (10.4s)
+(node:35832) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  3 tests\Browser\public-visual.spec.js:43:9 › Visit at 390: hero and footer (3.4s)
+  ok  4 tests\Browser\public-visual.spec.js:43:9 › Place at 390: hero and footer (2.7s)
+  ok  5 tests\Browser\public-visual.spec.js:43:9 › Error at 390: hero and footer (1.4s)
+  x   6 tests\Browser\public-visual.spec.js:43:9 › Home at 1440: hero and footer (8.1s)
+(node:1108) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  7 tests\Browser\public-visual.spec.js:43:9 › Explore at 1440: hero and footer (8.7s)
+  ok  8 tests\Browser\public-visual.spec.js:43:9 › Visit at 1440: hero and footer (4.1s)
+  ok  9 tests\Browser\public-visual.spec.js:43:9 › Place at 1440: hero and footer (3.8s)
+  ok 10 tests\Browser\public-visual.spec.js:43:9 › Error at 1440: hero and footer (2.1s)
+  x  11 tests\Browser\public-visual.spec.js:43:9 › Home at 1920: hero and footer (9.1s)
+(node:39116) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 12 tests\Browser\public-visual.spec.js:43:9 › Explore at 1920: hero and footer (9.5s)
+  ok 13 tests\Browser\public-visual.spec.js:43:9 › Visit at 1920: hero and footer (4.2s)
+  ok 14 tests\Browser\public-visual.spec.js:43:9 › Place at 1920: hero and footer (3.4s)
+  ok 15 tests\Browser\public-visual.spec.js:43:9 › Error at 1920: hero and footer (1.8s)
+  x  16 tests\Browser\public-visual.spec.js:68:1 › cabinet on and printed identity (8.1s)
+(node:11052) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 17 tests\Browser\public-visual.spec.js:82:5 › navigation midpoint with normal motion on / (5.4s)
+  ok 18 tests\Browser\public-visual.spec.js:82:5 › navigation midpoint with normal motion on /visual-missing-page (1.4s)
+  ok 19 tests\Browser\public-visual.spec.js:102:5 › staged filter at 390 (7.9s)
+  ok 20 tests\Browser\public-visual.spec.js:102:5 › staged filter at 1440 (7.9s)
+  ok 21 tests\Browser\public-visual.spec.js:120:1 › unpublished archive and filtered empty recovery (4.0s)
+  ok 22 tests\Browser\public-visual.spec.js:132:1 › failed browse retains committed results and retry (7.5s)
+  ok 23 tests\Browser\public-visual.spec.js:144:1 › viewer original loads on demand and focus returns (3.7s)
+
+
+  1) tests\Browser\public-visual.spec.js:43:9 › Home at 390: hero and footer ───────────────────────
+
+    Error: expect(page).toHaveScreenshot(expected) failed
+
+      83 pixels (ratio 0.01 of all image pixels) are different.
+
+      Snapshot: home-390-hero.png
+
+    Call log:
+      - Expect "toHaveScreenshot(home-390-hero.png)" with timeout 5000ms
+        - verifying given screenshot expectation
+      - taking page screenshot
+      - waiting for fonts to load...
+      - fonts loaded
+      - 83 pixels (ratio 0.01 of all image pixels) are different.
+      - waiting 100ms before taking screenshot
+      - taking page screenshot
+      - waiting for fonts to load...
+      - fonts loaded
+      - captured a stable screenshot
+      - 83 pixels (ratio 0.01 of all image pixels) are different.
+
+
+      30 |         fonts: await page.evaluate(() => [...document.fonts].filter(f => f.status === 'loaded').map(f => f.family)),
+      31 |         originals: await page.locator('img[src$="/original"]').count() }) });
+    > 32 |     await expect(target).toHaveScreenshot(`${name}.png`);
+         |                          ^
+      33 | }
+      34 |
+      35 | async function on(page) {
+        at shot (D:\Github repo\FoodieJournal\tests\Browser\public-visual.spec.js:32:26)
+        at D:\Github repo\FoodieJournal\tests\Browser\public-visual.spec.js:61:13
+
+    attachment #2: home-390-hero (image/png) ───────────────────────────────────────────────────────
+    Expected: tests\Browser\__screenshots__\public-visual-win32-chromium\home-390-hero.png
+    Received: tools\.runtime\visual-results\public-visual-Home-at-390-hero-and-footer\home-390-hero-actual.png
+    Diff:     tools\.runtime\visual-results\public-visual-Home-at-390-hero-and-footer\home-390-hero-diff.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: screenshot (image/png) ──────────────────────────────────────────────────────────
+    tools\.runtime\visual-results\public-visual-Home-at-390-hero-and-footer\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: tools\.runtime\visual-results\public-visual-Home-at-390-hero-and-footer\error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    tools\.runtime\visual-results\public-visual-Home-at-390-hero-and-footer\trace.zip
+    Usage:
+
+        npx playwright show-trace tools\.runtime\visual-results\public-visual-Home-at-390-hero-and-footer\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests\Browser\public-visual.spec.js:43:9 › Explore at 390: hero and footer ────────────────────
+
+    Error: expect(page).toHaveScreenshot(expected) failed
+
+      31 pixels (ratio 0.01 of all image pixels) are different.
+
+      Snapshot: explore-390-hero.png
+
+    Call log:
+      - Expect "toHaveScreenshot(explore-390-hero.png)" with timeout 5000ms
+        - verifying given screenshot expectation
+      - taking page screenshot
+      - waiting for fonts to load...
+      - fonts loaded
+      - 31 pixels (ratio 0.01 of all image pixels) are different.
+      - waiting 100ms before taking screenshot
+      - taking page screenshot
+      - waiting for fonts to load...
+      - fonts loaded
+      - captured a stable screenshot
+      - 31 pixels (ratio 0.01 of all image pixels) are different.
+
+
+      30 |         fonts: await page.evaluate(() => [...document.fonts].filter(f => f.status === 'loaded').map(f => f.family)),
+      31 |         originals: await page.locator('img[src$="/original"]').count() }) });
+    > 32 |     await expect(target).toHaveScreenshot(`${name}.png`);
+         |                          ^
+      33 | }
+      34 |
+      35 | async function on(page) {
+        at shot (D:\Github repo\FoodieJournal\tests\Browser\public-visual.spec.js:32:26)
+        at D:\Github repo\FoodieJournal\tests\Browser\public-visual.spec.js:61:13
+
+    attachment #2: explore-390-hero (image/png) ────────────────────────────────────────────────────
+    Expected: tests\Browser\__screenshots__\public-visual-win32-chromium\explore-390-hero.png
+    Received: tools\.runtime\visual-results\public-visual-Explore-at-390-hero-and-footer\explore-390-hero-actual.png
+    Diff:     tools\.runtime\visual-results\public-visual-Explore-at-390-hero-and-footer\explore-390-hero-diff.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: screenshot (image/png) ──────────────────────────────────────────────────────────
+    tools\.runtime\visual-results\public-visual-Explore-at-390-hero-and-footer\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: tools\.runtime\visual-results\public-visual-Explore-at-390-hero-and-footer\error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    tools\.runtime\visual-results\public-visual-Explore-at-390-hero-and-footer\trace.zip
+    Usage:
+
+        npx playwright show-trace tools\.runtime\visual-results\public-visual-Explore-at-390-hero-and-footer\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) tests\Browser\public-visual.spec.js:43:9 › Home at 1440: hero and footer ──────────────────────
+
+    Error: expect(page).toHaveScreenshot(expected) failed
+
+      60 pixels (ratio 0.01 of all image pixels) are different.
+
+      Snapshot: home-1440-hero.png
+
+    Call log:
+      - Expect "toHaveScreenshot(home-1440-hero.png)" with timeout 5000ms
+        - verifying given screenshot expectation
+      - taking page screenshot
+      - waiting for fonts to load...
+      - fonts loaded
+      - 60 pixels (ratio 0.01 of all image pixels) are different.
+      - waiting 100ms before taking screenshot
+      - taking page screenshot
+      - waiting for fonts to load...
+      - fonts loaded
+      - captured a stable screenshot
+      - 60 pixels (ratio 0.01 of all image pixels) are different.
+
+
+      30 |         fonts: await page.evaluate(() => [...document.fonts].filter(f => f.status === 'loaded').map(f => f.family)),
+      31 |         originals: await page.locator('img[src$="/original"]').count() }) });
+    > 32 |     await expect(target).toHaveScreenshot(`${name}.png`);
+         |                          ^
+      33 | }
+      34 |
+      35 | async function on(page) {
+        at shot (D:\Github repo\FoodieJournal\tests\Browser\public-visual.spec.js:32:26)
+        at D:\Github repo\FoodieJournal\tests\Browser\public-visual.spec.js:61:13
+
+    attachment #2: home-1440-hero (image/png) ──────────────────────────────────────────────────────
+    Expected: tests\Browser\__screenshots__\public-visual-win32-chromium\home-1440-hero.png
+    Received: tools\.runtime\visual-results\public-visual-Home-at-1440-hero-and-footer\home-1440-hero-actual.png
+    Diff:     tools\.runtime\visual-results\public-visual-Home-at-1440-hero-and-footer\home-1440-hero-diff.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: screenshot (image/png) ──────────────────────────────────────────────────────────
+    tools\.runtime\visual-results\public-visual-Home-at-1440-hero-and-footer\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: tools\.runtime\visual-results\public-visual-Home-at-1440-hero-and-footer\error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    tools\.runtime\visual-results\public-visual-Home-at-1440-hero-and-footer\trace.zip
+    Usage:
+
+        npx playwright show-trace tools\.runtime\visual-results\public-visual-Home-at-1440-hero-and-footer\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) tests\Browser\public-visual.spec.js:43:9 › Home at 1920: hero and footer ──────────────────────
+
+    Error: expect(page).toHaveScreenshot(expected) failed
+
+      155 pixels (ratio 0.01 of all image pixels) are different.
+
+      Snapshot: home-1920-hero.png
+
+    Call log:
+      - Expect "toHaveScreenshot(home-1920-hero.png)" with timeout 5000ms
+        - verifying given screenshot expectation
+      - taking page screenshot
+      - waiting for fonts to load...
+      - fonts loaded
+      - 155 pixels (ratio 0.01 of all image pixels) are different.
+      - waiting 100ms before taking screenshot
+      - taking page screenshot
+      - waiting for fonts to load...
+      - fonts loaded
+      - captured a stable screenshot
+      - 155 pixels (ratio 0.01 of all image pixels) are different.
+
+
+      30 |         fonts: await page.evaluate(() => [...document.fonts].filter(f => f.status === 'loaded').map(f => f.family)),
+      31 |         originals: await page.locator('img[src$="/original"]').count() }) });
+    > 32 |     await expect(target).toHaveScreenshot(`${name}.png`);
+         |                          ^
+      33 | }
+      34 |
+      35 | async function on(page) {
+        at shot (D:\Github repo\FoodieJournal\tests\Browser\public-visual.spec.js:32:26)
+        at D:\Github repo\FoodieJournal\tests\Browser\public-visual.spec.js:61:13
+
+    attachment #2: home-1920-hero (image/png) ──────────────────────────────────────────────────────
+    Expected: tests\Browser\__screenshots__\public-visual-win32-chromium\home-1920-hero.png
+    Received: tools\.runtime\visual-results\public-visual-Home-at-1920-hero-and-footer\home-1920-hero-actual.png
+    Diff:     tools\.runtime\visual-results\public-visual-Home-at-1920-hero-and-footer\home-1920-hero-diff.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: screenshot (image/png) ──────────────────────────────────────────────────────────
+    tools\.runtime\visual-results\public-visual-Home-at-1920-hero-and-footer\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: tools\.runtime\visual-results\public-visual-Home-at-1920-hero-and-footer\error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    tools\.runtime\visual-results\public-visual-Home-at-1920-hero-and-footer\trace.zip
+    Usage:
+
+        npx playwright show-trace tools\.runtime\visual-results\public-visual-Home-at-1920-hero-and-footer\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5) tests\Browser\public-visual.spec.js:68:1 › cabinet on and printed identity ────────────────────
+
+    Error: expect(locator).toHaveScreenshot(expected) failed
+
+    Locator: locator('[data-discovery-scene]')
+      60 pixels (ratio 0.01 of all image pixels) are different.
+
+      Snapshot: cabinet-on-1440.png
+
+    Call log:
+      - Expect "toHaveScreenshot(cabinet-on-1440.png)" locator('[data-discovery-scene]') with timeout 5000ms
+        - verifying given screenshot expectation
+      - waiting for locator('[data-discovery-scene]')
+        - locator resolved to <section class="dispenser-scene" data-discovery-scene="" aria-labelledby="discovery-title">…</section>
+      - taking element screenshot
+      - waiting for fonts to load...
+      - fonts loaded
+      - attempting scroll into view action
+        - waiting for element to be stable
+      - 60 pixels (ratio 0.01 of all image pixels) are different.
+      - waiting 100ms before taking screenshot
+      - waiting for locator('[data-discovery-scene]')
+        - locator resolved to <section class="dispenser-scene" data-discovery-scene="" aria-labelledby="discovery-title">…</section>
+      - taking element screenshot
+      - waiting for fonts to load...
+      - fonts loaded
+      - attempting scroll into view action
+        - waiting for element to be stable
+      - captured a stable screenshot
+      - 60 pixels (ratio 0.01 of all image pixels) are different.
+
+
+      30 |         fonts: await page.evaluate(() => [...document.fonts].filter(f => f.status === 'loaded').map(f => f.family)),
+      31 |         originals: await page.locator('img[src$="/original"]').count() }) });
+    > 32 |     await expect(target).toHaveScreenshot(`${name}.png`);
+         |                          ^
+      33 | }
+      34 |
+      35 | async function on(page) {
+        at shot (D:\Github repo\FoodieJournal\tests\Browser\public-visual.spec.js:32:26)
+        at D:\Github repo\FoodieJournal\tests\Browser\public-visual.spec.js:70:5
+
+    attachment #2: cabinet-on-1440 (image/png) ─────────────────────────────────────────────────────
+    Expected: tests\Browser\__screenshots__\public-visual-win32-chromium\cabinet-on-1440.png
+    Received: tools\.runtime\visual-results\public-visual-cabinet-on-and-printed-identity\cabinet-on-1440-actual.png
+    Diff:     tools\.runtime\visual-results\public-visual-cabinet-on-and-printed-identity\cabinet-on-1440-diff.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: screenshot (image/png) ──────────────────────────────────────────────────────────
+    tools\.runtime\visual-results\public-visual-cabinet-on-and-printed-identity\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: tools\.runtime\visual-results\public-visual-cabinet-on-and-printed-identity\error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    tools\.runtime\visual-results\public-visual-cabinet-on-and-printed-identity\trace.zip
+    Usage:
+
+        npx playwright show-trace tools\.runtime\visual-results\public-visual-cabinet-on-and-printed-identity\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5 failed
+    tests\Browser\public-visual.spec.js:43:9 › Home at 390: hero and footer ────────────────────────
+    tests\Browser\public-visual.spec.js:43:9 › Explore at 390: hero and footer ─────────────────────
+    tests\Browser\public-visual.spec.js:43:9 › Home at 1440: hero and footer ───────────────────────
+    tests\Browser\public-visual.spec.js:43:9 › Home at 1920: hero and footer ───────────────────────
+    tests\Browser\public-visual.spec.js:68:1 › cabinet on and printed identity ─────────────────────
+  18 passed (2.2m)

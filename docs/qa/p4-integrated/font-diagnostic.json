@@ -1,0 +1,149 @@
+{
+  "method": "Hold real font requests then release; geometry diagnostic, not a performance sample. Home geometry CSS is byte-identical to P4 starting HEAD. Font declarations are unchanged; current trace records remaining font-swap shifts.",
+  "samples": [
+    {
+      "width": 390,
+      "before": {
+        "title": {
+          "y": 129.15625,
+          "width": 358,
+          "height": 129
+        },
+        "scene": {
+          "y": 290.15625,
+          "width": 358,
+          "height": 1526.5625
+        },
+        "brand": {
+          "y": 20.796875,
+          "width": 132.078125,
+          "height": 38.40625
+        },
+        "fonts": [
+          {
+            "family": "Archive Garamond",
+            "style": "normal",
+            "status": "loading"
+          },
+          {
+            "family": "Archive Garamond",
+            "style": "italic",
+            "status": "loading"
+          },
+          {
+            "family": "Archive Sans",
+            "style": "normal",
+            "status": "loading"
+          }
+        ]
+      },
+      "after": {
+        "title": {
+          "y": 129.15625,
+          "width": 358,
+          "height": 86
+        },
+        "scene": {
+          "y": 247.15625,
+          "width": 358,
+          "height": 1497.765625
+        },
+        "brand": {
+          "y": 20.796875,
+          "width": 93.921875,
+          "height": 38.40625
+        },
+        "fonts": [
+          {
+            "family": "Archive Garamond",
+            "style": "normal",
+            "status": "loaded"
+          },
+          {
+            "family": "Archive Garamond",
+            "style": "italic",
+            "status": "loaded"
+          },
+          {
+            "family": "Archive Sans",
+            "style": "normal",
+            "status": "loaded"
+          }
+        ]
+      },
+      "sceneDelta": -43
+    },
+    {
+      "width": 1440,
+      "before": {
+        "title": {
+          "y": 129.15625,
+          "width": 1344,
+          "height": 129.9375
+        },
+        "scene": {
+          "y": 291.09375,
+          "width": 1344,
+          "height": 744.9375
+        },
+        "brand": {
+          "y": 20.796875,
+          "width": 132.078125,
+          "height": 38.40625
+        },
+        "fonts": [
+          {
+            "family": "Archive Garamond",
+            "style": "normal",
+            "status": "loading"
+          },
+          {
+            "family": "Archive Garamond",
+            "style": "italic",
+            "status": "loading"
+          },
+          {
+            "family": "Archive Sans",
+            "style": "normal",
+            "status": "loading"
+          }
+        ]
+      },
+      "after": {
+        "title": {
+          "y": 129.15625,
+          "width": 1344,
+          "height": 129.9375
+        },
+        "scene": {
+          "y": 291.09375,
+          "width": 1344,
+          "height": 744.9375
+        },
+        "brand": {
+          "y": 20.796875,
+          "width": 93.921875,
+          "height": 38.40625
+        },
+        "fonts": [
+          {
+            "family": "Archive Garamond",
+            "style": "normal",
+            "status": "loaded"
+          },
+          {
+            "family": "Archive Garamond",
+            "style": "italic",
+            "status": "loaded"
+          },
+          {
+            "family": "Archive Sans",
+            "style": "normal",
+            "status": "loaded"
+          }
+        ]
+      },
+      "sceneDelta": 0
+    }
+  ]
+}

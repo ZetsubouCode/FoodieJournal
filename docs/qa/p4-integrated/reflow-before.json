@@ -1,0 +1,46 @@
+{
+  "width": 960,
+  "scrollWidth": 1036,
+  "nodes": [
+    {
+      "tag": "NAV",
+      "class": "discovery-view",
+      "id": "",
+      "text": "",
+      "x": 873.5625,
+      "width": 161.96875,
+      "grid": "none",
+      "minWidth": "auto"
+    },
+    {
+      "tag": "A",
+      "class": "",
+      "id": "",
+      "text": "",
+      "x": 954.546875,
+      "width": 79.984375,
+      "grid": "none",
+      "minWidth": "44px"
+    },
+    {
+      "tag": "svg",
+      "class": {},
+      "id": "",
+      "text": "",
+      "x": 975.34375,
+      "width": 38.390625,
+      "grid": "none",
+      "minWidth": "auto"
+    },
+    {
+      "tag": "path",
+      "class": {},
+      "id": "",
+      "text": "",
+      "x": 980.142578125,
+      "width": 28.79296875,
+      "grid": "none",
+      "minWidth": "0px"
+    }
+  ]
+}

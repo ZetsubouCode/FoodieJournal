@@ -1,0 +1,15 @@
+import { chromium, expect } from '@playwright/test';
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+const phase = process.argv[2] || 'before';
+assert.ok(['before', 'after'].includes(phase));
+assert.ok(!fs.existsSync(`docs/qa/p4-integrated/reflow-${phase}.json`), 'Preserve the original diagnosis.');
+const browser = await chromium.launch(), page = await browser.newPage({ viewport: { width: 960, height: 1000 }, reducedMotion: 'reduce' });
+await page.goto('http://127.0.0.1:8015/explore'); await expect(page.locator('html')).toHaveAttribute('data-ui-ready', 'true'); await page.evaluate(() => document.fonts.ready);
+await page.evaluate(() => document.documentElement.style.fontSize = '200%');
+const result = await page.evaluate(() => ({ width: innerWidth, scrollWidth: document.documentElement.scrollWidth, nodes: [...document.querySelectorAll('body *')].filter(n => { const r = n.getBoundingClientRect(); return r.width && (r.right > innerWidth + 1 || r.left < -1); }).map(n => { const r = n.getBoundingClientRect(), s = getComputedStyle(n); return { tag: n.tagName, class: n.className, id: n.id, text: n.textContent.trim().slice(0, 80), x: r.x, width: r.width, grid: s.gridTemplateColumns, minWidth: s.minWidth }; }) }));
+fs.writeFileSync(`docs/qa/p4-integrated/reflow-${phase}.json`, JSON.stringify(result, null, 2)); console.log(JSON.stringify(result));
+await page.screenshot({ path: `docs/qa/p4-integrated/reflow-${phase}.jpg`, type: 'jpeg', quality: 85, fullPage: true });
+await page.locator('#discovery-console').screenshot({ path: `docs/qa/p4-integrated/toolbar-${phase}.png` });
+if (phase === 'after') assert.ok(result.scrollWidth <= result.width);
+await browser.close();
