@@ -2,7 +2,7 @@
     <x-site.breadcrumb :items="['Jelajah' => url('explore').'?tab=place', $place->name => null]" />
     <header class="place-dossier {{ $coverMedia ? '' : 'place-dossier--text' }}"><div class="place-dossier__identity"><p class="editorial-caption">Catatan tempat</p><h1>{{ $place->name }}</h1>@if($place->city_name || $place->province_name)<p>{{ collect([$place->city_name, $place->province_name])->filter()->join(', ') }}</p>@endif
         <div class="place-dossier__facts">@if($place->address)<p class="prose">{{ $place->address }}</p>@endif
-        <p><x-domain.rating :value="$place->rating_score !== null ? (float)$place->rating_score : null" label="Rata-rata kunjungan" /> · {{ $place->rated_visit_count }} kunjungan dinilai</p>
+        <p><x-domain.rating :value="$place->food_score" label="Rata-rata rating hidangan" /> · {{ $place->rated_item_count }} hidangan dinilai dalam {{ $place->rated_visit_count }} kunjungan</p>
         @if($place->maps_url)<x-ui.button href="{{ $place->maps_url }}" target="_blank" rel="noopener noreferrer">Buka Google Maps</x-ui.button>@endif
         </div>
     </div>

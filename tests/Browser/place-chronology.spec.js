@@ -55,7 +55,7 @@ test('long photo-free facts, all-null history and enlarged text reflow without h
         for (const scale of [100, 200]) {
             await ready(page, '/place/qa-text-place');
             await page.evaluate(scale => { document.documentElement.style.fontSize = `${scale}%`; }, scale);
-            await expect(page.locator('.place-dossier')).toContainText('0 kunjungan dinilai');
+            await expect(page.locator('.place-dossier')).toContainText('0 hidangan dinilai dalam 0 kunjungan');
             await expect(page.locator('.place-dossier')).toContainText('Belum Dinilai');
             await expect(page.locator('.place-dossier img, .place-dossier__photo, .place-dossier a[href*="maps"]')).toHaveCount(0);
             await expect(page.locator('.place-history__entries')).toHaveCount(1);

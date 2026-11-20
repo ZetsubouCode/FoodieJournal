@@ -4,6 +4,7 @@ namespace Tests\Feature;
 
 use App\Models\Media;
 use App\Models\Visit;
+use App\Models\VisitItem;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
@@ -35,12 +36,13 @@ class PlaceHeroTest extends TestCase
 
     public function test_published_cover_and_rating_are_real_and_null_ratings_are_excluded(): void
     {
-        $visit = Visit::factory()->published()->create(['service_rating' => 4.5]);
+        $visit = Visit::factory()->published()->create();
+        VisitItem::factory()->for($visit)->create(['food_rating' => 4.5]);
         Visit::factory()->published()->create(['place_id' => $visit->place_id]);
         $cover = $this->cover($visit);
-        $response = $this->get('/place/'.$visit->place->slug)->assertOk()->assertSee($cover->uuid)->assertSee('1 kunjungan dinilai');
+        $response = $this->get('/place/'.$visit->place->slug)->assertOk()->assertSee($cover->uuid)->assertSee('1 hidangan dinilai dalam 1 kunjungan');
         $this->assertSame($cover->id, $response->viewData('coverMedia')->id);
-        $this->assertEquals(4.5, $response->viewData('place')->rating_score);
+        $this->assertEquals(4.5, $response->viewData('place')->food_score);
         $this->assertSame(2, $response->viewData('visits')->total());
     }
 
@@ -121,9 +123,9 @@ class PlaceHeroTest extends TestCase
         $visit = Visit::factory()->published()->create();
         $visit->place->update(['name' => str_repeat('Warung panjang ', 9), 'address' => str_repeat('Alamat panjang ', 20), 'city_name' => null, 'province_name' => null, 'maps_url' => null]);
         $response = $this->get('/place/'.$visit->place->slug)->assertOk()->assertViewHas('coverMedia', null)
-            ->assertSee('place-dossier--text', false)->assertSee($visit->place->address)->assertSee('Belum Dinilai')->assertSee('0 kunjungan dinilai')
+            ->assertSee('place-dossier--text', false)->assertSee($visit->place->address)->assertSee('Belum Dinilai')->assertSee('0 hidangan dinilai dalam 0 kunjungan')
             ->assertDontSee('Buka Google Maps')->assertDontSee('place-dossier__photo', false);
-        $this->assertNull($response->viewData('place')->rating_score);
+        $this->assertNull($response->viewData('place')->food_score);
     }
 
     public function test_cover_and_card_queries_do_not_grow_per_history_visit(): void

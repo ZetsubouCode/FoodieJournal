@@ -81,7 +81,8 @@ class PublicTest extends TestCase
     public function test_homepage_recent_order_curated_picks_and_discovery_use_published_data(): void
     {
         $older = Visit::factory()->published()->create(['title' => 'Catatan lebih lama', 'visited_at' => '2026-10-01 12:00:00']);
-        $newer = Visit::factory()->published()->create(['title' => 'Catatan lebih baru', 'visited_at' => '2026-11-01 12:00:00', 'service_rating' => 5]);
+        $newer = Visit::factory()->published()->create(['title' => 'Catatan lebih baru', 'visited_at' => '2026-11-01 12:00:00']);
+        VisitItem::factory()->for($newer)->create(['food_rating' => 5]);
         $label = RecommendationLabel::create(['name' => 'Pilihan penulis']);
         $older->recommendations()->attach($label);
         $category = Category::create(['name' => 'Makanan pilihan']);
@@ -89,7 +90,7 @@ class PublicTest extends TestCase
         $style = CookingStyle::create(['name' => 'Rebus pilihan']);
         $item = VisitItem::factory()->for($older)->create(['food_type_id' => $type->id]);
         $item->styles()->attach($style);
-        $response = $this->get('/')->assertOk()->assertSeeInOrder(['Catatan lebih baru', 'Catatan lebih lama']);
+        $response = $this->get('/')->assertOk()->assertSeeInOrder(['Catatan lebih baru', 'Catatan lebih lama'])->assertSee('Rerata hidangan');
         preg_match('/<section class="home-section" aria-labelledby="picks-title">(.*?)<\/section>/s', $response->getContent(), $picks);
         $this->assertNotEmpty($picks);
         $this->assertStringContainsString('Catatan lebih lama', $picks[1]);
@@ -175,17 +176,34 @@ class PublicTest extends TestCase
 
     public function test_prices_ratings_sort_and_tab_reset_have_correct_semantics(): void
     {
-        $a = Visit::factory()->published()->create(['total_spent_idr' => 60000, 'service_rating' => 3.5]);
+        $a = Visit::factory()->published()->create(['total_spent_idr' => 60000]);
         $b = Visit::factory()->published()->create(['total_spent_idr' => null]);
-        $food = VisitItem::factory()->for($a)->create(['unit_price_idr' => 25000, 'taste_rating' => 4]);
-        VisitItem::factory()->for($b)->create();
+        $category = Category::create(['name' => 'Kuah']);
+        $type = FoodType::create(['name' => 'Soto', 'category_id' => $category->id]);
+        $soto = VisitItem::factory()->for($a)->create(['menu_name' => 'Soto ayam', 'food_type_id' => $type->id, 'unit_price_idr' => 25000, 'food_rating' => 3.5]);
+        $other = VisitItem::factory()->for($a)->create(['food_rating' => 5]);
+        $unrated = VisitItem::factory()->for($b)->create();
+        $repeat = Visit::factory()->published()->create(['place_id' => $a->place_id]);
+        $repeatItem = VisitItem::factory()->for($repeat)->create(['food_rating' => 4.5]);
         $this->assertCount(0, $this->results(['tab' => 'visit', 'price_max' => 30000]));
-        $this->assertSame([$food->id], $this->results(['tab' => 'food', 'price_max' => 30000])->modelKeys());
+        $this->assertSame([$soto->id], $this->results(['tab' => 'food', 'price_max' => 30000])->modelKeys());
         $this->assertCount(2, $this->results(['tab' => 'place', 'price_max' => 30000]));
         $this->assertSame($a->id, $this->results(['tab' => 'visit', 'sort' => 'price_high'])->first()->id);
-        $this->assertSame($a->id, $this->results(['tab' => 'visit', 'sort' => 'rating_low'])->first()->id);
-        $this->assertCount(0, $this->results(['tab' => 'visit', 'rating_min' => 4]));
-        $this->assertCount(1, $this->results(['tab' => 'food', 'rating_min' => 4]));
+        $this->assertSame([$a->id, $repeat->id, $b->id], $this->results(['tab' => 'visit', 'sort' => 'rating_low'])->modelKeys());
+        $this->assertSame([$repeat->id, $a->id, $b->id], $this->results(['tab' => 'visit', 'sort' => 'rating_high'])->modelKeys());
+        $this->assertSame([$other->id, $repeatItem->id, $soto->id, $unrated->id], $this->results(['tab' => 'food', 'sort' => 'rating_high'])->modelKeys());
+        $this->assertSame([$a->place_id, $b->place_id], $this->results(['tab' => 'place', 'sort' => 'rating_low'])->modelKeys());
+
+        $sotoFilter = ['food_type' => $type->slug, 'rating_min' => 4.25];
+        $this->assertCount(0, $this->results(['tab' => 'food', ...$sotoFilter]));
+        $this->assertSame([$a->id], $this->results($sotoFilter)->modelKeys());
+        $this->assertCount(0, $this->results([...$sotoFilter, 'rating_min' => 4.3]));
+        $this->assertSame([$a->place_id], $this->results(['tab' => 'place', ...$sotoFilter, 'rating_min' => 4.3])->modelKeys());
+        $this->assertCount(0, $this->results(['tab' => 'place', ...$sotoFilter, 'rating_min' => 4.34]));
+
+        $this->get('/explore?tab=food&food_type='.$type->slug)->assertOk()->assertSee('Rating hidangan: 3,5');
+        $this->get('/explore?tab=place&food_type='.$type->slug)->assertOk()
+            ->assertSee('Rata-rata rating hidangan: 4,3')->assertSee('3 hidangan dinilai dalam 2 kunjungan');
         $state = new ExploreState(['tab' => 'food', 'price_max' => 30000, 'city' => 'semarang', 'view' => 'list', 'page' => 2]);
         parse_str(parse_url($state->tabUrl('visit'), PHP_URL_QUERY), $query);
         $this->assertArrayNotHasKey('price_max', $query);

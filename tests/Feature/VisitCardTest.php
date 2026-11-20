@@ -32,7 +32,7 @@ class VisitCardTest extends TestCase
         $category = Category::create(['name' => 'Minuman']);
         $foodType = FoodType::create(['name' => 'Kopi', 'category_id' => $category->id]);
         $style = CookingStyle::create(['name' => 'Seduh']);
-        $item = VisitItem::factory()->for($visit)->create(['food_type_id' => $foodType->id, 'taste_rating' => null]);
+        $item = VisitItem::factory()->for($visit)->create(['food_type_id' => $foodType->id, 'food_rating' => null]);
         $item->styles()->attach($style);
         foreach (range(1, 6) as $number) {
             $tag = Tag::create(['name' => 'Tag '.$number]);
@@ -66,9 +66,10 @@ class VisitCardTest extends TestCase
 
     public function test_card_with_no_tags_or_recommendations_has_no_disclosure(): void
     {
-        $visit = Visit::factory()->published()->create(['service_rating' => 4.5]);
+        $visit = Visit::factory()->published()->create();
+        VisitItem::factory()->for($visit)->create(['food_rating' => 4.5]);
         $response = $this->get('/explore?tab=visit');
-        $response->assertOk()->assertSee('4,5')->assertDontSee('visit-card__tags')->assertDontSee('visit-card__more')->assertDontSee('visit-card__recommendation');
+        $response->assertOk()->assertSee('Rata-rata rating hidangan: 4,5 dari 5')->assertDontSee('visit-card__tags')->assertDontSee('visit-card__more')->assertDontSee('visit-card__recommendation');
 
         foreach (['Pedas', 'Hangat'] as $name) {
             $visit->tags()->attach(Tag::create(['name' => $name]));

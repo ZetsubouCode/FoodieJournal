@@ -4,21 +4,42 @@ namespace App\Support;
 
 class RatingSql
 {
-    // Only internal, fixed table aliases may be passed; no request input enters SQL.
-    public static function overall(string $alias = 'visit'): string
-    {
-        $taste = "(SELECT AVG(ri.taste_rating) FROM visit_item ri WHERE ri.visit_id = {$alias}.id)";
-        $fields = [$taste, ...array_map(fn ($name) => "{$alias}.{$name}_rating", ['service', 'atmosphere', 'cleanliness', 'value'])];
-        $sum = implode(' + ', array_map(fn ($field) => "COALESCE({$field}, 0)", $fields));
-        $count = implode(' + ', array_map(fn ($field) => "CASE WHEN {$field} IS NOT NULL THEN 1 ELSE 0 END", $fields));
+    // Keep the SQL average at higher precision than MySQL's default for DECIMAL(2,1).
+    private const AVERAGE = 'AVG(CAST(ri.food_rating AS DECIMAL(24,15)))';
 
-        return "(1.0 * ({$sum}) / NULLIF(({$count}), 0))";
+    private const VISIT_ITEMS = 'FROM visit_item ri WHERE ri.visit_id = visit.id AND ri.food_rating IS NOT NULL';
+
+    private const PLACE_VISITS = "WHERE rv.place_id = place.id AND rv.status = 'published' AND rv.deleted_at IS NULL AND place.deleted_at IS NULL";
+
+    private const PLACE_ITEMS = 'FROM visit rv JOIN visit_item ri ON ri.visit_id = rv.id '.self::PLACE_VISITS.' AND ri.food_rating IS NOT NULL';
+
+    public static function visit(): string
+    {
+        return '(SELECT '.self::AVERAGE.' '.self::VISIT_ITEMS.')';
+    }
+
+    public static function visitItemCount(): string
+    {
+        return '(SELECT COUNT(*) '.self::VISIT_ITEMS.')';
     }
 
     public static function place(): string
     {
-        $overall = self::overall('rv');
+        return '(SELECT '.self::AVERAGE.' '.self::PLACE_ITEMS.')';
+    }
 
-        return "(SELECT AVG({$overall}) FROM visit rv WHERE rv.place_id = place.id AND rv.status = 'published' AND rv.deleted_at IS NULL)";
+    public static function placeItemCount(): string
+    {
+        return '(SELECT COUNT(*) '.self::PLACE_ITEMS.')';
+    }
+
+    public static function placeVisitCount(): string
+    {
+        return '(SELECT COUNT(DISTINCT rv.id) '.self::PLACE_ITEMS.')';
+    }
+
+    public static function latestPlaceVisit(): string
+    {
+        return '(SELECT MAX(rv.visited_at) FROM visit rv '.self::PLACE_VISITS.')';
     }
 }

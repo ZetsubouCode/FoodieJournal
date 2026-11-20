@@ -4,6 +4,7 @@ namespace Tests\Feature;
 
 use App\Models\RecommendationLabel;
 use App\Models\Visit;
+use App\Models\VisitItem;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
@@ -28,8 +29,10 @@ class PlaceChronologyTest extends TestCase
 
     public function test_month_groups_use_local_dates_preserve_id_ties_and_each_visits_own_rating_and_price(): void
     {
-        $december = Visit::factory()->published()->create(['title' => 'Catatan Desember', 'visited_at' => '2025-12-31 16:30:00', 'service_rating' => 2.5, 'total_spent_idr' => 17000]);
-        $january = Visit::factory()->published()->create(['place_id' => $december->place_id, 'title' => 'Catatan Januari', 'visited_at' => '2025-12-31 18:30:00', 'service_rating' => 4.5, 'total_spent_idr' => 93000]);
+        $december = Visit::factory()->published()->create(['title' => 'Catatan Desember', 'visited_at' => '2025-12-31 16:30:00', 'total_spent_idr' => 17000]);
+        $january = Visit::factory()->published()->create(['place_id' => $december->place_id, 'title' => 'Catatan Januari', 'visited_at' => '2025-12-31 18:30:00', 'total_spent_idr' => 93000]);
+        VisitItem::factory()->for($december)->create(['food_rating' => 2.5]);
+        VisitItem::factory()->for($january)->create(['food_rating' => 4.5]);
         $tied = Visit::factory()->published()->create(['place_id' => $december->place_id, 'title' => 'Tanggal sama tanpa skor', 'visited_at' => $january->visited_at, 'total_spent_idr' => 0]);
         $undated = Visit::factory()->published()->create(['place_id' => $december->place_id, 'title' => 'Tanpa tanggal tercatat', 'visited_at' => null]);
         $tied->recommendations()->attach(RecommendationLabel::create(['name' => 'Pilihan tanpa skor']));

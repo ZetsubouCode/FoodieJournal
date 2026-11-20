@@ -88,7 +88,7 @@ class IntegrityTest extends TestCase
         $this->putJson('/admin/visit/'.$visit->id, [...$base, 'items' => 'malformed'])->assertUnprocessable();
         $this->putJson('/admin/visit/'.$visit->id, [...$base, 'experience' => str_repeat('🍜', 20000)])->assertUnprocessable()->assertJsonValidationErrors('experience');
         $url = '/admin/visit/'.$visit->id.'/edit';
-        $this->from($url)->put('/admin/visit/'.$visit->id, [...$base, 'items' => [['menu_name' => 'Nama belum tersimpan', 'taste_rating' => 4.2, 'unit_price_idr' => -1]]])->assertSessionHasErrors(['items.0.taste_rating', 'items.0.unit_price_idr']);
+        $this->from($url)->put('/admin/visit/'.$visit->id, [...$base, 'items' => [['menu_name' => 'Nama belum tersimpan', 'food_rating' => 4.2, 'unit_price_idr' => -1]]])->assertSessionHasErrors(['items.0.food_rating', 'items.0.unit_price_idr']);
         $this->get($url)->assertOk()->assertSee('Nama belum tersimpan');
         $this->assertSame(0, $visit->items()->count());
     }

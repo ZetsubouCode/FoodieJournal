@@ -63,7 +63,6 @@ class DemoJournalSeeder extends Seeder
                     if ($place->trashed()) {
                         return false;
                     }
-                    $ratings = $entry['ratings'] ?? [4, 4.5, 4.5, 4];
                     $visit = new Visit;
                     $visit->forceFill([
                         'user_id' => $owner->id, 'place_id' => $place->id, 'creation_token' => $token,
@@ -72,10 +71,7 @@ class DemoJournalSeeder extends Seeder
                         'visited_at' => CarbonImmutable::now(config('foodie.timezone'))->startOfDay()->subDays($index + 1)->setTime($profile['hour'], 30)->utc(),
                         'experience' => $entry['story']."\n\nCatatan demo untuk pratinjau situs. Tempat, harga, penilaian, dan informasi bahan bersifat fiktif; foto hanya ilustrasi.",
                         'conclusion' => $entry['conclusion'] ?? $profile['conclusion'],
-                        'service_review' => $profile['service'], 'service_rating' => $ratings[0],
-                        'atmosphere_review' => $profile['atmosphere'], 'atmosphere_rating' => $ratings[1],
-                        'cleanliness_review' => 'Meja dan peralatan makan terlihat bersih saat kunjungan ini.', 'cleanliness_rating' => $ratings[2],
-                        'value_review' => $profile['value'], 'value_rating' => $ratings[3],
+                        'pros' => $entry['pros'] ?? null, 'cons' => $entry['cons'] ?? null,
                         'total_spent_idr' => array_key_exists('total', $entry) ? $entry['total'] : $profile['total'],
                     ])->save();
                     $visit->tags()->sync($this->ids(Tag::class, $entry['tags']));
@@ -84,7 +80,7 @@ class DemoJournalSeeder extends Seeder
                     foreach ($profile['items'] as $order => $dish) {
                         $item = $visit->items()->create([
                             'menu_name' => $dish['name'], 'quantity' => 1,
-                            'unit_price_idr' => $dish['price'], 'taste_rating' => $dish['rating'],
+                            'unit_price_idr' => $dish['price'], 'food_rating' => $dish['rating'],
                             'food_type_id' => $this->ids(FoodType::class, [$dish['type']])[0],
                             'notes' => $dish['notes'], 'sort_order' => $order,
                         ]);

@@ -3,6 +3,7 @@
 namespace App\Support;
 
 use Carbon\CarbonImmutable;
+use Illuminate\Support\Str;
 
 class Presentation
 {
@@ -14,6 +15,13 @@ class Presentation
     public static function price(?int $value): string
     {
         return $value === null ? 'Harga belum dicatat' : 'Rp'.number_format($value, 0, ',', '.');
+    }
+
+    public static function observationLines(?string $text): array
+    {
+        $lines = preg_split('/\R/u', $text ?? '') ?: [];
+
+        return array_filter(array_map(Str::trim(...), $lines), fn (string $line) => $line !== '');
     }
 
     public static function localTime($value, string $format = 'd M Y, H:i'): string

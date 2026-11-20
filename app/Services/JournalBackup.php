@@ -55,7 +55,8 @@ class JournalBackup
         }
         $database = DB::transaction(function () {
             $data = [];
-            foreach (Schema::getTableListing(null, false) as $table) {
+            $schemaName = DB::connection()->getDriverName() === 'sqlite' ? null : DB::connection()->getDatabaseName();
+            foreach (Schema::getTableListing($schemaName, false) as $table) {
                 $data[$table] = DB::table($table)->get()->map(fn ($row) => (array) $row)->all();
             }
 
@@ -192,7 +193,7 @@ class JournalBackup
             $connection = DB::connection('foodie_restore');
             $schema = Schema::connection('foodie_restore');
             $data = json_decode($zip->getFromName('database.json'), true, 512, JSON_THROW_ON_ERROR);
-            $tables = $schema->getTableListing(null, false);
+            $tables = $schema->getTableListing($driver === 'sqlite' ? null : $databaseTarget, false);
             if (array_diff(array_keys($data), $tables) || array_diff($tables, array_keys($data))) {
                 throw new RuntimeException('Tabel snapshot tidak sesuai schema.');
             }

@@ -1,7 +1,13 @@
 <x-layout.public :title="$visit->display_title" :description="\Illuminate\Support\Str::limit($visit->experience ?: $visit->display_title, 160)" :noindex="$preview" :admin="$preview" :image="!$preview && $visit->coverMedia?->variant('hero') ? url('media/'.$visit->coverMedia->uuid.'/hero') : null">
     @if($preview)<x-ui.alert title="Pratinjau admin">Status: {{ $visit->status }}. Ini pratinjau tersimpan; halaman ini tidak dipublikasikan otomatis. <a href="{{ url('admin/visit/'.$visit->id.'/edit') }}">Kembali ke editor</a></x-ui.alert>@endif
     <x-site.breadcrumb :items="['Jelajah' => url('explore'), $visit->display_title => null]" />
-    @php($galleryMedia = $visit->media->filter(fn ($photo) => $photo->variant('card') || $photo->variant('thumbnail')))
+    @php
+        $galleryMedia = $visit->media->filter(fn ($photo) => $photo->variant('card') || $photo->variant('thumbnail'));
+        $observations = array_filter([
+            'Kelebihan' => \App\Support\Presentation::observationLines($visit->pros),
+            'Kekurangan' => \App\Support\Presentation::observationLines($visit->cons),
+        ]);
+    @endphp
     <article class="visit-dossier">
         <header class="dossier-hero {{ $visit->coverMedia?->variant('hero') ? '' : 'dossier-hero--text' }}">
             <div class="dossier-hero__photo"><x-domain.image :media="$visit->coverMedia" variant="hero" :priority="true" sizes="(min-width: 2560px) 2432px, (min-width: 1920px) calc(100vw - 8rem), (min-width: 1024px) 93.334vw, (min-width: 481px) calc(100vw - 3rem), calc(100vw - 2rem)" /></div>
@@ -15,7 +21,7 @@
         <div class="dossier-facts">
             <div><span>Tempat</span><a href="{{ url('place/'.$visit->place->slug) }}">{{ $visit->place->name }}</a></div>
             <div><span>Total pengeluaran kunjungan</span><strong class="numeric">{{ \App\Support\Presentation::price($visit->total_spent_idr) }}</strong></div>
-            <div><span>Penilaian keseluruhan</span>@if($visit->overall_rating !== null)<strong class="numeric">{{ \App\Support\Presentation::rating($visit->overall_rating) }} <small>/ 5</small></strong>@else<p>Penilaian belum dicatat</p>@endif</div>
+            <div><span>Rata-rata rating hidangan</span>@if($visit->food_score !== null)<strong class="numeric">{{ \App\Support\Presentation::rating($visit->food_score) }} <small>/ 5</small></strong>@else<p>Penilaian belum dicatat</p>@endif</div>
             @if($visit->place->maps_url)<a class="dossier-map" href="{{ $visit->place->maps_url }}" target="_blank" rel="noopener noreferrer">Buka Google Maps <span aria-hidden="true">↗</span></a>@endif
         </div>
         @if($visit->experience)
@@ -32,18 +38,23 @@
             @foreach($visit->items as $item)<x-domain.tasting-note :item="$item" />@endforeach
         </section>
         @endif
-        <section class="dossier-section dossier-assessment" aria-labelledby="assessment-title">
-            <div><h2 id="assessment-title">Catatan<br> <em>penilaian.</em></h2><p>Opini satu penulis. Nilai keseluruhan adalah rata-rata kriteria yang terisi.</p><p class="muted">Total pengeluaran dicatat tersendiri dan dapat berbeda dari jumlah harga hidangan.</p></div>
-            <div class="dossier-criteria">
-                @if($visit->taste_rating !== null)<div class="dossier-criterion"><h3>Rasa</h3><strong class="numeric">{{ \App\Support\Presentation::rating($visit->taste_rating) }} <small>/ 5</small></strong><p>Rata-rata hidangan yang dinilai.</p></div>@endif
-                @foreach(['service' => 'Pelayanan', 'atmosphere' => 'Suasana', 'cleanliness' => 'Kebersihan', 'value' => 'Sepadan dengan biaya'] as $key => $label)
-                    @if($visit->{$key.'_review'} || $visit->{$key.'_rating'} !== null)
-                    <div class="dossier-criterion"><h3>{{ $label }}</h3>@if($visit->{$key.'_rating'} !== null)<strong class="numeric">{{ \App\Support\Presentation::rating((float)$visit->{$key.'_rating'}) }} <small>/ 5</small></strong>@endif @if($visit->{$key.'_review'})<p class="prose">{{ $visit->{$key.'_review'} }}</p>@endif</div>
-                    @endif
-                @endforeach
-                @if($visit->overall_rating === null)<p>Belum ada kriteria yang dinilai.</p>@endif
-            </div>
-        </section>
+        @if($observations)
+            <section class="dossier-section dossier-observations" aria-labelledby="observations-title">
+                <h2 id="observations-title">Kelebihan &amp; <em>kekurangan</em></h2>
+                <div class="dossier-observations__columns">
+                    @foreach($observations as $label => $lines)
+                        <div class="dossier-observations__side">
+                            <h3><svg aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="10" cy="10" r="8" /><path d="{{ $label === 'Kelebihan' ? 'M6.5 10h7m-3.5-3.5v7' : 'M6.5 10h7' }}" /></svg>{{ $label }}</h3>
+                            <ul>
+                                @foreach($lines as $line)
+                                    <li>{{ $line }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endforeach
+                </div>
+            </section>
+        @endif
         @if($galleryMedia->isNotEmpty())<section class="dossier-section dossier-gallery" id="galeri" aria-labelledby="gallery-title"><header class="editorial-heading"><h2 id="gallery-title">Di dalam arsip.</h2><p>Galeri kunjungan</p></header><x-domain.gallery :media="$galleryMedia" /></section>@endif
         @if($visit->conclusion)<section class="dossier-section dossier-conclusion" aria-labelledby="conclusion-title"><h2 id="conclusion-title">Yang tinggal<br> <em>setelahnya.</em></h2><p class="prose">{{ $visit->conclusion }}</p></section>@endif
         @if($visit->tags->isNotEmpty())<nav class="cluster" aria-label="Tag kunjungan">@foreach($visit->tags as $term)<a class="chip" href="{{ url('explore').'?'.http_build_query(['tag' => [$term->slug]]) }}">{{ $term->name }}</a>@endforeach</nav>@endif

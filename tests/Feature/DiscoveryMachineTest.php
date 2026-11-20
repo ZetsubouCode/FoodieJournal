@@ -137,11 +137,13 @@ class DiscoveryMachineTest extends TestCase
 
     public function test_place_memory_uses_a_visit_with_the_selected_recommendation(): void
     {
-        $older = Visit::factory()->published()->create(['visited_at' => '2026-10-01', 'title' => 'Kunjungan berlabel', 'service_rating' => 2]);
-        $newer = Visit::factory()->published()->create(['place_id' => $older->place_id, 'visited_at' => '2026-11-01', 'title' => 'Kunjungan tanpa label', 'service_rating' => 5]);
+        $older = Visit::factory()->published()->create(['visited_at' => '2026-10-01', 'title' => 'Kunjungan berlabel']);
+        $newer = Visit::factory()->published()->create(['place_id' => $older->place_id, 'visited_at' => '2026-11-01', 'title' => 'Kunjungan tanpa label']);
+        VisitItem::factory()->for($older)->create(['food_rating' => 2]);
+        VisitItem::factory()->for($newer)->create(['food_rating' => 5]);
         $label = RecommendationLabel::create(['name' => 'Ingin kembali']);
         $older->recommendations()->attach($label);
-        $this->assertEquals(3.5, $older->place()->withRating()->first()->rating_score);
+        $this->assertEquals(3.5, $older->place()->withFoodScore()->first()->food_score);
         foreach ([$older, $newer] as $visit) {
             $media = $visit->media()->create(['uuid' => (string) Str::uuid(), 'original_path' => 'fixture', 'mime_type' => 'image/jpeg', 'original_bytes' => 10, 'width' => 900, 'height' => 600, 'sha256' => str_repeat('a', 64)]);
             $media->variants()->create(['variant' => 'card', 'path' => 'fixture', 'mime_type' => 'image/jpeg', 'width' => 900, 'height' => 600, 'bytes' => 10, 'status' => 'ready']);

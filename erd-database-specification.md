@@ -60,8 +60,8 @@ Tipe data bersifat **usulan migration**, bukan perintah menambahkan semuanya sek
 |---|---|---|---|
 | `user` | `id`, `name`, `email`, `password`, timestamps | `UNIQUE(email)` | Satu pemilik; auth admin. Sesuaikan konfigurasi auth Laravel agar tabel singular. |
 | `place` | `id`, `name`, `slug`, `address` nullable, `city_name` nullable, `province_name` nullable, `maps_url` nullable, `latitude/longitude` nullable, timestamps, `deleted_at` | `UNIQUE(slug)`, index `(city_name,id)`, validasi pasangan koordinat dan range | Restrict/hide bila masih punya visit; jangan hapus riwayat secara tak sengaja. |
-| `visit` | `id`, `place_id`, `user_id`, `slug`, `title` nullable, `visited_at` nullable, `status`, `experience`, `service_review`, `atmosphere_review`, `cleanliness_review`, `value_review`, `conclusion` nullable, `service_rating`, `atmosphere_rating`, `cleanliness_rating`, `value_rating` nullable, `total_spent_idr` nullable, `cover_media_id` nullable, timestamps, `deleted_at` | `UNIQUE(slug)`; index `(status,visited_at,id)`, `(place_id,status,visited_at)`; FK restrict place; status whitelist | Sumber cerita dan visibility. `title/visited_at` boleh null saat draft awal, publish gate mengatur minimal. |
-| `visit_item` | `id`, `visit_id`, `food_type_id` nullable, `menu_name`, `quantity` nullable, `unit_price_idr` nullable, `taste_rating` nullable, `notes` nullable, `sort_order`, timestamps | index `(visit_id,sort_order)`, `(food_type_id,id)`; `CHECK(price >= 0)` bila ada; rating 1–5 step .5 | Item snapshot; delete item bukan menghapus foto bersama. |
+| `visit` | `id`, `place_id`, `user_id`, `slug`, `title` nullable, `visited_at` nullable, `status`, `experience`, `pros`, `cons`, `conclusion` nullable TEXT, `total_spent_idr` nullable, `cover_media_id` nullable, timestamps, `deleted_at` | `UNIQUE(slug)`; index `(status,visited_at,id)`, `(place_id,status,visited_at)`; FK restrict place; status whitelist | Sumber cerita dan visibility. `title/visited_at` boleh null saat draft awal, publish gate mengatur minimal. |
+| `visit_item` | `id`, `visit_id`, `food_type_id` nullable, `menu_name`, `quantity` nullable, `unit_price_idr` nullable, `food_rating` nullable DECIMAL(2,1), `notes` nullable, `sort_order`, timestamps | index `(visit_id,sort_order)`, `(food_type_id,id)`; `CHECK(price >= 0)` bila ada; rating 1–5 step .5 | Item snapshot; delete item bukan menghapus foto bersama. |
 | `category` | `id`, `parent_id` nullable, `name`, `slug`, `is_active`, `sort_order` | `UNIQUE(slug)`, FK self; prevent cycle di service | Nonaktifkan kategori yang dipakai, jangan cascade data historis. |
 | `food_type` | `id`, `category_id` nullable, `name`, `slug`, `is_active` | `UNIQUE(slug)`, index category | Satu jenis spesifik; tidak sama dengan snapshot menu. |
 | `cuisine` | `id`, `parent_id` nullable, `name`, `slug`, `classification` (`region`/`tradition`/`editorial`), `is_active` | `UNIQUE(slug)`; self FK; enforce max depth via application | Gunakan deskripsi untuk label luas seperti *Western*. |
@@ -88,11 +88,11 @@ Tipe data bersifat **usulan migration**, bukan perintah menambahkan semuanya sek
 
 ### Rating
 
-- Semua **input** rating `NULL` atau 1.0–5.0 kelipatan 0.5. Implementasi: kolom `DECIMAL(2,1)` + server validation; optional CHECK seperti `rating IS NULL OR (rating BETWEEN 1 AND 5 AND MOD(rating * 2,1)=0)` untuk MySQL pendukung.
-- `taste(visit) = AVG(visit_item.taste_rating WHERE NOT NULL)`; jika tanpa item dinilai, `NULL`.
-- `overall(visit) = AVG(non-null [taste,service,atmosphere,cleanliness,value])`; jika semua null, `NULL`. Misal taste 4,0; service 3,5 → overall 3,75 → tampil **3,8**.
-- `rating(place) = AVG(overall(visit))` hanya kunjungan published, tidak dihapus, **dan memiliki overall != NULL**. Jumlah yang ditampilkan adalah jumlah **kunjungan dinilai**, bukan jumlah pengguna yang review.
-- Jangan bulatkan nilai taste/overall ke 1 desimal di tengah komputasi. Untuk sorting/filter/agregat, hitung dari nilai presisi (query/service) atau materialize presisi tinggi dengan invalidation yang terbukti; satu desimal hanya pada presentation layer.
+- `visit_item.food_rating` adalah input numerik untuk makanan dan minuman. Validasi `HalfRating` menerima `NULL` atau 1.0–5.0 kelipatan 0.5. `visit_item.notes` menyimpan ulasan hidangan.
+- `visit.food_score` adalah proyeksi `AVG(visit_item.food_rating)` atas semua item Visit. `rated_item_count` menghitung item dengan rating terisi.
+- `place.food_score` memproyeksikan `AVG(visit_item.food_rating)` setelah join Visit yang memenuhi public guard. `rated_item_count` menghitung item dengan rating terisi. `rated_visit_count` menghitung Visit unik yang memiliki item dengan rating terisi.
+- Agregat tetap `NULL` tanpa item dinilai. Sorting dan filter memakai nilai sebelum pembulatan. Hanya tampilan memakai satu desimal. Skor turunan dan jumlah tidak disimpan di skema.
+- `visit.pros` dan `visit.cons` memuat teks biasa dengan satu observasi non-hidangan per baris. Publikasi memerlukan Place valid, waktu, serta minimal satu item atau isi bermakna di cerita, kesimpulan, kelebihan atau kekurangan. [ADR 003](docs/adr/003-food-only-ratings.md).
 
 ### Public guard
 

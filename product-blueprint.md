@@ -26,7 +26,7 @@
 - Hanya admin/pemilik mengelola konten; publik tidak memiliki akun.
 - `place` memiliki banyak `visit`; `visit` memiliki banyak `visit_item`; satu kunjungan memiliki galeri foto dan foto dapat ditautkan ke item.
 - Status konten `draft`, `private`, `published`; hanya `published` muncul di permukaan publik, statistik publik, SEO, dan API publik apabila tersedia.
-- Rating 1–5 dalam kelipatan 0,5; nilai kosong tidak dianggap nol.
+- Rating hidangan/minuman memakai skala 1–5 dalam kelipatan 0,5. Nilai kosong ditampilkan sebagai Belum Dinilai.
 - Rekomendasi editorial berbeda dari nilai rating numerik.
 - Semua **nama tabel MySQL singular**; constraint, FK, indeks, dan historical snapshot dipertahankan.
 - Komponen Custom Alert, Modal/Dialog, dan Toast menjadi fondasi sejak awal, bersama token, primitives, state, dan aturan aksesibilitas.
@@ -37,7 +37,7 @@
 - **U2:** Laman `/food/{slug}` menunjuk **jenis hidangan spesifik** (`food_type`: mis. Mie Ayam), sementara `/category/{slug}` menunjuk **kelompok** hierarkis ringan (`Makanan → Mie`); jangan membuat kategori leaf dengan makna sama persis sebagai food_type. Nama menu di `visit_item` tetap snapshot teks bebas.
 - **U3:** Label rekomendasi diterapkan pada `visit` terlebih dahulu; rekomendasi tempat dapat diturunkan dari kunjungan yang berlabel, tanpa menyamakan rekomendasi dan rating.
 - **U4:** `private` berarti sengaja disimpan hanya untuk admin walaupun datanya sudah lengkap; `draft` berarti masih dalam proses penulisan. Keduanya tidak dapat diakses publik.
-- **U5:** Kunjungan yang tidak memiliki rating tetap boleh `published` dan muncul sebagai **Belum Dinilai**, tetapi tidak masuk pembagi perhitungan rating place.
+- **U5:** Kunjungan tanpa hidangan yang dinilai tetap boleh `published` jika memenuhi syarat publikasi. Skor Visit tampil sebagai **Belum Dinilai** dan jumlah hidangan yang disumbangkan ke rata-rata Place adalah nol.
 - **U6:** Halaman city/food/style/cuisine discovery khusus hadir bertahap; inti pencarian/filter adalah satu layanan/query yang dipakai bersama Explore agar tidak terjadi logic drift.
 - **U7:** `cuisine` (tradisi/regional kuliner, mis. Thai, Italian) **terpisah** dari `cooking_style` (teknik pengolahan multi-tag, mis. fried/grilled/boiled). `Asian` adalah label wilayah luas; `Western` label editorial yang ambigu dan tidak otomatis setara dengan kawasan geografis tertentu.
 - **U8:** Bahan (`ingredient`) dicatat bila diketahui; penanda `allergen` mempunyai status *contains/may_contain/unknown* dengan sumber informasi. Data kosong **tidak boleh** diartikan aman/bebas alergi. Filter hanya dapat menyembunyikan kandungan yang *tercatat*, bukan menjamin keamanan.
@@ -86,8 +86,8 @@ Semua usulan di atas **masih untuk review**, termasuk ruang lingkup filter alerg
 | Konsep | Kegunaan | Aturan penting |
 |---|---|---|
 | `place` | Identitas tempat makan | Nama/lokasi secukupnya; kota/provinsi; alamat, Maps URL, koordinat boleh tidak lengkap |
-| `visit` | Satu pengalaman pada tanggal tertentu | Punya status, cerita, ulasan terstruktur, total biaya, foto, label rekomendasi, dan rating per kunjungan |
-| `visit_item` | Hidangan/minuman yang dibeli | Nama menu snapshot; kuantitas opsional; harga satuan saat dibeli; rating rasa dan catatan; bisa muncul di tempat lain tanpa menautkan harga historisnya |
+| `visit` | Satu pengalaman pada tanggal tertentu | Punya status, cerita, kelebihan/kekurangan, kesimpulan, total biaya, foto dan label rekomendasi. Rata-rata rating hidangan dihitung dari item. |
+| `visit_item` | Hidangan/minuman yang dibeli | Nama menu snapshot; kuantitas opsional; harga satuan saat dibeli; rating dan ulasan hidangan; bisa muncul di tempat lain tanpa menautkan harga historisnya |
 | `category` | Kelompok kategori hierarkis ringan | Contoh `Makanan` → `Mie`; `Minuman` → `Kopi`; hindari duplikasi leaf yang sama makna dengan `food_type` |
 | `food_type` | Jenis hidangan spesifik lintas tempat | Contoh `Mie Ayam`, `Kopi Susu`; terkait kategori yang lebih umum; bukan nama menu merchant |
 | `cuisine` | Tradisi/regional kuliner | Mis. `Asia → Thai/Japanese`, `Eropa → Italian`; bisa beberapa label item untuk fusion; `Western` hanya label editorial bila dipakai |
@@ -105,15 +105,12 @@ Semua usulan di atas **masih untuk review**, termasuk ruang lingkup filter alerg
 
 ### 6.1 Rating
 
-- Nilai rating valid: 1, 1,5, 2, 2,5, 3, 3,5, 4, 4,5, 5; `NULL` berarti belum dinilai.
-- **Taste visit** = rata-rata rating rasa dari `visit_item` yang nilainya terisi. Item tidak dinilai dikecualikan.
-- **Overall visit** = rata-rata aritmetika dari kriteria yang tersedia: taste (hasil agregat item), service, atmosphere, cleanliness, value for money. Tidak berbobot; semua yang `NULL` dikecualikan.
-- Jika tidak ada kriteria terisi, tampilkan **Belum Dinilai** dan overall tetap `NULL`.
-- **Rating place** = rata-rata overall dari `visit` berstatus `published` dan dinilai. Tampilkan skor 1 desimal serta **jumlah kunjungan yang dinilai** (lebih akurat daripada “jumlah reviewer” karena penulisnya satu orang).
-- Jangan melakukan pembulatan di setiap tahapan rata-rata; simpan/hitung secara presisi lalu bulatkan hanya untuk tampilan. Field rating input tetap kelipatan 0,5; hasil agregasi boleh bernilai desimal lainnya.
-- Riwayat setiap visit tetap dapat dilihat secara terpisah; rating lama tidak ditimpa rating baru.
+- Penulis memberi **rating hidangan** pada setiap item makanan atau minuman yang dipesan. Nilai valid 1 hingga 5 dalam kelipatan 0,5, dengan `NULL` untuk Belum Dinilai. Aroma, rasa, tekstur, porsi dan nilai hidangan dapat dijelaskan di ulasan item.
+- **Skor Visit** adalah rata-rata semua rating hidangan yang terisi pada kunjungan itu. **Skor Place** merata-ratakan setiap item dinilai dari semua kunjungan published yang belum dihapus di tempat aktif, dengan bobot sama per item. Sajikan jumlah hidangan yang dinilai dan jumlah kunjungan yang menyumbangkannya.
+- Harga, jumlah pesanan, jenis hidangan, dan observasi kunjungan tidak memengaruhi bobot. Pesanan berulang tetap dicatat terpisah. Jika tidak ada item dinilai, skor tetap `NULL`. Bulatkan hanya saat ditampilkan, satu desimal.
+- **Kelebihan** dan **Kekurangan** adalah catatan non-hidangan yang opsional pada Visit. Setiap baris menjadi satu poin. Cerita, kesimpulan, total pengeluaran, tag dan rekomendasi tetap independen.
 
-**Contoh:** rating rasa tiga item [4,5; NULL; 3,5] menghasilkan taste visit 4,0. Jika service 3,5 dan kriteria lain kosong, overall visit adalah 3,75 dan tampilan 3,8.
+Visit dengan [4,5 dan 4,0] menyimpan input tersebut dan menampilkan hasil 4,3 dari rata-rata 4,25. Place dengan satu kunjungan berisi [5,0] dan satu lagi berisi [3,0; 3,0; 3,0] menampilkan 3,5 dari 4 item dalam 2 kunjungan. [ADR 003](docs/adr/003-food-only-ratings.md).
 
 ### 6.2 Harga
 
@@ -160,8 +157,8 @@ Semua usulan di atas **masih untuk review**, termasuk ruang lingkup filter alerg
 |---|---|---|---|
 | PUB-01 | Home Memory Archive | P0 | Kabinet memori terkurasi, kunjungan terbaru editorial, rekomendasi pribadi, pintu Explore terfilter |
 | PUB-02 | Explore tab Visit/ Food/ Place | P0 | Default Visit terbaru, keyword, filter dasar, sort per konteks, grid/list, URL persisten |
-| PUB-03 | Visit detail | P0 | Cerita, rating terstruktur, item, harga historis, galeri, kesimpulan, link tempat |
-| PUB-04 | Place detail | P0 | Info lokasi, Maps jika tersedia, seluruh riwayat published, rating agregat dan skor tiap kunjungan |
+| PUB-03 | Visit detail | P0 | Cerita, hidangan dan ratingnya, harga historis, kelebihan/kekurangan, galeri, kesimpulan, link tempat |
+| PUB-04 | Place detail | P0 | Info lokasi, Maps jika tersedia, seluruh riwayat published, rata-rata rating hidangan, jumlah hidangan dan kunjungan yang dinilai, serta skor tiap Visit |
 | PUB-05 | Discovery kota/food/style berbasis Explore | P0 | Filter/link terarah tanpa wajib membuat template halaman unik dulu |
 | PUB-06 | Landing khusus kota/food/style/category | P1 | Halaman editorial atau SEO terdedikasi yang menggunakan query Explore bersama |
 | PUB-07 | Filter lanjutan (cuisine/style/bahan/alergen/tag/rekomendasi) | P0 | Progressive disclosure; informasi alergen **bukan safety guarantee**, only known-exposure exclusion; paginasi dan query visibility benar |
@@ -211,7 +208,7 @@ Alternatif: `Home Memory Archive → pilih kunjungan published → cetak/ambil f
 
 ### 8.3 Alur admin: Full Editor dan publish
 
-`Draft/Visit baru → detail tempat & waktu → item & taxonomy & harga → review/rating → media/cover → preview → validasi publish → Publish`
+`Draft/Visit baru → detail tempat & waktu → hidangan & taxonomy & harga & rating → catatan kunjungan → media/cover → preview → validasi publish → Publish`
 
 - Kelompokkan ke section/step pendek alih-alih satu form panjang.
 - Autocomplete tempat/jenis/cuisine/teknik/bahan, multi-select yang sesuai, dan inline create dengan duplikasi check. Pengisian bahan/alergen adalah bagian **opsional yang bisa dibuka** agar form utama tidak menakutkan.

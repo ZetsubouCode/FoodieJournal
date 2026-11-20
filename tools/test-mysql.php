@@ -5,7 +5,7 @@ require __DIR__.'/../vendor/autoload.php';
 
 use Symfony\Component\Process\Process;
 
-$port = (int) (getenv('FOODIE_TEST_MYSQL_PORT') ?: 33079);
+$port = (int) (getenv('FOODIE_TEST_MYSQL_PORT') ?: 33195);
 if ($port === 3306 || $port < 1024) {
     fwrite(STDERR, "Refusing normal database port. Use an isolated test server.\n");
     exit(1);

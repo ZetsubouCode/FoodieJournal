@@ -23,10 +23,10 @@ class PublicController extends Controller
             return response()->view('public.vending-page', compact('vending'))
                 ->header('Cache-Control', 'no-store')->header('X-Robots-Tag', 'noindex, follow');
         }
-        $visits = Visit::publishedVisible()->withRating()->with($this->cardRelations())
+        $visits = Visit::publishedVisible()->withFoodScore()->with($this->cardRelations())
             ->orderByDesc('visited_at')->orderByDesc('id')->limit(10)->get();
         $featured = $visits->first(fn ($visit) => $visit->coverMedia?->variant('hero')) ?? $visits->first();
-        $picks = Visit::publishedVisible()->withRating()->whereHas('recommendations')
+        $picks = Visit::publishedVisible()->withFoodScore()->whereHas('recommendations')
             ->with($this->cardRelations())->orderByDesc('visited_at')->orderByDesc('id')->limit(10)->get();
 
         return view('public.home', [
@@ -84,21 +84,21 @@ class PublicController extends Controller
 
     public function visit(string $slug)
     {
-        $visit = Visit::publishedVisible()->where('slug', $slug)->withRating()->with(['place', 'coverMedia.variants', 'items.foodType.category', 'items.cuisines', 'items.styles', 'items.ingredients', 'items.allergens', 'items.media.variants', 'media.variants', 'tags', 'recommendations'])->first();
+        $visit = Visit::publishedVisible()->where('slug', $slug)->withFoodScore()->with(['place', 'coverMedia.variants', 'items.foodType.category', 'items.cuisines', 'items.styles', 'items.ingredients', 'items.allergens', 'items.media.variants', 'media.variants', 'tags', 'recommendations'])->first();
         if (! $visit) {
             return $this->redirectSlug('visit', $slug);
         }
 
-        return view('public.visit', ['visit' => $visit, 'preview' => false, 'related' => Visit::publishedVisible()->withRating()->where('place_id', $visit->place_id)->whereKeyNot($visit->id)->with($this->cardRelations())->orderByDesc('visited_at')->orderByDesc('id')->limit(3)->get()]);
+        return view('public.visit', ['visit' => $visit, 'preview' => false, 'related' => Visit::publishedVisible()->withFoodScore()->where('place_id', $visit->place_id)->whereKeyNot($visit->id)->with($this->cardRelations())->orderByDesc('visited_at')->orderByDesc('id')->limit(3)->get()]);
     }
 
     public function place(string $slug)
     {
-        $place = Place::publishedVisible()->withRating()->where('slug', $slug)->first();
+        $place = Place::publishedVisible()->withFoodScore()->where('slug', $slug)->first();
         if (! $place) {
             return $this->redirectSlug('place', $slug);
         }
-        $visits = $place->visits()->publishedVisible()->withRating()->with($this->cardRelations())->orderByDesc('visited_at')->orderByDesc('id')->paginate(18);
+        $visits = $place->visits()->publishedVisible()->withFoodScore()->with($this->cardRelations())->orderByDesc('visited_at')->orderByDesc('id')->paginate(18);
         // History pagination must not change the cover; skip missing derivatives without reading originals.
         $coverVisit = $place->visits()->publishedVisible()
             ->whereHas('coverMedia', fn ($media) => $media->whereColumn('media.visit_id', 'visit.id')

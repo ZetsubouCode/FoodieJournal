@@ -5,7 +5,7 @@
     <div class="tasting-note__copy">
         @if($item->foodType)<a class="tasting-note__type" href="{{ url('explore').'?'.http_build_query(['tab' => 'food', 'food_type' => [$item->foodType->slug]]) }}">{{ $item->foodType->category?->name }} · {{ $item->foodType->name }}</a>@endif
         <h3>{{ $item->menu_name }}</h3>
-        <div class="tasting-note__facts"><x-domain.price :value="$item->unit_price_idr" label="Harga satuan saat dipesan" />@if($item->quantity !== null && (float)$item->quantity != 1)<span class="numeric">Jumlah: {{ (float)$item->quantity }}</span>@endif @if($item->taste_rating !== null)<x-domain.rating :value="(float)$item->taste_rating" label="Rasa" />@endif</div>
+        <div class="tasting-note__facts"><x-domain.price :value="$item->unit_price_idr" label="Harga satuan saat dipesan" />@if($item->quantity !== null && (float)$item->quantity != 1)<span class="numeric">Jumlah: {{ (float)$item->quantity }}</span>@endif <x-domain.rating :value="$item->food_rating !== null ? (float)$item->food_rating : null" label="Rating hidangan" /></div>
         @if($item->notes)<p class="prose tasting-note__notes">{{ $item->notes }}</p>@endif
         @if($item->cuisines->isNotEmpty())<p class="tasting-note__taxonomy">Asal/tradisi kuliner: {{ $item->cuisines->pluck('name')->join(', ') }}</p>@endif
         @if($item->styles->isNotEmpty())<p class="tasting-note__taxonomy">Teknik memasak: {{ $item->styles->pluck('name')->join(', ') }}</p>@endif

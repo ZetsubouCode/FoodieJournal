@@ -83,7 +83,9 @@ test('login, keyboard combobox, inline create, repeatable editor and publish pre
     await page.getByRole('button', { name: 'Tambah hidangan', exact: true }).click();
     const item = page.locator('[data-items] [data-item]').first(); await item.getByLabel('Nama menu saat dipesan').fill('Mie dari browser QA');
     await item.getByLabel('Harga satuan saat dipesan (Rp)').fill('25000');
-    await item.getByLabel('Rating rasa', { exact: true }).selectOption('4.5');
+    await item.getByLabel('Rating hidangan', { exact: true }).selectOption('4.5');
+    await page.getByRole('textbox', { name: 'Kelebihan' }).fill('Staf membantu.\nMeja bersih.');
+    await page.getByRole('textbox', { name: 'Kekurangan' }).fill('Parkir terbatas.');
     const cuisine = item.getByRole('combobox', { name: 'Asal/tradisi kuliner' });
     await cuisine.fill('Jawa'); await expect(item.getByRole('option', { name: 'Jawa QA' })).toBeVisible();
     await cuisine.press('ArrowDown'); await cuisine.press('Enter'); await expect(item.locator('input[name$="[cuisines][]"]')).toHaveCount(1);
@@ -96,6 +98,7 @@ test('login, keyboard combobox, inline create, repeatable editor and publish pre
     const confirm = page.getByRole('dialog', { name: 'Konfirmasi tindakan' }); await expect(confirm).toBeVisible();
     await confirm.getByRole('button', { name: 'Lanjutkan', exact: true }).click(); await expect(page.locator('.badge--published')).toBeVisible();
     await page.getByRole('link', { name: 'Pratinjau tersimpan', exact: true }).click(); await expect(page).toHaveURL(/\/preview$/); await expect(page.getByText('Pratinjau admin', { exact: true })).toBeVisible();
+    await expect(page.locator('.dossier-observations li')).toHaveText(['Staf membantu.', 'Meja bersih.', 'Parkir terbatas.']);
 });
 
 test('gallery loads originals only when opened and dialog restores focus', async ({ page }) => {
@@ -117,6 +120,17 @@ test('admin mobile, reduced motion, errors and 200 percent text reflow', async (
     }
     await page.setViewportSize({ width: 375, height: 812 }); await page.screenshot({ path: 'test-results/admin-editor-mobile.png', fullPage: true });
     await noAxeViolations(page); await page.emulateMedia({ reducedMotion: 'reduce' });
+    for (const size of ['100%', '200%']) {
+        await page.evaluate(size => { document.documentElement.style.fontSize = size; window.scrollTo(0, 0); }, size);
+        await page.getByRole('textbox', { name: 'Kelebihan' }).focus();
+        await page.keyboard.press('Tab');
+        const cons = page.getByRole('textbox', { name: 'Kekurangan' });
+        await expect(cons).toBeFocused();
+        const field = await cons.boundingBox();
+        const saveBar = await page.locator('.save-bar').boundingBox();
+        expect(field.y + field.height).toBeLessThan(saveBar.y);
+        await noOverflow(page);
+    }
     await page.goto('/explore'); await page.evaluate(() => { document.documentElement.style.fontSize = '200%'; }); await noOverflow(page);
     await page.goto('/does-not-exist'); await expect(page.getByRole('heading', { name: 'Halaman yang dicari tidak ditemukan' })).toBeVisible(); await noAxeViolations(page);
 });

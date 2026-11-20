@@ -16,7 +16,7 @@ class VisitController extends Controller
     public function index(Request $request)
     {
         $filters = $request->validate(['status' => 'nullable|in:draft,private,published', 'place_id' => 'nullable|integer', 'from' => 'nullable|date_format:Y-m-d', 'to' => 'nullable|date_format:Y-m-d']);
-        $query = Visit::where('user_id', $request->user()->id)->with('place')->withRating();
+        $query = Visit::where('user_id', $request->user()->id)->with('place')->withFoodScore();
         foreach (['status', 'place_id'] as $field) {
             if (! empty($filters[$field])) {
                 $query->where($field, $filters[$field]);
@@ -49,7 +49,7 @@ class VisitController extends Controller
         Gate::authorize('update', $visit);
         $visit->load(['place', 'items.foodType', 'items.cuisines', 'items.styles', 'items.ingredients', 'items.allergens', 'items.media', 'media.variants', 'tags', 'recommendations']);
         $rows = $visit->items->map(function ($item) {
-            $row = $item->only(['id', 'menu_name', 'food_type_id', 'quantity', 'unit_price_idr', 'taste_rating', 'notes']);
+            $row = $item->only(['id', 'menu_name', 'food_type_id', 'quantity', 'unit_price_idr', 'food_rating', 'notes']);
             foreach (['cuisines', 'styles', 'ingredients'] as $relation) {
                 $row[$relation] = $item->$relation->map(fn ($term) => ['id' => $term->id, 'label' => $term->name])->all();
             }

@@ -1,6 +1,6 @@
 # Foodie product vision
 
-Approved experience contract, 8 November 2026 (Asia/Jakarta). Implementation claims belong in [implementation status](implementation-status.md); this document describes intent.
+Approved experience contract, 8 November 2026 (Asia/Jakarta). The 19 November rating decision is recorded in [ADR 003](adr/003-food-only-ratings.md). Implementation claims belong in [implementation status](implementation-status.md); this document describes intent.
 
 ## Authority and read order
 
@@ -24,8 +24,8 @@ Foodie does not sell, cook, deliver or book meals. It is not a recipe collection
 | --- | --- | --- |
 | Home `/` | Play with a memory, or enter a real story directly | One vintage Memory Archive vending hero; recent visits and personal picks; ordinary navigation always available |
 | Explore `/explore` | Discover and narrow the archive | Interactive discovery board plus bold photographic editorial composition; complete Visit/Food/Place browse/search/filter/sort/view/pagination/history |
-| Visit `/visit/{slug}` | Read one dated experience | Cinematic, tactile archival story; photos, narrative, dishes, historical costs, nullable personal assessment |
-| Place `/place/{slug}` | Understand context across visits | Related cinematic environment; location and published visit chronology, aggregate with rated-visit count |
+| Visit `/visit/{slug}` | Read one dated experience | Cinematic, tactile archival story; photos, narrative, dishes, historical costs, dish reviews and ratings, optional visit observations |
+| Place `/place/{slug}` | Understand context across visits | Related cinematic environment; location and published visit chronology, average dish rating and rated dish/visit counts |
 | HTTP errors | Understand a failure and recover | Approved Editorial Bold composition, shared chrome and safe status-specific actions |
 | Admin | Record and maintain truthful content efficiently | Quiet, accessible forms, progressive enrichment, explicit publication and safe recovery |
 
@@ -35,7 +35,7 @@ Explore has no second vending machine. P1 city/food/category/cuisine/style/recom
 
 Reuse `Visit::publishedVisible()`, `Place::publishedVisible()`, `ExploreState`, `ExploreQuery`, `PublicOptions`, `VendingMachine` and the visibility-aware media controller. Eligibility covers cards, counts, related records, options, previews, metadata and new media requests. Draft/private/deleted content stays private. Previously downloaded public images cannot be retracted.
 
-Ratings ignore nulls and round only for display; no rating is not zero. Visit total differs from the item unit-price snapshot. Food type, category, cuisine, technique, ingredient, allergen, tag and recommendation retain distinct meanings. Missing allergen evidence is unknown, never safe. No fabricated records, photos, counters or endorsements fill empty layouts.
+Each ordered dish or drink has an optional rating and review. Visit and Place scores average rated item occurrences, with Place limited to eligible published Visits. Scores round once for display. Optional Visit observations record non-food positives and negatives. Visit total differs from the item unit-price snapshot. Food type, category, cuisine, technique, ingredient, allergen, tag and recommendation retain distinct meanings. Missing allergen evidence is unknown, never safe. No fabricated records, photos, counters or endorsements fill empty layouts.
 
 No new SPA, animation engine, CMS, public accounts, sound system or WebGL dependency is required by this phase. Meaningful CSS perspective/2.5D/3D remains allowed when readable, accessible and measured. Owner `.env`, credentials, media and databases are protected; use [isolated QA environments](operations.md#test-and-browser-environments).
 

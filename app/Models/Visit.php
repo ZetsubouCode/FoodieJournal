@@ -19,7 +19,7 @@ class Visit extends Model
 
     protected function casts(): array
     {
-        return ['visited_at' => 'immutable_datetime', 'total_spent_idr' => 'integer', 'service_rating' => 'decimal:1', 'atmosphere_rating' => 'decimal:1', 'cleanliness_rating' => 'decimal:1', 'value_rating' => 'decimal:1'];
+        return ['visited_at' => 'immutable_datetime', 'total_spent_idr' => 'integer'];
     }
 
     public function place()
@@ -62,25 +62,25 @@ class Visit extends Model
         return $query->where('visit.status', 'published')->whereHas('place');
     }
 
-    public function scopeWithRating(Builder $query): Builder
+    public function scopeWithFoodScore(Builder $query): Builder
     {
-        return $query->addSelect('visit.*')->selectRaw(RatingSql::overall().' AS overall_score');
+        return $query->addSelect('visit.*')
+            ->selectRaw(RatingSql::visit().' AS food_score')
+            ->selectRaw(RatingSql::visitItemCount().' AS rated_item_count');
     }
 
-    public function getOverallRatingAttribute(): ?float
+    public function getFoodScoreAttribute($value): ?float
     {
-        if (array_key_exists('overall_score', $this->attributes)) {
-            return $this->overall_score === null ? null : (float) $this->overall_score;
+        if (array_key_exists('food_score', $this->attributes)) {
+            return $value === null ? null : (float) $value;
         }
-        $taste = $this->items->whereNotNull('taste_rating')->avg('taste_rating');
-        $values = array_values(array_filter([$taste, $this->service_rating, $this->atmosphere_rating, $this->cleanliness_rating, $this->value_rating], fn ($v) => $v !== null));
 
-        return $values ? array_sum($values) / count($values) : null;
+        return $this->items->avg('food_rating');
     }
 
-    public function getTasteRatingAttribute(): ?float
+    public function getRatedItemCountAttribute($value): int
     {
-        return $this->items->whereNotNull('taste_rating')->avg('taste_rating');
+        return $value === null ? $this->items->whereNotNull('food_rating')->count() : (int) $value;
     }
 
     public function getDisplayTitleAttribute(): string

@@ -51,7 +51,7 @@ await page.waitForFunction(() => document.querySelector('[data-machine]').datase
 await shot('machine-photo-ready', '[data-machine]');
 await load('/explore'); await shot('explore-hero', '.curiosity-index'); await shot('explore-results', '[data-discovery]');
 await load('/visit/demo-bara-di-ujung-hari'); await shot('visit-full');
-for (const [name, selector] of [['hero','.dossier-hero'],['story','.dossier-story'],['food','.dossier-tasting'],['ratings','.dossier-assessment'],['gallery','.dossier-gallery'],['conclusion','.dossier-conclusion']]) await shot('visit-'+name, selector);
+for (const [name, selector] of [['hero','.dossier-hero'],['story','.dossier-story'],['food','.dossier-tasting'],['observations','.dossier-observations'],['gallery','.dossier-gallery'],['conclusion','.dossier-conclusion']]) await shot('visit-'+name, selector);
 await page.locator('[data-view-photo]').first().click(); await page.waitForSelector('[data-viewer-image]:not([hidden])'); await shot('visit-viewer'); await page.keyboard.press('Escape');
 await load('/place/demo-bara-senja'); await shot('place-desktop');
 await load('/missing-cinematic-page'); await shot('error-desktop');

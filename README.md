@@ -12,7 +12,7 @@ Read [AGENTS](AGENTS.md) and [product vision / document precedence](docs/product
 
 ## Run this workspace
 
-The existing Foodie database and controlled allergen vocabulary are configured privately in `.env`. The isolated local MariaDB data directory now serves Foodie on loopback port 3306; it is separate from XAMPP's shared `C:\xampp\mysql\data`. No default owner/password is created. See [operations](docs/operations.md) before switching database instances or running migrations.
+The existing Foodie database and controlled allergen vocabulary are configured privately in `.env`. As of 20 November, Foodie uses a dedicated local MariaDB data directory on loopback port 33079 and restored private media, separate from XAMPP's shared `C:\xampp\mysql\data`. No default owner/password is created. See [operations](docs/operations.md) before switching database instances or running migrations.
 
 ```powershell
 php artisan foodie:admin
@@ -31,7 +31,7 @@ php tools/prepare-cinematic-qa.php   # dedicated cinematic.sqlite + cinematic-me
 php tools/cinematic-server.php      # loopback http://127.0.0.1:8012
 ```
 
-The local demo has 12 fictional places, 20 published visits, one draft/private example each, dishes and bundled illustrative photos. It is labeled demo content, not real owner memories. Preparation verifies its SQLite target and uses a separate media root; it does not create content in the active Foodie database. Existing fixtures can be served without preparing again.
+The local demo has 12 fictional places, 20 published visits, one draft/private example each, dishes and bundled illustrative photos. It is labeled demo content, not real owner memories. Preparation verifies its SQLite target and uses a separate media root; it does not create content in the active Foodie database. Prepare or upgrade isolated fixtures after a schema change. Use a fresh fixture to see current demo seed content.
 
 Functional Playwright tests use a different fixture: `php tools/prepare-browser.php`, then `php tools/browser-server.php` on 8011. Tests expecting labels such as “Ingin kembali QA” require 8011; photographic captures use 8012. Do not infer a product regression from mixing these datasets. See [test safety and environment](docs/operations.md#test-and-browser-environments). P0-3 `readability-states.spec.js` also needs the photographic server on 8012 and the dedicated empty/sparse servers on 8013/8014; prepare them with `php tools/readability-qa.php prepare empty` / `prepare sparse`. Full startup and verification commands are in [readability/state evidence](docs/qa/readability-states/verification.md).
 
@@ -65,4 +65,4 @@ Maintained documentation:
 
 Historical records (dated claims, not current all-green certification): [implementation report](docs/implementation-report.md), [P0 checklist](docs/implementation-checklist.md), [domain decisions](docs/implementation-decisions.md), [cinematic migration](docs/cinematic-redesign.md), [vending implementation](docs/vending-machine-interactive.md), [refinement](docs/vending-machine-refinement.md), [lamp correction](docs/hanging-lamp-correction.md), [HTTP error work](docs/error-page-redesign.md), and retained `docs/qa/` captures. These preserve provenance; current contracts supersede conflicting mechanics/layouts.
 
-All table names are singular, including framework support tables. Raw originals and derivatives are private; media requests check current visit eligibility. Unpublishing denies subsequent requests. Ratings ignore nulls and round only for display; visit totals remain separate from historical item prices. Allergen information is observational and never a safety guarantee.
+All table names are singular, including framework support tables. Raw originals and derivatives are private; media requests check current visit eligibility. Unpublishing denies subsequent requests. Only dishes and drinks have entered ratings. Visit and Place show averages of rated items, and optional Visit observations record non-food positives and negatives. See the [backup and upgrade procedure](docs/operations.md#existing-databases-food-only-rating-upgrade) for an existing database. Visit totals remain separate from historical item prices. Allergen information is observational and never a safety guarantee.

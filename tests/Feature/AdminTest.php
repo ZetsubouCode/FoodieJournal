@@ -58,12 +58,15 @@ class AdminTest extends TestCase
         $this->assertSame('2026-11-03 17:15', $visit->visited_at->format('Y-m-d H:i'));
         $this->get('/admin/visit/'.$visit->id.'/edit')->assertOk()->assertSee('Harga satuan', false, false);
         $cuisine = Cuisine::create(['name' => 'Thai']);
-        $edit = [...$data, 'editor' => 1, 'version' => 1, 'intent' => 'published', 'total_spent_idr' => 60000, 'items' => [['menu_name' => 'Mie kuah', 'quantity' => 1, 'unit_price_idr' => 25000, 'taste_rating' => 4.5, 'cuisines' => [$cuisine->id]]]];
+        $edit = [...$data, 'editor' => 1, 'version' => 1, 'intent' => 'published', 'total_spent_idr' => 60000, 'items' => [['menu_name' => 'Mie kuah', 'quantity' => 1, 'unit_price_idr' => 25000, 'food_rating' => 4.5, 'cuisines' => [$cuisine->id]]]];
         $this->put('/admin/visit/'.$visit->id, $edit)->assertSessionHasNoErrors();
         $this->assertSame('published', $visit->fresh()->status);
         $this->assertSame(60000, $visit->fresh()->total_spent_idr);
         $this->assertSame(25000, VisitItem::first()->unit_price_idr);
-        $this->get('/admin/visit/'.$visit->id.'/edit')->assertOk();
+        $this->assertSame('4.5', VisitItem::first()->food_rating);
+        $this->get('/admin/visit/'.$visit->id.'/edit')->assertOk()->assertSee('Rating hidangan')->assertSee('Ulasan hidangan')
+            ->assertSee('Catatan kunjungan')->assertDontSee('name="service_rating"', false);
+        $this->get('/admin/visit')->assertOk()->assertSee('Rata-rata rating hidangan: 4,5');
         $this->put('/admin/visit/'.$visit->id, $edit)->assertSessionHasErrors('version');
     }
 
@@ -81,6 +84,47 @@ class AdminTest extends TestCase
         $item = VisitItem::factory()->for($other)->create();
         $this->put('/admin/visit/'.$visit->id, [...$base, 'intent' => 'draft', 'editor' => 1, 'items' => [['id' => $item->id, 'menu_name' => 'Tamper']]])->assertSessionHasErrors('items.0.id');
         $this->assertNotSame('Tamper', $item->fresh()->menu_name);
+    }
+
+    public function test_observations_save_and_allow_unrated_publication_while_legacy_inputs_are_ignored(): void
+    {
+        $owner = $this->admin();
+        $this->actingAs($owner);
+        $visit = Visit::factory()->for($owner, 'user')->create(['experience' => null]);
+        $edit = '/admin/visit/'.$visit->id.'/edit';
+        $url = '/admin/visit/'.$visit->id;
+        $base = ['place_id' => $visit->place_id, 'visited_at' => '2026-11-04T00:15', 'version' => 1, 'intent' => 'published', 'editor' => 1];
+        $this->put($url, [...$base, 'total_spent_idr' => 50000, 'pros' => " \n\t", 'service_review' => 'Catatan usang'])
+            ->assertSessionHasErrors('experience');
+        $this->assertSame('draft', $visit->fresh()->status);
+
+        $pros = "Staf membantu.\n\nMeja <bersih>.";
+        $this->put($url, [...$base, 'pros' => $pros, 'cons' => ''])
+            ->assertSessionHasNoErrors();
+        $this->assertSame($pros, $visit->fresh()->pros);
+        $this->assertNull($visit->fresh()->cons);
+        $this->assertSame('published', $visit->fresh()->status);
+        $this->get($url.'/preview')->assertOk()->assertHeader('X-Robots-Tag', 'noindex, nofollow')
+            ->assertSee('Penilaian belum dicatat')->assertSeeInOrder(['Staf membantu.', 'Meja <bersih>.'])->assertDontSee('<bersih>', false);
+        $this->get('/visit/'.$visit->slug)->assertOk()->assertSee('Staf membantu.');
+
+        $base['version'] = 2;
+        foreach ([0, 0.5, 4.2, 5.5] as $rating) {
+            $this->from($edit)->put($url, [...$base, 'pros' => $pros, 'items' => [['menu_name' => 'Teh', 'food_rating' => $rating]]])
+                ->assertSessionHasErrors('items.0.food_rating')->assertSessionHasInput('pros', $pros);
+        }
+        $this->get($edit)->assertOk()->assertSee('Meja &lt;bersih&gt;.', false)->assertSee('Teh');
+        $this->put($url, [...$base, 'cons' => str_repeat("\u{1F600}", 17000)])
+            ->assertSessionHasErrors('cons');
+        $this->put($url, [...$base, 'pros' => null, 'cons' => "Parkir terbatas.\nAntrean panjang.", 'service_rating' => 5,
+            'overall_score' => 5, 'service_review' => 'Catatan usang', 'items' => [['menu_name' => 'Teh', 'taste_rating' => 5]]])
+            ->assertSessionHasNoErrors();
+
+        $this->assertNull($visit->fresh()->pros);
+        $this->assertSame("Parkir terbatas.\nAntrean panjang.", $visit->fresh()->cons);
+        $this->assertNull($visit->items()->sole()->food_rating);
+        $this->get($url.'/preview')->assertOk()->assertSee('Penilaian belum dicatat')->assertDontSee('Catatan usang')
+            ->assertDontSee('>Kelebihan</h3>', false)->assertSeeInOrder(['Parkir terbatas.', 'Antrean panjang.']);
     }
 
     public function test_taxonomy_hierarchy_duplicates_and_reference_protection(): void

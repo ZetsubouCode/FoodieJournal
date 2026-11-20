@@ -3,10 +3,10 @@
     <input type="hidden" name="items[{{ $index }}][id]" value="{{ $row['id'] ?? '' }}">
     <div class="stack">
         <x-ui.field name="items[{{ $index }}][menu_name]" label="Nama menu saat dipesan" :value="$row['menu_name'] ?? null" required />
-        <div class="form-grid"><x-ui.combobox name="items[{{ $index }}][food_type_id]" label="Jenis hidangan" kind="food-type" :selected="$row['food_type_option'] ?? $row['food_type_id'] ?? null" /><x-ui.rating-input name="items[{{ $index }}][taste_rating]" label="Rating rasa" :value="$row['taste_rating'] ?? null" />
+        <div class="form-grid"><x-ui.combobox name="items[{{ $index }}][food_type_id]" label="Jenis hidangan" kind="food-type" :selected="$row['food_type_option'] ?? $row['food_type_id'] ?? null" /><x-ui.rating-input name="items[{{ $index }}][food_rating]" label="Rating hidangan" :value="$row['food_rating'] ?? null" />
         <x-ui.field name="items[{{ $index }}][quantity]" label="Jumlah" type="number" step="0.01" min="0.01" :value="$row['quantity'] ?? null" /><x-ui.field name="items[{{ $index }}][unit_price_idr]" label="Harga satuan saat dipesan (Rp)" type="number" min="0" step="1" :value="$row['unit_price_idr'] ?? null" /></div>
         <div class="form-grid"><x-ui.combobox name="items[{{ $index }}][cuisines]" label="Asal/tradisi kuliner" kind="cuisine" :multiple="true" :selected="$row['cuisines'] ?? []" /><x-ui.combobox name="items[{{ $index }}][styles]" label="Teknik memasak" kind="style" :multiple="true" :selected="$row['styles'] ?? []" /></div>
-        <x-ui.field name="items[{{ $index }}][notes]" label="Catatan hidangan" :value="$row['notes'] ?? null" textarea />
+        <x-ui.field name="items[{{ $index }}][notes]" label="Ulasan hidangan" :value="$row['notes'] ?? null" textarea />
         <details><summary>Bahan & informasi alergen (opsional)</summary><div class="stack">
             <x-ui.combobox name="items[{{ $index }}][ingredients]" label="Bahan yang diketahui" kind="ingredient" :multiple="true" :selected="$row['ingredients'] ?? []" />
             <div data-ingredient-sources data-index="{{ $index }}" data-sources="{{ json_encode($row['ingredient_sources'] ?? []) }}"></div>

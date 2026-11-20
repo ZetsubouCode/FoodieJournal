@@ -27,9 +27,9 @@
                     <header class="archive-filter__group-head"><div><p>Kriteria pencarian</p><h3 id="filter-heading-{{ $key }}">{{ $group['label'] }}</h3></div><button type="button" class="archive-filter__reset-group" data-filter-group-reset="{{ $key }}">Hapus pilihan</button></header>
                     @if($key === 'rating')
                         <fieldset data-filter-dimension="rating_min"><legend class="sr-only">Harga & rating</legend>
-                            <p class="archive-filter__help">{{ ['visit' => 'Total pengeluaran untuk satu kunjungan. Rating adalah penilaian keseluruhan kunjungan.', 'food' => 'Harga satuan hidangan saat dipesan. Rating adalah penilaian rasa hidangan.', 'place' => 'Rating adalah rata-rata kunjungan published yang telah dinilai. Filter harga tidak digunakan untuk tempat.'][$state->get('tab')] }}</p>
+                            <p class="archive-filter__help">{{ ['visit' => 'Harga memakai total pengeluaran kunjungan. Rating merata-ratakan semua hidangan yang dinilai dalam kunjungan, termasuk di luar filter hidangan.', 'food' => 'Harga satuan dan rating berasal dari hidangan yang cocok dengan filter.', 'place' => 'Rating merata-ratakan semua hidangan yang dinilai dari kunjungan terbit di tempat ini, termasuk di luar filter hidangan.'][$state->get('tab')] }}</p>
                             @if($state->get('tab') !== 'place')<div class="form-grid"><x-ui.field name="price_min" label="Harga minimum (Rp)" type="number" min="0" step="1" :value="$state->get('price_min')" /><x-ui.field name="price_max" label="Harga maksimum (Rp)" type="number" min="0" step="1" :value="$state->get('price_max')" /></div>@endif
-                            <x-ui.field name="rating_min" :label="$state->get('tab') === 'food' ? 'Rasa minimum' : 'Rating minimum'" type="number" min="1" max="5" step="0.1" :value="$state->get('rating_min')" />
+                            <x-ui.field name="rating_min" label="Rating minimum" type="number" min="1" max="5" step="0.1" :value="$state->get('rating_min')" />
                         </fieldset>
                     @endif
                     @foreach($group['fields'] as $field)

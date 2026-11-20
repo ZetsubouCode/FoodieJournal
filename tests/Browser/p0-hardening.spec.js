@@ -47,7 +47,7 @@ test('photo-free Place has genuine facts and no unused photo track at every widt
         await page.setViewportSize({ width, height: 1000 });
         await ready(page, '/place/qa-text-place');
         await expect(page.locator('.place-dossier')).toHaveClass(/place-dossier--text/);
-        await expect(page.locator('.place-dossier')).toContainText('0 kunjungan dinilai');
+        await expect(page.locator('.place-dossier')).toContainText('0 hidangan dinilai dalam 0 kunjungan');
         await expect(page.locator('.place-dossier')).toContainText('Belum Dinilai');
         await expect(page.locator('.place-dossier img, .place-dossier__photo, .place-dossier a[href*="maps"]')).toHaveCount(0);
         for (const scale of [100, 200]) {

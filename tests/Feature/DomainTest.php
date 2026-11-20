@@ -6,6 +6,7 @@ use App\Models\Place;
 use App\Models\Visit;
 use App\Models\VisitItem;
 use App\Rules\HalfRating;
+use App\Support\Presentation;
 use Database\Seeders\AllergenSeeder;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\DB;
@@ -17,21 +18,56 @@ class DomainTest extends TestCase
 {
     use RefreshDatabase;
 
-    public function test_rating_precision_and_published_place_aggregate(): void
+    public function test_visit_food_score_excludes_nulls_and_rounds_only_for_display(): void
     {
-        $visit = Visit::factory()->published()->create(['service_rating' => 3.5]);
-        VisitItem::factory()->for($visit)->create(['taste_rating' => 4.5]);
-        VisitItem::factory()->for($visit)->create(['taste_rating' => 3.5]);
+        $visit = Visit::factory()->published()->create();
+        $this->assertNull($visit->fresh()->food_score);
+        VisitItem::factory()->for($visit)->create(['food_rating' => 4.5]);
+        $this->assertSame(4.5, $visit->fresh()->food_score);
+        $second = VisitItem::factory()->for($visit)->create(['food_rating' => 3.5]);
         VisitItem::factory()->for($visit)->create();
-        Visit::factory()->private()->create(['place_id' => $visit->place_id, 'service_rating' => 1]);
-        Visit::factory()->published()->create(['place_id' => $visit->place_id]);
-        $this->assertSame(3.75, $visit->fresh()->overall_rating);
-        $this->assertEquals(3.75, Visit::withRating()->find($visit->id)->overall_rating);
-        $place = Place::withRating()->find($visit->place_id);
-        $this->assertEquals(3.75, $place->rating_score);
-        $this->assertEquals(1, $place->rated_visit_count);
-        $visit->update(['status' => 'private']);
-        $this->assertNull(Place::withRating()->find($place->id)->rating_score);
+
+        $this->assertSame(4.0, Visit::withFoodScore()->find($visit->id)->food_score);
+        $second->update(['food_rating' => 4.0]);
+        foreach ([$visit->fresh(), $visit->fresh('items'), Visit::withFoodScore()->find($visit->id)] as $loaded) {
+            $this->assertSame(4.25, $loaded->food_score);
+            $this->assertSame(2, $loaded->rated_item_count);
+            $this->assertSame('4,3', Presentation::rating($loaded->food_score));
+        }
+        $visit->items()->update(['food_rating' => null]);
+        $unrated = Visit::withFoodScore()->find($visit->id);
+        $this->assertNull($unrated->food_score);
+        $this->assertSame(0, $unrated->rated_item_count);
+    }
+
+    public function test_place_score_weights_rated_item_occurrences_and_revokes_hidden_visits(): void
+    {
+        $first = Visit::factory()->published()->create();
+        $placeId = $first->place_id;
+        $repeat = Visit::factory()->published()->create(['place_id' => $placeId]);
+        VisitItem::factory()->for($first)->create(['food_rating' => 5, 'menu_name' => 'Soto']);
+        VisitItem::factory()->for($repeat)->count(3)->create(['food_rating' => 3, 'menu_name' => 'Soto', 'quantity' => 2]);
+        VisitItem::factory()->for($repeat)->create();
+        foreach (['draft', 'private', 'published'] as $status) {
+            $hidden = Visit::factory()->create(['place_id' => $placeId, 'status' => $status]);
+            VisitItem::factory()->for($hidden)->create(['food_rating' => 1]);
+            if ($status === 'published') {
+                $hidden->delete();
+            }
+        }
+
+        $place = Place::withFoodScore()->find($placeId);
+        $this->assertSame(3.5, $place->food_score);
+        $this->assertSame(4, $place->rated_item_count);
+        $this->assertSame(2, $place->rated_visit_count);
+
+        $repeat->update(['status' => 'private']);
+        $this->assertSame(5.0, Place::withFoodScore()->find($placeId)->food_score);
+        $place->delete();
+        $deleted = Place::withTrashed()->withFoodScore()->find($placeId);
+        $this->assertNull($deleted->food_score);
+        $this->assertSame(0, $deleted->rated_item_count);
+        $this->assertSame(0, $deleted->rated_visit_count);
     }
 
     public function test_rating_validation_rejects_out_of_range_and_fractional_values(): void

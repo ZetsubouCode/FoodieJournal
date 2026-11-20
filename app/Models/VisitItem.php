@@ -11,11 +11,11 @@ class VisitItem extends Model
 
     protected $table = 'visit_item';
 
-    protected $fillable = ['food_type_id', 'menu_name', 'quantity', 'unit_price_idr', 'taste_rating', 'notes', 'sort_order'];
+    protected $fillable = ['food_type_id', 'menu_name', 'quantity', 'unit_price_idr', 'food_rating', 'notes', 'sort_order'];
 
     protected function casts(): array
     {
-        return ['taste_rating' => 'decimal:1', 'unit_price_idr' => 'integer', 'quantity' => 'decimal:2'];
+        return ['food_rating' => 'decimal:1', 'unit_price_idr' => 'integer', 'quantity' => 'decimal:2'];
     }
 
     public function visit()

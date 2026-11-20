@@ -31,7 +31,7 @@ class VisitRequest extends FormRequest
             'items.*.quantity' => 'nullable|numeric|min:0.01|max:999999.99',
             'items.*.unit_price_idr' => 'nullable|integer|min:0|max:999999999999',
             'items.*.food_type_id' => 'nullable|integer|exists:food_type,id',
-            'items.*.taste_rating' => ['nullable', new HalfRating], 'items.*.notes' => 'nullable|string|max:10000',
+            'items.*.food_rating' => ['nullable', new HalfRating], 'items.*.notes' => 'nullable|string|max:10000',
             'items.*.ingredient_sources' => 'nullable|array|max:100', 'items.*.ingredient_sources.*' => 'nullable|string|max:500',
             'items.*.allergens' => 'nullable|array|max:30',
             'items.*.allergens.*.id' => 'required|integer|exists:allergen,id',
@@ -39,11 +39,8 @@ class VisitRequest extends FormRequest
             'items.*.allergens.*.evidence_source' => 'required|string|max:500',
             'items.*.allergens.*.notes' => 'nullable|string|max:2000',
         ];
-        foreach (['experience', 'service_review', 'atmosphere_review', 'cleanliness_review', 'value_review', 'conclusion'] as $field) {
+        foreach (['experience', 'pros', 'cons', 'conclusion'] as $field) {
             $rules[$field] = ['nullable', 'string', 'max:30000', new TextByteLimit];
-        }
-        foreach (['service', 'atmosphere', 'cleanliness', 'value'] as $field) {
-            $rules[$field.'_rating'] = ['nullable', new HalfRating];
         }
         foreach (['cuisines' => 'cuisine', 'styles' => 'cooking_style', 'ingredients' => 'ingredient', 'media' => 'media'] as $field => $table) {
             $rules['items.*.'.$field] = 'nullable|array|max:100';
@@ -86,6 +83,6 @@ class VisitRequest extends FormRequest
 
     public function attributes(): array
     {
-        return ['place_id' => 'tempat', 'visited_at' => 'tanggal kunjungan', 'items.*.menu_name' => 'nama hidangan', 'items.*.allergens.*.evidence_source' => 'sumber informasi alergen'];
+        return ['place_id' => 'tempat', 'visited_at' => 'tanggal kunjungan', 'pros' => 'kelebihan', 'cons' => 'kekurangan', 'items.*.menu_name' => 'nama hidangan', 'items.*.food_rating' => 'rating hidangan', 'items.*.allergens.*.evidence_source' => 'sumber informasi alergen'];
     }
 }

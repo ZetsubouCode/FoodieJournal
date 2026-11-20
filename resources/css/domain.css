@@ -18,11 +18,15 @@
 .gallery { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: var(--space-4); } .gallery button { padding: 0; border: 0; background: none; color: inherit; text-align: left; }
 .viewer { max-width: min(80rem, calc(100vw - 2rem)); } .viewer img { max-height: 75dvh; width: 100%; object-fit: contain; }
 .viewer img.viewer-zoom { max-height: none; width: auto; max-width: none; }
-.item-entry { padding-block: var(--space-8); } .item-entry h3 { font: 400 1.8rem/1.2 var(--font-display); } .review-grid { display: grid; grid-template-columns: 2fr 1fr; gap: var(--space-12); }
+.item-entry { padding-block: var(--space-8); } .item-entry h3 { font: 400 1.8rem/1.2 var(--font-display); }
 .admin-nav { padding: var(--space-3) var(--space-4); background: var(--surface-raised); border-radius: var(--radius-sm); } .admin-nav a[aria-current=page] { color: var(--action-primary-bg); font-weight: 700; }
 .editor-section { padding-block: var(--space-6); scroll-margin-top: var(--space-6); } .item-editor { padding: var(--space-6); background: var(--surface-raised); border-radius: var(--radius-md); margin-block: var(--space-6); }
 .step-nav { display: flex; gap: var(--space-4); flex-wrap: wrap; margin-block: var(--space-8); } .step-nav a { min-height: var(--control-height); display: inline-flex; align-items: center; }
 .save-bar { position: sticky; bottom: 0; background: var(--surface-page); padding-block: var(--space-4); z-index: 10; }
 @media(max-width: 1023px) { .results { grid-template-columns: repeat(2,minmax(0,1fr)); } .hero { gap: var(--space-6); } }
-@media(max-width: 767px) { .hero, .review-grid { grid-template-columns: 1fr; } .hero { margin-bottom: var(--space-12); } .hero .media-image { aspect-ratio: 4/3; } .hero-copy { padding-block: 0; } .gallery { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+@media(max-width: 767px) { .hero { grid-template-columns: 1fr; margin-bottom: var(--space-12); } .hero .media-image { aspect-ratio: 4/3; } .hero-copy { padding-block: 0; } .gallery { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+@media(max-width: 600px) {
+    /* Keep keyboard-focused fields above the stacked save actions. */
+    :root:has(.public-page--admin [data-editor] .save-bar) { scroll-padding-block-end: min(14rem, 54dvh); }
+}
 @media(max-width: 550px) { .results { grid-template-columns: 1fr; } .results--list .journal-card > a { grid-template-columns: 1fr; } .toolbar > .btn { flex: 1; } .site-header { gap: var(--space-4); } .site-header nav { gap: var(--space-4); } }

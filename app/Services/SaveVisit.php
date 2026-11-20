@@ -10,6 +10,7 @@ use App\Support\Presentation;
 use Illuminate\Database\UniqueConstraintViolationException;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 use Illuminate\Validation\ValidationException;
 
 class SaveVisit
@@ -33,7 +34,7 @@ class SaveVisit
                         abort(403);
                     }
                     $new = ! $visit->exists;
-                    $visit->fill(Arr::only($data, ['place_id', 'title', 'experience', 'service_review', 'atmosphere_review', 'cleanliness_review', 'value_review', 'conclusion', 'service_rating', 'atmosphere_rating', 'cleanliness_rating', 'value_rating', 'total_spent_idr']));
+                    $visit->fill(Arr::only($data, ['place_id', 'title', 'experience', 'pros', 'cons', 'conclusion', 'total_spent_idr']));
                     if (array_key_exists('visited_at', $data)) {
                         $visit->visited_at = Presentation::utcFromLocal($data['visited_at']);
                     }
@@ -60,7 +61,7 @@ class SaveVisit
                             if (! $item) {
                                 throw ValidationException::withMessages(["items.$index.id" => 'Hidangan bukan milik kunjungan ini.']);
                             }
-                            $item->fill(Arr::only($row, ['food_type_id', 'menu_name', 'quantity', 'unit_price_idr', 'taste_rating', 'notes']));
+                            $item->fill(Arr::only($row, ['food_type_id', 'menu_name', 'quantity', 'unit_price_idr', 'food_rating', 'notes']));
                             $item->sort_order = $index;
                             $item->save();
                             $kept[] = $item->id;
@@ -120,9 +121,9 @@ class SaveVisit
         if (! $visit->visited_at) {
             $errors['visited_at'] = 'Isi tanggal dan waktu sebelum menerbitkan.';
         }
-        $hasText = collect([$visit->experience, $visit->conclusion, $visit->service_review, $visit->atmosphere_review, $visit->cleanliness_review, $visit->value_review])->contains(fn ($text) => filled($text));
+        $hasText = collect([$visit->experience, $visit->conclusion, $visit->pros, $visit->cons])->contains(fn ($text) => Str::trim($text ?? '') !== '');
         if (! $hasText && ! $visit->items()->exists()) {
-            $errors['experience'] = 'Tambahkan cerita atau setidaknya satu hidangan sebelum menerbitkan.';
+            $errors['experience'] = 'Tambahkan cerita, catatan kunjungan, atau setidaknya satu hidangan sebelum menerbitkan.';
         }
         if (! $visit->place()->exists()) {
             $errors['place_id'] = 'Tempat tidak tersedia.';

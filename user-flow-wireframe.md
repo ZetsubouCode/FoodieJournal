@@ -51,7 +51,7 @@ flowchart TD
     G --> H[Simpan Draft]
     H --> I[Full Editor]
     I --> J[Hidangan + cuisine/style/bahan]
-    J --> K[Review/rating + biaya]
+    J --> K[Catatan kunjungan dan total pengeluaran]
     K --> M[Foto + pilih cover]
     M --> N[Preview admin]
     N --> O{Publish gate valid?}
@@ -61,7 +61,7 @@ flowchart TD
     Q --> R[Explore / Visit detail / Place aggregate]
 ```
 
-**Prinsip**: Semua step dapat disimpan sebagai draft. `private` juga dapat dipilih tanpa publish. Status tidak pernah berubah otomatis hanya karena form lengkap. Preview `/admin/visit/{id}/preview`, bukan query `?preview=1` publik.
+**Prinsip**: Semua step dapat disimpan sebagai draft. `private` juga dapat dipilih tanpa publish. Status tidak pernah berubah otomatis hanya karena form lengkap. Preview menggunakan rute admin `/admin/visit/{id}/preview`. Publish membutuhkan tempat, waktu, serta hidangan atau teks bermakna di cerita, kesimpulan, kelebihan, atau kekurangan.
 
 ### 2.3 Fitur bahan/alergen — disclosure bertanggung jawab
 
@@ -125,7 +125,7 @@ MEDIA GET (/media/{uuid}/{variant}) — authorized per current visit visibility
 │  ┌───────────────────────┐ ┌───────────────────┐ ┌───────────────────┐     │
 │  │ PHOTO optimized       │ │ PHOTO optimized   │ │ PHOTO optimized   │     │
 │  │ Judul + tempat        │ │ Judul + tempat    │ │ Judul + tempat    │     │
-│  │ Tanggal + overall     │ │ Tanggal + overall │ │ Tanggal + overall │     │
+│  │ Tgl + rerata     │ │ Tgl + rerata │ │ Tgl + rerata │     │
 │  └───────────────────────┘ └───────────────────┘ └───────────────────┘     │
 │                                                                            │
 │  Pilihan pribadi / Must Try    [Featured recommendation]                  │
@@ -153,7 +153,7 @@ MEDIA GET (/media/{uuid}/{variant}) — authorized per current visit visibility
 │ │ PHOTO optimized  │  │ PHOTO optimized │ │ PHOTO optimized │             │
 │ │ Visit title      │  │ Visit title     │ │ Visit title     │             │
 │ │ Place · date     │  │ Place · date    │ │ Place · date    │             │
-│ │ Overall 4.2      │  │ Belum Dinilai   │ │ Overall 3.9     │             │
+│ │ Rerata 4,2      │  │ Belum Dinilai   │ │ Rerata 3,9     │             │
 │ │ Total Rp45.000   │  │ Total -         │ │ Total Rp60.000  │             │
 │ └──────────────────┘  └─────────────────┘ └─────────────────┘             │
 │ Pagination (URL preserves filters)                                        │
@@ -162,9 +162,9 @@ MEDIA GET (/media/{uuid}/{variant}) — authorized per current visit visibility
 
 **Tab behavior**:
 
-- Visit = total pengeluaran + overall rating.
-- Food = **harga unit item snapshot** + taste rating; card menaut ke Visit Detail; informasi place terlihat di kartu.
-- Place = rating rata-rata (berapa visit dinilai) dan latest visit; **tanpa** filter harga umum MVP.
+- Visit = total pengeluaran dan rata-rata semua hidangan dinilai di Visit.
+- Food = **harga unit item snapshot** dan rating hidangan itu sendiri; card menaut ke Visit Detail; informasi place terlihat di kartu.
+- Place = rata-rata hidangan dari riwayat published, jumlah hidangan dan kunjungan yang dinilai, serta kunjungan terbaru. Filter harga tersedia pada Visit dan Food.
 - Option label memberi tahu jika query item-level diterapkan pada Visit/Place (`setidaknya satu hidangan yang cocok`).
 - Tidak ada hasil: *“Belum ada pengalaman yang cocok dengan pilihan ini.”* + `Hapus filter` dan chips tetap accessible; jangan hapus q secara mendadak.
 
@@ -198,16 +198,16 @@ MEDIA GET (/media/{uuid}/{variant}) — authorized per current visit visibility
 │ Header / Breadcrumb                                                       │
 │ HERO PHOTO optimized (large)                 Tanggal · Kota · Tempat       │
 │                                             JUDUL KUNJUNGAN              │
-│                                             Overall 4.3 / Belum Dinilai │
+│                                             Rata-rata hidangan 4,3 / Belum Dinilai │
 │                                                                            │
 │ CERITA KUNJUNGAN (body editorial, 60–75 chars per line)                   │
 │                                                                            │
 │ HIDANGAN YANG DICOBA                                                      │
-│  [thumbnail] Mie Ayam — Rp25.000 | Taste 4.5 | Thai? / Boiled              │
-│  [thumbnail] Es Teh — Rp8.000   | Taste -   | Bahan diketahui: ...          │
+│  [thumbnail] Mie Ayam — Rp25.000 | Rating 4,5 | Thai? / Boiled              │
+│  [thumbnail] Es Teh — Rp8.000   | Belum Dinilai| Bahan diketahui: ...          │
 │                                                                            │
 │ TOTAL PENGELUARAN KUNJUNGAN: Rp36.000                                      │
-│ ULASAN TERSTRUKTUR (tampilkan hanya field yang diisi)                     │
+│ KELEBIHAN & KEKURANGAN (tampilkan sisi yang diisi)                     │
 │ GALERI (thumbnails optimized) → click opens protected original viewer     │
 │ ALERGEN: label status per hidangan, tidak menjanjikan aman                │
 │ KESIMPULAN / rekomendasi (bila ada)                                        │
@@ -225,10 +225,10 @@ MEDIA GET (/media/{uuid}/{variant}) — authorized per current visit visibility
 │                                          Semarang / alamat opsional       │
 │                                          [Buka Google Maps] bila valid     │
 │                                                                            │
-│ Rata-rata rating: 4.1 dari 3 kunjungan dinilai                            │
+│ Rata-rata rating hidangan: 4,1 · 5 hidangan dalam 3 kunjungan                            │
 │ RIWAYAT KUNJUNGAN                                                         │
-│  [visit thumbnail] 04 Nov 2026  Overall 4.0 — Visit detail                │
-│  [visit thumbnail] 12 Aug 2026  Overall 4.3 — Visit detail                │
+│  [visit thumbnail] 04 Nov 2026  Rerata hidangan 4,0 — Visit detail                │
+│  [visit thumbnail] 12 Aug 2026  Rerata hidangan 4,3 — Visit detail                │
 │  [visit thumbnail] 17 Apr 2026  Belum Dinilai — Visit detail              │
 │                                                                            │
 │ Hidangan yang pernah dicoba (semua snapshot diberi tanggal)               │
@@ -253,7 +253,7 @@ Tanggal dalam wireframe hanya ilustrasi placeholder dan **bukan** data aktual. T
 │ ┌────────────────────────┐ │
 │ │     PHOTO optimized    │ │
 │ │ Kunjungan / nama place │ │
-│ │ Overall • total        │ │
+│ │ Rerata hidangan • total        │ │
 │ └────────────────────────┘ │
 │ ┌────────────────────────┐ │
 │ │     PHOTO optimized    │ │
@@ -314,7 +314,7 @@ Sheet: dim overlay, focus trap/restore, Escape, close, sticky actions, lock scro
 ┌────────────────────────────────────────────────────────────────────────────┐
 │ Admin / Visit #128              [Saved as Draft]  [Preview] [Publish]     │
 │                                                                            │
-│  Dasar   Hidangan   Ulasan   Foto   Pratinjau                              │
+│  Dasar   Hidangan   Catatan kunjungan   Foto   Pratinjau & publikasi                              │
 │                                                                            │
 │ HIDANGAN                                                                   │
 │ [1] Mie Ayam Bakso                    (Rasa 4.5)             [Expand v]  │
@@ -328,7 +328,7 @@ Sheet: dim overlay, focus trap/restore, Escape, close, sticky actions, lock scro
 │ [2] Es Teh                              (Belum Dinilai) [Expand v]        │
 │ [Tambah hidangan]                                                         │
 │                                                                            │
-│ [Simpan draft]                  [Lanjut ke Ulasan]                         │
+│ [Simpan draft]                  [Lanjut ke Catatan kunjungan]                         │
 └────────────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -389,7 +389,7 @@ Di layar sempit, aksi sama prioritas menggunakan tinggi/min-width sama dan dapat
 6. Original foto dipakai viewer, derivative dipakai card, cover tidak duplicate, unpublish menolak media request baru.
 7. Visit total Rp60.000 vs item Rp25.000: sorting/filter dan display beda semantik; place tanpa filter harga MVP.
 8. Search/filter switching Visit/Food/Place menjaga opsi cocok, menghapus price filter ambigu dengan penjelasan; browser Back/Forward konsisten.
-9. Rating taste/overall/place pada null dan 0.5 dihitung presisi; published unrated tampil “Belum Dinilai”.
+9. Rating hidangan memakai kelipatan 0,5. Rata-rata Visit dan Place mengabaikan NULL, lalu dibulatkan saat ditampilkan. Kunjungan published tanpa rating tetap tampil.
 10. Dialog, autocomplete, alerts, toast, reduced motion, keyboard, touch & HTTP errors lolos review WCAG target.
 11. Admin tidak bisa mempublikasikan visit invalid, preview protected, private tak muncul di SEO/cards/filter suggestions/media.
 12. Visual review terhadap AI-slop: tidak ada unnecessary gradient/divider, action-group button konsisten, hero/card hierarchy tidak seperti template generik.

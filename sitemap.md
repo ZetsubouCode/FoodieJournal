@@ -48,8 +48,8 @@ Error views (bukan halaman navigasi biasa): 403 / 404 / 419 / 429 / 500 / 503 [P
 |---|---|---|---|---|
 | `/` | `home` | Memory Archive, kunjungan terbaru editorial, personal picks, akses Explore | P0 | Index |
 | `/explore` | `explore.index` | Hasil 3 tab, keyword/filter/sort, grid/list, pagination | P0 | Index **hanya versi canonical** |
-| `/visit/{slug}` | `visit.show` | Tanggal, place, cerita/review, rating, item, biaya, galeri, kesimpulan | P0 | Index bila published |
-| `/place/{slug}` | `place.show` | Identitas tempat, lokasi, link Maps, agregat rating, jumlah rated visit, riwayat visit | P0 | Index bila eligible |
+| `/visit/{slug}` | `visit.show` | Tanggal, place, cerita, hidangan dan ratingnya, biaya, kelebihan/kekurangan, galeri, kesimpulan | P0 | Index bila published |
+| `/place/{slug}` | `place.show` | Identitas tempat, lokasi, link Maps, rata-rata rating hidangan, jumlah hidangan dan kunjungan yang dinilai, riwayat visit | P0 | Index bila eligible |
 | `/city/{slug}` | `city.show` | Cerita/hasil curated per kota; hasil dari published visit | P1 | Index bila cukup konten |
 | `/category/{slug}` | `category.show` | Kategori hierarkis, turunan, item dan kunjungan terkait | P1 | Index bila cukup konten |
 | `/food/{slug}` | `food.show` | Food type standar lintas tempat; item, harga snapshot, visit terkait | P1 | Index bila cukup konten |
@@ -113,9 +113,9 @@ Error views (bukan halaman navigasi biasa): 403 / 404 / 419 / 429 / 500 / 503 [P
 
 | Tab | Unit kartu | Harga yang boleh ditampilkan | Rating | Sort awal |
 |---|---|---|---|---|
-| Visit | `visit` published | **Total pengeluaran visit**, bila dicatat | Overall visit | Tanggal kunjungan terbaru |
-| Food | `visit_item` dari visit published | **Harga item snapshot** (per unit, dan jumlah jika perlu) | Rating rasa item | Kunjungan terbaru |
-| Place | `place` eligible publik | Harga tidak wajib pada MVP; jika ada harus dinamai metrik dengan tepat | Rating place + jumlah kunjungan dinilai | Kunjungan published terbaru |
+| Visit | `visit` published | **Total pengeluaran visit**, bila dicatat | Rata-rata semua hidangan dinilai dalam Visit | Tanggal kunjungan terbaru |
+| Food | `visit_item` dari visit published | **Harga item snapshot** (per unit, dan jumlah jika perlu) | Rating hidangan yang cocok | Kunjungan terbaru |
+| Place | `place` eligible publik | Tanpa filter harga | Rata-rata semua hidangan dinilai dari Visit published yang memenuhi syarat, dengan jumlah item dan kunjungan | Kunjungan published terbaru |
 
 **Kontrak query URL (usulan, belum API contract final):**
 
@@ -138,7 +138,7 @@ Error views (bukan halaman navigasi biasa): 403 / 404 / 419 / 429 / 500 / 503 [P
 | `ingredient` | slug bahan | Match hanya bahan yang **tercatat** pada item; absence of record bukan negative evidence |
 | `avoid_allergen` | slug/kumpulan slug alergen | Exclude item yang tercatat `contains/may_contain`; unknown diberi label eksplisit, **bukan food safety guarantee** |
 | `price_min`, `price_max` | integer IDR | Visit: total visit; Food: harga item; Place: tidak berlaku pada MVP |
-| `rating_min` | numeric 1–5 | Visit: overall; Food: rasa item; Place: agregat place; nullable dikecualikan bila filter aktif |
+| `rating_min` | numeric 1–5 | Visit: rata-rata hidangan pada Visit; Food: rating item yang cocok; Place: rata-rata hidangan dalam histori publik. Visit dan Place tetap menghitung semua hidangan yang dinilai saat filter hidangan aktif. Nilai NULL dikecualikan. |
 | `tag` | slug tag | Domain tag yang valid |
 | `recommendation` | slug label | Rekomendasi editorial visit terkait |
 | `sort` | konteks tab | Nilai whitelist di server (contoh di bawah) |
@@ -157,9 +157,9 @@ Error views (bukan halaman navigasi biasa): 403 / 404 / 419 / 429 / 500 / 503 [P
 ### 4.3 Visit Detail `/visit/{slug}`
 
 - Hero foto cover (atau fallback estetis bila tidak ada gambar), judul, tanggal, nama place, badge status editorial bila ada.
-- Rangkuman skor overall dan kriteria yang terisi; “Belum Dinilai” untuk kosong.
-- Cerita pengalaman tempat, lalu item yang dipesan (nama snapshot, jumlah, harga item, rasa, catatan, foto terkait).
-- Pelayanan, suasana, kebersihan, value, kesimpulan; **sembunyikan section kosong** tanpa menciptakan data.
+- Fakta “Rata-rata rating hidangan” atau “Penilaian belum dicatat” saat kosong.
+- Cerita pengalaman tempat, lalu item yang dipesan (nama snapshot, jumlah, harga item, rating dan ulasan hidangan, foto terkait).
+- Kelebihan dan kekurangan kunjungan tampil setelah catatan hidangan bila terisi, satu poin per baris. Kesimpulan opsional mengikuti galeri.
 - Total visit dengan label tersendiri; jangan keliru menampilkan subtotal item sebagai total.
 - Galeri tunggal dari aset media visit; foto item memakai referensi media yang sama. Kartu/thumbnail memakai **optimized derivative**, klik viewer memakai **original via protected media route**, dengan loading/error/focus restore.
 - CTA sekunder: **Lihat Tempat** dan **Buka Google Maps** bila URL tersedia.
@@ -168,7 +168,7 @@ Error views (bukan halaman navigasi biasa): 403 / 404 / 419 / 429 / 500 / 503 [P
 ### 4.4 Place Detail `/place/{slug}`
 
 - Identitas tempat; kota/provinsi dan alamat/Maps jika tersedia.
-- Rating agregat 1 desimal, **N kunjungan dinilai**, serta daftar skor overall per kunjungan.
+- Rata-rata rating hidangan 1 desimal, **N hidangan dinilai dalam M kunjungan**, serta skor hidangan masing-masing Visit.
 - Timeline/list riwayat visit published, terbaru lebih dulu.
 - Jika seluruh visit published belum punya rating: tampil “Belum Dinilai”, bukan 0,0.
 - Daftar item food yang pernah dicoba, jika dipakai, selalu berlabel **tanggal snapshot**, bukan daftar menu/harga terbaru.
@@ -330,7 +330,7 @@ Gangguan sistem           → 500/503 branded tanpa detail internal
 - [ ] Semua link utama Home → Explore → Visit → Place tidak dead-end; mobile navigation dan breadcrumb konsisten.
 - [ ] Explore default newest visit; switching tiga tab mempertahankan keyword dan filter yang kompatibel; `sort` tidak valid direset; Back/Forward bekerja.
 - [ ] Filter harga tab Food memilih harga item, Visit memilih total, Place tidak menampilkan filter ambigu.
-- [ ] Filter rating Food menggunakan item taste, Visit overall, Place published-visit aggregate.
+- [ ] Filter rating Food memakai item yang cocok. Visit dan Place memakai rata-rata semua hidangan dinilai dalam cakupannya.
 - [ ] Cuisine vs cooking style dibedakan pada data/label/filter; item mendukung multiple cooking style dan cuisine item-level.
 - [ ] Ingredient dan allergen evidence publik hanya dari published item. `avoid_allergen` exclude contains/may contain, unknown ditandai dan disclaimer hadir.
 - [ ] Advanced filter desktop/mobile usable dengan keyboard, group collapsible, active chips, reset, apply mobile dan URL shareable.

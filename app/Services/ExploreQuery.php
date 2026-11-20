@@ -33,11 +33,11 @@ class ExploreQuery
                 $query->where(fn ($q) => $q->where('menu_name', 'like', '%'.$state->get('q').'%')->orWhereHas('foodType', fn ($f) => $f->where('name', 'like', '%'.$state->get('q').'%'))->orWhereHas('visit.place', fn ($p) => $p->where('name', 'like', '%'.$state->get('q').'%')));
             }
             $price = 'visit_item.unit_price_idr';
-            $rating = 'visit_item.taste_rating';
+            $rating = 'visit_item.food_rating';
             $date = 'visit_date';
             $id = 'visit_item.id';
         } elseif ($tab === 'place') {
-            $query = Place::publishedVisible()->withRating()->with(['archivePhotoVisits.coverMedia.variants', 'archivePhotoVisits.media.variants', 'visits' => fn ($q) => $q->publishedVisible()->with(['coverMedia.variants'])->orderByDesc('visited_at')->orderByDesc('id')->limit(1)]);
+            $query = Place::publishedVisible()->withFoodScore()->with(['archivePhotoVisits.coverMedia.variants', 'archivePhotoVisits.media.variants', 'visits' => fn ($q) => $q->publishedVisible()->with(['coverMedia.variants'])->orderByDesc('visited_at')->orderByDesc('id')->limit(1)]);
             $query->whereHas('visits', function ($q) use ($state) {
                 $q->publishedVisible();
                 $this->visitFilters($q, $state);
@@ -53,7 +53,7 @@ class ExploreQuery
             $date = 'latest_visit_at';
             $id = 'place.id';
         } else {
-            $query = Visit::publishedVisible()->withRating()->with(['place', 'coverMedia.variants', 'media.variants', 'recommendations', 'tags', 'items.foodType.category', 'items.styles']);
+            $query = Visit::publishedVisible()->withFoodScore()->with(['place', 'coverMedia.variants', 'media.variants', 'recommendations', 'tags', 'items.foodType.category', 'items.styles']);
             $this->visitFilters($query, $state);
             if ($this->hasItemFilters($state)) {
                 $query->whereHas('items', fn ($i) => $this->itemFilters($i, $state));
@@ -62,7 +62,7 @@ class ExploreQuery
                 $query->where(fn ($q) => $q->where('title', 'like', '%'.$state->get('q').'%')->orWhere('experience', 'like', '%'.$state->get('q').'%')->orWhereHas('place', fn ($p) => $p->where('name', 'like', '%'.$state->get('q').'%'))->orWhereHas('items', fn ($i) => $i->where('menu_name', 'like', '%'.$state->get('q').'%')));
             }
             $price = 'visit.total_spent_idr';
-            $rating = RatingSql::overall();
+            $rating = RatingSql::visit();
             $date = 'visit.visited_at';
             $id = 'visit.id';
         }

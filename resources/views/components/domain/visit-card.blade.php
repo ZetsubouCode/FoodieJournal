@@ -18,8 +18,8 @@
         <p class="visit-card__place">{{ $visit->place->name }}</p>
         <div class="visit-card__facts">
             <span class="visit-card__rating">
-                <span class="sr-only">Rating kunjungan: {{ \App\Support\Presentation::rating($visit->overall_rating) }}{{ $visit->overall_rating !== null ? ' dari 5' : '' }}</span>
-                <span aria-hidden="true">@if($visit->overall_rating !== null)<b>★</b> {{ \App\Support\Presentation::rating($visit->overall_rating) }} <small>/ 5</small>@else{{ \App\Support\Presentation::rating(null) }}@endif</span>
+                <span class="sr-only">Rata-rata rating hidangan: {{ \App\Support\Presentation::rating($visit->food_score) }}{{ $visit->food_score !== null ? ' dari 5' : '' }}</span>
+                <span aria-hidden="true">@if($visit->food_score !== null)<b>★</b> {{ \App\Support\Presentation::rating($visit->food_score) }} <small>/ 5 · Rerata hidangan</small>@else{{ \App\Support\Presentation::rating(null) }}@endif</span>
             </span>
             @foreach($visit->recommendations as $recommendation)
                 <a class="visit-card__recommendation" href="{{ url('explore').'?'.http_build_query(['recommendation' => [$recommendation->slug]], '', '&', PHP_QUERY_RFC3986) }}" aria-label="Jelajahi rekomendasi {{ $recommendation->name }}">{{ $recommendation->name }}</a>

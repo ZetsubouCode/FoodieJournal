@@ -4,6 +4,8 @@ Approved planning direction, 8 November 2026; status updated 10 November. **P0-1
 
 Order: P0 shared identity, state clarity and baselines → P1 physical response → P2 discovery → P3 storytelling → P4 integrated gates. Correctness/accessibility failures found during a later phase move ahead of creative work. Each task updates status, relevant contract and evidence. Keep screenshots deterministic and fixtures isolated.
 
+The approved food-only rating adjustment is implemented in source and migrated on the local Foodie instance after a verified backup and isolated restore. The legacy reviews remain in a private archive; the existing demo Visits use curated observations. See [ADR 003](../adr/003-food-only-ratings.md), [operations](../operations.md#existing-databases-food-only-rating-upgrade), and the [scoped verification](../qa/food-only-ratings/verification.md).
+
 ## P0-H — Corrective hardening before P1
 
 - **Implemented:** seven [owner decisions / ADR 002](../adr/002-p0-hardening.md): adaptive 152rem visual cap with 68ch prose/native cabinet, ultrawide result reflow and bounded discovery photo height; deterministic eligible Place cover and responsive photo-free facts; retained warm public atmosphere/footer; minimal system-font/plain admin; shared primitive inventory and single saved-success announcement; existing state/retry verification without new skeletons; bounded out-of-range Place recovery.
@@ -75,13 +77,13 @@ Order: P0 shared identity, state clarity and baselines → P1 physical response 
 
 ## P3-1 — Visit storytelling refinements
 
-- **Status:** **Complete within the scoped Chromium gate, 9 November 2026.** Light tasting-photo/note grouping, source-ordered gallery, honest ready-media omission, narrow-column criteria and a stable original-on-demand viewer with stale-request rejection/current/zoom/focus feedback. [Isolated checks, 44 state captures, reviewed baseline lineage and cost](../qa/p3-visit/verification.md). Available P4 checks are recorded below; external evidence remains unverified.
+- **Status:** **Complete within the scoped Chromium gate, 9 November 2026.** Light tasting-photo/note grouping, source-ordered gallery, honest ready-media omission and a stable original-on-demand viewer with stale-request rejection/current/zoom/focus feedback. [Isolated checks, 44 state captures, reviewed baseline lineage and cost](../qa/p3-visit/verification.md). Available P4 checks are recorded below; external evidence remains unverified.
 
 - **Objective / current:** A08; existing Dossier already has a strong story hierarchy. Add restrained tactile photo/note grouping and consistent feedback only where it helps reading.
 - **Files:** `public/visit.blade.php`, domain tasting-note/gallery/image/viewer components, `resources/css/dossier.css`, `resources/js/components/viewer.js`; shared dialog core only for a demonstrated shared issue; related feature/browser tests.
 - **Dependencies:** P0 width/type/state baseline and P2 media/wait patterns; no domain changes.
 - **Acceptance:** 60–75ch narrative, readable wide cover and meaningful facts/bento; optional sections omit honestly, recommendations stay distinct from score. Photo-free item/visit remains composed; gallery original waits/failures give stable geometry, status, fallback/retry/close and focus restore. Reveal never blocks content/no JS; reduced motion shows settled content immediately. No original request before explicit open.
-- **Edges / risks:** no photos, one/40 photos, revoked original, all-null or partial criteria, missing total/free item, long titles/prose, external Maps absent, keyboard arrows in input, narrow landscape/200% text. Do not fragment one story into a generic card catalog.
+- **Edges / risks:** no photos, one/40 photos, revoked original, unrated dishes or absent/one-sided observations, missing total/free item, long titles/prose, external Maps absent, keyboard arrows in input, narrow landscape/200% text. Do not fragment one story into a generic card catalog.
 - **Tests / evidence:** nullable/historical/visibility feature cases, original network observation, fast gallery changes, error/retry, Escape/focus restoration; full story sections and intermediate viewer wait/failure at 375/768/1440/1920 plus reduced/text enlargement. Measure media bytes and LCP after width changes.
 
 ## P3-2 — Place chronology enhancements

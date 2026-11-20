@@ -39,42 +39,50 @@ class CinematicPublicTest extends TestCase
             ->assertDontSee('data-home-archive', false)->assertDontSee('data-machine', false);
     }
 
-    public function test_dossier_preserves_historical_values_nullable_criteria_and_editorial_endorsements(): void
+    public function test_dossier_preserves_historical_values_food_ratings_and_editorial_endorsements(): void
     {
         $visit = Visit::factory()->published()->create([
             'experience' => "Paragraf pertama.\n\nParagraf berikutnya.", 'conclusion' => 'Catatan akhir yang tersimpan.',
-            'total_spent_idr' => 93000, 'service_rating' => 3.5,
-            'atmosphere_rating' => null, 'cleanliness_rating' => null, 'value_rating' => null,
+            'total_spent_idr' => 93000,
+            'pros' => "Staf membantu.\r\n \t\r\nMeja <bersih>.",
+            'cons' => "Parkir terbatas.\nAntrean panjang.",
         ]);
-        VisitItem::factory()->for($visit)->create(['menu_name' => 'Harga historis', 'unit_price_idr' => 17000, 'taste_rating' => 4.5]);
-        VisitItem::factory()->for($visit)->create(['menu_name' => 'Tanpa penilaian', 'unit_price_idr' => null, 'taste_rating' => null]);
+        VisitItem::factory()->for($visit)->create(['menu_name' => 'Harga historis', 'unit_price_idr' => 17000, 'food_rating' => 4.5, 'notes' => 'Bumbu meresap.']);
+        VisitItem::factory()->for($visit)->create(['menu_name' => 'Hidangan kedua', 'food_rating' => 4]);
+        VisitItem::factory()->for($visit)->create(['menu_name' => 'Tanpa penilaian', 'unit_price_idr' => null, 'food_rating' => null]);
         $visit->recommendations()->attach(RecommendationLabel::create(['name' => 'Pilihan khusus penulis']));
         $private = Visit::factory()->private()->create(['place_id' => $visit->place_id, 'title' => 'RELATED-PRIVATE-SECRET']);
-        $this->get('/visit/'.$visit->slug)->assertOk()->assertSee('dossier-hero', false)
+        $response = $this->get('/visit/'.$visit->slug)->assertOk()->assertSee('dossier-hero', false)
             ->assertSee('Rp93.000')->assertSee('Rp17.000')->assertSee('Harga belum dicatat')
-            ->assertSee('4,0')->assertSee('4,5')->assertSee('3,5')->assertDontSee('0,0')
+            ->assertSee('Rata-rata rating hidangan')->assertSee('4,3')->assertSee('Rating hidangan: 4,5')->assertSee('Belum Dinilai')
+            ->assertSeeInOrder(['Bumbu meresap.', 'Staf membantu.', 'Meja <bersih>.', 'Parkir terbatas.', 'Antrean panjang.'])
+            ->assertDontSee('<bersih>', false)->assertDontSee('assessment-title')->assertDontSee('Penilaian keseluruhan')->assertDontSee('0,0')
             ->assertSee('Pilihan khusus penulis')->assertSee('Catatan akhir yang tersimpan.')
             ->assertDontSee($private->title)->assertSee('tasting-note--text', false);
-        $visit->items()->update(['taste_rating' => null]);
-        $visit->update(['service_rating' => null]);
+        $dom = new \DOMDocument;
+        @$dom->loadHTML($response->getContent());
+        $this->assertSame(4, (new \DOMXPath($dom))->query('//*[@aria-labelledby="observations-title"]//li')->length);
+        $visit->items()->update(['food_rating' => null]);
+        $visit->update(['pros' => " \t\n", 'cons' => null]);
         $this->get('/visit/'.$visit->slug)->assertOk()->assertSee('Penilaian belum dicatat')
-            ->assertDontSee('0,0')->assertDontSee('Belum Dinilai');
+            ->assertDontSee('0,0')->assertDontSee('observations-title');
     }
 
     public function test_dossier_omits_unready_gallery_and_preserves_partial_notes_free_prices_and_endorsements_without_story(): void
     {
         $visit = Visit::factory()->published()->create([
             'experience' => null, 'conclusion' => null, 'total_spent_idr' => null,
-            'service_review' => 'Pelayanan dicatat tanpa angka.', 'service_rating' => null,
+            'pros' => 'Staf menjelaskan pilihan tempat duduk.',
         ]);
         $visit->place->update(['maps_url' => null]);
-        VisitItem::factory()->for($visit)->create(['unit_price_idr' => 0, 'taste_rating' => null]);
+        VisitItem::factory()->for($visit)->create(['unit_price_idr' => 0, 'food_rating' => null]);
         $visit->recommendations()->attach(RecommendationLabel::create(['name' => 'Pilihan tanpa skor']));
         $photo = $visit->media()->create(['uuid' => (string) Str::uuid(), 'original_path' => 'fixture', 'mime_type' => 'image/jpeg', 'original_bytes' => 10, 'width' => 900, 'height' => 600, 'sha256' => str_repeat('a', 64)]);
         $photo->variants()->create(['variant' => 'thumbnail', 'path' => 'fixture', 'mime_type' => 'image/jpeg', 'width' => 300, 'height' => 200, 'bytes' => 10, 'status' => 'failed']);
 
         $this->get('/visit/'.$visit->slug)->assertOk()->assertSee('Rp0')->assertSee('Harga belum dicatat')
-            ->assertSee('Pelayanan dicatat tanpa angka.')->assertSee('Penilaian belum dicatat')
+            ->assertSee('Staf menjelaskan pilihan tempat duduk.')->assertSee('Penilaian belum dicatat')
+            ->assertDontSee('>Kekurangan</h3>', false)
             ->assertSee('Rekomendasi pribadi')->assertSee('Pilihan tanpa skor')
             ->assertDontSee('id="story-title"', false)->assertDontSee('id="conclusion-title"', false)
             ->assertDontSee('id="galeri"', false)->assertDontSee('data-photo-viewer', false)->assertDontSee('Buka Google Maps');

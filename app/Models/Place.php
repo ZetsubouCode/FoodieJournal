@@ -43,12 +43,17 @@ class Place extends Model
         return $query->whereHas('visits', fn ($q) => $q->publishedVisible());
     }
 
-    public function scopeWithRating(Builder $query): Builder
+    protected function casts(): array
     {
-        $overall = RatingSql::overall('rv');
+        return ['food_score' => 'float', 'rated_item_count' => 'integer', 'rated_visit_count' => 'integer'];
+    }
 
-        return $query->addSelect('place.*')->selectRaw(RatingSql::place().' AS rating_score')
-            ->selectRaw("(SELECT COUNT(*) FROM visit rv WHERE rv.place_id = place.id AND rv.status = 'published' AND rv.deleted_at IS NULL AND {$overall} IS NOT NULL) AS rated_visit_count")
-            ->selectRaw("(SELECT MAX(rv.visited_at) FROM visit rv WHERE rv.place_id = place.id AND rv.status = 'published' AND rv.deleted_at IS NULL) AS latest_visit_at");
+    public function scopeWithFoodScore(Builder $query): Builder
+    {
+        return $query->addSelect('place.*')
+            ->selectRaw(RatingSql::place().' AS food_score')
+            ->selectRaw(RatingSql::placeItemCount().' AS rated_item_count')
+            ->selectRaw(RatingSql::placeVisitCount().' AS rated_visit_count')
+            ->selectRaw(RatingSql::latestPlaceVisit().' AS latest_visit_at');
     }
 }

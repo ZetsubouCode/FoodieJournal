@@ -1,5 +1,7 @@
 # CODEX INSTRUCTIONS — FOODIE MVP END-TO-END IMPLEMENTATION
 
+The historical rating and structured Visit review rules in this task were superseded by [ADR 003](../docs/adr/003-food-only-ratings.md) on 19 November 2026.
+
 > **Instruction ID:** `001-foodie-mvp-implementation`  
 > **Target:** Repository Foodie yang sedang aktif di workspace Codex  
 > **Status:** Instruksi eksekusi — bukan laporan bahwa fitur sudah dibuat  

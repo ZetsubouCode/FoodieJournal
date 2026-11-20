@@ -104,13 +104,18 @@ test('story, long prose, reduced motion and doubled text reflow across desktop a
         await expect(page.locator('.dossier-tasting')).toBeVisible(); await expect(page.locator('.dossier-conclusion')).toBeVisible();
         const prose = await page.locator('.dossier-story__prose').evaluate(n => ({ width: n.clientWidth, max: getComputedStyle(n).maxWidth }));
         expect(prose.width).toBeLessThanOrEqual(parseFloat(prose.max) + 1);
+        const sides = page.locator('.dossier-observations__side');
+        await expect(sides.locator('h3')).toHaveText(['Kelebihan', 'Kekurangan']);
+        if (width >= 1440) {
+            expect((await sides.last().boundingBox()).x).toBeGreaterThan((await sides.first().boundingBox()).x);
+        }
         await page.emulateMedia({ reducedMotion: 'reduce' });
         await page.evaluate(() => { document.documentElement.style.fontSize = '200%'; document.querySelector('h1').textContent += ' Catatan panjang menjelang sore di persimpangan jalan'; });
         expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
         if (width <= 768) {
-            const heading = await page.locator('.dossier-criterion h3').first().boundingBox();
-            const score = await page.locator('.dossier-criterion strong').first().boundingBox();
-            expect(score.y).toBeGreaterThanOrEqual(heading.y + heading.height);
+            const pros = await sides.first().boundingBox();
+            const cons = await sides.last().boundingBox();
+            expect(cons.y).toBeGreaterThanOrEqual(pros.y + pros.height);
         }
         await page.locator('[data-view-photo]').first().click();
         await expect(page.locator('[data-dialog-close]:visible')).toBeInViewport();
