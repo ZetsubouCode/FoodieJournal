@@ -49,11 +49,17 @@ Use the older archive's warm localized light and texture across the public journ
 
 `cinematic.css` retains Home .12, Explore .32, Visit .5 and Place .42, with Visit left -4rem / Place right -8rem crops and a 90rem fade. The same existing atmosphere asset remains full bleed; reading overlays and semantic surfaces stay dark. P0-H's comparison with the older Explore reference supports retaining these public materials and footer (design judgment, not pixel-equal restoration). Choice 4A removes the decorative background from admin: plain semantic surface and system fonts intentionally separate work from public spectacle. Compare [matched captures](qa/p0-hardening/verification.md) when changing these variants.
 
+## Visit V4 body
+
+Use the V3 body composition with the [V4 owner overrides](adr/004-visit-detail-v4.md). The photographic opening with a dark title area, attached three-zone facts strip, asymmetric story, parchment tasting records, paired paper observations and source-ordered gallery share the same shell edges. Keep the line measure independent of the photographic width. A dark typographic surface carries photo-free entries.
+
+Pendapat uses a warm brown panel, a top-aligned copper eyebrow, expressive saved prose and slightly rotated copper ink stamps below it, at the right when space allows. Mobile stacks that source order. Apply display italics to the editorial section headings. Saved titles and prose retain the author's wording. [Desktop and mobile evidence](qa/visit-v4/verification.md).
+
 ## Header and footer contract
 
-One `x-site.header`, one `x-site.footer`, one `public-chrome.css`, including standalone errors. Header brand and simple Beranda/Jelajah remain. The approved copper left-to-right hover underline follows [motion behavior](motion-interaction.md#navigation-hover-progress); it is not a loading bar. P0-1 restored it on 9 November; [verification](qa/navigation-hover-progress/verification.md).
+One `x-site.header`, one `x-site.footer` and one `public-chrome.css` serve the public routes and standalone errors. The V1 screenshots specify a full-width translucent walnut header with a fine copper keyline, serif wordmark on the left and Beranda/Jelajah on the right. Visit adds Catatan ini, Tentang tempat and the motion switch after a divider. The two navigation groups reflow on narrow screens. [Visual authority and route behavior](adr/005-approved-v1-public-chrome.md). [Underline behavior](motion-interaction.md#navigation-hover-progress).
 
-Footer is a recognizable editorial ending with personal-journal identity, real navigation and back-to-top. Recover deliberate scale, warm material continuity and space for the closing statement. P0-2 restores the real line break and an expressive 2.4–5.2rem statement, warm charcoal/copper surface and two-column desktop closing with vertical navigation; mobile uses one semantic column and wrapping navigation. Description and copyright stay visible on errors as on the other public pages. Admin retains the prior compact close. Matched footer crops cover Home/Explore/Visit/Place/error at 375/1440/1920; the original error kitchen scene and status copy remain unchanged.
+The closing panel uses a full-bleed warm gradient, tightly spaced ivory roman and copper italic lines up to 6.375rem, the journal description and a small tracked copyright line. The desktop links form a horizontal row near the bottom right. On narrow screens the story, wrapping navigation and copyright stack in reading order. Admin retains the compact system-font presentation. [V5 matched captures](qa/visit-v5/verification.md).
 
 ## Locked and experimental
 

@@ -66,7 +66,7 @@ test('shared navigation retains active and hover states across public routes and
         for (const [name, route] of [['home', '/'], ['explore', '/explore'], ['visit', visit], ['place', place], ['error', '/missing-error-page-preview']]) {
             await page.goto(route); await page.mouse.move(0, 0);
             const links = page.locator(`${nav} a`);
-            // Errors have no active route; detail pages keep Jelajah selected.
+            // Place keeps Jelajah selected. Visit marks its own contextual link.
             const link = await links.evaluateAll(nodes => nodes.findIndex(n => !n.hasAttribute('aria-current')));
             const target = links.nth(link);
             await target.hover(); await expect.poll(() => scale(target)).toBe(1);

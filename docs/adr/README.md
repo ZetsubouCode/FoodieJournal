@@ -5,6 +5,8 @@ Read [authority and precedence](../product-vision.md#authority-and-read-order) f
 - [001 — Experience authority, placement and state corrections](001-experience-authority.md)
 - [002 — P0 hardening: adaptive width, eligible Place cover, minimal admin, P2 skeleton ownership](002-p0-hardening.md)
 - [003 — Food-only ratings and Visit observations](003-food-only-ratings.md)
+- [004 — Visit Detail V4 and V1 shared chrome](004-visit-detail-v4.md)
+- [005 — Approved V1 header and footer screenshots](005-approved-v1-public-chrome.md)
 
 ## Document classification
 

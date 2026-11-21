@@ -19,7 +19,7 @@ test('public shell aligns header, main and footer at target and boundary widths 
             await ready(page, route);
             const rects = await page.evaluate(() => {
                 const rect = selector => { const r = document.querySelector(selector).getBoundingClientRect(); return { x: r.x, width: r.width }; };
-                return { header: rect('.site-header'), main: rect('main'), inner: rect('.site-footer__inner'), footer: rect('.site-footer'), scrollWidth: document.documentElement.scrollWidth };
+                return { header: rect('.site-header__inner'), headerSurface: rect('.site-header'), main: rect('main'), inner: rect('.site-footer__inner'), footer: rect('.site-footer'), scrollWidth: document.documentElement.scrollWidth };
             });
             expect(rects.scrollWidth, `${route} at ${width}`).toBeLessThanOrEqual(width);
             expect(rects.main.width).toBeCloseTo(shellWidth(width), 0);
@@ -27,6 +27,7 @@ test('public shell aligns header, main and footer at target and boundary widths 
                 expect(Math.abs(rects[name].width - rects.main.width)).toBeLessThan(1);
                 expect(Math.abs(rects[name].x - rects.main.x)).toBeLessThan(1);
             }
+            expect(rects.headerSurface.width).toBe(width);
             expect(rects.footer.width).toBe(width);
             if (route === '/') {
                 const geometry = await page.locator('[data-machine]').evaluate(n => {

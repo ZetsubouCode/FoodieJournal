@@ -45,11 +45,11 @@ test('partial records keep absent recommendations, images, scores, Maps and pric
     await expect(page.locator('[data-discovery-results]')).toContainText('Harga belum dicatat');
     await expect(page.locator('[data-discovery-results]')).toContainText('Rp0');
     await ready(page, `${sparse}/visit/qa-tanpa-foto`);
-    await expect(page.locator('main')).toContainText('Penilaian belum dicatat');
+    await expect(page.locator('main')).toContainText('Belum Dinilai');
     await expect(page.locator('main')).toContainText('Harga belum dicatat');
     await expect(page.locator('main')).toContainText('Rp0');
     await expect(page.locator('main a[href*="maps"]')).toHaveCount(0);
-    await page.getByRole('link', { name: 'Lihat tempat', exact: true }).click();
+    await page.locator('.dossier-hero__place a').click();
     await expect(page.locator('main')).toContainText('Belum Dinilai');
     await expect(page.locator('main img, main a[href*="maps"]')).toHaveCount(0);
     expect((await request.get(`${sparse}/visit/qa-hidden`)).status()).toBe(404);

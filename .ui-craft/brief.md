@@ -12,7 +12,9 @@ Home: one playable Memory Archive hero, chronological editorial recent entries a
 
 Explore: interactive discovery board + bold photographic editorial browsing, not another machine. Category/city/technique photos and food-type/recommendation lenses use the published-only query engine. Preserve complete Visit/Food/Place search/filter/sort/view/pagination/URL/history. Quiet staged two-pane filter drawer; keep discovery mounted while fragments update.
 
-Visit: cinematic/tactile archival story with cover/text fallback, facts, readable narrative, historical dishes/prices, dish ratings/reviews, optional Visit positives/negatives, gallery and conclusion. Place shares the world while emphasizing identity, the average across all eligible rated dishes with both counts, and dated visit history. Original images load only on explicit viewer open. Shared Alert/Modal/Toast and focus restoration remain.
+Visit V4 uses a cover or text-led opening, an attached three-zone fact strip, a separate reading measure, photo and parchment tasting records, optional paper observations and a responsive gallery. Pendapat starts with its numbered eyebrow and presents saved conclusion text above inert copper ink stamps. Gallery originals load on explicit open only. Place shares the archival materials and continues to prioritize identity, dish rating counts and chronological published Visit history. [Body decision](../docs/adr/004-visit-detail-v4.md).
+
+The supplied V1 screenshots govern the shared header and footer. Visit adds contextual navigation and an operable motion switch to the full-width walnut header. The editorial footer keeps its large ivory and copper lines, lower-right desktop link row and responsive reading order. [Chrome decision](../docs/adr/005-approved-v1-public-chrome.md).
 
 ## Locked mechanics — latest approved correction
 

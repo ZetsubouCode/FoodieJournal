@@ -105,7 +105,7 @@ class AdminTest extends TestCase
         $this->assertNull($visit->fresh()->cons);
         $this->assertSame('published', $visit->fresh()->status);
         $this->get($url.'/preview')->assertOk()->assertHeader('X-Robots-Tag', 'noindex, nofollow')
-            ->assertSee('Penilaian belum dicatat')->assertSeeInOrder(['Staf membantu.', 'Meja <bersih>.'])->assertDontSee('<bersih>', false);
+            ->assertSee('Belum Dinilai')->assertSeeInOrder(['Staf membantu.', 'Meja <bersih>.'])->assertDontSee('<bersih>', false);
         $this->get('/visit/'.$visit->slug)->assertOk()->assertSee('Staf membantu.');
 
         $base['version'] = 2;
@@ -123,8 +123,8 @@ class AdminTest extends TestCase
         $this->assertNull($visit->fresh()->pros);
         $this->assertSame("Parkir terbatas.\nAntrean panjang.", $visit->fresh()->cons);
         $this->assertNull($visit->items()->sole()->food_rating);
-        $this->get($url.'/preview')->assertOk()->assertSee('Penilaian belum dicatat')->assertDontSee('Catatan usang')
-            ->assertDontSee('>Kelebihan</h3>', false)->assertSeeInOrder(['Parkir terbatas.', 'Antrean panjang.']);
+        $this->get($url.'/preview')->assertOk()->assertSee('Belum Dinilai')->assertDontSee('Catatan usang')
+            ->assertDontSee('>Hal menyenangkan</h3>', false)->assertSeeInOrder(['Parkir terbatas.', 'Antrean panjang.']);
     }
 
     public function test_taxonomy_hierarchy_duplicates_and_reference_protection(): void

@@ -1,4 +1,4 @@
-@props(['title' => 'Foodie', 'description' => 'Catatan kunjungan, hidangan, dan pengalaman makan dari satu penulis.', 'canonical' => null, 'noindex' => false, 'image' => null, 'admin' => false])
+@props(['title' => 'Foodie', 'description' => 'Catatan kunjungan, hidangan, dan pengalaman makan dari satu penulis.', 'canonical' => null, 'noindex' => false, 'image' => null, 'admin' => false, 'visitPlaceUrl' => null, 'visitHasTasting' => false])
 @php($errors = $errors ?? new \Illuminate\Support\ViewErrorBag)
 <!doctype html>
 <html lang="id">
@@ -18,7 +18,7 @@
 </head>
 <body class="archive-page public-page {{ $admin ? 'public-page--admin' : '' }} {{ request()->routeIs('home') ? 'public-page--home' : (request()->routeIs('visit.show') ? 'public-page--visit' : (request()->routeIs('place.show') ? 'public-page--place' : 'public-page--explore')) }}">
     <a class="skip-link" href="#main">Lewati ke isi</a>
-    <x-site.header :admin="$admin" />
+    <x-site.header :admin="$admin" :visit-place-url="$visitPlaceUrl" />
     <main id="main" class="container" tabindex="-1">
         @if(session('success'))<x-ui.alert severity="success" title="Tersimpan">{{ session('success') }}</x-ui.alert>@endif
         @if($errors->any())
@@ -28,7 +28,7 @@
         @endif
         {{ $slot }}
     </main>
-    <x-site.footer />
+    <x-site.footer :admin="$admin" :visit-place-url="$visitPlaceUrl" :visit-has-tasting="$visitHasTasting" />
     <x-ui.toast-container />
     <x-ui.modal id="confirm-dialog" title="Konfirmasi tindakan" description="Perubahan ini memengaruhi catatan dan visibilitasnya.">
         <p data-confirm-message></p>

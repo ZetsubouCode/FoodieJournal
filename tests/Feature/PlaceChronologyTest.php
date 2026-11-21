@@ -43,7 +43,7 @@ class PlaceChronologyTest extends TestCase
         $this->assertSame([$tied->id, $january->id, $december->id, $undated->id], $response->viewData('visits')->pluck('id')->all());
         $this->get('/visit/'.$december->slug)->assertOk()->assertSee('Rp17.000')->assertSee('2,5')->assertDontSee('Rp93.000');
         $this->get('/visit/'.$january->slug)->assertOk()->assertSee('Rp93.000')->assertSee('4,5')->assertDontSee('Rp17.000');
-        $this->get('/visit/'.$tied->slug)->assertOk()->assertSee('Rp0')->assertSee('Penilaian belum dicatat');
+        $this->get('/visit/'.$tied->slug)->assertOk()->assertSee('Rp0')->assertSee('Belum Dinilai');
     }
 
     public function test_groups_are_only_from_the_current_published_page_and_repeat_honestly_across_the_page_boundary(): void

@@ -1,64 +1,183 @@
-<x-layout.public :title="$visit->display_title" :description="\Illuminate\Support\Str::limit($visit->experience ?: $visit->display_title, 160)" :noindex="$preview" :admin="$preview" :image="!$preview && $visit->coverMedia?->variant('hero') ? url('media/'.$visit->coverMedia->uuid.'/hero') : null">
-    @if($preview)<x-ui.alert title="Pratinjau admin">Status: {{ $visit->status }}. Ini pratinjau tersimpan; halaman ini tidak dipublikasikan otomatis. <a href="{{ url('admin/visit/'.$visit->id.'/edit') }}">Kembali ke editor</a></x-ui.alert>@endif
-    <x-site.breadcrumb :items="['Jelajah' => url('explore'), $visit->display_title => null]" />
-    @php
-        $galleryMedia = $visit->media->filter(fn ($photo) => $photo->variant('card') || $photo->variant('thumbnail'));
-        $observations = array_filter([
-            'Kelebihan' => \App\Support\Presentation::observationLines($visit->pros),
-            'Kekurangan' => \App\Support\Presentation::observationLines($visit->cons),
-        ]);
-    @endphp
-    <article class="visit-dossier">
-        <header class="dossier-hero {{ $visit->coverMedia?->variant('hero') ? '' : 'dossier-hero--text' }}">
-            <div class="dossier-hero__photo"><x-domain.image :media="$visit->coverMedia" variant="hero" :priority="true" sizes="(min-width: 2560px) 2432px, (min-width: 1920px) calc(100vw - 8rem), (min-width: 1024px) 93.334vw, (min-width: 481px) calc(100vw - 3rem), calc(100vw - 2rem)" /></div>
+@php
+    use App\Support\Presentation;
+
+    $cover = $visit->coverMedia;
+    if ($cover?->visit_id === $visit->id && $cover->variant('hero')) {
+        $disk = \Illuminate\Support\Facades\Storage::disk('media');
+        $cover = clone $cover;
+        $cover->setRelation('variants', $cover->variants->filter(fn ($variant) => $variant->status === 'ready' && $disk->exists($variant->path)));
+    }
+    $cover = $cover?->visit_id === $visit->id && $cover->variant('hero') ? $cover : null;
+
+    $galleryMedia = $visit->media->filter(fn ($photo) => $photo->variant('card') || $photo->variant('thumbnail'))->keyBy('id');
+    $observations = array_filter([
+        'positive' => Presentation::observationLines($visit->pros),
+        'negative' => Presentation::observationLines($visit->cons),
+    ]);
+    $conclusion = trim($visit->conclusion ?? '') !== '';
+    $chapters = array_filter([
+        'story' => trim($visit->experience ?? '') !== '' ? 'Cerita' : null,
+        'tasting' => $visit->items->isNotEmpty() ? 'Daftar rasa' : null,
+        'fieldnotes' => $observations ? 'Catatan' : null,
+        'galeri' => $galleryMedia->isNotEmpty() ? 'Foto' : null,
+        'opinion' => $conclusion || $visit->recommendations->isNotEmpty() ? 'Pendapat' : null,
+    ]);
+    $numbers = array_flip(array_keys($chapters));
+    $eyebrow = fn ($id) => sprintf('%02d / %s', $numbers[$id] + 1, strtoupper($chapters[$id]));
+    $placeUrl = url('place/'.$visit->place->slug);
+@endphp
+<x-layout.public :title="$visit->display_title" :description="\Illuminate\Support\Str::limit($visit->experience ?: $visit->display_title, 160)" :noindex="$preview" :admin="$preview" :image="!$preview && $cover ? url('media/'.$cover->uuid.'/hero') : null"
+    :visit-place-url="$preview ? null : $placeUrl" :visit-has-tasting="isset($chapters['tasting'])">
+    @if($preview)
+        <x-ui.alert title="Pratinjau admin">Status: {{ $visit->status }}. Ini pratinjau tersimpan; halaman ini tidak dipublikasikan otomatis. <a href="{{ url('admin/visit/'.$visit->id.'/edit') }}">Kembali ke editor</a></x-ui.alert>
+    @endif
+
+    <article class="visit-dossier" aria-labelledby="visit-title">
+        @if(!$preview && $chapters)
+            <nav class="dossier-rail" aria-label="Bagian kunjungan" data-chapter-rail hidden>
+                @foreach($chapters as $id => $label)
+                    <a href="#{{ $id }}"><span>{{ $label }}</span></a>
+                @endforeach
+            </nav>
+        @endif
+
+        <header @class(['dossier-hero', 'dossier-hero--text' => !$cover])>
+            @if($cover)
+                <div class="dossier-hero__photo">
+                    <x-domain.image :media="$cover" variant="hero" :priority="true" sizes="(min-width: 2560px) 2432px, (min-width: 1920px) calc(100vw - 8rem), (min-width: 1024px) 93.334vw, (min-width: 481px) calc(100vw - 3rem), calc(100vw - 2rem)" />
+                </div>
+            @endif
             <div class="dossier-hero__copy">
-                <p class="editorial-caption">The Culinary Dossier</p>
-                <h1>{{ $visit->display_title }}</h1>
-                <p class="dossier-hero__place"><a href="{{ url('place/'.$visit->place->slug) }}">{{ $visit->place->name }}</a>@if($visit->place->city_name)<span>{{ $visit->place->city_name }}</span>@endif</p>
-                <time datetime="{{ $visit->visited_at?->toIso8601String() }}">{{ \App\Support\Presentation::localTime($visit->visited_at, 'd M Y') }}</time>
+                <h1 id="visit-title">{{ $visit->display_title }}</h1>
+                <div class="record-meta dossier-hero__meta">
+                    <div class="record-meta__item dossier-hero__place">
+                        <x-ui.meta-icon name="location" />
+                        <span><a href="{{ $placeUrl }}">{{ $visit->place->name }}</a>@if($visit->place->city_name) · {{ $visit->place->city_name }}@endif</span>
+                    </div>
+                    @if($visit->visited_at)
+                        <time class="record-meta__item" datetime="{{ $visit->visited_at->toIso8601String() }}"><x-ui.meta-icon name="calendar" /><span>{{ Presentation::localTime($visit->visited_at, 'j F Y') }}</span></time>
+                    @else
+                        <span class="record-meta__item"><x-ui.meta-icon name="calendar" /><span>{{ Presentation::localTime(null) }}</span></span>
+                    @endif
+                </div>
             </div>
         </header>
-        <div class="dossier-facts">
-            <div><span>Tempat</span><a href="{{ url('place/'.$visit->place->slug) }}">{{ $visit->place->name }}</a></div>
-            <div><span>Total pengeluaran kunjungan</span><strong class="numeric">{{ \App\Support\Presentation::price($visit->total_spent_idr) }}</strong></div>
-            <div><span>Rata-rata rating hidangan</span>@if($visit->food_score !== null)<strong class="numeric">{{ \App\Support\Presentation::rating($visit->food_score) }} <small>/ 5</small></strong>@else<p>Penilaian belum dicatat</p>@endif</div>
-            @if($visit->place->maps_url)<a class="dossier-map" href="{{ $visit->place->maps_url }}" target="_blank" rel="noopener noreferrer">Buka Google Maps <span aria-hidden="true">↗</span></a>@endif
-        </div>
-        @if($visit->experience)
-        <section class="dossier-story dossier-section" aria-labelledby="story-title">
-            <div><h2 id="story-title">Cerita<br> <em>kunjungan.</em></h2>@if($visit->recommendations->isNotEmpty())<div class="dossier-recommendations"><p>Rekomendasi pribadi</p>@foreach($visit->recommendations as $term)<a href="{{ url('explore').'?'.http_build_query(['recommendation' => [$term->slug]]) }}">{{ $term->name }} ↗</a>@endforeach</div>@endif</div>
-            <div class="dossier-story__prose prose">{{ $visit->experience }}</div>
-        </section>
-        @elseif($visit->recommendations->isNotEmpty())
-            <div class="dossier-recommendations"><p>Rekomendasi pribadi</p>@foreach($visit->recommendations as $term)<a href="{{ url('explore').'?'.http_build_query(['recommendation' => [$term->slug]]) }}">{{ $term->name }} ↗</a>@endforeach</div>
+
+        <dl class="dossier-facts" aria-label="Ringkasan kunjungan">
+            <div>
+                <dt>Rerata hidangan</dt>
+                <dd><x-domain.rating :value="$visit->food_score" :stars="true" /></dd>
+                @if($visit->rated_item_count)<dd class="dossier-facts__count">{{ $visit->rated_item_count }} hidangan dinilai</dd>@endif
+            </div>
+            <div>
+                <dt>Total pengeluaran</dt>
+                <dd @class(['numeric', 'dossier-facts__missing' => $visit->total_spent_idr === null])>{{ $visit->total_spent_idr === null ? 'Belum dicatat' : Presentation::price($visit->total_spent_idr) }}</dd>
+            </div>
+            <div>
+                <dt>Hidangan</dt>
+                <dd class="numeric">{{ $visit->items->count() }}</dd>
+            </div>
+        </dl>
+
+        @if(isset($chapters['story']))
+            <section class="dossier-section dossier-story" id="story" aria-labelledby="story-title">
+                <header>
+                    <p class="dossier-eyebrow">{{ $eyebrow('story') }}</p>
+                    <h2 id="story-title">Cerita <em>kunjungan.</em></h2>
+                </header>
+                <p class="dossier-story__prose prose">{{ $visit->experience }}</p>
+            </section>
         @endif
-        @if($visit->items->isNotEmpty())
-        <section class="dossier-section dossier-tasting" aria-labelledby="tasting-title">
-            <header class="editorial-heading"><h2 id="tasting-title">Hidangan yang dicoba.</h2><p>Harga dan catatan saat kunjungan.</p></header>
-            @foreach($visit->items as $item)<x-domain.tasting-note :item="$item" />@endforeach
-        </section>
+
+        @if(isset($chapters['tasting']))
+            <section class="dossier-section dossier-tasting" id="tasting" aria-labelledby="tasting-title">
+                <header>
+                    <p class="dossier-eyebrow">{{ $eyebrow('tasting') }}</p>
+                    <h2 id="tasting-title">Yang dicoba. <em>Yang terasa.</em></h2>
+                </header>
+                @php
+                    $photoCount = 0;
+                @endphp
+                @foreach($visit->items as $item)
+                    @php
+                        $photo = $item->media->first(fn ($media) => $galleryMedia->has($media->id));
+                        if ($photo) {
+                            $photoCount++;
+                        }
+                    @endphp
+                    <x-domain.tasting-note :item="$item" :photo="$photo ? $galleryMedia->get($photo->id) : null" :reverse="$photo && $photoCount % 2 === 0" />
+                @endforeach
+            </section>
         @endif
-        @if($observations)
-            <section class="dossier-section dossier-observations" aria-labelledby="observations-title">
-                <h2 id="observations-title">Kelebihan &amp; <em>kekurangan</em></h2>
+
+        @if(isset($chapters['fieldnotes']))
+            <section class="dossier-section dossier-observations" id="fieldnotes" aria-labelledby="observations-title">
+                <header>
+                    <p class="dossier-eyebrow">{{ $eyebrow('fieldnotes') }}</p>
+                    <h2 id="observations-title">Di luar <em>rasa.</em></h2>
+                </header>
                 <div class="dossier-observations__columns">
-                    @foreach($observations as $label => $lines)
-                        <div class="dossier-observations__side">
-                            <h3><svg aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="10" cy="10" r="8" /><path d="{{ $label === 'Kelebihan' ? 'M6.5 10h7m-3.5-3.5v7' : 'M6.5 10h7' }}" /></svg>{{ $label }}</h3>
+                    @foreach($observations as $tone => $lines)
+                        <div class="dossier-observations__side dossier-observations__side--{{ $tone }}">
+                            <h3>{{ $tone === 'positive' ? 'Hal menyenangkan' : 'Kurang menyenangkan' }}</h3>
                             <ul>
-                                @foreach($lines as $line)
-                                    <li>{{ $line }}</li>
-                                @endforeach
+                                @foreach($lines as $line)<li>{{ $line }}</li>@endforeach
                             </ul>
                         </div>
                     @endforeach
                 </div>
             </section>
         @endif
-        @if($galleryMedia->isNotEmpty())<section class="dossier-section dossier-gallery" id="galeri" aria-labelledby="gallery-title"><header class="editorial-heading"><h2 id="gallery-title">Di dalam arsip.</h2><p>Galeri kunjungan</p></header><x-domain.gallery :media="$galleryMedia" /></section>@endif
-        @if($visit->conclusion)<section class="dossier-section dossier-conclusion" aria-labelledby="conclusion-title"><h2 id="conclusion-title">Yang tinggal<br> <em>setelahnya.</em></h2><p class="prose">{{ $visit->conclusion }}</p></section>@endif
-        @if($visit->tags->isNotEmpty())<nav class="cluster" aria-label="Tag kunjungan">@foreach($visit->tags as $term)<a class="chip" href="{{ url('explore').'?'.http_build_query(['tag' => [$term->slug]]) }}">{{ $term->name }}</a>@endforeach</nav>@endif
-        <div class="action-group section">@unless($preview)<x-ui.button href="{{ url('place/'.$visit->place->slug) }}">Lihat tempat</x-ui.button>@endunless</div>
+
+        @if(isset($chapters['galeri']))
+            <section class="dossier-section dossier-gallery" id="galeri" aria-labelledby="gallery-title">
+                <header>
+                    <p class="dossier-eyebrow">{{ $eyebrow('galeri') }}</p>
+                    <h2 id="gallery-title">Di dalam <em>arsip.</em></h2>
+                </header>
+                <x-domain.gallery :media="$galleryMedia" />
+            </section>
+        @endif
+
+        @if(isset($chapters['opinion']))
+            <section @class(['dossier-section dossier-conclusion', 'dossier-conclusion--stamps-only' => !$conclusion]) id="opinion" aria-labelledby="opinion-title">
+                <div>
+                    <p class="dossier-eyebrow" aria-hidden="true">{{ $eyebrow('opinion') }}</p>
+                    <h2 id="opinion-title" class="sr-only">Pendapat</h2>
+                </div>
+                <div>
+                    @if($conclusion)
+                        <blockquote class="dossier-conclusion__quote prose">{{ $visit->conclusion }}</blockquote>
+                    @endif
+                    @if($visit->recommendations->isNotEmpty())
+                        <div class="dossier-conclusion__stamps" role="group" aria-label="Rekomendasi pribadi">
+                            @foreach($visit->recommendations as $term)
+                                <span class="dossier-stamp">{{ $term->name }}</span>
+                            @endforeach
+                        </div>
+                    @endif
+                </div>
+            </section>
+        @endif
+
+        @if($visit->tags->isNotEmpty() || $visit->place->maps_url)
+            <nav class="dossier-links cluster" aria-label="Tag dan lokasi kunjungan">
+                @foreach($visit->tags as $term)
+                    <a class="chip" href="{{ url('explore').'?'.http_build_query(['tag' => [$term->slug]]) }}">{{ $term->name }}</a>
+                @endforeach
+                @if($visit->place->maps_url)
+                    <a class="dossier-map" href="{{ $visit->place->maps_url }}" target="_blank" rel="noopener noreferrer"><x-ui.meta-icon name="location" /> Buka Google Maps</a>
+                @endif
+            </nav>
+        @endif
+
+        @if($related->isNotEmpty())
+            <section class="dossier-section dossier-related" aria-labelledby="related-title">
+                <header><h2 id="related-title">Kembali ke tempat <em>yang sama.</em></h2></header>
+                <div class="results results--visit">
+                    @foreach($related as $other)<x-domain.visit-card :visit="$other" />@endforeach
+                </div>
+            </section>
+        @endif
     </article>
-    @if($related->isNotEmpty())<section class="dossier-section"><header class="editorial-heading"><h2>Kembali ke tempat yang sama.</h2></header><div class="results results--visit">@foreach($related as $other)<x-domain.visit-card :visit="$other" />@endforeach</div></section>@endif
 </x-layout.public>

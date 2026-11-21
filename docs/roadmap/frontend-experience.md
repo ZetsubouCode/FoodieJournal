@@ -86,6 +86,10 @@ The approved food-only rating adjustment is implemented in source and migrated o
 - **Edges / risks:** no photos, one/40 photos, revoked original, unrated dishes or absent/one-sided observations, missing total/free item, long titles/prose, external Maps absent, keyboard arrows in input, narrow landscape/200% text. Do not fragment one story into a generic card catalog.
 - **Tests / evidence:** nullable/historical/visibility feature cases, original network observation, fast gallery changes, error/retry, Escape/focus restoration; full story sections and intermediate viewer wait/failure at 375/768/1440/1920 plus reduced/text enlargement. Measure media bytes and LCP after width changes.
 
+### Visit Detail V4 follow-up
+
+The owner-approved V4 body delivers the tasting spread, gallery identity, stage/fullscreen recovery, chapter rail and closing ink stamp. V5 applies the supplied V1 screenshots to shared chrome and records matched desktop and mobile captures. [Body decision](../adr/004-visit-detail-v4.md). [Chrome verification](../qa/visit-v5/verification.md). Refreshing the historical visual gate, native mobile browser testing and field measurements remain pending.
+
 ## P3-2 — Place chronology enhancements
 
 - **Status:** **Complete within the scoped Chromium behavior/visual gate, 9 November 2026.** Current-page local month/year groups label ordered lists of unchanged Visit cards. Stable hero/controller/query/order/pagination and P3-1 source/evidence are preserved. [Isolated checks, reviewed gate, 44 captures and performance investigation](../qa/p3-place/verification.md). Cold LCP increases of 14.3% compact / 21.4% desktop remain explicit lab limitations; Available P4 checks are recorded below; external evidence remains unverified.

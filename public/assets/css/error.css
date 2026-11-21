@@ -25,61 +25,207 @@
 @font-face { font-family: 'Archive Garamond'; src: url('/assets/fonts/cormorant-garamond-latin.woff2') format('woff2'); font-weight: 300 700; font-style: normal; font-display: swap; }
 @font-face { font-family: 'Archive Garamond'; src: url('/assets/fonts/cormorant-garamond-latin-italic.woff2') format('woff2'); font-weight: 300 700; font-style: italic; font-display: swap; }
 @font-face { font-family: 'Archive Sans'; src: url('/assets/fonts/dm-sans-latin.woff2') format('woff2'); font-weight: 100 1000; font-style: normal; font-display: swap; }
-.public-page:not(.public-page--admin), .error-page { --font-display: 'Archive Garamond', Georgia, serif; --font-body: 'Archive Sans', 'Segoe UI', sans-serif; }
+:is(.public-page:not(.public-page--admin), .error-page) {
+    --font-display: 'Archive Garamond', Georgia, serif;
+    --font-body: 'Archive Sans', 'Segoe UI', sans-serif;
+    --surface-chrome: #15120f;
+    --border-chrome: color-mix(in srgb, var(--action-primary-bg) 24%, var(--surface-chrome));
+}
 .public-page--admin { --font-body: system-ui, 'Segoe UI', sans-serif; --font-display: var(--font-body); }
-.public-page.public-page--admin .site-footer__statement { font-size: 1.25rem; font-weight: 600; }
-.public-page:not(.public-page--admin) .container, .error-page .container, .error-page .error-main { width: min(calc(100% - 2 * var(--public-gutter)), var(--public-content-max)); margin-inline: auto; }
+:is(.public-page:not(.public-page--admin), .error-page) :is(.container, .error-main) {
+    width: min(calc(100% - 2 * var(--public-gutter)), var(--public-content-max));
+    margin-inline: auto;
+}
 @media (max-width: 480px) { .public-page, .error-page { --public-gutter: var(--space-4); } }
 @media (min-width: 1024px) { .public-page, .error-page { --public-gutter: clamp(var(--space-8), 3.333vw, var(--space-16)); } }
-.public-page .site-header, .error-page .site-header { display: flex; align-items: center; justify-content: space-between; gap: var(--space-4); padding-block: var(--space-3); min-height: 5rem; }
-.public-page .brand, .error-page .brand { font: 600 2.4rem/1 var(--font-display); letter-spacing: -.06em; color: var(--text-primary); text-decoration: none; }
+
+.site-header:has(> .site-header__inner) {
+    background: linear-gradient(105deg, transparent, color-mix(in srgb, var(--action-primary-bg) 2%, transparent) 62%, transparent),
+                color-mix(in srgb, var(--surface-chrome) 96%, transparent);
+    border-block-end: 1px solid var(--border-chrome);
+}
+.site-header__inner, .public-page--admin .site-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0 clamp(var(--space-4), 3vw, 2.4rem);
+    min-block-size: 5.3125rem;
+    padding-block: var(--space-2);
+}
+.site-header .brand {
+    font: 600 2.4rem/1 var(--font-display);
+    letter-spacing: -.06em;
+    color: var(--text-primary);
+    text-decoration: none;
+}
 .brand span { color: var(--action-primary-bg); }
-.site-header nav[aria-label="Navigasi utama"] { display: flex; align-items: center; gap: clamp(1.25rem, 3vw, 2.5rem); }
-.site-header nav[aria-label="Navigasi utama"] a { display: inline-flex; align-items: center; position: relative; min-height: var(--control-height); font: 400 .875rem/1.4 var(--font-body); color: var(--text-secondary); text-decoration: none; }
-.site-header nav[aria-label="Navigasi utama"] a:is(:hover, :focus-visible, [aria-current=page]) { color: var(--action-primary-bg); }
-.public-page:not(.public-page--admin) .site-header nav a, .error-page .site-header nav a,
-.public-page:not(.public-page--admin) .breadcrumb, .dossier-hero .editorial-caption, .error-eyebrow {
+.site-header nav:is([aria-label="Navigasi utama"], .site-header__context) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0 clamp(var(--space-4), 3vw, 2.4rem);
+}
+.site-header__inner > nav:first-of-type { margin-inline-start: auto; }
+.site-header__context { position: relative; padding-inline-start: clamp(var(--space-4), 3vw, 2.4rem); }
+.site-header__context::before {
+    content: '';
+    position: absolute;
+    inset-inline-start: 0;
+    block-size: 1.5rem;
+    border-inline-start: 1px solid var(--border-chrome);
+}
+.site-header nav:is([aria-label="Navigasi utama"], .site-header__context) :is(a, button) {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    min-block-size: var(--control-height);
+    font: 500 .8125rem/1.4 var(--font-body);
+    color: var(--text-primary);
+    text-decoration: none;
+}
+.site-header__inner nav :is(a, button) { min-inline-size: var(--control-height); justify-content: center; }
+.site-header nav:is([aria-label="Navigasi utama"], .site-header__context) :is(a, button):is(:hover, :focus-visible, [aria-current=page]) {
+    color: var(--action-primary-bg);
+}
+:is(.public-page:not(.public-page--admin) .breadcrumb, .error-eyebrow) {
     text-shadow: 0 1px 2px var(--surface-page), 0 0 2px var(--surface-page);
 }
-.site-header nav[aria-label="Navigasi utama"] a::after { content: ''; position: absolute; height: 1px; background: var(--action-primary-bg); inset: auto 0 .4rem; transform: scaleX(0); transform-origin: left; transition: transform var(--motion-fast) linear; pointer-events: none; }
+.site-header nav:is([aria-label="Navigasi utama"], .site-header__context) a::after {
+    content: '';
+    position: absolute;
+    inset: auto 0 .4rem;
+    height: 1px;
+    background: var(--action-primary-bg);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--motion-fast) linear;
+    pointer-events: none;
+}
 @media (hover: hover) {
-    .site-header nav[aria-label="Navigasi utama"] a:hover::after { transform: scaleX(1); transition-duration: var(--motion-standard); }
+    .site-header nav:is([aria-label="Navigasi utama"], .site-header__context) a:hover::after {
+        transform: scaleX(1);
+        transition-duration: var(--motion-standard);
+    }
 }
-.site-header nav[aria-label="Navigasi utama"] a:is(:focus-visible, [aria-current=page])::after { transform: scaleX(1); transition: none; }
-.public-page:not(.public-page--admin) .site-header a:focus-visible, .error-page .site-header a:focus-visible { box-shadow: 0 0 0 7px var(--surface-page); }
+.site-header nav:is([aria-label="Navigasi utama"], .site-header__context) a:is(:focus-visible, [aria-current=page])::after {
+    transform: scaleX(1);
+    transition: none;
+}
+.site-header__context a[aria-current=page]:not(:hover, :focus-visible)::after { opacity: .55; }
+:is(.public-page:not(.public-page--admin), .error-page) .site-header :is(a, button):focus-visible {
+    box-shadow: 0 0 0 7px var(--surface-page);
+}
+.site-header__motion { gap: .24em; padding: 0; border: 0; background: none; }
+.site-header__motion::before {
+    content: '';
+    flex: none;
+    inline-size: .4rem;
+    block-size: .4rem;
+    margin-inline: .2rem .35rem;
+    border-radius: 50%;
+    background: var(--text-muted);
+    box-shadow: 0 0 0 .23rem color-mix(in srgb, var(--text-muted) 12%, transparent);
+}
+.site-header__motion[aria-checked="true"]::before {
+    background: var(--status-success);
+    box-shadow: 0 0 0 .23rem color-mix(in srgb, var(--status-success) 12%, transparent);
+}
 @media (prefers-reduced-motion: reduce) {
-    .site-header nav[aria-label="Navigasi utama"] a::after { transition: none !important; }
+    .error-page .site-header nav a::after { transition: none; }
 }
-.public-page .site-footer, .error-page .site-footer { display: block; margin-top: var(--space-24); padding: var(--space-12) 0 var(--space-6); background: color-mix(in srgb, var(--surface-page) 86%, transparent); color: var(--text-secondary); }
-.public-page .site-footer__inner, .error-page .site-footer__inner { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: var(--space-12); }
-.public-page .site-footer__story, .error-page .site-footer__story { display: block; min-width: 0; overflow-wrap: anywhere; }
-.public-page .site-footer__eyebrow, .error-page .site-footer__eyebrow { display: none; }
-.public-page .site-footer__statement, .error-page .site-footer__statement { margin: 0 0 var(--space-4); font: 400 clamp(1.6rem, 2.8vw, 2.7rem)/1.1 var(--font-display); white-space: normal; }
-.site-footer__statement span { font-style: italic; color: var(--action-primary-bg); }
-.public-page .site-footer__statement br, .error-page .site-footer__statement br { display: none; }
-.site-footer__statement span::before { content: ' '; white-space: pre; }
-.public-page .site-footer__description, .error-page .site-footer__description { margin: 0; padding: 0; border: 0; max-width: 48ch; font: 400 .8125rem/1.7 var(--font-body); color: var(--text-muted); }
-.public-page .site-footer__nav, .error-page .site-footer__nav { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; align-content: start; padding: 0; }
-.public-page .site-footer__nav > p, .error-page .site-footer__nav > p { display: none; }
-.public-page .site-footer__nav a, .error-page .site-footer__nav a { display: inline-flex; align-items: center; min-height: var(--control-height); font: 400 .8125rem/1.4 var(--font-body); text-decoration: none; }
-.public-page .site-footer__top, .error-page .site-footer__top { display: inline-flex; gap: .5rem; }
-.public-page .site-footer__copyright, .error-page .site-footer__copyright { margin-top: var(--space-8); margin-bottom: 0; font: 400 .75rem/1.5 var(--font-body); color: var(--text-muted); }
-@media(max-width: 767px) { .public-page .site-footer__inner, .error-page .site-footer__inner { grid-template-columns: minmax(0, 1fr); gap: var(--space-6); } }
+@media (max-width: 44rem) {
+    .site-header__inner { min-block-size: 4.5rem; }
+    .site-header nav.site-header__context {
+        justify-content: space-between;
+        inline-size: 100%;
+        padding-inline-start: 0;
+        border-block-start: 1px solid var(--border-chrome);
+    }
+    .site-header__context::before { content: none; }
+}
 
-/* Public closing composition; admin keeps the compact shared-shell defaults. */
-:is(.public-page:not(.public-page--admin), .error-page) .site-footer { margin-top: clamp(var(--space-12), 5vw, var(--space-24)); padding-top: clamp(var(--space-12), 5vw, var(--space-24)); background: linear-gradient(115deg, color-mix(in srgb, var(--action-primary-bg) 5%, transparent), transparent 60%), var(--surface-footer); }
-:is(.public-page:not(.public-page--admin), .error-page) .site-footer__inner { grid-template-columns: minmax(0, 1fr) minmax(10rem, .25fr); align-items: start; gap: clamp(var(--space-8), 5vw, var(--space-24)); }
-:is(.public-page:not(.public-page--admin), .error-page) .site-footer__statement { font-size: clamp(2.4rem, 4.5vw, 5.2rem); line-height: 1.03; letter-spacing: -.025em; }
-:is(.public-page:not(.public-page--admin), .error-page) .site-footer__statement br { display: initial; }
-:is(.public-page:not(.public-page--admin), .error-page) .site-footer__statement span::before { content: none; }
-:is(.public-page:not(.public-page--admin), .error-page) .site-footer__description { margin-top: var(--space-6); font-size: var(--text-sm); }
-:is(.public-page:not(.public-page--admin), .error-page) .site-footer__nav { flex-direction: column; align-items: start; gap: var(--space-2); }
-:is(.public-page:not(.public-page--admin), .error-page) .site-footer__nav > p { display: block; margin: 0 0 var(--space-4); color: var(--action-primary-bg); font-size: .75rem; }
-:is(.public-page:not(.public-page--admin), .error-page) .site-footer__nav a { font-size: var(--text-sm); }
+:where(.public-page:not(.public-page--admin), .error-page) .site-footer {
+    display: block;
+    margin-block-start: clamp(var(--space-12), 5vw, var(--space-24));
+    padding-block: clamp(var(--space-12), 5.2vw, var(--space-24)) var(--space-8);
+    border-block-start: 1px solid var(--border-chrome);
+    background: linear-gradient(112deg, color-mix(in srgb, var(--action-primary-bg) 11%, transparent), transparent 78%), var(--surface-footer);
+    color: var(--text-secondary);
+}
+.site-footer__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: end;
+    gap: var(--space-6) var(--space-8);
+}
+.site-footer__story { flex: 1 1 30rem; min-inline-size: 0; overflow-wrap: anywhere; }
+.site-footer__statement {
+    margin: 0 0 var(--space-4);
+    font: 500 clamp(2.7rem, 1.1rem + 4.65vw, 6.375rem)/.94 var(--font-display);
+    letter-spacing: -.025em;
+    color: var(--text-primary);
+}
+.site-footer__statement span { font-style: italic; color: var(--action-primary-bg); }
+.site-footer__description {
+    margin: 0;
+    max-inline-size: 55ch;
+    font: 400 .875rem/1.65 var(--font-body);
+    color: var(--text-secondary);
+}
+.site-footer__nav { display: flex; flex-wrap: wrap; gap: 0 var(--space-6); }
+.site-footer__nav a {
+    color: inherit;
+    display: inline-flex;
+    align-items: center;
+    min-block-size: var(--control-height);
+    font: 400 .875rem/1.4 var(--font-body);
+    text-decoration: none;
+}
+.site-footer__nav a:is(:hover, :focus-visible) { color: var(--action-primary-bg); }
+.site-footer__copyright {
+    flex-basis: 100%;
+    margin: clamp(var(--space-3), 2.5vw, 3rem) 0 0;
+    font: 400 .6875rem/1.5 var(--font-body);
+    color: var(--text-muted);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+@media (min-width: 64rem) {
+    :where(.public-page:not(.public-page--admin), .error-page) .site-footer__statement span { font-weight: 600; letter-spacing: .018em; }
+    .site-footer__nav { align-self: end; margin-block-end: calc(-1 * var(--space-4)); }
+}
+
+/* Admin keeps its compact, system-font header and closing. */
+.public-page--admin .site-header { gap: var(--space-4); min-height: 5rem; padding-block: var(--space-3); }
+.public-page--admin .site-header nav.admin-nav { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-6); }
+.public-page--admin .site-header nav.admin-nav a { display: flex; align-items: center; min-block-size: var(--control-height); }
+.public-page--admin .site-header nav[aria-label="Navigasi utama"] { gap: clamp(1.25rem, 3vw, 2.5rem); }
+.public-page--admin .site-header nav[aria-label="Navigasi utama"] a { font: 400 .875rem/1.4 var(--font-body); color: var(--text-secondary); }
+.public-page--admin .site-header nav[aria-label="Navigasi utama"] a:is(:hover, :focus-visible) { color: var(--action-primary-bg); }
+.public-page--admin .site-footer { display: block; margin-top: var(--space-24); padding: var(--space-12) 0 var(--space-6); background: color-mix(in srgb, var(--surface-page) 86%, transparent); color: var(--text-secondary); }
+.public-page--admin .site-footer__inner { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: start; gap: var(--space-8) var(--space-12); }
+.public-page--admin .site-footer__statement { font: 600 1.25rem/1.1 var(--font-display); letter-spacing: normal; color: inherit; }
+.public-page--admin .site-footer__statement br { display: none; }
+.public-page--admin .site-footer__statement span::before { content: ' '; white-space: pre; }
+.public-page--admin .site-footer__description { max-inline-size: 48ch; font: 400 .8125rem/1.7 var(--font-body); color: var(--text-muted); }
+.public-page--admin .site-footer__nav { gap: .5rem 1.5rem; margin: 0; }
+.public-page--admin .site-footer__nav a { font-size: .8125rem; }
+.site-footer__top { gap: .5rem; }
+.public-page--admin .site-footer__copyright {
+    grid-column: 1 / -1;
+    margin: 0;
+    font: 400 .75rem/1.5 var(--font-body);
+    letter-spacing: normal;
+    text-transform: none;
+}
 @media (max-width: 767px) {
-    :is(.public-page:not(.public-page--admin), .error-page) .site-footer__inner { grid-template-columns: minmax(0, 1fr); }
-    :is(.public-page:not(.public-page--admin), .error-page) .site-footer__nav { flex-direction: row; flex-wrap: wrap; gap: var(--space-2) var(--space-6); }
-    :is(.public-page:not(.public-page--admin), .error-page) .site-footer__nav > p { flex-basis: 100%; margin-bottom: 0; }
+    .public-page--admin .site-footer__inner { grid-template-columns: minmax(0, 1fr); row-gap: var(--space-6); }
+    .public-page--admin .site-footer__copyright { margin-block-start: var(--space-2); }
+}
+@media (max-width: 550px) {
+    .public-page--admin .site-header nav.admin-nav { gap: var(--space-4); }
 }
 
 /* Standalone error scene. tools/build-error-css.mjs prepends the shared tokens. */

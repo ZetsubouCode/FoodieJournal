@@ -12,7 +12,7 @@ Use semantic fast/standard/enter/exit/easing tokens plus cabinet component timin
 
 ## Navigation hover progress
 
-Apply consistently to primary public nav tabs, including standalone errors. Optional footer adoption requires an explicit scope decision; do not put progress decoration on every link.
+Apply to primary public nav tabs and Visit contextual links, including the shared primary tabs on standalone errors. Footer links use text and focus feedback. [V1 chrome decision](adr/005-approved-v1-public-chrome.md).
 
 | Event/state | Required behavior |
 | --- | --- |
@@ -53,6 +53,10 @@ Explore keeps the discovery board mounted while server fragments update console/
 Visit/Place use photo hover/focus, readable section reveals and gallery feedback as aids to storytelling. No mandatory scroll-jacking, long entrance gates or timeline scrubbing to read a visit. Bento ordering follows semantic DOM order on mobile. Meaningful CSS perspective/2.5D/3D is allowed; WebGL requires a measured advantage and equivalent fallback, not a decorative dependency.
 
 P3-1 (9 November) uses the existing 140/220ms hover/focus/press grammar and a static current-photo outline. No new reveal, entrance wait, skeleton timer or idle animation: Visit text is settled immediately with reduced motion and without JS. Original/derivative requests own the viewer's real busy/status transitions within a fixed image stage; old callbacks are ignored after selection/close. [Evidence and limits](qa/p3-visit/verification.md). Place chronology is unchanged.
+
+Visit V4 retains immediately readable sections and the stable viewer stage. Focus and hover paint four corners on photographs. The desktop rail appears during scroll and becomes visually and pointer inactive after about 1.8 seconds, with hover and focus retaining visibility. Its current marker follows the visible chapter. Mobile and no-JS retain the ordinary document flow. Reduced motion removes photo scaling and rail fades. An explicit fullscreen control requests native fullscreen or fills the viewport if unavailable. Close clears expansion and restores the opening photo link. [V4 evidence](qa/visit-v4/verification.md).
+
+The V5 header's Gerak switch follows the system preference at load and when that preference changes. An explicit selection controls motion for the current Visit, including navigation underline timing, rail fades and photo scaling. Page content remains readable at every setting. Rail timers clear on blur and when the document becomes hidden. [V5 interaction captures](qa/visit-v5/verification.md).
 
 P3-2 (9 November) adds static month/year grouping to Place history and inherits existing Visit-card hover/focus feedback. No new JS, reveal, animation, sticky marker, loading timer or pagination interception. Ordinary links and browser history own Visit↔Place navigation; reduced-motion load/runtime and no-JS journeys retain settled groups. [Evidence, font-swap investigation and limits](qa/p3-place/verification.md).
 

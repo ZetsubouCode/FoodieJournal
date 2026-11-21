@@ -34,7 +34,7 @@ test('current-page month groups keep the same older hero, 18/2 pagination and pu
     const link = older.locator('.visit-card__link'); const href = await link.getAttribute('href');
     await link.focus(); await page.keyboard.press('Enter'); await expect(page).toHaveURL(href);
     await expect(page.locator('.visit-dossier h1')).toHaveText('Foto lama QA di halaman kedua');
-    await page.getByRole('link', { name: 'Lihat tempat', exact: true }).focus(); await page.keyboard.press('Enter');
+    await page.locator('.dossier-hero__place a').focus(); await page.keyboard.press('Enter');
     await expect(page).toHaveURL(`${qa}/place/qa-stable-cover`);
     await page.goBack(); await expect(page).toHaveURL(href);
     await page.goBack(); await expect(page).toHaveURL(`${qa}/place/qa-stable-cover?page=2`);
@@ -101,7 +101,7 @@ test('native no-JS pagination and emulated touch keep Place to Visit journeys in
     const compact = await touch.newPage(); await ready(compact, '/place/demo-bara-senja', photo);
     await compact.locator('.place-history .visit-card__link').first().tap();
     await expect(compact.locator('.visit-dossier')).toBeVisible();
-    await compact.getByRole('link', { name: 'Lihat tempat', exact: true }).tap();
+    await compact.locator('.dossier-hero__place a').tap();
     await compact.waitForLoadState('load'); await expect(compact.locator('html')).toHaveAttribute('data-ui-ready', 'true');
     await compact.evaluate(() => document.fonts.ready); await expect(periods(compact).first()).toBeVisible();
     await noOverflow(compact); await touch.close();

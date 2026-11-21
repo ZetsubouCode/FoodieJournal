@@ -74,7 +74,7 @@ class PublicTest extends TestCase
         $this->get('/')->assertOk()->assertSee('Belum ada rekomendasi pribadi yang dipublikasikan');
         $this->get('/explore')->assertOk()->assertSee('Belum Dinilai')->assertSee('Foto belum tersedia')->assertDontSee('0,0');
         $this->get('/explore?tab=food')->assertOk()->assertSee('Harga belum dicatat')->assertSee('Rp0')->assertSee('Belum Dinilai');
-        $this->get('/visit/'.$visit->slug)->assertOk()->assertSee('Harga belum dicatat')->assertSee('Rp0')->assertSee('Penilaian belum dicatat');
+        $this->get('/visit/'.$visit->slug)->assertOk()->assertSee('Harga belum dicatat')->assertSee('Rp0')->assertSee('Belum Dinilai');
         $this->get('/place/'.$visit->place->slug)->assertOk()->assertSee('Belum Dinilai')->assertDontSee('Buka Google Maps');
     }
 

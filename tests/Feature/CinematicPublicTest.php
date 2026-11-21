@@ -37,35 +37,46 @@ class CinematicPublicTest extends TestCase
             ->assertDontSee('Jeda cahaya')->assertDontSee('data-archive-explore', false);
         $this->get('/explore')->assertOk()->assertSee('The Curiosity Index')->assertSee('Memory Reel')
             ->assertDontSee('data-home-archive', false)->assertDontSee('data-machine', false);
+        $this->get('/visit/'.$visit->slug)->assertOk()->assertSee('Catatan ini')->assertSee('Tentang tempat')
+            ->assertDontSee('Lihat hidangan');
+        $this->get('/place/'.$visit->place->slug)->assertOk()->assertDontSee('data-visit-motion-toggle', false);
     }
 
     public function test_dossier_preserves_historical_values_food_ratings_and_editorial_endorsements(): void
     {
         $visit = Visit::factory()->published()->create([
             'experience' => "Paragraf pertama.\n\nParagraf berikutnya.", 'conclusion' => 'Catatan akhir yang tersimpan.',
+            'visited_at' => '2026-11-04 17:15:00',
             'total_spent_idr' => 93000,
             'pros' => "Staf membantu.\r\n \t\r\nMeja <bersih>.",
             'cons' => "Parkir terbatas.\nAntrean panjang.",
         ]);
         VisitItem::factory()->for($visit)->create(['menu_name' => 'Harga historis', 'unit_price_idr' => 17000, 'food_rating' => 4.5, 'notes' => 'Bumbu meresap.']);
-        VisitItem::factory()->for($visit)->create(['menu_name' => 'Hidangan kedua', 'food_rating' => 4]);
+        VisitItem::factory()->for($visit)->create(['menu_name' => 'Hidangan kedua', 'food_rating' => 3.5]);
         VisitItem::factory()->for($visit)->create(['menu_name' => 'Tanpa penilaian', 'unit_price_idr' => null, 'food_rating' => null]);
         $visit->recommendations()->attach(RecommendationLabel::create(['name' => 'Pilihan khusus penulis']));
         $private = Visit::factory()->private()->create(['place_id' => $visit->place_id, 'title' => 'RELATED-PRIVATE-SECRET']);
         $response = $this->get('/visit/'.$visit->slug)->assertOk()->assertSee('dossier-hero', false)
+            ->assertSee($visit->display_title)->assertSee($visit->place->name)->assertSee('5 November 2026')
+            ->assertSee('href="#tasting">Lihat hidangan', false)
             ->assertSee('Rp93.000')->assertSee('Rp17.000')->assertSee('Harga belum dicatat')
-            ->assertSee('Rata-rata rating hidangan')->assertSee('4,3')->assertSee('Rating hidangan: 4,5')->assertSee('Belum Dinilai')
+            ->assertSee('Rerata hidangan')->assertSee('4,0')->assertSee('2 hidangan dinilai')
+            ->assertSee('Rating hidangan: 4,5 dari 5')->assertSee('Rating hidangan: 3,5 dari 5')->assertSee('Belum Dinilai')
             ->assertSeeInOrder(['Bumbu meresap.', 'Staf membantu.', 'Meja <bersih>.', 'Parkir terbatas.', 'Antrean panjang.'])
             ->assertDontSee('<bersih>', false)->assertDontSee('assessment-title')->assertDontSee('Penilaian keseluruhan')->assertDontSee('0,0')
             ->assertSee('Pilihan khusus penulis')->assertSee('Catatan akhir yang tersimpan.')
             ->assertDontSee($private->title)->assertSee('tasting-note--text', false);
         $dom = new \DOMDocument;
         @$dom->loadHTML($response->getContent());
-        $this->assertSame(4, (new \DOMXPath($dom))->query('//*[@aria-labelledby="observations-title"]//li')->length);
+        $xpath = new \DOMXPath($dom);
+        $this->assertSame(4, $xpath->query('//*[@aria-labelledby="observations-title"]//li')->length);
+        $this->assertSame(2, $xpath->query('//span[contains(@class, "rating__star--half")]')->length);
+        $this->assertSame(1, $xpath->query('//*[@id="opinion"]//span[@class="dossier-stamp" and not(@role or @tabindex)]')->length);
         $visit->items()->update(['food_rating' => null]);
         $visit->update(['pros' => " \t\n", 'cons' => null]);
-        $this->get('/visit/'.$visit->slug)->assertOk()->assertSee('Penilaian belum dicatat')
-            ->assertDontSee('0,0')->assertDontSee('observations-title');
+        $visit->recommendations()->detach();
+        $this->get('/visit/'.$visit->slug)->assertOk()->assertSee('Belum Dinilai')->assertSee('03 / PENDAPAT')
+            ->assertDontSee('0,0')->assertDontSee('observations-title')->assertDontSee('rating__stars')->assertDontSee('dossier-stamp');
     }
 
     public function test_dossier_omits_unready_gallery_and_preserves_partial_notes_free_prices_and_endorsements_without_story(): void
@@ -80,11 +91,11 @@ class CinematicPublicTest extends TestCase
         $photo = $visit->media()->create(['uuid' => (string) Str::uuid(), 'original_path' => 'fixture', 'mime_type' => 'image/jpeg', 'original_bytes' => 10, 'width' => 900, 'height' => 600, 'sha256' => str_repeat('a', 64)]);
         $photo->variants()->create(['variant' => 'thumbnail', 'path' => 'fixture', 'mime_type' => 'image/jpeg', 'width' => 300, 'height' => 200, 'bytes' => 10, 'status' => 'failed']);
 
-        $this->get('/visit/'.$visit->slug)->assertOk()->assertSee('Rp0')->assertSee('Harga belum dicatat')
-            ->assertSee('Staf menjelaskan pilihan tempat duduk.')->assertSee('Penilaian belum dicatat')
-            ->assertDontSee('>Kekurangan</h3>', false)
+        $this->get('/visit/'.$visit->slug)->assertOk()->assertSee('Rp0')->assertSee('Belum dicatat')
+            ->assertSee('Staf menjelaskan pilihan tempat duduk.')->assertSee('Belum Dinilai')
+            ->assertDontSee('Kurang menyenangkan')
             ->assertSee('Rekomendasi pribadi')->assertSee('Pilihan tanpa skor')
-            ->assertDontSee('id="story-title"', false)->assertDontSee('id="conclusion-title"', false)
+            ->assertDontSee('id="story-title"', false)->assertDontSee('<blockquote', false)
             ->assertDontSee('id="galeri"', false)->assertDontSee('data-photo-viewer', false)->assertDontSee('Buka Google Maps');
     }
 
@@ -95,15 +106,19 @@ class CinematicPublicTest extends TestCase
             $photo = $visit->media()->create(['uuid' => (string) Str::uuid(), 'original_path' => 'fixture', 'mime_type' => 'image/jpeg', 'original_bytes' => 10, 'width' => 900, 'height' => 600, 'sha256' => str_repeat('a', 64)]);
             $photo->variants()->create(['variant' => $i % 2 ? 'card' : 'thumbnail', 'path' => 'fixture', 'mime_type' => 'image/jpeg', 'width' => 300, 'height' => 200, 'bytes' => 10, 'status' => 'ready']);
         }
+        $item = VisitItem::factory()->for($visit)->create();
+        $item->media()->attach($visit->media()->skip(1)->first()->id);
         $response = $this->get('/visit/'.$visit->slug)->assertOk();
         $document = new \DOMDocument;
         @$document->loadHTML($response->getContent());
         $xpath = new \DOMXPath($document);
-        $this->assertSame(40, $xpath->query('//button[@data-view-photo]')->length);
+        $this->assertSame(40, $xpath->query('//a[@data-view-photo]')->length);
         $this->assertSame(0, $xpath->query('//img[contains(@src,"/original")]')->length);
         $this->assertSame(0, $xpath->query('//link[contains(@href,"/original")]')->length);
-        $this->assertStringEndsWith('/thumbnail', $xpath->query('//button[@data-view-photo]')->item(0)->getAttribute('data-fallback'));
-        $this->assertStringEndsWith('/card', $xpath->query('//button[@data-view-photo]')->item(1)->getAttribute('data-fallback'));
+        $this->assertStringEndsWith('/thumbnail', $xpath->query('//a[@data-view-photo]')->item(0)->getAttribute('href'));
+        $second = $xpath->query('//a[@data-view-photo]')->item(1);
+        $this->assertStringEndsWith('/card', $second->getAttribute('href'));
+        $this->assertSame($second->getAttribute('data-view-photo'), $xpath->query('//a[@data-item-photo]')->item(0)->getAttribute('data-item-photo'));
     }
 
     public function test_curiosity_food_and_technique_photographs_belong_to_matching_published_items(): void
